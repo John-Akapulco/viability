@@ -7,5 +7,17 @@
   "n_jobs_total": 178,
   "concurrency_cap": 8,
   "job_list_file": "mp_dataset/job_list.txt",
-  "status": "running"
+  "status": "running",
+  "last_checked_utc": "2026-08-13T21:58:53Z",
+  "n_done": 2,
+  "n_running": 7,
+  "n_pending": 169,
+  "n_failed_or_unaccounted": 1,
+  "failures": [
+    {
+      "compound": "exp_metastable_Al12W_mp-11227",
+      "reason": "VASP did not reach normal termination (log truncated); LOBSTER error: ERROR: The input file CONTCAR is present, but has a size of 0 bytes."
+    }
+  ],
+  "elapsed_hours": 0.04583333333333333
 }
