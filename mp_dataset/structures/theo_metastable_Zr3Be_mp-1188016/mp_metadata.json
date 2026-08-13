@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1188016",
+  "formula": "Zr3Be",
+  "chemsys": "Be-Zr",
+  "energy_above_hull_eV_per_atom": 0.14302901249999955,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 1.49e-05,
+  "num_sites_structure": 4
+}

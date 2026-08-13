@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1185151",
+  "formula": "KSn3",
+  "chemsys": "K-Sn",
+  "energy_above_hull_eV_per_atom": 0.05729916087053466,
+  "theoretical": true,
+  "nsites": 8,
+  "nelements": 2,
+  "spacegroup": "P6_3/mmc",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 8
+}

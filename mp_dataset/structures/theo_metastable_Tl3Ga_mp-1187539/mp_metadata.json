@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1187539",
+  "formula": "Tl3Ga",
+  "chemsys": "Ga-Tl",
+  "energy_above_hull_eV_per_atom": 0.09724636562500422,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Fm-3m",
+  "total_magnetization_per_fu": 0.0013967,
+  "num_sites_structure": 4
+}

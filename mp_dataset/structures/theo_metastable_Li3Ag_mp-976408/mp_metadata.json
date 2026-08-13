@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-976408",
+  "formula": "Li3Ag",
+  "chemsys": "Ag-Li",
+  "energy_above_hull_eV_per_atom": 0.0013151149999997003,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 4e-07,
+  "num_sites_structure": 4
+}

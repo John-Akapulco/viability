@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-17190",
+  "formula": "Sc5Ge3",
+  "chemsys": "Ge-Sc",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "P6_3/mcm",
+  "total_magnetization_per_fu": 1.485e-05,
+  "num_sites_structure": 16
+}

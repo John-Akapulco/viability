@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1104286",
+  "formula": "Ge4Rh",
+  "chemsys": "Ge-Rh",
+  "energy_above_hull_eV_per_atom": 0.09073754899999997,
+  "theoretical": false,
+  "nsites": 15,
+  "nelements": 2,
+  "spacegroup": "P3_121",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 15
+}

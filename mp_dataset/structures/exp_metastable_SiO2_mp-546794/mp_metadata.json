@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-546794",
+  "formula": "SiO2",
+  "chemsys": "O-Si",
+  "energy_above_hull_eV_per_atom": 0.005647450555557043,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "I-42d",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 6
+}

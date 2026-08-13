@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-2808",
+  "formula": "ZrRh",
+  "chemsys": "Rh-Zr",
+  "energy_above_hull_eV_per_atom": 0.08393397999999763,
+  "theoretical": false,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "Pm-3m",
+  "total_magnetization_per_fu": 6.58e-05,
+  "num_sites_structure": 2
+}

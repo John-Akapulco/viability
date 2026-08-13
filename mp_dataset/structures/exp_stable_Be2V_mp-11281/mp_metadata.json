@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-11281",
+  "formula": "Be2V",
+  "chemsys": "Be-V",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "P6_3/mmc",
+  "total_magnetization_per_fu": 0.00222815,
+  "num_sites_structure": 12
+}

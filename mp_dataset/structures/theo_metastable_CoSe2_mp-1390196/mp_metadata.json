@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1390196",
+  "formula": "CoSe2",
+  "chemsys": "Co-Se",
+  "energy_above_hull_eV_per_atom": 0.07343032750000056,
+  "theoretical": true,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "Fd-3m",
+  "total_magnetization_per_fu": 5.075e-06,
+  "num_sites_structure": 12
+}

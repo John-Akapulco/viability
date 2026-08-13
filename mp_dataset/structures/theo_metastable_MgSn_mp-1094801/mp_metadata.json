@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1094801",
+  "formula": "MgSn",
+  "chemsys": "Mg-Sn",
+  "energy_above_hull_eV_per_atom": 0.021182148749999463,
+  "theoretical": true,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "P4/mmm",
+  "total_magnetization_per_fu": 5e-07,
+  "num_sites_structure": 2
+}

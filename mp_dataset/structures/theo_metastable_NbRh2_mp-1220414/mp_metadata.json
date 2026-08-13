@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1220414",
+  "formula": "NbRh2",
+  "chemsys": "Nb-Rh",
+  "energy_above_hull_eV_per_atom": 0.10426935750000332,
+  "theoretical": true,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "Pm",
+  "total_magnetization_per_fu": 0.000121,
+  "num_sites_structure": 6
+}

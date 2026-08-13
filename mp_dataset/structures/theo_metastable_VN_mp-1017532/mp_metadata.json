@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1017532",
+  "formula": "VN",
+  "chemsys": "N-V",
+  "energy_above_hull_eV_per_atom": 0.10796184249999996,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "P6_3/mmc",
+  "total_magnetization_per_fu": 3.4e-06,
+  "num_sites_structure": 4
+}

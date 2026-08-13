@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-22009",
+  "formula": "PbSe",
+  "chemsys": "Pb-Se",
+  "energy_above_hull_eV_per_atom": 0.07310882999999535,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Fmm2",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 4
+}

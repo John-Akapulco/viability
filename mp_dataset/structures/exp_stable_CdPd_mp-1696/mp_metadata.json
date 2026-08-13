@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-1696",
+  "formula": "CdPd",
+  "chemsys": "Cd-Pd",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "P4/mmm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 4
+}

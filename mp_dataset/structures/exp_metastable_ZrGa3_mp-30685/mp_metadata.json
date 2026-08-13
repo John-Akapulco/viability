@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-30685",
+  "formula": "ZrGa3",
+  "chemsys": "Ga-Zr",
+  "energy_above_hull_eV_per_atom": 0.013019501250001397,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 1e-07,
+  "num_sites_structure": 4
+}

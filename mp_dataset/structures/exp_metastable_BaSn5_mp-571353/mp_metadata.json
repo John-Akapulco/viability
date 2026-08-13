@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-571353",
+  "formula": "BaSn5",
+  "chemsys": "Ba-Sn",
+  "energy_above_hull_eV_per_atom": 0.026217794166670583,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "P6/mmm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 6
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-2739191",
+  "formula": "H2O",
+  "chemsys": "H-O",
+  "energy_above_hull_eV_per_atom": 0.049447999166666534,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "C222_1",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 12
+}

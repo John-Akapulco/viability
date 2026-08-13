@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1187811",
+  "formula": "YAg3",
+  "chemsys": "Ag-Y",
+  "energy_above_hull_eV_per_atom": 0.059440931413043074,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Fm-3m",
+  "total_magnetization_per_fu": 1e-07,
+  "num_sites_structure": 4
+}

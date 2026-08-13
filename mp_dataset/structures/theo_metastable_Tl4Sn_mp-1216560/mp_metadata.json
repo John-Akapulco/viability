@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1216560",
+  "formula": "Tl4Sn",
+  "chemsys": "Sn-Tl",
+  "energy_above_hull_eV_per_atom": 0.045918155999999044,
+  "theoretical": true,
+  "nsites": 5,
+  "nelements": 2,
+  "spacegroup": "R-3m",
+  "total_magnetization_per_fu": 2e-07,
+  "num_sites_structure": 5
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-15557",
+  "formula": "Cs2As3",
+  "chemsys": "As-Cs",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 10,
+  "nelements": 2,
+  "spacegroup": "Fmmm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 10
+}

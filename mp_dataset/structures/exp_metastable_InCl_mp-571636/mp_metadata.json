@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-571636",
+  "formula": "InCl",
+  "chemsys": "Cl-In",
+  "energy_above_hull_eV_per_atom": 0.0016458790624991337,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Cmc2_1",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 4
+}

@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-678007",
+  "formula": "Sr3As4",
+  "chemsys": "As-Sr",
+  "energy_above_hull_eV_per_atom": 0.006247547857142877,
+  "theoretical": true,
+  "nsites": 14,
+  "nelements": 2,
+  "spacegroup": "P1",
+  "total_magnetization_per_fu": 0.0001098,
+  "num_sites_structure": 14
+}

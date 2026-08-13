@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-10157",
+  "formula": "K",
+  "chemsys": "K",
+  "energy_above_hull_eV_per_atom": 0.006930266250000372,
+  "theoretical": false,
+  "nsites": 1,
+  "nelements": 1,
+  "spacegroup": "Fm-3m",
+  "total_magnetization_per_fu": 7e-07,
+  "num_sites_structure": 1
+}

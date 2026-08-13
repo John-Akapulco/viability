@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1595",
+  "formula": "Nb2O5",
+  "chemsys": "Nb-O",
+  "energy_above_hull_eV_per_atom": 0.007537548265307947,
+  "theoretical": false,
+  "nsites": 7,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 7
+}

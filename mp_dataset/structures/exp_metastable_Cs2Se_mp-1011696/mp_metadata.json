@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1011696",
+  "formula": "Cs2Se",
+  "chemsys": "Cs-Se",
+  "energy_above_hull_eV_per_atom": 0.004232759166664213,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "Pnma",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 12
+}

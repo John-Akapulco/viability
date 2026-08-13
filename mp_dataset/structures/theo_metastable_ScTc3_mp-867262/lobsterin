@@ -1,0 +1,8 @@
+basisSet pbeVaspFit2015
+COHPstartEnergy -35.0
+COHPendEnergy 5.0
+cohpGenerator from 0.1 to 6.0 orbitalwise
+saveProjectionToFile
+gaussianSmearingWidth 0.05
+basisfunctions Sc 3d 3p 3s 4s 
+basisfunctions Tc 4d 4p 5s 

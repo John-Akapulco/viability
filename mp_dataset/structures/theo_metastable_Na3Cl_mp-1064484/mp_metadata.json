@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1064484",
+  "formula": "Na3Cl",
+  "chemsys": "Cl-Na",
+  "energy_above_hull_eV_per_atom": 0.145649899310345,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "P4/mmm",
+  "total_magnetization_per_fu": 1.3e-06,
+  "num_sites_structure": 4
+}

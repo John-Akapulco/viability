@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-6977",
+  "formula": "Be3N2",
+  "chemsys": "Be-N",
+  "energy_above_hull_eV_per_atom": 0.03151386449999993,
+  "theoretical": false,
+  "nsites": 10,
+  "nelements": 2,
+  "spacegroup": "P6_3/mmc",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 10
+}

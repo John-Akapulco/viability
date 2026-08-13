@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-7832",
+  "formula": "BW",
+  "chemsys": "B-W",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 8,
+  "nelements": 2,
+  "spacegroup": "I4_1/amd",
+  "total_magnetization_per_fu": 2.5e-08,
+  "num_sites_structure": 8
+}

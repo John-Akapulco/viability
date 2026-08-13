@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1224809",
+  "formula": "Ga2Se3",
+  "chemsys": "Ga-Se",
+  "energy_above_hull_eV_per_atom": 0.006252534999998005,
+  "theoretical": true,
+  "nsites": 5,
+  "nelements": 2,
+  "spacegroup": "Imm2",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 5
+}

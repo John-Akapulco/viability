@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-23711",
+  "formula": "MgH2",
+  "chemsys": "H-Mg",
+  "energy_above_hull_eV_per_atom": 0.0018755891666670799,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "Pbcn",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 12
+}

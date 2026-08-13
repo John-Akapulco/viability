@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1232036",
+  "formula": "InSe2",
+  "chemsys": "In-Se",
+  "energy_above_hull_eV_per_atom": 0.17326202766492926,
+  "theoretical": true,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "P4/nmm",
+  "total_magnetization_per_fu": 2.24e-05,
+  "num_sites_structure": 6
+}

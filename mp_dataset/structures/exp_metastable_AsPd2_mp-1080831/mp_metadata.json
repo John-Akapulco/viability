@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1080831",
+  "formula": "AsPd2",
+  "chemsys": "As-Pd",
+  "energy_above_hull_eV_per_atom": 0.011756747500001552,
+  "theoretical": false,
+  "nsites": 9,
+  "nelements": 2,
+  "spacegroup": "P-62m",
+  "total_magnetization_per_fu": 3.3333333333333334e-08,
+  "num_sites_structure": 9
+}

@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1217337",
+  "formula": "TcW",
+  "chemsys": "Tc-W",
+  "energy_above_hull_eV_per_atom": 0.10564943749999856,
+  "theoretical": true,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "Cmmm",
+  "total_magnetization_per_fu": 8.03e-05,
+  "num_sites_structure": 2
+}

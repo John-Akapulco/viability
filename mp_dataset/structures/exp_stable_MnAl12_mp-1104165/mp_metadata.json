@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-1104165",
+  "formula": "MnAl12",
+  "chemsys": "Al-Mn",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 13,
+  "nelements": 2,
+  "spacegroup": "Im-3",
+  "total_magnetization_per_fu": 4.57e-05,
+  "num_sites_structure": 13
+}

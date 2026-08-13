@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-14019",
+  "formula": "NiB",
+  "chemsys": "B-Ni",
+  "energy_above_hull_eV_per_atom": 0.0018463106250017347,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Cmcm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 4
+}

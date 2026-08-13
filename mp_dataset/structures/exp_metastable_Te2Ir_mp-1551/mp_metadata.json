@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1551",
+  "formula": "Te2Ir",
+  "chemsys": "Ir-Te",
+  "energy_above_hull_eV_per_atom": 0.0030421406944398655,
+  "theoretical": false,
+  "nsites": 9,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 9
+}

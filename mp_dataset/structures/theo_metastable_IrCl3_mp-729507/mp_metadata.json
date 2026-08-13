@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-729507",
+  "formula": "IrCl3",
+  "chemsys": "Cl-Ir",
+  "energy_above_hull_eV_per_atom": 0.030088630624999446,
+  "theoretical": true,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "C2",
+  "total_magnetization_per_fu": 0.00016695,
+  "num_sites_structure": 16
+}

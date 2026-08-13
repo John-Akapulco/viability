@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-643542",
+  "formula": "CaGe2",
+  "chemsys": "Ca-Ge",
+  "energy_above_hull_eV_per_atom": 0.0978748566666674,
+  "theoretical": true,
+  "nsites": 3,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 8.61e-05,
+  "num_sites_structure": 3
+}

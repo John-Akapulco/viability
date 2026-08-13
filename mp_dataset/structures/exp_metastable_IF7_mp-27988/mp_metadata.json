@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-27988",
+  "formula": "IF7",
+  "chemsys": "F-I",
+  "energy_above_hull_eV_per_atom": 0.006252095624999399,
+  "theoretical": false,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "Aea2",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 16
+}

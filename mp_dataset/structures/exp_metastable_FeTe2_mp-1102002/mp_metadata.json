@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1102002",
+  "formula": "FeTe2",
+  "chemsys": "Fe-Te",
+  "energy_above_hull_eV_per_atom": 0.04490969833333569,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "Pa-3",
+  "total_magnetization_per_fu": 7.105e-05,
+  "num_sites_structure": 12
+}

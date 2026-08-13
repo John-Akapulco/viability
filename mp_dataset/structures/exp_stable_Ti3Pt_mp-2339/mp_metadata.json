@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-2339",
+  "formula": "Ti3Pt",
+  "chemsys": "Pt-Ti",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 8,
+  "nelements": 2,
+  "spacegroup": "Pm-3n",
+  "total_magnetization_per_fu": 1.775e-05,
+  "num_sites_structure": 8
+}

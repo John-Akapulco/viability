@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-11227",
+  "formula": "Al12W",
+  "chemsys": "Al-W",
+  "energy_above_hull_eV_per_atom": 0.01520368538461625,
+  "theoretical": false,
+  "nsites": 13,
+  "nelements": 2,
+  "spacegroup": "Im-3",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 13
+}

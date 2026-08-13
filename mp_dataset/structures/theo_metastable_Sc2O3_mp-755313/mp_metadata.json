@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-755313",
+  "formula": "Sc2O3",
+  "chemsys": "O-Sc",
+  "energy_above_hull_eV_per_atom": 0.03639289474999963,
+  "theoretical": true,
+  "nsites": 10,
+  "nelements": 2,
+  "spacegroup": "R-3c",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 10
+}
