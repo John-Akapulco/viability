@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-2661",
+  "formula": "SrSi",
+  "chemsys": "Si-Sr",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Cmcm",
+  "total_magnetization_per_fu": 5e-08,
+  "num_sites_structure": 4
+}

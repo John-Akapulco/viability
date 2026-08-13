@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-936",
+  "formula": "Hg4Pt",
+  "chemsys": "Hg-Pt",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 5,
+  "nelements": 2,
+  "spacegroup": "Im-3m",
+  "total_magnetization_per_fu": 2e-07,
+  "num_sites_structure": 5
+}

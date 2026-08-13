@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-17720",
+  "formula": "Sr5Sn3",
+  "chemsys": "Sn-Sr",
+  "energy_above_hull_eV_per_atom": 0.003021452500000521,
+  "theoretical": false,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "I4/mcm",
+  "total_magnetization_per_fu": 0.00074835,
+  "num_sites_structure": 16
+}

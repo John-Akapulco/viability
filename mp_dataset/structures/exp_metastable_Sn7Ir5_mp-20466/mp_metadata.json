@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-20466",
+  "formula": "Sn7Ir5",
+  "chemsys": "Ir-Sn",
+  "energy_above_hull_eV_per_atom": 0.002421364999996456,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "I4mm",
+  "total_magnetization_per_fu": 1e-07,
+  "num_sites_structure": 12
+}

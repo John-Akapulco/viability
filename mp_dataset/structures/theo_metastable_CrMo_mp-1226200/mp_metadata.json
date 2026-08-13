@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1226200",
+  "formula": "CrMo",
+  "chemsys": "Cr-Mo",
+  "energy_above_hull_eV_per_atom": 0.11631646000000018,
+  "theoretical": true,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "Cmmm",
+  "total_magnetization_per_fu": 0.0022757,
+  "num_sites_structure": 2
+}

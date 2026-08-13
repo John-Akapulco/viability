@@ -1,0 +1,11 @@
+{
+  "campaign_start_utc": "2026-08-13T21:56:08Z",
+  "campaign_start_local": "2026-08-13T23:56:08+0200",
+  "budget_hours": 6,
+  "array_job_id": "57469",
+  "smoke_test_job_id": "57468",
+  "n_jobs_total": 178,
+  "concurrency_cap": 8,
+  "job_list_file": "mp_dataset/job_list.txt",
+  "status": "running"
+}

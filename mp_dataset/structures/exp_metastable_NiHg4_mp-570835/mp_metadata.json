@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-570835",
+  "formula": "NiHg4",
+  "chemsys": "Hg-Ni",
+  "energy_above_hull_eV_per_atom": 0.01705295800000073,
+  "theoretical": false,
+  "nsites": 5,
+  "nelements": 2,
+  "spacegroup": "Im-3m",
+  "total_magnetization_per_fu": 1e-07,
+  "num_sites_structure": 5
+}

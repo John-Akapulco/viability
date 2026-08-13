@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1228665",
+  "formula": "BPd5",
+  "chemsys": "B-Pd",
+  "energy_above_hull_eV_per_atom": 0.13249513083333042,
+  "theoretical": true,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 0.0006004,
+  "num_sites_structure": 6
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-15697",
+  "formula": "Sr2As",
+  "chemsys": "As-Sr",
+  "energy_above_hull_eV_per_atom": 0.08000544425926037,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 6
+}

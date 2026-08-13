@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-30769",
+  "formula": "Li13Sn5",
+  "chemsys": "Li-Sn",
+  "energy_above_hull_eV_per_atom": 0.0033475494444448195,
+  "theoretical": false,
+  "nsites": 18,
+  "nelements": 2,
+  "spacegroup": "P-3m1",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 18
+}

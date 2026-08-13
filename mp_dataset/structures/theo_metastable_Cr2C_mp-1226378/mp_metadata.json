@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1226378",
+  "formula": "Cr2C",
+  "chemsys": "C-Cr",
+  "energy_above_hull_eV_per_atom": 0.06254013708333694,
+  "theoretical": true,
+  "nsites": 3,
+  "nelements": 2,
+  "spacegroup": "P-3m1",
+  "total_magnetization_per_fu": 3e-07,
+  "num_sites_structure": 3
+}

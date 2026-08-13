@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1065846",
+  "formula": "ZrBr",
+  "chemsys": "Br-Zr",
+  "energy_above_hull_eV_per_atom": 0.0007946975000017176,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 5e-08,
+  "num_sites_structure": 4
+}

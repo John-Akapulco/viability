@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1187949",
+  "formula": "ZnPb3",
+  "chemsys": "Pb-Zn",
+  "energy_above_hull_eV_per_atom": 0.11069147749999786,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Fm-3m",
+  "total_magnetization_per_fu": 0.0001345,
+  "num_sites_structure": 4
+}

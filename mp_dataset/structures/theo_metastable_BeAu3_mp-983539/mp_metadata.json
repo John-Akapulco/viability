@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-983539",
+  "formula": "BeAu3",
+  "chemsys": "Au-Be",
+  "energy_above_hull_eV_per_atom": 0.18183134000000178,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Pm-3m",
+  "total_magnetization_per_fu": 0.002096,
+  "num_sites_structure": 4
+}

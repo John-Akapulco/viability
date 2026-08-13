@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-22079",
+  "formula": "AsRh",
+  "chemsys": "As-Rh",
+  "energy_above_hull_eV_per_atom": 0.026917590833335225,
+  "theoretical": false,
+  "nsites": 8,
+  "nelements": 2,
+  "spacegroup": "Pnma",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 8
+}

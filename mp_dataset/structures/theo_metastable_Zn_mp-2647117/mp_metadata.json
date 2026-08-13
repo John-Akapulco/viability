@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-2647117",
+  "formula": "Zn",
+  "chemsys": "Zn",
+  "energy_above_hull_eV_per_atom": 0.07166242999999994,
+  "theoretical": true,
+  "nsites": 1,
+  "nelements": 1,
+  "spacegroup": "Im-3m",
+  "total_magnetization_per_fu": 1.6e-06,
+  "num_sites_structure": 1
+}

@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-570991",
+  "formula": "TiSi2",
+  "chemsys": "Si-Ti",
+  "energy_above_hull_eV_per_atom": 0.17960538666666537,
+  "theoretical": true,
+  "nsites": 3,
+  "nelements": 2,
+  "spacegroup": "Immm",
+  "total_magnetization_per_fu": 3.6e-06,
+  "num_sites_structure": 3
+}

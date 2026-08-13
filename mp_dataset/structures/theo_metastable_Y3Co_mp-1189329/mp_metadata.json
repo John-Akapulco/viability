@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1189329",
+  "formula": "Y3Co",
+  "chemsys": "Co-Y",
+  "energy_above_hull_eV_per_atom": 0.0015564962500009827,
+  "theoretical": true,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "P2_1",
+  "total_magnetization_per_fu": 6.75e-07,
+  "num_sites_structure": 16
+}

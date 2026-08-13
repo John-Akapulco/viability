@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1189044",
+  "formula": "Ti3Ge",
+  "chemsys": "Ge-Ti",
+  "energy_above_hull_eV_per_atom": 0.013003969652777059,
+  "theoretical": false,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "I-4",
+  "total_magnetization_per_fu": 2.735e-05,
+  "num_sites_structure": 16
+}

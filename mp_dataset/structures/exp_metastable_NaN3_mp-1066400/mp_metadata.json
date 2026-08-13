@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1066400",
+  "formula": "NaN3",
+  "chemsys": "N-Na",
+  "energy_above_hull_eV_per_atom": 0.0029249474999994973,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "R3m",
+  "total_magnetization_per_fu": 3.24e-05,
+  "num_sites_structure": 4
+}

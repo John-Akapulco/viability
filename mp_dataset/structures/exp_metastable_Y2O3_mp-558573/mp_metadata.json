@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-558573",
+  "formula": "Y2O3",
+  "chemsys": "O-Y",
+  "energy_above_hull_eV_per_atom": 0.03422779625000061,
+  "theoretical": false,
+  "nsites": 15,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 3.3333333333333334e-08,
+  "num_sites_structure": 15
+}

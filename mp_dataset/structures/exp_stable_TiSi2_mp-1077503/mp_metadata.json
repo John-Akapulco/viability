@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-1077503",
+  "formula": "TiSi2",
+  "chemsys": "Si-Ti",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "Cmcm",
+  "total_magnetization_per_fu": 9.5e-07,
+  "num_sites_structure": 6
+}

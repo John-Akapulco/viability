@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-684609",
+  "formula": "HCl",
+  "chemsys": "Cl-H",
+  "energy_above_hull_eV_per_atom": 0.053566722500000274,
+  "theoretical": true,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "Imm2",
+  "total_magnetization_per_fu": 0.0016265,
+  "num_sites_structure": 2
+}

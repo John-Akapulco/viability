@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-978985",
+  "formula": "SnBr2",
+  "chemsys": "Br-Sn",
+  "energy_above_hull_eV_per_atom": 0.040465399999999985,
+  "theoretical": true,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "P4_2/mnm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 6
+}

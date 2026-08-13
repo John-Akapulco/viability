@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1023918",
+  "formula": "AlSb",
+  "chemsys": "Al-Sb",
+  "energy_above_hull_eV_per_atom": 0.18779470750000016,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Cmcm",
+  "total_magnetization_per_fu": 0.0004591,
+  "num_sites_structure": 4
+}

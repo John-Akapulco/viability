@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-23715",
+  "formula": "BaH2",
+  "chemsys": "Ba-H",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "Pnma",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 12
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-384",
+  "formula": "MgP4",
+  "chemsys": "Mg-P",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 10,
+  "nelements": 2,
+  "spacegroup": "P2_1/c",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 10
+}

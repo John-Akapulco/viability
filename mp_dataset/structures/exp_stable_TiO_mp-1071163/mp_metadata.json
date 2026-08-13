@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-1071163",
+  "formula": "TiO",
+  "chemsys": "O-Ti",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "P-62m",
+  "total_magnetization_per_fu": 1.6666666666666665e-07,
+  "num_sites_structure": 6
+}

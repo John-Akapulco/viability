@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1185253",
+  "formula": "LiTl3",
+  "chemsys": "Li-Tl",
+  "energy_above_hull_eV_per_atom": 0.046669947499999864,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 1.9e-06,
+  "num_sites_structure": 4
+}

@@ -1,0 +1,24 @@
+Loading compiler version 2023.2.1
+Loading tbb version 2021.10.0
+Loading compiler-rt version 2023.2.1
+Loading oclfpga version 2023.2.1
+  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
+  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
+Loading mkl version 2023.2.0
+LOBSTER v5.1.1 (g++ 9.3.0)
+Copyright (C) 2024 by Chair of Solid-State and Quantum Chemistry, RWTH Aachen.
+All rights reserved. Contributions by S. Maintz, V. L. Deringer, M. Esser, R. Nelson, C. Ertural, P. C. Mueller, M. Pauls, L. Sann, D. Schnieders, A. L. Tchougreeff, and R. Dronskowski
+starting on host node08.cluster.local on 2026-08-13 at 23:56:05 CEST using 16 threads
+detecting used PAW program...
+ERROR: The input file CONTCAR is present, but has a size of 0 bytes.
+
+ERROR: The input file WAVECAR is present, but has a size of 0 bytes.
+
+WARNING: This looks like a VASP calculation, but not all required files
+WARNING: are readable. Please check the following list of files:
+WARNING: missing or empty CONTCAR
+WARNING: missing or empty WAVECAR
+
+ERROR: could not determine which program was used for the quantum-chemical calculation.
+ERROR: Make sure all required files are in the working directory and are not empty.
+

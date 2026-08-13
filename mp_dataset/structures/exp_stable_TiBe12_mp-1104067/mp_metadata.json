@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-1104067",
+  "formula": "TiBe12",
+  "chemsys": "Be-Ti",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 13,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 13
+}

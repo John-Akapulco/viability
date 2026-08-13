@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-267",
+  "formula": "Te2Ru",
+  "chemsys": "Ru-Te",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "Pnnm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 6
+}

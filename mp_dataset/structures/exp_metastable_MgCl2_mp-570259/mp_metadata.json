@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-570259",
+  "formula": "MgCl2",
+  "chemsys": "Cl-Mg",
+  "energy_above_hull_eV_per_atom": 0.0006391266666669893,
+  "theoretical": false,
+  "nsites": 3,
+  "nelements": 2,
+  "spacegroup": "P-3m1",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 3
+}

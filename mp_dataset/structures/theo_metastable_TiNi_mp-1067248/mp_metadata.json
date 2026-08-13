@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1067248",
+  "formula": "TiNi",
+  "chemsys": "Ni-Ti",
+  "energy_above_hull_eV_per_atom": 0.0020067824999996375,
+  "theoretical": true,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Cmcm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 4
+}

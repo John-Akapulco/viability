@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-1646",
+  "formula": "Li3Hg",
+  "chemsys": "Hg-Li",
+  "energy_above_hull_eV_per_atom": 0.0012975900000000706,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "Fm-3m",
+  "total_magnetization_per_fu": 1.22e-05,
+  "num_sites_structure": 4
+}

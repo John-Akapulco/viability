@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-505531",
+  "formula": "FeS",
+  "chemsys": "Fe-S",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 4,
+  "nelements": 2,
+  "spacegroup": "P4/nmm",
+  "total_magnetization_per_fu": 9e-07,
+  "num_sites_structure": 4
+}

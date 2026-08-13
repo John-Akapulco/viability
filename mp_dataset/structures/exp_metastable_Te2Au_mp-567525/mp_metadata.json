@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-567525",
+  "formula": "Te2Au",
+  "chemsys": "Au-Te",
+  "energy_above_hull_eV_per_atom": 0.027432493333336083,
+  "theoretical": false,
+  "nsites": 3,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 2e-07,
+  "num_sites_structure": 3
+}

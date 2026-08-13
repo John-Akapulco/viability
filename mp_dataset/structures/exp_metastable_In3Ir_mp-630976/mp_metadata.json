@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-630976",
+  "formula": "In3Ir",
+  "chemsys": "In-Ir",
+  "energy_above_hull_eV_per_atom": 0.004296428125002194,
+  "theoretical": false,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "P4_2/mnm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 16
+}

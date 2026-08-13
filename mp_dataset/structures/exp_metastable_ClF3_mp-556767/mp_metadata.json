@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-556767",
+  "formula": "ClF3",
+  "chemsys": "Cl-F",
+  "energy_above_hull_eV_per_atom": 0.0029946146875001745,
+  "theoretical": false,
+  "nsites": 16,
+  "nelements": 2,
+  "spacegroup": "Pnma",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 16
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-12666",
+  "formula": "Be12Pd",
+  "chemsys": "Be-Pd",
+  "energy_above_hull_eV_per_atom": 0.07945158115384565,
+  "theoretical": false,
+  "nsites": 13,
+  "nelements": 2,
+  "spacegroup": "I4/mmm",
+  "total_magnetization_per_fu": 0.0002701,
+  "num_sites_structure": 13
+}

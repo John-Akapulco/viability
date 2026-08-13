@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-2461",
+  "formula": "CaGa4",
+  "chemsys": "Ca-Ga",
+  "energy_above_hull_eV_per_atom": 0.0016006820000011857,
+  "theoretical": false,
+  "nsites": 5,
+  "nelements": 2,
+  "spacegroup": "C2/m",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 5
+}

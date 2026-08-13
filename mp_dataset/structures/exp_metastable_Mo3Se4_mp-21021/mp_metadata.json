@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-21021",
+  "formula": "Mo3Se4",
+  "chemsys": "Mo-Se",
+  "energy_above_hull_eV_per_atom": 0.06087143499999925,
+  "theoretical": false,
+  "nsites": 14,
+  "nelements": 2,
+  "spacegroup": "R-3",
+  "total_magnetization_per_fu": 9.54e-05,
+  "num_sites_structure": 14
+}

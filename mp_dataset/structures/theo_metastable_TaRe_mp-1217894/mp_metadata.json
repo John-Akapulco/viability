@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1217894",
+  "formula": "TaRe",
+  "chemsys": "Re-Ta",
+  "energy_above_hull_eV_per_atom": 0.11133223291667349,
+  "theoretical": true,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "Cmmm",
+  "total_magnetization_per_fu": 2e-07,
+  "num_sites_structure": 2
+}

@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1216621",
+  "formula": "TiW",
+  "chemsys": "Ti-W",
+  "energy_above_hull_eV_per_atom": 0.022547341666665943,
+  "theoretical": true,
+  "nsites": 2,
+  "nelements": 2,
+  "spacegroup": "Cmmm",
+  "total_magnetization_per_fu": 2.66e-05,
+  "num_sites_structure": 2
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-29141",
+  "formula": "Re3Ge7",
+  "chemsys": "Ge-Re",
+  "energy_above_hull_eV_per_atom": 0.012616640750003683,
+  "theoretical": false,
+  "nsites": 20,
+  "nelements": 2,
+  "spacegroup": "Cmcm",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 20
+}

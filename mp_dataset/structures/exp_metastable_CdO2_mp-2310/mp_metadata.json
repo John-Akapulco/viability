@@ -1,0 +1,13 @@
+{
+  "family": "exp_metastable",
+  "mp_id": "mp-2310",
+  "formula": "CdO2",
+  "chemsys": "Cd-O",
+  "energy_above_hull_eV_per_atom": 0.05623419000000052,
+  "theoretical": false,
+  "nsites": 12,
+  "nelements": 2,
+  "spacegroup": "Pa-3",
+  "total_magnetization_per_fu": 0.000171025,
+  "num_sites_structure": 12
+}

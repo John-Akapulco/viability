@@ -1,0 +1,13 @@
+{
+  "family": "theo_metastable",
+  "mp_id": "mp-1190080",
+  "formula": "BeCl2",
+  "chemsys": "Be-Cl",
+  "energy_above_hull_eV_per_atom": 0.01870443305555547,
+  "theoretical": true,
+  "nsites": 18,
+  "nelements": 2,
+  "spacegroup": "I-43m",
+  "total_magnetization_per_fu": 0.0,
+  "num_sites_structure": 18
+}

@@ -1,0 +1,13 @@
+{
+  "family": "exp_stable",
+  "mp_id": "mp-2031",
+  "formula": "Be2Cu",
+  "chemsys": "Be-Cu",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 6,
+  "nelements": 2,
+  "spacegroup": "Fd-3m",
+  "total_magnetization_per_fu": 2.5e-07,
+  "num_sites_structure": 6
+}
