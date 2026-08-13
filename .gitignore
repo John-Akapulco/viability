@@ -12,6 +12,9 @@ mp_dataset/structures/*/CHGCAR
 mp_dataset/structures/*/CHGCAR.gz
 mp_dataset/structures/*/vasp.log
 mp_dataset/structures/*/*.log
+mp_dataset/structures/*/OUTCAR
+mp_dataset/structures/*/EIGENVAL
+mp_dataset/structures/*/vasprun.xml
 lobsterout
 
 # LOBSTER dense per-grid outputs (COHP/COOP/COBI *CAR* files can be 10s of MB
@@ -24,4 +27,10 @@ mp_dataset/structures/*/DOSCAR.lobster
 mp_dataset/structures/*/projectionData.lobster
 mp_dataset/structures/*/bandOverlaps.lobster
 mp_dataset/structures/*/WAVECAR*
+
+# LaTeX build artifacts (PDFs are committed, intermediates are not)
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
 

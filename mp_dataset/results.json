@@ -1,0 +1,464 @@
+[
+  {
+    "compound_id": "hull_covalent_Si_mp-149",
+    "structure_file": "mp_dataset/structures/hull_covalent_Si_mp-149/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 64,
+    "n_bonds_icobi": 64,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 64,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.0031999999999999997,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "b": {
+            "weight": 0.00318,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "c": {
+            "weight": 0.00317,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.00317,
+        "aggregates": {
+          "n": 64,
+          "sum": -18.610730000000004,
+          "mean": -0.29079265625000006,
+          "min": -4.55151,
+          "max": 0.00183
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 64,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00116,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "b": {
+            "weight": 0.00119,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "c": {
+            "weight": 0.00116,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.00116,
+        "aggregates": {
+          "n": 64,
+          "sum": 3.9409499999999977,
+          "mean": 0.061577343749999965,
+          "min": 8e-05,
+          "max": 0.92472
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "hull_ionic_NaCl_mp-22862",
+    "structure_file": "mp_dataset/structures/hull_ionic_NaCl_mp-22862/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 50,
+    "n_bonds_icobi": 50,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.03071,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          },
+          "b": {
+            "weight": 0.0308,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          },
+          "c": {
+            "weight": 0.03087,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.03071,
+        "aggregates": {
+          "n": 50,
+          "sum": -4.445290000000001,
+          "mean": -0.08890580000000002,
+          "min": -0.59549,
+          "max": -0.0005
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00239,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1
+          },
+          "b": {
+            "weight": 0.00239,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1
+          },
+          "c": {
+            "weight": 0.0024,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.00239,
+        "aggregates": {
+          "n": 50,
+          "sum": 0.6578400000000003,
+          "mean": 0.013156800000000007,
+          "min": 0.00018,
+          "max": 0.08593
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "hull_metallic_AlNi_mp-1487",
+    "structure_file": "mp_dataset/structures/hull_metallic_AlNi_mp-1487/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 96,
+    "n_bonds_icobi": 96,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 96,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00419,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "b": {
+            "weight": 0.00509,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "c": {
+            "weight": 0.00474,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.00419,
+        "aggregates": {
+          "n": 96,
+          "sum": -30.92626,
+          "mean": -0.3221485416666667,
+          "min": -1.99211,
+          "max": 0.00661
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 96,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00777,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "b": {
+            "weight": 0.00778,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "c": {
+            "weight": 0.00777,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.00777,
+        "aggregates": {
+          "n": 96,
+          "sum": 5.00504,
+          "mean": 0.05213583333333333,
+          "min": 0.00044,
+          "max": 0.2678
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "metastable_covalent_C_rhombohedral_mp-169",
+    "structure_file": "mp_dataset/structures/metastable_covalent_C_rhombohedral_mp-169/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 130,
+    "n_bonds_icobi": 130,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 130,
+        "coord_bound": 7,
+        "direction": {
+          "a": {
+            "weight": 0.0005,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "b": {
+            "weight": 0.00051,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "c": {
+            "weight": 0.00025,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.00025,
+        "aggregates": {
+          "n": 130,
+          "sum": -37.14289999999995,
+          "mean": -0.28571461538461496,
+          "min": -11.73735,
+          "max": 0.03749
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 130,
+        "coord_bound": 7,
+        "direction": {
+          "a": {
+            "weight": 7.000000000000001e-05,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "b": {
+            "weight": 7.000000000000001e-05,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2
+          },
+          "c": {
+            "weight": 0.00011,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 3
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 7.000000000000001e-05,
+        "aggregates": {
+          "n": 130,
+          "sum": 3.9412300000000013,
+          "mean": 0.030317153846153855,
+          "min": 3e-05,
+          "max": 1.21731
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "metastable_ionic_LiBr_mp-23259",
+    "structure_file": "mp_dataset/structures/metastable_ionic_LiBr_mp-23259/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 50,
+    "n_bonds_icobi": 50,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.09888,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          },
+          "b": {
+            "weight": 0.09887,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          },
+          "c": {
+            "weight": 0.09879,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.09879,
+        "aggregates": {
+          "n": 50,
+          "sum": -16.914780000000004,
+          "mean": -0.3382956000000001,
+          "min": -2.04079,
+          "max": 0.00502
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.02174,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          },
+          "b": {
+            "weight": 0.02174,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          },
+          "c": {
+            "weight": 0.02174,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.02174,
+        "aggregates": {
+          "n": 50,
+          "sum": 2.2625199999999985,
+          "mean": 0.04525039999999997,
+          "min": 0.00094,
+          "max": 0.27903
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "metastable_metallic_BeCu_mp-2323",
+    "structure_file": "mp_dataset/structures/metastable_metallic_BeCu_mp-2323/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 168,
+    "n_bonds_icobi": 168,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 168,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.0009699999999999999,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 3
+          },
+          "b": {
+            "weight": 0.00048,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 3
+          },
+          "c": {
+            "weight": 0.0007099999999999999,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 5
+          }
+        },
+        "min_direction": "b",
+        "min_weight": 0.00048,
+        "aggregates": {
+          "n": 168,
+          "sum": -27.255689999999998,
+          "mean": -0.16223625,
+          "min": -1.84805,
+          "max": 0.03161
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 168,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00121,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 3
+          },
+          "b": {
+            "weight": 0.00121,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 3
+          },
+          "c": {
+            "weight": 0.00122,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 3
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.00121,
+        "aggregates": {
+          "n": 168,
+          "sum": 3.7756000000000047,
+          "mean": 0.022473809523809552,
+          "min": 0.0004,
+          "max": 0.19864
+        }
+      }
+    }
+  }
+]
