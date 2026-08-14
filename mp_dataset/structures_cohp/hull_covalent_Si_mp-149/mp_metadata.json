@@ -1,0 +1,8 @@
+{
+  "material_id": "mp-149",
+  "formula": "Si",
+  "family": "hull",
+  "bond_type": "covalent",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "num_sites": 2
+}
