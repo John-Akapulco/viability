@@ -1,0 +1,337 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!8},
+  columns=fullflexible,
+}
+
+\graphicspath{{figures_campaign2/}}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Campaign 2 --- Percolation vs. Thermodynamic Stability}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\bfseries Percolation Weight and Thermodynamic Stability \\
+Across a 186-Compound Dataset \\
+\large Campaign 2: Dataset Construction, VASP+LOBSTER Computation,
+and Statistical Analysis}
+\author{Gilles Frapper \\ Professor, Theoretical Chemistry \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Report generated as part of the \texttt{viability} project}
+\date{August 14, 2026}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Objective and Problem Statement}
+
+The first report (6 toy compounds) established that the percolation
+descriptor computed by \texttt{percolation\_path.py} diverges sharply from
+classic ICOHP aggregates (sum, mean, min, max), but without a sample large
+enough to statistically test whether that difference is \emph{useful}:
+does the percolation descriptor carry predictive information about
+thermodynamic stability (\texttt{energy\_above\_hull}) that the classic
+aggregates don't already carry?
+
+This second campaign builds a 186-compound dataset (180 new + the 6 pilot
+compounds) split into three families:
+\begin{itemize}
+  \item \textbf{exp\_stable}: experimental (ICSD-referenced) compounds on
+    the Materials Project thermodynamic convex hull;
+  \item \textbf{exp\_metastable}: experimental metastable compounds
+    ($0 < E_\text{hull} \leq 100$~meV/atom);
+  \item \textbf{theo\_metastable}: theoretical (never experimentally
+    observed) metastable compounds ($0 < E_\text{hull} \leq 200$~meV/atom).
+\end{itemize}
+
+The \texttt{exp\_metastable} / \texttt{theo\_metastable} split serves as a
+proxy for kinetic persistence: an experimentally observed metastable
+compound has, by definition, survived long enough to be synthesized and
+characterized, unlike a theoretical compound of comparable thermodynamic
+metastability.
+
+\section{Methodology}
+
+\subsection{Dataset Selection}
+
+Materials Project query (\texttt{mp\_dataset/select\_campaign.py}): unary
+and binary chemical systems, non-magnetic ($|\text{total magnetization}|
+\leq 0.01~\mu_B$/formula unit --- MP's categorical
+\texttt{magnetic\_ordering} field is "Unknown" for $\sim$98\% of entries
+and would have excluded nearly every genuinely non-magnetic compound), no
+f-block elements, $\leq 20$ atoms/cell, 60 compounds per family with a
+2-entries-per-chemical-system cap to ensure elemental diversity rather than
+many polymorphs of the same system.
+
+\subsection{Bonding-Type Classification}
+
+Bond type (ionic / covalent / metallic) is computed by
+\texttt{fetch\_candidates.py}'s \texttt{classify()} function
+(\textbf{reused unchanged}, per the campaign's instructions), from
+\texttt{is\_metal} and elemental composition. This is a secondary analysis
+axis here, not the primary sampling axis (unlike the campaign's originally
+proposed plan, replaced at the user's request with the stable/metastable
+scheme above).
+
+\subsection{VASP + LOBSTER Computation}
+
+Same template as the pilot campaign (static run, \texttt{ISYM=$-1$},
+\texttt{LASPH=.TRUE.}, PAW-PBE potentials recommended by
+\texttt{pymatgen.io.vasp.sets.MPRelaxSet}), with two improvements:
+\texttt{NBANDS} is no longer a fixed value but derived per compound from
+the number of local orbitals in the LOBSTER basis
+(\texttt{Lobsterin.write\_INCAR}), and basis-function determination goes
+through \texttt{Lobsterin.get\_basis(potcar\_symbols=\ldots)} rather than
+direct POTCAR-file parsing (whose internal pymatgen validity check fails
+on several POTCARs unrecognized by hash in the local mirror).
+
+\subsection{Statistics}
+
+Spearman correlation (no reason to expect a linear relationship) between
+percolation weight (raw and normalized by $|\text{ICOHP}_\text{min}|$) and
+\texttt{energy\_above\_hull}, overall and per bond type; same for the
+classic ICOHP aggregates, for direct comparison; a reference logistic
+regression (stable vs. metastable, 2--3 features, 5-fold cross-validation)
+for a reference AUC. \textbf{No SISSO, no symbolic regression}: premature
+with a single candidate descriptor at this sample size (see
+\S\ref{sec:limits}).
+
+\section{Workflow Diagram}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.75cm and 1.6cm,
+  box/.style={draw, rounded corners, minimum width=5.0cm, minimum height=1.0cm,
+              align=center, fill=blue!6, font=\small},
+  io/.style={draw, minimum width=5.0cm, minimum height=1.0cm, align=center,
+             fill=orange!10, font=\small},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[io]  (mp)     {Materials Project (API) \\ 180 compounds (3 families $\times$ 60)};
+\node[box, below=of mp] (prep)   {\texttt{download\_campaign.py} + \texttt{prepare\_vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
+\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks};
+\node[box, below=of slurm] (vasplob) {VASP (static) $\rightarrow$ LOBSTER 5.1.1 \\ ICOHPLIST.lobster, ICOBILIST.lobster};
+\node[box, below=of vasplob] (perc)   {\texttt{percolation\_path.py} (unchanged) \\ 186 compounds (180 + 6 pilots)};
+\node[box, below=of perc] (join)   {\texttt{analysis/build\_dataset.py} \\ join + normalized descriptor + bond\_type};
+\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis.py} \\ correlations, logistic regression, figures};
+
+\draw[arr] (mp) -- (prep);
+\draw[arr] (prep) -- (slurm);
+\draw[arr] (slurm) -- (vasplob);
+\draw[arr] (vasplob) -- (perc);
+\draw[arr] (perc) -- (join);
+\draw[arr] (join) -- (stats);
+\end{tikzpicture}
+\end{center}
+
+\section{Environment}
+
+Same as the pilot campaign (Yargla, VASP 6.5.0, LOBSTER 5.1.1, Python 3.11
+\texttt{.venv}), extended with: \texttt{mp-api}, \texttt{pandas},
+\texttt{scipy}, \texttt{scikit-learn}, \texttt{matplotlib} (see
+\texttt{requirements.txt}).
+
+\section{Dataset}
+
+\begin{center}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Family & $n$ & $E_\text{hull}$ range (eV/atom) \\
+\midrule
+exp\_stable      & 63 & 0.0000 (by construction) \\
+exp\_metastable  & 63 & 0.0005 -- 0.0907 \\
+theo\_metastable & 60 & 0.0013 -- 0.1991 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}lr@{}}
+\toprule
+Bond type (\texttt{classify()}) & $n$ \\
+\midrule
+metallic       & 88 \\
+covalent       & 23 \\
+ionic          & 9 \\
+unclassified   & 66 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+35\% of compounds (66/186) fall outside \texttt{classify()}'s three
+categories --- mostly transition-metal pnictides/chalcogenides and
+hydrogen-containing compounds, a real limitation of the reused heuristic,
+documented but not fixed here.
+
+\section{Results}
+
+\subsection{Correlations (Spearman)}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Group & Metric & $n$ & $\rho$ & $p$ \\
+\midrule
+all & percolation weight (raw)        & 186 & 0.064 & 0.383 \\
+all & percolation weight (normalized) & 186 & 0.071 & 0.339 \\
+metallic & percolation weight (raw)        & 88 & 0.191 & 0.075 \\
+metallic & percolation weight (normalized) & 88 & \textbf{0.222} & \textbf{0.038} \\
+ionic$^*$ & percolation weight (raw)       & 9  & $-$0.402 & 0.284 \\
+covalent & percolation weight (raw)        & 23 & 0.165 & 0.453 \\
+\midrule
+all & ICOHP sum    & 186 & 0.032 & 0.670 \\
+all & ICOHP min    & 186 & 0.093 & 0.209 \\
+metallic & ICOHP sum  & 88 & 0.223 & 0.037 \\
+metallic & ICOHP min  & 88 & 0.198 & 0.065 \\
+\bottomrule
+\end{tabular}
+
+\footnotesize $^*$ $n<15$: do not over-interpret.
+\end{center}
+
+In the one subgroup where any result reaches nominal significance
+(metallic, $n=88$), the normalized percolation weight ($\rho=0.222$,
+$p=0.038$) and the ICOHP sum ($\rho=0.223$, $p=0.037$) are statistically
+indistinguishable in strength. \textbf{The percolation descriptor does not
+demonstrate additional predictive power over the classic aggregates on
+this dataset} --- a more precise answer than the previous (6-compound)
+report's "qualitatively different" framing, and a more directly
+actionable one.
+
+\subsection{Reference Logistic Regression}
+
+Stable (on-hull) vs. metastable, features: normalized percolation weight,
+mean ICOHP, bond-type dummies ($n=120$ after dropping unclassified
+compounds).
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+AUC (5-fold cross-validation) & $0.496 \pm 0.141$ \\
+per-fold AUC & 0.556, 0.430, 0.252, 0.637, 0.607 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+AUC $\approx 0.5$: chance level. The wide spread across folds
+(0.25--0.64) is itself informative: it indicates the absence of a stable,
+learnable signal at this sample size, not merely a "weak but real" one.
+
+\subsection{Figures}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{percolation_vs_ehull.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{roc_stable_vs_metastable.png}
+\end{center}
+
+\section{Failures Found and Fixed}
+
+Per the instruction ("every job failure must be logged with its probable
+cause"), 5 of the 178 SLURM-array-submitted jobs failed on the first pass,
+all diagnosed and fixed at the source:
+
+\begin{itemize}
+  \item \textbf{Al12W, BW, WO2, TcW, TiW} (all tungsten-containing): the
+    local mirror's \texttt{W\_sv} POTCAR is missing its \texttt{LEXCH}
+    field entirely (confirmed by direct inspection --- present in every
+    other variant checked, including plain \texttt{W}), which VASP reads
+    as an incompatible exchange-correlation functional and refuses to run.
+    Fixed by replacing the \texttt{W\_sv} override with plain \texttt{W}
+    (valid PBE, verified).
+  \item \textbf{Al12W} failed again after that fix, this time with a VASP
+    SIGSEGV --- exactly the known issue flagged in the mission brief
+    (\texttt{ulimit -s unlimited} before \texttt{vasp\_std}), present in
+    \texttt{submit\_array.sh} but forgotten in
+    \texttt{prepare\_vasp\_lobster.py}'s per-compound SLURM template.
+    Fixed; recovered on retry.
+\end{itemize}
+
+Final success rate: \textbf{186/186}.
+
+\section{Compute Cost}
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & VASP & LOBSTER \\
+\midrule
+Mean (s) & 124 & 397 \\
+Median (s) & 72 & 145 \\
+Max (s) & 1440 & 6675 \\
+Sequential total & 6.4 h & 19.1 h \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Actual elapsed wall-clock time (8-way concurrency): $\sim$3.5~h, within the
+6~h overnight budget.
+
+\section{Limits and Next Steps}
+\label{sec:limits}
+
+\begin{itemize}
+  \item \textbf{Sample size}: 186 overall, but 88/23/9 once split by bond
+    type --- the "ionic" correlations ($n=9$) are not interpretable.
+  \item \textbf{Primitive vs. conventional cell} (carried over from the
+    pilot report): not addressed here. Most likely explanation for the
+    weak observed correlations --- the strongest bond can sit entirely
+    inside the primitive cell and contribute to no non-contractile cycle
+    at all, biasing the measured "weakest link."
+  \item \textbf{No true dynamical "unstable" class}: \texttt{theo\_metastable}
+    is a proxy (never synthesized), not a phonon-calculation result.
+  \item \textbf{\texttt{classify()} coverage}: 35\% of compounds
+    unclassified.
+  \item \textbf{Why not SISSO yet}: a single candidate descriptor (the
+    percolation weight, in two algebraically related variants), compared
+    against aggregates that are themselves functions of the same
+    underlying ICOHP values --- no meaningful combinatorial search space
+    yet. Justifying SISSO would require: (a) several conceptually novel
+    candidate descriptors, (b) per-stratum $n \geq 50$--100, (c) a clearer
+    signal than AUC $\approx 0.5$.
+\end{itemize}
+
+\section{Conclusion}
+
+The 186-compound dataset was built, computed (VASP+LOBSTER), and analyzed
+end to end, with two compute failures diagnosed and fixed at the source.
+The headline result is a \emph{negative} but quantified and honest one: at
+this sample size, the percolation descriptor shows no significant
+correlation with thermodynamic stability, and demonstrates no advantage
+over classic ICOHP aggregates. The priority actions (\S\ref{sec:limits})
+--- especially conventional-cell reprocessing and a targeted extension of
+the metallic subsample --- are likely to move this result before a
+SISSO-class tool is warranted.
+
+\vspace{1cm}
+\noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
+\noindent\textit{Data:} \texttt{analysis/percolation\_vs\_hull.csv} \\
+\noindent\textit{Detailed report:} \texttt{analysis/REPORT.md}
+
+\end{document}

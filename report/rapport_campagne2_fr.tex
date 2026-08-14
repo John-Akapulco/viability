@@ -1,0 +1,346 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsmath}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!8},
+  columns=fullflexible,
+}
+
+\graphicspath{{figures_campaign2/}}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Campagne 2 --- Percolation vs. stabilité thermodynamique}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{\bfseries Poids de percolation et stabilité thermodynamique \\
+sur un jeu de 186 composés \\
+\large Campagne 2 : construction du jeu de données, calcul VASP+LOBSTER,
+et analyse statistique}
+\author{Gilles Frapper \\ Professeur des Universités, Chimie Théorique \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Rapport généré dans le cadre du projet \texttt{viability}}
+\date{14 août 2026}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Objectif et problématique}
+
+Le premier rapport (6 composés jouets) avait établi que le descripteur de
+percolation calculé par \texttt{percolation\_path.py} diverge fortement des
+agrégats ICOHP classiques (somme, moyenne, min, max), sans toutefois
+disposer d'un échantillon assez grand pour tester statistiquement si cette
+différence est \emph{utile} : le descripteur de percolation apporte-t-il une
+information prédictive sur la stabilité thermodynamique
+(\texttt{energy\_above\_hull}) que les agrégats classiques n'apportent pas
+déjà ?
+
+Cette deuxième campagne construit un jeu de données de 186 composés
+(180 nouveaux + les 6 composés pilotes) réparti en trois familles :
+\begin{itemize}
+  \item \textbf{exp\_stable} : composés expérimentaux (référencés ICSD) sur
+    le hull convexe thermodynamique de Materials Project ;
+  \item \textbf{exp\_metastable} : composés expérimentaux métastables
+    ($0 < E_\text{hull} \leq 100$~meV/atome) ;
+  \item \textbf{theo\_metastable} : composés théoriques (jamais observés
+    expérimentalement) métastables ($0 < E_\text{hull} \leq 200$~meV/atome).
+\end{itemize}
+
+La distinction \texttt{exp\_metastable} / \texttt{theo\_metastable} sert de
+proxy pour la persistance cinétique : un composé métastable observé
+expérimentalement a, par définition, survécu assez longtemps pour être
+synthétisé et caractérisé, contrairement à un composé théorique de même
+métastabilité thermodynamique.
+
+\section{Méthodologie}
+
+\subsection{Sélection du jeu de données}
+
+Requête Materials Project (\texttt{mp\_dataset/select\_campaign.py}) :
+systèmes chimiques unaires et binaires, non magnétiques
+($|\text{aimantation totale}| \leq 0.01~\mu_B$/unité formulaire --- le champ
+catégoriel \texttt{magnetic\_ordering} de MP est \og{}Unknown\fg{} pour
+$\sim$98\% des entrées et aurait exclu la quasi-totalité des composés
+réellement non magnétiques), sans éléments f, $\leq 20$ atomes/maille,
+60 composés par famille avec un plafond de 2 entrées par système chimique
+(\texttt{chemsys}) pour garantir une diversité élémentaire plutôt qu'une
+accumulation de polymorphes d'un même système.
+
+\subsection{Classification du type de liaison}
+
+Le type de liaison (ionique / covalent / métallique) est calculé par la
+fonction \texttt{classify()} de \texttt{fetch\_candidates.py}
+(\textbf{réutilisée sans modification}, conformément à la consigne de la
+campagne), à partir de \texttt{is\_metal} et de la composition élémentaire.
+Cette classification est un axe secondaire d'analyse ici, pas l'axe
+d'échantillonnage principal (contrairement à la proposition initiale de
+plan de campagne, remplacée à la demande de l'utilisateur par le schéma
+stable/métastable ci-dessus).
+
+\subsection{Calcul VASP + LOBSTER}
+
+Même gabarit que la campagne pilote (calcul statique, \texttt{ISYM=$-1$},
+\texttt{LASPH=.TRUE.}, potentiels PAW-PBE recommandés par
+\texttt{pymatgen.io.vasp.sets.MPRelaxSet}), avec deux améliorations :
+\texttt{NBANDS} n'est plus une valeur fixe mais dérivée par composé du
+nombre d'orbitales locales de la base LOBSTER
+(\texttt{Lobsterin.write\_INCAR}), et la détermination des fonctions de
+base passe par \texttt{Lobsterin.get\_basis(potcar\_symbols=\ldots)}
+plutôt que par le parsing direct du fichier POTCAR (dont la validation
+interne de \texttt{pymatgen} échoue sur plusieurs POTCAR non reconnus par
+empreinte de hachage dans le miroir local).
+
+\subsection{Statistiques}
+
+Corrélation de Spearman (pas de raison d'attendre une relation linéaire)
+entre le poids de percolation (brut et normalisé par
+$|\text{ICOHP}_\text{min}|$) et \texttt{energy\_above\_hull}, globalement et
+par type de liaison ; même chose pour les agrégats ICOHP classiques, pour
+comparaison directe ; régression logistique de référence (stable vs.
+métastable, 2--3 variables, validation croisée 5 plis) pour une AUC de
+référence. \textbf{Aucun SISSO, aucune régression symbolique} : prématuré
+avec un seul descripteur candidat et cet ordre de grandeur d'échantillon
+(voir \S\ref{sec:limites}).
+
+\section{Organigramme du workflow}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.75cm and 1.6cm,
+  box/.style={draw, rounded corners, minimum width=5.0cm, minimum height=1.0cm,
+              align=center, fill=blue!6, font=\small},
+  io/.style={draw, minimum width=5.0cm, minimum height=1.0cm, align=center,
+             fill=orange!10, font=\small},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[io]  (mp)     {Materials Project (API) \\ 180 composés (3 familles $\times$ 60)};
+\node[box, below=of mp] (prep)   {\texttt{download\_campaign.py} + \texttt{prepare\_vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
+\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ tableau plafonné à 8 t\^aches concurrentes};
+\node[box, below=of slurm] (vasplob) {VASP (statique) $\rightarrow$ LOBSTER 5.1.1 \\ ICOHPLIST.lobster, ICOBILIST.lobster};
+\node[box, below=of vasplob] (perc)   {\texttt{percolation\_path.py} (inchang\'e) \\ 186 composés (180 + 6 pilotes)};
+\node[box, below=of perc] (join)   {\texttt{analysis/build\_dataset.py} \\ jointure + descripteur normalisé + bond\_type};
+\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis.py} \\ corrélations, régression logistique, figures};
+
+\draw[arr] (mp) -- (prep);
+\draw[arr] (prep) -- (slurm);
+\draw[arr] (slurm) -- (vasplob);
+\draw[arr] (vasplob) -- (perc);
+\draw[arr] (perc) -- (join);
+\draw[arr] (join) -- (stats);
+\end{tikzpicture}
+\end{center}
+
+\section{Environnement}
+
+Identique à la campagne pilote (Yargla, VASP 6.5.0, LOBSTER 5.1.1,
+\texttt{.venv} Python 3.11), complété par :
+\texttt{mp-api}, \texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn},
+\texttt{matplotlib} (voir \texttt{requirements.txt}).
+
+\section{Jeu de données}
+
+\begin{center}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Famille & $n$ & Plage $E_\text{hull}$ (eV/atome) \\
+\midrule
+exp\_stable      & 63 & 0.0000 (par construction) \\
+exp\_metastable  & 63 & 0.0005 -- 0.0907 \\
+theo\_metastable & 60 & 0.0013 -- 0.1991 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}lr@{}}
+\toprule
+Type de liaison (\texttt{classify()}) & $n$ \\
+\midrule
+métallique       & 88 \\
+covalent         & 23 \\
+ionique          & 9 \\
+non classifié    & 66 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+35\% des composés (66/186) ne correspondent à aucune des trois catégories
+de \texttt{classify()} --- principalement des pnictures/chalcogénures de
+métaux de transition et des composés hydrogénés, une limite réelle de
+l'heuristique réutilisée telle quelle, documentée mais non corrigée ici.
+
+\section{Résultats}
+
+\subsection{Corrélations (Spearman)}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Groupe & Métrique & $n$ & $\rho$ & $p$ \\
+\midrule
+tous & poids percolation (brut)       & 186 & 0.064 & 0.383 \\
+tous & poids percolation (normalisé)  & 186 & 0.071 & 0.339 \\
+métallique & poids percolation (brut)      & 88 & 0.191 & 0.075 \\
+métallique & poids percolation (normalisé) & 88 & \textbf{0.222} & \textbf{0.038} \\
+ionique$^*$ & poids percolation (brut)     & 9  & $-$0.402 & 0.284 \\
+covalent & poids percolation (brut)        & 23 & 0.165 & 0.453 \\
+\midrule
+tous & ICOHP somme    & 186 & 0.032 & 0.670 \\
+tous & ICOHP min      & 186 & 0.093 & 0.209 \\
+métallique & ICOHP somme  & 88 & 0.223 & 0.037 \\
+métallique & ICOHP min    & 88 & 0.198 & 0.065 \\
+\bottomrule
+\end{tabular}
+
+\footnotesize $^*$ $n<15$ : à ne pas surinterpréter.
+\end{center}
+
+Dans le seul sous-groupe où un résultat atteint la significativité nominale
+(métallique, $n=88$), le poids de percolation normalisé ($\rho=0.222$,
+$p=0.038$) et la somme des ICOHP ($\rho=0.223$, $p=0.037$) sont
+statistiquement indiscernables en force. \textbf{Le descripteur de
+percolation n'apporte pas d'avantage prédictif démontré par rapport aux
+agrégats classiques sur ce jeu de données} --- une réponse plus précise
+que la formulation \og{}qualitativement différent\fg{} du rapport
+précédent (6 composés), et plus directement exploitable.
+
+\subsection{Régression logistique de référence}
+
+Stable (hull) vs. métastable, variables : poids de percolation normalisé,
+ICOHP moyen, indicatrices de type de liaison ($n=120$ après exclusion des
+composés non classifiés).
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+AUC (validation croisée, 5 plis) & $0.496 \pm 0.141$ \\
+AUC par pli & 0.556, 0.430, 0.252, 0.637, 0.607 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+AUC $\approx 0.5$ : niveau du hasard. La dispersion importante entre plis
+(0.25--0.64) indique elle-même l'absence de signal stable et apprenant à
+cette taille d'échantillon, pas seulement un signal \og{}faible mais
+réel\fg{}.
+
+\subsection{Figures}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{percolation_vs_ehull.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{roc_stable_vs_metastable.png}
+\end{center}
+
+\section{Incidents résolus}
+
+Conformément à la consigne (\og{}chaque échec de job doit être loggé avec la
+raison probable\fg{}), 5 des 178 jobs soumis en tableau SLURM ont échoué au
+premier passage, tous diagnostiqués et corrigés à la source :
+
+\begin{itemize}
+  \item \textbf{Al12W, BW, WO2, TcW, TiW} (tous contenant du tungstène) :
+    le POTCAR \texttt{W\_sv} du miroir local est dépourvu de son champ
+    \texttt{LEXCH} (confirmé par inspection directe --- présent pour toutes
+    les autres variantes testées, y compris \texttt{W} simple), ce que VASP
+    interprète comme une fonctionnelle d'échange-corrélation incompatible
+    et refuse d'exécuter. Corrigé en remplaçant la substitution
+    \texttt{W\_sv} par \texttt{W} (PBE valide, vérifié).
+  \item \textbf{Al12W} a échoué une seconde fois après cette correction,
+    avec un SIGSEGV VASP --- exactement le problème connu signalé dans la
+    mission (\texttt{ulimit -s unlimited} avant \texttt{vasp\_std}), présent
+    dans \texttt{submit\_array.sh} mais oublié dans le gabarit SLURM
+    individuel de \texttt{prepare\_vasp\_lobster.py}. Corrigé ; récupéré au
+    second essai.
+\end{itemize}
+
+Taux de succès final : \textbf{186/186}.
+
+\section{Coût de calcul}
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & VASP & LOBSTER \\
+\midrule
+Moyenne (s) & 124 & 397 \\
+Médiane (s) & 72 & 145 \\
+Maximum (s) & 1440 & 6675 \\
+Total séquentiel & 6.4 h & 19.1 h \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Temps réel écoulé (parallélisme 8 tâches) : $\sim$3.5~h, dans le budget de
+6~h fixé pour la nuit.
+
+\section{Limites et perspectives}
+\label{sec:limites}
+
+\begin{itemize}
+  \item \textbf{Taille d'échantillon} : 186 au total, mais 88/23/9 par type
+    de liaison une fois stratifié --- les corrélations \og{}ioniques\fg{}
+    ($n=9$) ne sont pas interprétables.
+  \item \textbf{Maille primitive vs. conventionnelle} (héritée du rapport
+    pilote) : non retraitée ici. C'est probablement la cause la plus
+    probable de la faiblesse des corrélations observées --- la liaison la
+    plus forte peut être entièrement intra-maille et ne contribuer à aucun
+    cycle non contractile, biaisant le \og{}maillon faible\fg{} mesuré.
+  \item \textbf{Pas de classe \og{}instable\fg{} au sens dynamique} :
+    \texttt{theo\_metastable} est un proxy (composé jamais synthétisé), pas
+    un résultat de calcul de phonons.
+  \item \textbf{Couverture de \texttt{classify()}} : 35\% des composés non
+    classifiés.
+  \item \textbf{Pourquoi pas SISSO maintenant} : un seul descripteur
+    candidat (le poids de percolation, sous deux variantes algébriquement
+    liées), comparé à des agrégats eux-mêmes fonctions des mêmes valeurs
+    ICOHP sous-jacentes --- aucun espace combinatoire de recherche
+    significatif à ce stade. Justifier SISSO demanderait : (a) plusieurs
+    descripteurs candidats conceptuellement nouveaux, (b) un $n$ par strate
+    d'au moins 50--100, (c) un signal plus net qu'une AUC $\approx 0.5$.
+\end{itemize}
+
+\section{Conclusion}
+
+Le jeu de données de 186 composés a été construit, calculé (VASP+LOBSTER)
+et analysé de bout en bout, avec deux incidents de calcul diagnostiqués et
+corrigés à la source. Le résultat principal est un résultat \emph{négatif}
+mais chiffré et honnête : à cette taille d'échantillon, le descripteur de
+percolation ne montre pas de corrélation significative avec la stabilité
+thermodynamique, et n'apporte pas d'avantage démontré sur les agrégats
+ICOHP classiques. Les actions prioritaires (\S\ref{sec:limites}) --- en
+particulier le retraitement en maille conventionnelle et l'extension ciblée
+du sous-échantillon métallique --- sont susceptibles de faire évoluer ce
+résultat avant d'envisager un outillage de type SISSO.
+
+\vspace{1cm}
+\noindent\textit{Code source :} \url{https://github.com/John-Akapulco/viability} \\
+\noindent\textit{Données :} \texttt{analysis/percolation\_vs\_hull.csv} \\
+\noindent\textit{Rapport détaillé :} \texttt{analysis/REPORT.md}
+
+\end{document}
