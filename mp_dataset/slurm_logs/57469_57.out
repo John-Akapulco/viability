@@ -1,0 +1,87 @@
+Loading compiler version 2023.2.1
+Loading tbb version 2021.10.0
+Loading compiler-rt version 2023.2.1
+Loading oclfpga version 2023.2.1
+  Load "debugger" to debug DPC++ applications with the gdb-oneapi debugger.
+  Load "dpl" for additional DPC++ APIs: https://github.com/oneapi-src/oneDPL
+Loading mkl version 2023.2.0
+LOBSTER v5.1.1 (g++ 9.3.0)
+Copyright (C) 2024 by Chair of Solid-State and Quantum Chemistry, RWTH Aachen.
+All rights reserved. Contributions by S. Maintz, V. L. Deringer, M. Esser, R. Nelson, C. Ertural, P. C. Mueller, M. Pauls, L. Sann, D. Schnieders, A. L. Tchougreeff, and R. Dronskowski
+starting on host node15.cluster.local on 2026-08-14 at 00:42:21 CEST using 16 threads
+detecting used PAW program... VASP
+initializing PW system...
+initializing Augmentations...
+recommended basis functions:
+Br 4p 4s 
+Zr 4d 4p 4s 5s 
+initializing LCAO system...
+setting up local basis functions...
+Br (pbevaspfit2015) 4s 4p_y 4p_z 4p_x 
+Zr (pbevaspfit2015) 4s 5s 4p_y 4p_z 4p_x 4d_xy 4d_yz 4d_z^2 4d_xz 4d_x^2-y^2 
+setting up CO interactions... found 160 interactions.
+projecting...
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+WARNING: Cannot use the tetrahedron method for k-space integration and must fall
+WARNING: back to Gaussian smearing which can take significantly longer. Make
+WARNING: sure to use the tetrahedron method whenever applicable.
+
+calculating overlaps...
+post-processing projection...
+saving projection to projectionData.lobster...
+abs. charge spilling:   1.45%
+
+NOTE: The spilling is a measure for the relocation, *not* the absence of electrons.
+number of electrons recovered by projection: 38.0000 of 38
+
+calculating pDOS... using Gaussian smearing integration (sigma=0.05eV)
+writing DOSCAR.lobster...
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+writing COOPCAR.lobster...
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+Writing ICOOPLIST.lobster
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+calculating pCOHPs... using Gaussian smearing integration (sigma=0.05eV)
+writing COHPCAR.lobster...
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+Writing ICOHPLIST.lobster
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+writing COBICAR.lobster...
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+Writing ICOBILIST.lobster
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+writing CHARGE.lobster and GROSSPOP.lobster...
+writing polarization to POLARIZATION.lobster...
+calculating Madelung energies...
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+writing SitePotentials.lobster and MadelungEnergies.lobster...
+finished in 0 h  1 min 14 s 210 ms of wall time
+            0 h 15 min  1 s 380 ms of user time
+            0 h  0 min  0 s 870 ms of sys  time

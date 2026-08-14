@@ -24,6 +24,7 @@ mp_dataset/structures/*/COHPCAR.lobster
 mp_dataset/structures/*/COBICAR.lobster
 mp_dataset/structures/*/COOPCAR.lobster
 mp_dataset/structures/*/DOSCAR.lobster
+mp_dataset/structures/*/ICOOPLIST.lobster
 mp_dataset/structures/*/projectionData.lobster
 mp_dataset/structures/*/bandOverlaps.lobster
 mp_dataset/structures/*/WAVECAR*

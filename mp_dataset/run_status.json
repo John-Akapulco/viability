@@ -7,17 +7,33 @@
   "n_jobs_total": 178,
   "concurrency_cap": 8,
   "job_list_file": "mp_dataset/job_list.txt",
-  "status": "running",
-  "last_checked_utc": "2026-08-13T21:58:53Z",
-  "n_done": 2,
-  "n_running": 7,
-  "n_pending": 169,
-  "n_failed_or_unaccounted": 1,
+  "status": "compute_phase_done",
+  "last_checked_utc": "2026-08-14T01:22:53Z",
+  "n_done": 174,
+  "n_running": 0,
+  "n_pending": 0,
+  "n_failed_or_unaccounted": 5,
   "failures": [
     {
       "compound": "exp_metastable_Al12W_mp-11227",
       "reason": "VASP did not reach normal termination (log truncated); LOBSTER error: ERROR: The input file CONTCAR is present, but has a size of 0 bytes."
+    },
+    {
+      "compound": "exp_stable_BW_mp-7832",
+      "reason": "VASP did not reach normal termination (log truncated); LOBSTER error: ERROR: The input file CONTCAR is present, but has a size of 0 bytes."
+    },
+    {
+      "compound": "exp_stable_WO2_mp-1524394",
+      "reason": "VASP did not reach normal termination (log truncated); LOBSTER error: ERROR: The input file CONTCAR is present, but has a size of 0 bytes."
+    },
+    {
+      "compound": "theo_metastable_TcW_mp-1217337",
+      "reason": "VASP did not reach normal termination (log truncated); LOBSTER error: ERROR: The input file CONTCAR is present, but has a size of 0 bytes."
+    },
+    {
+      "compound": "theo_metastable_TiW_mp-1216621",
+      "reason": "VASP did not reach normal termination (log truncated); LOBSTER error: ERROR: The input file CONTCAR is present, but has a size of 0 bytes."
     }
   ],
-  "elapsed_hours": 0.04583333333333333
+  "elapsed_hours": 3.4458333333333333
 }
