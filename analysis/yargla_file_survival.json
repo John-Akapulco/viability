@@ -1,0 +1,110 @@
+{
+  "hull_ionic_NaCl_mp-22862": {
+    "WAVECAR": {
+      "present": true,
+      "size_bytes": 610638912
+    },
+    "COHPCAR.lobster": {
+      "present": true,
+      "size_bytes": 13679542
+    },
+    "COBICAR.lobster": {
+      "present": true,
+      "size_bytes": 13679541
+    },
+    "POTCAR": {
+      "present": true,
+      "size_bytes": 404221
+    }
+  },
+  "hull_covalent_Si_mp-149": {
+    "WAVECAR": {
+      "present": true,
+      "size_bytes": 565130592
+    },
+    "COHPCAR.lobster": {
+      "present": true,
+      "size_bytes": 17502433
+    },
+    "COBICAR.lobster": {
+      "present": true,
+      "size_bytes": 17502432
+    },
+    "POTCAR": {
+      "present": true,
+      "size_bytes": 195673
+    }
+  },
+  "hull_metallic_AlNi_mp-1487": {
+    "WAVECAR": {
+      "present": true,
+      "size_bytes": 641564704
+    },
+    "COHPCAR.lobster": {
+      "present": true,
+      "size_bytes": 69950652
+    },
+    "COBICAR.lobster": {
+      "present": true,
+      "size_bytes": 69950651
+    },
+    "POTCAR": {
+      "present": true,
+      "size_bytes": 428581
+    }
+  },
+  "metastable_ionic_LiBr_mp-23259": {
+    "WAVECAR": {
+      "present": true,
+      "size_bytes": 565130592
+    },
+    "COHPCAR.lobster": {
+      "present": true,
+      "size_bytes": 17181391
+    },
+    "COBICAR.lobster": {
+      "present": true,
+      "size_bytes": 17181390
+    },
+    "POTCAR": {
+      "present": true,
+      "size_bytes": 362026
+    }
+  },
+  "metastable_covalent_C_rhombohedral_mp-169": {
+    "WAVECAR": {
+      "present": true,
+      "size_bytes": 582700832
+    },
+    "COHPCAR.lobster": {
+      "present": true,
+      "size_bytes": 35524121
+    },
+    "COBICAR.lobster": {
+      "present": true,
+      "size_bytes": 35524120
+    },
+    "POTCAR": {
+      "present": true,
+      "size_bytes": 207211
+    }
+  },
+  "metastable_metallic_BeCu_mp-2323": {
+    "WAVECAR": {
+      "present": true,
+      "size_bytes": 526826432
+    },
+    "COHPCAR.lobster": {
+      "present": true,
+      "size_bytes": 122402573
+    },
+    "COBICAR.lobster": {
+      "present": true,
+      "size_bytes": 122402572
+    },
+    "POTCAR": {
+      "present": true,
+      "size_bytes": 428387
+    }
+  }
+}

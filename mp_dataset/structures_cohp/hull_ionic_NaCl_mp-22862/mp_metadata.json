@@ -1,0 +1,8 @@
+{
+  "material_id": "mp-22862",
+  "formula": "NaCl",
+  "family": "hull",
+  "bond_type": "ionic",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "num_sites": 2
+}

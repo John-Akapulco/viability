@@ -1,0 +1,8 @@
+{
+  "material_id": "mp-2323",
+  "formula": "BeCu",
+  "family": "metastable",
+  "bond_type": "metallic",
+  "energy_above_hull_eV_per_atom": 0.005036342500000401,
+  "num_sites": 2
+}

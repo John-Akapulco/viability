@@ -1,0 +1,8 @@
+{
+  "material_id": "mp-169",
+  "formula": "C",
+  "family": "metastable",
+  "bond_type": "covalent",
+  "energy_above_hull_eV_per_atom": 0.0007906250000004889,
+  "num_sites": 2
+}
