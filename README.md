@@ -196,9 +196,25 @@ known metals). See
 (the window/metric definition itself: one-sided window below E_F/VBM,
 integrated antibonding-only COHP, raw + normalized). Validated on the 6
 pilots only (synthetic numerical tests + real-data sanity checks,
-`tests/test_cohp_extraction.py`) — extension to the full 186-compound
-dataset, and testing whether the metric predicts anything at all, are
-separate, not-yet-authorized next steps.
+`tests/test_cohp_extraction.py`).
+
+Extended to the full 186-compound dataset in `analysis/compute_antibonding_all.py`
+(186/186 succeeded) and tested against `formation_energy_per_atom` in
+`analysis/stats_analysis_antibonding.py`. See
+**[`analysis/REPORT_antibonding.md`](analysis/REPORT_antibonding.md)**.
+Headline: the normalized metric reaches ρ=−0.328, p=5.0×10⁻⁶ (n=186) — the
+strongest global correlation of any descriptor in this project so far,
+ahead of min-cut's ρ=0.285. The sign (more antibonding population near the
+frontier associates with *more negative*, i.e. more stable, formation
+energy) is the opposite of the naive Peierls/Jahn-Teller reading, and
+diagnostics show the global number is substantially a between-group effect
+(metal vs. gapped compounds differ sharply in both variables; neither
+`is_metal` subgroup is significant alone) — except for `bond_type=covalent`
+(n=23), which does hold up under stratification (p=0.018–0.029), the first
+descriptor in this project to survive a bond-type split at a defensible
+sample size. See the report for the full within-group diagnostics, the
+ΔE-sensitivity check (robust across 0.5–2.0 eV), and why the sign is not
+yet interpretable as confirming or refuting the instability hypothesis.
 
 ## Limites connues
 
