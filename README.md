@@ -175,6 +175,31 @@ partly by between-bond-type clustering rather than a clean within-type
 relationship; dimensionality alone does not separate formation energy
 (Kruskal-Wallis p=0.19).
 
+### Antibonding population near the frontier (E_F/VBM)
+
+A third, distinct question from everything above: not the integrated
+ICOHP/ICOBI (a single number per bond), but *how COHP is distributed in
+energy* — specifically, whether the highest-energy occupied states carry
+antibonding character, by analogy with Peierls/Jahn-Teller electronic
+instabilities. New module `cohp_extraction.py` (`percolation_path.py`
+still untouched), built on `pymatgen.io.lobster.outputs.Cohpcar` /
+`pymatgen.electronic_structure.cohp.CompleteCohp` (no hand-rolled COHPCAR
+parsing). Cross-validated against the already-validated `ICOHPLIST.lobster`
+across 558 bond labels in the 6 pilots (exact match for 5/6, 1e-5 eV for
+the 6th); metal/gap classification cross-checked against Materials
+Project rather than derived locally, which caught a real pitfall (our
+LOBSTER-oriented coarse k-mesh spuriously suggests small gaps for two
+known metals). See
+**[`analysis/REPORT_cohp_feasibility.md`](analysis/REPORT_cohp_feasibility.md)**
+(extraction pipeline validation) and
+**[`analysis/METRIC_DEFINITION_antibonding.md`](analysis/METRIC_DEFINITION_antibonding.md)**
+(the window/metric definition itself: one-sided window below E_F/VBM,
+integrated antibonding-only COHP, raw + normalized). Validated on the 6
+pilots only (synthetic numerical tests + real-data sanity checks,
+`tests/test_cohp_extraction.py`) — extension to the full 186-compound
+dataset, and testing whether the metric predicts anything at all, are
+separate, not-yet-authorized next steps.
+
 ## Limites connues
 
 - Suppose que `ICOHPLIST.lobster`/`ICOBILIST.lobster` proviennent du même

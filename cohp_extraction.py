@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""COHP extraction feasibility (mission: antibonding-population-near-E_F,
-steps 0+1 ONLY). Reuses pymatgen's own COHPCAR parsers -- no hand-rolled
-parsing of the LOBSTER COHPCAR format, since a hand-rolled parser is
-exactly the kind of place a sign-convention or energy-reference bug would
-go unnoticed.
+"""COHP extraction + antibonding-population-near-frontier metric.
 
-This module deliberately does NOT define an antibonding-population metric
-or an energy window (that is step 2, out of scope here). It only provides:
+Steps 0+1 (extraction, cross-validation, metal/gap classification) plus
+step 2 (window + metric definition), validated on the 6 pilot compounds
+only -- extension to the full 186-compound dataset is a separate,
+not-yet-authorized mission, per the same pattern used for every other
+descriptor in this project (validate small, then decide whether to scale).
+
+Reuses pymatgen's own COHPCAR parsers throughout -- no hand-rolled parsing
+of the LOBSTER COHPCAR format, since a hand-rolled parser is exactly the
+kind of place a sign-convention or energy-reference bug would go
+unnoticed. Provides:
   - loading COHPCAR.lobster via pymatgen (both the raw Cohpcar reader and
     the higher-level CompleteCohp wrapper);
   - a cross-validation check against the already-validated ICOHPLIST.lobster
@@ -17,7 +21,14 @@ or an energy window (that is step 2, out of scope here). It only provides:
     analysis/REPORT_cohp_feasibility.md: a naive local
     eigenvalue_band_properties/DOS-at-Ef check on our LOBSTER-oriented
     k-mesh spuriously suggests small gaps for both, when MP's own
-    converged calculation confirms both are metals, band_gap=0.0).
+    converged calculation confirms both are metals, band_gap=0.0);
+  - antibonding_population_near_frontier(): the step-2 metric. Window and
+    reference point are chosen per compound (E_F for metals, VBM for
+    gapped compounds -- see analysis/METRIC_DEFINITION_antibonding.md for
+    the full rationale), one-sided (only occupied states, since only
+    occupied antibonding character is energetically destabilizing in the
+    ground state), integrating the positive (antibonding) part of the
+    "average" COHP trace.
 
 Uses pymatgen 2026.5.4 (see requirements.txt).
 """
@@ -140,3 +151,133 @@ def metal_or_gap_from_mp(mp_id: str, api_key_path: str = "~/.mp_api_key") -> Opt
         return None
     d = docs[0]
     return {"mp_id": mp_id, "is_metal": d.is_metal, "band_gap": d.band_gap}
+
+
+# ---------------------------------------------------------------------------
+# Step 2: antibonding-population-near-frontier window + metric.
+# See analysis/METRIC_DEFINITION_antibonding.md for the full rationale.
+# ---------------------------------------------------------------------------
+
+DEFAULT_DELTA_E = 1.0  # eV, one-sided window width below the reference energy
+
+
+def frontier_reference_energy(
+    compound_dir: Path, is_metal: bool, vasprun_path: Optional[Path] = None
+) -> float:
+    """Reference energy E_ref on the SAME axis as Cohpcar.energies (which
+    LOBSTER writes already shifted so E_F = 0):
+      - metal: E_ref = 0.0 (E_F itself; COHPCAR's own zero).
+      - gapped: E_ref = VBM_absolute(VASP) - E_F_absolute(LOBSTER). Both
+        absolute values live on the same VASP-internal eigenvalue scale
+        for a given compound (confirmed empirically: VASP's and LOBSTER's
+        own reported E_F agree to <1e-4 eV across all 6 pilots -- see
+        analysis/METRIC_DEFINITION_antibonding.md). Requires vasprun.xml
+        (not COHPCAR-only) since VBM is a band-structure quantity LOBSTER
+        itself does not report.
+      - `is_metal` MUST come from an external, reliable source (Materials
+        Project's own is_metal, per metal_or_gap_from_mp) -- NOT derived
+        locally, since a naive local VBM/CBM or DOS-at-E_F check on this
+        project's LOBSTER-oriented coarse k-mesh is confirmed unreliable
+        for exactly this question (AlNi/BeCu spuriously read as gapped;
+        see analysis/REPORT_cohp_feasibility.md).
+    """
+    if is_metal:
+        return 0.0
+
+    import warnings
+
+    from pymatgen.io.vasp import Vasprun
+
+    if vasprun_path is None:
+        vasprun_path = compound_dir / "vasprun.xml"
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        vr = Vasprun(str(vasprun_path), parse_dos=True, parse_eigen=True, parse_potcar_file=False)
+        _, _, vbm, _ = vr.eigenvalue_band_properties
+        vasp_efermi = vr.efermi
+
+    lobster_efermi = load_cohpcar(compound_dir).efermi
+    if abs(vasp_efermi - lobster_efermi) > 1e-2:
+        raise ValueError(
+            f"VASP E_F ({vasp_efermi:.4f}) and LOBSTER E_F ({lobster_efermi:.4f}) disagree "
+            f"by more than 0.01 eV for {compound_dir} -- do not trust the VBM alignment "
+            "without investigating first (see analysis/METRIC_DEFINITION_antibonding.md)."
+        )
+    return vbm - lobster_efermi
+
+
+def integrate_antibonding_in_window(
+    energies: np.ndarray, cohp_values: np.ndarray, e_ref: float, delta_e: float
+) -> float:
+    """Pure numerical core of the step-2 metric, factored out from
+    antibonding_population_near_frontier() so it can be validated on
+    hand-crafted synthetic arrays (tests/test_cohp_extraction.py) with a
+    known analytic answer, independent of any real-file parsing.
+
+    Integrates max(cohp_values, 0) (the antibonding part only) over the
+    one-sided window (e_ref - delta_e, e_ref] via the trapezoidal rule on
+    whatever energy grid is supplied.
+    """
+    energies = np.asarray(energies)
+    cohp_values = np.asarray(cohp_values)
+    mask = (energies > e_ref - delta_e) & (energies <= e_ref)
+    if not mask.any():
+        raise ValueError(
+            f"Window ({e_ref - delta_e:.4f}, {e_ref:.4f}] contains no grid points "
+            f"(grid spacing ~{energies[1]-energies[0]:.4f}) -- delta_e too small."
+        )
+    antibonding_only = np.clip(cohp_values[mask], a_min=0.0, a_max=None)
+    return float(np.trapezoid(antibonding_only, energies[mask]))
+
+
+def antibonding_population_near_frontier(
+    compound_dir: Path,
+    is_metal: bool,
+    delta_e: float = DEFAULT_DELTA_E,
+    label: str = "average",
+    vasprun_path: Optional[Path] = None,
+) -> Dict[str, object]:
+    """Integrate the antibonding (positive) part of COHP(E) over the
+    one-sided window (E_ref - delta_e, E_ref], E_ref = E_F (metals) or VBM
+    (gapped compounds), on the `label` bond trace (default: LOBSTER's own
+    "average" over all bonds).
+
+    Only occupied states can be antibonding-destabilizing in the ground
+    state, hence the one-sided window (below the reference only), not a
+    window straddling it.
+
+    Returns both the raw integral (LOBSTER's ICOHP-style units, i.e. what
+    LOBSTER itself calls "eV" by convention though it's a Hamilton-
+    population integral, not literally an energy) and a version normalized
+    by the total occupied ICOHP magnitude at E_ref on the same trace (the
+    same normalized/raw-pair pattern used throughout this project for the
+    percolation weight and the min-cut descriptor).
+    """
+    cohpcar = load_cohpcar(compound_dir)
+    e_ref = frontier_reference_energy(compound_dir, is_metal, vasprun_path)
+
+    energies = np.array(cohpcar.energies)
+    spins = list(cohpcar.cohp_data[label]["COHP"].keys())
+    cohp_total = sum(cohpcar.cohp_data[label]["COHP"][s] for s in spins)
+    icohp_total = sum(cohpcar.cohp_data[label]["ICOHP"][s] for s in spins)
+
+    w_antibond = integrate_antibonding_in_window(energies, cohp_total, e_ref, delta_e)
+    n_grid_points_in_window = int(((energies > e_ref - delta_e) & (energies <= e_ref)).sum())
+
+    idx_ref = int(np.argmin(np.abs(energies - e_ref)))
+    total_occupied_magnitude = abs(float(icohp_total[idx_ref]))
+    w_antibond_normalized = (
+        w_antibond / total_occupied_magnitude if total_occupied_magnitude > 0 else None
+    )
+
+    return {
+        "label": label,
+        "is_metal": is_metal,
+        "e_ref": e_ref,
+        "delta_e": delta_e,
+        "window": [e_ref - delta_e, e_ref],
+        "n_grid_points_in_window": n_grid_points_in_window,
+        "w_antibond_raw": w_antibond,
+        "total_occupied_icohp_magnitude": total_occupied_magnitude,
+        "w_antibond_normalized": w_antibond_normalized,
+    }
