@@ -118,6 +118,29 @@ directe, direction déconnectée) :
 python percolation_path.py --root examples/dataset --metric icohp --output /tmp/example_results.csv -v
 ```
 
+## Analysis
+
+`analysis/` contains a statistical study of the percolation descriptor
+against thermodynamic stability (`energy_above_hull`) over the 186-compound
+dataset in `mp_dataset/structures/` (60 experimental-stable + 60
+experimental-metastable + 60 theoretical-metastable, from `mp_dataset/
+select_campaign.py`, plus the 6-compound pilot). See
+**[`analysis/REPORT.md`](analysis/REPORT.md)** for the full write-up:
+Spearman correlations (overall and per bond_type) for the raw and
+normalized percolation weight vs. the classic ICOHP aggregates, a reference
+logistic regression (stable vs. metastable) with cross-validated AUC,
+figures, compute-time table, and a documented limits/next-steps section.
+Headline result: no significant overall correlation with `energy_above_hull`
+at this sample size, and no clear predictive edge over the classic
+aggregates in the one subgroup (metallic) that shows a nominally
+significant signal — see the report for why, and what would need to change
+before this justifies a symbolic-regression (SISSO) pass.
+
+Pipeline: `analysis/build_dataset.py` (join `percolation_path.py` output +
+MP metadata → `analysis/percolation_vs_hull.csv`) then
+`analysis/stats_analysis.py` (correlations, logistic regression, figures →
+`analysis/stats_summary.json` + `analysis/figures/`).
+
 ## Limites connues
 
 - Suppose que `ICOHPLIST.lobster`/`ICOBILIST.lobster` proviennent du même
