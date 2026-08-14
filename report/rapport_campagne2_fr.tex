@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{amsmath}
+\usepackage{longtable}
 
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 
@@ -342,5 +343,20 @@ résultat avant d'envisager un outillage de type SISSO.
 \noindent\textit{Code source :} \url{https://github.com/John-Akapulco/viability} \\
 \noindent\textit{Données :} \texttt{analysis/percolation\_vs\_hull.csv} \\
 \noindent\textit{Rapport détaillé :} \texttt{analysis/REPORT.md}
+
+\appendix
+\section{Liste des composés}
+
+Les 186 composés du jeu de données, classés par catégorie (famille), avec
+leur identifiant Materials Project, leur distance au hull thermodynamique
+(PBE, \texttt{energy\_above\_hull}) et le poids de percolation ICOHP
+minimal (\texttt{icohp\_percolation\_weight\_min}, la métrique principale
+de ce travail). Généré automatiquement depuis
+\texttt{analysis/percolation\_vs\_hull.csv} par
+\texttt{report/gen\_appendix.py}.
+
+{\small
+\input{appendix_compounds_fr.tex}
+}
 
 \end{document}

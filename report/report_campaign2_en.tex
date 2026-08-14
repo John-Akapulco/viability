@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{amsmath}
+\usepackage{longtable}
 
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 
@@ -333,5 +334,19 @@ SISSO-class tool is warranted.
 \noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
 \noindent\textit{Data:} \texttt{analysis/percolation\_vs\_hull.csv} \\
 \noindent\textit{Detailed report:} \texttt{analysis/REPORT.md}
+
+\appendix
+\section{Compound List}
+
+The 186 compounds in the dataset, grouped by category (family), with their
+Materials Project identifier, PBE thermodynamic hull distance
+(\texttt{energy\_above\_hull}), and the minimum ICOHP percolation weight
+(\texttt{icohp\_percolation\_weight\_min}, this work's main metric).
+Auto-generated from \texttt{analysis/percolation\_vs\_hull.csv} by
+\texttt{report/gen\_appendix.py}.
+
+{\small
+\input{appendix_compounds_en.tex}
+}
 
 \end{document}
