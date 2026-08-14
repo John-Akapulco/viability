@@ -1,0 +1,19 @@
+\begin{tabular}{@{}l l p{7.5cm}@{}}
+\toprule
+Parameter & Value & Description \\
+\midrule
+\texttt{PREC} & Accurate & Overall precision (charge grid, projectors) \\
+\texttt{ENCUT} & 600.0 & Plane-wave cutoff energy (eV) \\
+\texttt{EDIFF} & 1e-06 & Electronic convergence criterion (eV) \\
+\texttt{IBRION} & -1 & Ionic dynamics type ($-1$ = static, no relaxation) \\
+\texttt{NSW} & 0 & Number of ionic steps (0 = static run on the MP structure) \\
+\texttt{ISMEAR} & 0 & Smearing type ($0$ = Gaussian) \\
+\texttt{SIGMA} & 0.05 & Smearing width (eV) \\
+\texttt{LASPH} & True & Non-spherical corrections to the PAW potential \\
+\texttt{ISYM} & -1 & Symmetry ($-1$ = disabled, required by LOBSTER) \\
+\texttt{LWAVE} & True & Write WAVECAR (required by LOBSTER) \\
+\texttt{LCHARG} & True & Write CHGCAR \\
+\texttt{NPAR} & 4 & Band-level parallelization \\
+\texttt{KPAR} & 2 & K-point-level parallelization \\
+\bottomrule
+\end{tabular}
