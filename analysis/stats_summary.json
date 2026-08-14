@@ -1,0 +1,233 @@
+{
+  "n_total_compounds": 186,
+  "n_by_family": {
+    "exp_metastable": 63,
+    "exp_stable": 63,
+    "theo_metastable": 60
+  },
+  "n_by_bond_type": {
+    "metallic": 88,
+    "NaN": 66,
+    "covalent": 23,
+    "ionic": 9
+  },
+  "n_disconnected_or_missing_percolation": 0,
+  "correlations": [
+    {
+      "group": "all",
+      "metric": "icohp_percolation_weight_min",
+      "n": 186,
+      "rho": 0.0643,
+      "p_value": 0.3834,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "icohp_percolation_weight_min",
+      "n": 23,
+      "rho": 0.1646,
+      "p_value": 0.453,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "icohp_percolation_weight_min",
+      "n": 9,
+      "rho": -0.4017,
+      "p_value": 0.2839,
+      "note": "small sample (n<15) -- do not over-interpret"
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "icohp_percolation_weight_min",
+      "n": 88,
+      "rho": 0.1905,
+      "p_value": 0.0754,
+      "note": null
+    },
+    {
+      "group": "all",
+      "metric": "icohp_percolation_weight_min_normalized",
+      "n": 186,
+      "rho": 0.0706,
+      "p_value": 0.3385,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "icohp_percolation_weight_min_normalized",
+      "n": 23,
+      "rho": 0.1096,
+      "p_value": 0.6187,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "icohp_percolation_weight_min_normalized",
+      "n": 9,
+      "rho": -0.493,
+      "p_value": 0.1775,
+      "note": "small sample (n<15) -- do not over-interpret"
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "icohp_percolation_weight_min_normalized",
+      "n": 88,
+      "rho": 0.222,
+      "p_value": 0.0377,
+      "note": null
+    },
+    {
+      "group": "all",
+      "metric": "icohp_sum",
+      "n": 186,
+      "rho": 0.0315,
+      "p_value": 0.6695,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "icohp_sum",
+      "n": 23,
+      "rho": -0.0479,
+      "p_value": 0.828,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "icohp_sum",
+      "n": 9,
+      "rho": -0.6938,
+      "p_value": 0.0382,
+      "note": "small sample (n<15) -- do not over-interpret"
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "icohp_sum",
+      "n": 88,
+      "rho": 0.2228,
+      "p_value": 0.0369,
+      "note": null
+    },
+    {
+      "group": "all",
+      "metric": "icohp_mean",
+      "n": 186,
+      "rho": -0.0575,
+      "p_value": 0.4355,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "icohp_mean",
+      "n": 23,
+      "rho": 0.1067,
+      "p_value": 0.6279,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "icohp_mean",
+      "n": 9,
+      "rho": -0.0365,
+      "p_value": 0.9257,
+      "note": "small sample (n<15) -- do not over-interpret"
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "icohp_mean",
+      "n": 88,
+      "rho": -0.0945,
+      "p_value": 0.3812,
+      "note": null
+    },
+    {
+      "group": "all",
+      "metric": "icohp_min",
+      "n": 186,
+      "rho": 0.0926,
+      "p_value": 0.2085,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "icohp_min",
+      "n": 23,
+      "rho": -0.0866,
+      "p_value": 0.6944,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "icohp_min",
+      "n": 9,
+      "rho": -0.5295,
+      "p_value": 0.1427,
+      "note": "small sample (n<15) -- do not over-interpret"
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "icohp_min",
+      "n": 88,
+      "rho": 0.1979,
+      "p_value": 0.0645,
+      "note": null
+    },
+    {
+      "group": "all",
+      "metric": "icohp_max",
+      "n": 186,
+      "rho": 0.0794,
+      "p_value": 0.2812,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "icohp_max",
+      "n": 23,
+      "rho": 0.1258,
+      "p_value": 0.5674,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "icohp_max",
+      "n": 9,
+      "rho": 0.4747,
+      "p_value": 0.1966,
+      "note": "small sample (n<15) -- do not over-interpret"
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "icohp_max",
+      "n": 88,
+      "rho": 0.0155,
+      "p_value": 0.886,
+      "note": null
+    }
+  ],
+  "logistic_reference_model": {
+    "skipped": false,
+    "n": 120,
+    "n_stable": 45,
+    "n_metastable": 75,
+    "features": [
+      "icohp_percolation_weight_min_normalized",
+      "icohp_mean",
+      "bond_ionic",
+      "bond_metallic"
+    ],
+    "cv_folds": 5,
+    "cv_auc_mean": 0.4963,
+    "cv_auc_std": 0.1413,
+    "cv_auc_per_fold": [
+      0.5556,
+      0.4296,
+      0.2519,
+      0.637,
+      0.6074
+    ],
+    "roc_figure": "figures/roc_stable_vs_metastable.png"
+  },
+  "scatter_figure": "figures/percolation_vs_ehull.png"
+}

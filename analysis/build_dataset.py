@@ -31,16 +31,23 @@ STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 RESULTS_JSON = REPO_ROOT / "mp_dataset" / "results.json"
 OUT_CSV = Path(__file__).parent / "percolation_vs_hull.csv"
 
+# The 6-compound pilot (fetch_candidates.py) used a 2-way family label
+# (hull/metastable, both experimental by construction); the 180-compound
+# campaign (select_campaign.py) uses a 3-way label. Map the pilot's onto
+# the campaign's so `family` groups consistently across all 186 compounds.
+_PILOT_FAMILY_MAP = {"hull": "exp_stable", "metastable": "exp_metastable"}
+
 
 def load_metadata(compound_dir: Path) -> dict:
     meta = json.loads((compound_dir / "mp_metadata.json").read_text())
     mp_id = meta.get("mp_id") or meta.get("material_id")
     e_hull = meta.get("energy_above_hull_eV_per_atom")
     nsites = meta.get("nsites") or meta.get("num_sites")
+    family = _PILOT_FAMILY_MAP.get(meta.get("family"), meta.get("family"))
     return {
         "mp_id": mp_id,
         "formula": meta.get("formula"),
-        "family": meta.get("family"),
+        "family": family,
         "bond_type": meta.get("bond_type"),  # present for the 6 pilots, None for campaign compounds
         "energy_above_hull_eV_at": e_hull,
         "theoretical": meta.get("theoretical"),
@@ -54,6 +61,22 @@ def parse_time_file(path: Path) -> float | None:
     if not path.exists():
         return None
     m = re.search(r"^real\s+([\d.]+)", path.read_text(), re.MULTILINE)
+    return float(m.group(1)) if m else None
+
+
+def parse_vasp_time_from_log(vasp_log: Path) -> float | None:
+    """submit_array.sh wraps `srun vasp_std` as
+    `{ time -p srun ... > vasp.log 2>&1; } 2> vasp_time.txt`, intending the
+    `time -p` report to land in vasp_time.txt. In practice (observed across
+    every compound checked) it lands at the tail of vasp.log instead --
+    likely an artifact of how srun's remote-task I/O forwarding interacts
+    with the shell's own fd bookkeeping under SLURM, not reproducible in a
+    plain interactive shell. vasp_time.txt is consistently empty; parse the
+    real, always-present location instead of chasing the redirect bug
+    further (cosmetic, doesn't affect any actual compute results)."""
+    if not vasp_log.exists():
+        return None
+    m = re.search(r"^real\s+([\d.]+)", vasp_log.read_text(errors="replace"), re.MULTILINE)
     return float(m.group(1)) if m else None
 
 
@@ -144,7 +167,7 @@ def main():
             "icobi_mean": icobi_agg.get("mean"),
             "icobi_min": icobi_agg.get("min"),
             "icobi_max": icobi_agg.get("max"),
-            "vasp_wall_time_s": parse_time_file(r["_dir"] / "vasp_time.txt"),
+            "vasp_wall_time_s": parse_vasp_time_from_log(r["_dir"] / "vasp.log"),
             "lobster_wall_time_s": parse_time_file(r["_dir"] / "lobster_time.txt"),
         })
 
