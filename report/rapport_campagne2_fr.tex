@@ -359,4 +359,44 @@ de ce travail). Généré automatiquement depuis
 \input{appendix_compounds_fr.tex}
 }
 
+\section{Paramètres de calcul VASP}
+\label{sec:appendix-incar}
+
+Paramètres INCAR fixes, identiques pour les 186 composés (calcul statique,
+compatible LOBSTER) --- seuls \texttt{NBANDS} (annexe~\ref{sec:appendix-kpoints})
+et la grille de points k varient d'un composé à l'autre.
+
+\begin{center}
+\input{appendix_dft_common_fr.tex}
+\end{center}
+
+\section{Potentiels PAW-PBE}
+
+Un potentiel PAW-PBE par élément présent dans le jeu de données
+(bibliothèque \texttt{MPRelaxSet} de \texttt{pymatgen} --- la même que
+celle utilisée par Materials Project pour relaxer les structures fournies
+en entrée), à l'exception documentée du tungstène (\S7) : la variante
+\texttt{W\_pv} recommandée est absente du miroir local, et
+\texttt{W\_sv} s'est révélée corrompue (champ \texttt{LEXCH} manquant) ---
+le potentiel \texttt{W} simple est utilisé à la place, vérifié valide.
+
+{\small
+\input{appendix_dft_potcar_fr.tex}
+}
+
+\section{Grille de points k et NBANDS par composé}
+\label{sec:appendix-kpoints}
+
+Grille de points k générée automatiquement par
+\texttt{pymatgen.io.vasp.Kpoints.automatic\_density\_by\_vol} (densité
+\texttt{kppvol=100}, maillage $\Gamma$ ou Monkhorst--Pack selon la symétrie
+de la maille) et \texttt{NBANDS}, dérivé par composé du nombre d'orbitales
+locales de la base LOBSTER (\texttt{Lobsterin.write\_INCAR}) --- valeur
+strictement suffisante pour la projection sur la base locale, pas une
+estimation fixe.
+
+{\small
+\input{appendix_dft_kpoints_fr.tex}
+}
+
 \end{document}

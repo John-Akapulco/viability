@@ -1,0 +1,19 @@
+\begin{tabular}{@{}l l p{7.5cm}@{}}
+\toprule
+Param\`etre & Valeur & Description \\
+\midrule
+\texttt{PREC} & Accurate & Pr\'ecision globale (grille de charge, projecteurs) \\
+\texttt{ENCUT} & 600.0 & \'Energie de coupure des ondes planes (eV) \\
+\texttt{EDIFF} & 1e-06 & Crit\`ere de convergence \'electronique (eV) \\
+\texttt{IBRION} & -1 & Type de dynamique ionique ($-1$ = statique, aucune relaxation) \\
+\texttt{NSW} & 0 & Nombre de pas ioniques (0 = calcul statique sur la structure MP) \\
+\texttt{ISMEAR} & 0 & Type d'\'elargissement ($0$ = gaussien) \\
+\texttt{SIGMA} & 0.05 & Largeur d'\'elargissement (eV) \\
+\texttt{LASPH} & True & Corrections non sph\'eriques au potentiel PAW \\
+\texttt{ISYM} & -1 & Sym\'etrie ($-1$ = d\'esactiv\'ee, requis par LOBSTER) \\
+\texttt{LWAVE} & True & \'Ecriture du WAVECAR (requis par LOBSTER) \\
+\texttt{LCHARG} & True & \'Ecriture du CHGCAR \\
+\texttt{NPAR} & 4 & Parall\'elisation sur les bandes \\
+\texttt{KPAR} & 2 & Parall\'elisation sur les points k \\
+\bottomrule
+\end{tabular}
