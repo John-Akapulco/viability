@@ -35,7 +35,15 @@ _MP_POTCAR_MAP = yaml.safe_load(open(_MPRELAXSET_YAML))["POTCAR"]
 
 # Overrides where the MP-recommended variant isn't present in the local
 # PBE POTCAR mirror (checked once for the full campaign's element set).
-_POTCAR_OVERRIDES = {"W": "W_sv"}
+# W_sv override removed: POTCAR.W_sv.gz in the local PSP mirror is missing
+# its LEXCH field entirely (confirmed by inspection), which VASP reads as a
+# garbled/incompatible XC-functional for that atom type and refuses to run
+# ("I REFUSE TO CONTINUE WITH THIS SICK JOB") -- this caused 5 genuine job
+# failures overnight (Al12W, BW, WO2, TcW, TiW), all correctly traced back
+# to this one corrupted file. Plain "W" is valid PBE and used instead; the
+# fallback chain below would also reach it if this dict were empty, but is
+# kept explicit for anyone re-reading the failure history above.
+_POTCAR_OVERRIDES = {"W": "W"}
 
 # Fallback order tried if neither the MP-recommended nor the override
 # variant exists locally, so a missing file fails loudly with a clear
@@ -85,6 +93,7 @@ module load impi/2021.13
 module load vasp/6.5.0
 module load lobster/5.1.1
 export OMP_NUM_THREADS=1
+ulimit -s unlimited
 
 time srun --mpi=pmi2 --ntasks=$SLURM_NTASKS --cpus-per-task=1 --threads-per-core=1 vasp_std
 

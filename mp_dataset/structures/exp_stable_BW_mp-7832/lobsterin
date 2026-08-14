@@ -5,4 +5,4 @@ cohpGenerator from 0.1 to 6.0 orbitalwise
 saveProjectionToFile
 gaussianSmearingWidth 0.05
 basisfunctions B 2p 2s 
-basisfunctions W 5d 5p 5s 6s 
+basisfunctions W 5d 6p 6s 

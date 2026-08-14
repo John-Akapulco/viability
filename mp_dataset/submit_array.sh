@@ -24,9 +24,17 @@ if [ -z "$COMPOUND_DIR" ]; then
 fi
 cd "$COMPOUND_DIR" || exit 1
 
-# POSIX `time -p` -> predictable "real/user/sys %d.%d" lines for later parsing
-# into the compute-time table (separate from vasp.log/lobsterout content).
-{ time -p srun --mpi=pmi2 --ntasks=$SLURM_NTASKS --cpus-per-task=1 --threads-per-core=1 vasp_std > vasp.log 2>&1; } 2> vasp_time.txt
+# NOTE: `{ time -p srun ...; } 2> vasp_time.txt` (the original approach)
+# reliably left vasp_time.txt empty and put the timing report at the tail of
+# vasp.log instead -- some interaction between srun's remote-task I/O
+# forwarding and the shell's fd bookkeeping under SLURM that didn't
+# reproduce in a plain interactive shell. Wall-clock via $SECONDS sidesteps
+# the whole redirect question.
+vasp_start=$SECONDS
+srun --mpi=pmi2 --ntasks=$SLURM_NTASKS --cpus-per-task=1 --threads-per-core=1 vasp_std > vasp.log 2>&1
+echo "real $((SECONDS - vasp_start))" > vasp_time.txt
 
 export OMP_NUM_THREADS=16
-{ time -p lobster-5.1.1; } 2> lobster_time.txt
+lobster_start=$SECONDS
+lobster-5.1.1
+echo "real $((SECONDS - lobster_start))" > lobster_time.txt

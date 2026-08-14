@@ -13,6 +13,7 @@ module load impi/2021.13
 module load vasp/6.5.0
 module load lobster/5.1.1
 export OMP_NUM_THREADS=1
+ulimit -s unlimited
 
 time srun --mpi=pmi2 --ntasks=$SLURM_NTASKS --cpus-per-task=1 --threads-per-core=1 vasp_std
 
