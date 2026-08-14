@@ -1,0 +1,14 @@
+{
+  "material_id": "mp-22862",
+  "formula": "NaCl",
+  "family": "hull",
+  "bond_type": "ionic",
+  "energy_above_hull_eV_per_atom": 0.0,
+  "num_sites": 2,
+  "cell_type": "conventional_standard",
+  "n_sites_primitive": 2,
+  "n_sites_conventional": 8,
+  "expansion_factor": 4.0,
+  "spacegroup_symbol_sga": "Fm-3m",
+  "spacegroup_number_sga": 225
+}

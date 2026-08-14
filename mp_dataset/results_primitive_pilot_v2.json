@@ -1,0 +1,1451 @@
+[
+  {
+    "compound_id": "hull_covalent_Si_mp-149",
+    "structure_file": "mp_dataset/structures_primitive_pilot_v2/hull_covalent_Si_mp-149/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 64,
+    "n_bonds_icobi": 64,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 64,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.0032300000000000002,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  2,
+                  0
+                ],
+                "weight": 0.00166,
+                "bond_label": "28"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  -2,
+                  0
+                ],
+                "weight": 0.00157,
+                "bond_label": "27"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.00324,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  2,
+                  0
+                ],
+                "weight": 0.00157,
+                "bond_label": "27"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  -1,
+                  0
+                ],
+                "weight": 0.00167,
+                "bond_label": "24"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.00318,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  2,
+                  1
+                ],
+                "weight": 0.00161,
+                "bond_label": "39"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  -2,
+                  0
+                ],
+                "weight": 0.00157,
+                "bond_label": "27"
+              }
+            ]
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.00318,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 1,
+            "translation": [
+              0,
+              2,
+              1
+            ],
+            "weight": 0.00161,
+            "bond_label": "39"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 0,
+            "translation": [
+              0,
+              -2,
+              0
+            ],
+            "weight": 0.00157,
+            "bond_label": "27"
+          }
+        ],
+        "aggregates": {
+          "n": 64,
+          "sum": -18.606650000000002,
+          "mean": -0.29072890625000003,
+          "min": -4.54442,
+          "max": 0.00177
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 64,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.0012000000000000001,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  0,
+                  2
+                ],
+                "weight": 0.00061,
+                "bond_label": "43"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  -2
+                ],
+                "weight": 0.00059,
+                "bond_label": "42"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.00119,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  2
+                ],
+                "weight": 0.0006,
+                "bond_label": "45"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  -2
+                ],
+                "weight": 0.00059,
+                "bond_label": "42"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.00117,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  0,
+                  2
+                ],
+                "weight": 0.00059,
+                "bond_label": "42"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  -1
+                ],
+                "weight": 0.00058,
+                "bond_label": "31"
+              }
+            ]
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.00117,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 1,
+            "translation": [
+              0,
+              0,
+              2
+            ],
+            "weight": 0.00059,
+            "bond_label": "42"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 0,
+            "translation": [
+              0,
+              0,
+              -1
+            ],
+            "weight": 0.00058,
+            "bond_label": "31"
+          }
+        ],
+        "aggregates": {
+          "n": 64,
+          "sum": 3.9409999999999985,
+          "mean": 0.06157812499999998,
+          "min": 8e-05,
+          "max": 0.92437
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "hull_ionic_NaCl_mp-22862",
+    "structure_file": "mp_dataset/structures_primitive_pilot_v2/hull_ionic_NaCl_mp-22862/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 50,
+    "n_bonds_icobi": 50,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.03095,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.03095,
+                "bond_label": "41"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.03088,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  0
+                ],
+                "weight": 0.03088,
+                "bond_label": "39"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.03096,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.03096,
+                "bond_label": "34"
+              }
+            ]
+          }
+        },
+        "min_direction": "b",
+        "min_weight": 0.03088,
+        "min_weight_path": [
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              0,
+              1,
+              0
+            ],
+            "weight": 0.03088,
+            "bond_label": "39"
+          }
+        ],
+        "aggregates": {
+          "n": 50,
+          "sum": -4.448189999999999,
+          "mean": -0.08896379999999998,
+          "min": -0.59716,
+          "max": -0.0004
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.0024,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.0024,
+                "bond_label": "9"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.00239,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  1,
+                  0
+                ],
+                "weight": 0.00239,
+                "bond_label": "7"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.0024,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.0024,
+                "bond_label": "2"
+              }
+            ]
+          }
+        },
+        "min_direction": "b",
+        "min_weight": 0.00239,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 0,
+            "translation": [
+              0,
+              1,
+              0
+            ],
+            "weight": 0.00239,
+            "bond_label": "7"
+          }
+        ],
+        "aggregates": {
+          "n": 50,
+          "sum": 0.6577300000000007,
+          "mean": 0.013154600000000015,
+          "min": 0.00018,
+          "max": 0.08623
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "hull_metallic_AlNi_mp-1487",
+    "structure_file": "mp_dataset/structures_primitive_pilot_v2/hull_metallic_AlNi_mp-1487/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 96,
+    "n_bonds_icobi": 96,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 96,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.02123,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 3,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  2,
+                  0,
+                  0
+                ],
+                "weight": 0.01013,
+                "bond_label": "42"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  -2,
+                  0,
+                  0
+                ],
+                "weight": 0.00154,
+                "bond_label": "79"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.00956,
+                "bond_label": "39"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.02069,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  -1,
+                  1,
+                  0
+                ],
+                "weight": 0.01113,
+                "bond_label": "43"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.00956,
+                "bond_label": "39"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.02141,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  2,
+                  0,
+                  1
+                ],
+                "weight": 0.01128,
+                "bond_label": "54"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  -2,
+                  0,
+                  0
+                ],
+                "weight": 0.01013,
+                "bond_label": "42"
+              }
+            ]
+          }
+        },
+        "min_direction": "b",
+        "min_weight": 0.02069,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 1,
+            "translation": [
+              -1,
+              1,
+              0
+            ],
+            "weight": 0.01113,
+            "bond_label": "43"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 0,
+            "translation": [
+              1,
+              0,
+              0
+            ],
+            "weight": 0.00956,
+            "bond_label": "39"
+          }
+        ],
+        "aggregates": {
+          "n": 96,
+          "sum": -22.765610000000002,
+          "mean": -0.23714177083333335,
+          "min": -1.82681,
+          "max": 0.00154
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 96,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.01973,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  -1,
+                  1
+                ],
+                "weight": 0.00978,
+                "bond_label": "50"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  1,
+                  -1
+                ],
+                "weight": 0.00995,
+                "bond_label": "49"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.019770000000000003,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  -1,
+                  1,
+                  0
+                ],
+                "weight": 0.00999,
+                "bond_label": "43"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.00978,
+                "bond_label": "39"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.01971,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  -1,
+                  1
+                ],
+                "weight": 0.00995,
+                "bond_label": "49"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  1,
+                  0
+                ],
+                "weight": 0.00976,
+                "bond_label": "37"
+              }
+            ]
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.01971,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 1,
+            "translation": [
+              0,
+              -1,
+              1
+            ],
+            "weight": 0.00995,
+            "bond_label": "49"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 0,
+            "translation": [
+              0,
+              1,
+              0
+            ],
+            "weight": 0.00976,
+            "bond_label": "37"
+          }
+        ],
+        "aggregates": {
+          "n": 96,
+          "sum": 4.2251,
+          "mean": 0.044011458333333336,
+          "min": 0.00456,
+          "max": 0.26591
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "metastable_covalent_C_rhombohedral_mp-169",
+    "structure_file": "mp_dataset/structures_primitive_pilot_v2/metastable_covalent_C_rhombohedral_mp-169/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 130,
+    "n_bonds_icobi": 130,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 130,
+        "coord_bound": 7,
+        "direction": {
+          "a": {
+            "weight": 0.00056,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.00027,
+                "bond_label": "5"
+              },
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  0,
+                  -1
+                ],
+                "weight": 0.00029,
+                "bond_label": "6"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.0005200000000000001,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  1,
+                  -1
+                ],
+                "weight": 0.00025,
+                "bond_label": "9"
+              },
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.00027,
+                "bond_label": "5"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.00027,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.00027,
+                "bond_label": "5"
+              }
+            ]
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.00027,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 0,
+            "translation": [
+              0,
+              0,
+              1
+            ],
+            "weight": 0.00027,
+            "bond_label": "5"
+          }
+        ],
+        "aggregates": {
+          "n": 130,
+          "sum": -37.384780000000006,
+          "mean": -0.2875752307692308,
+          "min": -11.7589,
+          "max": 0.03432
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 130,
+        "coord_bound": 7,
+        "direction": {
+          "a": {
+            "weight": 7.000000000000001e-05,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  -2,
+                  1
+                ],
+                "weight": 3e-05,
+                "bond_label": "11"
+              },
+              {
+                "from_atom": 0,
+                "to_atom": 0,
+                "translation": [
+                  0,
+                  2,
+                  -1
+                ],
+                "weight": 4e-05,
+                "bond_label": "12"
+              }
+            ]
+          },
+          "b": {
+            "weight": 6e-05,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  -2,
+                  1,
+                  1
+                ],
+                "weight": 3e-05,
+                "bond_label": "91"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  2,
+                  0,
+                  -1
+                ],
+                "weight": 3e-05,
+                "bond_label": "95"
+              }
+            ]
+          },
+          "c": {
+            "weight": 9e-05,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 3,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  -2,
+                  0,
+                  1
+                ],
+                "weight": 3e-05,
+                "bond_label": "95"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  1
+                ],
+                "weight": 3e-05,
+                "bond_label": "89"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  2,
+                  -1,
+                  -1
+                ],
+                "weight": 3e-05,
+                "bond_label": "91"
+              }
+            ]
+          }
+        },
+        "min_direction": "b",
+        "min_weight": 6e-05,
+        "min_weight_path": [
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              -2,
+              1,
+              1
+            ],
+            "weight": 3e-05,
+            "bond_label": "91"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              2,
+              0,
+              -1
+            ],
+            "weight": 3e-05,
+            "bond_label": "95"
+          }
+        ],
+        "aggregates": {
+          "n": 130,
+          "sum": 3.9407000000000014,
+          "mean": 0.030313076923076936,
+          "min": 3e-05,
+          "max": 1.21726
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "metastable_ionic_LiBr_mp-23259",
+    "structure_file": "mp_dataset/structures_primitive_pilot_v2/metastable_ionic_LiBr_mp-23259/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 50,
+    "n_bonds_icobi": 50,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.09888,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.09888,
+                "bond_label": "41"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.09888,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  0
+                ],
+                "weight": 0.09888,
+                "bond_label": "39"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.0988,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.0988,
+                "bond_label": "34"
+              }
+            ]
+          }
+        },
+        "min_direction": "c",
+        "min_weight": 0.0988,
+        "min_weight_path": [
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              0,
+              0,
+              1
+            ],
+            "weight": 0.0988,
+            "bond_label": "34"
+          }
+        ],
+        "aggregates": {
+          "n": 50,
+          "sum": -16.922590000000014,
+          "mean": -0.3384518000000003,
+          "min": -2.03995,
+          "max": 0.00544
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 50,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.02174,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  0,
+                  0
+                ],
+                "weight": 0.02174,
+                "bond_label": "41"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.02174,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  0
+                ],
+                "weight": 0.02174,
+                "bond_label": "39"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.02174,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 1,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  0,
+                  1
+                ],
+                "weight": 0.02174,
+                "bond_label": "34"
+              }
+            ]
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.02174,
+        "min_weight_path": [
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              1,
+              0,
+              0
+            ],
+            "weight": 0.02174,
+            "bond_label": "41"
+          }
+        ],
+        "aggregates": {
+          "n": 50,
+          "sum": 2.262449999999998,
+          "mean": 0.04524899999999996,
+          "min": 0.00094,
+          "max": 0.279
+        }
+      }
+    }
+  },
+  {
+    "compound_id": "metastable_metallic_BeCu_mp-2323",
+    "structure_file": "mp_dataset/structures_primitive_pilot_v2/metastable_metallic_BeCu_mp-2323/CONTCAR",
+    "n_sites": 2,
+    "n_bonds_icohp": 168,
+    "n_bonds_icobi": 168,
+    "error": null,
+    "warnings": [],
+    "metrics": {
+      "icohp": {
+        "n_bonds_used": 168,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00054,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  -2,
+                  -2
+                ],
+                "weight": 0.00034,
+                "bond_label": "58"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  2,
+                  2
+                ],
+                "weight": 0.0002,
+                "bond_label": "57"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.00061,
+            "status": "ok",
+            "source_atom": 0,
+            "n_hops": 3,
+            "path": [
+              {
+                "from_atom": 0,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  -2
+                ],
+                "weight": 0.00029,
+                "bond_label": "68"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  -1,
+                  -2,
+                  0
+                ],
+                "weight": 0.00012,
+                "bond_label": "131"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 0,
+                "translation": [
+                  1,
+                  2,
+                  2
+                ],
+                "weight": 0.0002,
+                "bond_label": "57"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.00066,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  2,
+                  0,
+                  1
+                ],
+                "weight": 0.0003,
+                "bond_label": "122"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  -2,
+                  0,
+                  0
+                ],
+                "weight": 0.00036,
+                "bond_label": "139"
+              }
+            ]
+          }
+        },
+        "min_direction": "a",
+        "min_weight": 0.00054,
+        "min_weight_path": [
+          {
+            "from_atom": 0,
+            "to_atom": 1,
+            "translation": [
+              0,
+              -2,
+              -2
+            ],
+            "weight": 0.00034,
+            "bond_label": "58"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 0,
+            "translation": [
+              1,
+              2,
+              2
+            ],
+            "weight": 0.0002,
+            "bond_label": "57"
+          }
+        ],
+        "aggregates": {
+          "n": 168,
+          "sum": -22.36356,
+          "mean": -0.13311642857142858,
+          "min": -1.9286,
+          "max": 0.00104
+        }
+      },
+      "icobi": {
+        "n_bonds_used": 168,
+        "coord_bound": 5,
+        "direction": {
+          "a": {
+            "weight": 0.00096,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  1,
+                  -2,
+                  0
+                ],
+                "weight": 0.00045,
+                "bond_label": "133"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  2,
+                  0
+                ],
+                "weight": 0.00051,
+                "bond_label": "132"
+              }
+            ]
+          },
+          "b": {
+            "weight": 0.0009500000000000001,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  1,
+                  -2
+                ],
+                "weight": 0.00044,
+                "bond_label": "117"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  0,
+                  2
+                ],
+                "weight": 0.00051,
+                "bond_label": "115"
+              }
+            ]
+          },
+          "c": {
+            "weight": 0.00096,
+            "status": "ok",
+            "source_atom": 1,
+            "n_hops": 2,
+            "path": [
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  -2,
+                  1
+                ],
+                "weight": 0.00045,
+                "bond_label": "130"
+              },
+              {
+                "from_atom": 1,
+                "to_atom": 1,
+                "translation": [
+                  0,
+                  2,
+                  0
+                ],
+                "weight": 0.00051,
+                "bond_label": "132"
+              }
+            ]
+          }
+        },
+        "min_direction": "b",
+        "min_weight": 0.0009500000000000001,
+        "min_weight_path": [
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              0,
+              1,
+              -2
+            ],
+            "weight": 0.00044,
+            "bond_label": "117"
+          },
+          {
+            "from_atom": 1,
+            "to_atom": 1,
+            "translation": [
+              0,
+              0,
+              2
+            ],
+            "weight": 0.00051,
+            "bond_label": "115"
+          }
+        ],
+        "aggregates": {
+          "n": 168,
+          "sum": 3.604349999999996,
+          "mean": 0.021454464285714264,
+          "min": 0.00044,
+          "max": 0.26874
+        }
+      }
+    }
+  }
+]
