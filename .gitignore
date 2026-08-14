@@ -6,28 +6,28 @@ venv/
 # VASP pseudopotentials are license-restricted (cannot be redistributed) and
 # raw wavefunction/charge-density binaries are large + regenerable -- keep
 # the run *inputs*/*settings* and LOBSTER text output, drop the rest.
-mp_dataset/structures/*/POTCAR
-mp_dataset/structures/*/CHG
-mp_dataset/structures/*/CHGCAR
-mp_dataset/structures/*/CHGCAR.gz
-mp_dataset/structures/*/vasp.log
-mp_dataset/structures/*/*.log
-mp_dataset/structures/*/OUTCAR
-mp_dataset/structures/*/EIGENVAL
-mp_dataset/structures/*/vasprun.xml
+mp_dataset/structures*/*/POTCAR
+mp_dataset/structures*/*/CHG
+mp_dataset/structures*/*/CHGCAR
+mp_dataset/structures*/*/CHGCAR.gz
+mp_dataset/structures*/*/vasp.log
+mp_dataset/structures*/*/*.log
+mp_dataset/structures*/*/OUTCAR
+mp_dataset/structures*/*/EIGENVAL
+mp_dataset/structures*/*/vasprun.xml
 lobsterout
 
 # LOBSTER dense per-grid outputs (COHP/COOP/COBI *CAR* files can be 10s of MB
 # each): keep only the small ICOHPLIST/ICOBILIST summaries percolation_path.py
 # actually consumes, plus the run's own lobsterout/lobsterin for provenance.
-mp_dataset/structures/*/COHPCAR.lobster
-mp_dataset/structures/*/COBICAR.lobster
-mp_dataset/structures/*/COOPCAR.lobster
-mp_dataset/structures/*/DOSCAR.lobster
-mp_dataset/structures/*/ICOOPLIST.lobster
-mp_dataset/structures/*/projectionData.lobster
-mp_dataset/structures/*/bandOverlaps.lobster
-mp_dataset/structures/*/WAVECAR*
+mp_dataset/structures*/*/COHPCAR.lobster
+mp_dataset/structures*/*/COBICAR.lobster
+mp_dataset/structures*/*/COOPCAR.lobster
+mp_dataset/structures*/*/DOSCAR.lobster
+mp_dataset/structures*/*/ICOOPLIST.lobster
+mp_dataset/structures*/*/projectionData.lobster
+mp_dataset/structures*/*/bandOverlaps.lobster
+mp_dataset/structures*/*/WAVECAR*
 
 # LaTeX build artifacts (PDFs are committed, intermediates are not)
 report/*.aux
