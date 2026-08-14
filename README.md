@@ -141,6 +141,40 @@ MP metadata → `analysis/percolation_vs_hull.csv`) then
 `analysis/stats_analysis.py` (correlations, logistic regression, figures →
 `analysis/stats_summary.json` + `analysis/figures/`).
 
+### Primitive vs. conventional cell (mission #2)
+
+`analysis/REPORT_conventional_pilot.md`: tested the pilot report's
+hypothesis that the primitive/conventional cell choice explains the
+near-zero correlation above, on the 6 pilot compounds. Verdict: the choice
+does change the percolation weight substantially for compounds whose cell
+actually differs (3x-55x, well past DFT noise), but the strongest bond
+still never participates in the winning path, and the weight gets
+*smaller* rather than larger as hypothesized — a bigger cell just gives
+the minimum-weight search more long-range weak bonds to exploit. Extension
+to the full dataset was not pursued based on this result.
+
+### Network dimensionality + periodic min-cut (mission #3)
+
+Two new descriptors, `percolation_path.py` untouched:
+`network_dimensionality.py` (0D-3D classification via a relative bond-
+strength threshold + BFS connectivity, since the existing graph's ~6 Å
+cutoff makes almost everything look 3D) and `periodic_mincut.py` (minimum
+total bond strength separating the crystal into two halves along a
+direction, via `networkx` max-flow/min-cut on a finite ribbon graph — a
+different physical question from the percolation weight: separability, not
+traversability). Both validated on synthetic cases with known answers
+(`tests/test_network_dimensionality.py`, `tests/test_periodic_mincut.py`)
+before running on real data. See
+**[`analysis/REPORT_dimensionality_mincut.md`](analysis/REPORT_dimensionality_mincut.md)**:
+tested against `formation_energy_per_atom` (`mp_dataset/
+fetch_formation_energy.py`) rather than `energy_above_hull`. Headline:
+min-cut (normalized) is the first descriptor in this project to reach a
+significant *global* correlation (ρ=0.285, p=0.0001, n=186) — stronger
+than the original percolation weight ever achieved — though likely driven
+partly by between-bond-type clustering rather than a clean within-type
+relationship; dimensionality alone does not separate formation energy
+(Kruskal-Wallis p=0.19).
+
 ## Limites connues
 
 - Suppose que `ICOHPLIST.lobster`/`ICOBILIST.lobster` proviennent du même
