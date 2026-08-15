@@ -1,0 +1,16 @@
+{
+  "label": "Cdiamond",
+  "mp_id": "mp-66",
+  "formula": "C",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 4.1144,
+  "energy_above_hull_eV_per_atom": 0.11226490000000133,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Fd-3m",
+  "expected_spacegroup": "Fd-3m",
+  "note": "diamond, real ambient-metastable sp3 reference. 0.1123 eV/at above hull."
+}

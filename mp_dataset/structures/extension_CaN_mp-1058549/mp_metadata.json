@@ -1,0 +1,16 @@
+{
+  "label": "CaN",
+  "mp_id": "mp-1058549",
+  "formula": "CaN",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.39816828843749974,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Fm-3m",
+  "requested_spacegroup": "Fm-3m",
+  "note": "rock-salt-type CaN; 0.398 eV/at above hull"
+}

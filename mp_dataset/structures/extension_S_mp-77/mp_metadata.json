@@ -1,0 +1,16 @@
+{
+  "label": "S",
+  "mp_id": "mp-77",
+  "formula": "S",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 2.5807,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 32,
+  "spacegroup": "Fddd",
+  "requested_spacegroup": null,
+  "note": "alpha-S8 (Fddd), the standard room-temperature reference state for sulfur, elemental decomposition reference for S4N2/S4N4 -- 32 sites/cell, non-magnetic (closed-shell), no exception needed"
+}

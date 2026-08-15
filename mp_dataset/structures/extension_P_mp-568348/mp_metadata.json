@@ -1,0 +1,15 @@
+{
+  "label": "P",
+  "mp_id": "mp-568348",
+  "formula": "P",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 1.7644000000000002,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 84,
+  "spacegroup": "P2/c",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=P2/c); near-degenerate with ['mp-1198724'] (within 20 meV/at) -- not individually literature-verified, on-hull/lowest-EAH pick used by default; large cell (84 sites) -- accepted as the real DFT ground state despite compute cost, same precedent as PbN6/Ca3N2 elsewhere in this project"
+}

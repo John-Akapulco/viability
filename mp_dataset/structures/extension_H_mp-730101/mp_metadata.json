@@ -1,0 +1,15 @@
+{
+  "label": "H",
+  "mp_id": "mp-730101",
+  "formula": "H2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 9.7207,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 8,
+  "spacegroup": "P2_12_12_1",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=P2_12_12_1); near-degenerate with 7 other candidates (within 20 meV/at) -- not individually literature-verified; periodic solid H2 proxy, same molecular-solid treatment as N2/O2 elsewhere in this project"
+}

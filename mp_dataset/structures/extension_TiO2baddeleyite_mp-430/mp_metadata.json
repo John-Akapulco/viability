@@ -1,0 +1,16 @@
+{
+  "label": "TiO2baddeleyite",
+  "mp_id": "mp-430",
+  "formula": "TiO2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.2317,
+  "energy_above_hull_eV_per_atom": 0.03948350083333452,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "P2_1/c",
+  "expected_spacegroup": "P2_1/c",
+  "note": "baddeleyite-type TiO2 (ZrO2 structure), experimental high-pressure polymorph (~12-30 GPa); computed here at 0 GPa. 0.0395 eV/at above hull."
+}

@@ -1,0 +1,16 @@
+{
+  "label": "Ti",
+  "mp_id": "mp-46",
+  "formula": "Ti",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.015169603333331949,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "P6_3/mmc",
+  "expected_spacegroup": "P6_3/mmc",
+  "note": "hcp alpha-Ti, the real room-temperature standard state; 0.0152 eV/at above MP's own hull -- MP's literal on-hull Ti entry (mp-72, energy_above_hull=0.0) is the omega-Ti phase (P6/mmm, AlB2-type), a well-documented PBE-GGA artifact that spuriously favors omega over alpha by a small margin; alpha-Ti used instead as the elemental decomposition reference for the TiO2 high-pressure polymorphs (extension_TiO2II/baddeleyite/OII), same convention as the alpha-Mn and alpha-S8 references (flagged, not corrected)."
+}

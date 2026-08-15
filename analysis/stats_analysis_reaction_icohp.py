@@ -1,0 +1,168 @@
+"""Correlation analysis for the reaction-ICOHP metric (case 1: decomposition
+into elements, analysis/reaction_icohp_case1.csv) against both stability
+targets used in this project. Same statistical convention as
+stats_analysis.py / stats_analysis_antibonding.py: Spearman rank
+correlation, no assumed linearity, n<15 groups flagged explicitly, no SISSO.
+
+Two targets tested separately, never assumed to transfer (project
+convention, see METRIC_DEFINITION_reaction_icohp.md and
+project-viability-methodology):
+- energy_above_hull_eV_per_atom: available for all 192 case-1 rows.
+- formation_energy_per_atom: only available for the subset whose mp_id is
+  in the original 186-compound main campaign (mp_dataset/formation_energies.json
+  via percolation_vs_formation_energy.csv) -- extension-only compounds
+  (Ca, Mn2O7, TiO2 polymorphs, elemental references, ...) are excluded from
+  this target, not imputed.
+
+bond_type / is_metal are mostly unpopulated in reaction_icohp_case1.csv's
+own mp_metadata.json-sourced columns (184/192 and 183/192 NaN respectively
+-- most of these compounds were never run through the main campaign's bond
+classification step). Where the compound overlaps with the main 186
+campaign, the better-populated bond_type/is_metal from
+percolation_vs_formation_energy.csv is used instead of the sparse one
+already in reaction_icohp_case1.csv.
+
+Comparison against prior descriptors (percolation weight, min-cut,
+antibonding population) is restricted to the overlap subset with the main
+campaign, so it is an apples-to-apples comparison on the same compounds and
+same target.
+
+Explicitly authorized follow-up to METRIC_DEFINITION_reaction_icohp.md
+section 6 ("no statistical test ... has been run") -- this is that test.
+
+Writes analysis/stats_summary_reaction_icohp.json and PNG figures under
+analysis/figures_reaction_icohp/.
+"""
+
+import json
+from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import pandas as pd
+from scipy.stats import spearmanr
+
+HERE = Path(__file__).parent
+REACTION_CSV = HERE / "reaction_icohp_case1.csv"
+MAIN_CSV = HERE / "percolation_vs_formation_energy.csv"
+ANTIBOND_CSV = HERE / "percolation_vs_antibonding.csv"
+FIG_DIR = HERE / "figures_reaction_icohp"
+FIG_DIR.mkdir(exist_ok=True)
+
+TARGETS = ["energy_above_hull_eV_per_atom", "formation_energy_per_atom"]
+SMALL_N_THRESHOLD = 15
+PRIMARY_METRICS = {"delta_icohp_per_atom": "reaction ICOHP, decomposition into elements (per atom)"}
+SENSITIVITY_METRICS = {"delta_icohp_total": "reaction ICOHP, decomposition into elements (total, unnormalized)"}
+COMPARISON_METRICS = {
+    "delta_icohp_per_atom": "reaction ICOHP (this mission)",
+    "icohp_percolation_weight_min_normalized": "percolation weight (normalized, mission #1)",
+    "mincut_icohp_min_normalized": "periodic min-cut (normalized, mission #3 headline)",
+    "antibond_w_normalized": "antibonding population near frontier (normalized, mission #4 headline)",
+}
+
+
+def load_merged() -> pd.DataFrame:
+    r = pd.read_csv(REACTION_CSV)
+    main = pd.read_csv(MAIN_CSV)[[
+        "mp_id", "bond_type", "formation_energy_per_atom",
+        "icohp_percolation_weight_min_normalized", "mincut_icohp_min_normalized",
+    ]]
+    antibond = pd.read_csv(ANTIBOND_CSV)[["mp_id", "is_metal", "antibond_w_normalized"]]
+
+    df = r.drop(columns=["bond_type", "is_metal"]).merge(main, on="mp_id", how="left")
+    df = df.merge(antibond, on="mp_id", how="left")
+    df["in_main_campaign"] = df["mp_id"].isin(main["mp_id"])
+    return df
+
+
+def spearman_row(df: pd.DataFrame, metric: str, target: str, group_label: str) -> dict:
+    sub = df[[metric, target]].dropna()
+    n = len(sub)
+    if n < 4:
+        return {"group": group_label, "metric": metric, "target": target, "n": n,
+                "rho": None, "p_value": None, "note": "too few points for a correlation"}
+    rho, p = spearmanr(sub[metric], sub[target])
+    return {
+        "group": group_label,
+        "metric": metric,
+        "target": target,
+        "n": n,
+        "rho": round(float(rho), 4),
+        "p_value": round(float(p), 4),
+        "note": "small sample (n<15) -- do not over-interpret" if n < SMALL_N_THRESHOLD else None,
+    }
+
+
+def correlation_table(df: pd.DataFrame, metrics: dict, target: str) -> list[dict]:
+    rows = []
+    for metric in metrics:
+        rows.append(spearman_row(df, metric, target, "all"))
+        for bond_type, sub in df.groupby("bond_type"):
+            rows.append(spearman_row(sub, metric, target, f"bond_type={bond_type}"))
+        for is_metal, sub in df.groupby("is_metal"):
+            rows.append(spearman_row(sub, metric, target, f"is_metal={is_metal}"))
+    return rows
+
+
+def make_bondtype_figure(df: pd.DataFrame, target: str) -> Path:
+    fig, ax = plt.subplots(figsize=(7, 5))
+    colors = {"ionic": "#3b6fa0", "covalent": "#5a9b5a", "metallic": "#c0764a"}
+    for bond_type, sub in df.groupby("bond_type", dropna=False):
+        sub = sub.dropna(subset=["delta_icohp_per_atom", target])
+        if sub.empty:
+            continue
+        label = bond_type if isinstance(bond_type, str) else "unclassified"
+        ax.scatter(
+            sub[target], sub["delta_icohp_per_atom"],
+            label=f"{label} (n={len(sub)})",
+            color=colors.get(bond_type, "gray"), alpha=0.75, edgecolors="none",
+        )
+    xlabel = "Energy above hull (eV/atom)" if target == "energy_above_hull_eV_per_atom" else "Formation energy (eV/atom)"
+    ax.set_xlabel(xlabel)
+    ax.set_ylabel(r"$\Delta$ICOHP per atom (decomposition into elements)")
+    ax.set_title(f"Reaction ICOHP vs. {target}, by bond type")
+    ax.legend()
+    fig.tight_layout()
+    out = FIG_DIR / f"reaction_icohp_vs_{target}_by_bondtype.png"
+    fig.savefig(out, dpi=150)
+    plt.close(fig)
+    return out
+
+
+def main():
+    df = load_merged()
+
+    summary = {
+        "n_total_case1_rows": len(df),
+        "n_in_main_campaign": int(df["in_main_campaign"].sum()),
+        "n_by_family": df["family"].value_counts(dropna=False).to_dict(),
+        "n_by_bond_type": df["bond_type"].value_counts(dropna=False).to_dict(),
+        "n_by_is_metal": {str(k): int(v) for k, v in df["is_metal"].value_counts(dropna=False).items()},
+    }
+
+    for target in TARGETS:
+        summary[f"correlations_primary__{target}"] = correlation_table(df, PRIMARY_METRICS, target)
+        summary[f"correlations_sensitivity__{target}"] = [
+            spearman_row(df, metric, target, "all") for metric in SENSITIVITY_METRICS
+        ]
+
+    main_subset = df[df["in_main_campaign"]]
+    for target in TARGETS:
+        summary[f"comparison_vs_prior_descriptors__{target}"] = correlation_table(
+            main_subset, COMPARISON_METRICS, target
+        )
+
+    figs = {}
+    for target in TARGETS:
+        fig_path = make_bondtype_figure(df, target)
+        figs[target] = str(fig_path.relative_to(HERE))
+    summary["figures"] = figs
+
+    (HERE / "stats_summary_reaction_icohp.json").write_text(json.dumps(summary, indent=2, default=str))
+    print(json.dumps(summary, indent=2, default=str))
+
+
+if __name__ == "__main__":
+    main()

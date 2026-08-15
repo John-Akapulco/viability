@@ -1,0 +1,15 @@
+{
+  "label": "Sb",
+  "mp_id": "mp-104",
+  "formula": "Sb",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "R-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=R-3m) -- matches the real rhombohedral standard state"
+}

@@ -1,0 +1,15 @@
+{
+  "label": "Nb",
+  "mp_id": "mp-75",
+  "formula": "Nb",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Im-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Im-3m) -- matches the real bcc standard state; near-degenerate with ['mp-2739273'] (within 20 meV/at)"
+}

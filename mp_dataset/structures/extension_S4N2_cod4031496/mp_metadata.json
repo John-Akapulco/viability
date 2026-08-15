@@ -1,0 +1,16 @@
+{
+  "label": "S4N2",
+  "cod_id": "4031496",
+  "formula": "S2N",
+  "family": "extension",
+  "source": "COD",
+  "doi": null,
+  "journal": "J. Chem. Soc., Dalton Trans.",
+  "year": 1981,
+  "bond_type": "covalent",
+  "is_metal": null,
+  "nsites": 24,
+  "spacegroup": "P4_2nm",
+  "spacegroup_number": 102,
+  "note": "tetrasulfur dinitride, P4_2nm, Z=4 -- no Materials Project entry exists for this composition"
+}

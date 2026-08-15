@@ -1,0 +1,15 @@
+{
+  "label": "Se",
+  "mp_id": "mp-14",
+  "formula": "Se",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 1.0119000000000002,
+  "energy_above_hull_eV_per_atom": 0.0010810776041676462,
+  "theoretical": false,
+  "nsites": 3,
+  "spacegroup": "P3_121",
+  "note": "trigonal (gray, chain-structure) selenium, P3_121 -- the universally-cited real standard state; DFT's nominal minimum mp-570481 (P2_1/c, 64 sites) is only 1.1 meV/at lower, within typical DFT/k-mesh noise, not a credible distinct real ground state."
+}

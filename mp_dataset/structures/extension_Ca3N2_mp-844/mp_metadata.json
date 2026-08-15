@@ -1,0 +1,16 @@
+{
+  "label": "Ca3N2",
+  "mp_id": "mp-844",
+  "formula": "Ca3N2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.1111,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 40,
+  "spacegroup": "Ia-3",
+  "requested_spacegroup": "Ia-3",
+  "note": "anti-bixbyite, on-hull, 40 sites -- larger than the usual <=20-site cutoff, kept because explicitly requested"
+}

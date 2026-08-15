@@ -1,0 +1,15 @@
+{
+  "label": "Cr",
+  "mp_id": "mp-90",
+  "formula": "Cr",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Im-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Im-3m) -- matches the real bcc standard state; Cr is a genuinely complex SDW antiferromagnet in reality, same caveat as alpha-Mn (simple collinear FM initial guess used, not the real magnetic structure)"
+}

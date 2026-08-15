@@ -1,0 +1,16 @@
+{
+  "label": "S4N4",
+  "cod_id": "7017102",
+  "formula": "SN",
+  "family": "extension",
+  "source": "COD",
+  "doi": "10.1039/c1dt11418b",
+  "journal": "Dalton Transactions",
+  "year": 2011,
+  "bond_type": "covalent",
+  "is_metal": null,
+  "nsites": 32,
+  "spacegroup": "P2_1/c",
+  "spacegroup_number": 14,
+  "note": "tetrasulfur tetranitride, P21/n, Z=4 -- no Materials Project entry exists for this composition (verified: zero hits across the entire N-S chemsys)"
+}

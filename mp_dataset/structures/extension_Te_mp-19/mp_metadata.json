@@ -1,0 +1,15 @@
+{
+  "label": "Te",
+  "mp_id": "mp-19",
+  "formula": "Te",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 0.1844999999999999,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 3,
+  "spacegroup": "P3_121",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=P3_121) -- matches the real trigonal standard state"
+}

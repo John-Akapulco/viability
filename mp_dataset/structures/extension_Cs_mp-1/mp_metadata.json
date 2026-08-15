@@ -1,0 +1,15 @@
+{
+  "label": "Cs",
+  "mp_id": "mp-1",
+  "formula": "Cs",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.019341450000002425,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Im-3m",
+  "note": "bcc Cs (Im-3m), the real standard state (alkali metal pattern); DFT's nominal minima are a cluster of near-degenerate theoretical/exotic entries, none matching the well-established real bcc structure."
+}
