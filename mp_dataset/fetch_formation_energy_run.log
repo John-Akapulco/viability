@@ -1,0 +1,3 @@
+Fetching formation_energy_per_atom for 347 compounds...
+Retrieving SummaryDoc documents:   0%|          | 0/347 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 347/347 [00:00<00:00, 6897741.65it/s]
+Wrote 347 entries to /home/gilles/viability/mp_dataset/formation_energies.json
