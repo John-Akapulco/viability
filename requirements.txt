@@ -1,6 +1,9 @@
 pymatgen>=2023.1.1
 lobsterpy>=0.4.0
 
+# reaction_analysis/ (schema-driven Delta-ICOHP/ICOBI reaction analysis)
+pydantic>=2.0
+
 # mp_dataset/ (Materials Project data campaign) and analysis/ (statistics)
 mp-api>=0.41.0
 pandas>=2.0
