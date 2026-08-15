@@ -7,12 +7,14 @@ correlation, no assumed linearity, n<15 groups flagged explicitly, no SISSO.
 Two targets tested separately, never assumed to transfer (project
 convention, see METRIC_DEFINITION_reaction_icohp.md and
 project-viability-methodology):
-- energy_above_hull_eV_per_atom: available for all 192 case-1 rows.
-- formation_energy_per_atom: only available for the subset whose mp_id is
-  in the original 186-compound main campaign (mp_dataset/formation_energies.json
-  via percolation_vs_formation_energy.csv) -- extension-only compounds
-  (Ca, Mn2O7, TiO2 polymorphs, elemental references, ...) are excluded from
-  this target, not imputed.
+- energy_above_hull_eV_per_atom: available for all case-1 rows.
+- formation_energy_per_atom: primarily from percolation_vs_formation_energy.csv
+  (186-compound main campaign), with mp_dataset/formation_energies.json used
+  as a fallback for extension-only compounds not in that file (Ca3N2,
+  Mn2O7, TiO2 polymorphs, elemental references, ...) -- fetch_formation_energy.py
+  was rerun 2026-08-15 to cover all structures dirs, closing the coverage
+  gap this script's docstring used to describe. Two COD-sourced compounds
+  (S4N2, S4N4) have no mp_id and remain excluded, not imputed.
 
 bond_type / is_metal are mostly unpopulated in reaction_icohp_case1.csv's
 own mp_metadata.json-sourced columns (184/192 and 183/192 NaN respectively
@@ -63,6 +65,9 @@ COMPARISON_METRICS = {
 }
 
 
+FORMATION_ENERGIES_JSON = HERE.parent / "mp_dataset" / "formation_energies.json"
+
+
 def load_merged() -> pd.DataFrame:
     r = pd.read_csv(REACTION_CSV)
     main = pd.read_csv(MAIN_CSV)[[
@@ -74,6 +79,15 @@ def load_merged() -> pd.DataFrame:
     df = r.drop(columns=["bond_type", "is_metal"]).merge(main, on="mp_id", how="left")
     df = df.merge(antibond, on="mp_id", how="left")
     df["in_main_campaign"] = df["mp_id"].isin(main["mp_id"])
+
+    # formation_energy_per_atom for compounds outside the 186-compound main
+    # campaign (extension_* only, e.g. Ca3N2, Mn2O7, TiO2 polymorphs):
+    # mp_dataset/fetch_formation_energy.py was rerun 2026-08-15 to cover all
+    # structures dirs, not just the original 186 -- fill the gap left by the
+    # main-campaign-only merge above rather than re-deriving it.
+    fe_all = json.loads(FORMATION_ENERGIES_JSON.read_text())
+    fallback = df["mp_id"].map(fe_all)
+    df["formation_energy_per_atom"] = df["formation_energy_per_atom"].fillna(fallback)
     return df
 
 

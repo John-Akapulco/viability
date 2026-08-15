@@ -92,8 +92,8 @@
       "group": "all",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 177,
-      "rho": 0.3702,
+      "n": 186,
+      "rho": 0.369,
       "p_value": 0.0,
       "note": null
     },
@@ -148,8 +148,8 @@
       "group": "all",
       "metric": "delta_icohp_total",
       "target": "formation_energy_per_atom",
-      "n": 177,
-      "rho": 0.3345,
+      "n": 186,
+      "rho": 0.3173,
       "p_value": 0.0,
       "note": null
     }

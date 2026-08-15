@@ -1,0 +1,832 @@
+{
+  "threshold": 0.1,
+  "n_total_extension_dirs": 74,
+  "n_with_bandOverlaps_file": 47,
+  "n_flagged": 28,
+  "n_flagged_used_as_elemental_reference": 26,
+  "flagged_compounds": [
+    {
+      "compound_dir": "extension_CaN_mp-1058549",
+      "max_deviation": 17.2526,
+      "n_flagged_kpoints": 153,
+      "flagged": true,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_W_mp-91",
+      "max_deviation": 15.9763,
+      "n_flagged_kpoints": 103,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "W"
+      ]
+    },
+    {
+      "compound_dir": "extension_CaO_mp-2605",
+      "max_deviation": 15.4374,
+      "n_flagged_kpoints": 142,
+      "flagged": true,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_Ir_mp-101",
+      "max_deviation": 4.8826,
+      "n_flagged_kpoints": 315,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ir"
+      ]
+    },
+    {
+      "compound_dir": "extension_Hf_mp-103",
+      "max_deviation": 3.77873,
+      "n_flagged_kpoints": 20,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Hf"
+      ]
+    },
+    {
+      "compound_dir": "extension_Os_mp-49",
+      "max_deviation": 3.56187,
+      "n_flagged_kpoints": 37,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Os"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ag_mp-124",
+      "max_deviation": 3.14013,
+      "n_flagged_kpoints": 269,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ag"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ti_mp-46",
+      "max_deviation": 2.39105,
+      "n_flagged_kpoints": 43,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ti"
+      ]
+    },
+    {
+      "compound_dir": "extension_Au_mp-81",
+      "max_deviation": 1.74525,
+      "n_flagged_kpoints": 266,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Au"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cd_mp-94",
+      "max_deviation": 1.62145,
+      "n_flagged_kpoints": 74,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Cd"
+      ]
+    },
+    {
+      "compound_dir": "extension_Co_mp-102",
+      "max_deviation": 1.13872,
+      "n_flagged_kpoints": 1312,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Co"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ni_mp-23",
+      "max_deviation": 1.02259,
+      "n_flagged_kpoints": 134,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ni"
+      ]
+    },
+    {
+      "compound_dir": "extension_Pd_mp-2",
+      "max_deviation": 0.956497,
+      "n_flagged_kpoints": 300,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Pd"
+      ]
+    },
+    {
+      "compound_dir": "extension_Tc_mp-113",
+      "max_deviation": 0.942838,
+      "n_flagged_kpoints": 55,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Tc"
+      ]
+    },
+    {
+      "compound_dir": "extension_Li_mp-1018134",
+      "max_deviation": 0.901473,
+      "n_flagged_kpoints": 172,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Li"
+      ]
+    },
+    {
+      "compound_dir": "extension_Zn_mp-79",
+      "max_deviation": 0.759108,
+      "n_flagged_kpoints": 75,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Zn"
+      ]
+    },
+    {
+      "compound_dir": "extension_Sc_mp-67",
+      "max_deviation": 0.734034,
+      "n_flagged_kpoints": 6,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Sc"
+      ]
+    },
+    {
+      "compound_dir": "extension_Pt_mp-126",
+      "max_deviation": 0.701944,
+      "n_flagged_kpoints": 275,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Pt"
+      ]
+    },
+    {
+      "compound_dir": "extension_Mo_mp-129",
+      "max_deviation": 0.673855,
+      "n_flagged_kpoints": 149,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Mo"
+      ]
+    },
+    {
+      "compound_dir": "extension_Re_mp-8",
+      "max_deviation": 0.672122,
+      "n_flagged_kpoints": 37,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Re"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ru_mp-33",
+      "max_deviation": 0.663883,
+      "n_flagged_kpoints": 42,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ru"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cr_mp-90",
+      "max_deviation": 0.618738,
+      "n_flagged_kpoints": 140,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Cr"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cgraphite_mp-48",
+      "max_deviation": 0.549145,
+      "n_flagged_kpoints": 137,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "C"
+      ]
+    },
+    {
+      "compound_dir": "extension_V_mp-146",
+      "max_deviation": 0.466558,
+      "n_flagged_kpoints": 200,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "V"
+      ]
+    },
+    {
+      "compound_dir": "extension_Rh_mp-74",
+      "max_deviation": 0.336156,
+      "n_flagged_kpoints": 119,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Rh"
+      ]
+    },
+    {
+      "compound_dir": "extension_B_mp-160",
+      "max_deviation": 0.280047,
+      "n_flagged_kpoints": 72,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "B"
+      ]
+    },
+    {
+      "compound_dir": "extension_Fe_mp-13",
+      "max_deviation": 0.234049,
+      "n_flagged_kpoints": 45,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Fe"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ta_mp-50",
+      "max_deviation": 0.157293,
+      "n_flagged_kpoints": 100,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ta"
+      ]
+    }
+  ],
+  "all_results": [
+    {
+      "compound_dir": "extension_Ag_mp-124",
+      "max_deviation": 3.14013,
+      "n_flagged_kpoints": 269,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ag"
+      ]
+    },
+    {
+      "compound_dir": "extension_Al_mp-134",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_As_mp-158",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Au_mp-81",
+      "max_deviation": 1.74525,
+      "n_flagged_kpoints": 266,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Au"
+      ]
+    },
+    {
+      "compound_dir": "extension_B_mp-160",
+      "max_deviation": 0.280047,
+      "n_flagged_kpoints": 72,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "B"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ba_mp-122",
+      "max_deviation": 0.00104813,
+      "n_flagged_kpoints": 4,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Ba"
+      ]
+    },
+    {
+      "compound_dir": "extension_Be_mp-87",
+      "max_deviation": 0.000189765,
+      "n_flagged_kpoints": 1,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Be"
+      ]
+    },
+    {
+      "compound_dir": "extension_Br_mp-23154",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_CMcarbon_mp-1080826",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_CWcarbon_mp-1190171",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Ca3N2_mp-844",
+      "max_deviation": 0.00114483,
+      "n_flagged_kpoints": 7,
+      "flagged": false,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_CaN_mp-1058549",
+      "max_deviation": 17.2526,
+      "n_flagged_kpoints": 153,
+      "flagged": true,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_CaO_mp-2605",
+      "max_deviation": 15.4374,
+      "n_flagged_kpoints": 142,
+      "flagged": true,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_Ca_mp-21",
+      "max_deviation": 0.0250265,
+      "n_flagged_kpoints": 15,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Ca"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cd_mp-94",
+      "max_deviation": 1.62145,
+      "n_flagged_kpoints": 74,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Cd"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cdiamond_mp-66",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Cgraphite_mp-48",
+      "max_deviation": 0.549145,
+      "n_flagged_kpoints": 137,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "C"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cl_mp-22848",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Clonsdaleite_mp-47",
+      "max_deviation": 0.000994504,
+      "n_flagged_kpoints": 13,
+      "flagged": false,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_Co_mp-102",
+      "max_deviation": 1.13872,
+      "n_flagged_kpoints": 1312,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Co"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cr_mp-90",
+      "max_deviation": 0.618738,
+      "n_flagged_kpoints": 140,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Cr"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cs_mp-1",
+      "max_deviation": 0.00012612,
+      "n_flagged_kpoints": 8,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Cs"
+      ]
+    },
+    {
+      "compound_dir": "extension_Cu_mp-30",
+      "max_deviation": 0.0639964,
+      "n_flagged_kpoints": 96,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Cu"
+      ]
+    },
+    {
+      "compound_dir": "extension_F_mp-561203",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Fe_mp-13",
+      "max_deviation": 0.234049,
+      "n_flagged_kpoints": 45,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Fe"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ga_mp-142",
+      "max_deviation": 0.00029789,
+      "n_flagged_kpoints": 2,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Ga"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ge_mp-32",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_H_mp-730101",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Hf_mp-103",
+      "max_deviation": 3.77873,
+      "n_flagged_kpoints": 20,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Hf"
+      ]
+    },
+    {
+      "compound_dir": "extension_Hg_mp-10861",
+      "max_deviation": 0.0890943,
+      "n_flagged_kpoints": 20,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Hg"
+      ]
+    },
+    {
+      "compound_dir": "extension_I_mp-23153",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_In_mp-1055994",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Ir_mp-101",
+      "max_deviation": 4.8826,
+      "n_flagged_kpoints": 315,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ir"
+      ]
+    },
+    {
+      "compound_dir": "extension_Li_mp-1018134",
+      "max_deviation": 0.901473,
+      "n_flagged_kpoints": 172,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Li"
+      ]
+    },
+    {
+      "compound_dir": "extension_Mg_mp-153",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Mn2O7_mp-28338",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_MnO2_mp-510408",
+      "max_deviation": 0.0940841,
+      "n_flagged_kpoints": 110,
+      "flagged": false,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_Mn_mp-35",
+      "max_deviation": 0.00328646,
+      "n_flagged_kpoints": 37,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Mn"
+      ]
+    },
+    {
+      "compound_dir": "extension_Mo_mp-129",
+      "max_deviation": 0.673855,
+      "n_flagged_kpoints": 149,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Mo"
+      ]
+    },
+    {
+      "compound_dir": "extension_N2_mp-1059834",
+      "max_deviation": 2.08942e-05,
+      "n_flagged_kpoints": 1,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "N"
+      ]
+    },
+    {
+      "compound_dir": "extension_Nb_mp-75",
+      "max_deviation": 0.0547583,
+      "n_flagged_kpoints": 135,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Nb"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ni_mp-23",
+      "max_deviation": 1.02259,
+      "n_flagged_kpoints": 134,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ni"
+      ]
+    },
+    {
+      "compound_dir": "extension_O2_mp-1524462",
+      "max_deviation": 0.00125469,
+      "n_flagged_kpoints": 3,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "O"
+      ]
+    },
+    {
+      "compound_dir": "extension_Os_mp-49",
+      "max_deviation": 3.56187,
+      "n_flagged_kpoints": 37,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Os"
+      ]
+    },
+    {
+      "compound_dir": "extension_P_mp-568348",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_PbN6_mp-667338",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Pb_mp-20483",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Pd_mp-2",
+      "max_deviation": 0.956497,
+      "n_flagged_kpoints": 300,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Pd"
+      ]
+    },
+    {
+      "compound_dir": "extension_Pt_mp-126",
+      "max_deviation": 0.701944,
+      "n_flagged_kpoints": 275,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Pt"
+      ]
+    },
+    {
+      "compound_dir": "extension_Rb_mp-70",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Re_mp-8",
+      "max_deviation": 0.672122,
+      "n_flagged_kpoints": 37,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Re"
+      ]
+    },
+    {
+      "compound_dir": "extension_Rh_mp-74",
+      "max_deviation": 0.336156,
+      "n_flagged_kpoints": 119,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Rh"
+      ]
+    },
+    {
+      "compound_dir": "extension_Ru_mp-33",
+      "max_deviation": 0.663883,
+      "n_flagged_kpoints": 42,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ru"
+      ]
+    },
+    {
+      "compound_dir": "extension_S4N2_cod4031496",
+      "max_deviation": 0.000117153,
+      "n_flagged_kpoints": 4,
+      "flagged": false,
+      "used_as_elemental_reference_for": []
+    },
+    {
+      "compound_dir": "extension_S4N4_cod7017102",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_S_mp-77",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Sb_mp-104",
+      "max_deviation": 2.40214e-05,
+      "n_flagged_kpoints": 2,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Sb"
+      ]
+    },
+    {
+      "compound_dir": "extension_Sc_mp-67",
+      "max_deviation": 0.734034,
+      "n_flagged_kpoints": 6,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Sc"
+      ]
+    },
+    {
+      "compound_dir": "extension_Se_mp-14",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Sn_mp-623511",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Sr_mp-139",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Ta_mp-50",
+      "max_deviation": 0.157293,
+      "n_flagged_kpoints": 100,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ta"
+      ]
+    },
+    {
+      "compound_dir": "extension_Tc_mp-113",
+      "max_deviation": 0.942838,
+      "n_flagged_kpoints": 55,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Tc"
+      ]
+    },
+    {
+      "compound_dir": "extension_Te_mp-19",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_TiO2II_mp-1439",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_TiO2OII_mp-9173",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_TiO2baddeleyite_mp-430",
+      "max_deviation": null,
+      "flagged": false,
+      "note": "no bandOverlaps.lobster file (LOBSTER only writes one when a k-point exceeds its internal threshold)"
+    },
+    {
+      "compound_dir": "extension_Ti_mp-46",
+      "max_deviation": 2.39105,
+      "n_flagged_kpoints": 43,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Ti"
+      ]
+    },
+    {
+      "compound_dir": "extension_Tl_mp-82",
+      "max_deviation": 0.000233906,
+      "n_flagged_kpoints": 3,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Tl"
+      ]
+    },
+    {
+      "compound_dir": "extension_V_mp-146",
+      "max_deviation": 0.466558,
+      "n_flagged_kpoints": 200,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "V"
+      ]
+    },
+    {
+      "compound_dir": "extension_W_mp-91",
+      "max_deviation": 15.9763,
+      "n_flagged_kpoints": 103,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "W"
+      ]
+    },
+    {
+      "compound_dir": "extension_Y_mp-112",
+      "max_deviation": 0.014838,
+      "n_flagged_kpoints": 2,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Y"
+      ]
+    },
+    {
+      "compound_dir": "extension_Zn_mp-79",
+      "max_deviation": 0.759108,
+      "n_flagged_kpoints": 75,
+      "flagged": true,
+      "used_as_elemental_reference_for": [
+        "Zn"
+      ]
+    },
+    {
+      "compound_dir": "extension_Zr_mp-131",
+      "max_deviation": 0.00029441,
+      "n_flagged_kpoints": 1,
+      "flagged": false,
+      "used_as_elemental_reference_for": [
+        "Zr"
+      ]
+    }
+  ]
+}
