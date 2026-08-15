@@ -1,15 +1,14 @@
-Retrieving SummaryDoc documents:   0%|          | 0/186 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 186/186 [00:00<00:00, 3498388.09it/s]
-Wrote 181 rows to /home/gilles/viability/analysis/percolation_vs_hull.csv (0 compounds skipped: no percolation_path.py result yet)
+Retrieving SummaryDoc documents:   0%|          | 0/347 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 347/347 [00:00<00:00, 6497426.29it/s]
+Wrote 349 rows to /home/gilles/viability/analysis/percolation_vs_hull.csv (0 compounds skipped: no percolation_path.py result yet)
 family
-exp_metastable     59
-exp_stable         58
-theo_metastable    58
-hull                3
-metastable          3
+extension          163
+exp_metastable      63
+exp_stable          63
+theo_metastable     60
 Name: count, dtype: int64
 bond_type
-metallic    85
-NaN         64
-covalent    23
-ionic        9
+NaN         173
+metallic     88
+ionic        53
+covalent     35
 Name: count, dtype: int64

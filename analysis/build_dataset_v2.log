@@ -1,0 +1,9 @@
+WARNING: 2 compounds missing formation_energy_per_atom
+
+Wrote 349 rows to /home/gilles/viability/analysis/percolation_vs_formation_energy.csv (0 failed extras)
+dimensionality
+0     39
+1     10
+2     17
+3    283
+Name: count, dtype: int64
