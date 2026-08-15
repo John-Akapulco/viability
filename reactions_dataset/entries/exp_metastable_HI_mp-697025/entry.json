@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_HI_mp-697025",
+  "formula": "HI",
+  "composition": {
+    "H": 8,
+    "I": 8
+  },
+  "Z": 8,
+  "space_group_symbol": "P1",
+  "space_group_number": 1,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -44.56403,
+    "sum_per_atom_eV": -2.785251875,
+    "sum_per_formula_unit_eV": -5.57050375,
+    "mean_per_bond_eV": -0.18883063559322036,
+    "n_bonds": 236,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.00007416666666666666,
+        "sum_eV": -0.00445,
+        "n_bonds": 60
+      },
+      "H-I": {
+        "mean_eV": -0.36363266666666666,
+        "sum_eV": -43.63592,
+        "n_bonds": 120
+      },
+      "I-I": {
+        "mean_eV": -0.016493928571428576,
+        "sum_eV": -0.9236600000000003,
+        "n_bonds": 56
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.510029999999997,
+    "sum_per_atom_eV": 0.5318768749999998,
+    "sum_per_formula_unit_eV": 1.0637537499999996,
+    "mean_per_bond_eV": 0.03605944915254236,
+    "n_bonds": 236,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.000045333333333333335,
+        "sum_eV": 0.00272,
+        "n_bonds": 60
+      },
+      "H-I": {
+        "mean_eV": 0.06650949999999999,
+        "sum_eV": 7.981139999999998,
+        "n_bonds": 120
+      },
+      "I-I": {
+        "mean_eV": 0.009395892857142856,
+        "sum_eV": 0.5261699999999999,
+        "n_bonds": 56
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_HI_mp-697025"
+}

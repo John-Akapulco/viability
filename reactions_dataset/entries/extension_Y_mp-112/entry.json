@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Y_mp-112",
+  "formula": "Y",
+  "composition": {
+    "Y": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.30825,
+    "sum_per_atom_eV": -8.154125,
+    "sum_per_formula_unit_eV": -8.154125,
+    "mean_per_bond_eV": -0.5824375,
+    "n_bonds": 28,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": -0.5824375,
+        "sum_eV": -16.30825,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.73478,
+    "sum_per_atom_eV": 2.36739,
+    "sum_per_formula_unit_eV": 2.36739,
+    "mean_per_bond_eV": 0.1690992857142857,
+    "n_bonds": 28,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": 0.1690992857142857,
+        "sum_eV": 4.73478,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Y_mp-112"
+}

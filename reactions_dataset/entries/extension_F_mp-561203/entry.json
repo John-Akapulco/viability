@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_F_mp-561203",
+  "formula": "F2",
+  "composition": {
+    "F": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "C2/c",
+  "space_group_number": 15,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -14.178399999999991,
+    "sum_per_atom_eV": -3.5445999999999978,
+    "sum_per_formula_unit_eV": -7.0891999999999955,
+    "mean_per_bond_eV": -0.08973670886075943,
+    "n_bonds": 158,
+    "by_bond_type": {
+      "F-F": {
+        "mean_eV": -0.08973670886075943,
+        "sum_eV": -14.178399999999991,
+        "n_bonds": 158
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.052400000000001,
+    "sum_per_atom_eV": 0.5131000000000002,
+    "sum_per_formula_unit_eV": 1.0262000000000004,
+    "mean_per_bond_eV": 0.012989873417721525,
+    "n_bonds": 158,
+    "by_bond_type": {
+      "F-F": {
+        "mean_eV": 0.012989873417721525,
+        "sum_eV": 2.052400000000001,
+        "n_bonds": 158
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_F_mp-561203"
+}

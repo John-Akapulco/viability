@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_BW_mp-7832",
+  "formula": "BW",
+  "composition": {
+    "B": 4,
+    "W": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "I4_1/amd",
+  "space_group_number": 141,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -153.42438999999996,
+    "sum_per_atom_eV": -19.178048749999995,
+    "sum_per_formula_unit_eV": -38.35609749999999,
+    "mean_per_bond_eV": -0.4102256417112298,
+    "n_bonds": 374,
+    "by_bond_type": {
+      "B-B": {
+        "mean_eV": -0.15646679245283018,
+        "sum_eV": -16.58548,
+        "n_bonds": 106
+      },
+      "B-W": {
+        "mean_eV": -0.46818947674418593,
+        "sum_eV": -80.52858999999998,
+        "n_bonds": 172
+      },
+      "W-W": {
+        "mean_eV": -0.5865658333333336,
+        "sum_eV": -56.31032000000002,
+        "n_bonds": 96
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 22.212380000000007,
+    "sum_per_atom_eV": 2.776547500000001,
+    "sum_per_formula_unit_eV": 5.553095000000002,
+    "mean_per_bond_eV": 0.05939139037433157,
+    "n_bonds": 374,
+    "by_bond_type": {
+      "B-B": {
+        "mean_eV": 0.018656698113207536,
+        "sum_eV": 1.9776099999999988,
+        "n_bonds": 106
+      },
+      "B-W": {
+        "mean_eV": 0.06361784883720928,
+        "sum_eV": 10.942269999999997,
+        "n_bonds": 172
+      },
+      "W-W": {
+        "mean_eV": 0.09679687499999999,
+        "sum_eV": 9.292499999999999,
+        "n_bonds": 96
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_BW_mp-7832"
+}

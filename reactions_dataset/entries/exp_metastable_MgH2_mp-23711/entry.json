@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_MgH2_mp-23711",
+  "formula": "MgH2",
+  "composition": {
+    "Mg": 4,
+    "H": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "Pbcn",
+  "space_group_number": 60,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -15.237529999999985,
+    "sum_per_atom_eV": -1.2697941666666654,
+    "sum_per_formula_unit_eV": -3.8093824999999963,
+    "mean_per_bond_eV": -0.027209874999999974,
+    "n_bonds": 560,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.011282031249999998,
+        "sum_eV": -0.7220499999999999,
+        "n_bonds": 64
+      },
+      "H-Mg": {
+        "mean_eV": -0.05655177419354839,
+        "sum_eV": -14.024840000000001,
+        "n_bonds": 248
+      },
+      "H-H": {
+        "mean_eV": -0.0019783870967741944,
+        "sum_eV": -0.49064000000000024,
+        "n_bonds": 248
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.553290000000004,
+    "sum_per_atom_eV": 0.29610750000000036,
+    "sum_per_formula_unit_eV": 0.888322500000001,
+    "mean_per_bond_eV": 0.006345160714285722,
+    "n_bonds": 560,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.00210390625,
+        "sum_eV": 0.13465,
+        "n_bonds": 64
+      },
+      "H-Mg": {
+        "mean_eV": 0.012003306451612905,
+        "sum_eV": 2.9768200000000005,
+        "n_bonds": 248
+      },
+      "H-H": {
+        "mean_eV": 0.001781532258064516,
+        "sum_eV": 0.44182,
+        "n_bonds": 248
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_MgH2_mp-23711"
+}

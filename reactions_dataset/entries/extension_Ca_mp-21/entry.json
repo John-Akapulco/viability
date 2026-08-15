@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ca_mp-21",
+  "formula": "Ca",
+  "composition": {
+    "Ca": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -0.28664,
+    "sum_per_atom_eV": -0.28664,
+    "sum_per_formula_unit_eV": -0.28664,
+    "mean_per_bond_eV": -0.020474285714285716,
+    "n_bonds": 14,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.020474285714285716,
+        "sum_eV": -0.28664,
+        "n_bonds": 14
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.024600000000000004,
+    "sum_per_atom_eV": 0.024600000000000004,
+    "sum_per_formula_unit_eV": 0.024600000000000004,
+    "mean_per_bond_eV": 0.0017571428571428575,
+    "n_bonds": 14,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.0017571428571428575,
+        "sum_eV": 0.024600000000000004,
+        "n_bonds": 14
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ca_mp-21"
+}

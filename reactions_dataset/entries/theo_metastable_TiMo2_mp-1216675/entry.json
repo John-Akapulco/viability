@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_TiMo2_mp-1216675",
+  "formula": "TiMo2",
+  "composition": {
+    "Ti": 1,
+    "Mo": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Fmmm",
+  "space_group_number": 69,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -32.361349999999995,
+    "sum_per_atom_eV": -10.787116666666664,
+    "sum_per_formula_unit_eV": -32.361349999999995,
+    "mean_per_bond_eV": -0.42027727272727267,
+    "n_bonds": 77,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.37987,
+        "sum_eV": -4.55844,
+        "n_bonds": 12
+      },
+      "Mo-Ti": {
+        "mean_eV": -0.30885269230769224,
+        "sum_eV": -8.030169999999998,
+        "n_bonds": 26
+      },
+      "Mo-Mo": {
+        "mean_eV": -0.5069933333333334,
+        "sum_eV": -19.772740000000002,
+        "n_bonds": 39
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.913500000000003,
+    "sum_per_atom_eV": 3.304500000000001,
+    "sum_per_formula_unit_eV": 9.913500000000003,
+    "mean_per_bond_eV": 0.12874675324675328,
+    "n_bonds": 77,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.12151333333333332,
+        "sum_eV": 1.45816,
+        "n_bonds": 12
+      },
+      "Mo-Ti": {
+        "mean_eV": 0.09929884615384615,
+        "sum_eV": 2.58177,
+        "n_bonds": 26
+      },
+      "Mo-Mo": {
+        "mean_eV": 0.15060435897435892,
+        "sum_eV": 5.873569999999998,
+        "n_bonds": 39
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_TiMo2_mp-1216675"
+}

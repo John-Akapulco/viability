@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_N2_mp-1059834",
+  "formula": "N2",
+  "composition": {
+    "N": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Imma",
+  "space_group_number": 74,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -32.845670000000034,
+    "sum_per_atom_eV": -16.422835000000017,
+    "sum_per_formula_unit_eV": -32.845670000000034,
+    "mean_per_bond_eV": -0.25660679687500026,
+    "n_bonds": 128,
+    "by_bond_type": {
+      "N-N": {
+        "mean_eV": -0.25660679687500026,
+        "sum_eV": -32.845670000000034,
+        "n_bonds": 128
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.446160000000002,
+    "sum_per_atom_eV": 1.723080000000001,
+    "sum_per_formula_unit_eV": 3.446160000000002,
+    "mean_per_bond_eV": 0.026923125000000016,
+    "n_bonds": 128,
+    "by_bond_type": {
+      "N-N": {
+        "mean_eV": 0.026923125000000016,
+        "sum_eV": 3.446160000000002,
+        "n_bonds": 128
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834"
+}

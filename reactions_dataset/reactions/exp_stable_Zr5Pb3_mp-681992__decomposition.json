@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_Zr5Pb3_mp-681992__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_Zr5Pb3_mp-681992",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 5.0
+    },
+    {
+      "compound_id": "extension_Pb_mp-20483",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

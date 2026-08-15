@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_NaS_mp-2400",
+  "formula": "NaS",
+  "composition": {
+    "Na": 4,
+    "S": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -23.49327999999999,
+    "sum_per_atom_eV": -2.936659999999999,
+    "sum_per_formula_unit_eV": -5.873319999999998,
+    "mean_per_bond_eV": -0.11404504854368928,
+    "n_bonds": 206,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": -0.015981250000000006,
+        "sum_eV": -0.8949500000000004,
+        "n_bonds": 56
+      },
+      "Na-S": {
+        "mean_eV": -0.1346434090909091,
+        "sum_eV": -11.848620000000002,
+        "n_bonds": 88
+      },
+      "S-S": {
+        "mean_eV": -0.17338241935483878,
+        "sum_eV": -10.749710000000004,
+        "n_bonds": 62
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.52693,
+    "sum_per_atom_eV": 0.56586625,
+    "sum_per_formula_unit_eV": 1.1317325,
+    "mean_per_bond_eV": 0.021975388349514565,
+    "n_bonds": 206,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": 0.0016187499999999997,
+        "sum_eV": 0.09064999999999998,
+        "n_bonds": 56
+      },
+      "Na-S": {
+        "mean_eV": 0.023401590909090917,
+        "sum_eV": 2.0593400000000006,
+        "n_bonds": 88
+      },
+      "S-S": {
+        "mean_eV": 0.03833774193548387,
+        "sum_eV": 2.3769400000000003,
+        "n_bonds": 62
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_NaS_mp-2400"
+}

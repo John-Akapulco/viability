@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_CoB_mp-20857__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_CoB_mp-20857",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Co_mp-102",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_B_mp-160",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Cgraphite_mp-48",
+  "formula": "C",
+  "composition": {
+    "C": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -73.19410000000005,
+    "sum_per_atom_eV": -18.298525000000012,
+    "sum_per_formula_unit_eV": -18.298525000000012,
+    "mean_per_bond_eV": -0.34525518867924554,
+    "n_bonds": 212,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": -0.34525518867924554,
+        "sum_eV": -73.19410000000005,
+        "n_bonds": 212
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.874950000000007,
+    "sum_per_atom_eV": 1.9687375000000018,
+    "sum_per_formula_unit_eV": 1.9687375000000018,
+    "mean_per_bond_eV": 0.03714599056603777,
+    "n_bonds": 212,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": 0.03714599056603777,
+        "sum_eV": 7.874950000000007,
+        "n_bonds": 212
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48"
+}

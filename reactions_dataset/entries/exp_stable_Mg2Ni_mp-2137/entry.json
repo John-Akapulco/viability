@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_Mg2Ni_mp-2137",
+  "formula": "Mg2Ni",
+  "composition": {
+    "Mg": 12,
+    "Ni": 6
+  },
+  "Z": 6,
+  "space_group_symbol": "P6_222",
+  "space_group_number": 180,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -14.289439999999999,
+    "sum_per_atom_eV": -0.7938577777777778,
+    "sum_per_formula_unit_eV": -2.3815733333333333,
+    "mean_per_bond_eV": -0.026461925925925923,
+    "n_bonds": 540,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.013963080168776369,
+        "sum_eV": -3.3092499999999996,
+        "n_bonds": 237
+      },
+      "Mg-Ni": {
+        "mean_eV": -0.035176452991453,
+        "sum_eV": -8.231290000000001,
+        "n_bonds": 234
+      },
+      "Ni-Ni": {
+        "mean_eV": -0.03983913043478258,
+        "sum_eV": -2.748899999999998,
+        "n_bonds": 69
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.110290000000001,
+    "sum_per_atom_eV": 0.2839050000000001,
+    "sum_per_formula_unit_eV": 0.8517150000000001,
+    "mean_per_bond_eV": 0.009463500000000001,
+    "n_bonds": 540,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0038913502109704646,
+        "sum_eV": 0.9222500000000001,
+        "n_bonds": 237
+      },
+      "Mg-Ni": {
+        "mean_eV": 0.010518333333333327,
+        "sum_eV": 2.4612899999999986,
+        "n_bonds": 234
+      },
+      "Ni-Ni": {
+        "mean_eV": 0.02502536231884058,
+        "sum_eV": 1.72675,
+        "n_bonds": 69
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_Mg2Ni_mp-2137"
+}

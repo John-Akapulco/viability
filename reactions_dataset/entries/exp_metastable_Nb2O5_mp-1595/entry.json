@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Nb2O5_mp-1595",
+  "formula": "Nb2O5",
+  "composition": {
+    "Nb": 2,
+    "O": 5
+  },
+  "Z": 1,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -65.10020999999995,
+    "sum_per_atom_eV": -9.300029999999992,
+    "sum_per_formula_unit_eV": -65.10020999999995,
+    "mean_per_bond_eV": -0.2701253526970952,
+    "n_bonds": 241,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": -0.021446666666666673,
+        "sum_eV": -0.5790600000000001,
+        "n_bonds": 27
+      },
+      "Nb-O": {
+        "mean_eV": -0.6969104651162792,
+        "sum_eV": -59.93430000000001,
+        "n_bonds": 86
+      },
+      "O-O": {
+        "mean_eV": -0.03583476562500002,
+        "sum_eV": -4.586850000000003,
+        "n_bonds": 128
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.802569999999978,
+    "sum_per_atom_eV": 1.5432242857142826,
+    "sum_per_formula_unit_eV": 10.802569999999978,
+    "mean_per_bond_eV": 0.0448239419087136,
+    "n_bonds": 241,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": 0.008159999999999999,
+        "sum_eV": 0.22031999999999996,
+        "n_bonds": 27
+      },
+      "Nb-O": {
+        "mean_eV": 0.10868441860465114,
+        "sum_eV": 9.346859999999998,
+        "n_bonds": 86
+      },
+      "O-O": {
+        "mean_eV": 0.009651484375000002,
+        "sum_eV": 1.2353900000000002,
+        "n_bonds": 128
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Nb2O5_mp-1595"
+}

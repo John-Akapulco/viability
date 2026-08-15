@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_S_mp-77",
+  "formula": "S",
+  "composition": {
+    "S": 32
+  },
+  "Z": 32,
+  "space_group_symbol": "P1",
+  "space_group_number": 1,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -195.57897999999983,
+    "sum_per_atom_eV": -6.111843124999995,
+    "sum_per_formula_unit_eV": -6.111843124999995,
+    "mean_per_bond_eV": -0.3601822836095761,
+    "n_bonds": 543,
+    "by_bond_type": {
+      "S-S": {
+        "mean_eV": -0.3601822836095761,
+        "sum_eV": -195.57897999999983,
+        "n_bonds": 543
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 36.31818000000004,
+    "sum_per_atom_eV": 1.1349431250000013,
+    "sum_per_formula_unit_eV": 1.1349431250000013,
+    "mean_per_bond_eV": 0.06688430939226526,
+    "n_bonds": 543,
+    "by_bond_type": {
+      "S-S": {
+        "mean_eV": 0.06688430939226526,
+        "sum_eV": 36.31818000000004,
+        "n_bonds": 543
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_S_mp-77"
+}

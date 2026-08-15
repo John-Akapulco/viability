@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Ga2Se3_mp-1224809",
+  "formula": "Ga2Se3",
+  "composition": {
+    "Ga": 2,
+    "Se": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Imm2",
+  "space_group_number": 44,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -39.80488000000002,
+    "sum_per_atom_eV": -7.960976000000004,
+    "sum_per_formula_unit_eV": -39.80488000000002,
+    "mean_per_bond_eV": -0.452328181818182,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": -0.07232466666666666,
+        "sum_eV": -1.08487,
+        "n_bonds": 15
+      },
+      "Ga-Se": {
+        "mean_eV": -0.9275102439024392,
+        "sum_eV": -38.02792000000001,
+        "n_bonds": 41
+      },
+      "Se-Se": {
+        "mean_eV": -0.021627812500000006,
+        "sum_eV": -0.6920900000000002,
+        "n_bonds": 32
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.491699999999996,
+    "sum_per_atom_eV": 1.4983399999999993,
+    "sum_per_formula_unit_eV": 7.491699999999996,
+    "mean_per_bond_eV": 0.0851329545454545,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": 0.008914,
+        "sum_eV": 0.13371,
+        "n_bonds": 15
+      },
+      "Ga-Se": {
+        "mean_eV": 0.16531487804878042,
+        "sum_eV": 6.777909999999997,
+        "n_bonds": 41
+      },
+      "Se-Se": {
+        "mean_eV": 0.018127499999999998,
+        "sum_eV": 0.5800799999999999,
+        "n_bonds": 32
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Ga2Se3_mp-1224809"
+}

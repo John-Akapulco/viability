@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_AlSb_mp-1023918__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_AlSb_mp-1023918",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Al_mp-134",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Sb_mp-104",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

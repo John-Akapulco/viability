@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Y3Co_mp-1189329",
+  "formula": "Y3Co",
+  "composition": {
+    "Y": 12,
+    "Co": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P2_1",
+  "space_group_number": 4,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -150.04215999999997,
+    "sum_per_atom_eV": -9.377634999999998,
+    "sum_per_formula_unit_eV": -37.51053999999999,
+    "mean_per_bond_eV": -0.5770852307692307,
+    "n_bonds": 260,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": -0.3675537500000001,
+        "sum_eV": -49.987310000000015,
+        "n_bonds": 136
+      },
+      "Co-Y": {
+        "mean_eV": -0.9037635185185187,
+        "sum_eV": -97.60646000000001,
+        "n_bonds": 108
+      },
+      "Co-Co": {
+        "mean_eV": -0.153024375,
+        "sum_eV": -2.44839,
+        "n_bonds": 16
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 31.75923,
+    "sum_per_atom_eV": 1.984951875,
+    "sum_per_formula_unit_eV": 7.9398075,
+    "mean_per_bond_eV": 0.1221508846153846,
+    "n_bonds": 260,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": 0.09361279411764704,
+        "sum_eV": 12.731339999999998,
+        "n_bonds": 136
+      },
+      "Co-Y": {
+        "mean_eV": 0.16860759259259256,
+        "sum_eV": 18.209619999999997,
+        "n_bonds": 108
+      },
+      "Co-Co": {
+        "mean_eV": 0.051141874999999996,
+        "sum_eV": 0.8182699999999999,
+        "n_bonds": 16
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Y3Co_mp-1189329"
+}

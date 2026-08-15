@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Be3N2_mp-6977",
+  "formula": "Be3N2",
+  "composition": {
+    "Be": 6,
+    "N": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -148.3104200000001,
+    "sum_per_atom_eV": -14.83104200000001,
+    "sum_per_formula_unit_eV": -74.15521000000005,
+    "mean_per_bond_eV": -0.18400796526054605,
+    "n_bonds": 806,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.10722349315068468,
+        "sum_eV": -31.309259999999924,
+        "n_bonds": 292
+      },
+      "Be-N": {
+        "mean_eV": -0.30757831521739126,
+        "sum_eV": -113.18881999999998,
+        "n_bonds": 368
+      },
+      "N-N": {
+        "mean_eV": -0.026111917808219195,
+        "sum_eV": -3.8123400000000025,
+        "n_bonds": 146
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 15.100989999999994,
+    "sum_per_atom_eV": 1.5100989999999994,
+    "sum_per_formula_unit_eV": 7.550494999999997,
+    "mean_per_bond_eV": 0.01873571960297766,
+    "n_bonds": 806,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.007450308219178102,
+        "sum_eV": 2.1754900000000057,
+        "n_bonds": 292
+      },
+      "Be-N": {
+        "mean_eV": 0.03203853260869562,
+        "sum_eV": 11.79017999999999,
+        "n_bonds": 368
+      },
+      "N-N": {
+        "mean_eV": 0.007776164383561635,
+        "sum_eV": 1.1353199999999988,
+        "n_bonds": 146
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Be3N2_mp-6977"
+}

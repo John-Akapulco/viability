@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_Be2Cu_mp-2031",
+  "formula": "Be2Cu",
+  "composition": {
+    "Be": 4,
+    "Cu": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -54.23028000000003,
+    "sum_per_atom_eV": -9.038380000000005,
+    "sum_per_formula_unit_eV": -27.115140000000014,
+    "mean_per_bond_eV": -0.14122468750000008,
+    "n_bonds": 384,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.22361750000000002,
+        "sum_eV": -40.25115,
+        "n_bonds": 180
+      },
+      "Be-Cu": {
+        "mean_eV": -0.0882523026315789,
+        "sum_eV": -13.414349999999994,
+        "n_bonds": 152
+      },
+      "Cu-Cu": {
+        "mean_eV": -0.010861153846153838,
+        "sum_eV": -0.5647799999999996,
+        "n_bonds": 52
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.755099999999995,
+    "sum_per_atom_eV": 1.2925166666666659,
+    "sum_per_formula_unit_eV": 3.8775499999999976,
+    "mean_per_bond_eV": 0.020195572916666654,
+    "n_bonds": 384,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.029516833333333325,
+        "sum_eV": 5.313029999999999,
+        "n_bonds": 180
+      },
+      "Be-Cu": {
+        "mean_eV": 0.014860394736842107,
+        "sum_eV": 2.2587800000000002,
+        "n_bonds": 152
+      },
+      "Cu-Cu": {
+        "mean_eV": 0.003524807692307695,
+        "sum_eV": 0.18329000000000015,
+        "n_bonds": 52
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_Be2Cu_mp-2031"
+}

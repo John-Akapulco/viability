@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_HgF2_mp-8177",
+  "formula": "HgF2",
+  "composition": {
+    "Hg": 1,
+    "F": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -18.89969000000001,
+    "sum_per_atom_eV": -6.29989666666667,
+    "sum_per_formula_unit_eV": -18.89969000000001,
+    "mean_per_bond_eV": -0.1889969000000001,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": -0.1788677777777778,
+        "sum_eV": -3.2196200000000004,
+        "n_bonds": 18
+      },
+      "F-Hg": {
+        "mean_eV": -0.47272249999999993,
+        "sum_eV": -15.127119999999998,
+        "n_bonds": 32
+      },
+      "F-F": {
+        "mean_eV": -0.011059000000000001,
+        "sum_eV": -0.55295,
+        "n_bonds": 50
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.3729999999999984,
+    "sum_per_atom_eV": 0.7909999999999995,
+    "sum_per_formula_unit_eV": 2.3729999999999984,
+    "mean_per_bond_eV": 0.023729999999999984,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": 0.011437777777777778,
+        "sum_eV": 0.20588,
+        "n_bonds": 18
+      },
+      "F-Hg": {
+        "mean_eV": 0.05938124999999999,
+        "sum_eV": 1.9001999999999997,
+        "n_bonds": 32
+      },
+      "F-F": {
+        "mean_eV": 0.0053384,
+        "sum_eV": 0.26692,
+        "n_bonds": 50
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_HgF2_mp-8177"
+}

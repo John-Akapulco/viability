@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Li3Hg_mp-1646__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Li3Hg_mp-1646",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Li_mp-1018134",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

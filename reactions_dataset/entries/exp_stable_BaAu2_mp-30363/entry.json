@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_BaAu2_mp-30363",
+  "formula": "BaAu2",
+  "composition": {
+    "Ba": 1,
+    "Au": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.558259999999994,
+    "sum_per_atom_eV": -8.186086666666665,
+    "sum_per_formula_unit_eV": -24.558259999999994,
+    "mean_per_bond_eV": -0.4093043333333332,
+    "n_bonds": 60,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.055627499999999996,
+        "sum_eV": -0.44501999999999997,
+        "n_bonds": 8
+      },
+      "Au-Ba": {
+        "mean_eV": -0.336295,
+        "sum_eV": -8.07108,
+        "n_bonds": 24
+      },
+      "Au-Au": {
+        "mean_eV": -0.5729342857142857,
+        "sum_eV": -16.04216,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.284330000000001,
+    "sum_per_atom_eV": 1.4281100000000002,
+    "sum_per_formula_unit_eV": 4.284330000000001,
+    "mean_per_bond_eV": 0.07140550000000001,
+    "n_bonds": 60,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.008145,
+        "sum_eV": 0.06516,
+        "n_bonds": 8
+      },
+      "Au-Ba": {
+        "mean_eV": 0.0338075,
+        "sum_eV": 0.81138,
+        "n_bonds": 24
+      },
+      "Au-Au": {
+        "mean_eV": 0.1217067857142857,
+        "sum_eV": 3.4077899999999994,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_BaAu2_mp-30363"
+}

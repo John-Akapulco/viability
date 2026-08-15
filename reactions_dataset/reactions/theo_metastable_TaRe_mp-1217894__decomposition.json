@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_TaRe_mp-1217894__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_TaRe_mp-1217894",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ta_mp-50",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Re_mp-8",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Tl_mp-82",
+  "formula": "Tl",
+  "composition": {
+    "Tl": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -18.978839999999998,
+    "sum_per_atom_eV": -9.489419999999999,
+    "sum_per_formula_unit_eV": -9.489419999999999,
+    "mean_per_bond_eV": -0.6778157142857142,
+    "n_bonds": 28,
+    "by_bond_type": {
+      "Tl-Tl": {
+        "mean_eV": -0.6778157142857142,
+        "sum_eV": -18.978839999999998,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.52148,
+    "sum_per_atom_eV": 1.76074,
+    "sum_per_formula_unit_eV": 1.76074,
+    "mean_per_bond_eV": 0.12576714285714286,
+    "n_bonds": 28,
+    "by_bond_type": {
+      "Tl-Tl": {
+        "mean_eV": 0.12576714285714286,
+        "sum_eV": 3.52148,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Tl_mp-82"
+}

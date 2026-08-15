@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_PbN6_mp-667338",
+  "formula": "PbN6",
+  "composition": {
+    "Pb": 12,
+    "N": 72
+  },
+  "Z": 12,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -1093.1588900000027,
+    "sum_per_atom_eV": -13.01379630952384,
+    "sum_per_formula_unit_eV": -91.09657416666688,
+    "mean_per_bond_eV": -0.4616380447635146,
+    "n_bonds": 2368,
+    "by_bond_type": {
+      "Pb-Pb": {
+        "mean_eV": -0.06564535714285713,
+        "sum_eV": -1.8380699999999996,
+        "n_bonds": 28
+      },
+      "N-Pb": {
+        "mean_eV": -0.19385778963414635,
+        "sum_eV": -127.17071000000001,
+        "n_bonds": 656
+      },
+      "N-N": {
+        "mean_eV": -0.5725356947743475,
+        "sum_eV": -964.1501100000013,
+        "n_bonds": 1684
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 131.02509000000003,
+    "sum_per_atom_eV": 1.5598225000000003,
+    "sum_per_formula_unit_eV": 10.918757500000003,
+    "mean_per_bond_eV": 0.05533154138513515,
+    "n_bonds": 2368,
+    "by_bond_type": {
+      "Pb-Pb": {
+        "mean_eV": 0.007422142857142856,
+        "sum_eV": 0.20781999999999998,
+        "n_bonds": 28
+      },
+      "N-Pb": {
+        "mean_eV": 0.036042225609756104,
+        "sum_eV": 23.643700000000003,
+        "n_bonds": 656
+      },
+      "N-N": {
+        "mean_eV": 0.06364226247030881,
+        "sum_eV": 107.17357000000003,
+        "n_bonds": 1684
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_PbN6_mp-667338"
+}

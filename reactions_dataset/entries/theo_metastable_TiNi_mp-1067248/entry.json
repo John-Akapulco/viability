@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_TiNi_mp-1067248",
+  "formula": "TiNi",
+  "composition": {
+    "Ti": 2,
+    "Ni": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P2_1/m",
+  "space_group_number": 11,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -21.736069999999984,
+    "sum_per_atom_eV": -5.434017499999996,
+    "sum_per_formula_unit_eV": -10.868034999999992,
+    "mean_per_bond_eV": -0.14490713333333322,
+    "n_bonds": 150,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.16290380952380953,
+        "sum_eV": -6.84196,
+        "n_bonds": 42
+      },
+      "Ni-Ti": {
+        "mean_eV": -0.20096196969696972,
+        "sum_eV": -13.263490000000001,
+        "n_bonds": 66
+      },
+      "Ni-Ni": {
+        "mean_eV": -0.038824285714285714,
+        "sum_eV": -1.63062,
+        "n_bonds": 42
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.078130000000002,
+    "sum_per_atom_eV": 2.0195325000000004,
+    "sum_per_formula_unit_eV": 4.039065000000001,
+    "mean_per_bond_eV": 0.05385420000000001,
+    "n_bonds": 150,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.0698440476190476,
+        "sum_eV": 2.9334499999999992,
+        "n_bonds": 42
+      },
+      "Ni-Ti": {
+        "mean_eV": 0.06854196969696967,
+        "sum_eV": 4.523769999999998,
+        "n_bonds": 66
+      },
+      "Ni-Ni": {
+        "mean_eV": 0.014783571428571427,
+        "sum_eV": 0.62091,
+        "n_bonds": 42
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_TiNi_mp-1067248"
+}

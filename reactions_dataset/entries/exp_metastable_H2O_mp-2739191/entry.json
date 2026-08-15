@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_H2O_mp-2739191",
+  "formula": "H2O",
+  "composition": {
+    "H": 8,
+    "O": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "C222_1",
+  "space_group_number": 20,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -76.69105000000008,
+    "sum_per_atom_eV": -6.39092083333334,
+    "sum_per_formula_unit_eV": -19.17276250000002,
+    "mean_per_bond_eV": -0.11146954941860476,
+    "n_bonds": 688,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.0017260322580645148,
+        "sum_eV": -0.5350699999999996,
+        "n_bonds": 310
+      },
+      "H-O": {
+        "mean_eV": -0.25521527397260274,
+        "sum_eV": -74.52286,
+        "n_bonds": 292
+      },
+      "O-O": {
+        "mean_eV": -0.018989767441860466,
+        "sum_eV": -1.6331200000000001,
+        "n_bonds": 86
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.790029999999994,
+    "sum_per_atom_eV": 0.6491691666666661,
+    "sum_per_formula_unit_eV": 1.9475074999999984,
+    "mean_per_bond_eV": 0.011322718023255804,
+    "n_bonds": 688,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.000054290322580645074,
+        "sum_eV": 0.016829999999999973,
+        "n_bonds": 310
+      },
+      "H-O": {
+        "mean_eV": 0.02409551369863015,
+        "sum_eV": 7.035890000000004,
+        "n_bonds": 292
+      },
+      "O-O": {
+        "mean_eV": 0.008573372093023255,
+        "sum_eV": 0.7373099999999999,
+        "n_bonds": 86
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_H2O_mp-2739191"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_ZnAg_mp-1912__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_ZnAg_mp-1912",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zn_mp-79",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Au_mp-81",
+  "formula": "Au",
+  "composition": {
+    "Au": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -25.295960000000004,
+    "sum_per_atom_eV": -25.295960000000004,
+    "sum_per_formula_unit_eV": -25.295960000000004,
+    "mean_per_bond_eV": -0.4684437037037038,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Au-Au": {
+        "mean_eV": -0.4684437037037038,
+        "sum_eV": -25.295960000000004,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.8393400000000004,
+    "sum_per_atom_eV": 2.8393400000000004,
+    "sum_per_formula_unit_eV": 2.8393400000000004,
+    "mean_per_bond_eV": 0.05258037037037038,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Au-Au": {
+        "mean_eV": 0.05258037037037038,
+        "sum_eV": 2.8393400000000004,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Au_mp-81"
+}

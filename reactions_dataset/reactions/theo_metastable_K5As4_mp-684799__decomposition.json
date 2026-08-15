@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_K5As4_mp-684799__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_K5As4_mp-684799",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_metastable_K_mp-10157",
+      "coefficient": 5.0
+    },
+    {
+      "compound_id": "extension_As_mp-158",
+      "coefficient": 4.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

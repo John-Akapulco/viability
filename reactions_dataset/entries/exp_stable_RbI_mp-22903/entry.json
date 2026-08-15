@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_RbI_mp-22903",
+  "formula": "RbI",
+  "composition": {
+    "Rb": 1,
+    "I": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -3.8227199999999995,
+    "sum_per_atom_eV": -1.9113599999999997,
+    "sum_per_formula_unit_eV": -3.8227199999999995,
+    "mean_per_bond_eV": -0.12742399999999998,
+    "n_bonds": 30,
+    "by_bond_type": {
+      "Rb-Rb": {
+        "mean_eV": -0.08968333333333334,
+        "sum_eV": -1.0762,
+        "n_bonds": 12
+      },
+      "I-Rb": {
+        "mean_eV": -0.41617,
+        "sum_eV": -2.49702,
+        "n_bonds": 6
+      },
+      "I-I": {
+        "mean_eV": -0.020791666666666667,
+        "sum_eV": -0.2495,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.6536100000000002,
+    "sum_per_atom_eV": 0.3268050000000001,
+    "sum_per_formula_unit_eV": 0.6536100000000002,
+    "mean_per_bond_eV": 0.021787000000000008,
+    "n_bonds": 30,
+    "by_bond_type": {
+      "Rb-Rb": {
+        "mean_eV": 0.006336666666666665,
+        "sum_eV": 0.07603999999999998,
+        "n_bonds": 12
+      },
+      "I-Rb": {
+        "mean_eV": 0.08403833333333333,
+        "sum_eV": 0.50423,
+        "n_bonds": 6
+      },
+      "I-I": {
+        "mean_eV": 0.006111666666666667,
+        "sum_eV": 0.07334,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_RbI_mp-22903"
+}

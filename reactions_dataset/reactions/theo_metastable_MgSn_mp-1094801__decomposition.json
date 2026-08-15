@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_MgSn_mp-1094801__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_MgSn_mp-1094801",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Sn_mp-623511",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

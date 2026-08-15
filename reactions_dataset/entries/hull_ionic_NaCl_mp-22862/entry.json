@@ -1,0 +1,63 @@
+{
+  "compound_id": "hull_ionic_NaCl_mp-22862",
+  "formula": "NaCl",
+  "composition": {
+    "Na": 1,
+    "Cl": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -4.445290000000001,
+    "sum_per_atom_eV": -2.2226450000000004,
+    "sum_per_formula_unit_eV": -4.445290000000001,
+    "mean_per_bond_eV": -0.08890580000000002,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": -0.021536666666666666,
+        "sum_eV": -0.38766,
+        "n_bonds": 18
+      },
+      "Cl-Na": {
+        "mean_eV": -0.25734928571428567,
+        "sum_eV": -3.6028899999999995,
+        "n_bonds": 14
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.025263333333333332,
+        "sum_eV": -0.45474,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.6578400000000003,
+    "sum_per_atom_eV": 0.32892000000000016,
+    "sum_per_formula_unit_eV": 0.6578400000000003,
+    "mean_per_bond_eV": 0.013156800000000007,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": 0.0016577777777777775,
+        "sum_eV": 0.029839999999999995,
+        "n_bonds": 18
+      },
+      "Cl-Na": {
+        "mean_eV": 0.03725714285714286,
+        "sum_eV": 0.5216,
+        "n_bonds": 14
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.005911111111111111,
+        "sum_eV": 0.1064,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/hull_ionic_NaCl_mp-22862"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_PbAu2_mp-19871",
+  "formula": "PbAu2",
+  "composition": {
+    "Pb": 2,
+    "Au": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -56.00781,
+    "sum_per_atom_eV": -9.334635,
+    "sum_per_formula_unit_eV": -28.003905,
+    "mean_per_bond_eV": -0.3333798214285714,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Pb-Pb": {
+        "mean_eV": -0.0776589285714286,
+        "sum_eV": -2.1744500000000007,
+        "n_bonds": 28
+      },
+      "Au-Pb": {
+        "mean_eV": -0.3983760714285714,
+        "sum_eV": -22.30906,
+        "n_bonds": 56
+      },
+      "Au-Au": {
+        "mean_eV": -0.37528928571428594,
+        "sum_eV": -31.524300000000018,
+        "n_bonds": 84
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.898700000000002,
+    "sum_per_atom_eV": 1.4831166666666669,
+    "sum_per_formula_unit_eV": 4.449350000000001,
+    "mean_per_bond_eV": 0.052968452380952394,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Pb-Pb": {
+        "mean_eV": 0.019154285714285717,
+        "sum_eV": 0.5363200000000001,
+        "n_bonds": 28
+      },
+      "Au-Pb": {
+        "mean_eV": 0.07247017857142858,
+        "sum_eV": 4.058330000000001,
+        "n_bonds": 56
+      },
+      "Au-Au": {
+        "mean_eV": 0.0512386904761905,
+        "sum_eV": 4.304050000000002,
+        "n_bonds": 84
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_PbAu2_mp-19871"
+}

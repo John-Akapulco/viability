@@ -1,0 +1,63 @@
+{
+  "compound_id": "metastable_ionic_LiBr_mp-23259",
+  "formula": "LiBr",
+  "composition": {
+    "Li": 1,
+    "Br": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.914780000000004,
+    "sum_per_atom_eV": -8.457390000000002,
+    "sum_per_formula_unit_eV": -16.914780000000004,
+    "mean_per_bond_eV": -0.3382956000000001,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.18482444444444443,
+        "sum_eV": -3.32684,
+        "n_bonds": 18
+      },
+      "Br-Li": {
+        "mean_eV": -0.8798928571428571,
+        "sum_eV": -12.3185,
+        "n_bonds": 14
+      },
+      "Br-Br": {
+        "mean_eV": -0.07052444444444445,
+        "sum_eV": -1.26944,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.2625199999999985,
+    "sum_per_atom_eV": 1.1312599999999993,
+    "sum_per_formula_unit_eV": 2.2625199999999985,
+    "mean_per_bond_eV": 0.04525039999999997,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.016705555555555553,
+        "sum_eV": 0.30069999999999997,
+        "n_bonds": 18
+      },
+      "Br-Li": {
+        "mean_eV": 0.12060000000000001,
+        "sum_eV": 1.6884000000000001,
+        "n_bonds": 14
+      },
+      "Br-Br": {
+        "mean_eV": 0.015190000000000002,
+        "sum_eV": 0.27342000000000005,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/metastable_ionic_LiBr_mp-23259"
+}

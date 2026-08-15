@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_ZrGa3_mp-30685__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_ZrGa3_mp-30685",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

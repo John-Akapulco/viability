@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Tc_mp-113",
+  "formula": "Tc",
+  "composition": {
+    "Tc": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -25.051410000000008,
+    "sum_per_atom_eV": -12.525705000000004,
+    "sum_per_formula_unit_eV": -12.525705000000004,
+    "mean_per_bond_eV": -0.2846751136363637,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Tc-Tc": {
+        "mean_eV": -0.2846751136363637,
+        "sum_eV": -25.051410000000008,
+        "n_bonds": 88
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.4236400000000025,
+    "sum_per_atom_eV": 3.7118200000000012,
+    "sum_per_formula_unit_eV": 3.7118200000000012,
+    "mean_per_bond_eV": 0.08435954545454548,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Tc-Tc": {
+        "mean_eV": 0.08435954545454548,
+        "sum_eV": 7.4236400000000025,
+        "n_bonds": 88
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Tc_mp-113"
+}

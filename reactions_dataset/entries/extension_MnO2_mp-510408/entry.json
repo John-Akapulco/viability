@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MnO2_mp-510408",
+  "formula": "MnO2",
+  "composition": {
+    "Mn": 2,
+    "O": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "P4_2/mnm",
+  "space_group_number": 136,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -41.91523999999996,
+    "sum_per_atom_eV": -6.985873333333327,
+    "sum_per_formula_unit_eV": -20.95761999999998,
+    "mean_per_bond_eV": -0.1277903658536584,
+    "n_bonds": 328,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": -0.023487500000000005,
+        "sum_eV": -1.1274000000000002,
+        "n_bonds": 48
+      },
+      "Mn-O": {
+        "mean_eV": -0.29430468750000005,
+        "sum_eV": -37.67100000000001,
+        "n_bonds": 128
+      },
+      "O-O": {
+        "mean_eV": -0.020505526315789478,
+        "sum_eV": -3.1168400000000007,
+        "n_bonds": 152
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.517649999999998,
+    "sum_per_atom_eV": 1.0862749999999997,
+    "sum_per_formula_unit_eV": 3.258824999999999,
+    "mean_per_bond_eV": 0.019870884146341458,
+    "n_bonds": 328,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": 0.0032918750000000014,
+        "sum_eV": 0.15801000000000007,
+        "n_bonds": 48
+      },
+      "Mn-O": {
+        "mean_eV": 0.043756171875000006,
+        "sum_eV": 5.600790000000001,
+        "n_bonds": 128
+      },
+      "O-O": {
+        "mean_eV": 0.004992434210526313,
+        "sum_eV": 0.7588499999999996,
+        "n_bonds": 152
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MnO2_mp-510408"
+}

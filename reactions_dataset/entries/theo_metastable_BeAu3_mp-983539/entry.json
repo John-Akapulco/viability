@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_BeAu3_mp-983539",
+  "formula": "BeAu3",
+  "composition": {
+    "Be": 1,
+    "Au": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -44.17865999999998,
+    "sum_per_atom_eV": -11.044664999999995,
+    "sum_per_formula_unit_eV": -44.17865999999998,
+    "mean_per_bond_eV": -0.3067962499999999,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.006672222222222222,
+        "sum_eV": -0.1201,
+        "n_bonds": 18
+      },
+      "Au-Be": {
+        "mean_eV": -0.4166472222222222,
+        "sum_eV": -14.9993,
+        "n_bonds": 36
+      },
+      "Au-Au": {
+        "mean_eV": -0.32288066666666654,
+        "sum_eV": -29.059259999999988,
+        "n_bonds": 90
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.264029999999997,
+    "sum_per_atom_eV": 1.5660074999999993,
+    "sum_per_formula_unit_eV": 6.264029999999997,
+    "mean_per_bond_eV": 0.04350020833333332,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.008743333333333332,
+        "sum_eV": 0.15738,
+        "n_bonds": 18
+      },
+      "Au-Be": {
+        "mean_eV": 0.06397527777777778,
+        "sum_eV": 2.30311,
+        "n_bonds": 36
+      },
+      "Au-Au": {
+        "mean_eV": 0.04226155555555554,
+        "sum_eV": 3.803539999999998,
+        "n_bonds": 90
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_BeAu3_mp-983539"
+}

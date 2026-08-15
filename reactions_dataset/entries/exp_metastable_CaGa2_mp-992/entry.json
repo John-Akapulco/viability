@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_CaGa2_mp-992",
+  "formula": "CaGa2",
+  "composition": {
+    "Ca": 1,
+    "Ga": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.435129999999997,
+    "sum_per_atom_eV": -5.478376666666666,
+    "sum_per_formula_unit_eV": -16.435129999999997,
+    "mean_per_bond_eV": -0.2739188333333333,
+    "n_bonds": 60,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.036447499999999994,
+        "sum_eV": -0.29157999999999995,
+        "n_bonds": 8
+      },
+      "Ca-Ga": {
+        "mean_eV": -0.12524708333333331,
+        "sum_eV": -3.0059299999999998,
+        "n_bonds": 24
+      },
+      "Ga-Ga": {
+        "mean_eV": -0.4692007142857143,
+        "sum_eV": -13.13762,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.8661400000000006,
+    "sum_per_atom_eV": 1.2887133333333336,
+    "sum_per_formula_unit_eV": 3.8661400000000006,
+    "mean_per_bond_eV": 0.06443566666666668,
+    "n_bonds": 60,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.004105,
+        "sum_eV": 0.03284,
+        "n_bonds": 8
+      },
+      "Ca-Ga": {
+        "mean_eV": 0.02127875,
+        "sum_eV": 0.51069,
+        "n_bonds": 24
+      },
+      "Ga-Ga": {
+        "mean_eV": 0.11866464285714287,
+        "sum_eV": 3.3226100000000005,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_CaGa2_mp-992"
+}

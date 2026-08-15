@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Mo_mp-129",
+  "formula": "Mo",
+  "composition": {
+    "Mo": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -17.42796,
+    "sum_per_atom_eV": -17.42796,
+    "sum_per_formula_unit_eV": -17.42796,
+    "mean_per_bond_eV": -0.3004820689655172,
+    "n_bonds": 58,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": -0.3004820689655172,
+        "sum_eV": -17.42796,
+        "n_bonds": 58
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.23126,
+    "sum_per_atom_eV": 5.23126,
+    "sum_per_formula_unit_eV": 5.23126,
+    "mean_per_bond_eV": 0.09019413793103448,
+    "n_bonds": 58,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": 0.09019413793103448,
+        "sum_eV": 5.23126,
+        "n_bonds": 58
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mo_mp-129"
+}

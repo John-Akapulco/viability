@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Al_mp-134",
+  "formula": "Al",
+  "composition": {
+    "Al": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -18.333559999999995,
+    "sum_per_atom_eV": -18.333559999999995,
+    "sum_per_formula_unit_eV": -18.333559999999995,
+    "mean_per_bond_eV": -0.3395103703703703,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.3395103703703703,
+        "sum_eV": -18.333559999999995,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.1837800000000014,
+    "sum_per_atom_eV": 3.1837800000000014,
+    "sum_per_formula_unit_eV": 3.1837800000000014,
+    "mean_per_bond_eV": 0.058958888888888915,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.058958888888888915,
+        "sum_eV": 3.1837800000000014,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Al_mp-134"
+}

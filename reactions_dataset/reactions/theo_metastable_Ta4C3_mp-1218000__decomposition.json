@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_Ta4C3_mp-1218000__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_Ta4C3_mp-1218000",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ta_mp-50",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Cgraphite_mp-48",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

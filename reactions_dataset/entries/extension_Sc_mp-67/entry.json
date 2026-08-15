@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Sc_mp-67",
+  "formula": "Sc",
+  "composition": {
+    "Sc": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -12.923709999999994,
+    "sum_per_atom_eV": -6.461854999999997,
+    "sum_per_formula_unit_eV": -6.461854999999997,
+    "mean_per_bond_eV": -0.2485328846153845,
+    "n_bonds": 52,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": -0.2485328846153845,
+        "sum_eV": -12.923709999999994,
+        "n_bonds": 52
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.514800000000001,
+    "sum_per_atom_eV": 2.2574000000000005,
+    "sum_per_formula_unit_eV": 2.2574000000000005,
+    "mean_per_bond_eV": 0.08682307692307695,
+    "n_bonds": 52,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": 0.08682307692307695,
+        "sum_eV": 4.514800000000001,
+        "n_bonds": 52
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Sc_mp-67"
+}

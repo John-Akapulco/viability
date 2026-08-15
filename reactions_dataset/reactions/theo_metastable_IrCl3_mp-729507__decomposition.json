@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_IrCl3_mp-729507__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_IrCl3_mp-729507",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ir_mp-101",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Cl_mp-22848",
+      "coefficient": 1.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

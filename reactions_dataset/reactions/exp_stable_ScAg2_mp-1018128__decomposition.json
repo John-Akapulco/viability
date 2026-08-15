@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_ScAg2_mp-1018128__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_ScAg2_mp-1018128",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Sc_mp-67",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 2.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_BaSn5_mp-571353",
+  "formula": "BaSn5",
+  "composition": {
+    "Ba": 1,
+    "Sn": 5
+  },
+  "Z": 1,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -29.39432999999999,
+    "sum_per_atom_eV": -4.899054999999998,
+    "sum_per_formula_unit_eV": -29.39432999999999,
+    "mean_per_bond_eV": -0.34993249999999987,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.08673000000000002,
+        "sum_eV": -0.5203800000000001,
+        "n_bonds": 6
+      },
+      "Ba-Sn": {
+        "mean_eV": -0.30625928571428573,
+        "sum_eV": -4.28763,
+        "n_bonds": 14
+      },
+      "Sn-Sn": {
+        "mean_eV": -0.38416124999999984,
+        "sum_eV": -24.58631999999999,
+        "n_bonds": 64
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.521639999999998,
+    "sum_per_atom_eV": 1.2536066666666663,
+    "sum_per_formula_unit_eV": 7.521639999999998,
+    "mean_per_bond_eV": 0.08954333333333331,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.0097,
+        "sum_eV": 0.0582,
+        "n_bonds": 6
+      },
+      "Ba-Sn": {
+        "mean_eV": 0.04495285714285714,
+        "sum_eV": 0.62934,
+        "n_bonds": 14
+      },
+      "Sn-Sn": {
+        "mean_eV": 0.10678281249999999,
+        "sum_eV": 6.834099999999999,
+        "n_bonds": 64
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_BaSn5_mp-571353"
+}

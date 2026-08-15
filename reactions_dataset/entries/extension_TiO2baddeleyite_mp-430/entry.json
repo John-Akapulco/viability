@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_TiO2baddeleyite_mp-430",
+  "formula": "TiO2",
+  "composition": {
+    "Ti": 4,
+    "O": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "P2_1/c",
+  "space_group_number": 14,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -94.71293999999997,
+    "sum_per_atom_eV": -7.892744999999998,
+    "sum_per_formula_unit_eV": -23.678234999999994,
+    "mean_per_bond_eV": -0.1616261774744027,
+    "n_bonds": 586,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.027839729729729742,
+        "sum_eV": -2.060140000000001,
+        "n_bonds": 74
+      },
+      "O-Ti": {
+        "mean_eV": -0.3817941810344828,
+        "sum_eV": -88.57625000000002,
+        "n_bonds": 232
+      },
+      "O-O": {
+        "mean_eV": -0.01455910714285713,
+        "sum_eV": -4.076549999999997,
+        "n_bonds": 280
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 16.401690000000023,
+    "sum_per_atom_eV": 1.366807500000002,
+    "sum_per_formula_unit_eV": 4.100422500000006,
+    "mean_per_bond_eV": 0.027989232081911303,
+    "n_bonds": 586,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.006426486486486488,
+        "sum_eV": 0.4755600000000001,
+        "n_bonds": 74
+      },
+      "O-Ti": {
+        "mean_eV": 0.06429693965517244,
+        "sum_eV": 14.916890000000008,
+        "n_bonds": 232
+      },
+      "O-O": {
+        "mean_eV": 0.003604428571428568,
+        "sum_eV": 1.009239999999999,
+        "n_bonds": 280
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_TiO2baddeleyite_mp-430"
+}

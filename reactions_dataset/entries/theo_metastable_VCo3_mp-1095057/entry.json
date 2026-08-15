@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_VCo3_mp-1095057",
+  "formula": "VCo3",
+  "composition": {
+    "V": 2,
+    "Co": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -103.88034000000007,
+    "sum_per_atom_eV": -12.98504250000001,
+    "sum_per_formula_unit_eV": -51.94017000000004,
+    "mean_per_bond_eV": -0.2951146022727275,
+    "n_bonds": 352,
+    "by_bond_type": {
+      "V-V": {
+        "mean_eV": -0.007376363636363637,
+        "sum_eV": -0.16228,
+        "n_bonds": 22
+      },
+      "Co-V": {
+        "mean_eV": -0.2656126515151517,
+        "sum_eV": -35.06087000000002,
+        "n_bonds": 132
+      },
+      "Co-Co": {
+        "mean_eV": -0.34675348484848484,
+        "sum_eV": -68.65719,
+        "n_bonds": 198
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 21.855109999999996,
+    "sum_per_atom_eV": 2.7318887499999995,
+    "sum_per_formula_unit_eV": 10.927554999999998,
+    "mean_per_bond_eV": 0.06208838068181817,
+    "n_bonds": 352,
+    "by_bond_type": {
+      "V-V": {
+        "mean_eV": 0.017746818181818183,
+        "sum_eV": 0.39043,
+        "n_bonds": 22
+      },
+      "Co-V": {
+        "mean_eV": 0.07145757575757575,
+        "sum_eV": 9.4324,
+        "n_bonds": 132
+      },
+      "Co-Co": {
+        "mean_eV": 0.06076909090909088,
+        "sum_eV": 12.032279999999993,
+        "n_bonds": 198
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_VCo3_mp-1095057"
+}

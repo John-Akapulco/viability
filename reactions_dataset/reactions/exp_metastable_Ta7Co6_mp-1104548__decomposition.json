@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Ta7Co6_mp-1104548__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Ta7Co6_mp-1104548",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ta_mp-50",
+      "coefficient": 7.0
+    },
+    {
+      "compound_id": "extension_Co_mp-102",
+      "coefficient": 6.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

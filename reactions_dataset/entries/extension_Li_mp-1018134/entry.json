@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Li_mp-1018134",
+  "formula": "Li",
+  "composition": {
+    "Li": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -19.905619999999992,
+    "sum_per_atom_eV": -6.635206666666664,
+    "sum_per_formula_unit_eV": -6.635206666666664,
+    "mean_per_bond_eV": -0.22365865168539317,
+    "n_bonds": 89,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.22365865168539317,
+        "sum_eV": -19.905619999999992,
+        "n_bonds": 89
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.0989099999999983,
+    "sum_per_atom_eV": 1.0329699999999995,
+    "sum_per_formula_unit_eV": 1.0329699999999995,
+    "mean_per_bond_eV": 0.034819213483146046,
+    "n_bonds": 89,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.034819213483146046,
+        "sum_eV": 3.0989099999999983,
+        "n_bonds": 89
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Li_mp-1018134"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_ZnPb3_mp-1187949",
+  "formula": "ZnPb3",
+  "composition": {
+    "Zn": 1,
+    "Pb": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.815240000000006,
+    "sum_per_atom_eV": -6.203810000000002,
+    "sum_per_formula_unit_eV": -24.815240000000006,
+    "mean_per_bond_eV": -0.32651631578947377,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.023713333333333333,
+        "sum_eV": -0.28456,
+        "n_bonds": 12
+      },
+      "Pb-Zn": {
+        "mean_eV": -0.9232571428571428,
+        "sum_eV": -12.9256,
+        "n_bonds": 14
+      },
+      "Pb-Pb": {
+        "mean_eV": -0.2321016,
+        "sum_eV": -11.60508,
+        "n_bonds": 50
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.3759500000000005,
+    "sum_per_atom_eV": 1.3439875000000001,
+    "sum_per_formula_unit_eV": 5.3759500000000005,
+    "mean_per_bond_eV": 0.07073618421052633,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.00501,
+        "sum_eV": 0.06012,
+        "n_bonds": 12
+      },
+      "Pb-Zn": {
+        "mean_eV": 0.17118571428571425,
+        "sum_eV": 2.3965999999999994,
+        "n_bonds": 14
+      },
+      "Pb-Pb": {
+        "mean_eV": 0.058384599999999995,
+        "sum_eV": 2.9192299999999998,
+        "n_bonds": 50
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_ZnPb3_mp-1187949"
+}

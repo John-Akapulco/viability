@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_W_mp-91",
+  "formula": "W",
+  "composition": {
+    "W": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -37.57813999999999,
+    "sum_per_atom_eV": -37.57813999999999,
+    "sum_per_formula_unit_eV": -37.57813999999999,
+    "mean_per_bond_eV": -0.6478989655172412,
+    "n_bonds": 58,
+    "by_bond_type": {
+      "W-W": {
+        "mean_eV": -0.6478989655172412,
+        "sum_eV": -37.57813999999999,
+        "n_bonds": 58
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.747459999999999,
+    "sum_per_atom_eV": 6.747459999999999,
+    "sum_per_formula_unit_eV": 6.747459999999999,
+    "mean_per_bond_eV": 0.1163355172413793,
+    "n_bonds": 58,
+    "by_bond_type": {
+      "W-W": {
+        "mean_eV": 0.1163355172413793,
+        "sum_eV": 6.747459999999999,
+        "n_bonds": 58
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_W_mp-91"
+}

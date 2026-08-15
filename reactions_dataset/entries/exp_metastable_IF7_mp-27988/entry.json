@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_IF7_mp-27988",
+  "formula": "IF7",
+  "composition": {
+    "I": 2,
+    "F": 14
+  },
+  "Z": 2,
+  "space_group_symbol": "Aea2",
+  "space_group_number": 41,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -80.3580800000002,
+    "sum_per_atom_eV": -5.0223800000000125,
+    "sum_per_formula_unit_eV": -40.1790400000001,
+    "mean_per_bond_eV": -0.15453476923076961,
+    "n_bonds": 520,
+    "by_bond_type": {
+      "I-I": {
+        "mean_eV": 0.00007666666666666666,
+        "sum_eV": 0.0009199999999999999,
+        "n_bonds": 12
+      },
+      "F-I": {
+        "mean_eV": -0.7812804000000005,
+        "sum_eV": -78.12804000000006,
+        "n_bonds": 100
+      },
+      "F-F": {
+        "mean_eV": -0.00546803921568628,
+        "sum_eV": -2.2309600000000023,
+        "n_bonds": 408
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.479359999999948,
+    "sum_per_atom_eV": 0.5924599999999968,
+    "sum_per_formula_unit_eV": 4.739679999999974,
+    "mean_per_bond_eV": 0.018229538461538363,
+    "n_bonds": 520,
+    "by_bond_type": {
+      "I-I": {
+        "mean_eV": 0.000023333333333333336,
+        "sum_eV": 0.00028000000000000003,
+        "n_bonds": 12
+      },
+      "F-I": {
+        "mean_eV": 0.07464340000000001,
+        "sum_eV": 7.464340000000001,
+        "n_bonds": 100
+      },
+      "F-F": {
+        "mean_eV": 0.004938088235294125,
+        "sum_eV": 2.014740000000003,
+        "n_bonds": 408
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_IF7_mp-27988"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_YAg3_mp-1187811__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_YAg3_mp-1187811",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Y_mp-112",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

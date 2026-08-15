@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Rh_mp-74",
+  "formula": "Rh",
+  "composition": {
+    "Rh": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -10.399040000000001,
+    "sum_per_atom_eV": -10.399040000000001,
+    "sum_per_formula_unit_eV": -10.399040000000001,
+    "mean_per_bond_eV": -0.19257481481481484,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Rh-Rh": {
+        "mean_eV": -0.19257481481481484,
+        "sum_eV": -10.399040000000001,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.0991599999999995,
+    "sum_per_atom_eV": 3.0991599999999995,
+    "sum_per_formula_unit_eV": 3.0991599999999995,
+    "mean_per_bond_eV": 0.05739185185185184,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Rh-Rh": {
+        "mean_eV": 0.05739185185185184,
+        "sum_eV": 3.0991599999999995,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Rh_mp-74"
+}

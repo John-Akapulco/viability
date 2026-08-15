@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_Tl4Sn_mp-1216560__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_Tl4Sn_mp-1216560",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Tl_mp-82",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Sn_mp-623511",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

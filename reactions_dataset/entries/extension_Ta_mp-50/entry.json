@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ta_mp-50",
+  "formula": "Ta",
+  "composition": {
+    "Ta": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -19.512719999999995,
+    "sum_per_atom_eV": -19.512719999999995,
+    "sum_per_formula_unit_eV": -19.512719999999995,
+    "mean_per_bond_eV": -0.3364262068965516,
+    "n_bonds": 58,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": -0.3364262068965516,
+        "sum_eV": -19.512719999999995,
+        "n_bonds": 58
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.017480000000003,
+    "sum_per_atom_eV": 5.017480000000003,
+    "sum_per_formula_unit_eV": 5.017480000000003,
+    "mean_per_bond_eV": 0.08650827586206901,
+    "n_bonds": 58,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": 0.08650827586206901,
+        "sum_eV": 5.017480000000003,
+        "n_bonds": 58
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ta_mp-50"
+}

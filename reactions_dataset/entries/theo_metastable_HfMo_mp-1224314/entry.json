@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_HfMo_mp-1224314",
+  "formula": "HfMo",
+  "composition": {
+    "Hf": 1,
+    "Mo": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Cmmm",
+  "space_group_number": 65,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.30091,
+    "sum_per_atom_eV": -12.150455,
+    "sum_per_formula_unit_eV": -24.30091,
+    "mean_per_bond_eV": -0.27614670454545454,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.2564220000000001,
+        "sum_eV": -7.692660000000003,
+        "n_bonds": 30
+      },
+      "Hf-Mo": {
+        "mean_eV": -0.3876739285714286,
+        "sum_eV": -10.854870000000002,
+        "n_bonds": 28
+      },
+      "Mo-Mo": {
+        "mean_eV": -0.19177933333333338,
+        "sum_eV": -5.753380000000002,
+        "n_bonds": 30
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.763840000000002,
+    "sum_per_atom_eV": 3.381920000000001,
+    "sum_per_formula_unit_eV": 6.763840000000002,
+    "mean_per_bond_eV": 0.0768618181818182,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.05455533333333333,
+        "sum_eV": 1.63666,
+        "n_bonds": 30
+      },
+      "Hf-Mo": {
+        "mean_eV": 0.10355928571428571,
+        "sum_eV": 2.89966,
+        "n_bonds": 28
+      },
+      "Mo-Mo": {
+        "mean_eV": 0.07425066666666667,
+        "sum_eV": 2.22752,
+        "n_bonds": 30
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_HfMo_mp-1224314"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Nb2O5_mp-1595__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Nb2O5_mp-1595",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Nb_mp-75",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_O2_mp-1524462",
+      "coefficient": 2.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_B_mp-160",
+  "formula": "B",
+  "composition": {
+    "B": 12
+  },
+  "Z": 12,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -190.43455999999998,
+    "sum_per_atom_eV": -15.869546666666665,
+    "sum_per_formula_unit_eV": -15.869546666666665,
+    "mean_per_bond_eV": -0.21889029885057468,
+    "n_bonds": 870,
+    "by_bond_type": {
+      "B-B": {
+        "mean_eV": -0.21889029885057468,
+        "sum_eV": -190.43455999999998,
+        "n_bonds": 870
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 21.970909999999957,
+    "sum_per_atom_eV": 1.830909166666663,
+    "sum_per_formula_unit_eV": 1.830909166666663,
+    "mean_per_bond_eV": 0.025253919540229836,
+    "n_bonds": 870,
+    "by_bond_type": {
+      "B-B": {
+        "mean_eV": 0.025253919540229836,
+        "sum_eV": 21.970909999999957,
+        "n_bonds": 870
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_B_mp-160"
+}

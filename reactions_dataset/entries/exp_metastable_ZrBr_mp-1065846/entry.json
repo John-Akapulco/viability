@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_ZrBr_mp-1065846",
+  "formula": "ZrBr",
+  "composition": {
+    "Zr": 2,
+    "Br": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -28.445439999999998,
+    "sum_per_atom_eV": -7.1113599999999995,
+    "sum_per_formula_unit_eV": -14.222719999999999,
+    "mean_per_bond_eV": -0.355568,
+    "n_bonds": 80,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.6224850000000001,
+        "sum_eV": -14.939640000000002,
+        "n_bonds": 24
+      },
+      "Br-Zr": {
+        "mean_eV": -0.35126868421052637,
+        "sum_eV": -13.348210000000002,
+        "n_bonds": 38
+      },
+      "Br-Br": {
+        "mean_eV": -0.008755,
+        "sum_eV": -0.15759,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.604680000000001,
+    "sum_per_atom_eV": 1.9011700000000002,
+    "sum_per_formula_unit_eV": 3.8023400000000005,
+    "mean_per_bond_eV": 0.09505850000000002,
+    "n_bonds": 80,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.205775,
+        "sum_eV": 4.9386,
+        "n_bonds": 24
+      },
+      "Br-Zr": {
+        "mean_eV": 0.06924526315789471,
+        "sum_eV": 2.631319999999999,
+        "n_bonds": 38
+      },
+      "Br-Br": {
+        "mean_eV": 0.001931111111111111,
+        "sum_eV": 0.03476,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_ZrBr_mp-1065846"
+}

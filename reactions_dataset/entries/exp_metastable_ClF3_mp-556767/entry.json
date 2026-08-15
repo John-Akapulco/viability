@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_ClF3_mp-556767",
+  "formula": "ClF3",
+  "composition": {
+    "Cl": 4,
+    "F": 12
+  },
+  "Z": 4,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -65.33380000000021,
+    "sum_per_atom_eV": -4.083362500000013,
+    "sum_per_formula_unit_eV": -16.333450000000052,
+    "mean_per_bond_eV": -0.1306676000000004,
+    "n_bonds": 500,
+    "by_bond_type": {
+      "Cl-Cl": {
+        "mean_eV": -0.0019150000000000005,
+        "sum_eV": -0.061280000000000015,
+        "n_bonds": 32
+      },
+      "Cl-F": {
+        "mean_eV": -0.3517237777777781,
+        "sum_eV": -63.310280000000056,
+        "n_bonds": 180
+      },
+      "F-F": {
+        "mean_eV": -0.006813333333333328,
+        "sum_eV": -1.9622399999999987,
+        "n_bonds": 288
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.223119999999959,
+    "sum_per_atom_eV": 0.5764449999999974,
+    "sum_per_formula_unit_eV": 2.3057799999999897,
+    "mean_per_bond_eV": 0.01844623999999992,
+    "n_bonds": 500,
+    "by_bond_type": {
+      "Cl-Cl": {
+        "mean_eV": 0.0009337499999999999,
+        "sum_eV": 0.029879999999999997,
+        "n_bonds": 32
+      },
+      "Cl-F": {
+        "mean_eV": 0.04357511111111109,
+        "sum_eV": 7.843519999999996,
+        "n_bonds": 180
+      },
+      "F-F": {
+        "mean_eV": 0.004686527777777775,
+        "sum_eV": 1.3497199999999991,
+        "n_bonds": 288
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_ClF3_mp-556767"
+}

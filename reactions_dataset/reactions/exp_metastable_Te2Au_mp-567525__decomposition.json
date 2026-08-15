@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Te2Au_mp-567525__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Te2Au_mp-567525",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Te_mp-19",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_Au_mp-81",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

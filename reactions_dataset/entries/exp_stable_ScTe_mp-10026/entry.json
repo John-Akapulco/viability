@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_ScTe_mp-10026",
+  "formula": "ScTe",
+  "composition": {
+    "Sc": 2,
+    "Te": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -23.326760000000004,
+    "sum_per_atom_eV": -5.831690000000001,
+    "sum_per_formula_unit_eV": -11.663380000000002,
+    "mean_per_bond_eV": -0.27124139534883723,
+    "n_bonds": 86,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": -0.12411999999999998,
+        "sum_eV": -3.2271199999999993,
+        "n_bonds": 26
+      },
+      "Sc-Te": {
+        "mean_eV": -0.5260255555555555,
+        "sum_eV": -18.93692,
+        "n_bonds": 36
+      },
+      "Te-Te": {
+        "mean_eV": -0.04844666666666666,
+        "sum_eV": -1.1627199999999998,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.087279999999999,
+    "sum_per_atom_eV": 1.5218199999999997,
+    "sum_per_formula_unit_eV": 3.0436399999999995,
+    "mean_per_bond_eV": 0.07078232558139534,
+    "n_bonds": 86,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": 0.06595269230769231,
+        "sum_eV": 1.71477,
+        "n_bonds": 26
+      },
+      "Sc-Te": {
+        "mean_eV": 0.11439777777777775,
+        "sum_eV": 4.118319999999999,
+        "n_bonds": 36
+      },
+      "Te-Te": {
+        "mean_eV": 0.010591250000000003,
+        "sum_eV": 0.2541900000000001,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_ScTe_mp-10026"
+}

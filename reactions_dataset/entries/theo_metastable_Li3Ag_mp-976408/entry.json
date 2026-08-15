@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Li3Ag_mp-976408",
+  "formula": "Li3Ag",
+  "composition": {
+    "Li": 3,
+    "Ag": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -34.50906999999997,
+    "sum_per_atom_eV": -8.627267499999993,
+    "sum_per_formula_unit_eV": -34.50906999999997,
+    "mean_per_bond_eV": -0.221211987179487,
+    "n_bonds": 156,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.16501563829787233,
+        "sum_eV": -15.51147,
+        "n_bonds": 94
+      },
+      "Ag-Li": {
+        "mean_eV": -0.3406013043478261,
+        "sum_eV": -15.66766,
+        "n_bonds": 46
+      },
+      "Ag-Ag": {
+        "mean_eV": -0.20812125,
+        "sum_eV": -3.32994,
+        "n_bonds": 16
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.7633099999999997,
+    "sum_per_atom_eV": 0.9408274999999999,
+    "sum_per_formula_unit_eV": 3.7633099999999997,
+    "mean_per_bond_eV": 0.024123782051282048,
+    "n_bonds": 156,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.020533936170212777,
+        "sum_eV": 1.930190000000001,
+        "n_bonds": 94
+      },
+      "Ag-Li": {
+        "mean_eV": 0.035556086956521744,
+        "sum_eV": 1.6355800000000003,
+        "n_bonds": 46
+      },
+      "Ag-Ag": {
+        "mean_eV": 0.01234625,
+        "sum_eV": 0.19754,
+        "n_bonds": 16
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Li3Ag_mp-976408"
+}

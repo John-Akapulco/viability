@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_ZrGa3_mp-30685",
+  "formula": "ZrGa3",
+  "composition": {
+    "Zr": 1,
+    "Ga": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -46.22906000000001,
+    "sum_per_atom_eV": -11.557265000000003,
+    "sum_per_formula_unit_eV": -46.22906000000001,
+    "mean_per_bond_eV": -0.3302075714285715,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.07773875,
+        "sum_eV": -1.24382,
+        "n_bonds": 16
+      },
+      "Ga-Zr": {
+        "mean_eV": -0.5976710526315788,
+        "sum_eV": -22.711499999999994,
+        "n_bonds": 38
+      },
+      "Ga-Ga": {
+        "mean_eV": -0.258996976744186,
+        "sum_eV": -22.273739999999997,
+        "n_bonds": 86
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.170959999999997,
+    "sum_per_atom_eV": 2.0427399999999993,
+    "sum_per_formula_unit_eV": 8.170959999999997,
+    "mean_per_bond_eV": 0.05836399999999998,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.04596875,
+        "sum_eV": 0.7355,
+        "n_bonds": 16
+      },
+      "Ga-Zr": {
+        "mean_eV": 0.10053842105263155,
+        "sum_eV": 3.820459999999999,
+        "n_bonds": 38
+      },
+      "Ga-Ga": {
+        "mean_eV": 0.04203488372093023,
+        "sum_eV": 3.6149999999999993,
+        "n_bonds": 86
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_ZrGa3_mp-30685"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Be12Pd_mp-12666__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Be12Pd_mp-12666",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Be_mp-87",
+      "coefficient": 12.0
+    },
+    {
+      "compound_id": "extension_Pd_mp-2",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

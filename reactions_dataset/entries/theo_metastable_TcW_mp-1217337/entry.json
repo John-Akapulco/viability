@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_TcW_mp-1217337",
+  "formula": "TcW",
+  "composition": {
+    "Tc": 1,
+    "W": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Cmmm",
+  "space_group_number": 65,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -42.68046000000001,
+    "sum_per_atom_eV": -21.340230000000005,
+    "sum_per_formula_unit_eV": -42.68046000000001,
+    "mean_per_bond_eV": -0.4850052272727274,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Tc-Tc": {
+        "mean_eV": -0.15745400000000007,
+        "sum_eV": -4.723620000000002,
+        "n_bonds": 30
+      },
+      "Tc-W": {
+        "mean_eV": -0.4866814285714285,
+        "sum_eV": -13.627079999999998,
+        "n_bonds": 28
+      },
+      "W-W": {
+        "mean_eV": -0.8109919999999999,
+        "sum_eV": -24.329759999999997,
+        "n_bonds": 30
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.881599999999999,
+    "sum_per_atom_eV": 4.440799999999999,
+    "sum_per_formula_unit_eV": 8.881599999999999,
+    "mean_per_bond_eV": 0.10092727272727271,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Tc-Tc": {
+        "mean_eV": 0.054354,
+        "sum_eV": 1.63062,
+        "n_bonds": 30
+      },
+      "Tc-W": {
+        "mean_eV": 0.10760571428571429,
+        "sum_eV": 3.01296,
+        "n_bonds": 28
+      },
+      "W-W": {
+        "mean_eV": 0.14126733333333336,
+        "sum_eV": 4.238020000000001,
+        "n_bonds": 30
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_TcW_mp-1217337"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_MoSe2_mp-1634",
+  "formula": "MoSe2",
+  "composition": {
+    "Mo": 2,
+    "Se": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -47.29102000000001,
+    "sum_per_atom_eV": -7.881836666666668,
+    "sum_per_formula_unit_eV": -23.645510000000005,
+    "mean_per_bond_eV": -0.3152734666666667,
+    "n_bonds": 150,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": -0.2420975,
+        "sum_eV": -5.81034,
+        "n_bonds": 24
+      },
+      "Mo-Se": {
+        "mean_eV": -0.6795567307692308,
+        "sum_eV": -35.33695,
+        "n_bonds": 52
+      },
+      "Se-Se": {
+        "mean_eV": -0.08302337837837838,
+        "sum_eV": -6.14373,
+        "n_bonds": 74
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.853830000000007,
+    "sum_per_atom_eV": 2.1423050000000012,
+    "sum_per_formula_unit_eV": 6.426915000000004,
+    "mean_per_bond_eV": 0.08569220000000005,
+    "n_bonds": 150,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": 0.12422666666666665,
+        "sum_eV": 2.9814399999999996,
+        "n_bonds": 24
+      },
+      "Mo-Se": {
+        "mean_eV": 0.1589340384615385,
+        "sum_eV": 8.264570000000003,
+        "n_bonds": 52
+      },
+      "Se-Se": {
+        "mean_eV": 0.021727297297297277,
+        "sum_eV": 1.6078199999999985,
+        "n_bonds": 74
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_MoSe2_mp-1634"
+}

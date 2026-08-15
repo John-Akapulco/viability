@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_MnN_mp-1009130__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_MnN_mp-1009130",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mn_mp-35",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 0.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

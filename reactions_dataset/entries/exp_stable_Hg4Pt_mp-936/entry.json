@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_Hg4Pt_mp-936",
+  "formula": "Hg4Pt",
+  "composition": {
+    "Hg": 4,
+    "Pt": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -47.38755,
+    "sum_per_atom_eV": -9.477509999999999,
+    "sum_per_formula_unit_eV": -47.38755,
+    "mean_per_bond_eV": -0.4387736111111111,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": -0.25323676470588236,
+        "sum_eV": -17.2201,
+        "n_bonds": 68
+      },
+      "Hg-Pt": {
+        "mean_eV": -0.9172046875000001,
+        "sum_eV": -29.350550000000002,
+        "n_bonds": 32
+      },
+      "Pt-Pt": {
+        "mean_eV": -0.1021125,
+        "sum_eV": -0.8169,
+        "n_bonds": 8
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.688770000000001,
+    "sum_per_atom_eV": 1.537754,
+    "sum_per_formula_unit_eV": 7.688770000000001,
+    "mean_per_bond_eV": 0.07119231481481482,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": 0.041371470588235294,
+        "sum_eV": 2.81326,
+        "n_bonds": 68
+      },
+      "Hg-Pt": {
+        "mean_eV": 0.14627343750000002,
+        "sum_eV": 4.680750000000001,
+        "n_bonds": 32
+      },
+      "Pt-Pt": {
+        "mean_eV": 0.024345,
+        "sum_eV": 0.19476,
+        "n_bonds": 8
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_Hg4Pt_mp-936"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_FeTe2_mp-1102002",
+  "formula": "FeTe2",
+  "composition": {
+    "Fe": 4,
+    "Te": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "Pa-3",
+  "space_group_number": 205,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -63.91213,
+    "sum_per_atom_eV": -5.326010833333333,
+    "sum_per_formula_unit_eV": -15.9780325,
+    "mean_per_bond_eV": -0.22191711805555556,
+    "n_bonds": 288,
+    "by_bond_type": {
+      "Fe-Fe": {
+        "mean_eV": -0.050348333333333335,
+        "sum_eV": -1.20836,
+        "n_bonds": 24
+      },
+      "Fe-Te": {
+        "mean_eV": -0.3432606249999999,
+        "sum_eV": -43.937359999999984,
+        "n_bonds": 128
+      },
+      "Te-Te": {
+        "mean_eV": -0.13798830882352933,
+        "sum_eV": -18.76640999999999,
+        "n_bonds": 136
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 18.050179999999997,
+    "sum_per_atom_eV": 1.5041816666666665,
+    "sum_per_formula_unit_eV": 4.512544999999999,
+    "mean_per_bond_eV": 0.0626742361111111,
+    "n_bonds": 288,
+    "by_bond_type": {
+      "Fe-Fe": {
+        "mean_eV": 0.06921124999999999,
+        "sum_eV": 1.6610699999999996,
+        "n_bonds": 24
+      },
+      "Fe-Te": {
+        "mean_eV": 0.092655859375,
+        "sum_eV": 11.85995,
+        "n_bonds": 128
+      },
+      "Te-Te": {
+        "mean_eV": 0.03330264705882351,
+        "sum_eV": 4.529159999999997,
+        "n_bonds": 136
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_FeTe2_mp-1102002"
+}

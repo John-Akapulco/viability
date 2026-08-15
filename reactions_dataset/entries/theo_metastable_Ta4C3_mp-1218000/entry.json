@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Ta4C3_mp-1218000",
+  "formula": "Ta4C3",
+  "composition": {
+    "Ta": 4,
+    "C": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "R3m",
+  "space_group_number": 160,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -94.05323999999999,
+    "sum_per_atom_eV": -13.436177142857142,
+    "sum_per_formula_unit_eV": -94.05323999999999,
+    "mean_per_bond_eV": -0.6147270588235293,
+    "n_bonds": 153,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": -0.4656210169491524,
+        "sum_eV": -27.471639999999994,
+        "n_bonds": 59
+      },
+      "C-Ta": {
+        "mean_eV": -1.030665714285714,
+        "sum_eV": -64.93193999999998,
+        "n_bonds": 63
+      },
+      "C-C": {
+        "mean_eV": -0.05321483870967741,
+        "sum_eV": -1.6496599999999997,
+        "n_bonds": 31
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 16.566650000000003,
+    "sum_per_atom_eV": 2.366664285714286,
+    "sum_per_formula_unit_eV": 16.566650000000003,
+    "mean_per_bond_eV": 0.10827875816993465,
+    "n_bonds": 153,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": 0.1102962711864407,
+        "sum_eV": 6.507480000000001,
+        "n_bonds": 59
+      },
+      "C-Ta": {
+        "mean_eV": 0.1558390476190477,
+        "sum_eV": 9.817860000000005,
+        "n_bonds": 63
+      },
+      "C-C": {
+        "mean_eV": 0.0077841935483870936,
+        "sum_eV": 0.2413099999999999,
+        "n_bonds": 31
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Ta4C3_mp-1218000"
+}

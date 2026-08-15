@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_MgCl2_mp-570259",
+  "formula": "MgCl2",
+  "composition": {
+    "Mg": 1,
+    "Cl": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -6.3558699999999995,
+    "sum_per_atom_eV": -2.1186233333333333,
+    "sum_per_formula_unit_eV": -6.3558699999999995,
+    "mean_per_bond_eV": -0.0963010606060606,
+    "n_bonds": 66,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.0203475,
+        "sum_eV": -0.16278,
+        "n_bonds": 8
+      },
+      "Cl-Mg": {
+        "mean_eV": -0.18807266666666664,
+        "sum_eV": -5.642179999999999,
+        "n_bonds": 30
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.01967535714285714,
+        "sum_eV": -0.5509099999999999,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.9877900000000005,
+    "sum_per_atom_eV": 0.3292633333333335,
+    "sum_per_formula_unit_eV": 0.9877900000000005,
+    "mean_per_bond_eV": 0.01496651515151516,
+    "n_bonds": 66,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0012625000000000002,
+        "sum_eV": 0.010100000000000001,
+        "n_bonds": 8
+      },
+      "Cl-Mg": {
+        "mean_eV": 0.026441000000000003,
+        "sum_eV": 0.7932300000000001,
+        "n_bonds": 30
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.006587857142857143,
+        "sum_eV": 0.18445999999999999,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_MgCl2_mp-570259"
+}

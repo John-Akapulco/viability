@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Co_mp-102",
+  "formula": "Co",
+  "composition": {
+    "Co": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.582079999999994,
+    "sum_per_atom_eV": -24.582079999999994,
+    "sum_per_formula_unit_eV": -24.582079999999994,
+    "mean_per_bond_eV": -0.3151548717948717,
+    "n_bonds": 78,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": -0.3151548717948717,
+        "sum_eV": -24.582079999999994,
+        "n_bonds": 78
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.80966,
+    "sum_per_atom_eV": 3.80966,
+    "sum_per_formula_unit_eV": 3.80966,
+    "mean_per_bond_eV": 0.04884179487179487,
+    "n_bonds": 78,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": 0.04884179487179487,
+        "sum_eV": 3.80966,
+        "n_bonds": 78
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Co_mp-102"
+}

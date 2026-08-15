@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_InBr_mp-22870__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_InBr_mp-22870",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_In_mp-1055994",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Br_mp-23154",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

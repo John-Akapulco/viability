@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_V_mp-146",
+  "formula": "V",
+  "composition": {
+    "V": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -13.545359999999997,
+    "sum_per_atom_eV": -13.545359999999997,
+    "sum_per_formula_unit_eV": -13.545359999999997,
+    "mean_per_bond_eV": -0.21164624999999995,
+    "n_bonds": 64,
+    "by_bond_type": {
+      "V-V": {
+        "mean_eV": -0.21164624999999995,
+        "sum_eV": -13.545359999999997,
+        "n_bonds": 64
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.096539999999999,
+    "sum_per_atom_eV": 5.096539999999999,
+    "sum_per_formula_unit_eV": 5.096539999999999,
+    "mean_per_bond_eV": 0.07963343749999999,
+    "n_bonds": 64,
+    "by_bond_type": {
+      "V-V": {
+        "mean_eV": 0.07963343749999999,
+        "sum_eV": 5.096539999999999,
+        "n_bonds": 64
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_V_mp-146"
+}

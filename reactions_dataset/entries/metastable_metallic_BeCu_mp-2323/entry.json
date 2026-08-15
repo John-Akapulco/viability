@@ -1,0 +1,63 @@
+{
+  "compound_id": "metastable_metallic_BeCu_mp-2323",
+  "formula": "BeCu",
+  "composition": {
+    "Be": 1,
+    "Cu": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -27.255689999999998,
+    "sum_per_atom_eV": -13.627844999999999,
+    "sum_per_formula_unit_eV": -27.255689999999998,
+    "mean_per_bond_eV": -0.16223625,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.09956749999999999,
+        "sum_eV": -5.575779999999999,
+        "n_bonds": 56
+      },
+      "Be-Cu": {
+        "mean_eV": -0.26400517857142863,
+        "sum_eV": -14.784290000000002,
+        "n_bonds": 56
+      },
+      "Cu-Cu": {
+        "mean_eV": -0.12313607142857141,
+        "sum_eV": -6.895619999999999,
+        "n_bonds": 56
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.7756000000000047,
+    "sum_per_atom_eV": 1.8878000000000024,
+    "sum_per_formula_unit_eV": 3.7756000000000047,
+    "mean_per_bond_eV": 0.022473809523809552,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.02016,
+        "sum_eV": 1.12896,
+        "n_bonds": 56
+      },
+      "Be-Cu": {
+        "mean_eV": 0.030066785714285706,
+        "sum_eV": 1.6837399999999996,
+        "n_bonds": 56
+      },
+      "Cu-Cu": {
+        "mean_eV": 0.01719464285714286,
+        "sum_eV": 0.9629000000000002,
+        "n_bonds": 56
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/metastable_metallic_BeCu_mp-2323"
+}

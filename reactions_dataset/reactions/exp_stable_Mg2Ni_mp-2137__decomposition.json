@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_Mg2Ni_mp-2137__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_Mg2Ni_mp-2137",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_Ni_mp-23",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_SrAl2_mp-1638",
+  "formula": "SrAl2",
+  "composition": {
+    "Sr": 2,
+    "Al": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -29.716160000000016,
+    "sum_per_atom_eV": -4.952693333333336,
+    "sum_per_formula_unit_eV": -14.858080000000008,
+    "mean_per_bond_eV": -0.17688190476190485,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": -0.03712357142857143,
+        "sum_eV": -1.03946,
+        "n_bonds": 28
+      },
+      "Al-Sr": {
+        "mean_eV": -0.12594375000000005,
+        "sum_eV": -7.052850000000002,
+        "n_bonds": 56
+      },
+      "Al-Al": {
+        "mean_eV": -0.25742678571428584,
+        "sum_eV": -21.62385000000001,
+        "n_bonds": 84
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.70487,
+    "sum_per_atom_eV": 1.2841449999999999,
+    "sum_per_formula_unit_eV": 3.852435,
+    "mean_per_bond_eV": 0.045862321428571426,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": 0.0021117857142857145,
+        "sum_eV": 0.05913,
+        "n_bonds": 28
+      },
+      "Al-Sr": {
+        "mean_eV": 0.02218428571428572,
+        "sum_eV": 1.2423200000000003,
+        "n_bonds": 56
+      },
+      "Al-Al": {
+        "mean_eV": 0.07623119047619048,
+        "sum_eV": 6.403420000000001,
+        "n_bonds": 84
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_SrAl2_mp-1638"
+}

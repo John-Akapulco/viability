@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_MnN_mp-1009130",
+  "formula": "MnN",
+  "composition": {
+    "Mn": 1,
+    "N": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "F-43m",
+  "space_group_number": 216,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -20.357629999999983,
+    "sum_per_atom_eV": -10.178814999999991,
+    "sum_per_formula_unit_eV": -20.357629999999983,
+    "mean_per_bond_eV": -0.13393177631578937,
+    "n_bonds": 152,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": -0.04991814814814815,
+        "sum_eV": -2.69558,
+        "n_bonds": 54
+      },
+      "Mn-N": {
+        "mean_eV": -0.37674886363636345,
+        "sum_eV": -16.576949999999993,
+        "n_bonds": 44
+      },
+      "N-N": {
+        "mean_eV": -0.02009444444444444,
+        "sum_eV": -1.0850999999999997,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.255659999999997,
+    "sum_per_atom_eV": 2.6278299999999986,
+    "sum_per_formula_unit_eV": 5.255659999999997,
+    "mean_per_bond_eV": 0.03457671052631577,
+    "n_bonds": 152,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": 0.04030629629629629,
+        "sum_eV": 2.1765399999999997,
+        "n_bonds": 54
+      },
+      "Mn-N": {
+        "mean_eV": 0.06509999999999996,
+        "sum_eV": 2.8643999999999985,
+        "n_bonds": 44
+      },
+      "N-N": {
+        "mean_eV": 0.003976296296296296,
+        "sum_eV": 0.21472000000000002,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_MnN_mp-1009130"
+}

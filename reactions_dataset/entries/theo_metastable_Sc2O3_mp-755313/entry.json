@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Sc2O3_mp-755313",
+  "formula": "Sc2O3",
+  "composition": {
+    "Sc": 4,
+    "O": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "R-3c",
+  "space_group_number": 167,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -80.45501000000017,
+    "sum_per_atom_eV": -8.045501000000018,
+    "sum_per_formula_unit_eV": -40.227505000000086,
+    "mean_per_bond_eV": -0.1772136784140973,
+    "n_bonds": 454,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": -0.11806539473684215,
+        "sum_eV": -8.972970000000004,
+        "n_bonds": 76
+      },
+      "O-Sc": {
+        "mean_eV": -0.36153130208333323,
+        "sum_eV": -69.41400999999998,
+        "n_bonds": 192
+      },
+      "O-O": {
+        "mean_eV": -0.011118440860215052,
+        "sum_eV": -2.06803,
+        "n_bonds": 186
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.736210000000009,
+    "sum_per_atom_eV": 1.173621000000001,
+    "sum_per_formula_unit_eV": 5.868105000000004,
+    "mean_per_bond_eV": 0.02585068281938328,
+    "n_bonds": 454,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": 0.00828,
+        "sum_eV": 0.62928,
+        "n_bonds": 76
+      },
+      "O-Sc": {
+        "mean_eV": 0.05515921874999996,
+        "sum_eV": 10.590569999999992,
+        "n_bonds": 192
+      },
+      "O-O": {
+        "mean_eV": 0.0027761290322580643,
+        "sum_eV": 0.5163599999999999,
+        "n_bonds": 186
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Sc2O3_mp-755313"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_NbGa3_mp-1973",
+  "formula": "NbGa3",
+  "composition": {
+    "Nb": 1,
+    "Ga": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -43.12708999999999,
+    "sum_per_atom_eV": -10.781772499999997,
+    "sum_per_formula_unit_eV": -43.12708999999999,
+    "mean_per_bond_eV": -0.3080506428571428,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": -0.04771249999999999,
+        "sum_eV": -0.7633999999999999,
+        "n_bonds": 16
+      },
+      "Ga-Nb": {
+        "mean_eV": -0.4922849999999999,
+        "sum_eV": -18.706829999999997,
+        "n_bonds": 38
+      },
+      "Ga-Ga": {
+        "mean_eV": -0.2750797674418606,
+        "sum_eV": -23.65686000000001,
+        "n_bonds": 86
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.487280000000002,
+    "sum_per_atom_eV": 2.1218200000000005,
+    "sum_per_formula_unit_eV": 8.487280000000002,
+    "mean_per_bond_eV": 0.060623428571428585,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": 0.052101249999999995,
+        "sum_eV": 0.8336199999999999,
+        "n_bonds": 16
+      },
+      "Ga-Nb": {
+        "mean_eV": 0.10677447368421053,
+        "sum_eV": 4.05743,
+        "n_bonds": 38
+      },
+      "Ga-Ga": {
+        "mean_eV": 0.04181662790697674,
+        "sum_eV": 3.59623,
+        "n_bonds": 86
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_NbGa3_mp-1973"
+}

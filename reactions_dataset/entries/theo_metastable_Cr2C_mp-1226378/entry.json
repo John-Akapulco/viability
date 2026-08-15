@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Cr2C_mp-1226378",
+  "formula": "Cr2C",
+  "composition": {
+    "Cr": 2,
+    "C": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -32.547929999999994,
+    "sum_per_atom_eV": -10.849309999999997,
+    "sum_per_formula_unit_eV": -32.547929999999994,
+    "mean_per_bond_eV": -0.1749888709677419,
+    "n_bonds": 186,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": -0.1269204545454545,
+        "sum_eV": -11.168999999999997,
+        "n_bonds": 88
+      },
+      "C-Cr": {
+        "mean_eV": -0.30577803030303025,
+        "sum_eV": -20.181349999999995,
+        "n_bonds": 66
+      },
+      "C-C": {
+        "mean_eV": -0.037424375000000024,
+        "sum_eV": -1.1975800000000008,
+        "n_bonds": 32
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.637399999999998,
+    "sum_per_atom_eV": 2.8791333333333324,
+    "sum_per_formula_unit_eV": 8.637399999999998,
+    "mean_per_bond_eV": 0.04643763440860214,
+    "n_bonds": 186,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": 0.0553672727272727,
+        "sum_eV": 4.8723199999999975,
+        "n_bonds": 88
+      },
+      "C-Cr": {
+        "mean_eV": 0.054535151515151536,
+        "sum_eV": 3.5993200000000014,
+        "n_bonds": 66
+      },
+      "C-C": {
+        "mean_eV": 0.005180000000000001,
+        "sum_eV": 0.16576000000000002,
+        "n_bonds": 32
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Cr2C_mp-1226378"
+}

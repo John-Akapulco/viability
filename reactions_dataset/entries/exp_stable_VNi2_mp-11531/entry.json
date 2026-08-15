@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_VNi2_mp-11531",
+  "formula": "VNi2",
+  "composition": {
+    "V": 1,
+    "Ni": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Immm",
+  "space_group_number": 71,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -17.33766,
+    "sum_per_atom_eV": -5.77922,
+    "sum_per_formula_unit_eV": -17.33766,
+    "mean_per_bond_eV": -0.11113884615384616,
+    "n_bonds": 156,
+    "by_bond_type": {
+      "V-V": {
+        "mean_eV": -0.14184153846153844,
+        "sum_eV": -3.6878799999999994,
+        "n_bonds": 26
+      },
+      "Ni-V": {
+        "mean_eV": -0.18212615384615385,
+        "sum_eV": -9.47056,
+        "n_bonds": 52
+      },
+      "Ni-Ni": {
+        "mean_eV": -0.05357974358974358,
+        "sum_eV": -4.179219999999999,
+        "n_bonds": 78
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.24173,
+    "sum_per_atom_eV": 2.0805766666666665,
+    "sum_per_formula_unit_eV": 6.24173,
+    "mean_per_bond_eV": 0.04001108974358974,
+    "n_bonds": 156,
+    "by_bond_type": {
+      "V-V": {
+        "mean_eV": 0.06360846153846154,
+        "sum_eV": 1.6538200000000003,
+        "n_bonds": 26
+      },
+      "Ni-V": {
+        "mean_eV": 0.06396115384615386,
+        "sum_eV": 3.325980000000001,
+        "n_bonds": 52
+      },
+      "Ni-Ni": {
+        "mean_eV": 0.016178589743589742,
+        "sum_eV": 1.26193,
+        "n_bonds": 78
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_VNi2_mp-11531"
+}

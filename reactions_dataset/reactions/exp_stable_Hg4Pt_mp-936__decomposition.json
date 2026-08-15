@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_Hg4Pt_mp-936__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_Hg4Pt_mp-936",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Pt_mp-126",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

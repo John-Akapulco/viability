@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_TiSi2_mp-1077503",
+  "formula": "TiSi2",
+  "composition": {
+    "Ti": 2,
+    "Si": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -57.76688000000004,
+    "sum_per_atom_eV": -9.627813333333341,
+    "sum_per_formula_unit_eV": -28.88344000000002,
+    "mean_per_bond_eV": -0.2489951724137933,
+    "n_bonds": 232,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.07687692307692306,
+        "sum_eV": -1.9987999999999997,
+        "n_bonds": 26
+      },
+      "Si-Ti": {
+        "mean_eV": -0.2960621000000001,
+        "sum_eV": -29.606210000000008,
+        "n_bonds": 100
+      },
+      "Si-Si": {
+        "mean_eV": -0.24681009433962253,
+        "sum_eV": -26.16186999999999,
+        "n_bonds": 106
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.465140000000023,
+    "sum_per_atom_eV": 2.077523333333337,
+    "sum_per_formula_unit_eV": 6.2325700000000115,
+    "mean_per_bond_eV": 0.05372905172413803,
+    "n_bonds": 232,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.048458461538461534,
+        "sum_eV": 1.25992,
+        "n_bonds": 26
+      },
+      "Si-Ti": {
+        "mean_eV": 0.06945160000000002,
+        "sum_eV": 6.945160000000002,
+        "n_bonds": 100
+      },
+      "Si-Si": {
+        "mean_eV": 0.04018924528301885,
+        "sum_eV": 4.260059999999998,
+        "n_bonds": 106
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_TiSi2_mp-1077503"
+}

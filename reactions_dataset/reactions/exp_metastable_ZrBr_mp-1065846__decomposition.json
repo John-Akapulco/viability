@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_ZrBr_mp-1065846__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_ZrBr_mp-1065846",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Br_mp-23154",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

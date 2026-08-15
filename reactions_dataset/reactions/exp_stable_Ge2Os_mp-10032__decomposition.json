@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_Ge2Os_mp-10032__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_Ge2Os_mp-10032",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ge_mp-32",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_Os_mp-49",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

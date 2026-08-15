@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Hg_mp-10861",
+  "formula": "Hg",
+  "composition": {
+    "Hg": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -26.574850000000012,
+    "sum_per_atom_eV": -8.858283333333338,
+    "sum_per_formula_unit_eV": -8.858283333333338,
+    "mean_per_bond_eV": -0.46622543859649146,
+    "n_bonds": 57,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": -0.46622543859649146,
+        "sum_eV": -26.574850000000012,
+        "n_bonds": 57
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.7425599999999974,
+    "sum_per_atom_eV": 1.5808533333333326,
+    "sum_per_formula_unit_eV": 1.5808533333333326,
+    "mean_per_bond_eV": 0.08320280701754382,
+    "n_bonds": 57,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": 0.08320280701754382,
+        "sum_eV": 4.7425599999999974,
+        "n_bonds": 57
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Hg_mp-10861"
+}

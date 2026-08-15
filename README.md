@@ -138,11 +138,32 @@ periodic bond once, not once per direction — the assumption
 auto-derivation for decomposition-into-elements), and `delta.py` (the
 three ΔICOHP/ΔICOBI normalizations — per formula unit, per atom, and a
 non-conservative per-bond diagnostic — computed together, never one in
-isolation). **Schema and math only, validated on synthetic fixtures
-(`tests/test_schema.py`, `tests/test_balance.py`, `tests/test_delta.py`,
-`tests/test_parse_lobster.py`) — no real LOBSTER production data has been
-run through it yet**, and its sign convention (products − reactants) is
-the *opposite* of `reaction_icohp.py`'s — the two are not interchangeable.
+isolation). Populated with a first real-data batch (6 compounds, 3
+`decomposition_to_elements` reactions), cross-checked 3/3 against
+`reaction_icohp.py`'s numbers, then extended to the full 192-compound
+case-1 population (`analysis/populate_reaction_analysis_case1_full.py`,
+`reactions_dataset/`) — 192/192 match `reaction_icohp_case1.csv` after
+the known sign flip. Its sign convention (products − reactants) is the
+*opposite* of `reaction_icohp.py`'s — the two are not interchangeable.
+
+**Endobondic/exobondic classification** (Reitz & Dronskowski,
+ic-2026-04181q): `nearest_neighbor.py` (first-coordination-shell bond
+filtering — a relative, self-calibrating gap detector, no hardcoded
+Angstrom cutoff), `classify.py` (`BondingLabel`
+endobondic/exobondic from ΔICOHP's sign, and a deliberately more cautious
+`ViabilityLabel` — `UNSTABLE_NONEXISTENT` always carries a warning that an
+exobondic sign never proves non-existence, per the manuscript's own
+Mn2O7 caveat), and `units.py` (eV ↔ kJ/mol). `parse_lobster.py` gained an
+opt-in `bond_filter="nearest_neighbor"` (default stays `"unfiltered"`, to
+avoid silently changing the already-validated case-1 population above),
+and `delta.py`'s `ReactionResult` now carries a `bonding_label`. Validated
+against all 7 worked examples from the manuscript
+(`tests/test_reitz_dronskowski_validation.py`,
+`tests/fixtures/reitz_dronskowski_cases.yaml`) — published, external
+numbers, independent of this project's own CSP data. **Not yet connected
+to real LOBSTER data for classification** (the 7-case validation uses
+literature bond values directly, bypassing `parse_lobster.py`) — that
+remains a follow-up step.
 
 ## Network dimensionality + periodic min-cut (mission #3)
 

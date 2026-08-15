@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Be3N2_mp-6977__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Be3N2_mp-6977",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Be_mp-87",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

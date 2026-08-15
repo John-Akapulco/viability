@@ -3,6 +3,7 @@ lobsterpy>=0.4.0
 
 # reaction_analysis/ (schema-driven Delta-ICOHP/ICOBI reaction analysis)
 pydantic>=2.0
+pyyaml>=6.0  # tests/fixtures/reitz_dronskowski_cases.yaml only
 
 # mp_dataset/ (Materials Project data campaign) and analysis/ (statistics)
 mp-api>=0.41.0

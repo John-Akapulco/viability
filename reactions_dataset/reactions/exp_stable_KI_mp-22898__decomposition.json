@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_KI_mp-22898__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_KI_mp-22898",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_metastable_K_mp-10157",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_I_mp-23153",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

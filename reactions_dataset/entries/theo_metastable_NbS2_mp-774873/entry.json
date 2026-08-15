@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_NbS2_mp-774873",
+  "formula": "NbS2",
+  "composition": {
+    "Nb": 2,
+    "S": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -47.23432,
+    "sum_per_atom_eV": -7.872386666666666,
+    "sum_per_formula_unit_eV": -23.61716,
+    "mean_per_bond_eV": -0.38716655737704914,
+    "n_bonds": 122,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": -0.32397499999999996,
+        "sum_eV": -5.183599999999999,
+        "n_bonds": 16
+      },
+      "Nb-S": {
+        "mean_eV": -0.7788452000000006,
+        "sum_eV": -38.942260000000026,
+        "n_bonds": 50
+      },
+      "S-S": {
+        "mean_eV": -0.055508214285714286,
+        "sum_eV": -3.10846,
+        "n_bonds": 56
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.81549,
+    "sum_per_atom_eV": 1.8025816666666667,
+    "sum_per_formula_unit_eV": 5.407745,
+    "mean_per_bond_eV": 0.08865155737704919,
+    "n_bonds": 122,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": 0.11151125000000002,
+        "sum_eV": 1.7841800000000003,
+        "n_bonds": 16
+      },
+      "Nb-S": {
+        "mean_eV": 0.16236879999999992,
+        "sum_eV": 8.118439999999996,
+        "n_bonds": 50
+      },
+      "S-S": {
+        "mean_eV": 0.01630125,
+        "sum_eV": 0.9128700000000001,
+        "n_bonds": 56
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_NbS2_mp-774873"
+}

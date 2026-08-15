@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Al3Os2_mp-16521",
+  "formula": "Al3Os2",
+  "composition": {
+    "Al": 3,
+    "Os": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -58.91713000000003,
+    "sum_per_atom_eV": -11.783426000000006,
+    "sum_per_formula_unit_eV": -58.91713000000003,
+    "mean_per_bond_eV": -0.34657135294117664,
+    "n_bonds": 170,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.3703782539682538,
+        "sum_eV": -23.33382999999999,
+        "n_bonds": 63
+      },
+      "Al-Os": {
+        "mean_eV": -0.4025882051282053,
+        "sum_eV": -31.401880000000013,
+        "n_bonds": 78
+      },
+      "Os-Os": {
+        "mean_eV": -0.14418689655172415,
+        "sum_eV": -4.18142,
+        "n_bonds": 29
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.291610000000007,
+    "sum_per_atom_eV": 2.2583220000000015,
+    "sum_per_formula_unit_eV": 11.291610000000007,
+    "mean_per_bond_eV": 0.0664212352941177,
+    "n_bonds": 170,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.05181666666666668,
+        "sum_eV": 3.2644500000000005,
+        "n_bonds": 63
+      },
+      "Al-Os": {
+        "mean_eV": 0.07742820512820513,
+        "sum_eV": 6.0394,
+        "n_bonds": 78
+      },
+      "Os-Os": {
+        "mean_eV": 0.06854344827586205,
+        "sum_eV": 1.9877599999999993,
+        "n_bonds": 29
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Al3Os2_mp-16521"
+}

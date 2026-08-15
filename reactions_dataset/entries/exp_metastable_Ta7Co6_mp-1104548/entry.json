@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Ta7Co6_mp-1104548",
+  "formula": "Ta7Co6",
+  "composition": {
+    "Ta": 7,
+    "Co": 6
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -161.79730999999992,
+    "sum_per_atom_eV": -12.445946923076917,
+    "sum_per_formula_unit_eV": -161.79730999999992,
+    "mean_per_bond_eV": -0.3571684547461367,
+    "n_bonds": 453,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": -0.21765633986928118,
+        "sum_eV": -33.30142000000002,
+        "n_bonds": 153
+      },
+      "Co-Ta": {
+        "mean_eV": -0.4584083838383839,
+        "sum_eV": -90.76486000000001,
+        "n_bonds": 198
+      },
+      "Co-Co": {
+        "mean_eV": -0.3699120588235293,
+        "sum_eV": -37.73102999999999,
+        "n_bonds": 102
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 35.34048,
+    "sum_per_atom_eV": 2.7184984615384615,
+    "sum_per_formula_unit_eV": 35.34048,
+    "mean_per_bond_eV": 0.07801430463576159,
+    "n_bonds": 453,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": 0.054848627450980396,
+        "sum_eV": 8.39184,
+        "n_bonds": 153
+      },
+      "Co-Ta": {
+        "mean_eV": 0.09465717171717172,
+        "sum_eV": 18.74212,
+        "n_bonds": 198
+      },
+      "Co-Co": {
+        "mean_eV": 0.08045607843137256,
+        "sum_eV": 8.206520000000001,
+        "n_bonds": 102
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Ta7Co6_mp-1104548"
+}

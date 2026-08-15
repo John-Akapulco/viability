@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_NaS_mp-2400__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_NaS_mp-2400",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_stable_Na_mp-10172",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_S_mp-77",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}
