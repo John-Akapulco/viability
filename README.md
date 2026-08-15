@@ -125,6 +125,25 @@ lesson as the hand-worked carbon/TiO2 examples. Case 3 (decomposition
 into a compound + elements) judged not tractable without a new DFT
 campaign; see the report for why.
 
+**`reaction_analysis/` (new, schema-driven redesign of this axis)**:
+a from-scratch Pydantic schema (`CompoundEntry`, `Reaction`,
+`ReactionResult`) meant to eventually cover all three reaction types
+above through one common, testable data model, rather than the ad hoc
+`reaction_icohp.py` functions above. Ships with `parse_lobster.py`
+(builds a `CompoundEntry` from `ICOHPLIST.lobster`/`ICOBILIST.lobster` +
+structure, with an explicit regression test confirming LOBSTER lists each
+periodic bond once, not once per direction — the assumption
+`sum_total_eV`'s unfiltered summation depends on), `balance.py`
+(element-by-element stoichiometric balance checking, coefficient
+auto-derivation for decomposition-into-elements), and `delta.py` (the
+three ΔICOHP/ΔICOBI normalizations — per formula unit, per atom, and a
+non-conservative per-bond diagnostic — computed together, never one in
+isolation). **Schema and math only, validated on synthetic fixtures
+(`tests/test_schema.py`, `tests/test_balance.py`, `tests/test_delta.py`,
+`tests/test_parse_lobster.py`) — no real LOBSTER production data has been
+run through it yet**, and its sign convention (products − reactants) is
+the *opposite* of `reaction_icohp.py`'s — the two are not interchangeable.
+
 ## Network dimensionality + periodic min-cut (mission #3)
 
 Two descriptors, `percolation_path.py` untouched:
