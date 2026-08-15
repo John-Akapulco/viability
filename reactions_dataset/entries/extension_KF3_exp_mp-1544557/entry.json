@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_KF3_exp_mp-1544557",
+  "formula": "KF3",
+  "composition": {
+    "K": 8,
+    "F": 24
+  },
+  "Z": 8,
+  "space_group_symbol": "P2_1",
+  "space_group_number": 4,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -55.986050000000006,
+    "sum_per_atom_eV": -1.7495640625000002,
+    "sum_per_formula_unit_eV": -6.998256250000001,
+    "mean_per_bond_eV": -0.06138821271929825,
+    "n_bonds": 912,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": -0.1368580769230769,
+        "sum_eV": -7.116619999999998,
+        "n_bonds": 52
+      },
+      "F-K": {
+        "mean_eV": -0.08817351123595504,
+        "sum_eV": -31.389769999999995,
+        "n_bonds": 356
+      },
+      "F-F": {
+        "mean_eV": -0.03468186507936509,
+        "sum_eV": -17.479660000000006,
+        "n_bonds": 504
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.932649999999992,
+    "sum_per_atom_eV": 0.40414531249999974,
+    "sum_per_formula_unit_eV": 1.616581249999999,
+    "mean_per_bond_eV": 0.014180537280701745,
+    "n_bonds": 912,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": 0.008296538461538463,
+        "sum_eV": 0.4314200000000001,
+        "n_bonds": 52
+      },
+      "F-K": {
+        "mean_eV": 0.0076167415730336975,
+        "sum_eV": 2.7115599999999964,
+        "n_bonds": 356
+      },
+      "F-F": {
+        "mean_eV": 0.019423948412698403,
+        "sum_eV": 9.789669999999996,
+        "n_bonds": 504
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_KF3_exp_mp-1544557"
+}

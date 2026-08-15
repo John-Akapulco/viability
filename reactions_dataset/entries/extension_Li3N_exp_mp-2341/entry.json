@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Li3N_exp_mp-2341",
+  "formula": "Li3N",
+  "composition": {
+    "Li": 6,
+    "N": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -77.58891999999999,
+    "sum_per_atom_eV": -9.698614999999998,
+    "sum_per_formula_unit_eV": -38.794459999999994,
+    "mean_per_bond_eV": -0.17165690265486722,
+    "n_bonds": 452,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.12949560606060603,
+        "sum_eV": -34.18683999999999,
+        "n_bonds": 264
+      },
+      "Li-N": {
+        "mean_eV": -0.2588716463414635,
+        "sum_eV": -42.45495000000001,
+        "n_bonds": 164
+      },
+      "N-N": {
+        "mean_eV": -0.039463750000000006,
+        "sum_eV": -0.9471300000000001,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.167920000000002,
+    "sum_per_atom_eV": 1.0209900000000003,
+    "sum_per_formula_unit_eV": 4.083960000000001,
+    "mean_per_bond_eV": 0.018070619469026553,
+    "n_bonds": 452,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.006390227272727273,
+        "sum_eV": 1.6870200000000002,
+        "n_bonds": 264
+      },
+      "Li-N": {
+        "mean_eV": 0.03677542682926832,
+        "sum_eV": 6.031170000000005,
+        "n_bonds": 164
+      },
+      "N-N": {
+        "mean_eV": 0.01873875,
+        "sum_eV": 0.44972999999999996,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Li3N_exp_mp-2341"
+}

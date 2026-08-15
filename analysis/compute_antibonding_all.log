@@ -1,0 +1,26 @@
+Fetching is_metal for 347 compounds...
+Retrieving SummaryDoc documents:   0%|          | 0/347 [00:00<?, ?it/s]Retrieving SummaryDoc documents: 100%|██████████| 347/347 [00:00<00:00, 6897741.65it/s]
+  20/349 done (250s elapsed, ok=20 failed=0)
+  40/349 done (409s elapsed, ok=40 failed=0)
+  60/349 done (661s elapsed, ok=60 failed=0)
+  80/349 done (856s elapsed, ok=80 failed=0)
+  100/349 done (1005s elapsed, ok=100 failed=0)
+  120/349 done (1234s elapsed, ok=120 failed=0)
+  140/349 done (1515s elapsed, ok=140 failed=0)
+  160/349 done (1706s elapsed, ok=160 failed=0)
+  180/349 done (1821s elapsed, ok=180 failed=0)
+  200/349 done (1969s elapsed, ok=200 failed=0)
+  220/349 done (2198s elapsed, ok=220 failed=0)
+  240/349 done (2553s elapsed, ok=240 failed=0)
+  260/349 done (2611s elapsed, ok=258 failed=2)
+  280/349 done (2796s elapsed, ok=278 failed=2)
+  300/349 done (2911s elapsed, ok=298 failed=2)
+  320/349 done (3006s elapsed, ok=318 failed=2)
+  340/349 done (3164s elapsed, ok=338 failed=2)
+
+Wrote 349 entries to /home/gilles/viability/analysis/antibonding_all.json (ok=347, failed=2, 3253s total)
+Wrote 349 rows to /home/gilles/viability/analysis/percolation_vs_antibonding.csv
+antibond_error
+NaN                    347
+no is_metal from MP      2
+Name: count, dtype: int64

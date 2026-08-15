@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_BaS3_exp_mp-556296__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_BaS3_exp_mp-556296",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ba_mp-122",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_S_mp-77",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

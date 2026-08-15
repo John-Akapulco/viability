@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_MgO_exp_mp-549706__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_MgO_exp_mp-549706",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_O2_mp-1524462",
+      "coefficient": 0.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

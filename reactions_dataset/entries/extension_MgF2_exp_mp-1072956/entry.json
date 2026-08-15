@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MgF2_exp_mp-1072956",
+  "formula": "MgF2",
+  "composition": {
+    "Mg": 2,
+    "F": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Pnnm",
+  "space_group_number": 58,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -14.187110000000017,
+    "sum_per_atom_eV": -2.364518333333336,
+    "sum_per_formula_unit_eV": -7.093555000000008,
+    "mean_per_bond_eV": -0.048585993150684986,
+    "n_bonds": 292,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.010490909090909094,
+        "sum_eV": -0.4616000000000002,
+        "n_bonds": 44
+      },
+      "F-Mg": {
+        "mean_eV": -0.11520991071428568,
+        "sum_eV": -12.903509999999997,
+        "n_bonds": 112
+      },
+      "F-F": {
+        "mean_eV": -0.006044117647058821,
+        "sum_eV": -0.8219999999999997,
+        "n_bonds": 136
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.333369999999999,
+    "sum_per_atom_eV": 0.22222833333333317,
+    "sum_per_formula_unit_eV": 0.6666849999999995,
+    "mean_per_bond_eV": 0.004566335616438353,
+    "n_bonds": 292,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.00035340909090909075,
+        "sum_eV": 0.015549999999999993,
+        "n_bonds": 44
+      },
+      "F-Mg": {
+        "mean_eV": 0.010526607142857147,
+        "sum_eV": 1.1789800000000004,
+        "n_bonds": 112
+      },
+      "F-F": {
+        "mean_eV": 0.0010208823529411766,
+        "sum_eV": 0.13884000000000002,
+        "n_bonds": 136
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MgF2_exp_mp-1072956"
+}

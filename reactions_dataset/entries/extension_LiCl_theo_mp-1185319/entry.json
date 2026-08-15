@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_LiCl_theo_mp-1185319",
+  "formula": "LiCl",
+  "composition": {
+    "Li": 2,
+    "Cl": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3mc",
+  "space_group_number": 186,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -29.16462,
+    "sum_per_atom_eV": -7.291155,
+    "sum_per_formula_unit_eV": -14.58231,
+    "mean_per_bond_eV": -0.33141613636363637,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.17229416666666666,
+        "sum_eV": -4.13506,
+        "n_bonds": 24
+      },
+      "Cl-Li": {
+        "mean_eV": -0.6055852500000001,
+        "sum_eV": -24.22341,
+        "n_bonds": 40
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.03358958333333333,
+        "sum_eV": -0.80615,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.65092,
+    "sum_per_atom_eV": 0.91273,
+    "sum_per_formula_unit_eV": 1.82546,
+    "mean_per_bond_eV": 0.04148772727272727,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.011146250000000002,
+        "sum_eV": 0.26751,
+        "n_bonds": 24
+      },
+      "Cl-Li": {
+        "mean_eV": 0.07975825000000002,
+        "sum_eV": 3.1903300000000008,
+        "n_bonds": 40
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.008044999999999998,
+        "sum_eV": 0.19307999999999995,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_LiCl_theo_mp-1185319"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Li2O_exp_mp-1960",
+  "formula": "Li2O",
+  "composition": {
+    "Li": 2,
+    "O": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -29.24318,
+    "sum_per_atom_eV": -9.747726666666667,
+    "sum_per_formula_unit_eV": -29.24318,
+    "mean_per_bond_eV": -0.13292354545454546,
+    "n_bonds": 220,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.09693557377049176,
+        "sum_eV": -11.826139999999995,
+        "n_bonds": 122
+      },
+      "Li-O": {
+        "mean_eV": -0.2969557142857143,
+        "sum_eV": -16.629520000000003,
+        "n_bonds": 56
+      },
+      "O-O": {
+        "mean_eV": -0.018750476190476192,
+        "sum_eV": -0.7875200000000001,
+        "n_bonds": 42
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.6765899999999956,
+    "sum_per_atom_eV": 0.8921966666666652,
+    "sum_per_formula_unit_eV": 2.6765899999999956,
+    "mean_per_bond_eV": 0.012166318181818162,
+    "n_bonds": 220,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.0038595901639344263,
+        "sum_eV": 0.47087,
+        "n_bonds": 122
+      },
+      "Li-O": {
+        "mean_eV": 0.035367142857142854,
+        "sum_eV": 1.9805599999999997,
+        "n_bonds": 56
+      },
+      "O-O": {
+        "mean_eV": 0.00536095238095238,
+        "sum_eV": 0.22515999999999997,
+        "n_bonds": 42
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Li2O_exp_mp-1960"
+}

@@ -1,0 +1,4 @@
+
+Wrote 281 rows to /home/gilles/viability/analysis/reaction_analysis_case1_full.csv (ok=281, skipped_single_element=68, skipped_no_reference=0, reference_not_ready=0, failed=0); 343 distinct CompoundEntry objects parsed
+
+Cross-check vs reaction_icohp_case1.csv: 281 compared (281 match, 0 mismatch, 0 in new but not in old CSV)

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_CsF_exp_mp-8455__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_CsF_exp_mp-8455",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cs_mp-1",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_F_mp-561203",
+      "coefficient": 0.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

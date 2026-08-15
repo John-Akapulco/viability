@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_CsO2_theo_mp-1096936__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_CsO2_theo_mp-1096936",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cs_mp-1",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_O2_mp-1524462",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

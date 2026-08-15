@@ -8,6 +8,7 @@
     "delta_per_atom_eV": -4.6619193750000125,
     "delta_per_bond_eV": -0.03871250063043791,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -20,6 +21,7 @@
     "delta_per_atom_eV": -9.919361538461526,
     "delta_per_bond_eV": 0.011263244205888034,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -32,6 +34,7 @@
     "delta_per_atom_eV": -4.279001999999991,
     "delta_per_bond_eV": 0.03407549495301099,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -44,6 +47,7 @@
     "delta_per_atom_eV": -2.7380105555555474,
     "delta_per_bond_eV": 0.05862686642900744,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -56,6 +60,7 @@
     "delta_per_atom_eV": -2.241594166666669,
     "delta_per_bond_eV": -0.0064252810964449125,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -68,6 +73,7 @@
     "delta_per_atom_eV": -1.0028012500000028,
     "delta_per_bond_eV": 0.012893633064515991,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -80,6 +86,7 @@
     "delta_per_atom_eV": -3.978703333333332,
     "delta_per_bond_eV": 0.06861355263157887,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -92,6 +99,7 @@
     "delta_per_atom_eV": -2.1177400000000044,
     "delta_per_bond_eV": 0.0340435310027182,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -104,6 +112,7 @@
     "delta_per_atom_eV": 0.2576094999999981,
     "delta_per_bond_eV": 0.012360598712503224,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -116,6 +125,7 @@
     "delta_per_atom_eV": -1.0110816666666669,
     "delta_per_bond_eV": -0.1150386414141415,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -128,6 +138,7 @@
     "delta_per_atom_eV": -1.0770699999999978,
     "delta_per_bond_eV": -0.09728080983716791,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -140,6 +151,7 @@
     "delta_per_atom_eV": -0.2263366666666684,
     "delta_per_bond_eV": 0.21379158333333315,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -152,6 +164,7 @@
     "delta_per_atom_eV": -2.627934999999978,
     "delta_per_bond_eV": -0.050078458003952,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -164,6 +177,7 @@
     "delta_per_atom_eV": 0.6883662500000147,
     "delta_per_bond_eV": 0.030814769117647522,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -176,6 +190,7 @@
     "delta_per_atom_eV": 0.6733541666666687,
     "delta_per_bond_eV": 0.061678273809524065,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -188,6 +203,7 @@
     "delta_per_atom_eV": 3.123319999999996,
     "delta_per_bond_eV": -0.03300454545454565,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -200,6 +216,7 @@
     "delta_per_atom_eV": -1.1982574999999995,
     "delta_per_bond_eV": 0.002989265970515992,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -212,6 +229,7 @@
     "delta_per_atom_eV": 0.9186697222222234,
     "delta_per_bond_eV": 0.05233038336167806,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -224,6 +242,7 @@
     "delta_per_atom_eV": -1.0918333333333279,
     "delta_per_bond_eV": 0.017065359560503035,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -236,6 +255,7 @@
     "delta_per_atom_eV": 0.7715466666666693,
     "delta_per_bond_eV": 0.11136061057692326,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -248,6 +268,7 @@
     "delta_per_atom_eV": 1.6923995833333383,
     "delta_per_bond_eV": -0.14023694611710957,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -260,6 +281,7 @@
     "delta_per_atom_eV": 0.35134749999999393,
     "delta_per_bond_eV": -0.1751972883675687,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -272,6 +294,7 @@
     "delta_per_atom_eV": 0.674919375,
     "delta_per_bond_eV": -0.012153412025827287,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -284,6 +307,7 @@
     "delta_per_atom_eV": 1.7140568750000145,
     "delta_per_bond_eV": 0.06095417022910578,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -296,6 +320,7 @@
     "delta_per_atom_eV": -8.030723749999998,
     "delta_per_bond_eV": 0.11587640670859556,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -308,6 +333,7 @@
     "delta_per_atom_eV": -4.5868775000000035,
     "delta_per_bond_eV": 0.028122712842712783,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -320,6 +346,7 @@
     "delta_per_atom_eV": -0.2290427083333313,
     "delta_per_bond_eV": -0.17305172398589028,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -332,6 +359,7 @@
     "delta_per_atom_eV": -0.21240314814815361,
     "delta_per_bond_eV": 0.000264490117118682,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -344,6 +372,7 @@
     "delta_per_atom_eV": 0.59751666666667,
     "delta_per_bond_eV": -0.043804081128747674,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -356,6 +385,7 @@
     "delta_per_atom_eV": 0.15449999999999994,
     "delta_per_bond_eV": -0.00029516890213611424,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -368,6 +398,7 @@
     "delta_per_atom_eV": -0.4410591666666681,
     "delta_per_bond_eV": -0.1383565766129033,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -380,6 +411,7 @@
     "delta_per_atom_eV": -5.599669999999997,
     "delta_per_bond_eV": -0.03607386163032186,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -392,6 +424,7 @@
     "delta_per_atom_eV": -2.80965357142857,
     "delta_per_bond_eV": 0.1138541920140928,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -404,6 +437,7 @@
     "delta_per_atom_eV": -1.7991537500000145,
     "delta_per_bond_eV": 0.08215608796296267,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -416,6 +450,7 @@
     "delta_per_atom_eV": -2.068904107142864,
     "delta_per_bond_eV": 0.025801614112620247,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -428,6 +463,7 @@
     "delta_per_atom_eV": -0.8092183333333285,
     "delta_per_bond_eV": -0.05368674167838719,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -440,6 +476,7 @@
     "delta_per_atom_eV": -0.36091866666666733,
     "delta_per_bond_eV": 0.0032540413943354385,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -452,6 +489,7 @@
     "delta_per_atom_eV": -1.1476215624999968,
     "delta_per_bond_eV": -0.19747200214707436,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -464,6 +502,7 @@
     "delta_per_atom_eV": -0.025426056547609655,
     "delta_per_bond_eV": -0.016746959718767884,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -476,6 +515,7 @@
     "delta_per_atom_eV": -10.942591666666667,
     "delta_per_bond_eV": -0.14941128968253975,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -488,6 +528,7 @@
     "delta_per_atom_eV": -2.9524124999999968,
     "delta_per_bond_eV": 0.09117087301587329,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -500,6 +541,7 @@
     "delta_per_atom_eV": -1.1840987037037063,
     "delta_per_bond_eV": 0.10465578658403984,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -512,6 +554,7 @@
     "delta_per_atom_eV": -0.24568600000000346,
     "delta_per_bond_eV": -0.011019020575056881,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -524,6 +567,7 @@
     "delta_per_atom_eV": 2.1419541666666597,
     "delta_per_bond_eV": 0.04981836003051088,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -536,6 +580,7 @@
     "delta_per_atom_eV": -1.0381712499999942,
     "delta_per_bond_eV": -0.0026998188194037043,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -548,6 +593,7 @@
     "delta_per_atom_eV": 0.9960462499999979,
     "delta_per_bond_eV": 0.0854305711711712,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -560,6 +606,7 @@
     "delta_per_atom_eV": -6.97373749999998,
     "delta_per_bond_eV": 0.12457174510163044,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -572,6 +619,7 @@
     "delta_per_atom_eV": -0.6668983333333364,
     "delta_per_bond_eV": -0.08605317420311369,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -584,6 +632,7 @@
     "delta_per_atom_eV": -2.197773124999999,
     "delta_per_bond_eV": 0.02142297957251091,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -596,6 +645,7 @@
     "delta_per_atom_eV": -7.321968333333328,
     "delta_per_bond_eV": -0.11661690476190462,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -608,6 +658,7 @@
     "delta_per_atom_eV": -9.406477692307694,
     "delta_per_bond_eV": 0.03213239067291018,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -620,6 +671,7 @@
     "delta_per_atom_eV": -2.2308344444444486,
     "delta_per_bond_eV": 0.1658021259259257,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -632,6 +684,7 @@
     "delta_per_atom_eV": -2.0298977777777742,
     "delta_per_bond_eV": 0.27431526413502133,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -644,6 +697,7 @@
     "delta_per_atom_eV": -1.3615618750000076,
     "delta_per_bond_eV": 0.033438817536276394,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -656,6 +710,7 @@
     "delta_per_atom_eV": 1.1429610833333315,
     "delta_per_bond_eV": 0.010047935184205714,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -668,6 +723,7 @@
     "delta_per_atom_eV": -4.5782574999999905,
     "delta_per_bond_eV": -0.03467821428571416,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -680,6 +736,7 @@
     "delta_per_atom_eV": -0.24890000000000345,
     "delta_per_bond_eV": 0.05936387719298236,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -692,6 +749,7 @@
     "delta_per_atom_eV": 1.2247631250000008,
     "delta_per_bond_eV": -0.09724736759581876,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -704,6 +762,7 @@
     "delta_per_atom_eV": -1.1561075000000045,
     "delta_per_bond_eV": -0.08927167789757426,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -716,6 +775,7 @@
     "delta_per_atom_eV": -0.30639837499999845,
     "delta_per_bond_eV": -0.023334675344802824,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -728,6 +788,7 @@
     "delta_per_atom_eV": 0.8953193750000059,
     "delta_per_bond_eV": 0.034883354895529795,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -740,6 +801,7 @@
     "delta_per_atom_eV": 0.0005945833333296235,
     "delta_per_bond_eV": 0.3268490138067057,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -752,6 +814,7 @@
     "delta_per_atom_eV": -7.545794583333333,
     "delta_per_bond_eV": 0.16452230119398847,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -764,6 +827,7 @@
     "delta_per_atom_eV": -8.739236666666672,
     "delta_per_bond_eV": 0.011179177083333158,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -776,6 +840,7 @@
     "delta_per_atom_eV": -0.12700333333333447,
     "delta_per_bond_eV": -0.021123355555555612,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -788,6 +853,7 @@
     "delta_per_atom_eV": -0.49352833333333407,
     "delta_per_bond_eV": -0.17531769388954177,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -800,6 +866,7 @@
     "delta_per_atom_eV": -1.135625000000001,
     "delta_per_bond_eV": -0.007784746462264153,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -812,6 +879,7 @@
     "delta_per_atom_eV": -5.6161820000000064,
     "delta_per_bond_eV": 0.10720299243534434,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -824,6 +892,7 @@
     "delta_per_atom_eV": -3.0021300000000117,
     "delta_per_bond_eV": 0.034922843406593185,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -836,6 +905,7 @@
     "delta_per_atom_eV": -8.980873999999996,
     "delta_per_bond_eV": -0.03576890142057676,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -848,6 +918,7 @@
     "delta_per_atom_eV": -2.556897499999999,
     "delta_per_bond_eV": -0.05171405303030299,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -860,6 +931,7 @@
     "delta_per_atom_eV": -6.1699274999999965,
     "delta_per_bond_eV": -0.12122580626177015,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -872,6 +944,7 @@
     "delta_per_atom_eV": -4.753432083333314,
     "delta_per_bond_eV": 0.011225832927621138,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -884,6 +957,7 @@
     "delta_per_atom_eV": -0.13861200000000337,
     "delta_per_bond_eV": 0.1279421387313866,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -896,6 +970,7 @@
     "delta_per_atom_eV": 0.1832834375000072,
     "delta_per_bond_eV": -0.11600435960467528,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -908,6 +983,7 @@
     "delta_per_atom_eV": 0.1781700000000027,
     "delta_per_bond_eV": 0.014413470365418957,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -920,6 +996,7 @@
     "delta_per_atom_eV": -3.5918841666666643,
     "delta_per_bond_eV": 0.0011733844498252322,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -932,6 +1009,7 @@
     "delta_per_atom_eV": -2.5907686666666705,
     "delta_per_bond_eV": -0.02650177895981104,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -944,6 +1022,7 @@
     "delta_per_atom_eV": 0.984068888888892,
     "delta_per_bond_eV": -0.0005530999999998898,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -956,6 +1035,7 @@
     "delta_per_atom_eV": -3.9955475000000025,
     "delta_per_bond_eV": 0.08325606125356119,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -968,6 +1048,7 @@
     "delta_per_atom_eV": 0.5498074999999998,
     "delta_per_bond_eV": -0.002342333333333349,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -980,6 +1061,7 @@
     "delta_per_atom_eV": -1.8717737500000062,
     "delta_per_bond_eV": 0.08513624772001818,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -992,6 +1074,7 @@
     "delta_per_atom_eV": 2.4216755555555594,
     "delta_per_bond_eV": 0.020476641379310517,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1004,6 +1087,7 @@
     "delta_per_atom_eV": -0.9046341666666695,
     "delta_per_bond_eV": 0.0031992709139223585,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1016,6 +1100,7 @@
     "delta_per_atom_eV": -1.3905555555555544,
     "delta_per_bond_eV": -0.009544887260887244,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1028,6 +1113,7 @@
     "delta_per_atom_eV": -0.10676319047618961,
     "delta_per_bond_eV": -0.17294137658880931,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1040,6 +1126,7 @@
     "delta_per_atom_eV": -8.174767400530506,
     "delta_per_bond_eV": 0.09856568816353156,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1052,6 +1139,7 @@
     "delta_per_atom_eV": -0.9474833333333296,
     "delta_per_bond_eV": 0.046550816064257206,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1064,6 +1152,7 @@
     "delta_per_atom_eV": -0.49526656249999856,
     "delta_per_bond_eV": -0.23354401671204233,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1076,6 +1165,7 @@
     "delta_per_atom_eV": -10.122311249999996,
     "delta_per_bond_eV": -0.024563774692636986,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1088,6 +1178,7 @@
     "delta_per_atom_eV": -0.757318125000003,
     "delta_per_bond_eV": -0.08857860863986317,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1100,6 +1191,7 @@
     "delta_per_atom_eV": -0.08567091269841676,
     "delta_per_bond_eV": -0.10094087657563072,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1112,6 +1204,7 @@
     "delta_per_atom_eV": -2.4817799999999997,
     "delta_per_bond_eV": -0.07291099415204672,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1124,6 +1217,7 @@
     "delta_per_atom_eV": 0.8192387499999998,
     "delta_per_bond_eV": 0.02303553846153844,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1136,6 +1230,7 @@
     "delta_per_atom_eV": -0.5250024999999923,
     "delta_per_bond_eV": 0.0022286979166670218,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1148,6 +1243,7 @@
     "delta_per_atom_eV": -2.6841683333333344,
     "delta_per_bond_eV": -0.007890564692982438,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1160,6 +1256,7 @@
     "delta_per_atom_eV": 0.9020241666666697,
     "delta_per_bond_eV": 0.040079995348837355,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1172,6 +1269,7 @@
     "delta_per_atom_eV": -5.180329999999998,
     "delta_per_bond_eV": 0.13171592843326885,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1184,6 +1282,7 @@
     "delta_per_atom_eV": -0.8542041666666709,
     "delta_per_bond_eV": -0.10048097308488627,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1196,6 +1295,7 @@
     "delta_per_atom_eV": -1.341455000000002,
     "delta_per_bond_eV": -0.025352158167036343,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1208,6 +1308,7 @@
     "delta_per_atom_eV": -5.086806874999999,
     "delta_per_bond_eV": 0.06962526533960406,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1220,6 +1321,7 @@
     "delta_per_atom_eV": -2.2731813690476166,
     "delta_per_bond_eV": -0.06418069048614855,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1232,6 +1334,7 @@
     "delta_per_atom_eV": -1.784688333333334,
     "delta_per_bond_eV": 0.045516153679653615,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1244,6 +1347,7 @@
     "delta_per_atom_eV": 1.3781288888888905,
     "delta_per_bond_eV": 0.27427970370370375,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1256,6 +1360,7 @@
     "delta_per_atom_eV": 0.656938888888894,
     "delta_per_bond_eV": 0.0951805362318843,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1268,6 +1373,7 @@
     "delta_per_atom_eV": -0.14890388888887904,
     "delta_per_bond_eV": -0.0006962588383835344,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1280,6 +1386,7 @@
     "delta_per_atom_eV": -2.5967062500000013,
     "delta_per_bond_eV": 0.011440061785130712,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1292,6 +1399,7 @@
     "delta_per_atom_eV": -3.640461250000003,
     "delta_per_bond_eV": 0.016826813945070268,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1304,6 +1412,7 @@
     "delta_per_atom_eV": -1.742406538461543,
     "delta_per_bond_eV": 0.029372511995369388,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1316,6 +1425,7 @@
     "delta_per_atom_eV": -1.5889549999999986,
     "delta_per_bond_eV": 0.015335532530120488,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1328,6 +1438,7 @@
     "delta_per_atom_eV": -0.14112937500001266,
     "delta_per_bond_eV": -0.06733375297619071,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1340,6 +1451,7 @@
     "delta_per_atom_eV": 0.8801616666666708,
     "delta_per_bond_eV": 0.006004848339719121,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1352,6 +1464,7 @@
     "delta_per_atom_eV": -2.2967424999999984,
     "delta_per_bond_eV": -0.1043322222222221,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1364,6 +1477,7 @@
     "delta_per_atom_eV": -3.104726666666663,
     "delta_per_bond_eV": -0.01000588111888108,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1376,6 +1490,7 @@
     "delta_per_atom_eV": -4.597315833333354,
     "delta_per_bond_eV": 0.00037787132676703195,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1388,6 +1503,7 @@
     "delta_per_atom_eV": -2.1791900000000055,
     "delta_per_bond_eV": 0.07734696202531616,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1400,6 +1516,7 @@
     "delta_per_atom_eV": -2.33502812500001,
     "delta_per_bond_eV": -0.06771451606999096,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1412,6 +1529,254 @@
     "delta_per_atom_eV": -6.869564999999998,
     "delta_per_bond_eV": -0.03786589285714287,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Ba5P4_exp_mp-17566": {
+    "reaction_id": "extension_Ba5P4_exp_mp-17566__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -8.630695952380933,
+    "delta_per_atom_eV": -0.9589662169312148,
+    "delta_per_bond_eV": -0.1906351839883934,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaCl2_exp_mp-23199": {
+    "reaction_id": "extension_BaCl2_exp_mp-23199__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.6731974999999961,
+    "delta_per_atom_eV": -0.22439916666666537,
+    "delta_per_bond_eV": -0.020069374704491633,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaF3_exp_mp-1080821": {
+    "reaction_id": "extension_BaF3_exp_mp-1080821__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -3.471859999999995,
+    "delta_per_atom_eV": -0.8679649999999988,
+    "delta_per_bond_eV": -0.014223793589030906,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaF3_theo_mp-1183303": {
+    "reaction_id": "extension_BaF3_theo_mp-1183303__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.9973899999999922,
+    "delta_per_atom_eV": -0.24934749999999806,
+    "delta_per_bond_eV": -0.01403946025569755,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaN2_exp_mp-1102371": {
+    "reaction_id": "extension_BaN2_exp_mp-1102371__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -25.87453500000003,
+    "delta_per_atom_eV": -8.62484500000001,
+    "delta_per_bond_eV": -0.09549511261261279,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaO_exp_mp-1008500": {
+    "reaction_id": "extension_BaO_exp_mp-1008500__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.6442287499999964,
+    "delta_per_atom_eV": -0.3221143749999982,
+    "delta_per_bond_eV": -0.012841947674418541,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaO_theo_mp-1950989": {
+    "reaction_id": "extension_BaO_theo_mp-1950989__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -3.225823749999998,
+    "delta_per_atom_eV": -1.612911874999999,
+    "delta_per_bond_eV": -0.08722310562015502,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BaS3_exp_mp-556296": {
+    "reaction_id": "extension_BaS3_exp_mp-556296__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.4931918749999866,
+    "delta_per_atom_eV": -0.6232979687499967,
+    "delta_per_bond_eV": -0.11860905341059644,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Be3N2_exp_mp-18337": {
+    "reaction_id": "extension_Be3N2_exp_mp-18337__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.37316874999991967,
+    "delta_per_atom_eV": -0.07463374999998393,
+    "delta_per_bond_eV": 0.0433885808008638,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Be3N2_theo_mp-1017550": {
+    "reaction_id": "extension_Be3N2_theo_mp-1017550__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 1.980217500000066,
+    "delta_per_atom_eV": 0.3960435000000132,
+    "delta_per_bond_eV": 0.0008120343736164604,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Be3P2_exp_mp-567841": {
+    "reaction_id": "extension_Be3P2_exp_mp-567841__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -1.055326726190529,
+    "delta_per_atom_eV": -0.2110653452381058,
+    "delta_per_bond_eV": -0.03555591392277263,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Be3P2_theo_mp-1084771": {
+    "reaction_id": "extension_Be3P2_theo_mp-1084771__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.8975979761905393,
+    "delta_per_atom_eV": -0.17951959523810784,
+    "delta_per_bond_eV": -0.05931449950835821,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BeCl2_exp_mp-23267": {
+    "reaction_id": "extension_BeCl2_exp_mp-23267__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.461117499999993,
+    "delta_per_atom_eV": 1.8203724999999977,
+    "delta_per_bond_eV": 0.2564855763555105,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BeCl2_theo_mp-1172909": {
+    "reaction_id": "extension_BeCl2_theo_mp-1172909__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -17.34203583333334,
+    "delta_per_atom_eV": -5.780678611111114,
+    "delta_per_bond_eV": 0.7833592910447762,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BeF2_exp_mp-15951": {
+    "reaction_id": "extension_BeF2_exp_mp-15951__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 9.454205833333265,
+    "delta_per_atom_eV": 3.1514019444444217,
+    "delta_per_bond_eV": 0.08855567645846163,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BeF2_theo_mp-975644": {
+    "reaction_id": "extension_BeF2_theo_mp-975644__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.044677499999949,
+    "delta_per_atom_eV": -0.6815591666666497,
+    "delta_per_bond_eV": -0.035698530612244664,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BeO_exp_mp-7599": {
+    "reaction_id": "extension_BeO_exp_mp-7599__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.572703750000034,
+    "delta_per_atom_eV": 2.786351875000017,
+    "delta_per_bond_eV": 0.00925830033287442,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_BeO_theo_mp-1778": {
+    "reaction_id": "extension_BeO_theo_mp-1778__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 8.878218749999974,
+    "delta_per_atom_eV": 4.439109374999987,
+    "delta_per_bond_eV": -0.007157592975206795,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Ca3N2_exp_mp-1047": {
+    "reaction_id": "extension_Ca3N2_exp_mp-1047__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -22.44033000000004,
+    "delta_per_atom_eV": -4.488066000000008,
+    "delta_per_bond_eV": -0.1023936232790991,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1424,6 +1789,72 @@
     "delta_per_atom_eV": -4.43741000000001,
     "delta_per_bond_eV": -0.09588115424836632,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Ca3N2_theo_mp-1013524": {
+    "reaction_id": "extension_Ca3N2_theo_mp-1013524__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -22.44892000000004,
+    "delta_per_atom_eV": -4.489784000000008,
+    "delta_per_bond_eV": -0.11786339075630275,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CaCl2_exp_mp-23214": {
+    "reaction_id": "extension_CaCl2_exp_mp-23214__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.9596899999999984,
+    "delta_per_atom_eV": -0.3198966666666661,
+    "delta_per_bond_eV": -0.03497107142857139,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CaCl2_theo_mp-1120739": {
+    "reaction_id": "extension_CaCl2_theo_mp-1120739__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.6625400000000008,
+    "delta_per_atom_eV": -0.22084666666666694,
+    "delta_per_bond_eV": -0.07643288037166086,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CaF2_exp_mp-10464": {
+    "reaction_id": "extension_CaF2_exp_mp-10464__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.6680099999999918,
+    "delta_per_atom_eV": -0.22266999999999726,
+    "delta_per_bond_eV": -0.027730750439710676,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CaF2_theo_mp-554355": {
+    "reaction_id": "extension_CaF2_theo_mp-554355__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.5442199999999993,
+    "delta_per_atom_eV": -0.1814066666666664,
+    "delta_per_bond_eV": -0.02417257853937166,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1436,6 +1867,20 @@
     "delta_per_atom_eV": -4.91829750000001,
     "delta_per_bond_eV": -0.12134728170478196,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CaO_exp_mp-1079707": {
+    "reaction_id": "extension_CaO_exp_mp-1079707__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.425393750000004,
+    "delta_per_atom_eV": -2.212696875000002,
+    "delta_per_bond_eV": -0.11924865933120245,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1448,6 +1893,501 @@
     "delta_per_atom_eV": -0.9524718750000014,
     "delta_per_bond_eV": -0.15750028194746202,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CaO_theo_mp-1181903": {
+    "reaction_id": "extension_CaO_theo_mp-1181903__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -5.994203750000003,
+    "delta_per_atom_eV": -2.9971018750000016,
+    "delta_per_bond_eV": -0.168377892479007,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Cs2S_exp_mp-1077814": {
+    "reaction_id": "extension_Cs2S_exp_mp-1077814__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 2.8662168750000045,
+    "delta_per_atom_eV": 0.9554056250000015,
+    "delta_per_bond_eV": -0.09277304795979185,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsCl_exp_mp-573697": {
+    "reaction_id": "extension_CsCl_exp_mp-573697__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 1.7659650000000005,
+    "delta_per_atom_eV": 0.8829825000000002,
+    "delta_per_bond_eV": 0.02995608527131785,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsF_exp_mp-8455": {
+    "reaction_id": "extension_CsF_exp_mp-8455__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 7.692800000000009,
+    "delta_per_atom_eV": 3.8464000000000045,
+    "delta_per_bond_eV": 0.18496368861024054,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsN3_exp_mp-510557": {
+    "reaction_id": "extension_CsN3_exp_mp-510557__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -9.161295000000052,
+    "delta_per_atom_eV": -2.290323750000013,
+    "delta_per_bond_eV": 0.34426225760869533,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsN3_theo_mp-1225892": {
+    "reaction_id": "extension_CsN3_theo_mp-1225892__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -6.665695000000035,
+    "delta_per_atom_eV": -1.6664237500000088,
+    "delta_per_bond_eV": 0.2124269430851063,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsO2_exp_mp-1441": {
+    "reaction_id": "extension_CsO2_exp_mp-1441__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 0.19987249999999435,
+    "delta_per_atom_eV": 0.06662416666666478,
+    "delta_per_bond_eV": 0.04002383058608053,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsO2_theo_mp-1096936": {
+    "reaction_id": "extension_CsO2_theo_mp-1096936__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 2.322982500000009,
+    "delta_per_atom_eV": 0.774327500000003,
+    "delta_per_bond_eV": 0.013920777429934555,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsP7_exp_mp-1201790": {
+    "reaction_id": "extension_CsP7_exp_mp-1201790__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.382234166666642,
+    "delta_per_atom_eV": -0.2977792708333302,
+    "delta_per_bond_eV": 0.028698409152289495,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_CsP7_theo_mp-1213206": {
+    "reaction_id": "extension_CsP7_theo_mp-1213206__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.1333366666666365,
+    "delta_per_atom_eV": -0.26666708333332956,
+    "delta_per_bond_eV": 0.019312507977075843,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_K2O_exp_mp-971": {
+    "reaction_id": "extension_K2O_exp_mp-971__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -1.3071137500000098,
+    "delta_per_atom_eV": -0.4357045833333366,
+    "delta_per_bond_eV": -0.07766042288961056,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_K2O_theo_mp-1223784": {
+    "reaction_id": "extension_K2O_theo_mp-1223784__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.691493750000004,
+    "delta_per_atom_eV": -1.5638312500000013,
+    "delta_per_bond_eV": -0.11122416098484858,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_K2S_exp_mp-1022": {
+    "reaction_id": "extension_K2S_exp_mp-1022__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -1.0077531249999945,
+    "delta_per_atom_eV": -0.3359177083333315,
+    "delta_per_bond_eV": -0.2075126620811284,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_KCl_exp_mp-23289": {
+    "reaction_id": "extension_KCl_exp_mp-23289__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 1.5232549999999954,
+    "delta_per_atom_eV": 0.7616274999999977,
+    "delta_per_bond_eV": -0.022385686653771858,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_KF3_exp_mp-1544557": {
+    "reaction_id": "extension_KF3_exp_mp-1544557__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.604543749999992,
+    "delta_per_atom_eV": -1.151135937499998,
+    "delta_per_bond_eV": -0.027915401738533026,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_KF3_theo_mp-2749823": {
+    "reaction_id": "extension_KF3_theo_mp-2749823__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.6020299999999965,
+    "delta_per_atom_eV": -1.1505074999999991,
+    "delta_per_bond_eV": -0.02895214894058993,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_KN3_theo_mp-636056": {
+    "reaction_id": "extension_KN3_theo_mp-636056__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -23.99635000000005,
+    "delta_per_atom_eV": -5.999087500000012,
+    "delta_per_bond_eV": 0.24885385266370671,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_KP_exp_mp-1058315": {
+    "reaction_id": "extension_KP_exp_mp-1058315__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.319927738095241,
+    "delta_per_atom_eV": -2.1599638690476204,
+    "delta_per_bond_eV": -0.3085227332381343,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_KP_theo_mp-1057787": {
+    "reaction_id": "extension_KP_theo_mp-1057787__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.273297738095241,
+    "delta_per_atom_eV": -2.1366488690476206,
+    "delta_per_bond_eV": -0.3072956279749764,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Li2O_exp_mp-1960": {
+    "reaction_id": "extension_Li2O_exp_mp-1960__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 7.00976291666667,
+    "delta_per_atom_eV": 2.33658763888889,
+    "delta_per_bond_eV": -0.09635904545454543,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Li2O_theo_mp-755894": {
+    "reaction_id": "extension_Li2O_theo_mp-755894__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.844387916666662,
+    "delta_per_atom_eV": 1.948129305555554,
+    "delta_per_bond_eV": -0.08675566197508078,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Li2S_exp_mp-1125": {
+    "reaction_id": "extension_Li2S_exp_mp-1125__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.5513610416666666,
+    "delta_per_atom_eV": 1.8504536805555556,
+    "delta_per_bond_eV": -0.06942981715686963,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Li2S_theo_mp-557142": {
+    "reaction_id": "extension_Li2S_theo_mp-557142__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 4.515508541666673,
+    "delta_per_atom_eV": 1.505169513888891,
+    "delta_per_bond_eV": -0.02009581768555052,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Li3N_exp_mp-2341": {
+    "reaction_id": "extension_Li3N_exp_mp-2341__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 2.4660049999999885,
+    "delta_per_atom_eV": 0.6165012499999971,
+    "delta_per_bond_eV": -0.058372387375344226,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_LiCl_exp_mp-22905": {
+    "reaction_id": "extension_LiCl_exp_mp-22905__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.606035833333337,
+    "delta_per_atom_eV": 2.8030179166666684,
+    "delta_per_bond_eV": 0.036910201612903315,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_LiCl_theo_mp-1185319": {
+    "reaction_id": "extension_LiCl_theo_mp-1185319__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.000918333333335,
+    "delta_per_atom_eV": 2.5004591666666673,
+    "delta_per_bond_eV": 0.12336782991202352,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_LiF_exp_mp-1138": {
+    "reaction_id": "extension_LiF_exp_mp-1138__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 8.934693333333348,
+    "delta_per_atom_eV": 4.467346666666674,
+    "delta_per_bond_eV": -0.029762219504239906,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_LiF_theo_mp-1009009": {
+    "reaction_id": "extension_LiF_theo_mp-1009009__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 9.026113333333319,
+    "delta_per_atom_eV": 4.513056666666659,
+    "delta_per_bond_eV": -0.04636250000000003,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_LiP5_exp_mp-2412": {
+    "reaction_id": "extension_LiP5_exp_mp-2412__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.425947142857147,
+    "delta_per_atom_eV": 0.9043245238095245,
+    "delta_per_bond_eV": -0.08961343980758557,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_LiP5_theo_mp-32760": {
+    "reaction_id": "extension_LiP5_theo_mp-32760__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 5.215294642857145,
+    "delta_per_atom_eV": 0.8692157738095242,
+    "delta_per_bond_eV": -0.06729724517267083,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgCl2_exp_mp-23210": {
+    "reaction_id": "extension_MgCl2_exp_mp-23210__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 0.4705266666666539,
+    "delta_per_atom_eV": 0.15684222222221797,
+    "delta_per_bond_eV": -0.003024219704275341,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgCl2_theo_mp-569626": {
+    "reaction_id": "extension_MgCl2_theo_mp-569626__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.2587050000000026,
+    "delta_per_atom_eV": -0.08623500000000088,
+    "delta_per_bond_eV": -0.004241065573770533,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgF2_exp_mp-1072956": {
+    "reaction_id": "extension_MgF2_exp_mp-1072956__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 0.004355000000012765,
+    "delta_per_atom_eV": 0.0014516666666709217,
+    "delta_per_bond_eV": -0.018930197325505452,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgF2_theo_mp-1062842": {
+    "reaction_id": "extension_MgF2_theo_mp-1062842__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 0.06870000000000864,
+    "delta_per_atom_eV": 0.02290000000000288,
+    "delta_per_bond_eV": -0.023331622574955843,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgO_exp_mp-549706": {
+    "reaction_id": "extension_MgO_exp_mp-549706__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.835813750000008,
+    "delta_per_atom_eV": -1.417906875000004,
+    "delta_per_bond_eV": -0.12054526165871762,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgO_theo_mp-1009127": {
+    "reaction_id": "extension_MgO_theo_mp-1009127__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.1526437499999993,
+    "delta_per_atom_eV": -1.0763218749999997,
+    "delta_per_bond_eV": -0.13520731442577033,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgS_exp_mp-1315": {
+    "reaction_id": "extension_MgS_exp_mp-1315__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.6801231249999962,
+    "delta_per_atom_eV": -0.3400615624999981,
+    "delta_per_bond_eV": -0.255302546445605,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_MgS_theo_mp-13032": {
+    "reaction_id": "extension_MgS_theo_mp-13032__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.8326431249999953,
+    "delta_per_atom_eV": -0.41632156249999763,
+    "delta_per_bond_eV": -0.22718109114414972,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1460,6 +2400,7 @@
     "delta_per_atom_eV": -1.468709990421448,
     "delta_per_bond_eV": 0.06493495831632862,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1472,6 +2413,98 @@
     "delta_per_atom_eV": -0.527407902298858,
     "delta_per_bond_eV": -0.03928709756097576,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Na2Cl_theo_mp-1077015": {
+    "reaction_id": "extension_Na2Cl_theo_mp-1077015__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -1.189525000000001,
+    "delta_per_atom_eV": -0.3965083333333337,
+    "delta_per_bond_eV": -0.042020255421686775,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Na2O_exp_mp-2352": {
+    "reaction_id": "extension_Na2O_exp_mp-2352__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -3.917043750000003,
+    "delta_per_atom_eV": -1.305681250000001,
+    "delta_per_bond_eV": -0.14147785564516135,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Na2O_theo_mp-1975297": {
+    "reaction_id": "extension_Na2O_theo_mp-1975297__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.685608749999997,
+    "delta_per_atom_eV": -1.5618695833333325,
+    "delta_per_bond_eV": -0.13923917976190475,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_NaN3_exp_mp-22003": {
+    "reaction_id": "extension_NaN3_exp_mp-22003__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -6.080585000000092,
+    "delta_per_atom_eV": -1.520146250000023,
+    "delta_per_bond_eV": 0.09042297685185133,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_NaN3_theo_mp-1065265": {
+    "reaction_id": "extension_NaN3_theo_mp-1065265__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -21.699155000000033,
+    "delta_per_atom_eV": -5.424788750000008,
+    "delta_per_bond_eV": 0.004953539312617605,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_NaS_exp_mp-409": {
+    "reaction_id": "extension_NaS_exp_mp-409__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.9821581249999989,
+    "delta_per_atom_eV": -0.49107906249999944,
+    "delta_per_bond_eV": -0.20413308964597562,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_NaS_theo_mp-1180106": {
+    "reaction_id": "extension_NaS_theo_mp-1180106__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -4.799773124999995,
+    "delta_per_atom_eV": -2.3998865624999977,
+    "delta_per_bond_eV": -0.003575731922398351,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1484,6 +2517,150 @@
     "delta_per_atom_eV": -2.525742261904745,
     "delta_per_bond_eV": 0.1910490646640119,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Rb2O_exp_mp-1394": {
+    "reaction_id": "extension_Rb2O_exp_mp-1394__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 2.1706062499999934,
+    "delta_per_atom_eV": 0.7235354166666644,
+    "delta_per_bond_eV": 0.0062746942640691805,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Rb2O_theo_mp-2023482": {
+    "reaction_id": "extension_Rb2O_theo_mp-2023482__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -2.2775587500000034,
+    "delta_per_atom_eV": -0.7591862500000012,
+    "delta_per_bond_eV": 0.016492908549783525,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbCl_exp_mp-23299": {
+    "reaction_id": "extension_RbCl_exp_mp-23299__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 3.584817500000002,
+    "delta_per_atom_eV": 1.792408750000001,
+    "delta_per_bond_eV": 0.04914189310689317,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbF_exp_mp-2064": {
+    "reaction_id": "extension_RbF_exp_mp-2064__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 7.848772500000006,
+    "delta_per_atom_eV": 3.924386250000003,
+    "delta_per_bond_eV": 0.05803165873015881,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbF_theo_mp-11718": {
+    "reaction_id": "extension_RbF_theo_mp-11718__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": 3.899402499999998,
+    "delta_per_atom_eV": 1.949701249999999,
+    "delta_per_bond_eV": 0.07556564444444439,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbN3_exp_mp-581833": {
+    "reaction_id": "extension_RbN3_exp_mp-581833__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -5.391072500000043,
+    "delta_per_atom_eV": -1.3477681250000106,
+    "delta_per_bond_eV": 0.20318119408094928,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbN3_theo_mp-1219567": {
+    "reaction_id": "extension_RbN3_theo_mp-1219567__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -14.254212500000087,
+    "delta_per_atom_eV": -3.5635531250000216,
+    "delta_per_bond_eV": 0.09603528544142556,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbP_exp_mp-1179688": {
+    "reaction_id": "extension_RbP_exp_mp-1179688__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -3.862905238095239,
+    "delta_per_atom_eV": -1.9314526190476196,
+    "delta_per_bond_eV": -0.266519048994975,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbP_theo_mp-1058499": {
+    "reaction_id": "extension_RbP_theo_mp-1058499__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -3.8208052380952404,
+    "delta_per_atom_eV": -1.9104026190476202,
+    "delta_per_bond_eV": -0.2651157156616417,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbS_exp_mp-558071": {
+    "reaction_id": "extension_RbS_exp_mp-558071__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.6433856249999961,
+    "delta_per_atom_eV": -0.32169281249999804,
+    "delta_per_bond_eV": -0.017884920042175345,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_RbS_theo_mp-1179684": {
+    "reaction_id": "extension_RbS_theo_mp-1179684__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -5.469430624999995,
+    "delta_per_atom_eV": -2.7347153124999974,
+    "delta_per_bond_eV": 0.2525492904841406,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1496,6 +2673,7 @@
     "delta_per_atom_eV": -0.9767216666666627,
     "delta_per_bond_eV": 0.02940813007787202,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1508,6 +2686,111 @@
     "delta_per_atom_eV": -1.396343437500029,
     "delta_per_bond_eV": 0.023228761734169878,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Sr3P4_exp_mp-14288": {
+    "reaction_id": "extension_Sr3P4_exp_mp-14288__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -7.330305952380964,
+    "delta_per_atom_eV": -1.047186564625852,
+    "delta_per_bond_eV": -0.24147519610982943,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_Sr3P4_theo_mp-682953": {
+    "reaction_id": "extension_Sr3P4_theo_mp-682953__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -7.555405952380966,
+    "delta_per_atom_eV": -1.079343707482995,
+    "delta_per_bond_eV": -0.24247646948193896,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_SrF2_exp_mp-1102240": {
+    "reaction_id": "extension_SrF2_exp_mp-1102240__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -1.626355000000001,
+    "delta_per_atom_eV": -0.5421183333333337,
+    "delta_per_bond_eV": -0.005359318960149462,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_SrF2_theo_mp-1102911": {
+    "reaction_id": "extension_SrF2_theo_mp-1102911__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.4441650000000008,
+    "delta_per_atom_eV": -0.14805500000000027,
+    "delta_per_bond_eV": -0.01148852272727273,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_SrN_exp_mp-1058586": {
+    "reaction_id": "extension_SrN_exp_mp-1058586__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -9.079050000000016,
+    "delta_per_atom_eV": -4.539525000000008,
+    "delta_per_bond_eV": -0.05409145121951239,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_SrO2_exp_mp-726705": {
+    "reaction_id": "extension_SrO2_exp_mp-726705__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -5.761557500000004,
+    "delta_per_atom_eV": -1.9205191666666679,
+    "delta_per_bond_eV": -0.08038653510039007,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_SrO2_theo_mp-2763179": {
+    "reaction_id": "extension_SrO2_theo_mp-2763179__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -5.256629999999991,
+    "delta_per_atom_eV": -1.752209999999997,
+    "delta_per_bond_eV": -0.07790488406973453,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
+    "warnings": [],
+    "error": null
+  },
+  "extension_SrS_exp_mp-10627": {
+    "reaction_id": "extension_SrS_exp_mp-10627__decomposition",
+    "type": "decomposition_to_elements",
+    "metric": "icohp",
+    "bond_pair": null,
+    "delta_per_formula_unit_eV": -0.217668124999995,
+    "delta_per_atom_eV": -0.1088340624999975,
+    "delta_per_bond_eV": -0.21166122994652375,
+    "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1520,6 +2803,7 @@
     "delta_per_atom_eV": -0.6461000000000053,
     "delta_per_bond_eV": -0.0506994361875186,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1532,6 +2816,7 @@
     "delta_per_atom_eV": -0.6509166666666827,
     "delta_per_bond_eV": -0.04700294142101319,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1544,6 +2829,7 @@
     "delta_per_atom_eV": -0.6266658333333387,
     "delta_per_bond_eV": -0.060232189872536146,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1556,6 +2842,7 @@
     "delta_per_atom_eV": 0.37354750000000037,
     "delta_per_bond_eV": -0.03645674237288134,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1568,6 +2855,7 @@
     "delta_per_atom_eV": 3.0197300000000045,
     "delta_per_bond_eV": 0.1336121780303031,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1580,6 +2868,7 @@
     "delta_per_atom_eV": 4.0582291666666706,
     "delta_per_bond_eV": 0.14916924238410612,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1592,6 +2881,7 @@
     "delta_per_atom_eV": 5.037086249999994,
     "delta_per_bond_eV": 0.02271671341463405,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1604,6 +2894,7 @@
     "delta_per_atom_eV": 0.6603129999999993,
     "delta_per_bond_eV": 0.732627205908289,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1616,6 +2907,7 @@
     "delta_per_atom_eV": -4.166435000000003,
     "delta_per_bond_eV": 0.014707084328714592,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1628,6 +2920,7 @@
     "delta_per_atom_eV": -6.439124000000004,
     "delta_per_bond_eV": 0.10365035695006419,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1640,6 +2933,7 @@
     "delta_per_atom_eV": -2.1018785714285713,
     "delta_per_bond_eV": 0.007335298412124297,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1652,6 +2946,7 @@
     "delta_per_atom_eV": -7.324416111111108,
     "delta_per_bond_eV": 0.19740484015594548,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1664,6 +2959,7 @@
     "delta_per_atom_eV": -11.26242937500001,
     "delta_per_bond_eV": 0.045156837044534215,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1676,6 +2972,7 @@
     "delta_per_atom_eV": 1.9870758333333332,
     "delta_per_bond_eV": 0.34182535771144296,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1688,6 +2985,7 @@
     "delta_per_atom_eV": -1.4506833333333333,
     "delta_per_bond_eV": -0.11571985875706214,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1700,6 +2998,7 @@
     "delta_per_atom_eV": -0.6308166666666631,
     "delta_per_bond_eV": 0.10423490996243051,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1712,6 +3011,7 @@
     "delta_per_atom_eV": -0.25900833333333867,
     "delta_per_bond_eV": -0.08057291121047605,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1724,6 +3024,7 @@
     "delta_per_atom_eV": -1.3396875000000001,
     "delta_per_bond_eV": 0.042232207792207765,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1736,6 +3037,7 @@
     "delta_per_atom_eV": 1.4066290000000052,
     "delta_per_bond_eV": 0.11274165002627456,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1748,6 +3050,7 @@
     "delta_per_atom_eV": -1.2556515624999962,
     "delta_per_bond_eV": -0.13385774893115107,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1760,6 +3063,7 @@
     "delta_per_atom_eV": 0.9904674999999994,
     "delta_per_bond_eV": -0.0610502816901409,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -1772,6 +3076,7 @@
     "delta_per_atom_eV": -2.3153750000000013,
     "delta_per_bond_eV": -0.025609713364993236,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1784,6 +3089,7 @@
     "delta_per_atom_eV": -3.3610550000000123,
     "delta_per_bond_eV": 0.27921824683692575,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1796,6 +3102,7 @@
     "delta_per_atom_eV": -1.4409099999999977,
     "delta_per_bond_eV": 0.022346736507936726,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1808,6 +3115,7 @@
     "delta_per_atom_eV": -1.8955243750000008,
     "delta_per_bond_eV": 0.1765782224065242,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1820,6 +3128,7 @@
     "delta_per_atom_eV": -0.4922911111111144,
     "delta_per_bond_eV": 0.028993957406229898,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1832,6 +3141,7 @@
     "delta_per_atom_eV": -3.779799999999998,
     "delta_per_bond_eV": 0.11437523923444981,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1844,6 +3154,7 @@
     "delta_per_atom_eV": -0.6531675000000039,
     "delta_per_bond_eV": -0.018454617181883626,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1856,6 +3167,7 @@
     "delta_per_atom_eV": -1.4423716666666602,
     "delta_per_bond_eV": -0.172563293727253,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1868,6 +3180,7 @@
     "delta_per_atom_eV": -0.7179247916666665,
     "delta_per_bond_eV": -0.10369630196078429,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1880,6 +3193,7 @@
     "delta_per_atom_eV": -0.39061666666666667,
     "delta_per_bond_eV": -0.0028456986729118033,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1892,6 +3206,7 @@
     "delta_per_atom_eV": -1.385364999999998,
     "delta_per_bond_eV": 0.05486528012684995,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1904,6 +3219,7 @@
     "delta_per_atom_eV": -0.8961399999999982,
     "delta_per_bond_eV": 0.023622658914728714,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1916,6 +3232,7 @@
     "delta_per_atom_eV": -0.33952060344829427,
     "delta_per_bond_eV": -0.01780972368421066,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1928,6 +3245,7 @@
     "delta_per_atom_eV": -0.24723500000000076,
     "delta_per_bond_eV": -0.009641750158528917,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1940,6 +3258,7 @@
     "delta_per_atom_eV": -0.13824875000000048,
     "delta_per_bond_eV": -0.04122296475622118,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1952,6 +3271,7 @@
     "delta_per_atom_eV": -5.27339833333333,
     "delta_per_bond_eV": -0.0018310333169411497,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1964,6 +3284,7 @@
     "delta_per_atom_eV": -1.99676208333333,
     "delta_per_bond_eV": 0.03004966926516134,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1976,6 +3297,7 @@
     "delta_per_atom_eV": -1.841121666666666,
     "delta_per_bond_eV": 0.2658057096774194,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -1988,6 +3310,7 @@
     "delta_per_atom_eV": 0.08295675000001665,
     "delta_per_bond_eV": -0.061006794800188446,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -2000,6 +3323,7 @@
     "delta_per_atom_eV": -2.444692499999997,
     "delta_per_bond_eV": -0.03401194394213369,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2012,6 +3336,7 @@
     "delta_per_atom_eV": -10.873426250000007,
     "delta_per_bond_eV": -0.12028158533501909,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2024,6 +3349,7 @@
     "delta_per_atom_eV": -2.7505366666666595,
     "delta_per_bond_eV": 0.20118443992888013,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2036,6 +3362,7 @@
     "delta_per_atom_eV": -1.528763333333328,
     "delta_per_bond_eV": 0.09582004663557667,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2048,6 +3375,7 @@
     "delta_per_atom_eV": -0.7459835714285761,
     "delta_per_bond_eV": -0.0028601400392796184,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2060,6 +3388,7 @@
     "delta_per_atom_eV": -1.6013937499999988,
     "delta_per_bond_eV": -0.03380571969696966,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2072,6 +3401,7 @@
     "delta_per_atom_eV": -2.20567125,
     "delta_per_bond_eV": -0.1487261274509804,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2084,6 +3414,7 @@
     "delta_per_atom_eV": -5.556173571428575,
     "delta_per_bond_eV": 0.27183169015993464,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2096,6 +3427,7 @@
     "delta_per_atom_eV": -1.2039838690476152,
     "delta_per_bond_eV": -0.12206153640175049,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2108,6 +3440,7 @@
     "delta_per_atom_eV": -2.6081325000000035,
     "delta_per_bond_eV": -0.005015463885429672,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2120,6 +3453,7 @@
     "delta_per_atom_eV": -3.711692499999991,
     "delta_per_bond_eV": 0.0560357067247822,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2132,6 +3466,7 @@
     "delta_per_atom_eV": -3.375598333333336,
     "delta_per_bond_eV": 0.1745891844919785,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2144,6 +3479,7 @@
     "delta_per_atom_eV": -1.6587150000000044,
     "delta_per_bond_eV": 0.013475265863453656,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2156,6 +3492,7 @@
     "delta_per_atom_eV": 1.3340016666666645,
     "delta_per_bond_eV": 0.009051009259259168,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -2168,6 +3505,7 @@
     "delta_per_atom_eV": -3.4600974999999927,
     "delta_per_bond_eV": 0.0731800202366128,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2180,6 +3518,7 @@
     "delta_per_atom_eV": -3.376731874999998,
     "delta_per_bond_eV": -0.21842195275119614,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2192,6 +3531,7 @@
     "delta_per_atom_eV": 1.8362980000000007,
     "delta_per_bond_eV": 0.3240726940639269,
     "delta_per_bond_conservative": false,
+    "bonding_label": "endobondic",
     "warnings": [],
     "error": null
   },
@@ -2204,6 +3544,7 @@
     "delta_per_atom_eV": -8.837857499999988,
     "delta_per_bond_eV": 0.002189770057962448,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2216,6 +3557,7 @@
     "delta_per_atom_eV": -4.09095250000002,
     "delta_per_bond_eV": -0.0879098120281043,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2228,6 +3570,7 @@
     "delta_per_atom_eV": -2.883478750000002,
     "delta_per_bond_eV": 0.12333936657169986,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2240,6 +3583,7 @@
     "delta_per_atom_eV": -5.207958749999992,
     "delta_per_bond_eV": -0.07930458270676666,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2252,6 +3596,7 @@
     "delta_per_atom_eV": -5.826411249999999,
     "delta_per_bond_eV": -0.09895439849624055,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2264,6 +3609,7 @@
     "delta_per_atom_eV": -1.879543125000012,
     "delta_per_bond_eV": 0.08701975542041218,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2276,6 +3622,7 @@
     "delta_per_atom_eV": -1.6673762499999984,
     "delta_per_bond_eV": -0.06412985576923069,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2288,6 +3635,7 @@
     "delta_per_atom_eV": -0.5516691666666631,
     "delta_per_bond_eV": 0.036362153457910384,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   },
@@ -2300,6 +3648,7 @@
     "delta_per_atom_eV": -0.2532800000000055,
     "delta_per_bond_eV": 0.03962788095238079,
     "delta_per_bond_conservative": false,
+    "bonding_label": "exobondic",
     "warnings": [],
     "error": null
   }

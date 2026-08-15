@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_MgCl2_exp_mp-23210__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_MgCl2_exp_mp-23210",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Cl_mp-22848",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

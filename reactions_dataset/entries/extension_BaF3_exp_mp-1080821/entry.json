@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_BaF3_exp_mp-1080821",
+  "formula": "BaF3",
+  "composition": {
+    "Ba": 2,
+    "F": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "P2_1/m",
+  "space_group_number": 11,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -14.691979999999996,
+    "sum_per_atom_eV": -1.8364974999999994,
+    "sum_per_formula_unit_eV": -7.345989999999998,
+    "mean_per_bond_eV": -0.06996180952380951,
+    "n_bonds": 210,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.25873,
+        "sum_eV": -4.13968,
+        "n_bonds": 16
+      },
+      "Ba-F": {
+        "mean_eV": -0.10797,
+        "sum_eV": -8.20572,
+        "n_bonds": 76
+      },
+      "F-F": {
+        "mean_eV": -0.01988627118644068,
+        "sum_eV": -2.3465800000000003,
+        "n_bonds": 118
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.5647700000000007,
+    "sum_per_atom_eV": 0.3205962500000001,
+    "sum_per_formula_unit_eV": 1.2823850000000003,
+    "mean_per_bond_eV": 0.01221319047619048,
+    "n_bonds": 210,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.018481249999999998,
+        "sum_eV": 0.29569999999999996,
+        "n_bonds": 16
+      },
+      "Ba-F": {
+        "mean_eV": 0.010864473684210523,
+        "sum_eV": 0.8256999999999998,
+        "n_bonds": 76
+      },
+      "F-F": {
+        "mean_eV": 0.012231949152542372,
+        "sum_eV": 1.4433699999999998,
+        "n_bonds": 118
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BaF3_exp_mp-1080821"
+}

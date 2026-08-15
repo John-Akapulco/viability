@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_BeF2_theo_mp-975644",
+  "formula": "BeF2",
+  "composition": {
+    "Be": 1,
+    "F": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -18.385020000000054,
+    "sum_per_atom_eV": -6.128340000000018,
+    "sum_per_formula_unit_eV": -18.385020000000054,
+    "mean_per_bond_eV": -0.1021390000000003,
+    "n_bonds": 180,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.2149109090909091,
+        "sum_eV": -4.72804,
+        "n_bonds": 22
+      },
+      "Be-F": {
+        "mean_eV": -0.18675888888888903,
+        "sum_eV": -13.446640000000011,
+        "n_bonds": 72
+      },
+      "F-F": {
+        "mean_eV": -0.0024458139534883723,
+        "sum_eV": -0.21034,
+        "n_bonds": 86
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.640630000000001,
+    "sum_per_atom_eV": 0.8802100000000004,
+    "sum_per_formula_unit_eV": 2.640630000000001,
+    "mean_per_bond_eV": 0.014670166666666673,
+    "n_bonds": 180,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.014824545454545453,
+        "sum_eV": 0.32614,
+        "n_bonds": 22
+      },
+      "Be-F": {
+        "mean_eV": 0.02724555555555556,
+        "sum_eV": 1.9616800000000003,
+        "n_bonds": 72
+      },
+      "F-F": {
+        "mean_eV": 0.0041024418604651185,
+        "sum_eV": 0.3528100000000002,
+        "n_bonds": 86
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BeF2_theo_mp-975644"
+}
