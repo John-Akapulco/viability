@@ -44,6 +44,14 @@ and Statistical Analysis}
 \begin{document}
 \maketitle
 
+\begin{center}
+\small\itshape Update, August 15, 2026: missions \#3--\#5 added
+(dimensionality/min-cut, antibonding population, reaction ICOHP), see
+\S\ref{sec:followups}. The body of this report below (through the
+conclusion and appendices) documents the original campaign 2 (186
+compounds, percolation weight only) unmodified.
+\end{center}
+
 \tableofcontents
 \newpage
 
@@ -334,6 +342,115 @@ SISSO-class tool is warranted.
 \noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
 \noindent\textit{Data:} \texttt{analysis/percolation\_vs\_hull.csv} \\
 \noindent\textit{Detailed report:} \texttt{analysis/REPORT.md}
+
+\section{Campaign 2 follow-ups (missions \#3 to \#5)}
+\label{sec:followups}
+
+Three further descriptors were built in later sessions, all tested against
+\texttt{formation\_energy\_per\_atom} (introduced in mission \#3 as an
+alternative target to \texttt{energy\_above\_hull}, generally more
+correlatable) rather than the hull. Missions \#3 and \#4 reuse the
+186-compound dataset above unmodified; mission \#5 draws in part on a
+\textbf{74-compound extension campaign} (\texttt{extension\_*}: elemental
+references, ionic compounds and polymorphs outside the main set), not
+reprocessed into this report's appendices --- see the repository's
+\texttt{README.md} for its full detail.
+
+\textbf{A pattern repeats across all three missions}: each new descriptor
+reaches a statistically significant \emph{global} correlation, stronger
+than anything the percolation weight ever achieved
+(\S\ref{sec:limits}) --- but in all three cases that global correlation
+turns out to be substantially, or entirely, a clustering effect between
+bond types or between metals and gapped compounds, rather than a robust
+relationship \emph{within} a homogeneous group.
+
+\subsection{Mission \#3: network dimensionality and periodic min-cut}
+
+Two new descriptors, \texttt{percolation\_path.py} left unchanged:
+\texttt{network\_dimensionality.py} (0D--3D classification via a relative
+bond-strength threshold + breadth-first search) and
+\texttt{periodic\_mincut.py} (minimum cut via \texttt{networkx} max-flow,
+separability rather than traversability). Headline: the normalized min-cut
+is the \textbf{first descriptor in the project to reach a significant
+global correlation} ($\rho=0.285$, $p=1.0\times10^{-4}$, $n=186$), likely
+driven in part by between-bond-type clustering; dimensionality alone does
+not separate \texttt{formation\_energy\_per\_atom}
+(Kruskal--Wallis $p=0.19$).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{mincut_vs_formation_energy.png}
+\end{center}
+
+\subsection{Mission \#4: antibonding population near the Fermi level}
+
+A distinct question: not the integrated ICOHP (one number per bond), but
+\emph{how} COHP is distributed in energy --- the occupied antibonding
+fraction just below the Fermi level/VBM, by analogy with
+Peierls/Jahn--Teller electronic instabilities (new module
+\texttt{cohp\_extraction.py}, validated by exact cross-check against
+\texttt{ICOHPLIST.lobster} on the 6 pilot compounds). Headline:
+$\rho=-0.328$, $p=5.0\times10^{-6}$ ($n=186$) --- the strongest global
+correlation in the project at the time. The sign is \emph{opposite} the
+naive Peierls/Jahn--Teller reading. Diagnostics: the effect is
+substantially driven by metal/gapped clustering, but the
+\texttt{bond\_type=covalent} subgroup ($n=23$) survives stratification
+($p=0.018$--$0.029$) --- the only subgroup in the project, to date, to
+hold up under such a test.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
+
+\subsection{Mission \#5: reaction ICOHP}
+
+An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a compound's
+total ICOHP ``cheaper'' than the same atoms in elemental reference
+form (new module \texttt{reaction\_icohp.py}, reaction balanced via
+\texttt{pymatgen.analysis.reaction\_calculator})? Extended to 192
+compounds using the 74-compound extension campaign (62 elemental
+references computed). Headline: $\rho=0.370$, $p=3.9\times10^{-7}$
+($n=177$) --- numerically the strongest global correlation in the project
+to date, this time with an intuitive sign (less bonding than the elemental
+state $\Rightarrow$ less stable formation). But \textbf{no \texttt{bond\_type}
+subgroup survives stratification} (Kruskal--Wallis $p=2.1\times10^{-6}$ for
+the descriptor, $p=5.0\times10^{-8}$ for the target, across the three
+strata) --- unlike mission \#4, the clustering effect here explains the
+entire observed signal. Against \texttt{energy\_above\_hull} the
+correlation is absent ($\rho=0.09$, $p=0.20$).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
+\end{center}
+
+\subsection{Comparative summary}
+
+All four descriptors tested against \texttt{formation\_energy\_per\_atom},
+on the same common subsample ($n=177$, the intersection of campaign 2's
+186 compounds and mission \#5's 192 computable rows):
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Descriptor & $n$ & $\rho$ & $p$ \\
+\midrule
+Reaction ICOHP (mission \#5) & 177 & 0.370 & $3.9\times10^{-7}$ \\
+Antibonding population, normalized (mission \#4) & 177 & $-0.337$ & $4.5\times10^{-6}$ \\
+Periodic min-cut, normalized (mission \#3) & 177 & 0.313 & $2.3\times10^{-5}$ \\
+Percolation weight, normalized (mission \#1) & 177 & 0.104 & 0.170 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Ranking by raw correlation strength ($\rho$) is not the same as ranking by
+reliability: mission \#5 leads numerically but is also the only one where
+\emph{no} subgroup survives stratification (above), whereas mission \#4
+keeps a significant covalent subgroup. \textbf{Still no SISSO}: four
+descriptors now show a global signal, but none yet sits in the clean,
+well-powered-per-stratum situation that would justify a combinatorial
+symbolic search.
+
+\noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
+\texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
 
 \appendix
 \section{Compound List}

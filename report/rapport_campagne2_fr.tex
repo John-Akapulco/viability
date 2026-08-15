@@ -44,6 +44,14 @@ et analyse statistique}
 \begin{document}
 \maketitle
 
+\begin{center}
+\small\itshape Mise à jour du 15 août 2026 : ajout des missions \#3 à \#5
+(dimensionnalité/coupe minimale, population antiliante, ICOHP de réaction),
+voir \S\ref{sec:suites}. Le corps du rapport ci-dessous (jusqu'à la
+conclusion et les annexes) documente la campagne 2 originale (186
+composés, poids de percolation seul) sans modification.
+\end{center}
+
 \tableofcontents
 \newpage
 
@@ -343,6 +351,120 @@ résultat avant d'envisager un outillage de type SISSO.
 \noindent\textit{Code source :} \url{https://github.com/John-Akapulco/viability} \\
 \noindent\textit{Données :} \texttt{analysis/percolation\_vs\_hull.csv} \\
 \noindent\textit{Rapport détaillé :} \texttt{analysis/REPORT.md}
+
+\section{Suites de la campagne 2 (missions \#3 à \#5)}
+\label{sec:suites}
+
+Trois descripteurs supplémentaires ont été construits dans des sessions
+ultérieures, tous testés contre \texttt{formation\_energy\_per\_atom}
+(introduit en mission \#3 comme cible alternative à
+\texttt{energy\_above\_hull}, plus corrélable en général) plutôt que contre
+le hull. Les missions \#3 et \#4 réutilisent le jeu de 186 composés
+ci-dessus sans le modifier ; la mission \#5 s'appuie en partie sur une
+\textbf{campagne complémentaire de 74 composés} (\texttt{extension\_*} :
+références élémentaires, composés ioniques et polymorphes hors du jeu
+principal), non retraitée dans les annexes de ce rapport --- voir
+\texttt{README.md} du dépôt pour son détail.
+
+\textbf{Un motif se répète dans les trois missions} : chaque nouveau
+descripteur atteint une corrélation \emph{globale} statistiquement
+significative, plus forte que tout ce que le poids de percolation a jamais
+montré (\S\ref{sec:limites}) --- mais dans les trois cas, cette corrélation
+globale s'avère être substantiellement, voire entièrement, un effet de
+regroupement entre types de liaison ou entre métaux et composés à gap,
+plutôt qu'une relation robuste \emph{au sein} d'un groupe homogène.
+
+\subsection{Mission \#3 : dimensionnalité du réseau et coupe minimale périodique}
+
+Deux nouveaux descripteurs, \texttt{percolation\_path.py} inchangé :
+\texttt{network\_dimensionality.py} (classification 0D--3D par seuil de
+force de liaison relative + parcours en largeur) et
+\texttt{periodic\_mincut.py} (coupe minimale de flot maximal
+\texttt{networkx}, séparabilité plutôt que traversabilité). Résultat
+principal : la coupe minimale normalisée est le \textbf{premier
+descripteur du projet à atteindre une corrélation globale significative}
+($\rho=0.285$, $p=1.0\times10^{-4}$, $n=186$), mais probablement portée en
+partie par un regroupement entre types de liaison ; la dimensionnalité
+seule ne sépare pas \texttt{formation\_energy\_per\_atom}
+(Kruskal--Wallis $p=0.19$).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{mincut_vs_formation_energy.png}
+\end{center}
+
+\subsection{Mission \#4 : population antiliante près du niveau de Fermi}
+
+Question distincte : non plus l'ICOHP intégré (un nombre par liaison), mais
+\emph{comment} le COHP se répartit en énergie --- la fraction
+d'antiliaison occupée juste sous le niveau de Fermi/VBM, par analogie avec
+les instabilités électroniques de type Peierls/Jahn--Teller (nouveau
+module \texttt{cohp\_extraction.py}, validé par recoupement exact avec
+\texttt{ICOHPLIST.lobster} sur les 6 composés pilotes). Résultat :
+$\rho=-0.328$, $p=5.0\times10^{-6}$ ($n=186$) --- la corrélation globale la
+plus forte du projet à l'époque. Le signe est \emph{inverse} de la lecture
+naïve Peierls/Jahn--Teller. Diagnostics : effet substantiellement porté par
+le regroupement métal/gap, mais le sous-groupe \texttt{bond\_type=covalent}
+($n=23$) survit à la stratification ($p=0.018$--$0.029$) --- seul
+sous-groupe de tout le projet, à ce jour, à résister à un tel test.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
+
+\subsection{Mission \#5 : ICOHP de réaction}
+
+Un analogue ICOHP de \texttt{formation\_energy\_per\_atom} : l'ICOHP total
+d'un composé est-il \og{}meilleur marché\fg{} que celui des mêmes atomes
+sous forme d'éléments de référence (nouveau module
+\texttt{reaction\_icohp.py}, réaction balancée par
+\texttt{pymatgen.analysis.reaction\_calculator}) ? Étendu à 192 composés
+via la campagne complémentaire de 74 composés (62 références élémentaires
+calculées). Résultat : $\rho=0.370$, $p=3.9\times10^{-7}$ ($n=177$) ---
+numériquement la corrélation globale la plus forte du projet à ce jour,
+avec cette fois un signe intuitif (moins de liaison qu'à l'état élémentaire
+$\Rightarrow$ formation moins stable). Mais \textbf{aucun sous-groupe
+\texttt{bond\_type} ne résiste à la stratification} (Kruskal--Wallis
+$p=2.1\times10^{-6}$ pour le descripteur, $p=5.0\times10^{-8}$ pour la
+cible, à travers les trois strates) --- contrairement à la mission \#4, le
+regroupement explique ici la totalité du signal observé. Contre
+\texttt{energy\_above\_hull}, la corrélation est absente ($\rho=0.09$,
+$p=0.20$).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
+\end{center}
+
+\subsection{Synthèse comparative}
+
+Les quatre descripteurs testés contre \texttt{formation\_energy\_per\_atom},
+sur le même sous-échantillon commun ($n=177$, intersection des 186
+composés de la campagne 2 et des 192 lignes calculables de la mission
+\#5) :
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Descripteur & $n$ & $\rho$ & $p$ \\
+\midrule
+ICOHP de réaction (mission \#5) & 177 & 0.370 & $3.9\times10^{-7}$ \\
+Population antiliante, normalisée (mission \#4) & 177 & $-0.337$ & $4.5\times10^{-6}$ \\
+Coupe minimale, normalisée (mission \#3) & 177 & 0.313 & $2.3\times10^{-5}$ \\
+Poids de percolation, normalisé (mission \#1) & 177 & 0.104 & 0.170 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Le classement par force brute de corrélation ($\rho$) n'est pas le
+classement par fiabilité : la mission \#5 est numériquement en tête mais
+c'est aussi la seule dont \emph{aucun} sous-groupe ne survit à la
+stratification (\S\ref{sec:suites} ci-dessus), alors que la mission \#4
+garde un sous-groupe covalent significatif. \textbf{Toujours pas de SISSO}
+: quatre descripteurs montrent maintenant un signal global, mais aucun n'a
+encore la situation propre, bien alimentée par strate, qui justifierait une
+recherche symbolique combinatoire.
+
+\noindent\textit{Rapports détaillés :} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
+\texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
 
 \appendix
 \section{Liste des composés}
