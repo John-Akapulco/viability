@@ -1,0 +1,18 @@
+{
+  "label": "SrS",
+  "mp_id": "mp-10627",
+  "formula": "SrS",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "S-Sr",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.7896,
+  "energy_above_hull_eV_per_atom": 0.2996298049999986,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Pm-3m",
+  "note": "extension4 batch: exp_polymorph pick for S-Sr, selected by energy_above_hull among MP's SrS entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

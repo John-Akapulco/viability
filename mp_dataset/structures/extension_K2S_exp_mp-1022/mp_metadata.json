@@ -1,0 +1,18 @@
+{
+  "label": "K2S",
+  "mp_id": "mp-1022",
+  "formula": "K2S",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "K-S",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.3215000000000003,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 3,
+  "spacegroup": "Fm-3m",
+  "note": "extension4 batch: exp_polymorph pick for K-S, selected by energy_above_hull among MP's K2S entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

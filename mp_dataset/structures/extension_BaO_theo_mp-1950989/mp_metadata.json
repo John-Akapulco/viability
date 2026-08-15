@@ -1,0 +1,18 @@
+{
+  "label": "BaO",
+  "mp_id": "mp-1950989",
+  "formula": "BaO",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ba-O",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 2.5282,
+  "energy_above_hull_eV_per_atom": 0.04343597749999972,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "P6_3/mmc",
+  "note": "extension4 batch: theo_far_hull pick for Ba-O, selected by energy_above_hull among MP's BaO entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

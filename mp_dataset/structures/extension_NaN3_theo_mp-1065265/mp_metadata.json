@@ -1,0 +1,18 @@
+{
+  "label": "NaN3",
+  "mp_id": "mp-1065265",
+  "formula": "NaN3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "N-Na",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 0.7288,
+  "energy_above_hull_eV_per_atom": 1.0162235174999994,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "C2/m",
+  "note": "extension4 batch: theo_far_hull pick for N-Na, selected by energy_above_hull among MP's NaN3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

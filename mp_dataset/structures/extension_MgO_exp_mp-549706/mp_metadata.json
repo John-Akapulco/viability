@@ -1,0 +1,18 @@
+{
+  "label": "MgO",
+  "mp_id": "mp-549706",
+  "formula": "MgO",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Mg-O",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 3.3701,
+  "energy_above_hull_eV_per_atom": 0.11804199249999936,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "P6_3mc",
+  "note": "extension4 batch: exp_polymorph pick for Mg-O, selected by energy_above_hull among MP's MgO entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

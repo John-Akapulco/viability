@@ -1,0 +1,18 @@
+{
+  "label": "RbS",
+  "mp_id": "mp-558071",
+  "formula": "RbS",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Rb-S",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.7115,
+  "energy_above_hull_eV_per_atom": 0.0018650299999998232,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "Immm",
+  "note": "extension4 batch: exp_polymorph pick for Rb-S, selected by energy_above_hull among MP's RbS entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

@@ -1,0 +1,18 @@
+{
+  "label": "Li2S",
+  "mp_id": "mp-1125",
+  "formula": "Li2S",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Li-S",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 3.8953999999999995,
+  "energy_above_hull_eV_per_atom": 0.061509288333333245,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Pnma",
+  "note": "extension4 batch: exp_polymorph pick for Li-S, selected by energy_above_hull among MP's Li2S entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

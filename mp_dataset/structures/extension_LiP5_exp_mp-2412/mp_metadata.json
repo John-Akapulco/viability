@@ -1,0 +1,18 @@
+{
+  "label": "LiP5",
+  "mp_id": "mp-2412",
+  "formula": "LiP5",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Li-P",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.2571000000000003,
+  "energy_above_hull_eV_per_atom": 0.007694938690475439,
+  "theoretical": false,
+  "nsites": 24,
+  "spacegroup": "Pna2_1",
+  "note": "extension4 batch: exp_polymorph pick for Li-P, selected by energy_above_hull among MP's LiP5 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

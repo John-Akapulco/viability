@@ -1,0 +1,18 @@
+{
+  "label": "Ca3N2",
+  "mp_id": "mp-1047",
+  "formula": "Ca3N2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ca-N",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 0.7787000000000002,
+  "energy_above_hull_eV_per_atom": 0.01669766374999959,
+  "theoretical": false,
+  "nsites": 10,
+  "spacegroup": "R-3c",
+  "note": "extension4 batch: exp_polymorph pick for Ca-N, selected by energy_above_hull among MP's Ca3N2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

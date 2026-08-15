@@ -1,0 +1,18 @@
+{
+  "label": "SrF2",
+  "mp_id": "mp-1102240",
+  "formula": "SrF2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "F-Sr",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 6.3522,
+  "energy_above_hull_eV_per_atom": 0.06457278833333291,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Pnma",
+  "note": "extension4 batch: exp_polymorph pick for F-Sr, selected by energy_above_hull among MP's SrF2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

@@ -1,0 +1,18 @@
+{
+  "label": "Li2S",
+  "mp_id": "mp-557142",
+  "formula": "Li2S",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Li-S",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 3.1532000000000004,
+  "energy_above_hull_eV_per_atom": 0.1749633300000002,
+  "theoretical": true,
+  "nsites": 6,
+  "spacegroup": "P6_3/mmc",
+  "note": "extension4 batch: theo_far_hull pick for Li-S, selected by energy_above_hull among MP's Li2S entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

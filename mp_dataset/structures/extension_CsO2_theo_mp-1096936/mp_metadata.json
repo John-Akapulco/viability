@@ -1,0 +1,18 @@
+{
+  "label": "CsO2",
+  "mp_id": "mp-1096936",
+  "formula": "CsO2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Cs-O",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0940473483333335,
+  "theoretical": true,
+  "nsites": 3,
+  "spacegroup": "Cmmm",
+  "note": "extension4 batch: theo_far_hull pick for Cs-O, selected by energy_above_hull among MP's CsO2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

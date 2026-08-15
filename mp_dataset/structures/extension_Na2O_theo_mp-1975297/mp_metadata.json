@@ -1,0 +1,18 @@
+{
+  "label": "Na2O",
+  "mp_id": "mp-1975297",
+  "formula": "Na2O",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Na-O",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 1.6666999999999998,
+  "energy_above_hull_eV_per_atom": 0.09812461166666742,
+  "theoretical": true,
+  "nsites": 6,
+  "spacegroup": "C2/m",
+  "note": "extension4 batch: theo_far_hull pick for Na-O, selected by energy_above_hull among MP's Na2O entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

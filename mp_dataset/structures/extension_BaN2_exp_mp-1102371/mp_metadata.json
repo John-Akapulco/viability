@@ -1,0 +1,18 @@
+{
+  "label": "BaN2",
+  "mp_id": "mp-1102371",
+  "formula": "BaN2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ba-N",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 2.056778179166667,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Cc",
+  "note": "extension4 batch: exp_polymorph pick for Ba-N, selected by energy_above_hull among MP's BaN2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

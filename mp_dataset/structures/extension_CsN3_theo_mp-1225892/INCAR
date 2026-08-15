@@ -1,0 +1,14 @@
+EDIFF = 1e-06
+ENCUT = 600.0
+IBRION = -1
+ISMEAR = 0
+ISYM = -1
+KPAR = 2
+LASPH = True
+LCHARG = True
+LWAVE = True
+NBANDS = 17
+NPAR = 4
+NSW = 0
+PREC = Accurate
+SIGMA = 0.05

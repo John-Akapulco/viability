@@ -1,0 +1,18 @@
+{
+  "label": "RbCl",
+  "mp_id": "mp-23299",
+  "formula": "RbCl",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Cl-Rb",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 4.7794,
+  "energy_above_hull_eV_per_atom": 0.02977404000000128,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Pm-3m",
+  "note": "extension4 batch: exp_polymorph pick for Cl-Rb, selected by energy_above_hull among MP's RbCl entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

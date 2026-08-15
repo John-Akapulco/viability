@@ -1,0 +1,18 @@
+{
+  "label": "Li2O",
+  "mp_id": "mp-755894",
+  "formula": "Li2O",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Li-O",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 5.2421999999999995,
+  "energy_above_hull_eV_per_atom": 0.0843597108333336,
+  "theoretical": true,
+  "nsites": 12,
+  "spacegroup": "Pnma",
+  "note": "extension4 batch: theo_far_hull pick for Li-O, selected by energy_above_hull among MP's Li2O entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

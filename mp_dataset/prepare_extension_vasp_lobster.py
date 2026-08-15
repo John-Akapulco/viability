@@ -40,6 +40,12 @@ EXTENSION_SPIN_OVERRIDES = {
     "extension_Co_mp-102": {"Co": 1.7},
     "extension_Ni_mp-23": {"Ni": 0.6},
     "extension_Cr_mp-90": {"Cr": 1.0},
+    # download_extension4.py: alkali superoxides (open-shell O2^- radical,
+    # same physical class as the O2 molecule override above) -- SrO2 in
+    # the same batch is the alkaline-earth PEROXIDE (closed-shell O2^2-)
+    # and deliberately does NOT get an exception here.
+    "extension_CsO2_exp_mp-1441": {"O": 1.0},
+    "extension_CsO2_theo_mp-1096936": {"O": 1.0},
 }
 
 

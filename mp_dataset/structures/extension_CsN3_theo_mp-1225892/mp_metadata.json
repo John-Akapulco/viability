@@ -1,0 +1,18 @@
+{
+  "label": "CsN3",
+  "mp_id": "mp-1225892",
+  "formula": "CsN3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Cs-N",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 3.79,
+  "energy_above_hull_eV_per_atom": 0.011297812499998727,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "P4/mmm",
+  "note": "extension4 batch: theo_far_hull pick for Cs-N, selected by energy_above_hull among MP's CsN3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

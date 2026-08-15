@@ -1,0 +1,18 @@
+{
+  "label": "NaN3",
+  "mp_id": "mp-22003",
+  "formula": "NaN3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "N-Na",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 4.0268,
+  "energy_above_hull_eV_per_atom": 0.0017140024999999781,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "R-3m",
+  "note": "extension4 batch: exp_polymorph pick for N-Na, selected by energy_above_hull among MP's NaN3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

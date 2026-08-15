@@ -1,0 +1,18 @@
+{
+  "label": "SrF2",
+  "mp_id": "mp-1102911",
+  "formula": "SrF2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "F-Sr",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 7.010800000000001,
+  "energy_above_hull_eV_per_atom": 0.02665916666666579,
+  "theoretical": true,
+  "nsites": 12,
+  "spacegroup": "Pnma",
+  "note": "extension4 batch: theo_far_hull pick for F-Sr, selected by energy_above_hull among MP's SrF2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

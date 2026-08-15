@@ -1,0 +1,18 @@
+{
+  "label": "BaS3",
+  "mp_id": "mp-556296",
+  "formula": "BaS3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ba-S",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.0473,
+  "energy_above_hull_eV_per_atom": 0.04356796437499888,
+  "theoretical": false,
+  "nsites": 16,
+  "spacegroup": "P2_12_12",
+  "note": "extension4 batch: exp_polymorph pick for Ba-S, selected by energy_above_hull among MP's BaS3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}
