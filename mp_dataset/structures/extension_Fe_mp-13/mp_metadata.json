@@ -1,0 +1,15 @@
+{
+  "label": "Fe",
+  "mp_id": "mp-13",
+  "formula": "Fe",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Im-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Im-3m) -- matches the real bcc (alpha-Fe) standard state; ferromagnetic, needs the ISPIN=2 exception (same mechanism as O2/MnO2/Mn)"
+}

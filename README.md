@@ -216,6 +216,35 @@ sample size. See the report for the full within-group diagnostics, the
 ΔE-sensitivity check (robust across 0.5–2.0 eV), and why the sign is not
 yet interpretable as confirming or refuting the instability hypothesis.
 
+### Reaction ICOHP (mission #5)
+
+A fourth, thermochemistry-flavored question: not a compound's own bonding
+topology in isolation, but whether its total ICOHP is "worth more" than
+the same atoms would have in a reference configuration — the ICOHP analog
+of `formation_energy_per_atom`. New module `reaction_icohp.py`, three
+reaction types (decomposition into elements, polymorph comparison,
+decomposition into a compound + elements), balanced via
+`pymatgen.analysis.reaction_calculator.Reaction`. Defined and validated on
+n=1–5 hand-worked real examples (Ca3N2, Mn2O7, carbon allotropes, TiO2
+high-pressure polymorphs) in
+**[`analysis/METRIC_DEFINITION_reaction_icohp.md`](analysis/METRIC_DEFINITION_reaction_icohp.md)**,
+which already flagged the key caveat before any statistics were run: ICOHP
+sees orbital-overlap bond population, not electrostatic/Madelung or van
+der Waals energy, so strongly ionic compounds are expected to misbehave.
+
+Case 1 (decomposition into elements) extended to 192 compounds in
+`analysis/compute_reaction_icohp_case1.py`, using 62 elemental reference
+calculations (`mp_dataset/download_elements_reference.py` + hand-picked
+extension compounds), and tested in `analysis/stats_analysis_reaction_icohp.py`.
+See **[`analysis/REPORT_reaction_icohp.md`](analysis/REPORT_reaction_icohp.md)**.
+Headline: ρ=0.370, p=3.9×10⁻⁷ (n=177) against `formation_energy_per_atom`
+— numerically the strongest global correlation in the project so far — but
+this time the between-group effect (metal vs. gapped, and across the three
+`bond_type` strata) explains the *entire* signal: unlike the antibonding
+metric's surviving covalent subgroup, no `bond_type` stratum here reaches
+significance on its own. Against `energy_above_hull` the correlation is
+absent (ρ=0.09, p=0.20). Case 2 and case 3 remain untested at scale.
+
 ## Limites connues
 
 - Suppose que `ICOHPLIST.lobster`/`ICOBILIST.lobster` proviennent du même

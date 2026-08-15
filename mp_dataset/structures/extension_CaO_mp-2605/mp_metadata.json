@@ -1,0 +1,16 @@
+{
+  "label": "CaO",
+  "mp_id": "mp-2605",
+  "formula": "CaO",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 3.6363,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Fm-3m",
+  "requested_spacegroup": "Fm-3m",
+  "note": "rock-salt, on-hull"
+}

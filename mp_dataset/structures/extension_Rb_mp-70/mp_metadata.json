@@ -1,0 +1,15 @@
+{
+  "label": "Rb",
+  "mp_id": "mp-70",
+  "formula": "Rb",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.009212472500000013,
+  "theoretical": false,
+  "nsites": 8,
+  "spacegroup": "Im-3m",
+  "note": "bcc Rb (Im-3m), the real standard state (alkali metals Li-Cs are all bcc at RT); only 1.8 meV/at above DFT's nominal minimum mp-639755 (I4/mmm), essentially degenerate."
+}

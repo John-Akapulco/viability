@@ -1,0 +1,16 @@
+{
+  "label": "TiO2OII",
+  "mp_id": "mp-9173",
+  "formula": "TiO2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.4795,
+  "energy_above_hull_eV_per_atom": 0.05749979000000138,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Pnma",
+  "expected_spacegroup": "Pnma",
+  "note": "TiO2-OII, cotunnite/PbCl2-type -- experimental ultra-high-pressure polymorph (~40+ GPa, historically claimed to rival diamond hardness, later disputed); computed here at 0 GPa. 0.0575 eV/at above hull. Akaogeite/TiO2-OI (the named phase between baddeleyite-type and this one in the real pressure sequence) was searched for but not confidently identified among MP's TiO2 Pbca entries -- gap, not included."
+}

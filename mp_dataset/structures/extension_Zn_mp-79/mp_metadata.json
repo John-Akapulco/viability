@@ -1,0 +1,15 @@
+{
+  "label": "Zn",
+  "mp_id": "mp-79",
+  "formula": "Zn",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "P6_3/mmc",
+  "note": "real hcp Zn standard state (on-hull, non-theoretical), used as the elemental decomposition reference for reaction_icohp.py instead of theo_metastable_Zn_mp-2647117 -- that entry is theoretical=True, bcc (Im-3m, wrong structure type), 71.7 meV/at above hull, and was chosen by the main campaign's stratification criteria for representing the 'theoretical metastable' bucket, NOT as a good elemental reference; using it as a bonding-reference would have been a real error, caught before it was used."
+}

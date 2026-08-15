@@ -1,0 +1,15 @@
+{
+  "label": "Cu",
+  "mp_id": "mp-30",
+  "formula": "Cu",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Fm-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Fm-3m); near-degenerate with ['mp-989695', 'mp-989782'] (within 20 meV/at) -- not individually literature-verified, on-hull/lowest-EAH pick used by default"
+}

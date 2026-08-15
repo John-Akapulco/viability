@@ -1,0 +1,15 @@
+{
+  "label": "Sn",
+  "mp_id": "mp-623511",
+  "formula": "Sn",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.061407004999999515,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "I4/mmm",
+  "note": "beta-Sn (white tin, I4/mmm), the real room-temperature standard state ('tin pest' alpha/beta transition at 13.2C); DFT's lowest-energy entry mp-117 (alpha/gray tin, Fd-3m) is real but only stable below 13.2C."
+}

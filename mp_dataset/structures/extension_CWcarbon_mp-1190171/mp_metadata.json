@@ -1,0 +1,16 @@
+{
+  "label": "CWcarbon",
+  "mp_id": "mp-1190171",
+  "formula": "C",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 4.330695728846512,
+  "energy_above_hull_eV_per_atom": 0.29267010687499884,
+  "theoretical": true,
+  "nsites": 16,
+  "spacegroup": "Pnma",
+  "expected_spacegroup": "Pnma",
+  "note": "W-carbon -- theoretical superhard sp3 allotrope, same cold-compressed-graphite family as M-carbon (Wang, Chen & Kawazoe 2011 PRL, PRL 106, 075501); MP theoretical=True, same density-based identification caveat as M-carbon. 0.2927 eV/at above hull."
+}

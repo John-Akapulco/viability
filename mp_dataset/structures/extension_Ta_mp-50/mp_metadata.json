@@ -1,0 +1,15 @@
+{
+  "label": "Ta",
+  "mp_id": "mp-50",
+  "formula": "Ta",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.009149912666664761,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Im-3m",
+  "note": "bcc Ta (Im-3m), the real standard state for this refractory metal (same structural family as Cr/V/Nb/Mo/W, all bcc); only 9.1 meV/at above DFT's nominal minimum mp-569794 (30-site P4_2/mnm), within typical GGA noise for this kind of near-degeneracy."
+}

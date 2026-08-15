@@ -1,0 +1,16 @@
+{
+  "label": "TiO2II",
+  "mp_id": "mp-1439",
+  "formula": "TiO2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.5281,
+  "energy_above_hull_eV_per_atom": 0.004523600833332253,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Pbcn",
+  "expected_spacegroup": "Pbcn",
+  "note": "TiO2-II, columbite/alpha-PbO2-type -- experimental high-pressure polymorph (~4-10 GPa transition from rutile), quenchable to ambient; computed here at 0 GPa to test the descriptor against a structure whose stable regime is elsewhere. 0.0045 eV/at above hull."
+}

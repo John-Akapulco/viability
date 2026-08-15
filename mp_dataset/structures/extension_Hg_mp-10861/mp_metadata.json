@@ -1,0 +1,15 @@
+{
+  "label": "Hg",
+  "mp_id": "mp-10861",
+  "formula": "Hg",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0029604591666583246,
+  "theoretical": false,
+  "nsites": 3,
+  "spacegroup": "P6/mmm",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.003 eV/at, sg=P6/mmm); near-degenerate with 7 other candidates (within 20 meV/at) -- not individually literature-verified; Hg is liquid at RT in reality, this is the low-T periodic solid proxy (same spirit as the N2/O2/Cl2/F2/Br2 gas-to-periodic-solid treatment)"
+}

@@ -1,0 +1,16 @@
+{
+  "label": "MnO2",
+  "mp_id": "mp-510408",
+  "formula": "MnO2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.04644304472222238,
+  "theoretical": false,
+  "nsites": 6,
+  "spacegroup": "P4_2/mnm",
+  "requested_spacegroup": "P4_2/mnm",
+  "note": "rutile/pyrolusite-type; Mn4+ is d3, physically magnetic (MnO2 is a known antiferromagnet) -- needs the same spin-polarized exception as O2; MP itself reports this structure as is_metal=True (gap=0), a plausible symptom of the well-known GGA self-interaction-error failure mode for correlated Mn oxides -- flagged, not corrected, no +U used here"
+}

@@ -1,0 +1,16 @@
+{
+  "label": "Pb",
+  "mp_id": "mp-20483",
+  "formula": "Pb",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Fm-3m",
+  "requested_spacegroup": null,
+  "note": "elemental, on-hull"
+}

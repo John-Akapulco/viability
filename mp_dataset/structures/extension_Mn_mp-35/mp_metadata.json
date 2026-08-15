@@ -1,0 +1,16 @@
+{
+  "label": "Mn",
+  "mp_id": "mp-35",
+  "formula": "Mn",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 29,
+  "spacegroup": "I-43m",
+  "requested_spacegroup": null,
+  "note": "alpha-Mn, the real room-temperature standard state (on-hull), elemental decomposition reference for Mn2O7/MnO2 -- 29 sites/cell (4 crystallographically distinct Mn sites), a genuinely complex non-collinear antiferromagnet in reality; the spin-polarized exception used here is a simple collinear FM initial guess, a known-crude approximation for this specific element, documented rather than fixed"
+}

@@ -1,0 +1,15 @@
+{
+  "label": "Li",
+  "mp_id": "mp-1018134",
+  "formula": "Li",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 3,
+  "spacegroup": "R-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=R-3m); near-degenerate with 6 other candidates (within 20 meV/at) -- not individually literature-verified; note this is plausibly the real low-T 9R Li ground state (bcc Li is a higher-temperature phase), not overridden"
+}

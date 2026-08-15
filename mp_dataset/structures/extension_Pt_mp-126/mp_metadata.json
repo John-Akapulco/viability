@@ -1,0 +1,15 @@
+{
+  "label": "Pt",
+  "mp_id": "mp-126",
+  "formula": "Pt",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Fm-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Fm-3m) -- matches the real fcc standard state"
+}

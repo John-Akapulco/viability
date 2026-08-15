@@ -1,0 +1,16 @@
+{
+  "label": "PbN6",
+  "mp_id": "mp-667338",
+  "formula": "PbN6",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 2.2866000000000004,
+  "energy_above_hull_eV_per_atom": 0.10931083119047358,
+  "theoretical": false,
+  "nsites": 84,
+  "spacegroup": "Pnma",
+  "requested_spacegroup": null,
+  "note": "lead azide, 84 sites -- much larger than the rest of the dataset, kept because explicitly requested"
+}

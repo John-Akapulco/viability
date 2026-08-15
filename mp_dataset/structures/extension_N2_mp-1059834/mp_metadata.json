@@ -1,0 +1,16 @@
+{
+  "label": "N2",
+  "mp_id": "mp-1059834",
+  "formula": "N2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 1.100957405,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "Imma",
+  "requested_spacegroup": null,
+  "note": "periodic proxy for the molecule; no MP entry for solid N2 is on-hull (~1.1 eV/at above -- expected, real N2 is a gas)"
+}

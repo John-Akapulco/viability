@@ -1,0 +1,15 @@
+{
+  "label": "Ba",
+  "mp_id": "mp-122",
+  "formula": "Ba",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Im-3m",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Im-3m); near-degenerate with ['mp-1096840', 'mp-10679', 'mp-56', 'mp-1058581'] (within 20 meV/at) -- not individually literature-verified, on-hull/lowest-EAH pick used by default"
+}

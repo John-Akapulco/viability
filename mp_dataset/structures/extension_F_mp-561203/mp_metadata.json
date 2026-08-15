@@ -1,0 +1,15 @@
+{
+  "label": "F",
+  "mp_id": "mp-561203",
+  "formula": "F2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.8984,
+  "energy_above_hull_eV_per_atom": 0.0030982875000000742,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "C2/c",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0031 eV/at, sg=C2/c); near-degenerate with ['mp-1525632', 'mp-760482', 'mp-561367'] (within 20 meV/at) -- not individually literature-verified, on-hull/lowest-EAH pick used by default; periodic solid F2 proxy, same treatment as N2/O2/Cl2/Br2 elsewhere in this project"
+}

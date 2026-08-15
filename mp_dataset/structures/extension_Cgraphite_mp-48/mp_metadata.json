@@ -1,0 +1,16 @@
+{
+  "label": "Cgraphite",
+  "mp_id": "mp-48",
+  "formula": "C",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.00312185499999984,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "P6_3/mmc",
+  "expected_spacegroup": "P6_3/mmc",
+  "note": "hexagonal (2H) graphite, real ambient-pressure ground-state-adjacent reference for the carbon family below. Semimetal (MP is_metal=True). 0.0031 eV/at above hull."
+}

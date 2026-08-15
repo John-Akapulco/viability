@@ -1,0 +1,15 @@
+{
+  "label": "In",
+  "mp_id": "mp-1055994",
+  "formula": "In",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.004489730000003078,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "I4/mmm",
+  "note": "body-centered tetragonal In (I4/mmm), the real standard state (In's well-known tetragonally-distorted fcc); only 4.5 meV/at above DFT's nominal minimum mp-85 (ideal cubic Fm-3m), within typical GGA noise."
+}

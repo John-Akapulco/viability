@@ -1,0 +1,15 @@
+{
+  "label": "Re",
+  "mp_id": "mp-8",
+  "formula": "Re",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.003587022499999648,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "P6_3/mmc",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0036 eV/at, sg=P6_3/mmc) -- matches the real hcp standard state"
+}

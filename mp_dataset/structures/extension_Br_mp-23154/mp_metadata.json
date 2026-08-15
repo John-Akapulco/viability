@@ -1,0 +1,15 @@
+{
+  "label": "Br",
+  "mp_id": "mp-23154",
+  "formula": "Br",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.3514000000000002,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "Cmce",
+  "note": "on-hull among non-theoretical MP entries (EAH=0.0 eV/at, sg=Cmce)"
+}

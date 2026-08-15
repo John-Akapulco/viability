@@ -1,0 +1,15 @@
+{
+  "label": "Ag",
+  "mp_id": "mp-124",
+  "formula": "Ag",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0021267149999992796,
+  "theoretical": false,
+  "nsites": 1,
+  "spacegroup": "Fm-3m",
+  "note": "fcc Ag (Fm-3m), the universally-cited real standard state (Ag/Au/Cu/Ni/Pd/Pt/Al pattern); only 2.1 meV/at above DFT's nominal minimum mp-8566 (hcp-like P6_3/mmc), within typical GGA noise."
+}

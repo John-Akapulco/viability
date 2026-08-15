@@ -1,0 +1,16 @@
+{
+  "label": "Clonsdaleite",
+  "mp_id": "mp-47",
+  "formula": "C",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 3.3394999999999992,
+  "energy_above_hull_eV_per_atom": 0.13947721750000142,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "P6_3/mmc",
+  "expected_spacegroup": "P6_3/mmc",
+  "note": "lonsdaleite (hexagonal diamond), real but rare natural polymorph (meteorite impact sites). 0.1395 eV/at above hull."
+}

@@ -1,0 +1,16 @@
+{
+  "label": "O2",
+  "mp_id": "mp-1524462",
+  "formula": "O2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.7061,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 8,
+  "spacegroup": "C2/m",
+  "requested_spacegroup": null,
+  "note": "on-hull; O2 is a real triplet-ground-state (paramagnetic) molecule -- needs a dedicated spin-polarized VASP run, see prepare_extension_vasp_lobster.py"
+}

@@ -1,0 +1,16 @@
+{
+  "label": "Mn2O7",
+  "mp_id": "mp-28338",
+  "formula": "Mn2O7",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.8058000000000003,
+  "energy_above_hull_eV_per_atom": 0.3346113968981488,
+  "theoretical": false,
+  "nsites": 72,
+  "spacegroup": "P2_1/c",
+  "requested_spacegroup": null,
+  "note": "Mn(VII), d0 -- expected non-magnetic, standard (non-spin-polarized) run should be fine"
+}
