@@ -1,0 +1,18 @@
+{
+  "label": "BeO",
+  "mp_id": "mp-1778",
+  "formula": "BeO",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Be-O",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 6.847700000000001,
+  "energy_above_hull_eV_per_atom": 0.006973667500000502,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "F-43m",
+  "note": "extension4 batch: theo_far_hull pick for Be-O, selected by energy_above_hull among MP's BeO entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

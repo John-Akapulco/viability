@@ -1,0 +1,18 @@
+{
+  "label": "CsF",
+  "mp_id": "mp-8455",
+  "formula": "CsF",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Cs-F",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 5.938,
+  "energy_above_hull_eV_per_atom": 0.10877166999999943,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Pm-3m",
+  "note": "extension4 batch: exp_polymorph pick for Cs-F, selected by energy_above_hull among MP's CsF entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

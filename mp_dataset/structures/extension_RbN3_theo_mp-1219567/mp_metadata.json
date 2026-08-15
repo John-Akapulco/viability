@@ -1,0 +1,18 @@
+{
+  "label": "RbN3",
+  "mp_id": "mp-1219567",
+  "formula": "RbN3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "N-Rb",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.7845,
+  "energy_above_hull_eV_per_atom": 0.79660387875,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "Amm2",
+  "note": "extension4 batch: theo_far_hull pick for N-Rb, selected by energy_above_hull among MP's RbN3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

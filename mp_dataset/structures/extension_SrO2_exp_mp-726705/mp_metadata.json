@@ -1,0 +1,18 @@
+{
+  "label": "SrO2",
+  "mp_id": "mp-726705",
+  "formula": "SrO2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "O-Sr",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 2.8121,
+  "energy_above_hull_eV_per_atom": 0.009602360833331325,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Pnma",
+  "note": "extension4 batch: exp_polymorph pick for O-Sr, selected by energy_above_hull among MP's SrO2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

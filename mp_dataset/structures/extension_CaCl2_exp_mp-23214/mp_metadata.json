@@ -1,0 +1,18 @@
+{
+  "label": "CaCl2",
+  "mp_id": "mp-23214",
+  "formula": "CaCl2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ca-Cl",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 5.3978,
+  "energy_above_hull_eV_per_atom": 0.0011452108333331878,
+  "theoretical": false,
+  "nsites": 6,
+  "spacegroup": "Pnnm",
+  "note": "extension4 batch: exp_polymorph pick for Ca-Cl, selected by energy_above_hull among MP's CaCl2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

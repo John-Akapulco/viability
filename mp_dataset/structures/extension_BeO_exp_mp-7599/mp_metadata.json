@@ -1,0 +1,18 @@
+{
+  "label": "BeO",
+  "mp_id": "mp-7599",
+  "formula": "BeO",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Be-O",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 7.0842,
+  "energy_above_hull_eV_per_atom": 0.015346631250000797,
+  "theoretical": false,
+  "nsites": 8,
+  "spacegroup": "P4_2/mnm",
+  "note": "extension4 batch: exp_polymorph pick for Be-O, selected by energy_above_hull among MP's BeO entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

@@ -1,0 +1,18 @@
+{
+  "label": "CaCl2",
+  "mp_id": "mp-1120739",
+  "formula": "CaCl2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ca-Cl",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 4.8803,
+  "energy_above_hull_eV_per_atom": 0.04218543083333426,
+  "theoretical": true,
+  "nsites": 3,
+  "spacegroup": "Fm-3m",
+  "note": "extension4 batch: theo_far_hull pick for Ca-Cl, selected by energy_above_hull among MP's CaCl2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

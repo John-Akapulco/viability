@@ -1,0 +1,18 @@
+{
+  "label": "MgS",
+  "mp_id": "mp-13032",
+  "formula": "MgS",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Mg-S",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 3.3692,
+  "energy_above_hull_eV_per_atom": 0.034344234999999834,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "F-43m",
+  "note": "extension4 batch: theo_far_hull pick for Mg-S, selected by energy_above_hull among MP's MgS entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

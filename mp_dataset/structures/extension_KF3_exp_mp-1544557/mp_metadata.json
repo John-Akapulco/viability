@@ -1,0 +1,18 @@
+{
+  "label": "KF3",
+  "mp_id": "mp-1544557",
+  "formula": "KF3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "F-K",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 1.7319000000000004,
+  "energy_above_hull_eV_per_atom": 0.01249103906249971,
+  "theoretical": false,
+  "nsites": 32,
+  "spacegroup": "P2_12_12_1",
+  "note": "extension4 batch: exp_polymorph pick for F-K, selected by energy_above_hull among MP's KF3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

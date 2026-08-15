@@ -1,0 +1,18 @@
+{
+  "label": "Cs2S",
+  "mp_id": "mp-1077814",
+  "formula": "Cs2S",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Cs-S",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.082980771748662,
+  "energy_above_hull_eV_per_atom": 0.06672482000000102,
+  "theoretical": false,
+  "nsites": 6,
+  "spacegroup": "P6_3/mmc",
+  "note": "extension4 batch: exp_polymorph pick for Cs-S, selected by energy_above_hull among MP's Cs2S entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

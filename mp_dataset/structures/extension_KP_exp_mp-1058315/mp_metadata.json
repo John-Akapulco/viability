@@ -1,0 +1,18 @@
+{
+  "label": "KP",
+  "mp_id": "mp-1058315",
+  "formula": "KP",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "K-P",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 1.008041285,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "R-3m",
+  "note": "extension4 batch: exp_polymorph pick for K-P, selected by energy_above_hull among MP's KP entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

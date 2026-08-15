@@ -1,0 +1,18 @@
+{
+  "label": "LiP5",
+  "mp_id": "mp-32760",
+  "formula": "LiP5",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Li-P",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 0.5134999999999996,
+  "energy_above_hull_eV_per_atom": 0.09630660601190577,
+  "theoretical": true,
+  "nsites": 24,
+  "spacegroup": "Pna2_1",
+  "note": "extension4 batch: theo_far_hull pick for Li-P, selected by energy_above_hull among MP's LiP5 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

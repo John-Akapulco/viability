@@ -1,0 +1,18 @@
+{
+  "label": "CaF2",
+  "mp_id": "mp-554355",
+  "formula": "CaF2",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "Ca-F",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 5.1414,
+  "energy_above_hull_eV_per_atom": 0.24025145999999964,
+  "theoretical": true,
+  "nsites": 3,
+  "spacegroup": "P4/mmm",
+  "note": "extension4 batch: theo_far_hull pick for Ca-F, selected by energy_above_hull among MP's CaF2 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

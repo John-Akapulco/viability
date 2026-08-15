@@ -1,0 +1,18 @@
+{
+  "label": "Rb2O",
+  "mp_id": "mp-2023482",
+  "formula": "Rb2O",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "O-Rb",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 0.7837000000000001,
+  "energy_above_hull_eV_per_atom": 0.047853428888886995,
+  "theoretical": true,
+  "nsites": 9,
+  "spacegroup": "P-3m1",
+  "note": "extension4 batch: theo_far_hull pick for O-Rb, selected by energy_above_hull among MP's Rb2O entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

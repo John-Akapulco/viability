@@ -1,0 +1,18 @@
+{
+  "label": "KF3",
+  "mp_id": "mp-2749823",
+  "formula": "KF3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "F-K",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 1.7192000000000003,
+  "energy_above_hull_eV_per_atom": 0.011928009062500244,
+  "theoretical": true,
+  "nsites": 32,
+  "spacegroup": "P2_1",
+  "note": "extension4 batch: theo_far_hull pick for F-K, selected by energy_above_hull among MP's KF3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

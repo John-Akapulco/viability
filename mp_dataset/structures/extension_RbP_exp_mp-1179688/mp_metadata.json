@@ -1,0 +1,18 @@
+{
+  "label": "RbP",
+  "mp_id": "mp-1179688",
+  "formula": "RbP",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "P-Rb",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.9878872979166671,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "C2/m",
+  "note": "extension4 batch: exp_polymorph pick for P-Rb, selected by energy_above_hull among MP's RbP entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

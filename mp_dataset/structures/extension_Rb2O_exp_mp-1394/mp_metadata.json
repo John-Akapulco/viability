@@ -1,0 +1,18 @@
+{
+  "label": "Rb2O",
+  "mp_id": "mp-1394",
+  "formula": "Rb2O",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "O-Rb",
+  "kind": "exp_polymorph",
+  "source": "materials_project",
+  "bond_type": "ionic",
+  "is_metal": false,
+  "band_gap_eV": 1.3181000000000003,
+  "energy_above_hull_eV_per_atom": 0.0031695866666665573,
+  "theoretical": false,
+  "nsites": 6,
+  "spacegroup": "Fm-3m",
+  "note": "extension4 batch: exp_polymorph pick for O-Rb, selected by energy_above_hull among MP's Rb2O entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}

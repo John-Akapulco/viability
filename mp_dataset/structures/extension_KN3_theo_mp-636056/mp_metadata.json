@@ -1,0 +1,18 @@
+{
+  "label": "KN3",
+  "mp_id": "mp-636056",
+  "formula": "KN3",
+  "family": "extension",
+  "batch": "extension4_alkali_alkaline_earth_binaries",
+  "chemsys": "K-N",
+  "kind": "theo_far_hull",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 1.0369771337499998,
+  "theoretical": true,
+  "nsites": 8,
+  "spacegroup": "I4/mcm",
+  "note": "extension4 batch: theo_far_hull pick for K-N, selected by energy_above_hull among MP's KN3 entries (nsites<=40); see download_extension4.py / extension4_candidates.json for the exact selection rule."
+}
