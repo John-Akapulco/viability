@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_RbI_mp-22903__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_RbI_mp-22903",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Rb_mp-70",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_I_mp-23153",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

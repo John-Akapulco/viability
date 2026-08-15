@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_AgO_mp-1079720",
+  "formula": "AgO",
+  "composition": {
+    "Ag": 4,
+    "O": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P2_1/c",
+  "space_group_number": 14,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -67.4211399999999,
+    "sum_per_atom_eV": -8.427642499999987,
+    "sum_per_formula_unit_eV": -16.855284999999974,
+    "mean_per_bond_eV": -0.21889980519480484,
+    "n_bonds": 308,
+    "by_bond_type": {
+      "Ag-Ag": {
+        "mean_eV": -0.1674904545454545,
+        "sum_eV": -14.739159999999996,
+        "n_bonds": 88
+      },
+      "Ag-O": {
+        "mean_eV": -0.3611017142857144,
+        "sum_eV": -50.554240000000014,
+        "n_bonds": 140
+      },
+      "O-O": {
+        "mean_eV": -0.026596749999999992,
+        "sum_eV": -2.1277399999999993,
+        "n_bonds": 80
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.715780000000002,
+    "sum_per_atom_eV": 1.2144725000000003,
+    "sum_per_formula_unit_eV": 2.4289450000000006,
+    "mean_per_bond_eV": 0.031544740259740266,
+    "n_bonds": 308,
+    "by_bond_type": {
+      "Ag-Ag": {
+        "mean_eV": 0.017791818181818183,
+        "sum_eV": 1.56568,
+        "n_bonds": 88
+      },
+      "Ag-O": {
+        "mean_eV": 0.049309642857142864,
+        "sum_eV": 6.903350000000001,
+        "n_bonds": 140
+      },
+      "O-O": {
+        "mean_eV": 0.01558437500000002,
+        "sum_eV": 1.2467500000000016,
+        "n_bonds": 80
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_AgO_mp-1079720"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_NbGa3_mp-1973__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_NbGa3_mp-1973",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Nb_mp-75",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

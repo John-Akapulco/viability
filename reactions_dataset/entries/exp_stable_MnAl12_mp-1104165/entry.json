@@ -1,0 +1,53 @@
+{
+  "compound_id": "exp_stable_MnAl12_mp-1104165",
+  "formula": "MnAl12",
+  "composition": {
+    "Mn": 1,
+    "Al": 12
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3",
+  "space_group_number": 204,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -118.34457999999994,
+    "sum_per_atom_eV": -9.103429230769226,
+    "sum_per_formula_unit_eV": -118.34457999999994,
+    "mean_per_bond_eV": -0.32334584699453534,
+    "n_bonds": 366,
+    "by_bond_type": {
+      "Al-Mn": {
+        "mean_eV": -0.27555645833333337,
+        "sum_eV": -13.226710000000002,
+        "n_bonds": 48
+      },
+      "Al-Al": {
+        "mean_eV": -0.33055933962264145,
+        "sum_eV": -105.11786999999998,
+        "n_bonds": 318
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 22.417619999999996,
+    "sum_per_atom_eV": 1.7244323076923074,
+    "sum_per_formula_unit_eV": 22.417619999999996,
+    "mean_per_bond_eV": 0.06125032786885245,
+    "n_bonds": 366,
+    "by_bond_type": {
+      "Al-Mn": {
+        "mean_eV": 0.08898416666666666,
+        "sum_eV": 4.27124,
+        "n_bonds": 48
+      },
+      "Al-Al": {
+        "mean_eV": 0.05706408805031448,
+        "sum_eV": 18.146380000000004,
+        "n_bonds": 318
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_MnAl12_mp-1104165"
+}

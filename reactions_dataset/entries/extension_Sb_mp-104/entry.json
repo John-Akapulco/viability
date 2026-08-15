@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Sb_mp-104",
+  "formula": "Sb",
+  "composition": {
+    "Sb": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -10.310350000000003,
+    "sum_per_atom_eV": -5.155175000000002,
+    "sum_per_formula_unit_eV": -5.155175000000002,
+    "mean_per_bond_eV": -0.2786581081081082,
+    "n_bonds": 37,
+    "by_bond_type": {
+      "Sb-Sb": {
+        "mean_eV": -0.2786581081081082,
+        "sum_eV": -10.310350000000003,
+        "n_bonds": 37
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.7555599999999987,
+    "sum_per_atom_eV": 1.3777799999999993,
+    "sum_per_formula_unit_eV": 1.3777799999999993,
+    "mean_per_bond_eV": 0.07447459459459456,
+    "n_bonds": 37,
+    "by_bond_type": {
+      "Sb-Sb": {
+        "mean_eV": 0.07447459459459456,
+        "sum_eV": 2.7555599999999987,
+        "n_bonds": 37
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Sb_mp-104"
+}

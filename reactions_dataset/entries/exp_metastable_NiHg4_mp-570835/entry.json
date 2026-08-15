@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_NiHg4_mp-570835",
+  "formula": "NiHg4",
+  "composition": {
+    "Ni": 1,
+    "Hg": 4
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -40.18178000000001,
+    "sum_per_atom_eV": -8.036356000000001,
+    "sum_per_formula_unit_eV": -40.18178000000001,
+    "mean_per_bond_eV": -0.3720535185185186,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": 0.0070875,
+        "sum_eV": 0.0567,
+        "n_bonds": 8
+      },
+      "Hg-Ni": {
+        "mean_eV": -0.26865500000000003,
+        "sum_eV": -8.596960000000001,
+        "n_bonds": 32
+      },
+      "Hg-Hg": {
+        "mean_eV": -0.4653164705882353,
+        "sum_eV": -31.64152,
+        "n_bonds": 68
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.332370000000001,
+    "sum_per_atom_eV": 1.4664740000000003,
+    "sum_per_formula_unit_eV": 7.332370000000001,
+    "mean_per_bond_eV": 0.06789231481481482,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": 0.01666,
+        "sum_eV": 0.13328,
+        "n_bonds": 8
+      },
+      "Hg-Ni": {
+        "mean_eV": 0.06519937499999999,
+        "sum_eV": 2.0863799999999997,
+        "n_bonds": 32
+      },
+      "Hg-Hg": {
+        "mean_eV": 0.07518691176470593,
+        "sum_eV": 5.112710000000003,
+        "n_bonds": 68
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_NiHg4_mp-570835"
+}

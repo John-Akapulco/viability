@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_Ta5Ge3_mp-17593",
+  "formula": "Ta5Ge3",
+  "composition": {
+    "Ta": 10,
+    "Ge": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "I4/mcm",
+  "space_group_number": 140,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -169.44591999999997,
+    "sum_per_atom_eV": -10.590369999999998,
+    "sum_per_formula_unit_eV": -84.72295999999999,
+    "mean_per_bond_eV": -0.413282731707317,
+    "n_bonds": 410,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": -0.3391652857142858,
+        "sum_eV": -47.48314000000001,
+        "n_bonds": 140
+      },
+      "Ge-Ta": {
+        "mean_eV": -0.5049442727272727,
+        "sum_eV": -111.08774,
+        "n_bonds": 220
+      },
+      "Ge-Ge": {
+        "mean_eV": -0.2175008,
+        "sum_eV": -10.87504,
+        "n_bonds": 50
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 36.15615999999998,
+    "sum_per_atom_eV": 2.2597599999999987,
+    "sum_per_formula_unit_eV": 18.07807999999999,
+    "mean_per_bond_eV": 0.08818575609756092,
+    "n_bonds": 410,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": 0.11053771428571428,
+        "sum_eV": 15.47528,
+        "n_bonds": 140
+      },
+      "Ge-Ta": {
+        "mean_eV": 0.08676872727272732,
+        "sum_eV": 19.08912000000001,
+        "n_bonds": 220
+      },
+      "Ge-Ge": {
+        "mean_eV": 0.03183520000000001,
+        "sum_eV": 1.5917600000000005,
+        "n_bonds": 50
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_Ta5Ge3_mp-17593"
+}

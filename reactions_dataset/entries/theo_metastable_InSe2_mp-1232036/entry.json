@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_InSe2_mp-1232036",
+  "formula": "InSe2",
+  "composition": {
+    "In": 2,
+    "Se": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "P4/nmm",
+  "space_group_number": 129,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -37.357900000000015,
+    "sum_per_atom_eV": -6.226316666666669,
+    "sum_per_formula_unit_eV": -18.678950000000007,
+    "mean_per_bond_eV": -0.29649126984126994,
+    "n_bonds": 126,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": -0.15181150000000004,
+        "sum_eV": -3.0362300000000007,
+        "n_bonds": 20
+      },
+      "In-Se": {
+        "mean_eV": -0.6372754761904761,
+        "sum_eV": -26.765569999999997,
+        "n_bonds": 42
+      },
+      "Se-Se": {
+        "mean_eV": -0.11806406250000004,
+        "sum_eV": -7.5561000000000025,
+        "n_bonds": 64
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.47071,
+    "sum_per_atom_eV": 1.411785,
+    "sum_per_formula_unit_eV": 4.235355,
+    "mean_per_bond_eV": 0.06722785714285714,
+    "n_bonds": 126,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": 0.032594000000000005,
+        "sum_eV": 0.6518800000000001,
+        "n_bonds": 20
+      },
+      "In-Se": {
+        "mean_eV": 0.1210569047619047,
+        "sum_eV": 5.084389999999997,
+        "n_bonds": 42
+      },
+      "Se-Se": {
+        "mean_eV": 0.04272562500000001,
+        "sum_eV": 2.7344400000000006,
+        "n_bonds": 64
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_InSe2_mp-1232036"
+}

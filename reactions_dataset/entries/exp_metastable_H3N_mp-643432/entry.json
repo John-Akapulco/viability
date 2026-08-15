@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_H3N_mp-643432",
+  "formula": "H3N",
+  "composition": {
+    "H": 12,
+    "N": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P2_12_12_1",
+  "space_group_number": 19,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -102.10825999999997,
+    "sum_per_atom_eV": -6.381766249999998,
+    "sum_per_formula_unit_eV": -25.527064999999993,
+    "mean_per_bond_eV": -0.09932710116731515,
+    "n_bonds": 1028,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.0018624482758620724,
+        "sum_eV": -1.080220000000002,
+        "n_bonds": 580
+      },
+      "H-N": {
+        "mean_eV": -0.26306681578947355,
+        "sum_eV": -99.96538999999994,
+        "n_bonds": 380
+      },
+      "N-N": {
+        "mean_eV": -0.015627205882352946,
+        "sum_eV": -1.0626500000000003,
+        "n_bonds": 68
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.496849999999952,
+    "sum_per_atom_eV": 0.718553124999997,
+    "sum_per_formula_unit_eV": 2.874212499999988,
+    "mean_per_bond_eV": 0.011183706225680887,
+    "n_bonds": 1028,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.00005668965517241376,
+        "sum_eV": 0.03287999999999998,
+        "n_bonds": 580
+      },
+      "H-N": {
+        "mean_eV": 0.029239710526315712,
+        "sum_eV": 11.11108999999997,
+        "n_bonds": 380
+      },
+      "N-N": {
+        "mean_eV": 0.005189411764705884,
+        "sum_eV": 0.35288000000000014,
+        "n_bonds": 68
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_H3N_mp-643432"
+}

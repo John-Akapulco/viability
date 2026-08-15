@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_Zr3Be_mp-1188016__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_Zr3Be_mp-1188016",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Be_mp-87",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_AsRh_mp-22079__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_AsRh_mp-22079",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_As_mp-158",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

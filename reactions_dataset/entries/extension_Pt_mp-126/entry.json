@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Pt_mp-126",
+  "formula": "Pt",
+  "composition": {
+    "Pt": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.90826,
+    "sum_per_atom_eV": -24.90826,
+    "sum_per_formula_unit_eV": -24.90826,
+    "mean_per_bond_eV": -0.46126407407407405,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Pt-Pt": {
+        "mean_eV": -0.46126407407407405,
+        "sum_eV": -24.90826,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.6167200000000004,
+    "sum_per_atom_eV": 3.6167200000000004,
+    "sum_per_formula_unit_eV": 3.6167200000000004,
+    "mean_per_bond_eV": 0.0669762962962963,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Pt-Pt": {
+        "mean_eV": 0.0669762962962963,
+        "sum_eV": 3.6167200000000004,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Pt_mp-126"
+}

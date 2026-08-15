@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Se_mp-14",
+  "formula": "Se",
+  "composition": {
+    "Se": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P3_121",
+  "space_group_number": 152,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -13.589999999999995,
+    "sum_per_atom_eV": -4.5299999999999985,
+    "sum_per_formula_unit_eV": -4.5299999999999985,
+    "mean_per_bond_eV": -0.25166666666666654,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Se-Se": {
+        "mean_eV": -0.25166666666666654,
+        "sum_eV": -13.589999999999995,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.44376,
+    "sum_per_atom_eV": 1.14792,
+    "sum_per_formula_unit_eV": 1.14792,
+    "mean_per_bond_eV": 0.06377333333333333,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Se-Se": {
+        "mean_eV": 0.06377333333333333,
+        "sum_eV": 3.44376,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Se_mp-14"
+}

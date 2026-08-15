@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_Li13Sn5_mp-30769__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_Li13Sn5_mp-30769",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Li_mp-1018134",
+      "coefficient": 13.0
+    },
+    {
+      "compound_id": "extension_Sn_mp-623511",
+      "coefficient": 5.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

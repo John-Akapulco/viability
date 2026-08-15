@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Cl_mp-22848",
+  "formula": "Cl2",
+  "composition": {
+    "Cl": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmce",
+  "space_group_number": 64,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -11.78474,
+    "sum_per_atom_eV": -2.946185,
+    "sum_per_formula_unit_eV": -5.89237,
+    "mean_per_bond_eV": -0.16835342857142857,
+    "n_bonds": 70,
+    "by_bond_type": {
+      "Cl-Cl": {
+        "mean_eV": -0.16835342857142857,
+        "sum_eV": -11.78474,
+        "n_bonds": 70
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.12168,
+    "sum_per_atom_eV": 0.53042,
+    "sum_per_formula_unit_eV": 1.06084,
+    "mean_per_bond_eV": 0.030309714285714287,
+    "n_bonds": 70,
+    "by_bond_type": {
+      "Cl-Cl": {
+        "mean_eV": 0.030309714285714287,
+        "sum_eV": 2.12168,
+        "n_bonds": 70
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cl_mp-22848"
+}

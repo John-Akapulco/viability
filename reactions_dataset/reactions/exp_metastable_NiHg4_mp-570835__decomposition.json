@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_NiHg4_mp-570835__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_NiHg4_mp-570835",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ni_mp-23",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "coefficient": 4.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

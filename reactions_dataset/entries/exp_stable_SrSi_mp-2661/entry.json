@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_SrSi_mp-2661",
+  "formula": "SrSi",
+  "composition": {
+    "Sr": 2,
+    "Si": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -13.558639999999995,
+    "sum_per_atom_eV": -3.389659999999999,
+    "sum_per_formula_unit_eV": -6.779319999999998,
+    "mean_per_bond_eV": -0.2054339393939393,
+    "n_bonds": 66,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": -0.13943,
+        "sum_eV": -1.95202,
+        "n_bonds": 14
+      },
+      "Si-Sr": {
+        "mean_eV": -0.1484876470588235,
+        "sum_eV": -5.048579999999999,
+        "n_bonds": 34
+      },
+      "Si-Si": {
+        "mean_eV": -0.36433555555555563,
+        "sum_eV": -6.558040000000001,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.6951300000000007,
+    "sum_per_atom_eV": 0.9237825000000002,
+    "sum_per_formula_unit_eV": 1.8475650000000003,
+    "mean_per_bond_eV": 0.05598681818181819,
+    "n_bonds": 66,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": 0.011911428571428573,
+        "sum_eV": 0.16676000000000002,
+        "n_bonds": 14
+      },
+      "Si-Sr": {
+        "mean_eV": 0.040777941176470586,
+        "sum_eV": 1.38645,
+        "n_bonds": 34
+      },
+      "Si-Si": {
+        "mean_eV": 0.11899555555555558,
+        "sum_eV": 2.1419200000000003,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_SrSi_mp-2661"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ni_mp-23",
+  "formula": "Ni",
+  "composition": {
+    "Ni": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -6.553239999999996,
+    "sum_per_atom_eV": -6.553239999999996,
+    "sum_per_formula_unit_eV": -6.553239999999996,
+    "mean_per_bond_eV": -0.0840158974358974,
+    "n_bonds": 78,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": -0.0840158974358974,
+        "sum_eV": -6.553239999999996,
+        "n_bonds": 78
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.8835399999999998,
+    "sum_per_atom_eV": 1.8835399999999998,
+    "sum_per_formula_unit_eV": 1.8835399999999998,
+    "mean_per_bond_eV": 0.024147948717948713,
+    "n_bonds": 78,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": 0.024147948717948713,
+        "sum_eV": 1.8835399999999998,
+        "n_bonds": 78
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ni_mp-23"
+}

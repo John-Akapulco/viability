@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_H_mp-730101",
+  "formula": "H2",
+  "composition": {
+    "H": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "P2_12_12_1",
+  "space_group_number": 19,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -20.530240000000003,
+    "sum_per_atom_eV": -2.5662800000000003,
+    "sum_per_formula_unit_eV": -5.132560000000001,
+    "mean_per_bond_eV": -0.28514222222222224,
+    "n_bonds": 72,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.28514222222222224,
+        "sum_eV": -20.530240000000003,
+        "n_bonds": 72
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.9900499999999983,
+    "sum_per_atom_eV": 0.4987562499999998,
+    "sum_per_formula_unit_eV": 0.9975124999999996,
+    "mean_per_bond_eV": 0.05541736111111109,
+    "n_bonds": 72,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.05541736111111109,
+        "sum_eV": 3.9900499999999983,
+        "n_bonds": 72
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_H_mp-730101"
+}

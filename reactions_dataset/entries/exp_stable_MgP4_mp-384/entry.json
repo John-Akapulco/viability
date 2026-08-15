@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_MgP4_mp-384",
+  "formula": "MgP4",
+  "composition": {
+    "Mg": 2,
+    "P": 8
+  },
+  "Z": 2,
+  "space_group_symbol": "P2_1/c",
+  "space_group_number": 14,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -61.825230000000026,
+    "sum_per_atom_eV": -6.182523000000002,
+    "sum_per_formula_unit_eV": -30.912615000000013,
+    "mean_per_bond_eV": -0.25338209016393454,
+    "n_bonds": 244,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.004209166666666666,
+        "sum_eV": -0.050509999999999985,
+        "n_bonds": 12
+      },
+      "Mg-P": {
+        "mean_eV": -0.12115402777777777,
+        "sum_eV": -8.72309,
+        "n_bonds": 72
+      },
+      "P-P": {
+        "mean_eV": -0.33157268750000013,
+        "sum_eV": -53.05163000000002,
+        "n_bonds": 160
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.471980000000002,
+    "sum_per_atom_eV": 1.2471980000000003,
+    "sum_per_formula_unit_eV": 6.235990000000001,
+    "mean_per_bond_eV": 0.05111467213114755,
+    "n_bonds": 244,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0003525,
+        "sum_eV": 0.00423,
+        "n_bonds": 12
+      },
+      "Mg-P": {
+        "mean_eV": 0.023782499999999998,
+        "sum_eV": 1.71234,
+        "n_bonds": 72
+      },
+      "P-P": {
+        "mean_eV": 0.0672213125,
+        "sum_eV": 10.755410000000001,
+        "n_bonds": 160
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_MgP4_mp-384"
+}

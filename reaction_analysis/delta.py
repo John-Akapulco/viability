@@ -33,6 +33,13 @@ explicit warning naming the compound and bond pair -- never a fatal
 exception (same "batch continues" convention as percolation_path.py).
 A malformed/unbalanced reaction likewise never raises out of
 compute_delta(): the ReactionResult.error field carries the reason.
+
+ReactionResult.bonding_label is classify.classify_bonding() applied to
+delta_per_formula_unit_eV (Reitz & Dronskowski, ic-2026-04181q -- see
+classify.py) -- endobondic/exobondic uses this module's own sign
+convention directly (products - reactants), with no flip, since it
+matches the manuscript's own ΔICOHP definition. None when
+delta_per_formula_unit_eV is NaN (unbalanced/missing-data reaction).
 """
 
 from __future__ import annotations
@@ -40,6 +47,7 @@ from __future__ import annotations
 import math
 
 from reaction_analysis.balance import ReactionBalanceError, check_balance
+from reaction_analysis.classify import classify_bonding
 from reaction_analysis.schema import CompoundEntry, IcohpSummary, Reaction, ReactionMember, ReactionResult
 
 NAN = float("nan")
@@ -150,10 +158,12 @@ def _compute_single_metric(reaction: Reaction, entries: dict[str, CompoundEntry]
         else:
             delta_bond = mean_products - mean_reactants
 
+        bonding_label = None if math.isnan(delta_fu) else classify_bonding(delta_fu).value
+
         return ReactionResult(
             reaction_id=reaction.reaction_id, type=reaction.type, metric=metric, bond_pair=reaction.bond_pair,
             delta_per_formula_unit_eV=delta_fu, delta_per_atom_eV=delta_atom, delta_per_bond_eV=delta_bond,
-            delta_per_bond_conservative=False, warnings=warnings, error=None,
+            delta_per_bond_conservative=False, bonding_label=bonding_label, warnings=warnings, error=None,
         )
     except Exception as exc:  # noqa: BLE001 - batch must never die on one bad reaction
         return ReactionResult(

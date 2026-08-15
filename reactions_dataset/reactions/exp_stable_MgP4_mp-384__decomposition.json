@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_MgP4_mp-384__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_MgP4_mp-384",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_P_mp-568348",
+      "coefficient": 4.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

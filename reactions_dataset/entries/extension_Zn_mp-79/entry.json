@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Zn_mp-79",
+  "formula": "Zn",
+  "composition": {
+    "Zn": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -34.80321,
+    "sum_per_atom_eV": -17.401605,
+    "sum_per_formula_unit_eV": -17.401605,
+    "mean_per_bond_eV": -0.3480321,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.3480321,
+        "sum_eV": -34.80321,
+        "n_bonds": 100
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.555360000000001,
+    "sum_per_atom_eV": 2.2776800000000006,
+    "sum_per_formula_unit_eV": 2.2776800000000006,
+    "mean_per_bond_eV": 0.045553600000000014,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.045553600000000014,
+        "sum_eV": 4.555360000000001,
+        "n_bonds": 100
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Zn_mp-79"
+}

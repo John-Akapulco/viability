@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Ti3Ge_mp-1189044",
+  "formula": "Ti3Ge",
+  "composition": {
+    "Ti": 12,
+    "Ge": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "I-4",
+  "space_group_number": 82,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -106.94012999999994,
+    "sum_per_atom_eV": -6.683758124999996,
+    "sum_per_formula_unit_eV": -26.735032499999985,
+    "mean_per_bond_eV": -0.23711780487804865,
+    "n_bonds": 451,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.16572223529411764,
+        "sum_eV": -42.25917,
+        "n_bonds": 255
+      },
+      "Ge-Ti": {
+        "mean_eV": -0.37167755952380965,
+        "sum_eV": -62.44183000000002,
+        "n_bonds": 168
+      },
+      "Ge-Ge": {
+        "mean_eV": -0.07996892857142857,
+        "sum_eV": -2.23913,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 33.52406999999997,
+    "sum_per_atom_eV": 2.0952543749999983,
+    "sum_per_formula_unit_eV": 8.381017499999993,
+    "mean_per_bond_eV": 0.07433274944567622,
+    "n_bonds": 451,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.07815823529411761,
+        "sum_eV": 19.93034999999999,
+        "n_bonds": 255
+      },
+      "Ge-Ti": {
+        "mean_eV": 0.07840035714285716,
+        "sum_eV": 13.171260000000002,
+        "n_bonds": 168
+      },
+      "Ge-Ge": {
+        "mean_eV": 0.015087857142857144,
+        "sum_eV": 0.42246000000000006,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Ti3Ge_mp-1189044"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ba_mp-122",
+  "formula": "Ba",
+  "composition": {
+    "Ba": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -0.36809999999999987,
+    "sum_per_atom_eV": -0.18404999999999994,
+    "sum_per_formula_unit_eV": -0.18404999999999994,
+    "mean_per_bond_eV": -0.018404999999999994,
+    "n_bonds": 20,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.018404999999999994,
+        "sum_eV": -0.36809999999999987,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.02627999999999999,
+    "sum_per_atom_eV": 0.013139999999999995,
+    "sum_per_formula_unit_eV": 0.013139999999999995,
+    "mean_per_bond_eV": 0.0013139999999999996,
+    "n_bonds": 20,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.0013139999999999996,
+        "sum_eV": 0.02627999999999999,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ba_mp-122"
+}

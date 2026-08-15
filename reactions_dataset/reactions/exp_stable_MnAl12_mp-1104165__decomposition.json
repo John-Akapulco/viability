@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_MnAl12_mp-1104165__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_MnAl12_mp-1104165",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mn_mp-35",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Al_mp-134",
+      "coefficient": 12.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

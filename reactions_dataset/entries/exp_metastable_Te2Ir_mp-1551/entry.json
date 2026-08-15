@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Te2Ir_mp-1551",
+  "formula": "Te2Ir",
+  "composition": {
+    "Te": 6,
+    "Ir": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -98.73954000000002,
+    "sum_per_atom_eV": -10.971060000000001,
+    "sum_per_formula_unit_eV": -32.913180000000004,
+    "mean_per_bond_eV": -0.6249337974683545,
+    "n_bonds": 158,
+    "by_bond_type": {
+      "Te-Te": {
+        "mean_eV": -0.12224902777777781,
+        "sum_eV": -8.801930000000002,
+        "n_bonds": 72
+      },
+      "Ir-Te": {
+        "mean_eV": -1.2762610937500003,
+        "sum_eV": -81.68071000000002,
+        "n_bonds": 64
+      },
+      "Ir-Ir": {
+        "mean_eV": -0.37531363636363635,
+        "sum_eV": -8.2569,
+        "n_bonds": 22
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 18.569850000000013,
+    "sum_per_atom_eV": 2.063316666666668,
+    "sum_per_formula_unit_eV": 6.189950000000004,
+    "mean_per_bond_eV": 0.11753069620253173,
+    "n_bonds": 158,
+    "by_bond_type": {
+      "Te-Te": {
+        "mean_eV": 0.03604180555555555,
+        "sum_eV": 2.5950099999999994,
+        "n_bonds": 72
+      },
+      "Ir-Te": {
+        "mean_eV": 0.22485515624999997,
+        "sum_eV": 14.390729999999998,
+        "n_bonds": 64
+      },
+      "Ir-Ir": {
+        "mean_eV": 0.07200500000000001,
+        "sum_eV": 1.5841100000000004,
+        "n_bonds": 22
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Te2Ir_mp-1551"
+}

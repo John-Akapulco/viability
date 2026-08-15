@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Li3Hg_mp-1646",
+  "formula": "Li3Hg",
+  "composition": {
+    "Li": 3,
+    "Hg": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -31.15397000000001,
+    "sum_per_atom_eV": -7.788492500000003,
+    "sum_per_formula_unit_eV": -31.15397000000001,
+    "mean_per_bond_eV": -0.22252835714285724,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.1654432926829269,
+        "sum_eV": -13.566350000000007,
+        "n_bonds": 82
+      },
+      "Hg-Li": {
+        "mean_eV": -0.3741439130434784,
+        "sum_eV": -17.210620000000006,
+        "n_bonds": 46
+      },
+      "Hg-Hg": {
+        "mean_eV": -0.03141666666666666,
+        "sum_eV": -0.37699999999999995,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.22476,
+    "sum_per_atom_eV": 1.05619,
+    "sum_per_formula_unit_eV": 4.22476,
+    "mean_per_bond_eV": 0.03017685714285714,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.021678780487804868,
+        "sum_eV": 1.7776599999999991,
+        "n_bonds": 82
+      },
+      "Hg-Li": {
+        "mean_eV": 0.046459565217391315,
+        "sum_eV": 2.1371400000000005,
+        "n_bonds": 46
+      },
+      "Hg-Hg": {
+        "mean_eV": 0.025830000000000002,
+        "sum_eV": 0.30996,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Li3Hg_mp-1646"
+}

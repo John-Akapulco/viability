@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_Te2Pd_mp-782",
+  "formula": "Te2Pd",
+  "composition": {
+    "Te": 2,
+    "Pd": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -28.461079999999995,
+    "sum_per_atom_eV": -9.487026666666665,
+    "sum_per_formula_unit_eV": -28.461079999999995,
+    "mean_per_bond_eV": -0.527057037037037,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Te-Te": {
+        "mean_eV": -0.1318185714285714,
+        "sum_eV": -3.6909199999999993,
+        "n_bonds": 28
+      },
+      "Pd-Te": {
+        "mean_eV": -1.1971055555555554,
+        "sum_eV": -21.5479,
+        "n_bonds": 18
+      },
+      "Pd-Pd": {
+        "mean_eV": -0.4027825000000001,
+        "sum_eV": -3.222260000000001,
+        "n_bonds": 8
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.26657,
+    "sum_per_atom_eV": 1.7555233333333333,
+    "sum_per_formula_unit_eV": 5.26657,
+    "mean_per_bond_eV": 0.09752907407407407,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Te-Te": {
+        "mean_eV": 0.04544928571428573,
+        "sum_eV": 1.2725800000000003,
+        "n_bonds": 28
+      },
+      "Pd-Te": {
+        "mean_eV": 0.20006277777777778,
+        "sum_eV": 3.60113,
+        "n_bonds": 18
+      },
+      "Pd-Pd": {
+        "mean_eV": 0.0491075,
+        "sum_eV": 0.39286,
+        "n_bonds": 8
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_Te2Pd_mp-782"
+}

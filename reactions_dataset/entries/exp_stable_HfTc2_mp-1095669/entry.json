@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_HfTc2_mp-1095669",
+  "formula": "HfTc2",
+  "composition": {
+    "Hf": 4,
+    "Tc": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -103.11783000000008,
+    "sum_per_atom_eV": -8.593152500000008,
+    "sum_per_formula_unit_eV": -25.77945750000002,
+    "mean_per_bond_eV": -0.291293305084746,
+    "n_bonds": 354,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.19358956521739132,
+        "sum_eV": -8.90512,
+        "n_bonds": 46
+      },
+      "Hf-Tc": {
+        "mean_eV": -0.4344451666666667,
+        "sum_eV": -52.13342000000001,
+        "n_bonds": 120
+      },
+      "Tc-Tc": {
+        "mean_eV": -0.2238260106382979,
+        "sum_eV": -42.07929000000001,
+        "n_bonds": 188
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 29.807849999999988,
+    "sum_per_atom_eV": 2.483987499999999,
+    "sum_per_formula_unit_eV": 7.451962499999997,
+    "mean_per_bond_eV": 0.08420296610169488,
+    "n_bonds": 354,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.04201608695652174,
+        "sum_eV": 1.93274,
+        "n_bonds": 46
+      },
+      "Hf-Tc": {
+        "mean_eV": 0.12060216666666661,
+        "sum_eV": 14.472259999999993,
+        "n_bonds": 120
+      },
+      "Tc-Tc": {
+        "mean_eV": 0.07129175531914901,
+        "sum_eV": 13.402850000000013,
+        "n_bonds": 188
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_HfTc2_mp-1095669"
+}

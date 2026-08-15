@@ -1,0 +1,189 @@
+# Hand-transcribed from Reitz & Dronskowski, ic-2026-04181q, "Calculus of
+# Bonding Energetics" section. No real LOBSTER output exists for these
+# published compounds -- every `sum_total_eV` below is the compound's
+# total ICOHP per formula unit, algebraically reconstructed from the
+# manuscript's own per-bond-type numbers (see
+# tests/test_reitz_dronskowski_validation.py's module docstring for the
+# worked arithmetic for all 7 cases). Z is always 1 -- these numbers are
+# already reported per formula unit in the manuscript, there is no larger
+# calculated cell to divide out.
+#
+# by_bond_type is intentionally omitted: nothing in this validation
+# exercises bond_pair filtering, only the whole-compound
+# sum_per_formula_unit_eV that delta.py's default (bond_pair=None) path
+# uses, so the loader in test_reitz_dronskowski_validation.py builds each
+# IcohpSummary directly from sum_total_eV with an empty by_bond_type dict
+# and n_bonds=1 (there is no physically meaningful single "bond count" to
+# recover from the manuscript's per-species-atom reporting convention;
+# delta_per_bond_eV is diagnostic-only and not what these 7 cases test).
+
+compounds:
+  - id: PbN3_2
+    formula: "Pb(N3)2"
+    composition: {Pb: 1, N: 6}
+    role: target
+    sum_total_eV: -89.104  # -11.680*1 (Pb-N) + -12.904*6 (N-N azide)
+
+  - id: Pb_elemental
+    composition: {Pb: 1}
+    role: element
+    sum_total_eV: -5.688
+
+  - id: N2_elemental
+    composition: {N: 2}
+    role: element
+    sum_total_eV: -23.161
+
+  - id: S4N2
+    composition: {S: 4, N: 2}
+    role: target
+    sum_total_eV: -49.24  # 2*-10.30 + 2*-8.46 + 2*-5.86 (three S-N/S-S bond types)
+
+  - id: S8_elemental
+    composition: {S: 8}
+    role: element
+    sum_total_eV: -46.8  # -5.85 eV/S * 8 S
+
+  - id: S4N4
+    composition: {S: 4, N: 4}
+    role: target
+    sum_total_eV: -73.84  # -9.23 eV * 8 (S-N bonds/FU)
+
+  - id: ZnSn
+    composition: {Zn: 1, Sn: 1}
+    role: target
+    sum_total_eV: -16.869  # 6*-2.298 (Zn-Sn) + 1*-3.081 (Zn-Zn)
+
+  - id: Zn_elemental
+    composition: {Zn: 1}
+    role: element
+    sum_total_eV: -12.686
+
+  - id: Sn_elemental
+    composition: {Sn: 1}
+    role: element
+    sum_total_eV: -7.672
+
+  - id: CaO_sphalerite
+    composition: {Ca: 1, O: 1}
+    role: polymorph
+    space_group_symbol: F-43m
+    space_group_number: 216
+    sum_total_eV: -3.46  # -0.865 eV/Ca * 4 (Ca-O bonds/FU, tetrahedral CN=4)
+
+  - id: CaO_rocksalt
+    composition: {Ca: 1, O: 1}
+    role: polymorph
+    space_group_symbol: Fm-3m
+    space_group_number: 225
+    sum_total_eV: -4.278  # -0.713 eV/Ca * 6 (Ca-O bonds/FU, octahedral CN=6)
+
+  - id: CaN
+    composition: {Ca: 1, N: 1}
+    role: target
+    sum_total_eV: -4.302  # -0.717 eV * 6 (Ca-N bonds/FU, rocksalt-type CN=6)
+
+  - id: Ca3N2
+    composition: {Ca: 3, N: 2}
+    role: hull_neighbor
+    sum_total_eV: -7.692  # -0.641 eV/bond * 12 (Ca-N bonds/FU)
+
+  - id: Mn2O7
+    composition: {Mn: 2, O: 7}
+    role: target
+    sum_total_eV: -62.21  # 2*(-24.50 + -4.54) (short+long Mn-O, x2 Mn/FU) + 7*-0.59 (O-O)
+
+  - id: MnO2_elemental
+    composition: {Mn: 1, O: 2}
+    role: hull_neighbor
+    sum_total_eV: -18.54
+
+  - id: O2_elemental
+    composition: {O: 2}
+    role: element
+    sum_total_eV: -18.05
+
+# Sign convention throughout: delta = ICOHP_sum(products) - ICOHP_sum(reactants)
+# (delta.py's own convention -- matches the manuscript directly, no flip).
+# expected_delta_kJ_per_mol / expected_label are read straight from the
+# manuscript's own table; tolerance_kJ_per_mol absorbs the manuscript's own
+# rounding of its reported per-bond eV values to 2-3 decimals (not slack
+# for an implementation bug -- see the validation test for the exact
+# achieved residual per case).
+reactions:
+  - id: case1_PbN3_2_decomposition
+    type: decomposition_to_elements
+    reactants: [{id: PbN3_2, coefficient: 1}]
+    products:
+      - {id: Pb_elemental, coefficient: 1}
+      - {id: N2_elemental, coefficient: 3}
+    expected_delta_kJ_per_mol: 1345
+    expected_label: endobondic
+    tolerance_kJ_per_mol: 3
+
+  - id: case2_S4N2_decomposition
+    type: decomposition_to_elements
+    reactants: [{id: S4N2, coefficient: 1}]
+    products:
+      - {id: S8_elemental, coefficient: 0.5}
+      - {id: N2_elemental, coefficient: 1}
+    expected_delta_kJ_per_mol: 258
+    expected_label: endobondic
+    tolerance_kJ_per_mol: 3
+
+  - id: case3_S4N4_decomposition
+    type: decomposition_to_elements
+    reactants: [{id: S4N4, coefficient: 1}]
+    products:
+      - {id: S8_elemental, coefficient: 0.5}
+      - {id: N2_elemental, coefficient: 2}
+    expected_delta_kJ_per_mol: 399
+    expected_label: endobondic
+    tolerance_kJ_per_mol: 3
+
+  - id: case4_ZnSn_decomposition
+    type: decomposition_to_elements
+    reactants: [{id: ZnSn, coefficient: 1}]
+    products:
+      - {id: Zn_elemental, coefficient: 1}
+      - {id: Sn_elemental, coefficient: 1}
+    expected_delta_kJ_per_mol: -337
+    expected_label: exobondic
+    tolerance_kJ_per_mol: 3
+
+  - id: case5_CaO_polymorph_transition
+    type: polymorph_transition
+    reactants: [{id: CaO_sphalerite, coefficient: 1}]
+    products:
+      - {id: CaO_rocksalt, coefficient: 1}
+    expected_delta_kJ_per_mol: -79
+    expected_label: exobondic
+    tolerance_kJ_per_mol: 3
+
+  - id: case6_CaN_decomposition
+    type: decomposition_to_compound_and_elements
+    reactants: [{id: CaN, coefficient: 1}]
+    products:
+      - {id: Ca3N2, coefficient: 0.3333333333333}
+      - {id: N2_elemental, coefficient: 0.1666666666667}
+    expected_delta_kJ_per_mol: -205
+    expected_label: exobondic
+    tolerance_kJ_per_mol: 3
+
+  - id: case7_Mn2O7_decomposition
+    type: decomposition_to_compound_and_elements
+    reactants: [{id: Mn2O7, coefficient: 1}]
+    products:
+      - {id: MnO2_elemental, coefficient: 2}
+      - {id: O2_elemental, coefficient: 1.5}
+    expected_delta_kJ_per_mol: -186
+    expected_label: exobondic
+    tolerance_kJ_per_mol: 3
+    note: >
+      Mn2O7 is a real, observed compound despite the exobondic label here
+      -- it decomposes slowly via gradual O2 loss rather than sudden bond
+      rupture, which this static sign criterion cannot see (manuscript's
+      own point, section 4). This fixture validates only the numeric
+      ΔICOHP and its sign; classify.py's Mn2O7 guard-rail test (in
+      test_classify.py) checks that the code never silently overstates
+      confidence in "does not exist" for this kind of case.

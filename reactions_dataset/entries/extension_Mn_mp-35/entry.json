@@ -1,0 +1,29 @@
+{
+  "compound_id": "extension_Mn_mp-35",
+  "formula": "Mn",
+  "composition": {
+    "Mn": 29
+  },
+  "Z": 29,
+  "space_group_symbol": "I-43m",
+  "space_group_number": 217,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -133.80125,
+    "sum_per_atom_eV": -4.613836206896552,
+    "sum_per_formula_unit_eV": -4.613836206896552,
+    "mean_per_bond_eV": -0.14449379049676028,
+    "n_bonds": 926,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": -0.14449379049676028,
+        "sum_eV": -133.80125,
+        "n_bonds": 926
+      }
+    }
+  },
+  "icobi": null,
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mn_mp-35"
+}

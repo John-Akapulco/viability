@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_CaAl4_mp-1749",
+  "formula": "CaAl4",
+  "composition": {
+    "Ca": 1,
+    "Al": 4
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -28.716510000000003,
+    "sum_per_atom_eV": -5.743302000000001,
+    "sum_per_formula_unit_eV": -28.716510000000003,
+    "mean_per_bond_eV": -0.28432188118811885,
+    "n_bonds": 101,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.01737,
+        "sum_eV": -0.06948,
+        "n_bonds": 4
+      },
+      "Al-Ca": {
+        "mean_eV": -0.09517970588235296,
+        "sum_eV": -3.2361100000000005,
+        "n_bonds": 34
+      },
+      "Al-Al": {
+        "mean_eV": -0.4033479365079366,
+        "sum_eV": -25.410920000000004,
+        "n_bonds": 63
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.004550000000004,
+    "sum_per_atom_eV": 1.4009100000000008,
+    "sum_per_formula_unit_eV": 7.004550000000004,
+    "mean_per_bond_eV": 0.06935198019801984,
+    "n_bonds": 101,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.00284,
+        "sum_eV": 0.01136,
+        "n_bonds": 4
+      },
+      "Al-Ca": {
+        "mean_eV": 0.014954411764705884,
+        "sum_eV": 0.5084500000000001,
+        "n_bonds": 34
+      },
+      "Al-Al": {
+        "mean_eV": 0.10293238095238101,
+        "sum_eV": 6.484740000000004,
+        "n_bonds": 63
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_CaAl4_mp-1749"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_TiBe12_mp-1104067",
+  "formula": "TiBe12",
+  "composition": {
+    "Ti": 1,
+    "Be": 12
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -145.06691000000004,
+    "sum_per_atom_eV": -11.15899307692308,
+    "sum_per_formula_unit_eV": -145.06691000000004,
+    "mean_per_bond_eV": -0.19037652230971133,
+    "n_bonds": 762,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.002092,
+        "sum_eV": 0.02092,
+        "n_bonds": 10
+      },
+      "Be-Ti": {
+        "mean_eV": -0.1245989423076923,
+        "sum_eV": -12.95829,
+        "n_bonds": 104
+      },
+      "Be-Be": {
+        "mean_eV": -0.20390361111111122,
+        "sum_eV": -132.12954000000008,
+        "n_bonds": 648
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 19.300800000000002,
+    "sum_per_atom_eV": 1.4846769230769232,
+    "sum_per_formula_unit_eV": 19.300800000000002,
+    "mean_per_bond_eV": 0.02532913385826772,
+    "n_bonds": 762,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.02258,
+        "sum_eV": 0.2258,
+        "n_bonds": 10
+      },
+      "Be-Ti": {
+        "mean_eV": 0.0318766346153846,
+        "sum_eV": 3.3151699999999984,
+        "n_bonds": 104
+      },
+      "Be-Be": {
+        "mean_eV": 0.024320725308641926,
+        "sum_eV": 15.759829999999969,
+        "n_bonds": 648
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_TiBe12_mp-1104067"
+}

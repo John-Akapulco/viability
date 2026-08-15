@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ti_mp-46",
+  "formula": "Ti",
+  "composition": {
+    "Ti": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -15.26445000000001,
+    "sum_per_atom_eV": -7.632225000000005,
+    "sum_per_formula_unit_eV": -7.632225000000005,
+    "mean_per_bond_eV": -0.1734596590909092,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.1734596590909092,
+        "sum_eV": -15.26445000000001,
+        "n_bonds": 88
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.492620000000001,
+    "sum_per_atom_eV": 3.2463100000000007,
+    "sum_per_formula_unit_eV": 3.2463100000000007,
+    "mean_per_bond_eV": 0.07377977272727275,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.07377977272727275,
+        "sum_eV": 6.492620000000001,
+        "n_bonds": 88
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ti_mp-46"
+}

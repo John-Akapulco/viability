@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Br_mp-23154",
+  "formula": "Br",
+  "composition": {
+    "Br": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Cmce",
+  "space_group_number": 64,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -8.652459999999998,
+    "sum_per_atom_eV": -2.1631149999999995,
+    "sum_per_formula_unit_eV": -2.1631149999999995,
+    "mean_per_bond_eV": -0.13955580645161286,
+    "n_bonds": 62,
+    "by_bond_type": {
+      "Br-Br": {
+        "mean_eV": -0.13955580645161286,
+        "sum_eV": -8.652459999999998,
+        "n_bonds": 62
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.3324800000000003,
+    "sum_per_atom_eV": 0.5831200000000001,
+    "sum_per_formula_unit_eV": 0.5831200000000001,
+    "mean_per_bond_eV": 0.03762064516129033,
+    "n_bonds": 62,
+    "by_bond_type": {
+      "Br-Br": {
+        "mean_eV": 0.03762064516129033,
+        "sum_eV": 2.3324800000000003,
+        "n_bonds": 62
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Br_mp-23154"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_HfMo_mp-1224314__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_HfMo_mp-1224314",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Hf_mp-103",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Mo_mp-129",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

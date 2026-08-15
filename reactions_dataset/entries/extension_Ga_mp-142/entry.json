@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ga_mp-142",
+  "formula": "Ga",
+  "composition": {
+    "Ga": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Cmce",
+  "space_group_number": 64,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -38.36347,
+    "sum_per_atom_eV": -9.5908675,
+    "sum_per_formula_unit_eV": -9.5908675,
+    "mean_per_bond_eV": -0.41699423913043476,
+    "n_bonds": 92,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": -0.41699423913043476,
+        "sum_eV": -38.36347,
+        "n_bonds": 92
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.664060000000001,
+    "sum_per_atom_eV": 1.6660150000000002,
+    "sum_per_formula_unit_eV": 1.6660150000000002,
+    "mean_per_bond_eV": 0.0724354347826087,
+    "n_bonds": 92,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": 0.0724354347826087,
+        "sum_eV": 6.664060000000001,
+        "n_bonds": 92
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ga_mp-142"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_Y3Co_mp-1189329__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_Y3Co_mp-1189329",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Y_mp-112",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Co_mp-102",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

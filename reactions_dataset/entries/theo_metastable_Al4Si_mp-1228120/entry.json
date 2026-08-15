@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Al4Si_mp-1228120",
+  "formula": "Al4Si",
+  "composition": {
+    "Al": 4,
+    "Si": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -85.94116999999999,
+    "sum_per_atom_eV": -17.188233999999998,
+    "sum_per_formula_unit_eV": -85.94116999999999,
+    "mean_per_bond_eV": -1.0610020987654318,
+    "n_bonds": 81,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -1.1822798245614037,
+        "sum_eV": -67.38995000000001,
+        "n_bonds": 57
+      },
+      "Al-Si": {
+        "mean_eV": -0.6538188888888891,
+        "sum_eV": -11.768740000000003,
+        "n_bonds": 18
+      },
+      "Si-Si": {
+        "mean_eV": -1.1304133333333333,
+        "sum_eV": -6.78248,
+        "n_bonds": 6
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.011190000000001,
+    "sum_per_atom_eV": 2.002238,
+    "sum_per_formula_unit_eV": 10.011190000000001,
+    "mean_per_bond_eV": 0.12359493827160495,
+    "n_bonds": 81,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.12658105263157898,
+        "sum_eV": 7.2151200000000015,
+        "n_bonds": 57
+      },
+      "Al-Si": {
+        "mean_eV": 0.09716277777777776,
+        "sum_eV": 1.7489299999999997,
+        "n_bonds": 18
+      },
+      "Si-Si": {
+        "mean_eV": 0.17452333333333334,
+        "sum_eV": 1.04714,
+        "n_bonds": 6
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Al4Si_mp-1228120"
+}

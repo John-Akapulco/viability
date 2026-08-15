@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Zr3Be_mp-1188016",
+  "formula": "Zr3Be",
+  "composition": {
+    "Zr": 3,
+    "Be": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -43.494539999999986,
+    "sum_per_atom_eV": -10.873634999999997,
+    "sum_per_formula_unit_eV": -43.494539999999986,
+    "mean_per_bond_eV": -0.3507624193548386,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.2959442307692308,
+        "sum_eV": -23.083650000000002,
+        "n_bonds": 78
+      },
+      "Be-Zr": {
+        "mean_eV": -0.6505676666666667,
+        "sum_eV": -19.51703,
+        "n_bonds": 30
+      },
+      "Be-Be": {
+        "mean_eV": -0.05586625,
+        "sum_eV": -0.89386,
+        "n_bonds": 16
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.259350000000001,
+    "sum_per_atom_eV": 2.3148375000000003,
+    "sum_per_formula_unit_eV": 9.259350000000001,
+    "mean_per_bond_eV": 0.07467217741935485,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.07573102564102568,
+        "sum_eV": 5.907020000000004,
+        "n_bonds": 78
+      },
+      "Be-Zr": {
+        "mean_eV": 0.10363566666666667,
+        "sum_eV": 3.10907,
+        "n_bonds": 30
+      },
+      "Be-Be": {
+        "mean_eV": 0.015203750000000004,
+        "sum_eV": 0.24326000000000006,
+        "n_bonds": 16
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Zr3Be_mp-1188016"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Li13Sn5_mp-30769",
+  "formula": "Li13Sn5",
+  "composition": {
+    "Li": 13,
+    "Sn": 5
+  },
+  "Z": 1,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -135.51692999999986,
+    "sum_per_atom_eV": -7.528718333333326,
+    "sum_per_formula_unit_eV": -135.51692999999986,
+    "mean_per_bond_eV": -0.23527244791666643,
+    "n_bonds": 576,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.1463501941747572,
+        "sum_eV": -45.222209999999976,
+        "n_bonds": 309
+      },
+      "Li-Sn": {
+        "mean_eV": -0.3911060747663553,
+        "sum_eV": -83.69670000000004,
+        "n_bonds": 214
+      },
+      "Sn-Sn": {
+        "mean_eV": -0.12449094339622642,
+        "sum_eV": -6.59802,
+        "n_bonds": 53
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 21.995880000000025,
+    "sum_per_atom_eV": 1.2219933333333346,
+    "sum_per_formula_unit_eV": 21.995880000000025,
+    "mean_per_bond_eV": 0.038187291666666706,
+    "n_bonds": 576,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.01875809061488674,
+        "sum_eV": 5.796250000000003,
+        "n_bonds": 309
+      },
+      "Li-Sn": {
+        "mean_eV": 0.0667496261682243,
+        "sum_eV": 14.28442,
+        "n_bonds": 214
+      },
+      "Sn-Sn": {
+        "mean_eV": 0.03613603773584905,
+        "sum_eV": 1.9152099999999999,
+        "n_bonds": 53
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Li13Sn5_mp-30769"
+}

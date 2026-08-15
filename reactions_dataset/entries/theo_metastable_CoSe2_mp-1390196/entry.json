@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_CoSe2_mp-1390196",
+  "formula": "CoSe2",
+  "composition": {
+    "Co": 4,
+    "Se": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -126.99852000000001,
+    "sum_per_atom_eV": -10.583210000000001,
+    "sum_per_formula_unit_eV": -31.749630000000003,
+    "mean_per_bond_eV": -0.38252566265060245,
+    "n_bonds": 332,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": -0.2689294444444445,
+        "sum_eV": -9.681460000000001,
+        "n_bonds": 36
+      },
+      "Co-Se": {
+        "mean_eV": -0.7089906578947369,
+        "sum_eV": -107.76658000000002,
+        "n_bonds": 152
+      },
+      "Se-Se": {
+        "mean_eV": -0.06632277777777776,
+        "sum_eV": -9.550479999999997,
+        "n_bonds": 144
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 22.933,
+    "sum_per_atom_eV": 1.9110833333333332,
+    "sum_per_formula_unit_eV": 5.73325,
+    "mean_per_bond_eV": 0.06907530120481928,
+    "n_bonds": 332,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": 0.043901944444444445,
+        "sum_eV": 1.58047,
+        "n_bonds": 36
+      },
+      "Co-Se": {
+        "mean_eV": 0.12093986842105257,
+        "sum_eV": 18.38285999999999,
+        "n_bonds": 152
+      },
+      "Se-Se": {
+        "mean_eV": 0.020622708333333333,
+        "sum_eV": 2.96967,
+        "n_bonds": 144
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_CoSe2_mp-1390196"
+}

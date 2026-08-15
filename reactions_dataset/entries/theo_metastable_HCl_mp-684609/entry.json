@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_HCl_mp-684609",
+  "formula": "HCl",
+  "composition": {
+    "H": 1,
+    "Cl": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Imm2",
+  "space_group_number": 44,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -7.493399999999999,
+    "sum_per_atom_eV": -3.7466999999999997,
+    "sum_per_formula_unit_eV": -7.493399999999999,
+    "mean_per_bond_eV": -0.16651999999999997,
+    "n_bonds": 45,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.00004142857142857143,
+        "sum_eV": -0.00058,
+        "n_bonds": 14
+      },
+      "Cl-H": {
+        "mean_eV": -0.4382211764705883,
+        "sum_eV": -7.44976,
+        "n_bonds": 17
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.0030757142857142862,
+        "sum_eV": -0.04306000000000001,
+        "n_bonds": 14
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.9684899999999995,
+    "sum_per_atom_eV": 0.48424499999999976,
+    "sum_per_formula_unit_eV": 0.9684899999999995,
+    "mean_per_bond_eV": 0.02152199999999999,
+    "n_bonds": 45,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.00005428571428571429,
+        "sum_eV": 0.00076,
+        "n_bonds": 14
+      },
+      "Cl-H": {
+        "mean_eV": 0.05626411764705881,
+        "sum_eV": 0.9564899999999998,
+        "n_bonds": 17
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.0008028571428571428,
+        "sum_eV": 0.01124,
+        "n_bonds": 14
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_HCl_mp-684609"
+}

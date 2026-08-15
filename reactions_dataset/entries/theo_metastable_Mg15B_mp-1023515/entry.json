@@ -1,0 +1,53 @@
+{
+  "compound_id": "theo_metastable_Mg15B_mp-1023515",
+  "formula": "Mg15B",
+  "composition": {
+    "Mg": 15,
+    "B": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -4.3827500000000015,
+    "sum_per_atom_eV": -0.2739218750000001,
+    "sum_per_formula_unit_eV": -4.3827500000000015,
+    "mean_per_bond_eV": -0.011718582887700538,
+    "n_bonds": 374,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.008460215384615385,
+        "sum_eV": -2.74957,
+        "n_bonds": 325
+      },
+      "B-Mg": {
+        "mean_eV": -0.033330204081632654,
+        "sum_eV": -1.63318,
+        "n_bonds": 49
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.88487,
+    "sum_per_atom_eV": 0.055304375,
+    "sum_per_formula_unit_eV": 0.88487,
+    "mean_per_bond_eV": 0.00236596256684492,
+    "n_bonds": 374,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0012221538461538466,
+        "sum_eV": 0.39720000000000016,
+        "n_bonds": 325
+      },
+      "B-Mg": {
+        "mean_eV": 0.009952448979591839,
+        "sum_eV": 0.4876700000000001,
+        "n_bonds": 49
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Mg15B_mp-1023515"
+}

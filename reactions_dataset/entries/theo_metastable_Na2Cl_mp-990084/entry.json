@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Na2Cl_mp-990084",
+  "formula": "Na2Cl",
+  "composition": {
+    "Na": 2,
+    "Cl": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -3.708499999999998,
+    "sum_per_atom_eV": -1.236166666666666,
+    "sum_per_formula_unit_eV": -3.708499999999998,
+    "mean_per_bond_eV": -0.09759210526315784,
+    "n_bonds": 38,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": -0.07038428571428573,
+        "sum_eV": -1.4780700000000004,
+        "n_bonds": 21
+      },
+      "Cl-Na": {
+        "mean_eV": -0.1976009090909091,
+        "sum_eV": -2.17361,
+        "n_bonds": 11
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.00947,
+        "sum_eV": -0.056819999999999996,
+        "n_bonds": 6
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.00453,
+    "sum_per_atom_eV": 0.3348433333333333,
+    "sum_per_formula_unit_eV": 1.00453,
+    "mean_per_bond_eV": 0.026434999999999997,
+    "n_bonds": 38,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": 0.03179714285714287,
+        "sum_eV": 0.6677400000000002,
+        "n_bonds": 21
+      },
+      "Cl-Na": {
+        "mean_eV": 0.028789999999999996,
+        "sum_eV": 0.31668999999999997,
+        "n_bonds": 11
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.00335,
+        "sum_eV": 0.0201,
+        "n_bonds": 6
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Na2Cl_mp-990084"
+}

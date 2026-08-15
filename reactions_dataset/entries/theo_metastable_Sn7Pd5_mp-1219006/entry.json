@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Sn7Pd5_mp-1219006",
+  "formula": "Sn7Pd5",
+  "composition": {
+    "Sn": 7,
+    "Pd": 5
+  },
+  "Z": 1,
+  "space_group_symbol": "C2",
+  "space_group_number": 5,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -128.96776000000003,
+    "sum_per_atom_eV": -10.747313333333336,
+    "sum_per_formula_unit_eV": -128.96776000000003,
+    "mean_per_bond_eV": -0.5200312903225808,
+    "n_bonds": 248,
+    "by_bond_type": {
+      "Sn-Sn": {
+        "mean_eV": -0.19566060975609753,
+        "sum_eV": -16.044169999999998,
+        "n_bonds": 82
+      },
+      "Pd-Sn": {
+        "mean_eV": -0.7568139682539676,
+        "sum_eV": -95.35855999999993,
+        "n_bonds": 126
+      },
+      "Pd-Pd": {
+        "mean_eV": -0.4391257500000001,
+        "sum_eV": -17.565030000000004,
+        "n_bonds": 40
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 21.009450000000005,
+    "sum_per_atom_eV": 1.7507875000000004,
+    "sum_per_formula_unit_eV": 21.009450000000005,
+    "mean_per_bond_eV": 0.0847155241935484,
+    "n_bonds": 248,
+    "by_bond_type": {
+      "Sn-Sn": {
+        "mean_eV": 0.0599171951219512,
+        "sum_eV": 4.9132099999999985,
+        "n_bonds": 82
+      },
+      "Pd-Sn": {
+        "mean_eV": 0.10772103174603179,
+        "sum_eV": 13.572850000000004,
+        "n_bonds": 126
+      },
+      "Pd-Pd": {
+        "mean_eV": 0.06308475,
+        "sum_eV": 2.5233899999999996,
+        "n_bonds": 40
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Sn7Pd5_mp-1219006"
+}

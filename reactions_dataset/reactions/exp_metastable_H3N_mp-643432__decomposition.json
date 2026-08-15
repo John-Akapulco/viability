@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_H3N_mp-643432__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_H3N_mp-643432",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_H_mp-730101",
+      "coefficient": 1.5
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 0.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

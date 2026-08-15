@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ir_mp-101",
+  "formula": "Ir",
+  "composition": {
+    "Ir": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -32.207919999999994,
+    "sum_per_atom_eV": -32.207919999999994,
+    "sum_per_formula_unit_eV": -32.207919999999994,
+    "mean_per_bond_eV": -0.5964429629629628,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Ir-Ir": {
+        "mean_eV": -0.5964429629629628,
+        "sum_eV": -32.207919999999994,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.209859999999999,
+    "sum_per_atom_eV": 5.209859999999999,
+    "sum_per_formula_unit_eV": 5.209859999999999,
+    "mean_per_bond_eV": 0.09647888888888888,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "Ir-Ir": {
+        "mean_eV": 0.09647888888888888,
+        "sum_eV": 5.209859999999999,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ir_mp-101"
+}

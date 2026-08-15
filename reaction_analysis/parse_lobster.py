@@ -24,6 +24,20 @@ pymatgen access pattern already established in percolation_path.py's
 accessor for atom1/atom2 alongside the value, so `._icohplist` (label ->
 IcohpValue) plus `IcohpValue.as_dict()` (public) is used instead of
 poking at private attributes directly.
+
+`bond_filter` (default "unfiltered"): this module's ORIGINAL and still
+default summation is unfiltered -- every symmetry-inequivalent periodic
+bond LOBSTER reports, matching percolation_path.py / reaction_icohp.py /
+the rest of this project (see above). Reitz & Dronskowski (ic-2026-04181q)
+instead sum only first-coordination-shell bonds per species pair before
+computing their endobondic/exobondic ICOHP totals (see nearest_neighbor.py)
+-- passing bond_filter="nearest_neighbor" switches to that convention.
+The default is left unfiltered, not switched wholesale, specifically to
+avoid silently changing the already-validated case-1 reaction_analysis
+population (analysis/populate_reaction_analysis_case1_full.py, cross-
+checked 192/192 against reaction_icohp.py) and the existing unit test
+suite -- callers that want the Reitz/Dronskowski convention opt in
+explicitly per compound.
 """
 
 from __future__ import annotations
@@ -37,6 +51,7 @@ from pymatgen.core import Structure
 from pymatgen.io.lobster.outputs import Icohplist
 from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 
+from reaction_analysis.nearest_neighbor import first_shell_records
 from reaction_analysis.schema import BondTypeSummary, CompoundEntry, IcohpSummary
 
 _ELEMENT_FROM_LABEL = re.compile(r"^([A-Za-z]+)")
@@ -65,8 +80,11 @@ def _load_structure(compound_dir: Path) -> Structure:
 def raw_bond_records(compound_dir: Path, filename: str, are_cobis: bool) -> list[dict]:
     """One dict per symmetry-inequivalent bond label: atom1, atom2 (LOBSTER
     site labels, e.g. "Na1"), translation (tuple[int,int,int]), value
-    (spin-summed ICOHP/ICOBI, eV). Same pymatgen access pattern as
-    percolation_path.py's _ingest() -- see this module's docstring."""
+    (spin-summed ICOHP/ICOBI, eV), length (bond distance, Angstrom, as
+    reported in the LOBSTER list file -- needed by nearest_neighbor.py's
+    first-shell detection, bond_filter="nearest_neighbor" below). Same
+    pymatgen access pattern as percolation_path.py's _ingest() -- see this
+    module's docstring."""
     parsed = Icohplist(are_cobis=are_cobis, filename=str(compound_dir / filename))
     records = []
     for value in parsed.icohpcollection._icohplist.values():
@@ -76,6 +94,7 @@ def raw_bond_records(compound_dir: Path, filename: str, are_cobis: bool) -> list
             "atom2": d["atom2"],
             "translation": tuple(int(x) for x in d["translation"]),
             "value": value.summed_icohp,
+            "length": d["length"],
         })
     return records
 
@@ -97,6 +116,19 @@ def check_no_reverse_duplicates(records: list[dict]) -> list[str]:
                 f"and ({r['atom2']}, {r['atom1']}, {reverse_translation}) both present"
             )
     return problems
+
+
+def _apply_bond_filter(records: list[dict], bond_filter: str, gap_ratio: float) -> list[dict]:
+    if bond_filter == "unfiltered":
+        return records
+    if bond_filter == "nearest_neighbor":
+        return first_shell_records(
+            records,
+            pair_key=lambda r: "-".join(sorted((_element_from_atom_label(r["atom1"]), _element_from_atom_label(r["atom2"])))),
+            distance=lambda r: r["length"],
+            gap_ratio=gap_ratio,
+        )
+    raise ValueError(f"Unknown bond_filter {bond_filter!r} (expected 'unfiltered' or 'nearest_neighbor')")
 
 
 def _build_summary(records: list[dict], n_sites: int, z: int) -> IcohpSummary:
@@ -135,6 +167,8 @@ def parse_compound_entry(
     *,
     compound_id: Optional[str] = None,
     energy_total_eV: Optional[float] = None,
+    bond_filter: str = "unfiltered",
+    gap_ratio: float = 2.5,
 ) -> CompoundEntry:
     """Build a CompoundEntry from `compound_dir`. `role` is required and
     never inferred (no chemical-role logic lives in this package -- see
@@ -154,6 +188,10 @@ def parse_compound_entry(
     `energy_total_eV` is passthrough-only: nothing in this module parses
     OUTCAR/vasprun.xml (both gitignored project-wide, and most already
     deleted from disk to save space) to obtain it.
+
+    `bond_filter`/`gap_ratio`: see this module's docstring and
+    nearest_neighbor.py. Default "unfiltered" preserves every prior
+    behavior of this function unchanged.
     """
     structure = _load_structure(compound_dir)
     n_sites = len(structure)
@@ -163,13 +201,17 @@ def parse_compound_entry(
 
     sga = SpacegroupAnalyzer(structure)
 
-    icohp_records = raw_bond_records(compound_dir, "ICOHPLIST.lobster", are_cobis=False)
+    icohp_records = _apply_bond_filter(
+        raw_bond_records(compound_dir, "ICOHPLIST.lobster", are_cobis=False), bond_filter, gap_ratio
+    )
     icohp_summary = _build_summary(icohp_records, n_sites, round(z))
 
     icobi_summary = None
     icobi_path = compound_dir / "ICOBILIST.lobster"
     if icobi_path.exists():
-        icobi_records = raw_bond_records(compound_dir, "ICOBILIST.lobster", are_cobis=True)
+        icobi_records = _apply_bond_filter(
+            raw_bond_records(compound_dir, "ICOBILIST.lobster", are_cobis=True), bond_filter, gap_ratio
+        )
         icobi_summary = _build_summary(icobi_records, n_sites, round(z))
 
     return CompoundEntry(

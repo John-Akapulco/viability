@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_Tl3Ga_mp-1187539",
+  "formula": "Tl3Ga",
+  "composition": {
+    "Tl": 3,
+    "Ga": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.552200000000003,
+    "sum_per_atom_eV": -6.138050000000001,
+    "sum_per_formula_unit_eV": -24.552200000000003,
+    "mean_per_bond_eV": -0.3230552631578948,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Tl-Tl": {
+        "mean_eV": -0.279486,
+        "sum_eV": -13.9743,
+        "n_bonds": 50
+      },
+      "Ga-Tl": {
+        "mean_eV": -0.7583971428571427,
+        "sum_eV": -10.617559999999997,
+        "n_bonds": 14
+      },
+      "Ga-Ga": {
+        "mean_eV": 0.003305,
+        "sum_eV": 0.03966,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.858509999999999,
+    "sum_per_atom_eV": 1.2146274999999997,
+    "sum_per_formula_unit_eV": 4.858509999999999,
+    "mean_per_bond_eV": 0.06392776315789472,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Tl-Tl": {
+        "mean_eV": 0.05276220000000002,
+        "sum_eV": 2.638110000000001,
+        "n_bonds": 50
+      },
+      "Ga-Tl": {
+        "mean_eV": 0.1560542857142857,
+        "sum_eV": 2.18476,
+        "n_bonds": 14
+      },
+      "Ga-Ga": {
+        "mean_eV": 0.00297,
+        "sum_eV": 0.03564,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Tl3Ga_mp-1187539"
+}

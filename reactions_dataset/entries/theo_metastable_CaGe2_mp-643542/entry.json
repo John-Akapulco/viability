@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_CaGe2_mp-643542",
+  "formula": "CaGe2",
+  "composition": {
+    "Ca": 1,
+    "Ge": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -14.503799999999996,
+    "sum_per_atom_eV": -4.834599999999999,
+    "sum_per_formula_unit_eV": -14.503799999999996,
+    "mean_per_bond_eV": -0.20144166666666663,
+    "n_bonds": 72,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.03540666666666667,
+        "sum_eV": -0.42488000000000004,
+        "n_bonds": 12
+      },
+      "Ca-Ge": {
+        "mean_eV": -0.1305916666666667,
+        "sum_eV": -3.1342000000000003,
+        "n_bonds": 24
+      },
+      "Ge-Ge": {
+        "mean_eV": -0.30401999999999996,
+        "sum_eV": -10.944719999999998,
+        "n_bonds": 36
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.6636699999999998,
+    "sum_per_atom_eV": 1.2212233333333333,
+    "sum_per_formula_unit_eV": 3.6636699999999998,
+    "mean_per_bond_eV": 0.05088430555555555,
+    "n_bonds": 72,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.0029216666666666666,
+        "sum_eV": 0.03506,
+        "n_bonds": 12
+      },
+      "Ca-Ge": {
+        "mean_eV": 0.02487,
+        "sum_eV": 0.59688,
+        "n_bonds": 24
+      },
+      "Ge-Ge": {
+        "mean_eV": 0.08421472222222222,
+        "sum_eV": 3.03173,
+        "n_bonds": 36
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_CaGe2_mp-643542"
+}

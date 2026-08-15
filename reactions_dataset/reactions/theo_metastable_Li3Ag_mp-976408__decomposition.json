@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_Li3Ag_mp-976408__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_Li3Ag_mp-976408",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Li_mp-1018134",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

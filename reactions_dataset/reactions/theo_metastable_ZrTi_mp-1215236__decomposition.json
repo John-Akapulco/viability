@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_ZrTi_mp-1215236__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_ZrTi_mp-1215236",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ti_mp-46",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

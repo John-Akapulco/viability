@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_CdPd_mp-1696",
+  "formula": "CdPd",
+  "composition": {
+    "Cd": 2,
+    "Pd": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P4/mmm",
+  "space_group_number": 123,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -39.636970000000005,
+    "sum_per_atom_eV": -9.909242500000001,
+    "sum_per_formula_unit_eV": -19.818485000000003,
+    "mean_per_bond_eV": -0.2752567361111111,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Cd-Cd": {
+        "mean_eV": -0.13712074999999999,
+        "sum_eV": -5.48483,
+        "n_bonds": 40
+      },
+      "Cd-Pd": {
+        "mean_eV": -0.41180468749999993,
+        "sum_eV": -26.355499999999996,
+        "n_bonds": 64
+      },
+      "Pd-Pd": {
+        "mean_eV": -0.19491599999999998,
+        "sum_eV": -7.796639999999999,
+        "n_bonds": 40
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.952830000000003,
+    "sum_per_atom_eV": 1.4882075000000008,
+    "sum_per_formula_unit_eV": 2.9764150000000016,
+    "mean_per_bond_eV": 0.041339097222222246,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Cd-Cd": {
+        "mean_eV": 0.023232249999999996,
+        "sum_eV": 0.9292899999999998,
+        "n_bonds": 40
+      },
+      "Cd-Pd": {
+        "mean_eV": 0.05430390625000001,
+        "sum_eV": 3.475450000000001,
+        "n_bonds": 64
+      },
+      "Pd-Pd": {
+        "mean_eV": 0.03870224999999998,
+        "sum_eV": 1.5480899999999993,
+        "n_bonds": 40
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_CdPd_mp-1696"
+}

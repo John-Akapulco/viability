@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_TiO_mp-1071163",
+  "formula": "TiO",
+  "composition": {
+    "Ti": 3,
+    "O": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P-62m",
+  "space_group_number": 189,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -48.93890999999994,
+    "sum_per_atom_eV": -8.156484999999991,
+    "sum_per_formula_unit_eV": -16.312969999999982,
+    "mean_per_bond_eV": -0.1456515178571427,
+    "n_bonds": 336,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.08358728070175439,
+        "sum_eV": -9.52895,
+        "n_bonds": 114
+      },
+      "O-Ti": {
+        "mean_eV": -0.3209921666666667,
+        "sum_eV": -38.51906,
+        "n_bonds": 120
+      },
+      "O-O": {
+        "mean_eV": -0.008734313725490194,
+        "sum_eV": -0.8908999999999998,
+        "n_bonds": 102
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.267770000000025,
+    "sum_per_atom_eV": 1.7112950000000042,
+    "sum_per_formula_unit_eV": 3.4225900000000085,
+    "mean_per_bond_eV": 0.030558839285714363,
+    "n_bonds": 336,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.03768280701754386,
+        "sum_eV": 4.29584,
+        "n_bonds": 114
+      },
+      "O-Ti": {
+        "mean_eV": 0.048188666666666664,
+        "sum_eV": 5.78264,
+        "n_bonds": 120
+      },
+      "O-O": {
+        "mean_eV": 0.0018557843137254903,
+        "sum_eV": 0.18929,
+        "n_bonds": 102
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_TiO_mp-1071163"
+}

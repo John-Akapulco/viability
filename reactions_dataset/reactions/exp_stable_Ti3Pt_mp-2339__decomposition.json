@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_Ti3Pt_mp-2339__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_Ti3Pt_mp-2339",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ti_mp-46",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Pt_mp-126",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Zr_mp-131",
+  "formula": "Zr",
+  "composition": {
+    "Zr": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -25.114810000000013,
+    "sum_per_atom_eV": -12.557405000000006,
+    "sum_per_formula_unit_eV": -12.557405000000006,
+    "mean_per_bond_eV": -0.48297711538461563,
+    "n_bonds": 52,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.48297711538461563,
+        "sum_eV": -25.114810000000013,
+        "n_bonds": 52
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.412510000000001,
+    "sum_per_atom_eV": 3.2062550000000005,
+    "sum_per_formula_unit_eV": 3.2062550000000005,
+    "mean_per_bond_eV": 0.12331750000000002,
+    "n_bonds": 52,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.12331750000000002,
+        "sum_eV": 6.412510000000001,
+        "n_bonds": 52
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Zr_mp-131"
+}

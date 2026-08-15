@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Hf_mp-103",
+  "formula": "Hf",
+  "composition": {
+    "Hf": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -23.007400000000004,
+    "sum_per_atom_eV": -11.503700000000002,
+    "sum_per_formula_unit_eV": -11.503700000000002,
+    "mean_per_bond_eV": -0.3027289473684211,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.3027289473684211,
+        "sum_eV": -23.007400000000004,
+        "n_bonds": 76
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.623269999999999,
+    "sum_per_atom_eV": 3.3116349999999994,
+    "sum_per_formula_unit_eV": 3.3116349999999994,
+    "mean_per_bond_eV": 0.08714828947368419,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.08714828947368419,
+        "sum_eV": 6.623269999999999,
+        "n_bonds": 76
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Hf_mp-103"
+}

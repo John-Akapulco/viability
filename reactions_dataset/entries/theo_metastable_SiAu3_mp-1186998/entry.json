@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_SiAu3_mp-1186998",
+  "formula": "SiAu3",
+  "composition": {
+    "Si": 1,
+    "Au": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -41.69953999999999,
+    "sum_per_atom_eV": -10.424884999999998,
+    "sum_per_formula_unit_eV": -41.69953999999999,
+    "mean_per_bond_eV": -0.29785385714285706,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": -0.07131833333333333,
+        "sum_eV": -0.85582,
+        "n_bonds": 12
+      },
+      "Au-Si": {
+        "mean_eV": -0.3480226086956523,
+        "sum_eV": -16.009040000000006,
+        "n_bonds": 46
+      },
+      "Au-Au": {
+        "mean_eV": -0.3028619512195122,
+        "sum_eV": -24.83468,
+        "n_bonds": 82
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.799959999999999,
+    "sum_per_atom_eV": 1.6999899999999997,
+    "sum_per_formula_unit_eV": 6.799959999999999,
+    "mean_per_bond_eV": 0.04857114285714285,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": 0.026210000000000008,
+        "sum_eV": 0.3145200000000001,
+        "n_bonds": 12
+      },
+      "Au-Si": {
+        "mean_eV": 0.06355347826086956,
+        "sum_eV": 2.9234599999999995,
+        "n_bonds": 46
+      },
+      "Au-Au": {
+        "mean_eV": 0.043438780487804855,
+        "sum_eV": 3.5619799999999984,
+        "n_bonds": 82
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_SiAu3_mp-1186998"
+}

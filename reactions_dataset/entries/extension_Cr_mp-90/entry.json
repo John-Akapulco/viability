@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Cr_mp-90",
+  "formula": "Cr",
+  "composition": {
+    "Cr": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -15.026429999999998,
+    "sum_per_atom_eV": -7.513214999999999,
+    "sum_per_formula_unit_eV": -7.513214999999999,
+    "mean_per_bond_eV": -0.15652531249999999,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": -0.15652531249999999,
+        "sum_eV": -15.026429999999998,
+        "n_bonds": 96
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.537260000000002,
+    "sum_per_atom_eV": 3.268630000000001,
+    "sum_per_formula_unit_eV": 3.268630000000001,
+    "mean_per_bond_eV": 0.06809645833333335,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": 0.06809645833333335,
+        "sum_eV": 6.537260000000002,
+        "n_bonds": 96
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cr_mp-90"
+}

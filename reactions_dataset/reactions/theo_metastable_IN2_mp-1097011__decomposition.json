@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_IN2_mp-1097011__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_IN2_mp-1097011",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_I_mp-23153",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

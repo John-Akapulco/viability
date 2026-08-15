@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Te_mp-19",
+  "formula": "Te",
+  "composition": {
+    "Te": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P3_121",
+  "space_group_number": 152,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -10.192429999999995,
+    "sum_per_atom_eV": -3.3974766666666647,
+    "sum_per_formula_unit_eV": -3.3974766666666647,
+    "mean_per_bond_eV": -0.21234229166666654,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "Te-Te": {
+        "mean_eV": -0.21234229166666654,
+        "sum_eV": -10.192429999999995,
+        "n_bonds": 48
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.09719,
+    "sum_per_atom_eV": 1.0323966666666666,
+    "sum_per_formula_unit_eV": 1.0323966666666666,
+    "mean_per_bond_eV": 0.06452479166666666,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "Te-Te": {
+        "mean_eV": 0.06452479166666666,
+        "sum_eV": 3.09719,
+        "n_bonds": 48
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Te_mp-19"
+}

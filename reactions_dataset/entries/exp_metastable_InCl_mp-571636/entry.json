@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_InCl_mp-571636",
+  "formula": "InCl",
+  "composition": {
+    "In": 2,
+    "Cl": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmc2_1",
+  "space_group_number": 36,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -15.428219999999998,
+    "sum_per_atom_eV": -3.8570549999999995,
+    "sum_per_formula_unit_eV": -7.714109999999999,
+    "mean_per_bond_eV": -0.2857077777777777,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": -0.1961344444444445,
+        "sum_eV": -3.530420000000001,
+        "n_bonds": 18
+      },
+      "Cl-In": {
+        "mean_eV": -0.5330072727272726,
+        "sum_eV": -11.726159999999997,
+        "n_bonds": 22
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.012259999999999998,
+        "sum_eV": -0.17164,
+        "n_bonds": 14
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.190400000000001,
+    "sum_per_atom_eV": 0.7976000000000002,
+    "sum_per_formula_unit_eV": 1.5952000000000004,
+    "mean_per_bond_eV": 0.0590814814814815,
+    "n_bonds": 54,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": 0.04114,
+        "sum_eV": 0.7405200000000001,
+        "n_bonds": 18
+      },
+      "Cl-In": {
+        "mean_eV": 0.10829999999999998,
+        "sum_eV": 2.3825999999999996,
+        "n_bonds": 22
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.004805714285714286,
+        "sum_eV": 0.06728,
+        "n_bonds": 14
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_InCl_mp-571636"
+}

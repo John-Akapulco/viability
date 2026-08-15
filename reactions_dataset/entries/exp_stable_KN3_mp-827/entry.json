@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_KN3_mp-827",
+  "formula": "KN3",
+  "composition": {
+    "K": 2,
+    "N": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "I4/mcm",
+  "space_group_number": 140,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -85.50082000000005,
+    "sum_per_atom_eV": -10.687602500000006,
+    "sum_per_formula_unit_eV": -42.750410000000024,
+    "mean_per_bond_eV": -0.33139852713178314,
+    "n_bonds": 258,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": -0.11437772727272734,
+        "sum_eV": -2.5163100000000016,
+        "n_bonds": 22
+      },
+      "K-N": {
+        "mean_eV": -0.072415875,
+        "sum_eV": -5.793270000000001,
+        "n_bonds": 80
+      },
+      "N-N": {
+        "mean_eV": -0.4948156410256411,
+        "sum_eV": -77.19124000000001,
+        "n_bonds": 156
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.171939999999987,
+    "sum_per_atom_eV": 1.2714924999999984,
+    "sum_per_formula_unit_eV": 5.085969999999993,
+    "mean_per_bond_eV": 0.0394261240310077,
+    "n_bonds": 258,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": 0.0066063636363636385,
+        "sum_eV": 0.14534000000000005,
+        "n_bonds": 22
+      },
+      "K-N": {
+        "mean_eV": 0.010240499999999996,
+        "sum_eV": 0.8192399999999996,
+        "n_bonds": 80
+      },
+      "N-N": {
+        "mean_eV": 0.0590215384615384,
+        "sum_eV": 9.20735999999999,
+        "n_bonds": 156
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_KN3_mp-827"
+}

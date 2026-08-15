@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_NbRh2_mp-1220414__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_NbRh2_mp-1220414",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Nb_mp-75",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 2.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

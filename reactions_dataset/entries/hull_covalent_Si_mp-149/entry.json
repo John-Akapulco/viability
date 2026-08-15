@@ -1,0 +1,42 @@
+{
+  "compound_id": "hull_covalent_Si_mp-149",
+  "formula": "Si",
+  "composition": {
+    "Si": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -18.610730000000004,
+    "sum_per_atom_eV": -9.305365000000002,
+    "sum_per_formula_unit_eV": -9.305365000000002,
+    "mean_per_bond_eV": -0.29079265625000006,
+    "n_bonds": 64,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": -0.29079265625000006,
+        "sum_eV": -18.610730000000004,
+        "n_bonds": 64
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.9409499999999977,
+    "sum_per_atom_eV": 1.9704749999999989,
+    "sum_per_formula_unit_eV": 1.9704749999999989,
+    "mean_per_bond_eV": 0.061577343749999965,
+    "n_bonds": 64,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": 0.061577343749999965,
+        "sum_eV": 3.9409499999999977,
+        "n_bonds": 64
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/hull_covalent_Si_mp-149"
+}

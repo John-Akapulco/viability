@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Cs_mp-1",
+  "formula": "Cs",
+  "composition": {
+    "Cs": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -0.984,
+    "sum_per_atom_eV": -0.984,
+    "sum_per_formula_unit_eV": -0.984,
+    "mean_per_bond_eV": -0.123,
+    "n_bonds": 8,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": -0.123,
+        "sum_eV": -0.984,
+        "n_bonds": 8
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.44502,
+    "sum_per_atom_eV": 0.44502,
+    "sum_per_formula_unit_eV": 0.44502,
+    "mean_per_bond_eV": 0.0556275,
+    "n_bonds": 8,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": 0.0556275,
+        "sum_eV": 0.44502,
+        "n_bonds": 8
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cs_mp-1"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Pb_mp-20483",
+  "formula": "Pb",
+  "composition": {
+    "Pb": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -10.23976,
+    "sum_per_atom_eV": -10.23976,
+    "sum_per_formula_unit_eV": -10.23976,
+    "mean_per_bond_eV": -0.5688755555555556,
+    "n_bonds": 18,
+    "by_bond_type": {
+      "Pb-Pb": {
+        "mean_eV": -0.5688755555555556,
+        "sum_eV": -10.23976,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.3451,
+    "sum_per_atom_eV": 2.3451,
+    "sum_per_formula_unit_eV": 2.3451,
+    "mean_per_bond_eV": 0.13028333333333333,
+    "n_bonds": 18,
+    "by_bond_type": {
+      "Pb-Pb": {
+        "mean_eV": 0.13028333333333333,
+        "sum_eV": 2.3451,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Pb_mp-20483"
+}

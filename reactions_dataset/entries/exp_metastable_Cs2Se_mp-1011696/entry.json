@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Cs2Se_mp-1011696",
+  "formula": "Cs2Se",
+  "composition": {
+    "Cs": 8,
+    "Se": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -34.07225000000002,
+    "sum_per_atom_eV": -2.839354166666668,
+    "sum_per_formula_unit_eV": -8.518062500000005,
+    "mean_per_bond_eV": -0.28393541666666683,
+    "n_bonds": 120,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": -0.4236955357142859,
+        "sum_eV": -23.726950000000013,
+        "n_bonds": 56
+      },
+      "Cs-Se": {
+        "mean_eV": -0.22336977272727268,
+        "sum_eV": -9.828269999999998,
+        "n_bonds": 44
+      },
+      "Se-Se": {
+        "mean_eV": -0.025851500000000006,
+        "sum_eV": -0.5170300000000001,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.189279999999998,
+    "sum_per_atom_eV": 0.4324399999999999,
+    "sum_per_formula_unit_eV": 1.2973199999999996,
+    "mean_per_bond_eV": 0.043243999999999984,
+    "n_bonds": 120,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": 0.03531875000000001,
+        "sum_eV": 1.9778500000000006,
+        "n_bonds": 56
+      },
+      "Cs-Se": {
+        "mean_eV": 0.06807295454545456,
+        "sum_eV": 2.9952100000000006,
+        "n_bonds": 44
+      },
+      "Se-Se": {
+        "mean_eV": 0.010811000000000001,
+        "sum_eV": 0.21622000000000002,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Cs2Se_mp-1011696"
+}

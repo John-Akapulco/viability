@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_YAg3_mp-1187811",
+  "formula": "YAg3",
+  "composition": {
+    "Y": 1,
+    "Ag": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -38.97065000000002,
+    "sum_per_atom_eV": -9.742662500000005,
+    "sum_per_formula_unit_eV": -38.97065000000002,
+    "mean_per_bond_eV": -0.2783617857142859,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": -0.031001666666666667,
+        "sum_eV": -0.37202,
+        "n_bonds": 12
+      },
+      "Ag-Y": {
+        "mean_eV": -0.37478978260869567,
+        "sum_eV": -17.24033,
+        "n_bonds": 46
+      },
+      "Ag-Ag": {
+        "mean_eV": -0.26046707317073153,
+        "sum_eV": -21.358299999999986,
+        "n_bonds": 82
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.118550000000001,
+    "sum_per_atom_eV": 1.5296375000000002,
+    "sum_per_formula_unit_eV": 6.118550000000001,
+    "mean_per_bond_eV": 0.043703928571428574,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": 0.03144,
+        "sum_eV": 0.37728,
+        "n_bonds": 12
+      },
+      "Ag-Y": {
+        "mean_eV": 0.05938456521739131,
+        "sum_eV": 2.73169,
+        "n_bonds": 46
+      },
+      "Ag-Ag": {
+        "mean_eV": 0.03670219512195121,
+        "sum_eV": 3.0095799999999997,
+        "n_bonds": 82
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_YAg3_mp-1187811"
+}

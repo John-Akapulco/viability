@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_Sc5Ge3_mp-17190",
+  "formula": "Sc5Ge3",
+  "composition": {
+    "Sc": 10,
+    "Ge": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mcm",
+  "space_group_number": 193,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -111.92614000000009,
+    "sum_per_atom_eV": -6.995383750000006,
+    "sum_per_formula_unit_eV": -55.963070000000045,
+    "mean_per_bond_eV": -0.2914743229166669,
+    "n_bonds": 384,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": -0.14115249999999996,
+        "sum_eV": -22.019789999999993,
+        "n_bonds": 156
+      },
+      "Ge-Sc": {
+        "mean_eV": -0.4951038690476193,
+        "sum_eV": -83.17745000000005,
+        "n_bonds": 168
+      },
+      "Ge-Ge": {
+        "mean_eV": -0.11214833333333335,
+        "sum_eV": -6.728900000000001,
+        "n_bonds": 60
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 26.22792,
+    "sum_per_atom_eV": 1.639245,
+    "sum_per_formula_unit_eV": 13.11396,
+    "mean_per_bond_eV": 0.068301875,
+    "n_bonds": 384,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": 0.045362500000000014,
+        "sum_eV": 7.076550000000002,
+        "n_bonds": 156
+      },
+      "Ge-Sc": {
+        "mean_eV": 0.10650488095238093,
+        "sum_eV": 17.892819999999997,
+        "n_bonds": 168
+      },
+      "Ge-Ge": {
+        "mean_eV": 0.020975833333333326,
+        "sum_eV": 1.2585499999999996,
+        "n_bonds": 60
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_Sc5Ge3_mp-17190"
+}

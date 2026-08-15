@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_AlSb_mp-1023918",
+  "formula": "AlSb",
+  "composition": {
+    "Al": 2,
+    "Sb": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -30.311729999999983,
+    "sum_per_atom_eV": -7.577932499999996,
+    "sum_per_formula_unit_eV": -15.155864999999991,
+    "mean_per_bond_eV": -0.32947532608695634,
+    "n_bonds": 92,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.11890999999999997,
+        "sum_eV": -2.8538399999999995,
+        "n_bonds": 24
+      },
+      "Al-Sb": {
+        "mean_eV": -0.5909768181818182,
+        "sum_eV": -26.002980000000004,
+        "n_bonds": 44
+      },
+      "Sb-Sb": {
+        "mean_eV": -0.06062125000000001,
+        "sum_eV": -1.4549100000000001,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.584500000000002,
+    "sum_per_atom_eV": 1.6461250000000005,
+    "sum_per_formula_unit_eV": 3.292250000000001,
+    "mean_per_bond_eV": 0.07157065217391306,
+    "n_bonds": 92,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.026073333333333323,
+        "sum_eV": 0.6257599999999998,
+        "n_bonds": 24
+      },
+      "Al-Sb": {
+        "mean_eV": 0.12330818181818186,
+        "sum_eV": 5.425560000000002,
+        "n_bonds": 44
+      },
+      "Sb-Sb": {
+        "mean_eV": 0.02221583333333334,
+        "sum_eV": 0.5331800000000002,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_AlSb_mp-1023918"
+}

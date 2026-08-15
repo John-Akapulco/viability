@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_TiO_mp-1071163__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_TiO_mp-1071163",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ti_mp-46",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_O2_mp-1524462",
+      "coefficient": 0.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

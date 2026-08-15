@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_O2_mp-1524462",
+  "formula": "O2",
+  "composition": {
+    "O": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -71.70403000000002,
+    "sum_per_atom_eV": -8.963003750000002,
+    "sum_per_formula_unit_eV": -17.926007500000004,
+    "mean_per_bond_eV": -0.23586851973684217,
+    "n_bonds": 304,
+    "by_bond_type": {
+      "O-O": {
+        "mean_eV": -0.23586851973684217,
+        "sum_eV": -71.70403000000002,
+        "n_bonds": 304
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.986759999999996,
+    "sum_per_atom_eV": 0.7483449999999995,
+    "sum_per_formula_unit_eV": 1.496689999999999,
+    "mean_per_bond_eV": 0.019693289473684195,
+    "n_bonds": 304,
+    "by_bond_type": {
+      "O-O": {
+        "mean_eV": 0.019693289473684195,
+        "sum_eV": 5.986759999999996,
+        "n_bonds": 304
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462"
+}

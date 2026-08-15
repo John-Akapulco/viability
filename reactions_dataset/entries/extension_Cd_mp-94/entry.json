@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Cd_mp-94",
+  "formula": "Cd",
+  "composition": {
+    "Cd": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -29.253199999999993,
+    "sum_per_atom_eV": -14.626599999999996,
+    "sum_per_formula_unit_eV": -14.626599999999996,
+    "mean_per_bond_eV": -0.4570812499999999,
+    "n_bonds": 64,
+    "by_bond_type": {
+      "Cd-Cd": {
+        "mean_eV": -0.4570812499999999,
+        "sum_eV": -29.253199999999993,
+        "n_bonds": 64
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.6724499999999995,
+    "sum_per_atom_eV": 2.3362249999999998,
+    "sum_per_formula_unit_eV": 2.3362249999999998,
+    "mean_per_bond_eV": 0.07300703124999999,
+    "n_bonds": 64,
+    "by_bond_type": {
+      "Cd-Cd": {
+        "mean_eV": 0.07300703124999999,
+        "sum_eV": 4.6724499999999995,
+        "n_bonds": 64
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cd_mp-94"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Rb_mp-70",
+  "formula": "Rb",
+  "composition": {
+    "Rb": 8
+  },
+  "Z": 8,
+  "space_group_symbol": "P1",
+  "space_group_number": 1,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -4.23886,
+    "sum_per_atom_eV": -0.5298575,
+    "sum_per_formula_unit_eV": -0.5298575,
+    "mean_per_bond_eV": -0.07569392857142856,
+    "n_bonds": 56,
+    "by_bond_type": {
+      "Rb-Rb": {
+        "mean_eV": -0.07569392857142856,
+        "sum_eV": -4.23886,
+        "n_bonds": 56
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.1648200000000006,
+    "sum_per_atom_eV": 0.2706025000000001,
+    "sum_per_formula_unit_eV": 0.2706025000000001,
+    "mean_per_bond_eV": 0.03865750000000001,
+    "n_bonds": 56,
+    "by_bond_type": {
+      "Rb-Rb": {
+        "mean_eV": 0.03865750000000001,
+        "sum_eV": 2.1648200000000006,
+        "n_bonds": 56
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Rb_mp-70"
+}

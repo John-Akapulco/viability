@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_ZrMo2_mp-2049",
+  "formula": "ZrMo2",
+  "composition": {
+    "Zr": 2,
+    "Mo": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -53.60926000000001,
+    "sum_per_atom_eV": -8.93487666666667,
+    "sum_per_formula_unit_eV": -26.804630000000007,
+    "mean_per_bond_eV": -0.31910273809523815,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.1693210714285714,
+        "sum_eV": -4.740989999999999,
+        "n_bonds": 28
+      },
+      "Mo-Zr": {
+        "mean_eV": -0.4615230357142858,
+        "sum_eV": -25.845290000000006,
+        "n_bonds": 56
+      },
+      "Mo-Mo": {
+        "mean_eV": -0.2740830952380952,
+        "sum_eV": -23.022979999999997,
+        "n_bonds": 84
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 15.79480000000001,
+    "sum_per_atom_eV": 2.632466666666668,
+    "sum_per_formula_unit_eV": 7.897400000000005,
+    "mean_per_bond_eV": 0.09401666666666672,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.04024749999999999,
+        "sum_eV": 1.1269299999999998,
+        "n_bonds": 28
+      },
+      "Mo-Zr": {
+        "mean_eV": 0.12589160714285713,
+        "sum_eV": 7.049929999999999,
+        "n_bonds": 56
+      },
+      "Mo-Mo": {
+        "mean_eV": 0.0906897619047619,
+        "sum_eV": 7.617939999999999,
+        "n_bonds": 84
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_ZrMo2_mp-2049"
+}

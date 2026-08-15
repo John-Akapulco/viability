@@ -1,0 +1,22 @@
+{
+  "reaction_id": "hull_metallic_AlNi_mp-1487__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "hull_metallic_AlNi_mp-1487",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Al_mp-134",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ni_mp-23",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

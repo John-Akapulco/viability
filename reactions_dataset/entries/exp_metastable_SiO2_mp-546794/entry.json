@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_SiO2_mp-546794",
+  "formula": "SiO2",
+  "composition": {
+    "Si": 2,
+    "O": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "I-42d",
+  "space_group_number": 122,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -67.31446999999997,
+    "sum_per_atom_eV": -11.219078333333329,
+    "sum_per_formula_unit_eV": -33.657234999999986,
+    "mean_per_bond_eV": -0.2952389035087718,
+    "n_bonds": 228,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": -0.03672750000000002,
+        "sum_eV": -1.3221900000000006,
+        "n_bonds": 36
+      },
+      "O-Si": {
+        "mean_eV": -0.7288688636363637,
+        "sum_eV": -64.14046,
+        "n_bonds": 88
+      },
+      "O-O": {
+        "mean_eV": -0.01780596153846154,
+        "sum_eV": -1.8518200000000002,
+        "n_bonds": 104
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.689900000000008,
+    "sum_per_atom_eV": 1.1149833333333345,
+    "sum_per_formula_unit_eV": 3.344950000000004,
+    "mean_per_bond_eV": 0.0293416666666667,
+    "n_bonds": 228,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": 0.001903611111111111,
+        "sum_eV": 0.06853,
+        "n_bonds": 36
+      },
+      "O-Si": {
+        "mean_eV": 0.06909170454545457,
+        "sum_eV": 6.080070000000003,
+        "n_bonds": 88
+      },
+      "O-O": {
+        "mean_eV": 0.005204807692307695,
+        "sum_eV": 0.5413000000000003,
+        "n_bonds": 104
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_SiO2_mp-546794"
+}

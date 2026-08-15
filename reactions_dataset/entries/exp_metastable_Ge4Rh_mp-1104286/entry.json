@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Ge4Rh_mp-1104286",
+  "formula": "Ge4Rh",
+  "composition": {
+    "Ge": 12,
+    "Rh": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P3_121",
+  "space_group_number": 152,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -126.23488000000006,
+    "sum_per_atom_eV": -8.41565866666667,
+    "sum_per_formula_unit_eV": -42.078293333333356,
+    "mean_per_bond_eV": -0.34025574123989233,
+    "n_bonds": 371,
+    "by_bond_type": {
+      "Ge-Ge": {
+        "mean_eV": -0.35559650442477864,
+        "sum_eV": -80.36480999999998,
+        "n_bonds": 226
+      },
+      "Ge-Rh": {
+        "mean_eV": -0.33337066176470587,
+        "sum_eV": -45.338409999999996,
+        "n_bonds": 136
+      },
+      "Rh-Rh": {
+        "mean_eV": -0.05907333333333334,
+        "sum_eV": -0.53166,
+        "n_bonds": 9
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 25.155179999999984,
+    "sum_per_atom_eV": 1.6770119999999988,
+    "sum_per_formula_unit_eV": 8.385059999999994,
+    "mean_per_bond_eV": 0.06780371967654981,
+    "n_bonds": 371,
+    "by_bond_type": {
+      "Ge-Ge": {
+        "mean_eV": 0.068964203539823,
+        "sum_eV": 15.585909999999997,
+        "n_bonds": 226
+      },
+      "Ge-Rh": {
+        "mean_eV": 0.06887647058823528,
+        "sum_eV": 9.367199999999997,
+        "n_bonds": 136
+      },
+      "Rh-Rh": {
+        "mean_eV": 0.022452222222222224,
+        "sum_eV": 0.20207000000000003,
+        "n_bonds": 9
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Ge4Rh_mp-1104286"
+}

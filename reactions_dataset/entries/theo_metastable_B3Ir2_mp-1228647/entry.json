@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_B3Ir2_mp-1228647",
+  "formula": "B3Ir2",
+  "composition": {
+    "B": 6,
+    "Ir": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -159.65771999999993,
+    "sum_per_atom_eV": -15.965771999999992,
+    "sum_per_formula_unit_eV": -79.82885999999996,
+    "mean_per_bond_eV": -0.33754274841437615,
+    "n_bonds": 473,
+    "by_bond_type": {
+      "B-B": {
+        "mean_eV": -0.19387856287425143,
+        "sum_eV": -32.37771999999999,
+        "n_bonds": 167
+      },
+      "B-Ir": {
+        "mean_eV": -0.4390258108108108,
+        "sum_eV": -97.46373,
+        "n_bonds": 222
+      },
+      "Ir-Ir": {
+        "mean_eV": -0.3549555952380953,
+        "sum_eV": -29.816270000000003,
+        "n_bonds": 84
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 22.488169999999997,
+    "sum_per_atom_eV": 2.248817,
+    "sum_per_formula_unit_eV": 11.244084999999998,
+    "mean_per_bond_eV": 0.047543699788583506,
+    "n_bonds": 473,
+    "by_bond_type": {
+      "B-B": {
+        "mean_eV": 0.02486269461077846,
+        "sum_eV": 4.152070000000003,
+        "n_bonds": 167
+      },
+      "B-Ir": {
+        "mean_eV": 0.061676531531531534,
+        "sum_eV": 13.69219,
+        "n_bonds": 222
+      },
+      "Ir-Ir": {
+        "mean_eV": 0.05528464285714284,
+        "sum_eV": 4.643909999999998,
+        "n_bonds": 84
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_B3Ir2_mp-1228647"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Re_mp-8",
+  "formula": "Re",
+  "composition": {
+    "Re": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -28.973449999999982,
+    "sum_per_atom_eV": -14.486724999999991,
+    "sum_per_formula_unit_eV": -14.486724999999991,
+    "mean_per_bond_eV": -0.3292437499999998,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Re-Re": {
+        "mean_eV": -0.3292437499999998,
+        "sum_eV": -28.973449999999982,
+        "n_bonds": 88
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.6070999999999955,
+    "sum_per_atom_eV": 3.8035499999999978,
+    "sum_per_formula_unit_eV": 3.8035499999999978,
+    "mean_per_bond_eV": 0.08644431818181814,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Re-Re": {
+        "mean_eV": 0.08644431818181814,
+        "sum_eV": 7.6070999999999955,
+        "n_bonds": 88
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Re_mp-8"
+}

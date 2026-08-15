@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_ScTc3_mp-867262",
+  "formula": "ScTc3",
+  "composition": {
+    "Sc": 1,
+    "Tc": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -34.260200000000026,
+    "sum_per_atom_eV": -8.565050000000006,
+    "sum_per_formula_unit_eV": -34.260200000000026,
+    "mean_per_bond_eV": -0.24471571428571448,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": -0.09072000000000001,
+        "sum_eV": -1.08864,
+        "n_bonds": 12
+      },
+      "Sc-Tc": {
+        "mean_eV": -0.33228673913043477,
+        "sum_eV": -15.28519,
+        "n_bonds": 46
+      },
+      "Tc-Tc": {
+        "mean_eV": -0.21812646341463396,
+        "sum_eV": -17.886369999999985,
+        "n_bonds": 82
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.243740000000006,
+    "sum_per_atom_eV": 2.5609350000000015,
+    "sum_per_formula_unit_eV": 10.243740000000006,
+    "mean_per_bond_eV": 0.07316957142857147,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Sc-Sc": {
+        "mean_eV": 0.014268333333333333,
+        "sum_eV": 0.17121999999999998,
+        "n_bonds": 12
+      },
+      "Sc-Tc": {
+        "mean_eV": 0.08118869565217392,
+        "sum_eV": 3.73468,
+        "n_bonds": 46
+      },
+      "Tc-Tc": {
+        "mean_eV": 0.07729073170731707,
+        "sum_eV": 6.337839999999999,
+        "n_bonds": 82
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_ScTc3_mp-867262"
+}

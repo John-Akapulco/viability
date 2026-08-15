@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_LiTl3_mp-1185253",
+  "formula": "LiTl3",
+  "composition": {
+    "Li": 1,
+    "Tl": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -29.33398000000002,
+    "sum_per_atom_eV": -7.333495000000005,
+    "sum_per_formula_unit_eV": -29.33398000000002,
+    "mean_per_bond_eV": -0.2716109259259261,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.06951333333333333,
+        "sum_eV": -0.8341599999999999,
+        "n_bonds": 12
+      },
+      "Li-Tl": {
+        "mean_eV": -0.4145276666666666,
+        "sum_eV": -12.43583,
+        "n_bonds": 30
+      },
+      "Tl-Tl": {
+        "mean_eV": -0.24339378787878788,
+        "sum_eV": -16.06399,
+        "n_bonds": 66
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.444380000000001,
+    "sum_per_atom_eV": 1.3610950000000002,
+    "sum_per_formula_unit_eV": 5.444380000000001,
+    "mean_per_bond_eV": 0.050410925925925935,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.010983333333333331,
+        "sum_eV": 0.13179999999999997,
+        "n_bonds": 12
+      },
+      "Li-Tl": {
+        "mean_eV": 0.063605,
+        "sum_eV": 1.9081499999999998,
+        "n_bonds": 30
+      },
+      "Tl-Tl": {
+        "mean_eV": 0.051582272727272706,
+        "sum_eV": 3.4044299999999987,
+        "n_bonds": 66
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_LiTl3_mp-1185253"
+}

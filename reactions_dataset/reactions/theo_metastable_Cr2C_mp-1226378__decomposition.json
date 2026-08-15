@@ -1,0 +1,22 @@
+{
+  "reaction_id": "theo_metastable_Cr2C_mp-1226378__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "theo_metastable_Cr2C_mp-1226378",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cr_mp-90",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_Cgraphite_mp-48",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

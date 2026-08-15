@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_HI_mp-697025__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_HI_mp-697025",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_H_mp-730101",
+      "coefficient": 0.5
+    },
+    {
+      "compound_id": "extension_I_mp-23153",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

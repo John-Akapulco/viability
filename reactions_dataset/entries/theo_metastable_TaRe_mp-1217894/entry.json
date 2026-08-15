@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_TaRe_mp-1217894",
+  "formula": "TaRe",
+  "composition": {
+    "Ta": 1,
+    "Re": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Cmmm",
+  "space_group_number": 65,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -28.78317999999998,
+    "sum_per_atom_eV": -14.39158999999999,
+    "sum_per_formula_unit_eV": -28.78317999999998,
+    "mean_per_bond_eV": -0.32708159090909067,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": -0.33918,
+        "sum_eV": -10.1754,
+        "n_bonds": 30
+      },
+      "Re-Ta": {
+        "mean_eV": -0.3871178571428571,
+        "sum_eV": -10.8393,
+        "n_bonds": 28
+      },
+      "Re-Re": {
+        "mean_eV": -0.25894933333333336,
+        "sum_eV": -7.76848,
+        "n_bonds": 30
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.422860000000003,
+    "sum_per_atom_eV": 3.7114300000000013,
+    "sum_per_formula_unit_eV": 7.422860000000003,
+    "mean_per_bond_eV": 0.08435068181818185,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": 0.08052666666666664,
+        "sum_eV": 2.415799999999999,
+        "n_bonds": 30
+      },
+      "Re-Ta": {
+        "mean_eV": 0.09868285714285714,
+        "sum_eV": 2.76312,
+        "n_bonds": 28
+      },
+      "Re-Re": {
+        "mean_eV": 0.074798,
+        "sum_eV": 2.2439400000000003,
+        "n_bonds": 30
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_TaRe_mp-1217894"
+}

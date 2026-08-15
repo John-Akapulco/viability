@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Cu3Ge_mp-19724",
+  "formula": "Cu3Ge",
+  "composition": {
+    "Cu": 6,
+    "Ge": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Pmmn",
+  "space_group_number": 59,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -32.029270000000004,
+    "sum_per_atom_eV": -4.0036587500000005,
+    "sum_per_formula_unit_eV": -16.014635000000002,
+    "mean_per_bond_eV": -0.10820699324324326,
+    "n_bonds": 296,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": -0.040244821428571394,
+        "sum_eV": -6.761129999999994,
+        "n_bonds": 168
+      },
+      "Cu-Ge": {
+        "mean_eV": -0.20897333333333343,
+        "sum_eV": -22.56912000000001,
+        "n_bonds": 108
+      },
+      "Ge-Ge": {
+        "mean_eV": -0.134951,
+        "sum_eV": -2.69902,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.6215400000000075,
+    "sum_per_atom_eV": 0.8276925000000009,
+    "sum_per_formula_unit_eV": 3.3107700000000038,
+    "mean_per_bond_eV": 0.022370067567567594,
+    "n_bonds": 296,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": 0.009433869047619045,
+        "sum_eV": 1.5848899999999997,
+        "n_bonds": 168
+      },
+      "Cu-Ge": {
+        "mean_eV": 0.038371944444444445,
+        "sum_eV": 4.14417,
+        "n_bonds": 108
+      },
+      "Ge-Ge": {
+        "mean_eV": 0.04462400000000001,
+        "sum_eV": 0.8924800000000002,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Cu3Ge_mp-19724"
+}

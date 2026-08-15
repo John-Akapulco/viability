@@ -1,0 +1,42 @@
+{
+  "compound_id": "exp_metastable_K_mp-10157",
+  "formula": "K",
+  "composition": {
+    "K": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -0.9690000000000002,
+    "sum_per_atom_eV": -0.9690000000000002,
+    "sum_per_formula_unit_eV": -0.9690000000000002,
+    "mean_per_bond_eV": -0.08075000000000002,
+    "n_bonds": 12,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": -0.08075000000000002,
+        "sum_eV": -0.9690000000000002,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.51616,
+    "sum_per_atom_eV": 0.51616,
+    "sum_per_formula_unit_eV": 0.51616,
+    "mean_per_bond_eV": 0.04301333333333333,
+    "n_bonds": 12,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": 0.04301333333333333,
+        "sum_eV": 0.51616,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_K_mp-10157"
+}

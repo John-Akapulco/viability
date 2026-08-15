@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_I_mp-23153",
+  "formula": "I",
+  "composition": {
+    "I": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Cmce",
+  "space_group_number": 64,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -6.61754,
+    "sum_per_atom_eV": -1.654385,
+    "sum_per_formula_unit_eV": -1.654385,
+    "mean_per_bond_eV": -0.13786541666666666,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "I-I": {
+        "mean_eV": -0.13786541666666666,
+        "sum_eV": -6.61754,
+        "n_bonds": 48
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.95572,
+    "sum_per_atom_eV": 0.48893,
+    "sum_per_formula_unit_eV": 0.48893,
+    "mean_per_bond_eV": 0.040744166666666665,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "I-I": {
+        "mean_eV": 0.040744166666666665,
+        "sum_eV": 1.95572,
+        "n_bonds": 48
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_I_mp-23153"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Sr_mp-139",
+  "formula": "Sr",
+  "composition": {
+    "Sr": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -0.31373000000000006,
+    "sum_per_atom_eV": -0.15686500000000003,
+    "sum_per_formula_unit_eV": -0.15686500000000003,
+    "mean_per_bond_eV": -0.01742944444444445,
+    "n_bonds": 18,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": -0.01742944444444445,
+        "sum_eV": -0.31373000000000006,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.01704,
+    "sum_per_atom_eV": 0.00852,
+    "sum_per_formula_unit_eV": 0.00852,
+    "mean_per_bond_eV": 0.0009466666666666666,
+    "n_bonds": 18,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": 0.0009466666666666666,
+        "sum_eV": 0.01704,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Sr_mp-139"
+}

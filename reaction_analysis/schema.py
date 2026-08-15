@@ -106,5 +106,6 @@ class ReactionResult(BaseModel):
     delta_per_atom_eV: float
     delta_per_bond_eV: float
     delta_per_bond_conservative: bool = False
+    bonding_label: Optional[Literal["endobondic", "exobondic"]] = None
     warnings: list[str] = Field(default_factory=list)
     error: Optional[str] = None

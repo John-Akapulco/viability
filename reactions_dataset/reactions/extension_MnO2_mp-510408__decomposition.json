@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_MnO2_mp-510408__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_MnO2_mp-510408",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mn_mp-35",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_O2_mp-1524462",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

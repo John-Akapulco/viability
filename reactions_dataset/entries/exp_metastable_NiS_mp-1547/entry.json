@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_NiS_mp-1547",
+  "formula": "NiS",
+  "composition": {
+    "Ni": 3,
+    "S": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "R3m",
+  "space_group_number": 160,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -31.109519999999993,
+    "sum_per_atom_eV": -5.184919999999999,
+    "sum_per_formula_unit_eV": -10.369839999999998,
+    "mean_per_bond_eV": -0.12802271604938267,
+    "n_bonds": 243,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": -0.03718637681159421,
+        "sum_eV": -2.5658600000000003,
+        "n_bonds": 69
+      },
+      "Ni-S": {
+        "mean_eV": -0.23811838095238091,
+        "sum_eV": -25.002429999999997,
+        "n_bonds": 105
+      },
+      "S-S": {
+        "mean_eV": -0.05132217391304351,
+        "sum_eV": -3.541230000000002,
+        "n_bonds": 69
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.116830000000002,
+    "sum_per_atom_eV": 1.1861383333333337,
+    "sum_per_formula_unit_eV": 2.3722766666666675,
+    "mean_per_bond_eV": 0.02928736625514404,
+    "n_bonds": 243,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": 0.019737101449275356,
+        "sum_eV": 1.3618599999999996,
+        "n_bonds": 69
+      },
+      "Ni-S": {
+        "mean_eV": 0.04546371428571425,
+        "sum_eV": 4.773689999999997,
+        "n_bonds": 105
+      },
+      "S-S": {
+        "mean_eV": 0.014221449275362317,
+        "sum_eV": 0.9812799999999998,
+        "n_bonds": 69
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_NiS_mp-1547"
+}

@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Be_mp-87",
+  "formula": "Be",
+  "composition": {
+    "Be": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -53.361990000000034,
+    "sum_per_atom_eV": -13.340497500000009,
+    "sum_per_formula_unit_eV": -13.340497500000009,
+    "mean_per_bond_eV": -0.16072888554216877,
+    "n_bonds": 332,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.16072888554216877,
+        "sum_eV": -53.361990000000034,
+        "n_bonds": 332
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.561309999999997,
+    "sum_per_atom_eV": 1.6403274999999993,
+    "sum_per_formula_unit_eV": 1.6403274999999993,
+    "mean_per_bond_eV": 0.019762981927710834,
+    "n_bonds": 332,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.019762981927710834,
+        "sum_eV": 6.561309999999997,
+        "n_bonds": 332
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Be_mp-87"
+}

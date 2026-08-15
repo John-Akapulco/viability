@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Mg_mp-153",
+  "formula": "Mg",
+  "composition": {
+    "Mg": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": 0.0,
+    "sum_per_atom_eV": 0.0,
+    "sum_per_formula_unit_eV": 0.0,
+    "mean_per_bond_eV": 0.0,
+    "n_bonds": 52,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0,
+        "sum_eV": 0.0,
+        "n_bonds": 52
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.0,
+    "sum_per_atom_eV": 0.0,
+    "sum_per_formula_unit_eV": 0.0,
+    "mean_per_bond_eV": 0.0,
+    "n_bonds": 52,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0,
+        "sum_eV": 0.0,
+        "n_bonds": 52
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mg_mp-153"
+}

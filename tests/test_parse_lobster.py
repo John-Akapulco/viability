@@ -97,5 +97,39 @@ class TestParseCompoundEntry(unittest.TestCase):
         self.assertEqual(entry.compound_id, "compound_K")
 
 
+class TestNearestNeighborBondFilter(unittest.TestCase):
+    """compound_Na2K's Na-Na pair has distances [2.0, 4.0, 4.0] Angstrom
+    (bonds #1 Na1-Na2@2.0, #4 Na1-Na1@4.0, #5 Na2-Na2@4.0 in its
+    ICOHPLIST.lobster) -- a real gap, unlike every other pair in the toy
+    fixtures (identical or single distances), making it the one case in
+    this project's existing fixtures that actually exercises
+    nearest_neighbor.py's filtering end to end through parse_lobster.py."""
+
+    def test_default_is_unfiltered_unchanged(self):
+        entry = parse_compound_entry(FIXTURES_DIR / "compound_Na2K", role="target")
+        self.assertEqual(entry.icohp.n_bonds, 6)
+        self.assertAlmostEqual(entry.icohp.sum_total_eV, -2.25)
+
+    def test_nearest_neighbor_filter_drops_the_far_Na_Na_bonds(self):
+        entry = parse_compound_entry(
+            FIXTURES_DIR / "compound_Na2K", role="target", bond_filter="nearest_neighbor"
+        )
+        # Na-Na: only the 2.0 A bond (-0.80) survives; the two 4.0 A bonds
+        # (-0.10 each) are cut. Na-K: both bonds at 2.5 A (identical
+        # distances, no gap) survive. K-K: single 4.0 A bond, trivially
+        # its own shell.
+        self.assertEqual(entry.icohp.n_bonds, 4)
+        self.assertAlmostEqual(entry.icohp.sum_total_eV, -2.05)
+        self.assertEqual(entry.icohp.by_bond_type["Na-Na"].n_bonds, 1)
+        self.assertAlmostEqual(entry.icohp.by_bond_type["Na-Na"].sum_eV, -0.80)
+        self.assertEqual(entry.icohp.by_bond_type["K-Na"].n_bonds, 2)
+
+    def test_unknown_bond_filter_raises(self):
+        with self.assertRaises(ValueError):
+            parse_compound_entry(
+                FIXTURES_DIR / "compound_Na2K", role="target", bond_filter="bogus"
+            )
+
+
 if __name__ == "__main__":
     unittest.main()

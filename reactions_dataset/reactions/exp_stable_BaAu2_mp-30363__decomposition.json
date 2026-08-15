@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_BaAu2_mp-30363__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_BaAu2_mp-30363",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ba_mp-122",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Au_mp-81",
+      "coefficient": 2.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

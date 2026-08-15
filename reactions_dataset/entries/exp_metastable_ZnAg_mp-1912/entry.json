@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_ZnAg_mp-1912",
+  "formula": "ZnAg",
+  "composition": {
+    "Zn": 1,
+    "Ag": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -25.461210000000012,
+    "sum_per_atom_eV": -12.730605000000006,
+    "sum_per_formula_unit_eV": -25.461210000000012,
+    "mean_per_bond_eV": -0.303109642857143,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.17482384615384616,
+        "sum_eV": -4.54542,
+        "n_bonds": 26
+      },
+      "Ag-Zn": {
+        "mean_eV": -0.4482365624999999,
+        "sum_eV": -14.343569999999996,
+        "n_bonds": 32
+      },
+      "Ag-Ag": {
+        "mean_eV": -0.2527776923076923,
+        "sum_eV": -6.57222,
+        "n_bonds": 26
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.6073399999999993,
+    "sum_per_atom_eV": 1.8036699999999997,
+    "sum_per_formula_unit_eV": 3.6073399999999993,
+    "mean_per_bond_eV": 0.0429445238095238,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.035629230769230774,
+        "sum_eV": 0.9263600000000001,
+        "n_bonds": 26
+      },
+      "Ag-Zn": {
+        "mean_eV": 0.052828125000000004,
+        "sum_eV": 1.6905000000000001,
+        "n_bonds": 32
+      },
+      "Ag-Ag": {
+        "mean_eV": 0.03809538461538462,
+        "sum_eV": 0.9904800000000001,
+        "n_bonds": 26
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_ZnAg_mp-1912"
+}

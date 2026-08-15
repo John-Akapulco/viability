@@ -1,0 +1,63 @@
+{
+  "compound_id": "theo_metastable_K5As4_mp-684799",
+  "formula": "K5As4",
+  "composition": {
+    "K": 5,
+    "As": 4
+  },
+  "Z": 1,
+  "space_group_symbol": "P-1",
+  "space_group_number": 2,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -26.337320000000002,
+    "sum_per_atom_eV": -2.9263688888888892,
+    "sum_per_formula_unit_eV": -26.337320000000002,
+    "mean_per_bond_eV": -0.25324346153846156,
+    "n_bonds": 104,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": -0.1601022580645161,
+        "sum_eV": -4.96317,
+        "n_bonds": 31
+      },
+      "As-K": {
+        "mean_eV": -0.1656372222222222,
+        "sum_eV": -8.94441,
+        "n_bonds": 54
+      },
+      "As-As": {
+        "mean_eV": -0.6541968421052631,
+        "sum_eV": -12.429739999999999,
+        "n_bonds": 19
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.2749299999999995,
+    "sum_per_atom_eV": 0.6972144444444444,
+    "sum_per_formula_unit_eV": 6.2749299999999995,
+    "mean_per_bond_eV": 0.06033586538461538,
+    "n_bonds": 104,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": 0.011318709677419355,
+        "sum_eV": 0.35087999999999997,
+        "n_bonds": 31
+      },
+      "As-K": {
+        "mean_eV": 0.04504796296296297,
+        "sum_eV": 2.4325900000000003,
+        "n_bonds": 54
+      },
+      "As-As": {
+        "mean_eV": 0.18376105263157894,
+        "sum_eV": 3.49146,
+        "n_bonds": 19
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/theo_metastable_K5As4_mp-684799"
+}

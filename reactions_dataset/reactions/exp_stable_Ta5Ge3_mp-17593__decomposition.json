@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_stable_Ta5Ge3_mp-17593__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_stable_Ta5Ge3_mp-17593",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ta_mp-50",
+      "coefficient": 5.0
+    },
+    {
+      "compound_id": "extension_Ge_mp-32",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

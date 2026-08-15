@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_SiRh_mp-2287__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_SiRh_mp-2287",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "hull_covalent_Si_mp-149",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

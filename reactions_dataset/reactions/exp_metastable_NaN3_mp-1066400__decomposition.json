@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_NaN3_mp-1066400__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_NaN3_mp-1066400",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_stable_Na_mp-10172",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 1.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

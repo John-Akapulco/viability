@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_CoB_mp-20857",
+  "formula": "CoB",
+  "composition": {
+    "Co": 4,
+    "B": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -123.77905000000011,
+    "sum_per_atom_eV": -15.472381250000014,
+    "sum_per_formula_unit_eV": -30.944762500000028,
+    "mean_per_bond_eV": -0.23803663461538482,
+    "n_bonds": 520,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": -0.1910983571428572,
+        "sum_eV": -26.753770000000006,
+        "n_bonds": 140
+      },
+      "B-Co": {
+        "mean_eV": -0.33023581896551724,
+        "sum_eV": -76.61471,
+        "n_bonds": 232
+      },
+      "B-B": {
+        "mean_eV": -0.13790925675675675,
+        "sum_eV": -20.41057,
+        "n_bonds": 148
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 18.171449999999997,
+    "sum_per_atom_eV": 2.2714312499999996,
+    "sum_per_formula_unit_eV": 4.542862499999999,
+    "mean_per_bond_eV": 0.034945096153846146,
+    "n_bonds": 520,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": 0.03842771428571429,
+        "sum_eV": 5.37988,
+        "n_bonds": 140
+      },
+      "B-Co": {
+        "mean_eV": 0.04499357758620691,
+        "sum_eV": 10.438510000000003,
+        "n_bonds": 232
+      },
+      "B-B": {
+        "mean_eV": 0.015899054054054052,
+        "sum_eV": 2.3530599999999997,
+        "n_bonds": 148
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_CoB_mp-20857"
+}

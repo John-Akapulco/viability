@@ -1,0 +1,22 @@
+{
+  "reaction_id": "exp_metastable_ZrRh_mp-2808__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "exp_metastable_ZrRh_mp-2808",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_metastable_Y2O3_mp-558573",
+  "formula": "Y2O3",
+  "composition": {
+    "Y": 6,
+    "O": 9
+  },
+  "Z": 3,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -146.7362,
+    "sum_per_atom_eV": -9.782413333333333,
+    "sum_per_formula_unit_eV": -48.91206666666667,
+    "mean_per_bond_eV": -0.28382243713733074,
+    "n_bonds": 517,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": -0.29881985294117647,
+        "sum_eV": -20.31975,
+        "n_bonds": 68
+      },
+      "O-Y": {
+        "mean_eV": -0.4973777822580642,
+        "sum_eV": -123.34968999999992,
+        "n_bonds": 248
+      },
+      "O-O": {
+        "mean_eV": -0.015257512437810932,
+        "sum_eV": -3.0667599999999973,
+        "n_bonds": 201
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 19.88075999999998,
+    "sum_per_atom_eV": 1.3253839999999988,
+    "sum_per_formula_unit_eV": 6.626919999999994,
+    "mean_per_bond_eV": 0.03845408123791099,
+    "n_bonds": 517,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": 0.020995000000000003,
+        "sum_eV": 1.4276600000000002,
+        "n_bonds": 68
+      },
+      "O-Y": {
+        "mean_eV": 0.0707620967741935,
+        "sum_eV": 17.54899999999999,
+        "n_bonds": 248
+      },
+      "O-O": {
+        "mean_eV": 0.004498009950248757,
+        "sum_eV": 0.9041000000000002,
+        "n_bonds": 201
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_metastable_Y2O3_mp-558573"
+}

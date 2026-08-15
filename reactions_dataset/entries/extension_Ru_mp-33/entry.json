@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Ru_mp-33",
+  "formula": "Ru",
+  "composition": {
+    "Ru": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -20.65571999999999,
+    "sum_per_atom_eV": -10.327859999999996,
+    "sum_per_formula_unit_eV": -10.327859999999996,
+    "mean_per_bond_eV": -0.23472409090909083,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ru-Ru": {
+        "mean_eV": -0.23472409090909083,
+        "sum_eV": -20.65571999999999,
+        "n_bonds": 88
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.3555,
+    "sum_per_atom_eV": 3.17775,
+    "sum_per_formula_unit_eV": 3.17775,
+    "mean_per_bond_eV": 0.07222159090909092,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Ru-Ru": {
+        "mean_eV": 0.07222159090909092,
+        "sum_eV": 6.3555,
+        "n_bonds": 88
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ru_mp-33"
+}

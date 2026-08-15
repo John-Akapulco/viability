@@ -1,0 +1,63 @@
+{
+  "compound_id": "exp_stable_BaCl2_mp-568662",
+  "formula": "BaCl2",
+  "composition": {
+    "Ba": 1,
+    "Cl": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -5.695409999999996,
+    "sum_per_atom_eV": -1.8984699999999988,
+    "sum_per_formula_unit_eV": -5.695409999999996,
+    "mean_per_bond_eV": -0.11390819999999993,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.10655666666666667,
+        "sum_eV": -1.27868,
+        "n_bonds": 12
+      },
+      "Ba-Cl": {
+        "mean_eV": -0.5008050000000001,
+        "sum_eV": -4.0064400000000004,
+        "n_bonds": 8
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.013676333333333337,
+        "sum_eV": -0.4102900000000001,
+        "n_bonds": 30
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.77914,
+    "sum_per_atom_eV": 0.25971333333333335,
+    "sum_per_formula_unit_eV": 0.77914,
+    "mean_per_bond_eV": 0.0155828,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.007408333333333334,
+        "sum_eV": 0.0889,
+        "n_bonds": 12
+      },
+      "Ba-Cl": {
+        "mean_eV": 0.07486625,
+        "sum_eV": 0.59893,
+        "n_bonds": 8
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.0030436666666666676,
+        "sum_eV": 0.09131000000000003,
+        "n_bonds": 30
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/exp_stable_BaCl2_mp-568662"
+}

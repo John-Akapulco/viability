@@ -1,0 +1,42 @@
+{
+  "compound_id": "extension_Fe_mp-13",
+  "formula": "Fe",
+  "composition": {
+    "Fe": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Im-3m",
+  "space_group_number": 229,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -12.854139999999997,
+    "sum_per_atom_eV": -6.427069999999999,
+    "sum_per_formula_unit_eV": -6.427069999999999,
+    "mean_per_bond_eV": -0.12854139999999997,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Fe-Fe": {
+        "mean_eV": -0.12854139999999997,
+        "sum_eV": -12.854139999999997,
+        "n_bonds": 100
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.81742,
+    "sum_per_atom_eV": 1.90871,
+    "sum_per_formula_unit_eV": 1.90871,
+    "mean_per_bond_eV": 0.0381742,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Fe-Fe": {
+        "mean_eV": 0.0381742,
+        "sum_eV": 3.81742,
+        "n_bonds": 100
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Fe_mp-13"
+}
