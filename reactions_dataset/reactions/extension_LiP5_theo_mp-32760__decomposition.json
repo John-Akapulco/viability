@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_LiP5_theo_mp-32760__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_LiP5_theo_mp-32760",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Li_mp-1018134",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_P_mp-568348",
+      "coefficient": 5.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

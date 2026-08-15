@@ -1,0 +1,43 @@
+{
+  "compound_id": "extension_BeCl2_theo_mp-1172909",
+  "formula": "BeCl2",
+  "composition": {
+    "Be": 12,
+    "Cl": 24
+  },
+  "Z": 12,
+  "space_group_symbol": "I-43m",
+  "space_group_number": 217,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -22.689980000000002,
+    "sum_per_atom_eV": -0.6302772222222223,
+    "sum_per_formula_unit_eV": -1.890831666666667,
+    "mean_per_bond_eV": -0.9454158333333335,
+    "n_bonds": 24,
+    "by_bond_type": {
+      "Cl-Cl": {
+        "mean_eV": -0.9454158333333335,
+        "sum_eV": -22.689980000000002,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.87272,
+    "sum_per_atom_eV": 0.24646444444444443,
+    "sum_per_formula_unit_eV": 0.7393933333333332,
+    "mean_per_bond_eV": 0.3696966666666666,
+    "n_bonds": 24,
+    "by_bond_type": {
+      "Cl-Cl": {
+        "mean_eV": 0.3696966666666666,
+        "sum_eV": 8.87272,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BeCl2_theo_mp-1172909"
+}

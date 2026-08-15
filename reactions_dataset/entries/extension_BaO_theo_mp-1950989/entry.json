@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_BaO_theo_mp-1950989",
+  "formula": "BaO",
+  "composition": {
+    "Ba": 2,
+    "O": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -11.842460000000006,
+    "sum_per_atom_eV": -2.9606150000000016,
+    "sum_per_formula_unit_eV": -5.921230000000003,
+    "mean_per_bond_eV": -0.1233589583333334,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.23705392857142854,
+        "sum_eV": -6.637509999999999,
+        "n_bonds": 28
+      },
+      "Ba-O": {
+        "mean_eV": -0.12110399999999999,
+        "sum_eV": -4.84416,
+        "n_bonds": 40
+      },
+      "O-O": {
+        "mean_eV": -0.012885357142857141,
+        "sum_eV": -0.36078999999999994,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.8097600000000003,
+    "sum_per_atom_eV": 0.45244000000000006,
+    "sum_per_formula_unit_eV": 0.9048800000000001,
+    "mean_per_bond_eV": 0.01885166666666667,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.017434999999999996,
+        "sum_eV": 0.4881799999999999,
+        "n_bonds": 28
+      },
+      "Ba-O": {
+        "mean_eV": 0.028998500000000003,
+        "sum_eV": 1.1599400000000002,
+        "n_bonds": 40
+      },
+      "O-O": {
+        "mean_eV": 0.005772857142857144,
+        "sum_eV": 0.16164000000000003,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BaO_theo_mp-1950989"
+}

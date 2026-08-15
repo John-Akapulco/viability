@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_KF3_exp_mp-1544557__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_KF3_exp_mp-1544557",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_metastable_K_mp-10157",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_F_mp-561203",
+      "coefficient": 1.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

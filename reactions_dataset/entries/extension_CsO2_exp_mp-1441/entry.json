@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CsO2_exp_mp-1441",
+  "formula": "CsO2",
+  "composition": {
+    "Cs": 1,
+    "O": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -19.10988,
+    "sum_per_atom_eV": -6.36996,
+    "sum_per_formula_unit_eV": -19.10988,
+    "mean_per_bond_eV": -0.2729982857142857,
+    "n_bonds": 70,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": -0.4411,
+        "sum_eV": -5.2932,
+        "n_bonds": 12
+      },
+      "Cs-O": {
+        "mean_eV": -0.10771349999999999,
+        "sum_eV": -2.15427,
+        "n_bonds": 20
+      },
+      "O-O": {
+        "mean_eV": -0.3069055263157894,
+        "sum_eV": -11.662409999999996,
+        "n_bonds": 38
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.00157,
+    "sum_per_atom_eV": 0.6671900000000001,
+    "sum_per_formula_unit_eV": 2.00157,
+    "mean_per_bond_eV": 0.028593857142857143,
+    "n_bonds": 70,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": 0.03675,
+        "sum_eV": 0.441,
+        "n_bonds": 12
+      },
+      "Cs-O": {
+        "mean_eV": 0.012718000000000004,
+        "sum_eV": 0.2543600000000001,
+        "n_bonds": 20
+      },
+      "O-O": {
+        "mean_eV": 0.034373947368421046,
+        "sum_eV": 1.3062099999999996,
+        "n_bonds": 38
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CsO2_exp_mp-1441"
+}

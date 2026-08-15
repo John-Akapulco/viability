@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_RbP_exp_mp-1179688__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_RbP_exp_mp-1179688",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Rb_mp-70",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_P_mp-568348",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

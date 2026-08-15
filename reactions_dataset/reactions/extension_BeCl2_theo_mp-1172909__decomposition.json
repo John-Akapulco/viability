@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_BeCl2_theo_mp-1172909__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_BeCl2_theo_mp-1172909",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Be_mp-87",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Cl_mp-22848",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

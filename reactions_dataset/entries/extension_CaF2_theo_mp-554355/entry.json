@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CaF2_theo_mp-554355",
+  "formula": "CaF2",
+  "composition": {
+    "Ca": 1,
+    "F": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P4/mmm",
+  "space_group_number": 123,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -6.8316199999999965,
+    "sum_per_atom_eV": -2.2772066666666655,
+    "sum_per_formula_unit_eV": -6.8316199999999965,
+    "mean_per_bond_eV": -0.059926491228070145,
+    "n_bonds": 114,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.10616888888888888,
+        "sum_eV": -1.9110399999999998,
+        "n_bonds": 18
+      },
+      "Ca-F": {
+        "mean_eV": -0.11512475000000003,
+        "sum_eV": -4.604990000000001,
+        "n_bonds": 40
+      },
+      "F-F": {
+        "mean_eV": -0.005635535714285718,
+        "sum_eV": -0.3155900000000002,
+        "n_bonds": 56
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.6644700000000006,
+    "sum_per_atom_eV": 0.2214900000000002,
+    "sum_per_formula_unit_eV": 0.6644700000000006,
+    "mean_per_bond_eV": 0.005828684210526321,
+    "n_bonds": 114,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.004772222222222222,
+        "sum_eV": 0.08589999999999999,
+        "n_bonds": 18
+      },
+      "Ca-F": {
+        "mean_eV": 0.012865500000000002,
+        "sum_eV": 0.5146200000000001,
+        "n_bonds": 40
+      },
+      "F-F": {
+        "mean_eV": 0.0011419642857142863,
+        "sum_eV": 0.06395000000000003,
+        "n_bonds": 56
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CaF2_theo_mp-554355"
+}

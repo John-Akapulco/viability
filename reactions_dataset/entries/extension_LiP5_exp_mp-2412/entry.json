@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_LiP5_exp_mp-2412",
+  "formula": "LiP5",
+  "composition": {
+    "Li": 4,
+    "P": 20
+  },
+  "Z": 4,
+  "space_group_symbol": "Pna2_1",
+  "space_group_number": 33,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -205.47677000000004,
+    "sum_per_atom_eV": -8.561532083333335,
+    "sum_per_formula_unit_eV": -51.36919250000001,
+    "mean_per_bond_eV": -0.3379552138157895,
+    "n_bonds": 608,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": -0.2150625,
+        "sum_eV": -3.441,
+        "n_bonds": 16
+      },
+      "Li-P": {
+        "mean_eV": -0.32659136904761904,
+        "sum_eV": -54.867349999999995,
+        "n_bonds": 168
+      },
+      "P-P": {
+        "mean_eV": -0.3470953301886792,
+        "sum_eV": -147.16842,
+        "n_bonds": 424
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 38.30113999999999,
+    "sum_per_atom_eV": 1.595880833333333,
+    "sum_per_formula_unit_eV": 9.575284999999997,
+    "mean_per_bond_eV": 0.06299529605263156,
+    "n_bonds": 608,
+    "by_bond_type": {
+      "Li-Li": {
+        "mean_eV": 0.024595,
+        "sum_eV": 0.39352,
+        "n_bonds": 16
+      },
+      "Li-P": {
+        "mean_eV": 0.05235863095238097,
+        "sum_eV": 8.796250000000002,
+        "n_bonds": 168
+      },
+      "P-P": {
+        "mean_eV": 0.06865889150943397,
+        "sum_eV": 29.111370000000004,
+        "n_bonds": 424
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_LiP5_exp_mp-2412"
+}

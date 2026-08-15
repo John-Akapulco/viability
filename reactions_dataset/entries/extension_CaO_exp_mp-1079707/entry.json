@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CaO_exp_mp-1079707",
+  "formula": "CaO",
+  "composition": {
+    "Ca": 4,
+    "O": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Cmce",
+  "space_group_number": 64,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -19.296999999999993,
+    "sum_per_atom_eV": -2.412124999999999,
+    "sum_per_formula_unit_eV": -4.824249999999998,
+    "mean_per_bond_eV": -0.09845408163265303,
+    "n_bonds": 196,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.11591517857142854,
+        "sum_eV": -6.491249999999998,
+        "n_bonds": 56
+      },
+      "Ca-O": {
+        "mean_eV": -0.14412999999999998,
+        "sum_eV": -12.106919999999999,
+        "n_bonds": 84
+      },
+      "O-O": {
+        "mean_eV": -0.012479107142857148,
+        "sum_eV": -0.6988300000000003,
+        "n_bonds": 56
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.6712200000000017,
+    "sum_per_atom_eV": 0.3339025000000002,
+    "sum_per_formula_unit_eV": 0.6678050000000004,
+    "mean_per_bond_eV": 0.013628673469387764,
+    "n_bonds": 196,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.005522321428571429,
+        "sum_eV": 0.30925,
+        "n_bonds": 56
+      },
+      "Ca-O": {
+        "mean_eV": 0.02498559523809524,
+        "sum_eV": 2.09879,
+        "n_bonds": 84
+      },
+      "O-O": {
+        "mean_eV": 0.004699642857142856,
+        "sum_eV": 0.26317999999999997,
+        "n_bonds": 56
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CaO_exp_mp-1079707"
+}

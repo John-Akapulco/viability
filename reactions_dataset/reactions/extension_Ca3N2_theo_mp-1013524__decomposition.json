@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ca3N2_theo_mp-1013524__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ca3N2_theo_mp-1013524",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ca_mp-21",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ca3N2_theo_mp-1013524",
+  "formula": "Ca3N2",
+  "composition": {
+    "Ca": 3,
+    "N": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -11.256669999999996,
+    "sum_per_atom_eV": -2.251333999999999,
+    "sum_per_formula_unit_eV": -11.256669999999996,
+    "mean_per_bond_eV": -0.08040478571428569,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.06671055555555555,
+        "sum_eV": -3.60237,
+        "n_bonds": 54
+      },
+      "Ca-N": {
+        "mean_eV": -0.10580545454545455,
+        "sum_eV": -6.983160000000001,
+        "n_bonds": 66
+      },
+      "N-N": {
+        "mean_eV": -0.03355699999999999,
+        "sum_eV": -0.6711399999999997,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.8293599999999994,
+    "sum_per_atom_eV": 0.5658719999999999,
+    "sum_per_formula_unit_eV": 2.8293599999999994,
+    "mean_per_bond_eV": 0.020209714285714282,
+    "n_bonds": 140,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.004090555555555556,
+        "sum_eV": 0.22089,
+        "n_bonds": 54
+      },
+      "Ca-N": {
+        "mean_eV": 0.03195621212121213,
+        "sum_eV": 2.1091100000000003,
+        "n_bonds": 66
+      },
+      "N-N": {
+        "mean_eV": 0.024967999999999997,
+        "sum_eV": 0.4993599999999999,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ca3N2_theo_mp-1013524"
+}

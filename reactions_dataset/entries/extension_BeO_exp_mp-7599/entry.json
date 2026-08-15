@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_BeO_exp_mp-7599",
+  "formula": "BeO",
+  "composition": {
+    "Be": 4,
+    "O": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P4_2/mnm",
+  "space_group_number": 136,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -111.50482000000018,
+    "sum_per_atom_eV": -13.938102500000022,
+    "sum_per_formula_unit_eV": -27.876205000000045,
+    "mean_per_bond_eV": -0.19358475694444477,
+    "n_bonds": 576,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": -0.08654775641025647,
+        "sum_eV": -13.501450000000009,
+        "n_bonds": 156
+      },
+      "Be-O": {
+        "mean_eV": -0.36214189393939406,
+        "sum_eV": -95.60546000000004,
+        "n_bonds": 264
+      },
+      "O-O": {
+        "mean_eV": -0.015371217948717954,
+        "sum_eV": -2.397910000000001,
+        "n_bonds": 156
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.894179999999979,
+    "sum_per_atom_eV": 1.2367724999999974,
+    "sum_per_formula_unit_eV": 2.4735449999999948,
+    "mean_per_bond_eV": 0.017177395833333296,
+    "n_bonds": 576,
+    "by_bond_type": {
+      "Be-Be": {
+        "mean_eV": 0.0044121794871794925,
+        "sum_eV": 0.6883000000000008,
+        "n_bonds": 156
+      },
+      "Be-O": {
+        "mean_eV": 0.03265590909090909,
+        "sum_eV": 8.62116,
+        "n_bonds": 264
+      },
+      "O-O": {
+        "mean_eV": 0.0037482051282051254,
+        "sum_eV": 0.5847199999999996,
+        "n_bonds": 156
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BeO_exp_mp-7599"
+}

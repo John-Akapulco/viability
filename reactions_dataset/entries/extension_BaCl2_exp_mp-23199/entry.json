@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_BaCl2_exp_mp-23199",
+  "formula": "BaCl2",
+  "composition": {
+    "Ba": 4,
+    "Cl": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -21.612890000000014,
+    "sum_per_atom_eV": -1.8010741666666679,
+    "sum_per_formula_unit_eV": -5.403222500000004,
+    "mean_per_bond_eV": -0.11496218085106391,
+    "n_bonds": 188,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.16275499999999998,
+        "sum_eV": -4.5571399999999995,
+        "n_bonds": 28
+      },
+      "Ba-Cl": {
+        "mean_eV": -0.19948024999999997,
+        "sum_eV": -15.958419999999998,
+        "n_bonds": 80
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.013716625,
+        "sum_eV": -1.09733,
+        "n_bonds": 80
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.9256100000000003,
+    "sum_per_atom_eV": 0.24380083333333336,
+    "sum_per_formula_unit_eV": 0.7314025000000001,
+    "mean_per_bond_eV": 0.015561755319148938,
+    "n_bonds": 188,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.011161428571428572,
+        "sum_eV": 0.31252,
+        "n_bonds": 28
+      },
+      "Ba-Cl": {
+        "mean_eV": 0.029460000000000014,
+        "sum_eV": 2.356800000000001,
+        "n_bonds": 80
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.0032036250000000025,
+        "sum_eV": 0.2562900000000002,
+        "n_bonds": 80
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BaCl2_exp_mp-23199"
+}

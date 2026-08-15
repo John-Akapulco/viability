@@ -1,0 +1,43 @@
+{
+  "compound_id": "extension_RbS_theo_mp-1179684",
+  "formula": "RbS",
+  "composition": {
+    "Rb": 1,
+    "S": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -1.1722700000000001,
+    "sum_per_atom_eV": -0.5861350000000001,
+    "sum_per_formula_unit_eV": -1.1722700000000001,
+    "mean_per_bond_eV": -0.5861350000000001,
+    "n_bonds": 2,
+    "by_bond_type": {
+      "Rb-S": {
+        "mean_eV": -0.5861350000000001,
+        "sum_eV": -1.1722700000000001,
+        "n_bonds": 2
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.24514,
+    "sum_per_atom_eV": 0.12257,
+    "sum_per_formula_unit_eV": 0.24514,
+    "mean_per_bond_eV": 0.12257,
+    "n_bonds": 2,
+    "by_bond_type": {
+      "Rb-S": {
+        "mean_eV": 0.12257,
+        "sum_eV": 0.24514,
+        "n_bonds": 2
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_RbS_theo_mp-1179684"
+}

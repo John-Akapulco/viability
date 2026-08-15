@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CsCl_exp_mp-573697",
+  "formula": "CsCl",
+  "composition": {
+    "Cs": 1,
+    "Cl": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -5.69615,
+    "sum_per_atom_eV": -2.848075,
+    "sum_per_formula_unit_eV": -5.69615,
+    "mean_per_bond_eV": -0.1898716666666667,
+    "n_bonds": 30,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": -0.28747666666666666,
+        "sum_eV": -3.44972,
+        "n_bonds": 12
+      },
+      "Cl-Cs": {
+        "mean_eV": -0.34531500000000004,
+        "sum_eV": -2.0718900000000002,
+        "n_bonds": 6
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.014545000000000002,
+        "sum_eV": -0.17454000000000003,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.6934600000000003,
+    "sum_per_atom_eV": 0.34673000000000015,
+    "sum_per_formula_unit_eV": 0.6934600000000003,
+    "mean_per_bond_eV": 0.023115333333333342,
+    "n_bonds": 30,
+    "by_bond_type": {
+      "Cs-Cs": {
+        "mean_eV": 0.025078333333333338,
+        "sum_eV": 0.30094000000000004,
+        "n_bonds": 12
+      },
+      "Cl-Cs": {
+        "mean_eV": 0.059480000000000005,
+        "sum_eV": 0.35688000000000003,
+        "n_bonds": 6
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.0029700000000000004,
+        "sum_eV": 0.035640000000000005,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CsCl_exp_mp-573697"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_SrS_exp_mp-10627",
+  "formula": "SrS",
+  "composition": {
+    "Sr": 1,
+    "S": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -6.0510399999999995,
+    "sum_per_atom_eV": -3.0255199999999998,
+    "sum_per_formula_unit_eV": -6.0510399999999995,
+    "mean_per_bond_eV": -0.13752363636363635,
+    "n_bonds": 44,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": -0.15907999999999997,
+        "sum_eV": -2.8634399999999993,
+        "n_bonds": 18
+      },
+      "S-Sr": {
+        "mean_eV": -0.34811,
+        "sum_eV": -2.78488,
+        "n_bonds": 8
+      },
+      "S-S": {
+        "mean_eV": -0.022373333333333335,
+        "sum_eV": -0.40272,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.9998199999999999,
+    "sum_per_atom_eV": 0.49990999999999997,
+    "sum_per_formula_unit_eV": 0.9998199999999999,
+    "mean_per_bond_eV": 0.022723181818181816,
+    "n_bonds": 44,
+    "by_bond_type": {
+      "Sr-Sr": {
+        "mean_eV": 0.00955666666666667,
+        "sum_eV": 0.17202000000000006,
+        "n_bonds": 18
+      },
+      "S-Sr": {
+        "mean_eV": 0.076155,
+        "sum_eV": 0.60924,
+        "n_bonds": 8
+      },
+      "S-S": {
+        "mean_eV": 0.012142222222222223,
+        "sum_eV": 0.21856,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_SrS_exp_mp-10627"
+}

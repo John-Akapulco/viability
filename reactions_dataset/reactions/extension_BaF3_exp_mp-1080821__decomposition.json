@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_BaF3_exp_mp-1080821__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_BaF3_exp_mp-1080821",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ba_mp-122",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_F_mp-561203",
+      "coefficient": 1.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

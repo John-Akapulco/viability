@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_KCl_exp_mp-23289",
+  "formula": "KCl",
+  "composition": {
+    "K": 1,
+    "Cl": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -5.4384399999999955,
+    "sum_per_atom_eV": -2.7192199999999977,
+    "sum_per_formula_unit_eV": -5.4384399999999955,
+    "mean_per_bond_eV": -0.12360090909090898,
+    "n_bonds": 44,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": -0.14240333333333333,
+        "sum_eV": -2.56326,
+        "n_bonds": 18
+      },
+      "Cl-K": {
+        "mean_eV": -0.32189,
+        "sum_eV": -2.57512,
+        "n_bonds": 8
+      },
+      "Cl-Cl": {
+        "mean_eV": -0.016669999999999997,
+        "sum_eV": -0.30005999999999994,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.6375600000000006,
+    "sum_per_atom_eV": 0.3187800000000003,
+    "sum_per_formula_unit_eV": 0.6375600000000006,
+    "mean_per_bond_eV": 0.014490000000000013,
+    "n_bonds": 44,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": 0.00877,
+        "sum_eV": 0.15786,
+        "n_bonds": 18
+      },
+      "Cl-K": {
+        "mean_eV": 0.051030000000000006,
+        "sum_eV": 0.40824000000000005,
+        "n_bonds": 8
+      },
+      "Cl-Cl": {
+        "mean_eV": 0.00397,
+        "sum_eV": 0.07146,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_KCl_exp_mp-23289"
+}

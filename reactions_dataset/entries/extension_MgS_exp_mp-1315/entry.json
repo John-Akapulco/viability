@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MgS_exp_mp-1315",
+  "formula": "MgS",
+  "composition": {
+    "Mg": 1,
+    "S": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -5.4317199999999985,
+    "sum_per_atom_eV": -2.7158599999999993,
+    "sum_per_formula_unit_eV": -5.4317199999999985,
+    "mean_per_bond_eV": -0.0734016216216216,
+    "n_bonds": 74,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.017350000000000004,
+        "sum_eV": -0.3123000000000001,
+        "n_bonds": 18
+      },
+      "Mg-S": {
+        "mean_eV": -0.11890684210526316,
+        "sum_eV": -4.51846,
+        "n_bonds": 38
+      },
+      "S-S": {
+        "mean_eV": -0.03338666666666667,
+        "sum_eV": -0.60096,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.0640199999999995,
+    "sum_per_atom_eV": 0.5320099999999998,
+    "sum_per_formula_unit_eV": 1.0640199999999995,
+    "mean_per_bond_eV": 0.014378648648648643,
+    "n_bonds": 74,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.00206,
+        "sum_eV": 0.03708,
+        "n_bonds": 18
+      },
+      "Mg-S": {
+        "mean_eV": 0.020105789473684216,
+        "sum_eV": 0.7640200000000001,
+        "n_bonds": 38
+      },
+      "S-S": {
+        "mean_eV": 0.014606666666666665,
+        "sum_eV": 0.26292,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MgS_exp_mp-1315"
+}
