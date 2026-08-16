@@ -1,0 +1,20 @@
+{
+  "label": "C3N4",
+  "mp_id": "mp-571653",
+  "formula": "C3N4",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "C-N",
+  "kind": "exp_anchor",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 2.4955000000000016,
+  "energy_above_hull_eV_per_atom": 0.4981181882142849,
+  "theoretical": false,
+  "nsites": 7,
+  "spacegroup": "P-43m",
+  "anchor_formula": null,
+  "anchor_energy_above_hull_eV_per_atom": null,
+  "note": "maxhull_binaries_stress_test batch: exp_anchor for C-N, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

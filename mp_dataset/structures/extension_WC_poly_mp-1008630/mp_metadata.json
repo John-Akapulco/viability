@@ -1,0 +1,20 @@
+{
+  "label": "WC",
+  "mp_id": "mp-1008630",
+  "formula": "WC",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "C-W",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.8989987500000005,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "Pm-3m",
+  "anchor_formula": "WC",
+  "anchor_energy_above_hull_eV_per_atom": 0.4476605100000022,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for C-W, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

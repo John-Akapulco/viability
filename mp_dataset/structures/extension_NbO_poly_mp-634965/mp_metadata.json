@@ -1,0 +1,20 @@
+{
+  "label": "NbO",
+  "mp_id": "mp-634965",
+  "formula": "NbO",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "Nb-O",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.8240059083333318,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "P4/mmm",
+  "anchor_formula": "NbO",
+  "anchor_energy_above_hull_eV_per_atom": 0.7887604083333315,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for Nb-O, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

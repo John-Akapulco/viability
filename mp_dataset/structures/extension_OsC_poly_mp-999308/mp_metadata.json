@@ -1,0 +1,20 @@
+{
+  "label": "OsC",
+  "mp_id": "mp-999308",
+  "formula": "OsC",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "C-Os",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.9277737837499984,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "P6_3/mmc",
+  "anchor_formula": "OsC",
+  "anchor_energy_above_hull_eV_per_atom": 0.9160852612500001,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for C-Os, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

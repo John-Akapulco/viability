@@ -1,0 +1,20 @@
+{
+  "label": "TlC",
+  "mp_id": "mp-1058887",
+  "formula": "TlC",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "C-Tl",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 2.375719474583331,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "P4/mmm",
+  "anchor_formula": "TlC",
+  "anchor_energy_above_hull_eV_per_atom": 2.10802690958333,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for C-Tl, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

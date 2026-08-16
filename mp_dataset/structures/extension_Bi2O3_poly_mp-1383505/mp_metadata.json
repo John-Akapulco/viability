@@ -1,0 +1,20 @@
+{
+  "label": "Bi2O3",
+  "mp_id": "mp-1383505",
+  "formula": "Bi2O3",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "Bi-O",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.9067888160000024,
+  "theoretical": true,
+  "nsites": 5,
+  "spacegroup": "P1",
+  "anchor_formula": "Bi2O3",
+  "anchor_energy_above_hull_eV_per_atom": 0.600030676500003,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for Bi-O, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

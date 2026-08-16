@@ -1,0 +1,20 @@
+{
+  "label": "SiO2",
+  "mp_id": "mp-10064",
+  "formula": "SiO2",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "O-Si",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 1.7393,
+  "energy_above_hull_eV_per_atom": 1.27794353388889,
+  "theoretical": true,
+  "nsites": 3,
+  "spacegroup": "Fm-3m",
+  "anchor_formula": "SiO2",
+  "anchor_energy_above_hull_eV_per_atom": 0.5770440263888901,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for O-Si, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}
