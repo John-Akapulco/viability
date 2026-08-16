@@ -46,6 +46,10 @@ EXTENSION_SPIN_OVERRIDES = {
     # and deliberately does NOT get an exception here.
     "extension_CsO2_exp_mp-1441": {"O": 1.0},
     "extension_CsO2_theo_mp-1096936": {"O": 1.0},
+    # prepare_gasref_dimers.py's isolated O2 dimer (gas-phase reference
+    # sanity check, see project memory): same triplet ground state as
+    # the periodic O2 reference above.
+    "gasref_O2_dimerbox": {"O": 1.5},
 }
 
 
