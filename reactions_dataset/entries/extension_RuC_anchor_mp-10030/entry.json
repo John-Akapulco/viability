@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_RuC_anchor_mp-10030",
+  "formula": "RuC",
+  "composition": {
+    "Ru": 1,
+    "C": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.366120000000006,
+    "sum_per_atom_eV": -12.183060000000003,
+    "sum_per_formula_unit_eV": -24.366120000000006,
+    "mean_per_bond_eV": -0.19036031250000005,
+    "n_bonds": 128,
+    "by_bond_type": {
+      "Ru-Ru": {
+        "mean_eV": -0.07472173913043476,
+        "sum_eV": -3.437199999999999,
+        "n_bonds": 46
+      },
+      "C-Ru": {
+        "mean_eV": -0.5030844444444446,
+        "sum_eV": -18.111040000000003,
+        "n_bonds": 36
+      },
+      "C-C": {
+        "mean_eV": -0.06125826086956524,
+        "sum_eV": -2.817880000000001,
+        "n_bonds": 46
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.065800000000005,
+    "sum_per_atom_eV": 2.5329000000000024,
+    "sum_per_formula_unit_eV": 5.065800000000005,
+    "mean_per_bond_eV": 0.03957656250000004,
+    "n_bonds": 128,
+    "by_bond_type": {
+      "Ru-Ru": {
+        "mean_eV": 0.030326086956521746,
+        "sum_eV": 1.3950000000000002,
+        "n_bonds": 46
+      },
+      "C-Ru": {
+        "mean_eV": 0.0862516666666667,
+        "sum_eV": 3.1050600000000013,
+        "n_bonds": 36
+      },
+      "C-C": {
+        "mean_eV": 0.012298695652173907,
+        "sum_eV": 0.5657399999999997,
+        "n_bonds": 46
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_RuC_anchor_mp-10030"
+}

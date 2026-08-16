@@ -281,3 +281,114 @@ def antibonding_population_near_frontier(
         "total_occupied_icohp_magnitude": total_occupied_magnitude,
         "w_antibond_normalized": w_antibond_normalized,
     }
+
+
+# ---------------------------------------------------------------------------
+# Step 2b: the same near-frontier antibonding-population metric, on ICOBI
+# instead of ICOHP.
+#
+# CRITICAL, EMPIRICALLY VERIFIED SIGN-CONVENTION DIFFERENCE: ICOBI does NOT
+# share ICOHP's "negative = bonding" convention -- it uses the OPPOSITE
+# sign, "positive = bonding" (like COOP, not like COHP). Verified two ways
+# on real project data (not assumed from memory or documentation):
+#   1. cross_validate against ICOBILIST.lobster (see
+#      tests/test_cohp_extraction.py's ICOBI cross-check): pymatgen's
+#      Cohpcar(are_cobis=True) reproduces every ICOBILIST.lobster value
+#      exactly (max abs diff 0.0 across 66 bond labels on the SrSi pilot),
+#      confirming pymatgen does NOT silently renormalize the sign when
+#      switching from COHP to COBI parsing -- the raw LOBSTER file
+#      convention passes through unchanged.
+#   2. On extension_SiO2_anchor_mp-9258's strongest Si-O bond
+#      (ICOHP=-5.599, strongly bonding by the ICOHP convention,
+#      ICOBI=+0.513, a large bond order): the raw per-energy curves in the
+#      deep bonding region (-10 to -3 eV, far below any frontier effects)
+#      average COHP(E)=-0.338 (negative, bonding, as expected) but
+#      COBI(E)=+0.041 (POSITIVE in that same bonding-dominated region).
+# Consequently, the antibonding (destabilizing) part of an ICOBI curve is
+# its NEGATIVE part, not its positive part -- the clip direction below is
+# deliberately the mirror image of integrate_antibonding_in_window()
+# above, not a copy-paste of it.
+# ---------------------------------------------------------------------------
+
+
+def load_cobicar(compound_dir: Path) -> Cohpcar:
+    """Raw per-line COBICAR.lobster reader. Same file format/energy
+    convention as load_cohpcar() (E - E_F already shifted by LOBSTER), just
+    are_cobis=True so pymatgen parses the COBI/ICOBI columns instead of
+    COHP/ICOHP -- see module-level note above on why the sign meaning of
+    the resulting "positive"/"negative" values is NOT the same as for
+    load_cohpcar()."""
+    return Cohpcar(filename=str(compound_dir / "COBICAR.lobster"), are_cobis=True)
+
+
+def integrate_icobi_antibonding_in_window(
+    energies: np.ndarray, cobi_values: np.ndarray, e_ref: float, delta_e: float
+) -> float:
+    """ICOBI analog of integrate_antibonding_in_window(): integrates
+    abs(min(cobi_values, 0)) -- the NEGATIVE (antibonding, per the sign
+    note above) part of the COBI(E) trace -- over the one-sided window
+    (e_ref - delta_e, e_ref], via the trapezoidal rule. Returns a
+    non-negative magnitude, same convention as the ICOHP version, so the
+    two are directly comparable in sign/interpretation despite integrating
+    opposite-signed raw regions of their respective source curves.
+    """
+    energies = np.asarray(energies)
+    cobi_values = np.asarray(cobi_values)
+    mask = (energies > e_ref - delta_e) & (energies <= e_ref)
+    if not mask.any():
+        raise ValueError(
+            f"Window ({e_ref - delta_e:.4f}, {e_ref:.4f}] contains no grid points "
+            f"(grid spacing ~{energies[1]-energies[0]:.4f}) -- delta_e too small."
+        )
+    antibonding_only = np.clip(cobi_values[mask], a_min=None, a_max=0.0)
+    return float(np.trapezoid(np.abs(antibonding_only), energies[mask]))
+
+
+def icobi_antibonding_population_near_frontier(
+    compound_dir: Path,
+    is_metal: bool,
+    delta_e: float = DEFAULT_DELTA_E,
+    label: str = "average",
+    vasprun_path: Optional[Path] = None,
+) -> Dict[str, object]:
+    """ICOBI analog of antibonding_population_near_frontier() -- same
+    window, same E_ref logic (frontier_reference_energy() is metric-
+    agnostic: it only depends on the electronic structure, not on which
+    curve is being integrated), same one-sided-window physical rationale
+    (only occupied states can destabilize the ground state), but
+    integrating COBICAR.lobster's NEGATIVE part instead of COHPCAR.lobster's
+    positive part (see the sign-convention note above
+    integrate_icobi_antibonding_in_window()). Returns a raw magnitude
+    (dimensionless bond-order units, not eV -- ICOBI itself is
+    dimensionless) plus a version normalized by the total occupied |ICOBI|
+    magnitude at E_ref on the same trace, mirroring the ICOHP version's
+    raw/normalized pair.
+    """
+    cobicar = load_cobicar(compound_dir)
+    e_ref = frontier_reference_energy(compound_dir, is_metal, vasprun_path)
+
+    energies = np.array(cobicar.energies)
+    spins = list(cobicar.cohp_data[label]["COHP"].keys())
+    cobi_total = sum(cobicar.cohp_data[label]["COHP"][s] for s in spins)
+    icobi_total = sum(cobicar.cohp_data[label]["ICOHP"][s] for s in spins)
+
+    w_antibond = integrate_icobi_antibonding_in_window(energies, cobi_total, e_ref, delta_e)
+    n_grid_points_in_window = int(((energies > e_ref - delta_e) & (energies <= e_ref)).sum())
+
+    idx_ref = int(np.argmin(np.abs(energies - e_ref)))
+    total_occupied_magnitude = abs(float(icobi_total[idx_ref]))
+    w_antibond_normalized = (
+        w_antibond / total_occupied_magnitude if total_occupied_magnitude > 0 else None
+    )
+
+    return {
+        "label": label,
+        "is_metal": is_metal,
+        "e_ref": e_ref,
+        "delta_e": delta_e,
+        "window": [e_ref - delta_e, e_ref],
+        "n_grid_points_in_window": n_grid_points_in_window,
+        "w_antibond_icobi_raw": w_antibond,
+        "total_occupied_icobi_magnitude": total_occupied_magnitude,
+        "w_antibond_icobi_normalized": w_antibond_normalized,
+    }

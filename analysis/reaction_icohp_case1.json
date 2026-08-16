@@ -3073,6 +3073,110 @@
     "delta_icohp_total": 41.217390000000044,
     "delta_icohp_per_atom": 6.869565000000008
   },
+  "extension_AgN_anchor_mp-1091417": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_anchor_mp-1091417",
+    "reactant_formula": "AgN",
+    "reactant_n_sites": 8,
+    "reactant_icohp_total": -73.85568999999994,
+    "reaction_string": "AgN -> Ag + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ag_mp-124",
+        "reduced_formula": "Ag",
+        "coeff_formula_units": 4.0000000000000036,
+        "icohp_per_atom": -17.216119999999997,
+        "contribution_to_total": -68.86448000000004
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 2.0000000000000013,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -65.69134000000011
+      }
+    ],
+    "predicted_icohp_total_from_products": -134.55582000000015,
+    "delta_icohp_total": 60.700130000000215,
+    "delta_icohp_per_atom": 7.587516250000027
+  },
+  "extension_AgN_poly_mp-1009766": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1009766",
+    "reactant_formula": "AgN",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -20.647640000000003,
+    "reaction_string": "AgN -> Ag + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ag_mp-124",
+        "reduced_formula": "Ag",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -17.216119999999997,
+        "contribution_to_total": -17.21612000000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -16.422835000000028
+      }
+    ],
+    "predicted_icohp_total_from_products": -33.63895500000004,
+    "delta_icohp_total": 12.991315000000036,
+    "delta_icohp_per_atom": 6.495657500000018
+  },
+  "extension_AgN_poly_mp-1424734": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1424734",
+    "reactant_formula": "AgN",
+    "reactant_n_sites": 4,
+    "reactant_icohp_total": -34.915070000000014,
+    "reaction_string": "AgN -> Ag + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ag_mp-124",
+        "reduced_formula": "Ag",
+        "coeff_formula_units": 2.0000000000000018,
+        "icohp_per_atom": -17.216119999999997,
+        "contribution_to_total": -34.43224000000002
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -32.845670000000055
+      }
+    ],
+    "predicted_icohp_total_from_products": -67.27791000000008,
+    "delta_icohp_total": 32.36284000000006,
+    "delta_icohp_per_atom": 8.090710000000016
+  },
+  "extension_AgN_poly_mp-1428312": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1428312",
+    "reactant_formula": "AgN",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -22.92720999999999,
+    "reaction_string": "AgN -> Ag + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ag_mp-124",
+        "reduced_formula": "Ag",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -17.216119999999997,
+        "contribution_to_total": -17.21612000000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -16.422835000000028
+      }
+    ],
+    "predicted_icohp_total_from_products": -33.63895500000004,
+    "delta_icohp_total": 10.711745000000047,
+    "delta_icohp_per_atom": 5.355872500000023
+  },
   "extension_Ag_mp-124": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
@@ -3562,8 +3666,124 @@
   "extension_Be_mp-87": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
+  "extension_Bi2O3_anchor_mp-558953": {
+    "error": "no elemental reference for ['Bi']"
+  },
+  "extension_Bi2O3_poly_mp-1383505": {
+    "error": "no elemental reference for ['Bi']"
+  },
+  "extension_Bi2O3_poly_mp-674644": {
+    "error": "no elemental reference for ['Bi']"
+  },
+  "extension_Bi2O3_poly_mp-714859": {
+    "error": "no elemental reference for ['Bi']"
+  },
   "extension_Br_mp-23154": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
+  },
+  "extension_C3N4_anchor_mp-571653": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_anchor_mp-571653",
+    "reactant_formula": "C3N4",
+    "reactant_n_sites": 7,
+    "reactant_icohp_total": -128.43264000000005,
+    "reaction_string": "0.3333 C3N4 -> C + 0.6667 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 3.000000000000001,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -54.89557500000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 2.0000000000000004,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -65.69134000000008
+      }
+    ],
+    "predicted_icohp_total_from_products": -120.58691500000013,
+    "delta_icohp_total": -7.845724999999916,
+    "delta_icohp_per_atom": -1.120817857142845
+  },
+  "extension_C3N4_poly_mp-1182484": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_poly_mp-1182484",
+    "reactant_formula": "C3N4",
+    "reactant_n_sites": 14,
+    "reactant_icohp_total": -190.2151400000001,
+    "reaction_string": "0.3333 C3N4 -> C + 0.6667 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 6.000000000000002,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -109.7911500000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 4.000000000000001,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -131.38268000000016
+      }
+    ],
+    "predicted_icohp_total_from_products": -241.17383000000027,
+    "delta_icohp_total": 50.95869000000016,
+    "delta_icohp_per_atom": 3.63990642857144
+  },
+  "extension_C3N4_poly_mp-2852": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_poly_mp-2852",
+    "reactant_formula": "C3N4",
+    "reactant_n_sites": 14,
+    "reactant_icohp_total": -267.01273000000054,
+    "reaction_string": "0.3333 C3N4 -> C + 0.6667 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 6.000000000000002,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -109.7911500000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 4.000000000000001,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -131.38268000000016
+      }
+    ],
+    "predicted_icohp_total_from_products": -241.17383000000027,
+    "delta_icohp_total": -25.83890000000028,
+    "delta_icohp_per_atom": -1.8456357142857343
+  },
+  "extension_C3N4_poly_mp-563": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_poly_mp-563",
+    "reactant_formula": "C3N4",
+    "reactant_n_sites": 14,
+    "reactant_icohp_total": -234.8762500000002,
+    "reaction_string": "0.3333 C3N4 -> C + 0.6667 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 6.000000000000002,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -109.7911500000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 4.000000000000001,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -131.38268000000016
+      }
+    ],
+    "predicted_icohp_total_from_products": -241.17383000000027,
+    "delta_icohp_total": 6.2975800000000675,
+    "delta_icohp_per_atom": 0.4498271428571477
   },
   "extension_CMcarbon_mp-1080826": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
@@ -4306,6 +4526,58 @@
     "predicted_icohp_total_from_products": -92.82239999999996,
     "delta_icohp_total": 36.816239999999986,
     "delta_icohp_per_atom": 1.1505074999999996
+  },
+  "extension_KN2_anchor_mp-1071868": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_KN2_anchor_mp-1071868",
+    "reactant_formula": "KN2",
+    "reactant_n_sites": 6,
+    "reactant_icohp_total": -47.08281000000001,
+    "reaction_string": "KN2 -> K + N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/exp_metastable_K_mp-10157",
+        "reduced_formula": "K",
+        "coeff_formula_units": 2.0000000000000004,
+        "icohp_per_atom": -0.9690000000000002,
+        "contribution_to_total": -1.9380000000000008
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 2.0,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -65.69134000000007
+      }
+    ],
+    "predicted_icohp_total_from_products": -67.62934000000007,
+    "delta_icohp_total": 20.54653000000006,
+    "delta_icohp_per_atom": 3.4244216666666767
+  },
+  "extension_KN2_poly_mp-1180757": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_KN2_poly_mp-1180757",
+    "reactant_formula": "KN2",
+    "reactant_n_sites": 6,
+    "reactant_icohp_total": -41.91048,
+    "reaction_string": "KN2 -> K + N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/exp_metastable_K_mp-10157",
+        "reduced_formula": "K",
+        "coeff_formula_units": 2.0000000000000004,
+        "icohp_per_atom": -0.9690000000000002,
+        "contribution_to_total": -1.9380000000000008
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 2.0,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -65.69134000000007
+      }
+    ],
+    "predicted_icohp_total_from_products": -67.62934000000007,
+    "delta_icohp_total": 25.71886000000007,
+    "delta_icohp_per_atom": 4.286476666666679
   },
   "extension_KN3_theo_mp-636056": {
     "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_KN3_theo_mp-636056",
@@ -5128,6 +5400,110 @@
     "delta_icohp_total": 4.799773124999999,
     "delta_icohp_per_atom": 2.3998865624999994
   },
+  "extension_NbO_anchor_mp-2692": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbO_anchor_mp-2692",
+    "reactant_formula": "NbO",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -21.711030000000008,
+    "reaction_string": "NbO -> Nb + 0.5 O2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Nb_mp-75",
+        "reduced_formula": "Nb",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -17.38376,
+        "contribution_to_total": -17.383760000000013
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462",
+        "reduced_formula": "O2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -8.963003750000002,
+        "contribution_to_total": -8.963003750000007
+      }
+    ],
+    "predicted_icohp_total_from_products": -26.346763750000022,
+    "delta_icohp_total": 4.635733750000014,
+    "delta_icohp_per_atom": 2.317866875000007
+  },
+  "extension_NbO_poly_mp-634965": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbO_poly_mp-634965",
+    "reactant_formula": "NbO",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -20.047780000000046,
+    "reaction_string": "NbO -> Nb + 0.5 O2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Nb_mp-75",
+        "reduced_formula": "Nb",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -17.38376,
+        "contribution_to_total": -17.383760000000013
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462",
+        "reduced_formula": "O2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -8.963003750000002,
+        "contribution_to_total": -8.963003750000007
+      }
+    ],
+    "predicted_icohp_total_from_products": -26.346763750000022,
+    "delta_icohp_total": 6.298983749999977,
+    "delta_icohp_per_atom": 3.1494918749999883
+  },
+  "extension_NbP_anchor_mp-9830": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbP_anchor_mp-9830",
+    "reactant_formula": "NbP",
+    "reactant_n_sites": 4,
+    "reactant_icohp_total": -40.601090000000006,
+    "reaction_string": "NbP -> Nb + P",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Nb_mp-75",
+        "reduced_formula": "Nb",
+        "coeff_formula_units": 2.0000000000000013,
+        "icohp_per_atom": -17.38376,
+        "contribution_to_total": -34.76752000000002
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_P_mp-568348",
+        "reduced_formula": "P",
+        "coeff_formula_units": 2.000000000000001,
+        "icohp_per_atom": -7.86160773809524,
+        "contribution_to_total": -15.723215476190488
+      }
+    ],
+    "predicted_icohp_total_from_products": -50.49073547619051,
+    "delta_icohp_total": 9.889645476190502,
+    "delta_icohp_per_atom": 2.4724113690476255
+  },
+  "extension_NbP_poly_mp-1220317": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbP_poly_mp-1220317",
+    "reactant_formula": "NbP",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -22.899129999999982,
+    "reaction_string": "NbP -> Nb + P",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Nb_mp-75",
+        "reduced_formula": "Nb",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -17.38376,
+        "contribution_to_total": -17.38376000000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_P_mp-568348",
+        "reduced_formula": "P",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -7.86160773809524,
+        "contribution_to_total": -7.861607738095244
+      }
+    ],
+    "predicted_icohp_total_from_products": -25.245367738095254,
+    "delta_icohp_total": 2.3462377380952724,
+    "delta_icohp_per_atom": 1.1731188690476362
+  },
   "extension_Nb_mp-75": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
@@ -5136,6 +5512,110 @@
   },
   "extension_O2_mp-1524462": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
+  },
+  "extension_OsC_anchor_mp-7142": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_anchor_mp-7142",
+    "reactant_formula": "OsC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -26.920720000000017,
+    "reaction_string": "OsC -> Os + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Os_mp-49",
+        "reduced_formula": "Os",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -12.655729999999997,
+        "contribution_to_total": -12.655730000000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -30.954255000000025,
+    "delta_icohp_total": 4.033535000000008,
+    "delta_icohp_per_atom": 2.016767500000004
+  },
+  "extension_OsC_poly_mp-1009537": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_poly_mp-1009537",
+    "reactant_formula": "OsC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -26.31748,
+    "reaction_string": "OsC -> Os + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Os_mp-49",
+        "reduced_formula": "Os",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -12.655729999999997,
+        "contribution_to_total": -12.655730000000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -30.954255000000025,
+    "delta_icohp_total": 4.636775000000025,
+    "delta_icohp_per_atom": 2.3183875000000125
+  },
+  "extension_OsC_poly_mp-1009539": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_poly_mp-1009539",
+    "reactant_formula": "OsC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -24.72605,
+    "reaction_string": "OsC -> Os + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Os_mp-49",
+        "reduced_formula": "Os",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -12.655729999999997,
+        "contribution_to_total": -12.655730000000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -30.954255000000025,
+    "delta_icohp_total": 6.228205000000024,
+    "delta_icohp_per_atom": 3.114102500000012
+  },
+  "extension_OsC_poly_mp-999308": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_poly_mp-999308",
+    "reactant_formula": "OsC",
+    "reactant_n_sites": 4,
+    "reactant_icohp_total": -50.07974000000002,
+    "reaction_string": "OsC -> Os + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Os_mp-49",
+        "reduced_formula": "Os",
+        "coeff_formula_units": 2.0000000000000013,
+        "icohp_per_atom": -12.655729999999997,
+        "contribution_to_total": -25.31146000000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 2.000000000000001,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -36.59705000000004
+      }
+    ],
+    "predicted_icohp_total_from_products": -61.90851000000005,
+    "delta_icohp_total": 11.828770000000027,
+    "delta_icohp_per_atom": 2.9571925000000068
   },
   "extension_Os_mp-49": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
@@ -5467,11 +5947,115 @@
   "extension_Rb_mp-70": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
+  "extension_ReC_anchor_mp-1079494": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_ReC_anchor_mp-1079494",
+    "reactant_formula": "ReC",
+    "reactant_n_sites": 8,
+    "reactant_icohp_total": -109.84115000000001,
+    "reaction_string": "ReC -> Re + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Re_mp-8",
+        "reduced_formula": "Re",
+        "coeff_formula_units": 4.000000000000003,
+        "icohp_per_atom": -14.486724999999991,
+        "contribution_to_total": -57.9469
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 4.000000000000002,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -73.19410000000008
+      }
+    ],
+    "predicted_icohp_total_from_products": -131.14100000000008,
+    "delta_icohp_total": 21.299850000000063,
+    "delta_icohp_per_atom": 2.662481250000008
+  },
+  "extension_ReC_poly_mp-1009731": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_ReC_poly_mp-1009731",
+    "reactant_formula": "ReC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -28.79422000000003,
+    "reaction_string": "ReC -> Re + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Re_mp-8",
+        "reduced_formula": "Re",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -14.486724999999991,
+        "contribution_to_total": -14.486725
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -32.78525000000002,
+    "delta_icohp_total": 3.991029999999988,
+    "delta_icohp_per_atom": 1.995514999999994
+  },
   "extension_Re_mp-8": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
   "extension_Rh_mp-74": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
+  },
+  "extension_RuC_anchor_mp-10030": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_RuC_anchor_mp-10030",
+    "reactant_formula": "RuC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -24.366120000000006,
+    "reaction_string": "RuC -> Ru + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ru_mp-33",
+        "reduced_formula": "Ru",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -10.327859999999996,
+        "contribution_to_total": -10.327860000000003
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -28.62638500000002,
+    "delta_icohp_total": 4.260265000000015,
+    "delta_icohp_per_atom": 2.1301325000000073
+  },
+  "extension_RuC_poly_mp-1009787": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_RuC_poly_mp-1009787",
+    "reactant_formula": "RuC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -22.905419999999992,
+    "reaction_string": "RuC -> Ru + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ru_mp-33",
+        "reduced_formula": "Ru",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -10.327859999999996,
+        "contribution_to_total": -10.327860000000003
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -28.62638500000002,
+    "delta_icohp_total": 5.720965000000028,
+    "delta_icohp_per_atom": 2.860482500000014
   },
   "extension_Ru_mp-33": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
@@ -5528,6 +6112,110 @@
     "delta_icohp_total": 44.682990000001155,
     "delta_icohp_per_atom": 1.396343437500036
   },
+  "extension_SN_anchor_mp-236": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_anchor_mp-236",
+    "reactant_formula": "SN",
+    "reactant_n_sites": 8,
+    "reactant_icohp_total": -71.59566000000012,
+    "reaction_string": "SN -> S + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_S_mp-77",
+        "reduced_formula": "S",
+        "coeff_formula_units": 4.0000000000000036,
+        "icohp_per_atom": -6.111843124999995,
+        "contribution_to_total": -24.4473725
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 2.0000000000000013,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -65.69134000000011
+      }
+    ],
+    "predicted_icohp_total_from_products": -90.13871250000011,
+    "delta_icohp_total": 18.543052499999988,
+    "delta_icohp_per_atom": 2.3178815624999984
+  },
+  "extension_SN_poly_mp-1078816": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_poly_mp-1078816",
+    "reactant_formula": "SN",
+    "reactant_n_sites": 8,
+    "reactant_icohp_total": -60.47331000000005,
+    "reaction_string": "SN -> S + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_S_mp-77",
+        "reduced_formula": "S",
+        "coeff_formula_units": 4.0000000000000036,
+        "icohp_per_atom": -6.111843124999995,
+        "contribution_to_total": -24.4473725
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 2.0000000000000013,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -65.69134000000011
+      }
+    ],
+    "predicted_icohp_total_from_products": -90.13871250000011,
+    "delta_icohp_total": 29.665402500000063,
+    "delta_icohp_per_atom": 3.708175312500008
+  },
+  "extension_SN_poly_mp-1173453": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_poly_mp-1173453",
+    "reactant_formula": "SN",
+    "reactant_n_sites": 36,
+    "reactant_icohp_total": -291.60233999999997,
+    "reaction_string": "SN -> S + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_S_mp-77",
+        "reduced_formula": "S",
+        "coeff_formula_units": 18.000000000000018,
+        "icohp_per_atom": -6.111843124999995,
+        "contribution_to_total": -110.01317625000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 9.000000000000007,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -295.61103000000054
+      }
+    ],
+    "predicted_icohp_total_from_products": -405.62420625000055,
+    "delta_icohp_total": 114.02186625000058,
+    "delta_icohp_per_atom": 3.167274062500016
+  },
+  "extension_SN_poly_mp-684642": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_poly_mp-684642",
+    "reactant_formula": "SN",
+    "reactant_n_sites": 36,
+    "reactant_icohp_total": -343.12038000000064,
+    "reaction_string": "SN -> S + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_S_mp-77",
+        "reduced_formula": "S",
+        "coeff_formula_units": 18.000000000000018,
+        "icohp_per_atom": -6.111843124999995,
+        "contribution_to_total": -110.01317625000001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 9.000000000000007,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -295.61103000000054
+      }
+    ],
+    "predicted_icohp_total_from_products": -405.62420625000055,
+    "delta_icohp_total": 62.50382624999992,
+    "delta_icohp_per_atom": 1.7362173958333311
+  },
   "extension_S_mp-77": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
@@ -5539,6 +6227,110 @@
   },
   "extension_Se_mp-14": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
+  },
+  "extension_SiO2_anchor_mp-9258": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_anchor_mp-9258",
+    "reactant_formula": "SiO2",
+    "reactant_n_sites": 12,
+    "reactant_icohp_total": -148.92335000000043,
+    "reaction_string": "SiO2 -> Si + O2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/hull_covalent_Si_mp-149",
+        "reduced_formula": "Si",
+        "coeff_formula_units": 4.000000000000001,
+        "icohp_per_atom": -9.305365000000002,
+        "contribution_to_total": -37.221460000000015
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462",
+        "reduced_formula": "O2",
+        "coeff_formula_units": 4.0,
+        "icohp_per_atom": -8.963003750000002,
+        "contribution_to_total": -71.70403000000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -108.92549000000002,
+    "delta_icohp_total": -39.9978600000004,
+    "delta_icohp_per_atom": -3.3331550000000334
+  },
+  "extension_SiO2_poly_mp-10064": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_poly_mp-10064",
+    "reactant_formula": "SiO2",
+    "reactant_n_sites": 3,
+    "reactant_icohp_total": -33.751840000000016,
+    "reaction_string": "SiO2 -> Si + O2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/hull_covalent_Si_mp-149",
+        "reduced_formula": "Si",
+        "coeff_formula_units": 1.0000000000000002,
+        "icohp_per_atom": -9.305365000000002,
+        "contribution_to_total": -9.305365000000004
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462",
+        "reduced_formula": "O2",
+        "coeff_formula_units": 1.0,
+        "icohp_per_atom": -8.963003750000002,
+        "contribution_to_total": -17.926007500000004
+      }
+    ],
+    "predicted_icohp_total_from_products": -27.231372500000006,
+    "delta_icohp_total": -6.520467500000009,
+    "delta_icohp_per_atom": -2.17348916666667
+  },
+  "extension_SiO2_poly_mp-556044": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_poly_mp-556044",
+    "reactant_formula": "SiO2",
+    "reactant_n_sites": 36,
+    "reactant_icohp_total": -330.2262500000001,
+    "reaction_string": "SiO2 -> Si + O2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/hull_covalent_Si_mp-149",
+        "reduced_formula": "Si",
+        "coeff_formula_units": 12.000000000000004,
+        "icohp_per_atom": -9.305365000000002,
+        "contribution_to_total": -111.66438000000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462",
+        "reduced_formula": "O2",
+        "coeff_formula_units": 12.0,
+        "icohp_per_atom": -8.963003750000002,
+        "contribution_to_total": -215.11209000000005
+      }
+    ],
+    "predicted_icohp_total_from_products": -326.77647000000013,
+    "delta_icohp_total": -3.4497799999999756,
+    "delta_icohp_per_atom": -0.09582722222222155
+  },
+  "extension_SiO2_poly_mp-638049": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_poly_mp-638049",
+    "reactant_formula": "SiO2",
+    "reactant_n_sites": 36,
+    "reactant_icohp_total": -340.6330999999995,
+    "reaction_string": "SiO2 -> Si + O2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/hull_covalent_Si_mp-149",
+        "reduced_formula": "Si",
+        "coeff_formula_units": 12.000000000000004,
+        "icohp_per_atom": -9.305365000000002,
+        "contribution_to_total": -111.66438000000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_O2_mp-1524462",
+        "reduced_formula": "O2",
+        "coeff_formula_units": 12.0,
+        "icohp_per_atom": -8.963003750000002,
+        "contribution_to_total": -215.11209000000005
+      }
+    ],
+    "predicted_icohp_total_from_products": -326.77647000000013,
+    "delta_icohp_total": -13.85662999999937,
+    "delta_icohp_per_atom": -0.3849063888888714
   },
   "extension_Sn_mp-623511": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
@@ -5754,6 +6546,84 @@
   "extension_Sr_mp-139": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
+  "extension_TaN_anchor_mp-1497": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TaN_anchor_mp-1497",
+    "reactant_formula": "TaN",
+    "reactant_n_sites": 6,
+    "reactant_icohp_total": -72.22151,
+    "reaction_string": "TaN -> Ta + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ta_mp-50",
+        "reduced_formula": "Ta",
+        "coeff_formula_units": 3.0000000000000027,
+        "icohp_per_atom": -19.512719999999995,
+        "contribution_to_total": -58.53816000000003
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 1.5000000000000009,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -49.26850500000008
+      }
+    ],
+    "predicted_icohp_total_from_products": -107.80666500000012,
+    "delta_icohp_total": 35.58515500000013,
+    "delta_icohp_per_atom": 5.930859166666688
+  },
+  "extension_TaN_poly_mp-1009831": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TaN_poly_mp-1009831",
+    "reactant_formula": "TaN",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -27.827459999999984,
+    "reaction_string": "TaN -> Ta + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ta_mp-50",
+        "reduced_formula": "Ta",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -19.512719999999995,
+        "contribution_to_total": -19.512720000000012
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -16.422835000000028
+      }
+    ],
+    "predicted_icohp_total_from_products": -35.935555000000036,
+    "delta_icohp_total": 8.108095000000052,
+    "delta_icohp_per_atom": 4.054047500000026
+  },
+  "extension_TaN_poly_mp-1009833": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TaN_poly_mp-1009833",
+    "reactant_formula": "TaN",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -25.258649999999992,
+    "reaction_string": "TaN -> Ta + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Ta_mp-50",
+        "reduced_formula": "Ta",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -19.512719999999995,
+        "contribution_to_total": -19.512720000000012
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -16.422835000000028
+      }
+    ],
+    "predicted_icohp_total_from_products": -35.935555000000036,
+    "delta_icohp_total": 10.676905000000044,
+    "delta_icohp_per_atom": 5.338452500000022
+  },
   "extension_Ta_mp-50": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
@@ -5844,11 +6714,219 @@
   "extension_Ti_mp-46": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
+  "extension_TlC_anchor_mp-567465": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlC_anchor_mp-567465",
+    "reactant_formula": "TlC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -21.507199999999987,
+    "reaction_string": "TlC -> Tl + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Tl_mp-82",
+        "reduced_formula": "Tl",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -9.489419999999999,
+        "contribution_to_total": -9.489420000000006
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -27.787945000000025,
+    "delta_icohp_total": 6.280745000000039,
+    "delta_icohp_per_atom": 3.1403725000000193
+  },
+  "extension_TlC_poly_mp-1058887": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlC_poly_mp-1058887",
+    "reactant_formula": "TlC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -21.06030000000001,
+    "reaction_string": "TlC -> Tl + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Tl_mp-82",
+        "reduced_formula": "Tl",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -9.489419999999999,
+        "contribution_to_total": -9.489420000000006
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -27.787945000000025,
+    "delta_icohp_total": 6.727645000000017,
+    "delta_icohp_per_atom": 3.3638225000000084
+  },
+  "extension_TlN_anchor_mp-1017982": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlN_anchor_mp-1017982",
+    "reactant_formula": "TlN",
+    "reactant_n_sites": 4,
+    "reactant_icohp_total": -36.82527,
+    "reaction_string": "TlN -> Tl + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Tl_mp-82",
+        "reduced_formula": "Tl",
+        "coeff_formula_units": 2.0000000000000018,
+        "icohp_per_atom": -9.489419999999999,
+        "contribution_to_total": -18.978840000000016
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -32.845670000000055
+      }
+    ],
+    "predicted_icohp_total_from_products": -51.824510000000075,
+    "delta_icohp_total": 14.999240000000071,
+    "delta_icohp_per_atom": 3.749810000000018
+  },
+  "extension_TlN_poly_mp-1002222": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlN_poly_mp-1002222",
+    "reactant_formula": "TlN",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -21.26662,
+    "reaction_string": "TlN -> Tl + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Tl_mp-82",
+        "reduced_formula": "Tl",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -9.489419999999999,
+        "contribution_to_total": -9.489420000000008
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -16.422835000000028
+      }
+    ],
+    "predicted_icohp_total_from_products": -25.912255000000037,
+    "delta_icohp_total": 4.645635000000038,
+    "delta_icohp_per_atom": 2.322817500000019
+  },
+  "extension_TlN_poly_mp-1007778": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlN_poly_mp-1007778",
+    "reactant_formula": "TlN",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -19.522560000000002,
+    "reaction_string": "TlN -> Tl + 0.5 N2",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Tl_mp-82",
+        "reduced_formula": "Tl",
+        "coeff_formula_units": 1.0000000000000009,
+        "icohp_per_atom": -9.489419999999999,
+        "contribution_to_total": -9.489420000000008
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_N2_mp-1059834",
+        "reduced_formula": "N2",
+        "coeff_formula_units": 0.5000000000000003,
+        "icohp_per_atom": -16.422835000000017,
+        "contribution_to_total": -16.422835000000028
+      }
+    ],
+    "predicted_icohp_total_from_products": -25.912255000000037,
+    "delta_icohp_total": 6.389695000000035,
+    "delta_icohp_per_atom": 3.1948475000000176
+  },
   "extension_Tl_mp-82": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
   "extension_V_mp-146": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
+  },
+  "extension_WC_anchor_mp-13136": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_WC_anchor_mp-13136",
+    "reactant_formula": "WC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -43.33978999999998,
+    "reaction_string": "WC -> W + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_W_mp-91",
+        "reduced_formula": "W",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -37.57813999999999,
+        "contribution_to_total": -37.57814000000002
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -55.87666500000004,
+    "delta_icohp_total": 12.536875000000059,
+    "delta_icohp_per_atom": 6.268437500000029
+  },
+  "extension_WC_poly_mp-1008630": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_WC_poly_mp-1008630",
+    "reactant_formula": "WC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -43.99658000000003,
+    "reaction_string": "WC -> W + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_W_mp-91",
+        "reduced_formula": "W",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -37.57813999999999,
+        "contribution_to_total": -37.57814000000002
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -55.87666500000004,
+    "delta_icohp_total": 11.880085000000008,
+    "delta_icohp_per_atom": 5.940042500000004
+  },
+  "extension_WC_poly_mp-1008635": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_WC_poly_mp-1008635",
+    "reactant_formula": "WC",
+    "reactant_n_sites": 2,
+    "reactant_icohp_total": -40.413569999999986,
+    "reaction_string": "WC -> W + C",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_W_mp-91",
+        "reduced_formula": "W",
+        "coeff_formula_units": 1.0000000000000007,
+        "icohp_per_atom": -37.57813999999999,
+        "contribution_to_total": -37.57814000000002
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cgraphite_mp-48",
+        "reduced_formula": "C",
+        "coeff_formula_units": 1.0000000000000004,
+        "icohp_per_atom": -18.298525000000012,
+        "contribution_to_total": -18.29852500000002
+      }
+    ],
+    "predicted_icohp_total_from_products": -55.87666500000004,
+    "delta_icohp_total": 15.463095000000052,
+    "delta_icohp_per_atom": 7.731547500000026
   },
   "extension_W_mp-91": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"

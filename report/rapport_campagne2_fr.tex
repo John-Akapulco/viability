@@ -35,7 +35,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 
 \title{\bfseries Descripteurs ICOHP et stabilité thermodynamique \\
-sur un jeu de 349 structures \\
+sur un jeu de 394 structures \\
 \large Campagne 2 : construction du jeu de données, calcul VASP+LOBSTER,
 et analyse statistique}
 \author{Gilles Frapper \\ Professeur des Universités, Chimie Théorique \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Rapport généré dans le cadre du projet \texttt{viability}}
@@ -47,7 +47,7 @@ et analyse statistique}
 \begin{center}
 \small\itshape La question centrale du projet est la discrimination de
 viabilité fondée sur $\Delta$(ICOHP) (\S\ref{sec:reframing}), sur un jeu
-de 349 structures.
+de 394 structures.
 \end{center}
 
 \tableofcontents
@@ -81,7 +81,11 @@ références élémentaires supplémentaires, des polymorphes hors
 équilibre (haute pression, allotropes) et des binaires alcalins/
 alcalino-terreux contre N/O/F/P/S/Cl, choisis pour construire de vrais
 groupes de polymorphes de même composition et tester les descripteurs
-loin de l'équilibre.
+loin de l'équilibre ; et un troisième ensemble de 45 composés
+binaires, appariant un composé expérimental métastable à la distance
+maximale au-dessus du hull convexe à 1--3 polymorphes théoriques
+encore plus éloignés du hull pour la même formule, un test de
+robustesse délibérément aux cas limites de stabilité.
 
 \subsection{Classification du type de liaison}
 
@@ -180,7 +184,7 @@ ce stade (voir \S\ref{sec:limites-actuelles}).
              fill=orange!10, font=\small},
   arr/.style={-{Latex[length=2.2mm]}, thick}
 ]
-\node[io]  (mp)     {Materials Project (API) \\ 349 structures};
+\node[io]  (mp)     {Materials Project (API) \\ 394 structures};
 \node[box, below=of mp] (prep)   {Scripts \texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
 \node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ tableau plafonné à 8 t\^aches concurrentes, HPC Yargla};
 \node[box, below=of slurm] (vasplob) {VASP (statique, 16 c\oe urs) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
@@ -199,7 +203,7 @@ ce stade (voir \S\ref{sec:limites-actuelles}).
 
 \section{Environnement}
 
-Identique sur l'ensemble des 349 structures (Yargla, VASP 6.5.0,
+Identique sur l'ensemble des 394 structures (Yargla, VASP 6.5.0,
 LOBSTER 5.1.1, \texttt{.venv} Python 3.11), complété par : \texttt{mp-api},
 \texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn}, \texttt{matplotlib},
 \texttt{pydantic}, \texttt{pyyaml} (voir \texttt{requirements.txt}). Détail
@@ -208,7 +212,7 @@ des c\oe urs alloués par étape de calcul : \S\ref{sec:cout}.
 \section{Jeu de données}
 \label{sec:dataset}
 
-L'ensemble des composés et éléments calculés compte \textbf{349
+L'ensemble des composés et éléments calculés compte \textbf{394
 structures}.
 
 \begin{table}[htbp]
@@ -220,9 +224,9 @@ structures}.
 Composition & $n$ \\
 \midrule
 Références à un seul élément & 68 \\
-Composés multi-éléments      & 281 \\
+Composés multi-éléments      & 326 \\
 \midrule
-\textbf{Total}                & \textbf{349} \\
+\textbf{Total}                & \textbf{394} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -236,10 +240,11 @@ Composés multi-éléments      & 281 \\
 Classe & $n$ & Plage $E_\text{hull}$ (eV/atome) \\
 \midrule
 stable ($E_\text{hull}=0$)  & 124 & 0.0000 \\
-expérimentale métastable    & 119 & 0.000035 -- 2.0568 \\
-théorique métastable        & 106 & 0.000084 -- 3.1688 \\
+expérimentale métastable    & 137 & 0.0000347 -- 2.1080 \\
+théorique métastable        & 131 & 0.0000843 -- 3.1688 \\
+inconnue (référence COD, sans $E_\text{hull}$) & 2 & --- \\
 \midrule
-\textbf{Total}               & \textbf{349} & \\
+\textbf{Total}               & \textbf{394} & \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -250,12 +255,12 @@ et un classement fondé directement sur les données ICOHP/ICOBI de chaque
 composé (\texttt{is\_metal} pour le caractère métallique, puis un seuil
 sur l'ICOBI moyen par liaison --- calibré au point médian des médianes
 ICOBI des composés que \texttt{classify()} labellise déjà ionique/covalent,
-soit 0,0381 --- pour distinguer ionique de covalent parmi les composés
+soit 0,0370 --- pour distinguer ionique de covalent parmi les composés
 non métalliques).
 
 \begin{table}[htbp]
 \centering
-\caption{Type de liaison : \texttt{classify()} contre le classement ICOHP/ICOBI (concordance sur le sous-ensemble labellisé par \texttt{classify()} : 157/174 = 90,2\%).}
+\caption{Type de liaison : \texttt{classify()} contre le classement ICOHP/ICOBI (concordance sur le sous-ensemble labellisé par \texttt{classify()} : 159/181 = 87,8\%).}
 \label{tab:bondtype}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
@@ -263,22 +268,24 @@ non métalliques).
 \midrule
 métallique     & 88  & 0  & 0  & 0 \\
 ionique        & 0   & 48 & 5  & 0 \\
-covalent       & 0   & 12 & 21 & 0 \\
-non classifié  & 102 & 36 & 34 & 1 \\
+covalent       & 0   & 17 & 23 & 0 \\
+non classifié  & 138 & 33 & 39 & 1 \\
 \midrule
-\textbf{Total} & \textbf{190} & \textbf{96} & \textbf{60} & \textbf{1} \\
+\textbf{Total} & \textbf{226} & \textbf{98} & \textbf{67} & \textbf{1} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Sur les 173 composés que \texttt{classify()} laisse \og{}non
+Sur les 211 composés que \texttt{classify()} laisse \og{}non
 classifiés\fg{} (essentiellement les paires alcalin/alcalino-terreux
-$\times$ \{N, P, S\}, hors de \texttt{IONIC\_ANIONS}), le classement
-ICOHP/ICOBI en résout \textbf{70} en ionique (36) ou covalent (34) ;
-les 103 restants sont soit métalliques (102, déjà couverts par
+$\times$ \{N, P, S\}, hors de \texttt{IONIC\_ANIONS}, et les métaux
+liés à un élément anion-like que \texttt{classify()} exclut
+délibérément de sa catégorie \og{}métallique\fg{}), le classement
+ICOHP/ICOBI en résout \textbf{72} en ionique (33) ou covalent (39) ;
+les 139 restants sont soit métalliques (138, déjà couverts par
 \texttt{is\_metal}), soit sans donnée ICOBI (1). Sur le sous-ensemble où
-les deux méthodes se prononcent, l'accord est fort (90,2\%) mais pas
-total : 10 désaccords ionique/covalent, à examiner cas par cas avant
+les deux méthodes se prononcent, l'accord est fort (87,8\%) mais pas
+total : 22 désaccords ionique/covalent, à examiner cas par cas avant
 d'utiliser l'un ou l'autre classement comme variable de stratification.
 
 \section{Résultats}
@@ -567,14 +574,14 @@ s'appliquent à l'ensemble du jeu de données) :
     second essai.
 \end{itemize}
 
-Taux de succès final sur l'ensemble des 349 structures calculées à ce
-jour : \textbf{349/349}.
+Taux de succès final sur l'ensemble des 394 structures calculées à ce
+jour : \textbf{394/394}.
 
 \section{Coût de calcul}
 \label{sec:cout}
 
-\textbf{349 structures calculées au total} : 68 références à un seul
-élément et 281 composés multi-éléments (\S\ref{sec:dataset}).
+\textbf{394 structures calculées au total} : 68 références à un seul
+élément et 326 composés multi-éléments (\S\ref{sec:dataset}).
 
 Chaque job VASP puis LOBSTER s'exécute sur le HPC \textbf{Yargla}, au sein
 d'une même allocation SLURM d'un n\oe ud (\texttt{--nodes=1}) et
@@ -587,7 +594,7 @@ est plafonné à 8 tâches concurrentes.
 
 \begin{table}[htbp]
 \centering
-\caption{Temps de calcul VASP et LOBSTER sur l'ensemble du jeu de données.}
+\caption{Temps de calcul VASP et LOBSTER (n=349 ; timing non disponible pour tous les composés).}
 \label{tab:compute-cost}
 \begin{tabular}{@{}lrr@{}}
 \toprule
@@ -617,8 +624,8 @@ indicatif.
 \label{sec:limites-actuelles}
 
 \begin{itemize}
-  \item \textbf{Couverture de \texttt{classify()}} : 173/349 structures
-    (50\%) hors des trois catégories ionique/covalent/métallique,
+  \item \textbf{Couverture de \texttt{classify()}} : 211/394 structures
+    (54\%) hors des trois catégories ionique/covalent/métallique,
     principalement les liaisons alcalin/alcalino-terreux $\times$
     \{N, P, S\} qu'\texttt{IONIC\_ANIONS} ne reconnaît pas
     (\S\ref{sec:dataset}) --- purement informatif ici, mais une vraie
@@ -1057,5 +1064,135 @@ même convention et provenance que l'Annexe~\ref{sec:appendix-ext-endobondic}.
 {\small
 \input{appendix_extension_exobondic_fr.tex}
 }
+
+\section{Descripteurs antiliants ICOHP et ICOBI}
+\label{sec:appendix-icobi-antibonding}
+
+\subsection{Implémentation}
+
+Le descripteur ICOHP de population antiliante près du niveau de Fermi
+(\S\ref{sec:antibonding}, \texttt{cohp\_extraction.py}) est étendu ici à
+l'ICOBI : même fenêtre à sens unique
+$(E_\text{réf}-\Delta E,\ E_\text{réf}]$, même $E_\text{réf}$ (niveau de
+Fermi pour les métaux, VBM pour les composés à gap --- logique
+totalement indépendante de la grandeur intégrée), lue cette fois dans
+\texttt{COBICAR.lobster}/\texttt{ICOBILIST.lobster} plutôt que dans
+\texttt{COHPCAR.lobster}/\texttt{ICOHPLIST.lobster}
+(\texttt{pymatgen.io.lobster.outputs.Cohpcar(are\_cobis=True)}).
+
+\textbf{Point critique, vérifié empiriquement et non supposé} : l'ICOBI
+\textbf{n'a pas} la convention de signe de l'ICOHP. Alors que
+\og{}ICOHP négatif = liant\fg{} (\S2.4), l'ICOBI suit la convention
+inverse, \og{}ICOBI positif = liant\fg{} (comme le COOP, pas comme le
+COHP). Vérifié deux fois sur données réelles : (1) recoupement exact
+avec \texttt{ICOBILIST.lobster} (écart maximal 0,0 sur 66 étiquettes de
+liaison, \texttt{tests/test\_cohp\_extraction.py}) --- \texttt{pymatgen}
+ne renormalise pas silencieusement le signe en passant de COHP à COBI ;
+(2) sur la liaison Si--O la plus forte d'\texttt{extension\_SiO2\_anchor}
+(ICOHP $=-5{,}599$, ICOBI $=+0{,}513$), la région profonde de liaison
+($-10$ à $-3$~eV, loin de toute perturbation de frontière) donne un COHP($E$)
+moyen de $-0{,}338$ mais un COBI($E$) moyen de $+0{,}041$ --- signes
+opposés dans la même région physiquement liante. La partie antiliante de
+l'ICOBI est donc sa partie \emph{négative}, pas positive --- le sens de
+troncature (\texttt{integrate\_icobi\_antibonding\_in\_window()}) est
+délibérément le miroir de celui utilisé pour l'ICOHP, pas une copie.
+
+Calculé sur les 394 composés disposant d'un \texttt{COBICAR.lobster}
+(\texttt{analysis/compute\_icobi\_antibonding\_all.py}) ; 392 avec
+\texttt{is\_metal} disponible.
+
+\subsection{Corrélation à l'énergie de formation}
+
+\begin{table}[htbp]
+\centering
+\caption{Corrélations de Spearman (normalisées, $\Delta E=1{,}0$~eV) contre \texttt{formation\_energy\_per\_atom} --- ICOHP (n=394) et ICOBI (n=392) antiliants, même population.}
+\label{tab:antibonding-icohp-icobi}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Groupe & $n$ (ICOHP) & $\rho$ (ICOHP) & $n$ (ICOBI) & $\rho$ (ICOBI) \\
+\midrule
+tous              & 391 & $-0{,}2473^{***}$ & 385 & $+0{,}2518^{***}$ \\
+\texttt{covalent} & 40  & $-0{,}4781^{**}$  & 38  & $-0{,}1755$ \\
+\texttt{ionique}  & 53  & $-0{,}1842$       & 51  & $+0{,}1289$ \\
+\texttt{métallique} & 88 & $-0{,}1864$      & 86  & $+0{,}0011$ \\
+\texttt{is\_metal=False} & 166 & $-0{,}2621^{***}$ & 162 & $+0{,}0661$ \\
+\texttt{is\_metal=True}  & 225 & $-0{,}0154$       & 223 & $+0{,}1263$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$ ; aucune étoile =
+non significatif. Détail complet (brut + normalisé, les trois
+$\Delta E$) : \texttt{analysis/stats\_summary\_antibonding\_joint.json}.}
+\end{table}
+
+\begin{center}
+\includegraphics[width=\textwidth]{icohp_vs_icobi_antibonding_comparison.png}
+\end{center}
+
+\textbf{Les deux descripteurs se comportent différemment.} Le signe
+global de l'ICOBI antiliant est \emph{opposé} à celui de l'ICOHP
+antiliant (respectivement $+0{,}25$ et $-0{,}25$) --- pour l'ICOHP, plus
+d'antiliaison occupée près de $E_F$ est associé à une formation
+\emph{plus} stable (déjà noté comme contre-intuitif au
+\S\ref{sec:antibonding}) ; pour l'ICOBI, la relation va dans le sens
+naïvement attendu (plus d'antiliaison $\Rightarrow$ moins stable). Mais
+\textbf{aucun sous-groupe ICOBI ne survit à la stratification}
+(covalent, ionique, métallique, \texttt{is\_metal} : $p>0{,}05$
+partout) --- contrairement à l'ICOHP, dont le sous-groupe covalent
+($n=40$, $\rho=-0{,}478$) reste le résultat stratifié le plus robuste du
+projet. La corrélation globale de l'ICOBI est donc, comme pour l'ICOHP
+de réaction (\S\ref{sec:reaction-icohp}), vraisemblablement un effet de
+regroupement entre types de liaison plutôt qu'une relation robuste au
+sein d'un groupe homogène.
+
+\subsection{$\Delta$(antiliant) de la réaction de décomposition en éléments}
+
+Pour une réaction de cas 1 (composé $\to$ éléments), le
+$\Delta$(antiliant) n'est \textbf{pas} calculé par
+\texttt{reaction\_analysis/delta.py} (qui combine des sommes ICOHP/ICOBI
+\emph{extensives} par unité formulaire avec des coefficients entiers) :
+la population antiliante près de la frontière est construite à partir de
+la trace \og{}average\fg{} de LOBSTER, une grandeur \emph{intensive}
+(moyennée sur toutes les liaisons, pas sommée) qui n'a pas de
+décomposition extensive naturelle. Convention choisie ici, documentée
+comme un choix méthodologique explicite plutôt qu'une réutilisation
+silencieuse : $\Delta$ = (moyenne des descripteurs antiliants des
+éléments, pondérée par fraction atomique) $-$ (descripteur antiliant
+propre du composé), toujours en convention produits $-$ réactifs.
+Calculé pour 320 réactions de cas 1
+(\texttt{analysis/compute\_delta\_antibonding\_case1.py}).
+
+\begin{table}[htbp]
+\centering
+\caption{Corrélations de Spearman, $\Delta$(antiliant) de la réaction de décomposition (cas 1, $n=316$--320).}
+\label{tab:delta-antibonding}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Descripteur & Cible & $n$ & $\rho$ \\
+\midrule
+$\Delta$(ICOHP antiliant) & \texttt{formation\_energy\_per\_atom} & 316 & $-0{,}6439^{***}$ \\
+$\Delta$(ICOBI antiliant) & \texttt{formation\_energy\_per\_atom} & 316 & $-0{,}4457^{***}$ \\
+$\Delta$(ICOHP antiliant) & \texttt{energy\_above\_hull} & 320 & $-0{,}1868^{***}$ \\
+$\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 320 & $-0{,}1524^{**}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$.}
+\end{table}
+
+\textbf{$\Delta$(ICOHP antiliant) est, à ce stade, la corrélation continue
+la plus forte de tout le projet} ($\rho=-0{,}644$, plus forte que
+l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}502$) ---
+à lire avec prudence : c'est une convention de construction nouvelle,
+pas encore stratifiée par type de liaison faute de temps dans cette
+session, et sa magnitude devra être reproduite avant d'être prise comme
+un résultat acquis. Fait notable : contrairement aux valeurs brutes
+(signes opposés, ci-dessus), \textbf{les deux $\Delta$ vont dans le même
+sens} (tous deux négatifs) --- la construction en delta semble aligner
+les deux descripteurs sur une lecture cohérente, là où leurs valeurs
+brutes ne le sont pas. Les deux $\Delta$ sont eux-mêmes corrélés entre
+eux ($\rho=0{,}532$, $p<0{,}001$, $n=320$) : liés mais pas redondants.
 
 \end{document}

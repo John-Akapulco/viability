@@ -6,10 +6,16 @@ and does it cover the cases classify() leaves unclassified?
 
 Reuses analysis/percolation_vs_antibonding.csv's per-compound icobi_mean
 (mean ICOBI per bond, dimensionless bond order, already computed by
-percolation_path.py for the whole 349-compound dataset -- no LOBSTER
-re-parsing needed) and is_metal (already fetched from Materials Project
-for every compound, including the 186 whose own mp_metadata.json lacks
-it, see compute_antibonding_all.py's docstring on that pitfall).
+percolation_path.py -- no LOBSTER re-parsing needed there) and is_metal
+(already fetched from Materials Project for every compound, including
+the 186 whose own mp_metadata.json lacks it, see
+compute_antibonding_all.py's docstring on that pitfall). The
+maxhull_binaries_stress_test batch isn't in that CSV yet (not run
+through percolation_path.py), so its icobi_mean is computed directly
+here via reaction_analysis.parse_lobster (its own is_metal/bond_type
+already live in mp_metadata.json, no MP re-query needed) and merged in
+before classification, so every compound with LOBSTER data ends up
+covered by one classification pass.
 
 Scheme (is_metal first, since it is the one DFT-derived, unambiguous
 input available for every compound; ICOHP/ICOBI magnitude is not a
@@ -29,17 +35,55 @@ the full classify_label x icobi_label cross-tabulation.
 
 from __future__ import annotations
 
+import json
+import sys
+import warnings
 from pathlib import Path
 
 import pandas as pd
 
 REPO_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from reaction_analysis.parse_lobster import parse_compound_entry  # noqa: E402
+
 IN_CSV = REPO_ROOT / "analysis" / "percolation_vs_antibonding.csv"
+STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 OUT_CSV = REPO_ROOT / "analysis" / "icohp_icobi_bondtype.csv"
+EXTRA_BATCH = "maxhull_binaries_stress_test"
+
+
+def _extra_batch_rows() -> pd.DataFrame:
+    rows = []
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        for compound_dir in sorted(STRUCTURES_ROOT.iterdir()):
+            meta_path = compound_dir / "mp_metadata.json"
+            if not meta_path.exists():
+                continue
+            meta = json.loads(meta_path.read_text())
+            if meta.get("batch") != EXTRA_BATCH:
+                continue
+            if not (compound_dir / "ICOHPLIST.lobster").exists():
+                continue
+            try:
+                entry = parse_compound_entry(compound_dir, role="target", compound_id=compound_dir.name)
+            except Exception:  # noqa: BLE001 - batch must not die on one bad compound
+                continue
+            rows.append({
+                "compound_id": compound_dir.name,
+                "bond_type": meta.get("bond_type"),
+                "is_metal": meta.get("is_metal"),
+                "icobi_mean": entry.icobi.mean_per_bond_eV if entry.icobi is not None else None,
+            })
+    return pd.DataFrame(rows)
 
 
 def main() -> None:
     df = pd.read_csv(IN_CSV)
+    extra = _extra_batch_rows()
+    print(f"Adding {len(extra)} compounds from {EXTRA_BATCH!r} (parsed directly, not yet in {IN_CSV.name})")
+    df = pd.concat([df, extra], ignore_index=True)
     df = df.dropna(subset=["is_metal"])
 
     ionic = df[df["bond_type"] == "ionic"]["icobi_mean"].dropna()

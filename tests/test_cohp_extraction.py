@@ -251,5 +251,76 @@ class TestAntibondingPopulationRealPilots(unittest.TestCase):
                 prev = r["w_antibond_raw"]
 
 
+# The structures_cohp/ pilot set has no COBICAR.lobster (COBI output was
+# not requested for those 6 pilots) -- this class instead uses two
+# already-computed main-dataset compounds that DO have it, skipping
+# gracefully if the machine doesn't have mp_dataset/structures/ populated.
+STRUCTURES_ROOT = Path(__file__).resolve().parent.parent / "mp_dataset" / "structures"
+ICOBI_PILOTS = {
+    "exp_stable_SrSi_mp-2661": False,  # weakly-bonded pilot (used to derive the sign-convention finding)
+    "extension_SiO2_anchor_mp-9258": False,  # strongly covalently-bonded pilot (Si-O)
+}
+
+
+def _missing_icobi_data() -> bool:
+    return not all(
+        (STRUCTURES_ROOT / c / "COBICAR.lobster").exists() and (STRUCTURES_ROOT / c / "ICOBILIST.lobster").exists()
+        for c in ICOBI_PILOTS
+    )
+
+
+@unittest.skipIf(_missing_icobi_data(), "mp_dataset/structures/ ICOBI pilots not populated on this machine")
+class TestIcobiAntibondingRealPilots(unittest.TestCase):
+    """Validates the ICOBI antibonding-population metric added alongside
+    the ICOHP one: (a) pymatgen's are_cobis=True parsing reproduces
+    ICOBILIST.lobster exactly (no silent sign renormalization), and (b)
+    the empirically-derived sign convention (ICOBI: positive=bonding,
+    OPPOSITE of ICOHP's negative=bonding) holds on real data, not just the
+    one compound used to originally discover it."""
+
+    def test_cobicar_reproduces_icobilist_exactly(self):
+        from pymatgen.io.lobster.outputs import Icohplist
+
+        for compound in ICOBI_PILOTS:
+            d = STRUCTURES_ROOT / compound
+            cobicar = ce.load_cobicar(d)
+            icobilist = Icohplist(filename=str(d / "ICOBILIST.lobster"), are_cobis=True)
+            energies = np.array(cobicar.energies)
+            idx_ef = int(np.argmin(np.abs(energies - 0.0)))
+            for label in icobilist.icohplist:
+                reference = icobilist.icohpcollection.get_icohp_by_label(label)
+                spins = list(cobicar.cohp_data[label]["ICOHP"].keys())
+                from_cobicar = sum(cobicar.cohp_data[label]["ICOHP"][s][idx_ef] for s in spins)
+                self.assertAlmostEqual(
+                    from_cobicar, reference, places=4,
+                    msg=f"{compound} label {label}: COBICAR/ICOBILIST mismatch",
+                )
+
+    def test_icobi_sign_convention_is_opposite_of_icohp(self):
+        # extension_SiO2_anchor_mp-9258's strongest bond: large negative
+        # ICOHP (bonding by the ICOHP convention) must pair with a large
+        # POSITIVE ICOBI (bonding by the ICOBI convention) -- if this ever
+        # flips, something upstream (pymatgen version, file format) changed
+        # and integrate_icobi_antibonding_in_window()'s clip direction
+        # needs revisiting.
+        from pymatgen.io.lobster.outputs import Icohplist
+
+        d = STRUCTURES_ROOT / "extension_SiO2_anchor_mp-9258"
+        icohplist = Icohplist(filename=str(d / "ICOHPLIST.lobster"))
+        icobilist = Icohplist(filename=str(d / "ICOBILIST.lobster"), are_cobis=True)
+        strongest_label = min(icohplist.icohplist, key=lambda lbl: icohplist.icohpcollection.get_icohp_by_label(lbl))
+        icohp_val = icohplist.icohpcollection.get_icohp_by_label(strongest_label)
+        icobi_val = icobilist.icohpcollection.get_icohp_by_label(strongest_label)
+        self.assertLess(icohp_val, -1.0, "expected a strong (very negative) ICOHP bond")
+        self.assertGreater(icobi_val, 0.1, "expected the same bond to have a large POSITIVE ICOBI")
+
+    def test_icobi_antibonding_population_runs_and_is_nonnegative(self):
+        for compound, is_metal in ICOBI_PILOTS.items():
+            r = ce.icobi_antibonding_population_near_frontier(STRUCTURES_ROOT / compound, is_metal=is_metal)
+            self.assertGreaterEqual(r["w_antibond_icobi_raw"], 0.0, compound)
+            if r["w_antibond_icobi_normalized"] is not None:
+                self.assertGreaterEqual(r["w_antibond_icobi_normalized"], 0.0, compound)
+
+
 if __name__ == "__main__":
     unittest.main()

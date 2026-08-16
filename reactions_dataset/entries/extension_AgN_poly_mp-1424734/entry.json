@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_AgN_poly_mp-1424734",
+  "formula": "AgN",
+  "composition": {
+    "Ag": 2,
+    "N": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Ama2",
+  "space_group_number": 40,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -34.915070000000014,
+    "sum_per_atom_eV": -8.728767500000004,
+    "sum_per_formula_unit_eV": -17.457535000000007,
+    "mean_per_bond_eV": -0.35627622448979607,
+    "n_bonds": 98,
+    "by_bond_type": {
+      "Ag-Ag": {
+        "mean_eV": -0.2535043333333334,
+        "sum_eV": -7.605130000000001,
+        "n_bonds": 30
+      },
+      "Ag-N": {
+        "mean_eV": -0.66566675,
+        "sum_eV": -26.626669999999997,
+        "n_bonds": 40
+      },
+      "N-N": {
+        "mean_eV": -0.024402499999999994,
+        "sum_eV": -0.6832699999999998,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.750260000000005,
+    "sum_per_atom_eV": 1.6875650000000013,
+    "sum_per_formula_unit_eV": 3.3751300000000026,
+    "mean_per_bond_eV": 0.0688802040816327,
+    "n_bonds": 98,
+    "by_bond_type": {
+      "Ag-Ag": {
+        "mean_eV": 0.03627199999999999,
+        "sum_eV": 1.0881599999999998,
+        "n_bonds": 30
+      },
+      "Ag-N": {
+        "mean_eV": 0.103705,
+        "sum_eV": 4.1482,
+        "n_bonds": 40
+      },
+      "N-N": {
+        "mean_eV": 0.05406785714285715,
+        "sum_eV": 1.5139,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1424734"
+}

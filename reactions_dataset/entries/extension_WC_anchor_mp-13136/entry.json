@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_WC_anchor_mp-13136",
+  "formula": "WC",
+  "composition": {
+    "W": 1,
+    "C": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -43.33978999999998,
+    "sum_per_atom_eV": -21.66989499999999,
+    "sum_per_formula_unit_eV": -43.33978999999998,
+    "mean_per_bond_eV": -0.3552441803278687,
+    "n_bonds": 122,
+    "by_bond_type": {
+      "W-W": {
+        "mean_eV": -0.3942261904761904,
+        "sum_eV": -16.557499999999997,
+        "n_bonds": 42
+      },
+      "C-W": {
+        "mean_eV": -0.675276052631579,
+        "sum_eV": -25.66049,
+        "n_bonds": 38
+      },
+      "C-C": {
+        "mean_eV": -0.026709523809523808,
+        "sum_eV": -1.1218,
+        "n_bonds": 42
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.337030000000005,
+    "sum_per_atom_eV": 3.1685150000000024,
+    "sum_per_formula_unit_eV": 6.337030000000005,
+    "mean_per_bond_eV": 0.05194286885245906,
+    "n_bonds": 122,
+    "by_bond_type": {
+      "W-W": {
+        "mean_eV": 0.06222238095238096,
+        "sum_eV": 2.6133400000000004,
+        "n_bonds": 42
+      },
+      "C-W": {
+        "mean_eV": 0.09250078947368419,
+        "sum_eV": 3.515029999999999,
+        "n_bonds": 38
+      },
+      "C-C": {
+        "mean_eV": 0.004968095238095239,
+        "sum_eV": 0.20866000000000007,
+        "n_bonds": 42
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_WC_anchor_mp-13136"
+}

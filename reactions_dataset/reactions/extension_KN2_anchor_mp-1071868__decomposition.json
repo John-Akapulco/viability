@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_KN2_anchor_mp-1071868__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_KN2_anchor_mp-1071868",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_metastable_K_mp-10157",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

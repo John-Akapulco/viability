@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_TaN_anchor_mp-1497",
+  "formula": "TaN",
+  "composition": {
+    "Ta": 3,
+    "N": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -72.22151,
+    "sum_per_atom_eV": -12.036918333333332,
+    "sum_per_formula_unit_eV": -24.073836666666665,
+    "mean_per_bond_eV": -0.27671076628352487,
+    "n_bonds": 261,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": -0.23663492063492078,
+        "sum_eV": -14.908000000000008,
+        "n_bonds": 63
+      },
+      "N-Ta": {
+        "mean_eV": -0.4188758333333335,
+        "sum_eV": -55.29161000000002,
+        "n_bonds": 132
+      },
+      "N-N": {
+        "mean_eV": -0.03063484848484849,
+        "sum_eV": -2.0219000000000005,
+        "n_bonds": 66
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.769249999999985,
+    "sum_per_atom_eV": 2.128208333333331,
+    "sum_per_formula_unit_eV": 4.256416666666662,
+    "mean_per_bond_eV": 0.04892432950191565,
+    "n_bonds": 261,
+    "by_bond_type": {
+      "Ta-Ta": {
+        "mean_eV": 0.06374539682539682,
+        "sum_eV": 4.01596,
+        "n_bonds": 63
+      },
+      "N-Ta": {
+        "mean_eV": 0.06260651515151516,
+        "sum_eV": 8.26406,
+        "n_bonds": 132
+      },
+      "N-N": {
+        "mean_eV": 0.007412575757575758,
+        "sum_eV": 0.48923,
+        "n_bonds": 66
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_TaN_anchor_mp-1497"
+}
