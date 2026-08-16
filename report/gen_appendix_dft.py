@@ -19,6 +19,12 @@ HERE = Path(__file__).parent
 STRUCTURES_ROOT = HERE.parent / "mp_dataset" / "structures"
 CSV_PATH = HERE.parent / "analysis" / "percolation_vs_hull.csv"
 
+_SUBSCRIPT_RE = re.compile(r"(?<=[A-Za-z\)])(\d+)")
+
+
+def _subscript(formula: str) -> str:
+    return _SUBSCRIPT_RE.sub(r"$_{\1}$", formula)
+
 FAMILY_ORDER = ["exp_stable", "exp_metastable", "theo_metastable"]
 FAMILY_LABEL = {
     "fr": {
@@ -169,7 +175,7 @@ def build_kpoints_table(lang: str) -> str:
             mesh_type, grid = parse_kpoints(compound_dir / "KPOINTS")
             nbands = incar.get("NBANDS", "?")
             grid_str = f"{grid} ({mesh_type[0]})"  # (G)amma or (M)onkhorst
-            lines.append(f"{row['formula']} & {row['mp_id']} & {grid_str} & {nbands} \\\\")
+            lines.append(f"{_subscript(row['formula'])} & {row['mp_id']} & {grid_str} & {nbands} \\\\")
         lines.append(r"\midrule")
     lines.append(r"\end{longtable}")
     return "\n".join(lines)

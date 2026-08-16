@@ -260,26 +260,36 @@ inconnue (référence COD, sans $E_\text{hull}$) & 2 & --- \\
 \textbf{Type de liaison.} Deux classements indépendants (\S2.2) : la
 fonction \texttt{classify()} (composition élémentaire + \texttt{is\_metal})
 et un classement fondé directement sur les données ICOHP/ICOBI de chaque
-composé (\texttt{is\_metal} pour le caractère métallique, puis un seuil
-sur l'ICOBI moyen par liaison --- calibré au point médian des médianes
-ICOBI des composés que \texttt{classify()} labellise déjà ionique/covalent,
-soit 0,0370 --- pour distinguer ionique de covalent parmi les composés
-non métalliques).
+composé (\texttt{is\_metal} pour le caractère métallique, sinon l'ICOBI
+de la paire d'espèces \textbf{dominante au premier voisinage} --- et non
+une moyenne sur tous les voisins que LOBSTER rapporte dans le rayon de
+coupure élargi utilisé pour le graphe de percolation, qui dilue
+fortement le signal des solides covalents denses comme le diamant ---
+comparée à un seuil calibré au point médian des médianes ICOBI des
+composés que \texttt{classify()} labellise déjà ionique/covalent, soit
+0,5052, pour distinguer ionique de covalent parmi les composés non
+métalliques). Une quatrième catégorie, \textbf{mixte} (type Zintl),
+identifie les composés où une paire \emph{homoatomique} au-dessus du
+seuil covalent (p.~ex. N--N dans un azoture, P--P dans un
+polyphosphure, S--S dans un polysulfure) coexiste avec une paire
+\emph{hétéroatomique} nettement plus faible reliant un cation distinct
+--- signature structurale de la chimie de Zintl-Klemm, où un seul label
+ionique/covalent serait trompeur.
 
 \begin{table}[htbp]
 \centering
-\caption{Type de liaison : \texttt{classify()} contre le classement ICOHP/ICOBI (concordance sur le sous-ensemble labellisé par \texttt{classify()} : 159/181 = 87,8\%).}
+\caption{Type de liaison : \texttt{classify()} contre le classement ICOHP/ICOBI (concordance sur le sous-ensemble labellisé par \texttt{classify()} : 161/181 = 89,0\%).}
 \label{tab:bondtype}
-\begin{tabular}{@{}lrrrr@{}}
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-\texttt{classify()} $\backslash$ ICOHP/ICOBI & métallique & ionique & covalent & non classifié \\
+\texttt{classify()} $\backslash$ ICOHP/ICOBI & métallique & ionique & covalent & mixte & non classifié \\
 \midrule
-métallique     & 88  & 0  & 0  & 0 \\
-ionique        & 0   & 48 & 5  & 0 \\
-covalent       & 0   & 17 & 23 & 0 \\
-non classifié  & 138 & 33 & 39 & 1 \\
+métallique     & 88  & 0  & 0  & 0 & 0 \\
+ionique        & 0   & 45 & 5  & 3 & 0 \\
+covalent       & 0   & 10 & 28 & 2 & 0 \\
+non classifié  & 138 & 31 & 19 & 23 & 0 \\
 \midrule
-\textbf{Total} & \textbf{226} & \textbf{98} & \textbf{67} & \textbf{1} \\
+\textbf{Total} & \textbf{226} & \textbf{86} & \textbf{52} & \textbf{28} & \textbf{0} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -289,12 +299,16 @@ classifiés\fg{} (essentiellement les paires alcalin/alcalino-terreux
 $\times$ \{N, P, S\}, hors de \texttt{IONIC\_ANIONS}, et les métaux
 liés à un élément anion-like que \texttt{classify()} exclut
 délibérément de sa catégorie \og{}métallique\fg{}), le classement
-ICOHP/ICOBI en résout \textbf{72} en ionique (33) ou covalent (39) ;
-les 139 restants sont soit métalliques (138, déjà couverts par
-\texttt{is\_metal}), soit sans donnée ICOBI (1). Sur le sous-ensemble où
-les deux méthodes se prononcent, l'accord est fort (87,8\%) mais pas
-total : 22 désaccords ionique/covalent, à examiner cas par cas avant
-d'utiliser l'un ou l'autre classement comme variable de stratification.
+ICOHP/ICOBI en résout \textbf{50} en ionique (31) ou covalent (19), et
+identifie \textbf{23} comme mixtes (type Zintl) ; les 138 restants sont
+métalliques, déjà couverts par \texttt{is\_metal}. Sur le sous-ensemble
+où les deux méthodes se prononcent (métallique/ionique/covalent),
+l'accord est fort (89,0\%) mais pas total : 15 désaccords ionique/covalent
+et 5 composés que \texttt{classify()} range en ionique ou covalent mais
+que le classement ICOBI identifie comme mixtes (leur liaison
+homoatomique dominante coexiste avec un lien hétéroatomique
+nettement plus faible) --- à examiner cas par cas avant d'utiliser l'un
+ou l'autre classement comme variable de stratification.
 
 \section{Résultats}
 \label{sec:results}
@@ -748,10 +762,16 @@ Liste complète des 392 composés et éléments disposant d'une donnée ICOBI
 exploitable (sur 394 au total ; 2 composés d'origine COD sans
 \texttt{is\_metal}/ICOBI, \S\ref{sec:dataset}), organisée par section
 selon le classement ICOHP/ICOBI indépendant du \S\ref{sec:dataset}
-(\texttt{is\_metal} pour le caractère métallique, puis un seuil sur
-l'ICOBI moyen par liaison, 0,0370, pour distinguer ionique de covalent)
---- pas de colonne \og{}type de liaison\fg{}, chaque section indique sa
-propre plage d'ICOBI observée à la place. ICOBI et ICOHP sont des
+(\texttt{is\_metal} pour le caractère métallique ; sinon l'ICOBI de la
+paire d'espèces \textbf{dominante au premier voisinage} (pas une
+moyenne sur tous les voisins LOBSTER dans le rayon de coupure élargi
+--- voir \S2.4) comparée à un seuil de 0,5052 pour distinguer ionique
+de covalent ; une catégorie \og{}mixte\fg{} (type Zintl) regroupe les
+composés où une paire homoatomique fortement covalente coexiste avec
+une paire hétéroatomique nettement plus faible, p.~ex. l'ion azoture
+N$_3^-$ lié ioniquement à son cation) --- pas de colonne \og{}type de
+liaison\fg{}, chaque section indique sa propre plage d'ICOBI observée
+à la place. ICOBI et ICOHP sont des
 moyennes par liaison (\S2.4) ; les populations antiliantes ICOHP/ICOBI
 sont les valeurs normalisées à $\Delta E=1{,}0$~eV
 (\S\ref{sec:antibonding}, \S\ref{sec:appendix-icobi-antibonding}).
@@ -775,6 +795,12 @@ Section~\ref{sec:appendix-percolation}.
 
 {\small
 \input{appendix_master_list_covalent_fr.tex}
+}
+
+\subsection{Mixtes (type Zintl)}
+
+{\small
+\input{appendix_master_list_mixed_fr.tex}
 }
 
 \subsection{Non classifiés}

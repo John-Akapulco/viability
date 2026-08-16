@@ -251,26 +251,35 @@ unknown (COD reference, no $E_\text{hull}$) & 2 & --- \\
 \textbf{Bond type.} Two independent classifications (\S2.2): the
 \texttt{classify()} function (elemental composition + \texttt{is\_metal})
 and a classification built directly from each compound's ICOHP/ICOBI
-data (\texttt{is\_metal} for metallic character, then a threshold on
-mean ICOBI per bond --- calibrated at the midpoint of the median ICOBI
-of compounds \texttt{classify()} already labels ionic/covalent, i.e.
-0.0370 --- to separate ionic from covalent among non-metallic
-compounds).
+data (\texttt{is\_metal} for metallic character; otherwise the ICOBI of
+the \textbf{dominant first-coordination-shell} species pair --- not a
+mean over every neighbor LOBSTER reports within the wider cutoff used
+for the percolation graph, which strongly dilutes the signal for dense
+covalent solids such as diamond --- compared against a threshold
+calibrated at the midpoint of the median ICOBI of compounds
+\texttt{classify()} already labels ionic/covalent, i.e. 0.5052, to
+separate ionic from covalent among non-metallic compounds). A fourth
+label, \textbf{mixed} (Zintl-type), identifies compounds where a
+\emph{homoatomic} pair above the covalent threshold (e.g. N--N in an
+azide, P--P in a polyphosphide, S--S in a polysulfide) coexists with a
+markedly weaker \emph{heteroatomic} pair linking a distinct cation ---
+the structural signature of Zintl--Klemm chemistry, where a single
+ionic/covalent label would be misleading.
 
 \begin{table}[htbp]
 \centering
-\caption{Bond type: \texttt{classify()} vs. the ICOHP/ICOBI classification (concordance on the subset \texttt{classify()} labels: 159/181 = 87.8\%).}
+\caption{Bond type: \texttt{classify()} vs. the ICOHP/ICOBI classification (concordance on the subset \texttt{classify()} labels: 161/181 = 89.0\%).}
 \label{tab:bondtype}
-\begin{tabular}{@{}lrrrr@{}}
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-\texttt{classify()} $\backslash$ ICOHP/ICOBI & metallic & ionic & covalent & unclassified \\
+\texttt{classify()} $\backslash$ ICOHP/ICOBI & metallic & ionic & covalent & mixed & unclassified \\
 \midrule
-metallic       & 88  & 0  & 0  & 0 \\
-ionic          & 0   & 48 & 5  & 0 \\
-covalent       & 0   & 17 & 23 & 0 \\
-unclassified   & 138 & 33 & 39 & 1 \\
+metallic       & 88  & 0  & 0  & 0 & 0 \\
+ionic          & 0   & 45 & 5  & 3 & 0 \\
+covalent       & 0   & 10 & 28 & 2 & 0 \\
+unclassified   & 138 & 31 & 19 & 23 & 0 \\
 \midrule
-\textbf{Total} & \textbf{226} & \textbf{98} & \textbf{67} & \textbf{1} \\
+\textbf{Total} & \textbf{226} & \textbf{86} & \textbf{52} & \textbf{28} & \textbf{0} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -279,12 +288,16 @@ Of the 211 compounds \texttt{classify()} leaves "unclassified"
 (essentially alkali/alkaline-earth $\times$ \{N, P, S\} pairs outside
 \texttt{IONIC\_ANIONS}, and metals bonded to an anion-like element that
 \texttt{classify()} deliberately excludes from its "metallic" bucket),
-the ICOHP/ICOBI classification resolves \textbf{72} into ionic (33) or
-covalent (39); the remaining 139 are either metallic (138, already
-covered by \texttt{is\_metal}) or lack ICOBI data (1). Where both
-methods render a verdict, agreement is strong (87.8\%) but not total:
-22 ionic/covalent disagreements, worth checking case by case before
-using either classification as a stratification variable.
+the ICOHP/ICOBI classification resolves \textbf{50} into ionic (31) or
+covalent (19), and identifies \textbf{23} as mixed (Zintl-type); the
+remaining 138 are metallic, already covered by \texttt{is\_metal}.
+Where both methods render a verdict (metallic/ionic/covalent), agreement
+is strong (89.0\%) but not total: 15 ionic/covalent disagreements, and
+5 compounds \texttt{classify()} labels ionic or covalent but that the
+ICOBI classification identifies as mixed (their dominant homoatomic
+bond coexists with a markedly weaker heteroatomic link) --- worth
+checking case by case before using either classification as a
+stratification variable.
 
 \section{Results}
 \label{sec:results}
@@ -719,9 +732,15 @@ Complete list of the 392 compounds and elements with usable ICOBI data
 (of 394 total; 2 COD-sourced compounds lack \texttt{is\_metal}/ICOBI,
 \S\ref{sec:dataset}), organized by section according to the independent
 ICOHP/ICOBI classification of \S\ref{sec:dataset} (\texttt{is\_metal}
-for metallic character, then a threshold on mean ICOBI per bond, 0.0370,
-to separate ionic from covalent) --- no ``bond type'' column; each
-section instead states its own observed ICOBI range. ICOBI and ICOHP
+for metallic character; otherwise the ICOBI of the \textbf{dominant
+first-coordination-shell} species pair --- not a mean over every
+neighbor LOBSTER reports within the wider percolation-graph cutoff ---
+compared against a threshold of 0.5052 to separate ionic from covalent;
+a \textbf{mixed} (Zintl-type) category groups compounds where a
+strongly covalent homoatomic pair coexists with a markedly weaker
+heteroatomic pair, e.g. the azide ion N$_3^-$ ionically bound to its
+cation) --- no ``bond type'' column; each section instead states its
+own observed ICOBI range. ICOBI and ICOHP
 are per-bond means (\S2.4); the ICOHP/ICOBI antibonding populations are
 the normalized values at $\Delta E=1.0$~eV (\S\ref{sec:antibonding},
 \S\ref{sec:appendix-icobi-antibonding}). No percolation-weight column
@@ -744,6 +763,12 @@ duplicated table of Section~\ref{sec:appendix-percolation}.
 
 {\small
 \input{appendix_master_list_covalent_en.tex}
+}
+
+\subsection{Mixed (Zintl-type)}
+
+{\small
+\input{appendix_master_list_mixed_en.tex}
 }
 
 \subsection{Unclassified}

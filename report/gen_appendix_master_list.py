@@ -17,6 +17,7 @@ for category in (metallic, ionic, covalent, unclassified).
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -27,12 +28,13 @@ REPO_ROOT = HERE.parent
 
 BONDTYPE_CSV = REPO_ROOT / "analysis" / "icohp_icobi_bondtype.csv"
 ICOBI_ANTIBOND_CSV = REPO_ROOT / "analysis" / "icobi_antibonding_all.csv"
+THRESHOLD_JSON = REPO_ROOT / "analysis" / "icohp_icobi_bondtype_threshold.json"
 
 _SUBSCRIPT_RE = re.compile(r"(?<=[A-Za-z\)])(\d+)")
 _EPS_HULL = 1e-6
 
-CATEGORIES = ["metallic", "ionic", "covalent", "not_classified"]
-CATEGORY_KEY = {"metallic": "metallic", "ionic": "ionic", "covalent": "covalent", "not_classified": "unclassified"}
+CATEGORIES = ["metallic", "ionic", "covalent", "mixed", "not_classified"]
+CATEGORY_KEY = {"metallic": "metallic", "ionic": "ionic", "covalent": "covalent", "mixed": "mixed", "not_classified": "unclassified"}
 
 
 def _subscript(text: str) -> str:
@@ -59,21 +61,37 @@ TEXT = {
     "fr": {
         "header": ["Formule", "mp-id", "Groupe d'espace", "ICOBI", "ICOHP (eV)", "ICOHP antiliant", "ICOBI antiliant"],
         "caption": {
-            "metallic": "Composés et éléments métalliques (\\texttt{is\\_metal=True}, ICOBI observé de __LO__ à __HI__) --- formule, mp-id, groupe d'espace, ICOBI moyen/liaison, ICOHP moyen/liaison, populations antiliantes ICOHP et ICOBI normalisées ($\\Delta E=1{,}0$~eV).",
-            "ionic": "Composés ioniques (non métalliques, ICOBI $<0{,}0370$, plage observée __LO__ à __HI__) --- mêmes colonnes.",
-            "covalent": "Composés covalents (non métalliques, ICOBI $\\geq 0{,}0370$, plage observée __LO__ à __HI__) --- mêmes colonnes.",
+            "metallic": "Composés et éléments métalliques (\\texttt{is\\_metal=True}, ICOBI observé de __LO__ à __HI__) --- formule, mp-id, groupe d'espace, ICOBI de la liaison dominante (premier voisinage), ICOHP de la liaison dominante, populations antiliantes ICOHP et ICOBI normalisées ($\\Delta E=1{,}0$~eV).",
+            "ionic": "Composés ioniques (non métalliques, ICOBI __THRESH__, plage observée __LO__ à __HI__) --- mêmes colonnes.",
+            "covalent": "Composés covalents (non métalliques, ICOBI __THRESH2__, plage observée __LO__ à __HI__) --- mêmes colonnes.",
+            "mixed": "Composés à liaison mixte, type Zintl (une paire homoatomique fortement covalente coexiste avec une paire hétéroatomique nettement plus faible, p.~ex. l'azoture N$_3^-$ lié ioniquement au cation, plage observée __LO__ à __HI__) --- mêmes colonnes.",
             "not_classified": "Composés non classifiés (données ICOBI indisponibles) --- mêmes colonnes, ICOBI/populations antiliantes en \\og{}--\\fg{} le cas échéant.",
         },
+        "legend": (
+            "$^*$ noir = composé expérimental stable (phase thermodynamique) ; "
+            "\\textcolor{red}{$^*$} rouge = composé expérimental métastable ; "
+            "non marqué = théorique. ICOBI/ICOHP : valeur de la paire "
+            "d'espèces dominante au premier voisinage (pas une moyenne sur "
+            "tous les voisins LOBSTER, voir \\S2.4)."
+        ),
         "na": "--",
     },
     "en": {
         "header": ["Formula", "mp-id", "Space group", "ICOBI", "ICOHP (eV)", "ICOHP antibonding", "ICOBI antibonding"],
         "caption": {
-            "metallic": "Metallic compounds and elements (\\texttt{is\\_metal=True}, observed ICOBI __LO__ to __HI__) --- formula, mp-id, space group, mean ICOBI/bond, mean ICOHP/bond, normalized ICOHP and ICOBI antibonding populations ($\\Delta E=1.0$~eV).",
-            "ionic": "Ionic compounds (non-metallic, ICOBI $<0.0370$, observed range __LO__ to __HI__) --- same columns.",
-            "covalent": "Covalent compounds (non-metallic, ICOBI $\\geq 0.0370$, observed range __LO__ to __HI__) --- same columns.",
+            "metallic": "Metallic compounds and elements (\\texttt{is\\_metal=True}, observed ICOBI __LO__ to __HI__) --- formula, mp-id, space group, dominant (first-shell) bond ICOBI, dominant bond ICOHP, normalized ICOHP and ICOBI antibonding populations ($\\Delta E=1.0$~eV).",
+            "ionic": "Ionic compounds (non-metallic, ICOBI __THRESH__, observed range __LO__ to __HI__) --- same columns.",
+            "covalent": "Covalent compounds (non-metallic, ICOBI __THRESH2__, observed range __LO__ to __HI__) --- same columns.",
+            "mixed": "Mixed-bonding (Zintl-type) compounds (a strongly covalent homoatomic pair coexists with a markedly weaker heteroatomic pair, e.g. the azide N$_3^-$ ion ionically bound to its cation; observed range __LO__ to __HI__) --- same columns.",
             "not_classified": "Unclassified compounds (no ICOBI data available) --- same columns, ICOBI/antibonding shown as ``--'' where missing.",
         },
+        "legend": (
+            "Black $^*$ = stable experimental compound (thermodynamic "
+            "phase); red \\textcolor{red}{$^*$} = metastable experimental "
+            "compound; unmarked = theoretical. ICOBI/ICOHP: value of the "
+            "dominant first-shell species pair (not a mean over every "
+            "LOBSTER-reported neighbor, see \\S2.4)."
+        ),
         "na": "--",
     },
 }
@@ -92,7 +110,8 @@ def load_data() -> pd.DataFrame:
     return df
 
 
-def _longtable(caption: str, header: list[str], body: list[str]) -> str:
+def _longtable(caption: str, header: list[str], body: list[str], legend: str) -> str:
+    ncol = len(header)
     lines = [
         "\\begin{longtable}{@{}lllrrrr@{}}",
         f"\\caption{{{caption}}}\\\\",
@@ -106,20 +125,29 @@ def _longtable(caption: str, header: list[str], body: list[str]) -> str:
         "\\endhead",
         "\\bottomrule",
         "\\endfoot",
+        "\\bottomrule",
+        f"\\multicolumn{{{ncol}}}{{@{{}}p{{0.95\\linewidth}}}}{{\\footnotesize {legend}}} \\\\",
+        "\\endlastfoot",
         *body,
         "\\end{longtable}",
     ]
     return "\n".join(lines) + "\n"
 
 
-def write_category(lang: str, df: pd.DataFrame, category: str) -> None:
+def write_category(lang: str, df: pd.DataFrame, category: str, threshold: float) -> None:
     L = TEXT[lang]
     sub = df[df["icobi_label"] == category]
     sub = sub.sort_values("formula")
 
     lo = _fmt(sub["icobi_mean"].min()) if not sub.empty else "--"
     hi = _fmt(sub["icobi_mean"].max()) if not sub.empty else "--"
-    caption = L["caption"][category].replace("__LO__", lo).replace("__HI__", hi)
+    thresh_str = f"{threshold:.4f}".replace(".", "{,}") if lang == "fr" else f"{threshold:.4f}"
+    caption = (
+        L["caption"][category]
+        .replace("__LO__", lo).replace("__HI__", hi)
+        .replace("__THRESH2__", f"$\\geq {thresh_str}$")
+        .replace("__THRESH__", f"$<{thresh_str}$")
+    )
 
     body = []
     for _, r in sub.iterrows():
@@ -131,7 +159,7 @@ def write_category(lang: str, df: pd.DataFrame, category: str) -> None:
             f"& {_fmt(r['antibond_w_normalized'])} & {_fmt(r['icobi_antibond_w_normalized'])} \\\\"
         )
 
-    out = _longtable(caption, L["header"], body)
+    out = _longtable(caption, L["header"], body, L["legend"])
     key = CATEGORY_KEY[category]
     (HERE / f"appendix_master_list_{key}_{lang}.tex").write_text(out)
     print(f"{lang} {key}: {len(sub)} rows, ICOBI [{lo}, {hi}]")
@@ -140,10 +168,11 @@ def write_category(lang: str, df: pd.DataFrame, category: str) -> None:
 def main() -> None:
     df = load_data()
     print(f"{len(df)} total rows in {BONDTYPE_CSV.name}")
+    threshold = json.loads(THRESHOLD_JSON.read_text())["covalent_threshold_icobi_primary_mean"]
     for lang in ("fr", "en"):
         for category in CATEGORIES:
-            write_category(lang, df, category)
-    print("wrote appendix_master_list_{metallic,ionic,covalent,unclassified}_{fr,en}.tex")
+            write_category(lang, df, category, threshold)
+    print("wrote appendix_master_list_{metallic,ionic,covalent,mixed,unclassified}_{fr,en}.tex")
 
 
 if __name__ == "__main__":
