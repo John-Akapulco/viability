@@ -145,14 +145,14 @@ TEXT = {
         "endo_caption": (
             "Réactions de décomposition en éléments (cas 1) classées \\textbf{endobondic} "
             "($\\Delta$ICOHP $\\geq 0$, produits $-$ réactifs) parmi les __N_TOTAL__ composés de "
-            "la campagne \\texttt{extension}. $^*$ noir = composé de départ expérimental "
-            "stable ; \\textcolor{red}{$^*$} rouge = expérimental métastable."
+            "la campagne \\texttt{extension}. $^*$ = composé de départ expérimental "
+            "(non marqué = théorique)."
         ),
         "exo_caption": (
             "Réactions de décomposition en éléments (cas 1) classées \\textbf{exobondic} "
             "($\\Delta$ICOHP $< 0$, produits $-$ réactifs) parmi les __N_TOTAL__ composés de la "
-            "campagne \\texttt{extension}. $^*$ noir = composé de départ expérimental "
-            "stable ; \\textcolor{red}{$^*$} rouge = expérimental métastable."
+            "campagne \\texttt{extension}. $^*$ = composé de départ expérimental "
+            "(non marqué = théorique)."
         ),
         "reactions_header": ["Réaction (balancée)", "mp-id / COD", "$E_{hull}$ (eV/at)", "$\\Delta$ICOHP/at. (eV)"],
         "endo": "endobondic", "exo": "exobondic",
@@ -199,14 +199,14 @@ TEXT = {
         "endo_caption": (
             "Decomposition-into-elements (case 1) reactions labeled \\textbf{endobondic} "
             "($\\Delta$ICOHP $\\geq 0$, products $-$ reactants) among the __N_TOTAL__ compounds "
-            "of the \\texttt{extension} campaign. Black $^*$ = stable experimental "
-            "starting compound; red \\textcolor{red}{$^*$} = metastable experimental."
+            "of the \\texttt{extension} campaign. $^*$ = experimental "
+            "starting compound (unmarked = theoretical)."
         ),
         "exo_caption": (
             "Decomposition-into-elements (case 1) reactions labeled \\textbf{exobondic} "
             "($\\Delta$ICOHP $< 0$, products $-$ reactants) among the __N_TOTAL__ compounds of "
-            "the \\texttt{extension} campaign. Black $^*$ = stable experimental starting "
-            "compound; red \\textcolor{red}{$^*$} = metastable experimental."
+            "the \\texttt{extension} campaign. $^*$ = experimental starting "
+            "compound (unmarked = theoretical)."
         ),
         "reactions_header": ["Reaction (balanced)", "mp-id / COD", "$E_{hull}$ (eV/at)", "$\\Delta$ICOHP/at. (eV)"],
         "endo": "endobondic", "exo": "exobondic",
@@ -321,11 +321,14 @@ def write_polymorphs(lang: str, element_rows: list[dict], compound_rows: list[di
 
 
 def _starred_reaction_string(r: dict) -> str:
+    # Reaction tables (S7/S8, endobondic/exobondic) use a plain black star
+    # for any experimental starting compound -- no red/black stability
+    # distinction here (per user request), unlike every other table in
+    # this report.
     rxn = _subscript(r["reaction_string"]).replace("->", "$\\rightarrow$")
-    star = _star_markup(r["theoretical"], r["eah"])
-    if star:
+    if not r["theoretical"]:
         target_sub = _subscript(r["formula"])
-        rxn = re.sub(re.escape(target_sub), target_sub + star, rxn, count=1)
+        rxn = re.sub(re.escape(target_sub), target_sub + "$^*$", rxn, count=1)
     return rxn
 
 
