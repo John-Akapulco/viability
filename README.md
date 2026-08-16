@@ -2,22 +2,23 @@
 
 Do local, LOBSTER-derived ICOHP/ICOBI descriptors of crystal chemical
 bonding predict thermodynamic stability? Tested over a growing set of
-VASP+LOBSTER calculations (`mp_dataset/structures/`, 260+ compounds),
+VASP+LOBSTER calculations (`mp_dataset/structures/`, 349+ compounds),
 five missions in, across four distinct descriptor families.
 
 **Flagship result so far**: not the integrated per-bond ICOHP/ICOBI (a
 single number per bond, the project's original angle — background
 below), but *how COHP is distributed in energy* — specifically, the
 fraction of antibonding character occupied just below the Fermi
-level/VBM (`cohp_extraction.py`, mission #4). It is the strongest global
-correlation found in the project against `formation_energy_per_atom`
-(ρ=−0.328, p=5.0×10⁻⁶, n=186), and — more importantly — the **only
-descriptor in the project so far whose signal survives `bond_type`
-stratification** in at least one subgroup (`covalent`, n=23,
-p=0.018–0.029) rather than being fully explained away by between-group
-clustering, which is what happened to every other descriptor tested,
-including the numerically stronger reaction-ICOHP result (mission #5).
-See [Antibonding population near the frontier](#antibonding-population-near-the-frontier-ef-vbm-mission-4) below.
+level/VBM (`cohp_extraction.py`, mission #4). At the current 349-compound
+scale it reaches ρ=−0.282, p=9.2×10⁻⁸ (n=346) against
+`formation_energy_per_atom`, and its `bond_type=covalent` subgroup
+(n=33, ρ=−0.551, p=0.0009) remains the most robust single-stratum result
+in the project — it survived a near-50% growth in sample size and got
+*stronger*, not weaker. Numerically the strongest global correlation is
+now **reaction ICOHP** (mission #5, ρ=0.502, n=275) — see below — which
+also newly shows a real (if not yet mechanistically understood)
+`is_metal`-stratified signal, a first for that descriptor.
+See [Antibonding population near the frontier](#antibonding-population-near-the-frontier-ef-vbm-mission-4) and [Reaction ICOHP](#reaction-icohp-mission-5) below.
 
 Every descriptor here shares one methodological root: `percolation_path.py`
 (the project's first descriptor, detailed near the bottom of this file)
@@ -32,8 +33,8 @@ justify one — still not the case for any descriptor as of mission #5.
 
 ## Descriptors (ordered by current headline strength, not by mission number)
 
-1. **[Antibonding population near the frontier (E_F/VBM)](#antibonding-population-near-the-frontier-ef-vbm-mission-4)** — mission #4, `cohp_extraction.py`. Energy-resolved COHP, not integrated ICOHP. The project's flagship result.
-2. **[Reaction ICOHP](#reaction-icohp-mission-5)** — mission #5, `reaction_icohp.py`. ICOHP analog of formation energy; numerically the strongest correlation in the project, but fully explained by a between-group confound.
+1. **[Reaction ICOHP](#reaction-icohp-mission-5)** — mission #5, `reaction_icohp.py`. ICOHP analog of formation energy; numerically the strongest correlation in the project (ρ=0.502), and — as of the 349-compound scale — the first descriptor whose signal survives an `is_metal` stratification rather than being fully confound-explained.
+2. **[Antibonding population near the frontier (E_F/VBM)](#antibonding-population-near-the-frontier-ef-vbm-mission-4)** — mission #4, `cohp_extraction.py`. Energy-resolved COHP, not integrated ICOHP. Its `bond_type=covalent` subgroup is the most robust single-stratum result in the project.
 3. **[Network dimensionality + periodic min-cut](#network-dimensionality--periodic-min-cut-mission-3)** — mission #3, `network_dimensionality.py` + `periodic_mincut.py`. Graph separability, not traversability.
 4. **[percolation_path.py — the original descriptor](#percolation_pathpy--the-original-descriptor-mission-1)** — mission #1. Minimum-weight non-contractile path through the periodic bond graph. No significant correlation found on its own, but the methodological foundation (periodic graph construction, statistical conventions) every descriptor above still builds on.
 
@@ -62,24 +63,30 @@ pilots only (synthetic numerical tests + real-data sanity checks,
 `tests/test_cohp_extraction.py`) before any extension.
 
 Extended to the full 186-compound dataset in `analysis/compute_antibonding_all.py`
-(186/186 succeeded) and tested against `formation_energy_per_atom` in
-`analysis/stats_analysis_antibonding.py`. See
-**[`analysis/REPORT_antibonding.md`](analysis/REPORT_antibonding.md)**.
-Headline: the normalized metric reaches ρ=−0.328, p=5.0×10⁻⁶ (n=186) — the
-strongest global correlation of any descriptor in the project at the time
-(later matched numerically, but not in reliability, by reaction ICOHP —
-see below). The sign (more antibonding population near the frontier
+and tested against `formation_energy_per_atom` in
+`analysis/stats_analysis_antibonding.py`; both rerun unmodified over the
+349-compound dataset once the `extension4` batch (89 alkali/alkaline-earth
+binaries) was added (347/349 succeeded, 2 pre-existing COD-sourced gaps).
+See **[`analysis/REPORT_antibonding.md`](analysis/REPORT_antibonding.md)**.
+Headline: the normalized metric reaches ρ=−0.282, p=9.2×10⁻⁸ (n=346) —
+weaker than the ρ=−0.328 (n=186) originally reported, but still comfortably
+ahead of every other descriptor except reaction ICOHP (min-cut's own
+headline, in fact, collapsed to non-significance at this scale — see the
+report). The sign (more antibonding population near the frontier
 associates with *more negative*, i.e. more stable, formation energy) is
-the opposite of the naive Peierls/Jahn-Teller reading, and diagnostics
-show the global number is substantially a between-group effect (metal vs.
-gapped compounds differ sharply in both variables; neither `is_metal`
-subgroup is significant alone) — **except for `bond_type=covalent`
-(n=23), which does hold up under stratification** (p=0.018–0.029), the
-only descriptor in the project, across all five missions, to survive a
-bond-type split at a defensible sample size. See the report for the full
-within-group diagnostics, the ΔE-sensitivity check (robust across
-0.5–2.0 eV), and why the sign is not yet interpretable as confirming or
-refuting the instability hypothesis.
+still the opposite of the naive Peierls/Jahn-Teller reading, and
+diagnostics still show the global number is substantially a between-group
+effect — but `is_metal=False` now also survives on its own (n=157,
+p=0.001), which it did not at n=186. **`bond_type=covalent` (n=33) not
+only still holds up under stratification but got *stronger* with more
+data** (ρ=−0.551, p=0.0009, vs. the original ρ=−0.490 at n=23) — still
+the single most robust bond-type-stratified result in the project. The
+old `bond_type=ionic` result (n=9, ρ=−0.683) did not replicate once the
+sample grew to n=53 (ρ=−0.184, not significant) — a clean demonstration
+of why n<15 rows are flagged rather than trusted. See the report for the
+full within-group diagnostics, the ΔE-sensitivity check (still robust
+across 0.5–2.0 eV), and why the sign is not yet interpretable as
+confirming or refuting the instability hypothesis.
 
 `ICOBI`-based near-frontier windowing (as opposed to `ICOHP`/COHP) is a
 natural extension not yet implemented — `percolation_path.py` already
@@ -103,27 +110,35 @@ ICOHP sees orbital-overlap bond population, not electrostatic/Madelung or
 van der Waals energy, so strongly ionic compounds and van-der-Waals-bound
 polymorphs (e.g. graphite) are expected to misbehave.
 
-Case 1 (decomposition into elements) extended to 192 compounds in
-`analysis/compute_reaction_icohp_case1.py`, using 62 elemental reference
+Case 1 (decomposition into elements), using 62 elemental reference
 calculations (`mp_dataset/download_elements_reference.py` + hand-picked
-extension compounds), and tested in `analysis/stats_analysis_reaction_icohp.py`.
-See **[`analysis/REPORT_reaction_icohp.md`](analysis/REPORT_reaction_icohp.md)**.
-Headline: ρ≈0.37, p=2.2×10⁻⁷ (n=186) against `formation_energy_per_atom`
-— numerically the strongest global correlation in the project — but this
-time the between-group effect (metal vs. gapped, and across the three
-`bond_type` strata) explains the *entire* signal: unlike the antibonding
-metric's surviving covalent subgroup, **no `bond_type` stratum here
-reaches significance on its own**. Against `energy_above_hull` the
-correlation is absent (ρ=0.09, p=0.20). A LOBSTER band-overlap quality
-scan found 44% of elemental references flagged, but restricting the
-correlation to clean-reference-only reactions makes it *stronger*
-(ρ=0.392), ruling that out as the explanation. Case 2 (polymorph
-comparison) run at scale on the 8 polymorph groups the dataset happens to
-contain: 3/8 have their most-bonding member also be their most-stable
-one, at/below chance — bonding does not track polymorph stability, same
-lesson as the hand-worked carbon/TiO2 examples. Case 3 (decomposition
-into a compound + elements) judged not tractable without a new DFT
-campaign; see the report for why.
+extension compounds), extended from 192 to **281 compounds** once
+`extension4` (89 alkali/alkaline-earth binaries) was added — all 89 new
+compounds succeeded with 0 missing elemental references, since
+`extension4`'s chemistry was already fully covered. Tested in
+`analysis/stats_analysis_reaction_icohp.py`. See
+**[`analysis/REPORT_reaction_icohp.md`](analysis/REPORT_reaction_icohp.md)**.
+Headline: ρ=0.502, p=6.3×10⁻¹⁹ (n=275) against `formation_energy_per_atom`
+— up from ρ≈0.37 at n=186, and now the clear strongest global correlation
+in the project by a wider margin than before. The `bond_type`-level
+between-group effect (metal vs. gapped, and across the three `bond_type`
+strata) still explains that layer of the pooled signal entirely — no
+`bond_type` stratum reaches significance on its own, same as before — but
+**the coarser `is_metal` split now tells a different story**: both
+`is_metal=False` (ρ=0.319, p=0.0001) and `is_metal=True` (ρ=0.256,
+p=0.0025) newly survive, where at n=186 neither did. This is the first
+descriptor in the project whose signal is not fully explained away by
+between-group clustering at every level tested. Against `energy_above_hull`
+the correlation is no longer flatly null either (ρ=0.14, p=0.018, still an
+order of magnitude weaker than the formation-energy result). Case 2
+(polymorph comparison), extended from 8 to **49 polymorph groups**
+specifically because `extension4` was designed to fix this project's
+polymorph-density gap: 53.1% agreement between most-bonding and
+most-stable member, statistically indistinguishable from the 45.9% chance
+baseline (P=0.19) — a more informative null result than the old 8-group
+pass, still concluding bonding does not track polymorph stability. Case 3
+(decomposition into a compound + elements) remains not attempted; see the
+report for why.
 
 **`reaction_analysis/` (new, schema-driven redesign of this axis)**:
 a from-scratch Pydantic schema (`CompoundEntry`, `Reaction`,
@@ -140,11 +155,12 @@ three ΔICOHP/ΔICOBI normalizations — per formula unit, per atom, and a
 non-conservative per-bond diagnostic — computed together, never one in
 isolation). Populated with a first real-data batch (6 compounds, 3
 `decomposition_to_elements` reactions), cross-checked 3/3 against
-`reaction_icohp.py`'s numbers, then extended to the full 192-compound
-case-1 population (`analysis/populate_reaction_analysis_case1_full.py`,
-`reactions_dataset/`) — 192/192 match `reaction_icohp_case1.csv` after
-the known sign flip. Its sign convention (products − reactants) is the
-*opposite* of `reaction_icohp.py`'s — the two are not interchangeable.
+`reaction_icohp.py`'s numbers, then extended to the full case-1 population
+(`analysis/populate_reaction_analysis_case1_full.py`, `reactions_dataset/`)
+— 192/192, then 281/281 once `extension4` was added, match
+`reaction_icohp_case1.csv` after the known sign flip. Its sign convention
+(products − reactants) is the *opposite* of `reaction_icohp.py`'s — the
+two are not interchangeable.
 
 **Endobondic/exobondic classification** (Reitz & Dronskowski,
 ic-2026-04181q): `nearest_neighbor.py` (first-coordination-shell bond

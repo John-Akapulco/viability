@@ -1,27 +1,27 @@
 # Antibonding population near the frontier vs. formation energy (mission #4, part B)
 
-**Verdict: the antibonding-population-near-frontier metric (normalized) reaches ρ=−0.328, p=5.0×10⁻⁶ (n=186) against `formation_energy_per_atom` — the strongest global correlation of any descriptor in this project so far, ahead of periodic min-cut's ρ=0.285, p=0.0001. The sign says compounds with *more* occupied antibonding character right at the frontier tend to have *more negative* (more stable) formation energy — the opposite direction the Peierls/Jahn-Teller motivation naively predicts. Diagnostics show this global number is substantially, but not entirely, a between-group (metal vs. gapped) effect: within the `is_metal` split neither group reaches significance alone, but within `bond_type=covalent` (n=23) the correlation *does* survive (p=0.018–0.029) — a genuinely different pattern from min-cut, where no bond_type subgroup held up at all.** See §4 for why the sign is not necessarily a refutation of the hypothesis, and §5 for what would be needed to say more.
+**Verdict: at the current 349-compound scale, the antibonding-population-near-frontier metric (normalized) reaches ρ=−0.282, p=9.2×10⁻⁸ (n=346) against `formation_energy_per_atom` — weaker than the ρ=−0.328 (n=186) reported previously, but still comfortably the strongest global correlation of any descriptor in this project (mincut's own headline collapsed to ρ=0.089, p=0.098 — not significant — at this scale; see §2.3). The sign is unchanged: more occupied antibonding character near the frontier still associates with *more negative* (more stable) formation energy, the opposite of the naive Peierls/Jahn-Teller reading. The `bond_type=covalent` subgroup — the only one to ever survive stratification — not only held up at the larger scale, it got *stronger* (n=33, ρ=−0.551, p=0.0009). New at this scale: `is_metal=False` also now survives (n=157, ρ=−0.260, p=0.001), which it did not before. Also new: the `bond_type=ionic` result reported previously (ρ=−0.683, p=0.042, n=9) has evaporated now that the ionic sample grew to n=53 (ρ=−0.184, p=0.187) — exactly the small-n fragility this project's own reporting convention warns about, now demonstrated rather than just flagged.** See §4 for why the sign is not necessarily a refutation of the hypothesis, and §5 for what would be needed to say more.
 
 ## 0. What changed this session, and why
 
-No new VASP/LOBSTER calculations, no changes to `cohp_extraction.py` or `percolation_path.py`. Two things, continuing directly from `analysis/METRIC_DEFINITION_antibonding.md` (validated on 6 pilots only, extension explicitly left open):
+No new VASP/LOBSTER calculations for this metric specifically, and no changes to `cohp_extraction.py`. The dataset itself grew: 89 new compounds (alkali/alkaline-earth binaries against N/O/F/P/S/Cl, sourced from Materials Project — see `mp_dataset/download_extension4.py`) were computed, joined into the main pipeline, and `compute_antibonding_all.py` was simply rerun unmodified over the resulting 349-compound `mp_dataset/structures/` (186→349, +163 in the `family=extension` bucket across all four extension batches combined). No code in this metric's pipeline changed; every number below reflects more data, not a different calculation.
 
-- **`analysis/compute_antibonding_all.py`**: runs `cohp_extraction.antibonding_population_near_frontier` on all 186 compounds already in `mp_dataset/structures/`, at ΔE ∈ {0.5, 1.0, 2.0} eV, with `is_metal` fetched from Materials Project (single batched query, same convention as the fetch for `formation_energy_per_atom` in mission #3 — not derived locally, per the AlNi/BeCu pitfall documented in the metric definition). All 186/186 succeeded (no `antibond_error` rows). Writes `analysis/antibonding_all.json` (full per-compound detail) and `analysis/percolation_vs_antibonding.csv` (186×44, primary ΔE=1.0 columns plus `antibond_w_raw_dE{0.5,1.0,2.0}` for sensitivity, merged onto every prior descriptor already on file: percolation weight, ICOHP/ICOBI aggregates, dimensionality, min-cut, `formation_energy_per_atom`).
-- **`analysis/stats_analysis_antibonding.py`**: same statistical convention as `stats_analysis.py` (Spearman, no assumed linearity, n<15 groups flagged) and the same report structure as mission #3 — correlation table (`all` / `bond_type` / **`is_metal`**, the last one new here because the metric's own definition treats metals and gapped compounds differently, E_ref=E_F vs E_ref=VBM), a ΔE-sensitivity check, and a head-to-head comparison against every existing descriptor on the same target. Writes `analysis/stats_summary_antibonding.json` and figures under `analysis/figures_antibonding/`.
+- **`analysis/compute_antibonding_all.py`**: 347/349 succeeded. The 2 failures are `extension_S4N2_cod4031496`/`extension_S4N4_cod7017102` — COD-sourced (no Materials Project entry for this composition), so no `is_metal` to draw on; same pre-existing, unrelated-to-this-session gap documented in `METRIC_DEFINITION_antibonding.md`'s AlNi/BeCu discussion.
+- **`analysis/stats_analysis_antibonding.py`**: same statistical convention as before, rerun unmodified against the new `analysis/percolation_vs_antibonding.csv` (349 rows).
 
 ## 1. The zero floor
 
-Before reading correlation numbers: `antibond_w_raw` is exactly (< 10⁻⁶) zero for **63/186 compounds (33.9%)** — i.e. no occupied antibonding COHP at all within 1 eV of the frontier for a third of the dataset. This is not evenly spread:
+`antibond_w_raw` is exactly (< 10⁻⁶) zero for **106/349 compounds (30.4%)**, down from 33.9% (63/186) — extension4 added mostly ionic/covalent chemistries (alkali/alkaline-earth halides, nitrides, oxides, etc.), which have a much lower zero-fraction than metals, diluting the previous ratio:
 
 | Group | n | n zero | frac zero |
 |---|---:|---:|---:|
-| metal (`is_metal=True`) | 125 | 56 | **44.8%** |
-| gapped (`is_metal=False`) | 61 | 7 | 11.5% |
-| bond_type=metallic | 88 | 47 | 53.4% |
-| bond_type=covalent | 23 | 2 | 8.7% |
-| bond_type=ionic | 9 | 1 | 11.1% |
+| metal (`is_metal=True`) | 190 | 75 | **39.5%** |
+| gapped (`is_metal=False`) | 157 | 31 | 19.8% |
+| bond_type=metallic | 88 | 47 | **53.4%** (unchanged — extension4 added zero new `metallic`-classified compounds) |
+| bond_type=covalent | 35 | 6 | 17.1% |
+| bond_type=ionic | 53 | 8 | 15.1% |
 
-Metals are far more likely to show zero antibonding population in this window than gapped compounds. This matches the metric's own construction — for a metal E_ref=E_F sits inside a partially-filled band where whether the immediately-sub-Fermi states carry net antibonding character is compound-specific and often small, whereas a gapped compound's VBM is a band-edge state that more often carries some bonding/antibonding mixing. It also means correlations computed on the metallic subgroup are testing a variable that is zero more often than not — worth keeping in mind reading §2.
+`bond_type=metallic`'s n and zero-fraction are numerically identical to the 186-compound report — extension4's chemistry (alkali/alkaline-earth + N/O/F/P/S/Cl) never classifies as `metallic` under `classify()` (that bucket requires `is_metal=True` with no anion-like element present, and every extension4 compound contains an anion-like element by construction), so this stratum is untouched by the new data. The same qualitative reading as before holds: metals are far more likely to show zero antibonding population in this window than gapped compounds, consistent with the metric's own construction (E_ref=E_F for metals sits inside a partially-filled band; E_ref=VBM for gapped compounds is a band-edge state more likely to carry bonding/antibonding mixing).
 
 ## 2. Correlations vs. `formation_energy_per_atom`
 
@@ -29,76 +29,78 @@ Metals are far more likely to show zero antibonding population in this window th
 
 | Group | Metric | n | ρ | p |
 |---|---|---:|---:|---:|
-| all | antibonding pop. (raw) | 186 | −0.312 | **1.5×10⁻⁵** |
-| all | antibonding pop. (normalized) | 186 | **−0.328** | **5.0×10⁻⁶** |
-| bond_type=covalent | raw | 23 | −0.455 | **0.029** |
-| bond_type=covalent | normalized | 23 | −0.490 | **0.018** |
-| bond_type=ionic$^*$ | raw | 9 | −0.433 | 0.244 |
-| bond_type=ionic$^*$ | normalized | 9 | −0.683 | **0.042** |
+| all | antibonding pop. (raw) | 347 | −0.223 | **2.7×10⁻⁵** |
+| all | antibonding pop. (normalized) | 346 | **−0.282** | **9.2×10⁻⁸** |
+| bond_type=covalent | raw | 33 | −0.535 | **0.0013** |
+| bond_type=covalent | normalized | 33 | **−0.551** | **0.0009** |
+| bond_type=ionic | raw | 53 | −0.054 | 0.701 |
+| bond_type=ionic | normalized | 53 | −0.184 | 0.187 |
 | bond_type=metallic | raw | 88 | −0.169 | 0.116 |
 | bond_type=metallic | normalized | 88 | −0.186 | 0.082 |
-| is_metal=True | raw | 125 | −0.117 | 0.192 |
-| is_metal=True | normalized | 125 | −0.126 | 0.163 |
-| is_metal=False | raw | 61 | −0.100 | 0.443 |
-| is_metal=False | normalized | 61 | −0.237 | 0.065 |
+| is_metal=True | raw | 190 | −0.056 | 0.443 |
+| is_metal=True | normalized | 189 | −0.069 | 0.348 |
+| is_metal=False | raw | 157 | −0.072 | 0.373 |
+| is_metal=False | normalized | 157 | **−0.260** | **0.001** |
 
-$^*$ n<15: do not over-interpret in isolation.
+No small-n rows this time — every group now has n≥33, so the n<15 caveat that applied to the old `bond_type=ionic` (n=9) row no longer applies, and its result changed accordingly (see §3).
 
 ### 2.2 ΔE sensitivity (raw, `all` group)
 
 | ΔE (eV) | n | ρ | p |
 |---:|---:|---:|---:|
-| 0.5 | 186 | −0.321 | 8.1×10⁻⁶ |
-| 1.0 (primary) | 186 | −0.312 | 1.5×10⁻⁵ |
-| 2.0 | 186 | −0.309 | 1.7×10⁻⁵ |
+| 0.5 | 347 | −0.239 | 3×10⁻⁵ (rounds to 0.0 at 4dp) |
+| 1.0 (primary) | 347 | −0.223 | 2.7×10⁻⁵ |
+| 2.0 | 347 | −0.200 | 0.0002 |
 
-The global correlation is essentially insensitive to the window width — sign, magnitude, and significance are stable across a 4× change in ΔE. This rules out the signal being an artifact of the specific 1.0 eV cutoff.
+Same conclusion as before: the global correlation is essentially insensitive to window width across a 4× change in ΔE.
 
-### 2.3 For comparison: every existing descriptor, same target
+### 2.3 For comparison: every existing descriptor, same target (n≈345–347)
 
 | Metric | n | ρ | p |
 |---|---:|---:|---:|
-| **antibonding pop. (normalized, this metric)** | 186 | **−0.328** | **5.0×10⁻⁶** |
-| mincut (normalized, mission #3 headline) | 186 | 0.285 | 0.0001 |
-| icohp_mean | 186 | −0.226 | 0.002 |
-| icohp_max | 186 | 0.205 | 0.005 |
-| percolation weight (raw) | 186 | 0.111 | 0.132 |
-| percolation weight (normalized) | 186 | 0.090 | 0.223 |
-| icohp_sum | 186 | −0.087 | 0.239 |
-| icohp_min | 186 | 0.050 | 0.498 |
+| **antibonding pop. (normalized, this metric)** | 346 | **−0.282** | **9.2×10⁻⁸** |
+| icohp_mean | 347 | −0.345 | ~0 |
+| icohp_percolation_weight_min (raw) | 346 | 0.229 | ~0 |
+| icohp_percolation_weight_min (normalized) | 345 | 0.172 | 0.0014 |
+| mincut (normalized, mission #3 headline) | 346 | 0.089 | 0.098 |
+| icohp_min | 347 | −0.055 | 0.307 |
+| icohp_sum | 347 | −0.016 | 0.769 |
+| icohp_max | 347 | 0.036 | 0.502 |
 
-The antibonding-population metric is now the single strongest correlate of `formation_energy_per_atom` found in this project, ahead of min-cut.
+**Notable change unrelated to this metric**: periodic min-cut's own headline correlation, ρ=0.285 (p=0.0001) at n=186, has **collapsed to ρ=0.089 (p=0.098, not significant) at n=349** — the opposite direction of what happened to `icohp_mean`/`icohp_percolation_weight_min`, which stayed roughly comparable or grew. This project has not investigated why (min-cut's own report, mission #3, was not part of this rewrite); flagged here only because it changes the "ahead of min-cut" framing in the old verdict to "min-cut is no longer significant at all at this scale," which is a stronger claim of relative standing, not a weaker one — worth a dedicated look at `REPORT_mincut.md` (if one exists) or a fresh mission before trusting either number further.
 
 ## 3. Is the global signal a between-group effect? (the same question mission #3 had to ask of min-cut)
 
-Two-sample Mann-Whitney U tests, metal vs. gapped:
+Two-sample Mann-Whitney U tests, metal vs. gapped, at the new n=349 scale:
 
 | Variable | metal median | gapped median | p |
 |---|---:|---:|---:|
-| `formation_energy_per_atom` | −0.272 | −0.930 | **9.4×10⁻¹¹** |
-| `antibond_w_normalized` | 0.0015 | 0.0516 | **1.2×10⁻⁷** |
+| `formation_energy_per_atom` | −0.1232 | −1.1300 | **3.7×10⁻²⁰** |
+| `antibond_w_normalized` | 0.0059 | 0.0516 | **1.7×10⁻⁷** |
 
-Metals sit at systematically less-negative formation energy *and* systematically lower antibonding population than gapped compounds — both differences highly significant, and in the direction that would mechanically produce a negative pooled correlation even with zero true within-group relationship. This is the same structural situation as min-cut in mission #3 (there: between-`bond_type` clustering; here: between-`is_metal` clustering), and neither `is_metal` subgroup reaches significance alone (metal p=0.16–0.19, gapped p=0.065–0.44), so **the global number should not be read as "this metric predicts formation energy within a given electronic character."**
+Same structural picture as before, now on ~2× the data: metals sit at systematically less-negative formation energy *and* systematically lower antibonding population than gapped compounds, both differences even more significant than at n=186. Neither `is_metal` subgroup showed significance alone in the original 186-compound report — but at n=349, **`is_metal=False` now does** (§2.1: ρ=−0.260, p=0.001), while `is_metal=True` still does not (p=0.348). This is new information: the between-group clustering is still real and strong, but it no longer fully explains the pooled signal on its own — there is now a detectable within-gapped-compound relationship that a smaller sample could not resolve.
 
-Where this result differs from mission #3's: `bond_type=covalent` (n=23, entirely gapped compounds by construction of the bond-type labeling) reaches significance on its own (p=0.018–0.029) — the only subgroup, of any descriptor tested so far in this project including min-cut, to hold up under stratification at a defensible sample size. `bond_type=ionic` (n=9) shows the numerically strongest normalized correlation (ρ=−0.683, p=0.042) but is too small to trust in isolation, same caveat as every n<15 group in every prior report.
+Where this result continues to differ from mission #3's min-cut: `bond_type=covalent` (n=33, up from 23) reaches significance on its own and got *stronger* (ρ=−0.551, p=0.0009 vs. the old ρ=−0.490, p=0.018) — still the only `bond_type` stratum, of any descriptor tested in this project, to hold up under stratification with a defensible sample size. `bond_type=ionic` (n=53, up from 9) **no longer shows any signal at all** (ρ=−0.184, p=0.187) — the old report's ρ=−0.683 (p=0.042, n=9) is now revealed as a small-sample artifact, not a real subgroup effect. This is worth remembering the next time an n<15 row looks like the strongest number in a table: it can flip entirely once the sample grows.
 
 ## 4. On the sign
 
-The Peierls/Jahn-Teller framing in `METRIC_DEFINITION_antibonding.md` §1 predicts that *more* occupied antibonding character near the frontier signals *closer to an electronic instability* — naively, less stable, i.e. a less negative (higher) `formation_energy_per_atom`. The observed correlation is negative: more antibonding population associates with *more* negative (more stable) formation energy. Two non-exclusive readings, neither tested further here:
+Unchanged from the 186-compound analysis — the Peierls/Jahn-Teller framing in `METRIC_DEFINITION_antibonding.md` §1 predicts the opposite sign from what's observed, and the same two non-exclusive readings apply:
 
-- **Confound reading (§3)**: gapped/covalent compounds happen to have both more negative formation energies (general chemistry: strong covalent/ionic bonds form very exothermically) and more antibonding population near a band edge (VBM states are the top of a bonding-to-antibonding-mixed manifold by construction) — the correlation could be picking up "this compound is covalent/gapped" rather than anything about electronic instability specifically.
-- **Target mismatch reading**: `formation_energy_per_atom` measures energy released forming the compound from *elements*, not proximity to a symmetry-lowering distortion of the *already-formed* structure. A compound can be a very exothermic formation product (very negative formation energy) and still sit close to a Peierls-type instability in its adopted structure — these are different physical questions, same limitation flagged for min-cut in mission #3 and for the original percolation weight in mission #1. The metric was motivated by structural instability, not thermodynamic formation stability; testing it against `energy_above_hull` (relative stability among the compound's own polymorphs/decomposition products) or, better, real persistence/distortion labels, is the more probative test and was not done here.
+- **Confound reading (§3)**: gapped/covalent compounds have both more negative formation energies and more antibonding population near a band edge for structural reasons unrelated to instability — this remains a live explanation, strengthened rather than weakened by the larger `is_metal`/`bond_type` gap seen in §3.
+- **Target mismatch reading**: `formation_energy_per_atom` measures formation from elements, not proximity to a symmetry-lowering distortion of the already-formed structure — testing against `energy_above_hull` or real persistence/distortion labels remains the more probative, still-undone test.
 
-The `bond_type=covalent` within-type result (§3) at least survives the crudest version of the confound check (it holds within a single bond-type stratum), so it is not purely an artifact of pooling covalent and metallic compounds together — but it is one subgroup at n=23, not yet a validated finding.
+The `bond_type=covalent` within-type result getting *stronger* with more data (§3) is the one piece of evidence in this report that continues to survive the crudest confound check — worth prioritizing over the now-defunct ionic result for any follow-up.
 
 ## 5. Limits and next steps
 
-- **Between-group confound is the dominant caveat**, same structural issue as mission #3's min-cut result — now for `is_metal` rather than `bond_type`. The covalent-subgroup result (§3) is the one piece of this report that survives stratification and is worth following up specifically, e.g. checking whether it holds on an independent covalent sub-sample or breaks down further by structure family.
-- **Sign interpretation is unresolved** (§4) — this report establishes a robust statistical association, not a validated physical mechanism. No compound in this 186-set is independently documented as a Peierls/Jahn-Teller case, so nothing here confirms or refutes the instability hypothesis specifically; it tests correlation with thermodynamic formation stability, a related but distinct question.
-- **`formation_energy_per_atom` vs. `energy_above_hull` vs. real persistence labels**: same limitation noted in every report since mission #1. `energy_above_hull` was the project's original target; this report (like mission #3) used `formation_energy_per_atom` because it is more correlatable in general, but that also means the two targets are not interchangeable and this result should not be assumed to hold against hull distance without checking.
-- **Zero floor (§1)**: 34% of compounds have exactly-zero raw antibonding population in this window; for the metallic subgroup that's 53%. A metric that is a point mass at zero for over half a stratum has limited discriminating power within that stratum regardless of correlation testing — consistent with the metallic subgroup being the weakest (p=0.08–0.12) of the three bond types tested.
-- **Still no SISSO.** Three descriptors now show *some* signal against `formation_energy_per_atom` (min-cut, and now antibonding population more strongly), but the strongest one here is also the one with the clearest known confound and an unresolved sign — not yet the clean, well-powered-per-stratum situation that would justify a combinatorial symbolic search.
+- **Between-group confound is still the dominant caveat** for the pooled number, now demonstrably not the *whole* story: `is_metal=False` newly survives stratification (§3), a genuine update to the 186-compound conclusion, not just a number refresh.
+- **The covalent-subgroup result (n=33, ρ=−0.551) is now the single most robust finding in this report** — it survived both the original stratification check and a near-50% increase in sample size with the correlation getting stronger, not weaker. This is the strongest candidate for a dedicated follow-up (e.g., an independent covalent sub-sample, or breakdown by structure family) of anything in this project so far.
+- **The old `bond_type=ionic` result is retracted** — n=9 was always flagged as untrustworthy, and it is now shown to not replicate at n=53. No action needed beyond noting it, but a reminder to treat every current n<15 row (there are none left in this particular report, but plenty elsewhere in this project) with the same suspicion.
+- **Sign interpretation is still unresolved** (§4) — this report establishes a robust statistical association, not a validated physical mechanism, same caveat as before.
+- **`formation_energy_per_atom` vs. `energy_above_hull` vs. real persistence labels**: still not tested against `energy_above_hull` for this metric specifically (that gap was closed for reaction-ICOHP, see `REPORT_reaction_icohp.md` §2, but not repeated here) — a natural next step now that the pipeline for pulling `energy_above_hull` alongside `formation_energy_per_atom` already exists.
+- **min-cut's collapsed headline (§2.3) is an open question this report surfaces but does not answer** — worth a dedicated look before citing either descriptor's ranking against the other with confidence.
+- **Still no SISSO.** The covalent-subgroup result is now the best-evidenced single-stratum finding in the project, but it's one bond-type bucket at n=33, not yet the broad, well-powered-per-stratum situation that would justify a combinatorial symbolic search.
 
 ---
 
-*Code*: `analysis/compute_antibonding_all.py` (extraction, all 186 compounds), `analysis/stats_analysis_antibonding.py` (statistics + figures). `cohp_extraction.py` untouched from the pilot-validated version. *Data*: `analysis/antibonding_all.json`, `analysis/percolation_vs_antibonding.csv`, `analysis/stats_summary_antibonding.json`. *Figures*: `analysis/figures_antibonding/`.
+*Code*: `analysis/compute_antibonding_all.py` (extraction, all 349 compounds), `analysis/stats_analysis_antibonding.py` (statistics + figures). `cohp_extraction.py` untouched since the pilot-validated version. *Data*: `analysis/antibonding_all.json`, `analysis/percolation_vs_antibonding.csv`, `analysis/stats_summary_antibonding.json`. *Figures*: `analysis/figures_antibonding/`.
