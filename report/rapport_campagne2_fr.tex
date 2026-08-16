@@ -509,6 +509,47 @@ expérimentalement --- le sens attendu, endobondic étant conçu comme une
 signature de barrière cinétique --- mais non significatif à cette
 taille d'échantillon).
 
+\textbf{Attention, piège de lecture explicitement documenté par
+\texttt{classify.py}} : la Table~\ref{tab:fisher} montre 130 composés
+\emph{expérimentaux} (donc réellement existants) étiquetés
+\emph{exobondic}. Ce n'est \textbf{pas} une incohérence --- exobondic
+n'implique \og{}non viable\fg{} qu'après combinaison avec
+\texttt{delta\_energy} (\texttt{classify\_viability()},
+\S\ref{sec:reframing}) : un composé n'est \texttt{UNSTABLE\_NONEXISTENT}
+que si la décomposition en éléments est \emph{à la fois} exobondic
+\emph{et} thermodynamiquement favorable ($\Delta E<0$), ce qui est
+rarissime (décomposer un composé réel en éléments purs n'est presque
+jamais favorable). Vérifié directement sur la même population que la
+Table~\ref{tab:fisher} :
+
+\begin{table}[htbp]
+\centering
+\caption{\texttt{ViabilityLabel} calculé (\texttt{classify\_viability()}) sur la même population que la Table~\ref{tab:fisher} ($n=281$).}
+\label{tab:viability-check}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & expérimental ($n=177$) & théorique ($n=98$) \\
+\midrule
+\texttt{STABLE\_ON\_HULL}        & 170 & 76 \\
+\texttt{UNSTABLE\_NONEXISTENT}   & 7   & 20 \\
+\texttt{METASTABLE\_VIABLE}      & 0   & 2  \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize 6 réactions supplémentaires (COD, sans
+\texttt{formation\_energy\_per\_atom}) exclues, données insuffisantes.}
+\end{table}
+
+\textbf{Des 130 composés expérimentaux exobondic, 7 seulement sont
+prédits \texttt{UNSTABLE\_NONEXISTENT}} --- les 123 autres sont
+\texttt{STABLE\_ON\_HULL}, parfaitement cohérents avec leur existence
+réelle malgré l'étiquette exobondic. Le signe seul
+(endobondic/exobondic, Table~\ref{tab:fisher}) ne devient une prédiction
+de viabilité qu'une fois combiné à la thermodynamique --- lire la Table
+\ref{tab:fisher} isolément comme \og{}exobondic = non viable\fg{} donne
+une image trompeuse.
+
 \begin{table}[htbp]
 \centering
 \caption{$\Delta$ICOHP/atome médian et \% endobondic par classe de stabilité ($n=175$).}

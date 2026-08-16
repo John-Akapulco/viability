@@ -48,21 +48,45 @@ from reaction_analysis.classify import classify_viability  # noqa: E402
 
 IN_CSV = REPO_ROOT / "analysis" / "reaction_analysis_case1_full.csv"
 FORMATION_ENERGIES = REPO_ROOT / "mp_dataset" / "formation_energies.json"
+STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 OUT_CSV = REPO_ROOT / "analysis" / "case1_viability.csv"
+
+# The report's Table 8 (Fisher exact test, Sec. "Etendu a tout compose...")
+# is scoped to the pooled 281-reaction population BEFORE the maxhull batch
+# was folded into that particular analysis (only Sec. 5's dataset tables
+# and the appendix compound list got the maxhull update so far -- see
+# project memory). Excluded here too, so this script's counts line up
+# EXACTLY with what Table 8 currently shows (281, not the full 322
+# reaction_analysis_case1_full.csv now contains with maxhull included).
+EXCLUDED_BATCHES = {"maxhull_binaries_stress_test"}
+
+
+def _excluded_compound_ids() -> set[str]:
+    excluded = set()
+    for d in STRUCTURES_ROOT.iterdir():
+        meta_path = d / "mp_metadata.json"
+        if not meta_path.exists():
+            continue
+        meta = json.loads(meta_path.read_text())
+        if meta.get("batch") in EXCLUDED_BATCHES:
+            excluded.add(d.name)
+    return excluded
 
 
 def main() -> None:
     formation_energies = json.loads(FORMATION_ENERGIES.read_text())
+    excluded_ids = _excluded_compound_ids()
 
     with IN_CSV.open() as f:
-        rows = list(csv.DictReader(f))
+        all_rows = list(csv.DictReader(f))
+    rows = [r for r in all_rows if r["compound_id"] not in excluded_ids]
 
-    ext_rows = [r for r in rows if r["family"] == "extension"]
-    print(f"{len(ext_rows)} extension-family case-1 reactions (of {len(rows)} total)")
+    print(f"{len(rows)} pooled case-1 reactions ({len(all_rows) - len(rows)} maxhull-batch rows excluded "
+          f"to match the report's Table 8 population exactly)")
 
     out_rows = []
     n_by_label: dict[str, int] = {}
-    for r in ext_rows:
+    for r in rows:
         mp_id = r["mp_id"]
         delta_icohp = float(r["delta_per_atom_eV"])
         fe = formation_energies.get(mp_id) if mp_id else None
@@ -103,6 +127,25 @@ def main() -> None:
     print("\nViabilityLabel counts:")
     for label, n in sorted(n_by_label.items(), key=lambda kv: -kv[1]):
         print(f"  {label:28s} {n}")
+
+    print("\nViabilityLabel x theoretical (matches Table 8's experimental/theoretical split):")
+    cross: dict[tuple[str, str], int] = {}
+    for r in out_rows:
+        key = (r["viability_label"], r["theoretical"])
+        cross[key] = cross.get(key, 0) + 1
+    for label in sorted(n_by_label):
+        exp_n = cross.get((label, "False"), 0)
+        theo_n = cross.get((label, "True"), 0)
+        print(f"  {label:28s} experimental={exp_n:4d}  theoretical={theo_n:4d}")
+
+    print("\nBondingLabel x ViabilityLabel (shows how many 'exobondic' are actually STABLE_ON_HULL):")
+    bonding_cross: dict[tuple[str, str], int] = {}
+    for r in out_rows:
+        key = (r["bonding_label"] or "n/a", r["viability_label"])
+        bonding_cross[key] = bonding_cross.get(key, 0) + 1
+    for bl in ("endobondic", "exobondic", "n/a"):
+        row_labels = {lbl: bonding_cross.get((bl, lbl), 0) for lbl in n_by_label}
+        print(f"  {bl:12s} {row_labels}")
 
 
 if __name__ == "__main__":

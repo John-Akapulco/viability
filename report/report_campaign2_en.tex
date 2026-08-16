@@ -493,6 +493,45 @@ $\sim 1.7\times$ more frequent among experimentally realized compounds
 --- the expected direction, endobondic being designed as a
 kinetic-barrier signature --- but not significant at this sample size).
 
+\textbf{Reading trap, explicitly flagged by \texttt{classify.py} itself}:
+Table~\ref{tab:fisher} shows 130 \emph{experimental} (i.e. genuinely
+existing) compounds labeled \emph{exobondic}. This is \textbf{not} a
+contradiction --- exobondic only implies "not viable" once combined with
+\texttt{delta\_energy} (\texttt{classify\_viability()},
+\S\ref{sec:reframing}): a compound is only \texttt{UNSTABLE\_NONEXISTENT}
+if decomposition into elements is \emph{both} exobondic \emph{and}
+thermodynamically favorable ($\Delta E<0$), which is rare (decomposing a
+real compound into pure elements is almost never favorable). Verified
+directly on the same population as Table~\ref{tab:fisher}:
+
+\begin{table}[htbp]
+\centering
+\caption{Computed \texttt{ViabilityLabel} (\texttt{classify\_viability()}) on the same population as Table~\ref{tab:fisher} ($n=281$).}
+\label{tab:viability-check}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & experimental ($n=177$) & theoretical ($n=98$) \\
+\midrule
+\texttt{STABLE\_ON\_HULL}        & 170 & 76 \\
+\texttt{UNSTABLE\_NONEXISTENT}   & 7   & 20 \\
+\texttt{METASTABLE\_VIABLE}      & 0   & 2  \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize 6 additional reactions (COD-sourced, no
+\texttt{formation\_energy\_per\_atom}) excluded, insufficient data.}
+\end{table}
+
+\textbf{Of the 130 experimental exobondic compounds, only 7 are
+predicted \texttt{UNSTABLE\_NONEXISTENT}} --- the other 123 are
+\texttt{STABLE\_ON\_HULL}, perfectly consistent with their real
+existence despite the exobondic label. The sign alone
+(endobondic/exobondic, Table~\ref{tab:fisher}) only becomes a viability
+prediction once combined with thermodynamics --- reading
+Table~\ref{tab:fisher} in isolation as "exobondic = not viable" gives a
+misleading picture.
+
 \begin{table}[htbp]
 \centering
 \caption{Median $\Delta$ICOHP/atom and \% endobondic by stability class ($n=175$).}
