@@ -1,0 +1,20 @@
+{
+  "label": "SiO2",
+  "mp_id": "mp-9258",
+  "formula": "SiO2",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "O-Si",
+  "kind": "exp_anchor",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 4.0091,
+  "energy_above_hull_eV_per_atom": 0.5770440263888901,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "Pa-3",
+  "anchor_formula": null,
+  "anchor_energy_above_hull_eV_per_atom": null,
+  "note": "maxhull_binaries_stress_test batch: exp_anchor for O-Si, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}

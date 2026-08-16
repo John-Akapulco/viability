@@ -1,0 +1,20 @@
+{
+  "label": "KN2",
+  "mp_id": "mp-1180757",
+  "formula": "KN2",
+  "family": "extension",
+  "batch": "maxhull_binaries_stress_test",
+  "chemsys": "K-N",
+  "kind": "theo_polymorph_above",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 1.2293322591111107,
+  "theoretical": true,
+  "nsites": 6,
+  "spacegroup": "Cmcm",
+  "anchor_formula": "KN2",
+  "anchor_energy_above_hull_eV_per_atom": 1.1629511857777777,
+  "note": "maxhull_binaries_stress_test batch: theo_polymorph_above for K-N, see select_maxhull_binaries.py / maxhull_binaries_candidates.json for the exact selection rule."
+}
