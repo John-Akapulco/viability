@@ -650,13 +650,14 @@ explanation is specifically needed, rather than letting the dataset grow
 incidentally from whatever other analyses require --- most current
 compounds are comfortably stable or comfortably unstable, a regime
 where the thermodynamic driving force simply dominates the sign-based
-kinetic signal. Second, a new descriptor: a reaction $\Delta$(ICOHP)
-restricted to a window near the Fermi level, modeled on the antibonding
-population of \S\ref{sec:antibonding} (\S2.4) rather than on the fully
-integrated ICOHP --- since it is precisely the near-$E_F$ window that
-carries the project's most robust stratified subgroup, a "near-$E_F$"
-version of the reaction $\Delta$ICOHP is a natural, not-yet-attempted
-extension.
+kinetic signal. Second, restricting the reaction $\Delta$(ICOHP) to a window near the
+Fermi level rather than the fully integrated ICOHP, modeled on the
+antibonding population of \S\ref{sec:antibonding}: two variants of this
+construction are detailed in
+Appendix~\ref{sec:appendix-icobi-antibonding} (antibonding part only,
+and the full signed ICOHP restricted to the window) --- the first
+survives every stratification tested, a result no other descriptor in
+this report reaches.
 
 \vspace{1cm}
 \noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
@@ -979,6 +980,69 @@ subsection) --- its magnitude will need to reproduce on an independent
 dataset before being treated as a fully established result, but
 surviving full stratification makes it, as it stands, the project's
 most robust result.
+
+\subsection{Reaction $\Delta$(ICOHP) restricted to a window near $E_F$}
+\label{sec:reaction-icohp-windowed}
+
+Extension proposed in the Conclusion (\S\ref{sec:reframing}): rather
+than ICOHP integrated over the whole occupied range
+(\S\ref{sec:reaction-icohp}) or only the antibonding part near $E_F$
+(previous subsections), a third construction --- the \emph{signed} ICOHP
+(bonding \emph{and} antibonding, not clipped) but integrated
+\emph{only} over the one-sided window $(E_F-\Delta E,\ E_F]$,
+$\Delta E=1.0$~eV, summed over \emph{every} bond label (extensive, like
+the full ICOHP sum) rather than just the "average" trace --- then
+combined with the same reaction stoichiometry as the full
+$\Delta$(ICOHP) (\texttt{reaction\_icohp.py}, reactant $-$ predicted
+products convention). Implementation:
+\texttt{cohp\_extraction.icohp\_windowed\_per\_atom()} reads the
+difference between two points on the \emph{cumulative} ICOHP curve
+LOBSTER already computes in \texttt{COHPCAR.lobster}
+(\texttt{ICOHP\_cumulative}$(E_F)$ $-$
+\texttt{ICOHP\_cumulative}$(E_F-\Delta E)$, per label), no new
+trapezoidal integration --- validated: at very large $\Delta E$
+(covering the whole calculation window), this quantity reproduces the
+full ICOHP sum to within $\sim$0.1\%.
+
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, $\Delta$(windowed ICOHP near $E_F$) against \texttt{formation\_energy\_per\_atom} (case 1, $n=316$).}
+\label{tab:reaction-icohp-windowed}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Subgroup & $n$ & $\rho$ \\
+\midrule
+all               & 316 & $+0.3712^{***}$ \\
+\texttt{covalent} & 29  & $+0.3635$ (p=0.053) \\
+\texttt{ionic}    & 51  & $+0.5243^{***}$ \\
+\texttt{metallic} & 86  & $+0.1721$ \\
+\texttt{is\_metal=False} & 145 & $+0.4660^{***}$ \\
+\texttt{is\_metal=True}  & 171 & $+0.1848^{*}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{*}p<0.05$; $^{***}p<0.001$; no star = not
+significant. Against \texttt{energy\_above\_hull}, no significant
+correlation anywhere ($n=320$, $p>0.07$ throughout) --- the same
+behavior as every other ICOHP/ICOBI descriptor in this report.}
+\end{table}
+
+An intermediate result between the other two constructions: unlike the
+full reaction ICOHP (\S\ref{sec:reaction-icohp}), which loses
+\emph{every} \texttt{bond\_type} stratum, this windowed version
+\textbf{survives on the ionic subgroup} ($\rho=0.524$, $p<0.001$) and on
+\texttt{is\_metal} on both sides --- but not on metallic, and only
+marginally on covalent ($p=0.053$). Less robust than $\Delta$(ICOHP
+antibonding) (previous subsection, survives everywhere), more robust
+than the full reaction ICOHP. Cross-correlation with $\Delta$(ICOHP
+antibonding): $\rho=-0.599$ ($p<0.001$, $n=320$) --- strongly
+\emph{anti}correlated despite their closely related construction (same
+window, same $E_F$), a sign that clipping to the antibonding-only part
+(previous subsection) captures qualitatively different information from
+the full signed ICOHP in the same window. Cross-correlation with the
+full reaction ICOHP: $\rho=0.231$ ($p<0.001$) --- related but clearly
+distinct, not simply a restriction of the same quantity.
 
 \section{Percolation}
 \label{sec:appendix-percolation}

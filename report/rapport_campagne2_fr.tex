@@ -677,14 +677,14 @@ plutôt que de laisser le jeu de données s'agrandir au hasard des
 besoins d'autres analyses --- la plupart des composés actuels sont
 confortablement stables ou confortablement instables, un régime où la
 force motrice thermodynamique domine simplement le signal cinétique
-fondé sur le signe. D'autre part, un nouveau descripteur : un
-$\Delta$(ICOHP) de réaction restreint à une fenêtre proche du niveau de
-Fermi, sur le modèle de la population antiliante du
-\S\ref{sec:antibonding} (\S2.4) plutôt que sur l'ICOHP intégré en
-totalité --- puisque c'est justement la fenêtre proche de $E_F$ qui
-porte le sous-groupe stratifié le plus robuste du projet, une version
-\og{}proche de $E_F$\fg{} du $\Delta$ICOHP de réaction est une extension
-naturelle, non encore tentée.
+fondé sur le signe. D'autre part, restreindre le $\Delta$(ICOHP) de
+réaction à une fenêtre proche du niveau de Fermi plutôt que sur l'ICOHP
+intégré en totalité, sur le modèle de la population antiliante du
+\S\ref{sec:antibonding} : deux variantes de cette construction sont
+détaillées dans l'Annexe~\ref{sec:appendix-icobi-antibonding}
+(sous-liaison antiliante seule, et ICOHP signé complet restreint à la
+fenêtre) --- la première survit à l'intégralité des stratifications
+testées, un résultat qu'aucun autre descripteur de ce rapport n'atteint.
 
 \vspace{1cm}
 \noindent\textit{Code source :} \url{https://github.com/John-Akapulco/viability} \\
@@ -1016,6 +1016,70 @@ une construction nouvelle (\S précédent) --- sa magnitude devra être
 reproduite sur un jeu de données indépendant avant d'être prise comme un
 résultat définitivement acquis, mais la survie à une stratification
 complète en fait, en l'état, le résultat le plus solide du projet.
+
+\subsection{$\Delta$(ICOHP) de réaction restreint à une fenêtre proche de $E_F$}
+\label{sec:reaction-icohp-windowed}
+
+Extension proposée en conclusion (\S\ref{sec:reframing}) : plutôt que
+l'ICOHP intégré sur toute la plage occupée (\S\ref{sec:reaction-icohp})
+ou la seule partie antiliante près de $E_F$ (sous-sections précédentes),
+une troisième construction --- l'ICOHP \emph{signé} (liant \emph{et}
+antiliant, non tronqué) mais intégré \emph{uniquement} sur la fenêtre à
+sens unique $(E_F-\Delta E,\ E_F]$, $\Delta E=1{,}0$~eV, sommé sur
+\emph{toutes} les étiquettes de liaison (extensif, comme la somme ICOHP
+complète) plutôt que sur la seule trace \og{}average\fg{} --- puis
+combinée par la même stœchiométrie de réaction que le $\Delta$(ICOHP)
+complet (\texttt{reaction\_icohp.py}, convention réactif $-$ produits
+prédits). Implémentation :
+\texttt{cohp\_extraction.icohp\_windowed\_per\_atom()} lit directement la
+différence entre deux points de la courbe ICOHP \emph{cumulative} déjà
+calculée par LOBSTER dans \texttt{COHPCAR.lobster}
+(\texttt{ICOHP\_cumulative}$(E_F)$ $-$
+\texttt{ICOHP\_cumulative}$(E_F-\Delta E)$, par étiquette), sans nouvelle
+intégration trapézoïdale --- validé : à $\Delta E$ très grand (couvrant
+toute la fenêtre de calcul), cette quantité retrouve la somme ICOHP
+complète à $\sim$0,1\,\% près.
+
+\begin{table}[htbp]
+\centering
+\caption{Corrélations de Spearman, $\Delta$(ICOHP fenêtré près de $E_F$) contre \texttt{formation\_energy\_per\_atom} (cas 1, $n=316$).}
+\label{tab:reaction-icohp-windowed}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Sous-groupe & $n$ & $\rho$ \\
+\midrule
+tous                & 316 & $+0{,}3712^{***}$ \\
+\texttt{covalent}   & 29  & $+0{,}3635$ (p=0,053) \\
+\texttt{ionique}    & 51  & $+0{,}5243^{***}$ \\
+\texttt{métallique} & 86  & $+0{,}1721$ \\
+\texttt{is\_metal=False} & 145 & $+0{,}4660^{***}$ \\
+\texttt{is\_metal=True}  & 171 & $+0{,}1848^{*}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{*}p<0{,}05$ ; $^{***}p<0{,}001$ ; aucune étoile = non
+significatif. Contre \texttt{energy\_above\_hull}, aucune corrélation
+significative nulle part ($n=320$, $p>0{,}07$ partout) --- même
+comportement que tous les autres descripteurs ICOHP/ICOBI de ce rapport.}
+\end{table}
+
+Résultat intermédiaire entre les deux autres constructions : contrairement
+à l'ICOHP de réaction complet (\S\ref{sec:reaction-icohp}), qui perd
+\emph{toute} stratification \texttt{bond\_type}, cette version fenêtrée
+\textbf{survit sur le sous-groupe ionique} ($\rho=0{,}524$, $p<0{,}001$)
+et sur \texttt{is\_metal} des deux côtés --- mais pas sur métallique, et
+seulement à la limite sur covalent ($p=0{,}053$). Moins robuste que
+$\Delta$(ICOHP antiliant) (sous-section précédente, survit partout), plus
+robuste que l'ICOHP de réaction complet. Corrélation croisée avec
+$\Delta$(ICOHP antiliant) : $\rho=-0{,}599$ ($p<0{,}001$, $n=320$) ---
+fortement \emph{anti}corrélées malgré leur construction proche (même
+fenêtre, même $E_F$), signe que la troncature à la seule partie
+antiliante (sous-section précédente) capture une information
+qualitativement différente de l'ICOHP signé complet dans la même
+fenêtre. Corrélation croisée avec l'ICOHP de réaction complet :
+$\rho=0{,}231$ ($p<0{,}001$) --- liée mais nettement distincte, pas une
+simple restriction de la même quantité.
 
 \section{Percolation}
 \label{sec:appendix-percolation}
