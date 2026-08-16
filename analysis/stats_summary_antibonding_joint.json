@@ -231,6 +231,118 @@
   },
   "delta_case1": {
     "n_total": 320,
+    "delta_icohp_antibond_vs_formation_energy_stratified": [
+      {
+        "group": "all",
+        "metric": "delta_icohp_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 316,
+        "rho": -0.6439,
+        "p_value": 0.0,
+        "note": null
+      },
+      {
+        "group": "bond_type=covalent",
+        "metric": "delta_icohp_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 29,
+        "rho": -0.5798,
+        "p_value": 0.001,
+        "note": null
+      },
+      {
+        "group": "bond_type=ionic",
+        "metric": "delta_icohp_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 51,
+        "rho": -0.4205,
+        "p_value": 0.0021,
+        "note": null
+      },
+      {
+        "group": "bond_type=metallic",
+        "metric": "delta_icohp_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 86,
+        "rho": -0.4858,
+        "p_value": 0.0,
+        "note": null
+      },
+      {
+        "group": "is_metal=False",
+        "metric": "delta_icohp_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 145,
+        "rho": -0.621,
+        "p_value": 0.0,
+        "note": null
+      },
+      {
+        "group": "is_metal=True",
+        "metric": "delta_icohp_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 171,
+        "rho": -0.549,
+        "p_value": 0.0,
+        "note": null
+      }
+    ],
+    "delta_icobi_antibond_vs_formation_energy_stratified": [
+      {
+        "group": "all",
+        "metric": "delta_icobi_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 316,
+        "rho": -0.4457,
+        "p_value": 0.0,
+        "note": null
+      },
+      {
+        "group": "bond_type=covalent",
+        "metric": "delta_icobi_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 29,
+        "rho": -0.2044,
+        "p_value": 0.2875,
+        "note": null
+      },
+      {
+        "group": "bond_type=ionic",
+        "metric": "delta_icobi_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 51,
+        "rho": 0.0608,
+        "p_value": 0.6717,
+        "note": null
+      },
+      {
+        "group": "bond_type=metallic",
+        "metric": "delta_icobi_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 86,
+        "rho": -0.4872,
+        "p_value": 0.0,
+        "note": null
+      },
+      {
+        "group": "is_metal=False",
+        "metric": "delta_icobi_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 145,
+        "rho": -0.3248,
+        "p_value": 0.0001,
+        "note": null
+      },
+      {
+        "group": "is_metal=True",
+        "metric": "delta_icobi_antibond",
+        "target": "formation_energy_per_atom",
+        "n": 171,
+        "rho": -0.4653,
+        "p_value": 0.0,
+        "note": null
+      }
+    ],
     "delta_icohp_antibond_vs_formation_energy": {
       "group": "all",
       "metric": "delta_icohp_antibond",

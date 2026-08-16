@@ -1,4 +1,13 @@
-"""Delta(antibonding-near-frontier), for the case-1 (decomposition-to-
+"""NOTE: bond_type/is_metal are sourced via build_bond_type_map()/
+build_is_metal_map() (imported from compute_icobi_antibonding_all.py),
+NOT read directly from mp_metadata.json -- the 186 main-campaign
+compounds' own metadata carries neither field (only computed later, in
+build_dataset.py, and stored in percolation_vs_antibonding.csv); reading
+meta.get() directly here silently left "is_metal" and "bond_type" mostly
+NaN for those compounds in an earlier version of this script (caught and
+fixed the same day, see project memory).
+
+Delta(antibonding-near-frontier), for the case-1 (decomposition-to-
 elements) reaction, on BOTH the ICOHP and ICOBI antibonding-population
 descriptors (analysis/compute_antibonding_all.py /
 analysis/compute_icobi_antibonding_all.py + the maxhull top-ups).
@@ -49,6 +58,7 @@ sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(Path(__file__).parent))
 
 import compute_reaction_icohp_case1 as ri_case1  # noqa: E402
+from compute_icobi_antibonding_all import build_bond_type_map, build_is_metal_map  # noqa: E402
 
 ELEMENT_REFERENCE = ri_case1.ELEMENT_REFERENCE
 
@@ -75,6 +85,8 @@ def _load_icobi_antibond() -> dict[str, float]:
 def main() -> None:
     import json
 
+    bond_type_map = build_bond_type_map()
+    is_metal_map = build_is_metal_map()
     icohp_map = _load_icohp_antibond()
     icobi_map = _load_icobi_antibond()
     formation_energies = json.loads(FORMATION_ENERGIES.read_text())
@@ -130,8 +142,8 @@ def main() -> None:
             "mp_id": meta.get("mp_id"),
             "formula": formula,
             "family": meta.get("family"),
-            "bond_type": meta.get("bond_type"),
-            "is_metal": meta.get("is_metal"),
+            "bond_type": bond_type_map.get(compound_id),
+            "is_metal": is_metal_map.get(compound_id),
             "theoretical": meta.get("theoretical"),
             "energy_above_hull_eV_per_atom": meta.get("energy_above_hull_eV_per_atom"),
             "formation_energy_per_atom": formation_energies.get(meta.get("mp_id")) if meta.get("mp_id") else None,

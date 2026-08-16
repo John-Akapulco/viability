@@ -1140,15 +1140,52 @@ $\Delta$(ICOBI antibonding) & \texttt{energy\_above\_hull} & 320 & $-0.1524^{**}
 
 \textbf{$\Delta$(ICOHP antibonding) is, at this stage, the strongest
 continuous correlation in the whole project} ($\rho=-0.644$, stronger
-than reaction ICOHP in \S\ref{sec:reaction-icohp}, $\rho=0.502$) --- to
-be read with caution: this is a newly chosen construction, not yet
-stratified by bond type for lack of time in this session, and its
-magnitude will need to reproduce before being treated as an established
-result. Notable: unlike the raw values (opposite signs, above),
+than reaction ICOHP in \S\ref{sec:reaction-icohp}, $\rho=0.502$).
+Notable: unlike the raw values (opposite signs, above),
 \textbf{both $\Delta$s run the same direction} (both negative) --- the
 delta construction appears to align the two descriptors on a consistent
 reading, where their raw values do not. The two $\Delta$s are themselves
 correlated with each other ($\rho=0.532$, $p<0.001$, $n=320$): related
 but not redundant.
+
+\subsection{Stratification by bond type}
+
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, $\Delta$(antibonding) against \texttt{formation\_energy\_per\_atom}, by subgroup (case 1, $n=316$).}
+\label{tab:delta-antibonding-stratified}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Subgroup & $n$ & $\rho$ ($\Delta$ICOHP) & $n$ & $\rho$ ($\Delta$ICOBI) \\
+\midrule
+all               & 316 & $-0.6439^{***}$ & 316 & $-0.4457^{***}$ \\
+\texttt{covalent} & 29  & $-0.5798^{***}$ & 29  & $-0.2044$ \\
+\texttt{ionic}    & 51  & $-0.4205^{**}$  & 51  & $+0.0608$ \\
+\texttt{metallic} & 86  & $-0.4858^{***}$ & 86  & $-0.4872^{***}$ \\
+\texttt{is\_metal=False} & 145 & $-0.6210^{***}$ & 145 & $-0.3248^{***}$ \\
+\texttt{is\_metal=True}  & 171 & $-0.5490^{***}$ & 171 & $-0.4653^{***}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{**}p<0.01$; $^{***}p<0.001$; no star = not
+significant.}
+\end{table}
+
+\textbf{$\Delta$(ICOHP antibonding) is, to date, the first descriptor in
+the whole project whose global correlation survives \emph{every}
+stratification tested} --- covalent, ionic, metallic, \texttt{is\_metal}
+on both sides, all significant at $p<0.01$ or better. No other
+descriptor in this report manages that: the raw antibonding population
+(\S\ref{sec:antibonding}) keeps only its covalent subgroup, reaction
+ICOHP (\S\ref{sec:reaction-icohp}) loses every \texttt{bond\_type}
+stratum and survives only on \texttt{is\_metal}. $\Delta$(ICOBI
+antibonding) is more mixed: survives on metallic and both
+\texttt{is\_metal} sides but not on covalent ($p=0.29$) or ionic
+($p=0.67$). This remains a newly chosen construction (previous
+subsection) --- its magnitude will need to reproduce on an independent
+dataset before being treated as a fully established result, but
+surviving full stratification makes it, as it stands, the project's
+most robust result.
 
 \end{document}
