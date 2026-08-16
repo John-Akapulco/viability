@@ -1,0 +1,20 @@
+{
+  "label": "HC6",
+  "mp_id": "mp-995202",
+  "formula": "HC6",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "organic",
+  "chemsys": "C-H",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.08574633205357074,
+  "formation_energy_per_atom": 0.040110008660713604,
+  "theoretical": true,
+  "nsites": 14,
+  "spacegroup": "P-1",
+  "note": "marginal_widen_campaign (pool=organic): selected for formation_energy_per_atom=0.0401 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

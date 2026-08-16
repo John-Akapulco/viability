@@ -1,0 +1,20 @@
+{
+  "label": "HC3",
+  "mp_id": "mp-995200",
+  "formula": "HC3",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "organic",
+  "chemsys": "C-H",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.13767401546874858,
+  "formation_energy_per_atom": 0.0578104495312477,
+  "theoretical": true,
+  "nsites": 8,
+  "spacegroup": "P2_1/m",
+  "note": "marginal_widen_campaign (pool=organic): selected for formation_energy_per_atom=0.0578 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

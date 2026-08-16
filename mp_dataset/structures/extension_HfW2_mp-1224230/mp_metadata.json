@@ -1,0 +1,20 @@
+{
+  "label": "HfW2",
+  "mp_id": "mp-1224230",
+  "formula": "HfW2",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Hf-W",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.2690691899999962,
+  "formation_energy_per_atom": 0.10028667166667067,
+  "theoretical": true,
+  "nsites": 3,
+  "spacegroup": "Fmmm",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.1003 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

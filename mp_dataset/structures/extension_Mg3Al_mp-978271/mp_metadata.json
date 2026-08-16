@@ -1,0 +1,20 @@
+{
+  "label": "Mg3Al",
+  "mp_id": "mp-978271",
+  "formula": "Mg3Al",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Al-Mg",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.027507425520833628,
+  "formation_energy_per_atom": 0.02186951125000025,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "Pm-3m",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0219 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

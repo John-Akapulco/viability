@@ -1,0 +1,20 @@
+{
+  "label": "PbAu3",
+  "mp_id": "mp-982246",
+  "formula": "PbAu3",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Au-Pb",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.081645635000001,
+  "formation_energy_per_atom": 0.028900653437503365,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "Fm-3m",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0289 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

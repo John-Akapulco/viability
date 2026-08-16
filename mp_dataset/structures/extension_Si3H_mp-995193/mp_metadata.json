@@ -1,0 +1,20 @@
+{
+  "label": "Si3H",
+  "mp_id": "mp-995193",
+  "formula": "Si3H",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "H-Si",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 0.8982000000000001,
+  "energy_above_hull_eV_per_atom": 0.03147248546874959,
+  "formation_energy_per_atom": 0.02890454156250044,
+  "theoretical": true,
+  "nsites": 8,
+  "spacegroup": "P-3m1",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0289 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

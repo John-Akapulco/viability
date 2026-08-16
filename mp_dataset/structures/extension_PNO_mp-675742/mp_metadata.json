@@ -1,0 +1,20 @@
+{
+  "label": "PNO",
+  "mp_id": "mp-675742",
+  "formula": "PNO",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "molecular_pon",
+  "chemsys": "N-O-P",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 0.12819999999999965,
+  "energy_above_hull_eV_per_atom": 1.4997472041111104,
+  "formation_energy_per_atom": 0.07875318456349195,
+  "theoretical": true,
+  "nsites": 18,
+  "spacegroup": "P-1",
+  "note": "marginal_widen_campaign (pool=molecular_pon): selected for formation_energy_per_atom=0.0788 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

@@ -1,0 +1,20 @@
+{
+  "label": "Ga3Pb",
+  "mp_id": "mp-1184425",
+  "formula": "Ga3Pb",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Ga-Pb",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.09109193937500137,
+  "formation_energy_per_atom": 0.09109193937500137,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "I4/mmm",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0911 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

@@ -1,0 +1,20 @@
+{
+  "label": "Mg5Te",
+  "mp_id": "mp-1185828",
+  "formula": "Mg5Te",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Mg-Te",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.22432475583333433,
+  "formation_energy_per_atom": -0.13286517861111088,
+  "theoretical": true,
+  "nsites": 6,
+  "spacegroup": "R32",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=-0.1329 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

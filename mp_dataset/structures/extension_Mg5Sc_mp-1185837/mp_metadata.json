@@ -1,0 +1,20 @@
+{
+  "label": "Mg5Sc",
+  "mp_id": "mp-1185837",
+  "formula": "Mg5Sc",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Mg-Sc",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0599288583333335,
+  "formation_energy_per_atom": 0.0489273033333338,
+  "theoretical": true,
+  "nsites": 6,
+  "spacegroup": "R32",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0489 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

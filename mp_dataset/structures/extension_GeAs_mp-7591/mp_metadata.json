@@ -1,0 +1,20 @@
+{
+  "label": "GeAs",
+  "mp_id": "mp-7591",
+  "formula": "GeAs",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "As-Ge",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.10544380666666875,
+  "formation_energy_per_atom": 0.04514922208333516,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "I4mm",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0451 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}
