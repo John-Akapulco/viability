@@ -482,6 +482,45 @@ all 7 worked numerical examples in the manuscript; not yet connected to
 this project's own LOBSTER data for classification, an explicit
 next step, not attempted this session.
 
+Every reaction's per-bond-type ICOHP values were hand-transcribed from the
+manuscript text (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}),
+independent of this project's own CSP data, then run end to end through
+\texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}. All 7 match
+the manuscript's reported $\Delta$ICOHP within a few kJ/mol (attributable
+to the manuscript's own rounding of its reported per-bond eV values) and
+every \texttt{BondingLabel} matches:
+
+\begin{center}
+\begin{tabular}{@{}lrrll@{}}
+\toprule
+Reaction & Manuscript & Computed & \multicolumn{2}{c}{Label} \\
+ & (kJ/mol) & (kJ/mol) & Ms. & Computed \\
+\midrule
+Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
+S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
+S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397.3$ & endo & endo \\
+ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336.6$ & exo & exo \\
+CaO[sphalerite] $\to$ CaO[rocksalt] & $-79$ & $-78.9$ & exo & exo \\
+CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204.8$ & exo & exo \\
+Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Mn$_2$O$_7$ case is the manuscript's own guard-rail example: exobondic
+by this static sign criterion, yet Mn$_2$O$_7$ is a real, observed
+compound that simply decomposes slowly (gradual O$_2$ loss) rather than by
+sudden bond rupture --- \texttt{classify.py} structurally attaches a
+warning to \emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict for exactly
+this reason, rather than hardcoding Mn$_2$O$_7$ as a special case.
+
+The full list of \texttt{extension4}'s 89 target compounds, its 16
+elemental references, and the 89 case-1 decomposition reactions computed
+from them (with their own $\Delta$ICOHP/atom and endobondic/exobondic
+label, distinct from the 7 literature cases above) is given in
+Appendix~\ref{sec:appendix-ext4-compounds} and
+Appendix~\ref{sec:appendix-ext4-reactions}.
+
 \subsection{Missions \#3--\#5, reprocessed at 349 compounds}
 
 Every per-compound descriptor script was rerun unmodified over the grown
@@ -628,6 +667,41 @@ local-basis projection, not a fixed guess.
 
 {\small
 \input{appendix_dft_kpoints_en.tex}
+}
+
+\section{extension4: Compounds and Elements}
+\label{sec:appendix-ext4-compounds}
+
+Every compound computed in the \texttt{extension4} campaign
+(\S\ref{sec:followups2}): 89 target compounds (alkali/alkaline-earth
+binaries against N/O/F/P/S/Cl, half experimentally known, half
+deliberately far above the convex hull) and the 16 elemental reference
+structures used to balance their case-1 decomposition reactions
+(Appendix~\ref{sec:appendix-ext4-reactions}). Auto-generated from
+\texttt{mp\_dataset/extension4\_candidates.json} and each compound's
+\texttt{mp\_metadata.json} by \texttt{report/gen\_appendix\_extension4.py}.
+
+{\small
+\input{appendix_extension4_compounds_en.tex}
+}
+
+\section{extension4: Case-1 Decomposition Reactions}
+\label{sec:appendix-ext4-reactions}
+
+All 89 decomposition-into-elements reactions
+($A_aB_b \to a\,A + b\,B$, standard-state elemental references), balanced
+by \texttt{reaction\_icohp.py}, with $\Delta$ICOHP per atom and the
+endobondic/exobondic label computed by \texttt{reaction\_analysis}
+(products $-$ reactants convention --- note this is the sign
+\emph{opposite} \texttt{reaction\_icohp.py}'s own
+\texttt{delta\_icohp\_per\_atom} column reported elsewhere in this
+project; see \texttt{delta.py}'s docstring). Auto-generated from
+\texttt{analysis/reaction\_icohp\_case1.csv} and
+\texttt{analysis/reaction\_analysis\_case1\_full.csv} by
+\texttt{report/gen\_appendix\_extension4.py}.
+
+{\small
+\input{appendix_extension4_reactions_en.tex}
 }
 
 \end{document}

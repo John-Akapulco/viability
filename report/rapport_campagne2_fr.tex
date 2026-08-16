@@ -500,6 +500,47 @@ numériques du manuscrit ; pas encore branché sur les données LOBSTER de
 ce projet pour une classification réelle, étape explicitement suivante,
 non entreprise cette session.
 
+Les valeurs ICOHP par type de liaison de chaque réaction ont été
+retranscrites à la main depuis le texte du manuscrit
+(\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), indépendamment
+des données CSP de ce projet, puis passées de bout en bout par
+\texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}. Les 7 cas
+reproduisent le $\Delta$ICOHP rapporté par le manuscrit à quelques kJ/mol
+près (attribuable à l'arrondi des valeurs par liaison rapportées dans le
+manuscrit lui-même) et chaque \texttt{BondingLabel} correspond :
+
+\begin{center}
+\begin{tabular}{@{}lrrll@{}}
+\toprule
+Réaction & Manuscrit & Calculé & \multicolumn{2}{c}{Étiquette} \\
+ & (kJ/mol) & (kJ/mol) & Ms. & Calculé \\
+\midrule
+Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344,3$ & endo & endo \\
+S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258,5$ & endo & endo \\
+S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397,3$ & endo & endo \\
+ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336,6$ & exo & exo \\
+CaO[sphalérite] $\to$ CaO[rocksalt] & $-79$ & $-78,9$ & exo & exo \\
+CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204,8$ & exo & exo \\
+Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187,7$ & exo & exo \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Le cas Mn$_2$O$_7$ est le garde-fou du manuscrit lui-même : exobondic
+selon ce critère de signe statique, alors que Mn$_2$O$_7$ est un composé
+réel, observé, qui se décompose simplement lentement (perte graduelle de
+O$_2$) plutôt que par rupture brutale de liaison ---
+\texttt{classify.py} attache structurellement un avertissement à
+\emph{chaque} verdict \texttt{UNSTABLE\_NONEXISTENT} pour exactement
+cette raison, plutôt que de coder Mn$_2$O$_7$ en cas particulier.
+
+La liste complète des 89 composés cibles d'\texttt{extension4}, de ses 16
+références élémentaires, et des 89 réactions de décomposition de cas 1
+calculées à partir d'elles (avec leur propre $\Delta$ICOHP/atome et
+étiquette endobondic/exobondic, distincte des 7 cas de la littérature
+ci-dessus) est donnée en Annexe~\ref{sec:appendix-ext4-compounds} et
+Annexe~\ref{sec:appendix-ext4-reactions}.
+
 \subsection{Missions \#3 à \#5, recalculées à 349 composés}
 
 Chaque script de descripteur par composé a été relancé sans modification
@@ -654,6 +695,42 @@ estimation fixe.
 
 {\small
 \input{appendix_dft_kpoints_fr.tex}
+}
+
+\section{extension4 : composés et éléments}
+\label{sec:appendix-ext4-compounds}
+
+Chaque composé calculé dans la campagne \texttt{extension4}
+(\S\ref{sec:suites2}) : 89 composés cibles (binaires alcalins/alcalino-
+terreux contre N/O/F/P/S/Cl, moitié expérimentalement connus, moitié
+délibérément très au-dessus du hull) et les 16 structures de référence
+élémentaires utilisées pour équilibrer leurs réactions de décomposition
+de cas 1 (Annexe~\ref{sec:appendix-ext4-reactions}). Généré
+automatiquement depuis \texttt{mp\_dataset/extension4\_candidates.json}
+et le \texttt{mp\_metadata.json} de chaque composé par
+\texttt{report/gen\_appendix\_extension4.py}.
+
+{\small
+\input{appendix_extension4_compounds_fr.tex}
+}
+
+\section{extension4 : réactions de décomposition (cas 1)}
+\label{sec:appendix-ext4-reactions}
+
+Les 89 réactions de décomposition en éléments
+($A_aB_b \to a\,A + b\,B$, références élémentaires à l'état standard),
+équilibrées par \texttt{reaction\_icohp.py}, avec le $\Delta$ICOHP par
+atome et l'étiquette endobondic/exobondic calculés par
+\texttt{reaction\_analysis} (convention produits $-$ réactifs --- signe
+\emph{opposé} à la colonne \texttt{delta\_icohp\_per\_atom} propre à
+\texttt{reaction\_icohp.py} rapportée ailleurs dans ce projet ; voir la
+docstring de \texttt{delta.py}). Généré automatiquement depuis
+\texttt{analysis/reaction\_icohp\_case1.csv} et
+\texttt{analysis/reaction\_analysis\_case1\_full.csv} par
+\texttt{report/gen\_appendix\_extension4.py}.
+
+{\small
+\input{appendix_extension4_reactions_fr.tex}
 }
 
 \end{document}
