@@ -534,12 +534,16 @@ O$_2$) plutôt que par rupture brutale de liaison ---
 \emph{chaque} verdict \texttt{UNSTABLE\_NONEXISTENT} pour exactement
 cette raison, plutôt que de coder Mn$_2$O$_7$ en cas particulier.
 
-La liste complète des 89 composés cibles d'\texttt{extension4}, de ses 16
-références élémentaires, et des 89 réactions de décomposition de cas 1
-calculées à partir d'elles (avec leur propre $\Delta$ICOHP/atome et
-étiquette endobondic/exobondic, distincte des 7 cas de la littérature
-ci-dessus) est donnée en Annexe~\ref{sec:appendix-ext4-compounds} et
-Annexe~\ref{sec:appendix-ext4-reactions}.
+La liste complète de tous les composés et éléments calculés sur
+l'ensemble de la campagne \texttt{extension} --- pas seulement les 89
+d'\texttt{extension4}, mais les quatre lots réunis (163 composés au
+total : références élémentaires, allotropes du carbone, polymorphes
+haute-pression de TiO2, et tout composé ionique/covalent ajouté en
+cours de route) --- ainsi que les réactions de décomposition de cas 1
+calculées à partir d'eux (leur propre $\Delta$ICOHP/atome et étiquette
+endobondic/exobondic, distincte des 7 cas de la littérature ci-dessus),
+est donnée en Annexe~\ref{sec:appendix-ext-elements} à
+Annexe~\ref{sec:appendix-ext-exobondic}.
 
 \subsection{Missions \#3 à \#5, recalculées à 349 composés}
 
@@ -697,40 +701,66 @@ estimation fixe.
 \input{appendix_dft_kpoints_fr.tex}
 }
 
-\section{extension4 : composés et éléments}
-\label{sec:appendix-ext4-compounds}
+\section{Campagne extension : éléments et allotropes}
+\label{sec:appendix-ext-elements}
 
-Chaque composé calculé dans la campagne \texttt{extension4}
-(\S\ref{sec:suites2}) : 89 composés cibles (binaires alcalins/alcalino-
-terreux contre N/O/F/P/S/Cl, moitié expérimentalement connus, moitié
-délibérément très au-dessus du hull) et les 16 structures de référence
-élémentaires utilisées pour équilibrer leurs réactions de décomposition
-de cas 1 (Annexe~\ref{sec:appendix-ext4-reactions}). Généré
-automatiquement depuis \texttt{mp\_dataset/extension4\_candidates.json}
-et le \texttt{mp\_metadata.json} de chaque composé par
-\texttt{report/gen\_appendix\_extension4.py}.
+Chaque structure à un seul élément calculée sur l'ensemble des quatre
+lots \texttt{extension} (\S\ref{sec:suites2} ;
+\texttt{download\_extension.py} à \texttt{download\_extension4.py}) : le
+jeu de 62 références élémentaires (\texttt{ELEMENT\_REFERENCE}) plus les
+allotropes de carbone supplémentaires (diamant, lonsdaléite, M-carbon,
+W-carbon) calculés à côté de la référence graphite spécifiquement pour
+tester les descripteurs sur des structures dont le régime stable réel est
+ailleurs. Un composé expérimental porte une étoile en exposant sur sa
+formule ; une formule non marquée est théorique. Généré automatiquement
+depuis chaque \texttt{mp\_metadata.json} portant \texttt{family=="extension"}
+par \texttt{report/gen\_appendix\_extension.py}.
 
 {\small
-\input{appendix_extension4_compounds_fr.tex}
+\input{appendix_extension_elements_fr.tex}
 }
 
-\section{extension4 : réactions de décomposition (cas 1)}
-\label{sec:appendix-ext4-reactions}
+\section{Campagne extension : composés et polymorphes}
+\label{sec:appendix-ext-compounds}
 
-Les 89 réactions de décomposition en éléments
-($A_aB_b \to a\,A + b\,B$, références élémentaires à l'état standard),
-équilibrées par \texttt{reaction\_icohp.py}, avec le $\Delta$ICOHP par
-atome et l'étiquette endobondic/exobondic calculés par
-\texttt{reaction\_analysis} (convention produits $-$ réactifs --- signe
-\emph{opposé} à la colonne \texttt{delta\_icohp\_per\_atom} propre à
-\texttt{reaction\_icohp.py} rapportée ailleurs dans ce projet ; voir la
-docstring de \texttt{delta.py}). Généré automatiquement depuis
-\texttt{analysis/reaction\_icohp\_case1.csv} et
+Chaque composé cible multi-élément sur l'ensemble des quatre lots
+\texttt{extension} (100 au total, 89 issus d'\texttt{extension4}) ---
+incluant les polymorphes haute-pression de TiO2 (\texttt{extension2}) aux
+côtés de chaque binaire alcalin/alcalino-terreux d'\texttt{extension4}
+--- avec le $\Delta$ICOHP par atome et son étiquette endobondic/exobondic
+lorsqu'une réaction de décomposition de cas 1 a pu être calculée. Généré
+automatiquement depuis \texttt{analysis/reaction\_icohp\_case1.csv} et
 \texttt{analysis/reaction\_analysis\_case1\_full.csv} par
-\texttt{report/gen\_appendix\_extension4.py}.
+\texttt{report/gen\_appendix\_extension.py}.
 
 {\small
-\input{appendix_extension4_reactions_fr.tex}
+\input{appendix_extension_compounds_fr.tex}
+}
+
+\section{Campagne extension : réactions endobondic}
+\label{sec:appendix-ext-endobondic}
+
+Le sous-ensemble des réactions de décomposition de cas 1
+($A_aB_b \to a\,A + b\,B$, références élémentaires à l'état standard,
+équilibrées par \texttt{reaction\_icohp.py}) étiquetées
+\textbf{endobondic} ($\Delta$ICOHP $\geq 0$, convention produits $-$
+réactifs --- signe \emph{opposé} à la colonne
+\texttt{delta\_icohp\_per\_atom} propre à \texttt{reaction\_icohp.py}
+rapportée ailleurs dans ce projet ; voir la docstring de
+\texttt{delta.py}).
+
+{\small
+\input{appendix_extension_endobondic_fr.tex}
+}
+
+\section{Campagne extension : réactions exobondic}
+\label{sec:appendix-ext-exobondic}
+
+Le sous-ensemble complémentaire \textbf{exobondic} ($\Delta$ICOHP $< 0$),
+même convention et provenance que l'Annexe~\ref{sec:appendix-ext-endobondic}.
+
+{\small
+\input{appendix_extension_exobondic_fr.tex}
 }
 
 \end{document}
