@@ -1,0 +1,20 @@
+{
+  "label": "Nb4Rh",
+  "mp_id": "mp-1220441",
+  "formula": "Nb4Rh",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Nb-Rh",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.08011662799999897,
+  "formation_energy_per_atom": -0.1236687819999986,
+  "theoretical": true,
+  "nsites": 5,
+  "spacegroup": "Fmmm",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=-0.1237 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

@@ -1,0 +1,20 @@
+{
+  "label": "AgPb3",
+  "mp_id": "mp-1183256",
+  "formula": "AgPb3",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Ag-Pb",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.08509275833333874,
+  "formation_energy_per_atom": 0.08509275833333874,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "I4/mmm",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0851 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

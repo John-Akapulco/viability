@@ -1,0 +1,20 @@
+{
+  "label": "WBr5",
+  "mp_id": "mp-1436789",
+  "formula": "WBr5",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Br-W",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.9777983063888893,
+  "formation_energy_per_atom": 0.053990249166666615,
+  "theoretical": true,
+  "nsites": 12,
+  "spacegroup": "P-1",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0540 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

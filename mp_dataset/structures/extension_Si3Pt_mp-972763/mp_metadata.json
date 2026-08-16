@@ -1,0 +1,20 @@
+{
+  "label": "Si3Pt",
+  "mp_id": "mp-972763",
+  "formula": "Si3Pt",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Pt-Si",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.2618652343750014,
+  "formation_energy_per_atom": -0.08664157749999646,
+  "theoretical": true,
+  "nsites": 8,
+  "spacegroup": "P6_3/mmc",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=-0.0866 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

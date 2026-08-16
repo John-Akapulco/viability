@@ -1,0 +1,20 @@
+{
+  "label": "HN",
+  "mp_id": "mp-1224501",
+  "formula": "HN",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "organic",
+  "chemsys": "H-N",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 2.8669,
+  "energy_above_hull_eV_per_atom": 0.1923862111458332,
+  "formation_energy_per_atom": -0.0402263901041664,
+  "theoretical": true,
+  "nsites": 32,
+  "spacegroup": "P-1",
+  "note": "marginal_widen_campaign (pool=organic): selected for formation_energy_per_atom=-0.0402 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

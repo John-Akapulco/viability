@@ -1,0 +1,20 @@
+{
+  "label": "GeSb",
+  "mp_id": "mp-9935",
+  "formula": "GeSb",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Ge-Sb",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.04942549249999928,
+  "formation_energy_per_atom": 0.04942549249999928,
+  "theoretical": true,
+  "nsites": 2,
+  "spacegroup": "Fm-3m",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0494 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

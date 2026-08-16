@@ -1,0 +1,20 @@
+{
+  "label": "Au2S",
+  "mp_id": "mp-947",
+  "formula": "Au2S",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Au-S",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 1.9091,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "formation_energy_per_atom": -0.11834182593750124,
+  "theoretical": false,
+  "nsites": 6,
+  "spacegroup": "Pn-3m",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=-0.1183 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

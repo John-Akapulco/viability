@@ -1,0 +1,20 @@
+{
+  "label": "NaN3",
+  "mp_id": "mp-634410",
+  "formula": "NaN3",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "N-Na",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 4.5186,
+  "energy_above_hull_eV_per_atom": 0.26956520750000035,
+  "formation_energy_per_atom": 0.10260288593750033,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "C2",
+  "note": "marginal_widen_campaign (pool=ionic_targeted): selected for formation_energy_per_atom=0.1026 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

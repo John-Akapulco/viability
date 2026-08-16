@@ -1,0 +1,20 @@
+{
+  "label": "C3N4",
+  "mp_id": "mp-567885",
+  "formula": "C3N4",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "C-N",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 1.4341,
+  "energy_above_hull_eV_per_atom": 0.1475561110714274,
+  "formation_energy_per_atom": 0.1475561110714279,
+  "theoretical": true,
+  "nsites": 14,
+  "spacegroup": "P-6m2",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.1476 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}

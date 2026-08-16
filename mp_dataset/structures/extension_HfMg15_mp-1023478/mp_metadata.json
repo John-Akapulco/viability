@@ -1,0 +1,20 @@
+{
+  "label": "HfMg15",
+  "mp_id": "mp-1023478",
+  "formula": "HfMg15",
+  "family": "extension",
+  "batch": "marginal_widen_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Hf-Mg",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.07120114031250013,
+  "formation_energy_per_atom": 0.07120114031250013,
+  "theoretical": true,
+  "nsites": 16,
+  "spacegroup": "P-6m2",
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0712 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+}
