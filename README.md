@@ -195,13 +195,22 @@ traversability). Both validated on synthetic cases with known answers
 before running on real data. See
 **[`analysis/REPORT_dimensionality_mincut.md`](analysis/REPORT_dimensionality_mincut.md)**:
 tested against `formation_energy_per_atom` (`mp_dataset/
-fetch_formation_energy.py`) rather than `energy_above_hull`. Headline:
+fetch_formation_energy.py`) rather than `energy_above_hull`. Headline (on
+the original 186-compound population, still exactly reproducible today):
 min-cut (normalized) was the first descriptor in the project to reach a
 significant *global* correlation (ρ=0.285, p=0.0001, n=186) — stronger
 than the original percolation weight ever achieved — though likely driven
 partly by between-bond-type clustering rather than a clean within-type
 relationship; dimensionality alone does not separate formation energy
-(Kruskal-Wallis p=0.19).
+(Kruskal-Wallis p=0.19). **This pooled number is no longer trustworthy at
+the current 349-compound scale (ρ=0.089, p=0.098, not significant) — not
+because the original result was wrong, but because later, unrelated
+extension batches diluted it: ~65 elemental-reference compounds (added
+for `reaction_icohp.py`, sitting at `formation_energy_per_atom`≈0 by
+construction) and `extension4`'s deliberately far-above-hull half (which
+shows a *significant correlation of the opposite sign*, ρ=−0.40, p=0.011,
+n=39) got pooled in without re-checking this descriptor specifically. See
+`REPORT_dimensionality_mincut.md` §5 for the full breakdown.**
 
 ---
 

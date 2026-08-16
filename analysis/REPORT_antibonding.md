@@ -67,7 +67,7 @@ Same conclusion as before: the global correlation is essentially insensitive to 
 | icohp_sum | 347 | −0.016 | 0.769 |
 | icohp_max | 347 | 0.036 | 0.502 |
 
-**Notable change unrelated to this metric**: periodic min-cut's own headline correlation, ρ=0.285 (p=0.0001) at n=186, has **collapsed to ρ=0.089 (p=0.098, not significant) at n=349** — the opposite direction of what happened to `icohp_mean`/`icohp_percolation_weight_min`, which stayed roughly comparable or grew. This project has not investigated why (min-cut's own report, mission #3, was not part of this rewrite); flagged here only because it changes the "ahead of min-cut" framing in the old verdict to "min-cut is no longer significant at all at this scale," which is a stronger claim of relative standing, not a weaker one — worth a dedicated look at `REPORT_mincut.md` (if one exists) or a fresh mission before trusting either number further.
+**Notable change unrelated to this metric, since resolved**: periodic min-cut's own headline correlation, ρ=0.285 (p=0.0001) at n=186, collapsed to ρ=0.089 (p=0.098, not significant) at n=349 — investigated in `REPORT_dimensionality_mincut.md` §5 (added 2026-08-16). Short version: the original 186-compound result is fully intact in isolation; the pooled number is diluted by ~65 elemental-reference compounds (added for `reaction_icohp.py`, sitting at `formation_energy_per_atom`≈0 by construction) and by `extension4`'s deliberately far-above-hull half, which shows a *significant correlation of the opposite sign* (ρ=−0.40, p=0.011, n=39). Not an antibonding-metric issue — kept here only because it affects the "ahead of min-cut" framing above.
 
 ## 3. Is the global signal a between-group effect? (the same question mission #3 had to ask of min-cut)
 

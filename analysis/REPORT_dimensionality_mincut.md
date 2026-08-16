@@ -1,6 +1,8 @@
 # Network dimensionality + periodic min-cut vs. formation energy (mission #3)
 
-**Verdict: the periodic min-cut descriptor (normalized) is the first metric in this project to show a statistically significant *global* correlation against a stability target — ρ=0.285, p=0.0001 (n=186) against `formation_energy_per_atom` — clearly stronger than the original percolation weight ever achieved against either target (ρ≈0.06-0.11, p≥0.13 throughout). But the signal is likely driven substantially by between-bond-type clustering rather than a uniform within-class relationship (no individual `bond_type` subgroup reaches reliable significance on its own), and network dimensionality alone does *not* separate `formation_energy_per_atom` (Kruskal-Wallis p=0.19).** This is a real, positive, quantified development — but not yet strong enough or clean enough to justify anything beyond continuing to refine these two descriptors (see limits).
+**Verdict (original, n=186): the periodic min-cut descriptor (normalized) is the first metric in this project to show a statistically significant *global* correlation against a stability target — ρ=0.285, p=0.0001 (n=186) against `formation_energy_per_atom` — clearly stronger than the original percolation weight ever achieved against either target (ρ≈0.06-0.11, p≥0.13 throughout). But the signal is likely driven substantially by between-bond-type clustering rather than a uniform within-class relationship (no individual `bond_type` subgroup reaches reliable significance on its own), and network dimensionality alone does *not* separate `formation_energy_per_atom` (Kruskal-Wallis p=0.19).** This is a real, positive, quantified development — but not yet strong enough or clean enough to justify anything beyond continuing to refine these two descriptors (see limits).
+
+**UPDATE 2026-08-16, §5: the pooled correlation on the now-349-compound dataset has collapsed to ρ=0.089, p=0.098 (not significant).** This is NOT a refutation of the original n=186 result, which is fully intact when isolated (ρ=0.2845, p=8.3×10⁻⁵ — see §5.1) — it is a dilution artifact from pooling three populations added for unrelated purposes (elemental references for reaction-ICOHP; alkali/alkaline-earth binaries for reaction-ICOHP/`reaction_analysis` case-1/case-2 coverage) that were never selected with this descriptor's own bond-type-clustering story in mind, and one of which (extension4's deliberately far-above-hull structures) shows a significant correlation of the *opposite sign*. See §5 for the full breakdown before trusting (or dismissing) either the original or the pooled number without qualification.
 
 ## 0. What changed this session, and why
 
@@ -78,13 +80,57 @@ Kruskal-Wallis H=4.71, p=0.195 (4 groups). One-way ANOVA F=0.346, p=0.792. **Nei
 - **`formation_energy_per_atom` vs. real persistence labels**: this report tests against a second Materials Project thermodynamic quantity, not against actual experimental persistence/decomposition behavior (e.g. the NaBeH₃ vs. CsBeH₃ quenchable/non-quenchable distinction mentioned in the mission brief). That remains the more probative target and the logical next step once (or if) these descriptors show a within-bond-type signal against something DFT-derived first.
 - **Still no SISSO.** Two descriptors now show *some* signal (min-cut clearly, dimensionality not at all as a standalone variable) against one target; that is still short of the multi-descriptor, well-powered-per-stratum situation that would justify a combinatorial symbolic search.
 
+## 5. Why did the pooled correlation collapse? (2026-08-16, prompted by `REPORT_antibonding.md`/`REPORT_reaction_icohp.md` flagging the change)
+
+The dataset grew from 186 to 349 compounds across two unrelated efforts, neither of which selected compounds with this descriptor in mind: 74 "extension" compounds added mostly as elemental references for `reaction_icohp.py`'s case 1 (mission #5), then 89 more ("extension4") added specifically for `reaction_icohp`/`reaction_analysis` case-1/case-2 coverage and endobondic/exobondic testing (alkali/alkaline-earth binaries against N/O/F/P/S/Cl, half experimentally known, half deliberately far above the convex hull). Both `compute_...` scripts for min-cut were rerun unmodified over the growing `mp_dataset/structures/` as part of those other missions' extension work — nobody checked what that did to *this* descriptor's own number until now.
+
+### 5.1 The original 186-compound signal is untouched
+
+| Subset | n | ρ | p |
+|---|---:|---:|---:|
+| Original 186-compound family only | 186 | **0.2845** | **8.3×10⁻⁵** |
+
+Isolating exactly the compounds mission #3 originally tested reproduces the original headline number to 3 decimal places. Nothing about the original finding was wrong or has degraded — the compounds it was computed on still show the same relationship.
+
+### 5.2 Extension batches 1–3 (→ 260 compounds) already diluted it, mechanically
+
+| Subset | n | ρ | p |
+|---|---:|---:|---:|
+| 186 + extension batches 1–3 (pre-`extension4`) | 257 | 0.1545 | 0.0131 |
+| ...excluding compounds with \|`formation_energy_per_atom`\|<0.02 eV/at | 193 | 0.2157 | 0.0026 |
+
+Of the 74 extension-batch-1–3 compounds, **65 have `formation_energy_per_atom`≈0** — these are single-element reference structures (`mp_dataset/download_elements_reference.py`, downloaded for `reaction_icohp.py`'s `ELEMENT_REFERENCE`, an entirely different mission's need), which sit at exactly zero by definition (an element's formation energy from itself is zero) while their `mincut` values still range freely (0.003 for `extension_Cl` to 9.2 for `Cu3Ge`, an alloy). Injecting ~65 points that are all tied at the same y-value but spread across the full x-range mechanically degrades a rank correlation — this has nothing to do with whether min-cut says anything about *formation* stability, since these points were never trying to test that question in the first place. Excluding them recovers most (not all) of the original signal.
+
+### 5.3 `extension4` (89 compounds) is not one population but two, with opposite signs
+
+| Subset | n | ρ | p |
+|---|---:|---:|---:|
+| `extension4`, all | 89 | −0.1682 | 0.115 |
+| `extension4`, `exp_polymorph` half | 50 | 0.0565 | 0.697 |
+| `extension4`, `theo_far_hull` half | 39 | **−0.4037** | **0.0108** |
+
+`extension4` was built (see `mp_dataset/download_extension4.py`) from two deliberately different sub-populations per chemical system: an experimentally-known polymorph, and the single highest-`energy_above_hull` theoretical entry available for the same formula. The experimental half shows no relationship to `formation_energy_per_atom` at all (ρ=0.06, n.s.) — a genuinely flat result, not just a weak echo of the original 186's trend. The theoretical, deliberately-far-above-hull half shows a **significant correlation of the opposite sign** (ρ=−0.40, p=0.011): among these specifically unstable, stress-test structures, a *higher* min-cut (harder to cleave) associates with a *less* negative (less stable) formation energy. This is either a genuine finding about how far-from-equilibrium structures behave differently from the near-hull population the original 186 was built from, or an artifact of how `theo_far_hull` picks were selected (highest EAH per formula, which could correlate mechanically with cell size/symmetry choices that also affect min-cut) — this report does not distinguish between those two readings, and neither should be assumed.
+
+### 5.4 Bottom line
+
+The pooled "all-349" correlation is not a single number worth quoting as this descriptor's headline anymore — it is an unweighted average of three populations with different selection logic and, in at least one case, an opposite-sign relationship:
+
+1. The original 186 (curated for chemsys breadth across a stability spectrum): ρ=0.28, real and unchanged.
+2. ~65 elemental references (selected for an unrelated mission's elemental-decomposition needs): mechanically dilutive, not a test of this descriptor at all.
+3. `extension4`'s experimental half (selected to fill polymorph-density gaps): flat, ρ≈0.06.
+4. `extension4`'s theoretical, far-above-hull half (selected to stress-test descriptors on unstable structures): significantly negative, ρ=−0.40.
+
+**Recommendation for any future report or comparison table that cites a single min-cut-vs-formation-energy number**: report it conditioned on `family`/selection-provenance, the same way this project already conditions on `bond_type`/`is_metal` — pooling across compounds selected for unrelated reasons is exactly the kind of between-group confound this project's own methodology (§2.3 above) exists to catch, and this report failed to apply that check to its *own* growing denominator until asked to.
+
 ## Prioritized next actions
 
 1. Re-test mincut (normalized) correlation restricted to `bond_type=metallic` only, with a larger metallic-only sample if feasible, since that's the one subgroup with both real numbers and enough n to matter.
 2. Build a per-bond-count-normalized min-cut variant to check whether the current global signal survives controlling for coordination number.
 3. Re-run the dimensionality/min-cut analysis on the conventional-cell pilot outputs from mission #2 (`mp_dataset/structures_conventional_pilot/`, 6 compounds) as a quick cross-check — dimensionality and min-cut are hypothesized to be much less sensitive to the primitive/conventional cell choice than the percolation weight was (min-cut in particular is validated by construction to require cutting *every* parallel path, which is exactly the property that made the percolation weight fragile to cell size in the mission-#2 finding).
 4. Scope what a real persistence-label dataset (quenchable/non-quenchable, or a phonon-stability filter as mentioned in the mission-#1 alternatives list) would take to assemble, since that remains the most likely path to a genuinely decision-relevant result.
+5. **(Added 2026-08-16)** Re-run §2's stratified correlation table with `family`/selection-provenance as an explicit grouping variable alongside `bond_type`/`is_metal`, per §5.4's recommendation, rather than continuing to let the pooled "all" number silently drift as unrelated compounds accumulate in `mp_dataset/structures/`.
+6. **(Added 2026-08-16)** Investigate whether §5.3's `extension4`-`theo_far_hull` negative correlation (ρ=−0.40, p=0.011, n=39) is a real physical effect (far-from-hull structures behaving differently) or a selection artifact of picking the single highest-EAH entry per formula (possible confound with cell size/symmetry) — not distinguished in this report.
 
 ---
 
-*Data*: `analysis/percolation_vs_formation_energy.csv` (186 rows, all mission-#3 columns joined onto the existing `percolation_vs_hull.csv` columns). *Figures*: `analysis/figures_v2/`. *New code*: `network_dimensionality.py`, `periodic_mincut.py`, `analysis/build_dataset_v2.py`, `mp_dataset/fetch_formation_energy.py` (all at repo root / existing subfolders, `percolation_path.py` and its tests untouched). *Tests*: `tests/test_network_dimensionality.py`, `tests/test_periodic_mincut.py` (20/20 passing project-wide).
+*Data*: `analysis/percolation_vs_formation_energy.csv` (349 rows as of 2026-08-16, all mission-#3 columns joined onto the existing `percolation_vs_hull.csv` columns; was 186 at original writing). *Figures*: `analysis/figures_v2/` (not regenerated for the 349-compound scale as of 2026-08-16 — §5's numbers were computed ad hoc, not through `build_dataset_v2.py`'s figure-generation path). *New code*: `network_dimensionality.py`, `periodic_mincut.py`, `analysis/build_dataset_v2.py`, `mp_dataset/fetch_formation_energy.py` (all at repo root / existing subfolders, `percolation_path.py` and its tests untouched). *Tests*: `tests/test_network_dimensionality.py`, `tests/test_periodic_mincut.py` (20/20 passing project-wide at original writing; 93/93 project-wide as of 2026-08-16, unaffected by this data-only investigation).
