@@ -127,10 +127,18 @@ liaisons par distance interatomique de 0,1 à 6,0~\AA{}
 définition LOBSTER, l'intégrale du COHP($E$) depuis le bas de la fenêtre
 ci-dessus jusqu'au niveau de Fermi (états occupés uniquement), en eV ;
 négatif = liant, positif = antiliant. L'ICOBI est la même intégrale sur
-le COBI (indice d'ordre de liaison), sans dimension. Ce sont ces
-grandeurs, par liaison puis agrégées par composé, qui alimentent
-\S\ref{sec:dataset} et les corrélations classiques du
-\S\ref{sec:results}.
+le COBI (indice d'ordre de liaison), sans dimension. Agrégation par
+composé (\texttt{percolation\_path.py}) : \texttt{icohp\_sum}/
+\texttt{icobi\_sum} sur toutes les étiquettes de liaison symétriquement
+inéquivalentes de \texttt{ICOHPLIST.lobster}/\texttt{ICOBILIST.lobster}
+(chaque liaison périodique comptée une fois, pas une fois par
+direction) ; \texttt{icohp\_mean}/\texttt{icobi\_mean}, la moyenne
+correspondante par liaison --- c'est cette dernière, intensive et donc
+comparable entre composés de tailles de maille différentes, qui est
+rapportée dans le Tableau~\ref{tab:bondtype} et dans les colonnes
+\og{}ICOHP\fg{}/\og{}ICOBI\fg{} de l'Annexe~\ref{sec:appendix-master-list}.
+Ces grandeurs alimentent \S\ref{sec:dataset} et les corrélations
+classiques du \S\ref{sec:results}.
 
 \textbf{$\Delta$(ICOHP) de réaction (\texttt{reaction\_analysis/}).} Pour
 une réaction équilibrée (typiquement composé $\to$ éléments), $\Delta$ =

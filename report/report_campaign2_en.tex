@@ -122,9 +122,17 @@ orbital-resolved); 0.05~eV Gaussian smearing
 own definition, the integral of COHP($E$) from the bottom of the window
 above up to the Fermi level (occupied states only), in eV; negative =
 bonding, positive = antibonding. ICOBI is the same integral over COBI
-(bond order index), dimensionless. These are the per-bond, then
-per-compound-aggregated, quantities feeding \S\ref{sec:dataset} and the
-classic correlations of \S\ref{sec:results}.
+(bond order index), dimensionless. Per-compound aggregation
+(\texttt{percolation\_path.py}): \texttt{icohp\_sum}/\texttt{icobi\_sum}
+over every symmetrically inequivalent bond label in
+\texttt{ICOHPLIST.lobster}/\texttt{ICOBILIST.lobster} (each periodic bond
+counted once, not once per direction); \texttt{icohp\_mean}/
+\texttt{icobi\_mean}, the corresponding per-bond average --- this
+intensive version, comparable across compounds of different cell sizes,
+is what is reported in Table~\ref{tab:bondtype} and the
+``ICOHP''/``ICOBI'' columns of
+Appendix~\ref{sec:appendix-master-list}. These quantities feed
+\S\ref{sec:dataset} and the classic correlations of \S\ref{sec:results}.
 
 \textbf{Reaction $\Delta$(ICOHP) (\texttt{reaction\_analysis/}).} For a
 balanced reaction (typically compound $\to$ elements), $\Delta$ = sum of
