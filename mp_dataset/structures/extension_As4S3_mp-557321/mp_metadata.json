@@ -1,0 +1,20 @@
+{
+  "label": "As4S3",
+  "mp_id": "mp-557321",
+  "formula": "As4S3",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "As-S",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 2.471,
+  "energy_above_hull_eV_per_atom": 0.006840436428570129,
+  "formation_energy_per_atom": -0.12994289977678516,
+  "theoretical": false,
+  "nsites": 28,
+  "spacegroup": "Pnma",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.1299 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

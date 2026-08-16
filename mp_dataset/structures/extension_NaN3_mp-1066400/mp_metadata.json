@@ -1,0 +1,20 @@
+{
+  "label": "NaN3",
+  "mp_id": "mp-1066400",
+  "formula": "NaN3",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "N-Na",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 4.1464,
+  "energy_above_hull_eV_per_atom": 0.0029249474999994973,
+  "formation_energy_per_atom": -0.16403737406250052,
+  "theoretical": false,
+  "nsites": 4,
+  "spacegroup": "R3m",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.1640 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

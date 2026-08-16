@@ -1,0 +1,20 @@
+{
+  "label": "Cu2S",
+  "mp_id": "mp-553942",
+  "formula": "Cu2S",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Cu-S",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.23845627437500028,
+  "formation_energy_per_atom": 0.026381998645833942,
+  "theoretical": false,
+  "nsites": 6,
+  "spacegroup": "P6_3/mmc",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=0.0264 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

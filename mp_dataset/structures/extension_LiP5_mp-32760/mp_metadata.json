@@ -1,0 +1,20 @@
+{
+  "label": "LiP5",
+  "mp_id": "mp-32760",
+  "formula": "LiP5",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "Li-P",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 0.5134999999999996,
+  "energy_above_hull_eV_per_atom": 0.09630660601190577,
+  "formation_energy_per_atom": -0.1504408054365065,
+  "theoretical": true,
+  "nsites": 24,
+  "spacegroup": "Pna2_1",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.1504 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

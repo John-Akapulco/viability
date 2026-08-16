@@ -1,0 +1,20 @@
+{
+  "label": "CsN3",
+  "mp_id": "mp-510557",
+  "formula": "CsN3",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "Cs-N",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 4.2395,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "formation_energy_per_atom": -0.21685479031249955,
+  "theoretical": false,
+  "nsites": 8,
+  "spacegroup": "I4/mcm",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.2169 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

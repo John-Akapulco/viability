@@ -1,0 +1,20 @@
+{
+  "label": "Sr3N2",
+  "mp_id": "mp-1013529",
+  "formula": "Sr3N2",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "N-Sr",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.5582295490000018,
+  "formation_energy_per_atom": -0.11248128250000064,
+  "theoretical": true,
+  "nsites": 5,
+  "spacegroup": "Pm-3m",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.1125 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

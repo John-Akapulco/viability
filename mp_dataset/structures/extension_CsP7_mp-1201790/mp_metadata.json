@@ -1,0 +1,20 @@
+{
+  "label": "CsP7",
+  "mp_id": "mp-1201790",
+  "formula": "CsP7",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "Cs-P",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.5378000000000003,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "formation_energy_per_atom": -0.24634146729166595,
+  "theoretical": false,
+  "nsites": 32,
+  "spacegroup": "Pbcm",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.2463 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}
