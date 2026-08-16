@@ -115,6 +115,10 @@ def main():
         },
         "delta_case1": {
             "n_total": len(delta_df),
+            "delta_icohp_antibond_vs_formation_energy_stratified": correlation_table(
+                delta_df, "delta_icohp_antibond", "formation_energy_per_atom"),
+            "delta_icobi_antibond_vs_formation_energy_stratified": correlation_table(
+                delta_df, "delta_icobi_antibond", "formation_energy_per_atom"),
             "delta_icohp_antibond_vs_formation_energy": spearman_row(
                 delta_df, "delta_icohp_antibond", "formation_energy_per_atom", "all"),
             "delta_icobi_antibond_vs_formation_energy": spearman_row(

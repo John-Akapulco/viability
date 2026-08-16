@@ -1184,15 +1184,52 @@ $\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 320 & $-0{,}1524^{**}
 
 \textbf{$\Delta$(ICOHP antiliant) est, à ce stade, la corrélation continue
 la plus forte de tout le projet} ($\rho=-0{,}644$, plus forte que
-l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}502$) ---
-à lire avec prudence : c'est une convention de construction nouvelle,
-pas encore stratifiée par type de liaison faute de temps dans cette
-session, et sa magnitude devra être reproduite avant d'être prise comme
-un résultat acquis. Fait notable : contrairement aux valeurs brutes
+l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}502$).
+Fait notable : contrairement aux valeurs brutes
 (signes opposés, ci-dessus), \textbf{les deux $\Delta$ vont dans le même
 sens} (tous deux négatifs) --- la construction en delta semble aligner
 les deux descripteurs sur une lecture cohérente, là où leurs valeurs
 brutes ne le sont pas. Les deux $\Delta$ sont eux-mêmes corrélés entre
 eux ($\rho=0{,}532$, $p<0{,}001$, $n=320$) : liés mais pas redondants.
+
+\subsection{Stratification par type de liaison}
+
+\begin{table}[htbp]
+\centering
+\caption{Corrélations de Spearman, $\Delta$(antiliant) contre \texttt{formation\_energy\_per\_atom}, par sous-groupe (cas 1, $n=316$).}
+\label{tab:delta-antibonding-stratified}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Sous-groupe & $n$ & $\rho$ ($\Delta$ICOHP) & $n$ & $\rho$ ($\Delta$ICOBI) \\
+\midrule
+tous                & 316 & $-0{,}6439^{***}$ & 316 & $-0{,}4457^{***}$ \\
+\texttt{covalent}   & 29  & $-0{,}5798^{***}$ & 29  & $-0{,}2044$ \\
+\texttt{ionique}    & 51  & $-0{,}4205^{**}$  & 51  & $+0{,}0608$ \\
+\texttt{métallique} & 86  & $-0{,}4858^{***}$ & 86  & $-0{,}4872^{***}$ \\
+\texttt{is\_metal=False} & 145 & $-0{,}6210^{***}$ & 145 & $-0{,}3248^{***}$ \\
+\texttt{is\_metal=True}  & 171 & $-0{,}5490^{***}$ & 171 & $-0{,}4653^{***}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$ ; aucune étoile = non
+significatif.}
+\end{table}
+
+\textbf{$\Delta$(ICOHP antiliant) est, à ce jour, le premier descripteur
+de tout le projet dont la corrélation globale survit à
+\emph{l'intégralité} des stratifications testées} --- covalent, ionique,
+métallique, \texttt{is\_metal} des deux côtés, tous significatifs à
+$p<0{,}01$ au minimum. Ce n'est le cas d'\emph{aucun} autre descripteur
+de ce rapport : la population antiliante brute (\S\ref{sec:antibonding})
+ne garde que son sous-groupe covalent, l'ICOHP de réaction
+(\S\ref{sec:reaction-icohp}) perd toute stratification \texttt{bond\_type}
+et ne survit que sur \texttt{is\_metal}. $\Delta$(ICOBI antiliant) est
+plus mitigé : survit sur métallique et \texttt{is\_metal} (les deux
+côtés) mais pas sur covalent ($p=0{,}29$) ni ionique ($p=0{,}67$). Reste
+une construction nouvelle (\S précédent) --- sa magnitude devra être
+reproduite sur un jeu de données indépendant avant d'être prise comme un
+résultat définitivement acquis, mais la survie à une stratification
+complète en fait, en l'état, le résultat le plus solide du projet.
 
 \end{document}
