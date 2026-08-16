@@ -1,0 +1,20 @@
+{
+  "label": "NaP5",
+  "mp_id": "mp-31086",
+  "formula": "NaP5",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "Na-P",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.3542000000000005,
+  "energy_above_hull_eV_per_atom": 0.009960415000000111,
+  "formation_energy_per_atom": -0.2311929974801584,
+  "theoretical": false,
+  "nsites": 24,
+  "spacegroup": "Pnma",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.2312 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

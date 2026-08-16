@@ -1,0 +1,20 @@
+{
+  "label": "BaP10",
+  "mp_id": "mp-28035",
+  "formula": "BaP10",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "Ba-P",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.2963000000000005,
+  "energy_above_hull_eV_per_atom": 0.0036162985064951414,
+  "formation_energy_per_atom": -0.2570918210389595,
+  "theoretical": false,
+  "nsites": 22,
+  "spacegroup": "Cmc2_1",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.2571 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

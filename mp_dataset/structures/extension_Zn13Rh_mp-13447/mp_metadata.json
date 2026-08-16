@@ -1,0 +1,20 @@
+{
+  "label": "Zn13Rh",
+  "mp_id": "mp-13447",
+  "formula": "Zn13Rh",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Rh-Zn",
+  "source_query_note": "negative",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "formation_energy_per_atom": -0.13494432535714346,
+  "theoretical": false,
+  "nsites": 14,
+  "spacegroup": "C2/m",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.1349 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

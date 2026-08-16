@@ -1,0 +1,20 @@
+{
+  "label": "KMg15",
+  "mp_id": "mp-1023498",
+  "formula": "KMg15",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "K-Mg",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.10105966356250029,
+  "formation_energy_per_atom": 0.10105966356250029,
+  "theoretical": true,
+  "nsites": 16,
+  "spacegroup": "P-6m2",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=0.1011 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

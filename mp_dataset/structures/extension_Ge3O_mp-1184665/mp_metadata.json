@@ -1,0 +1,20 @@
+{
+  "label": "Ge3O",
+  "mp_id": "mp-1184665",
+  "formula": "Ge3O",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "Ge-O",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.89046678375,
+  "formation_energy_per_atom": 0.08172090999999959,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "I4/mmm",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=0.0817 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

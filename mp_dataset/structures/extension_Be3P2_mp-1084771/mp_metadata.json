@@ -1,0 +1,20 @@
+{
+  "label": "Be3P2",
+  "mp_id": "mp-1084771",
+  "formula": "Be3P2",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "Be-P",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 0.2102000000000004,
+  "energy_above_hull_eV_per_atom": 0.15672523674999983,
+  "formation_energy_per_atom": -0.0746364168571425,
+  "theoretical": true,
+  "nsites": 10,
+  "spacegroup": "Pn-3m",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.0746 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

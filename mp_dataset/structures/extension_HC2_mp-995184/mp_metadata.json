@@ -1,0 +1,20 @@
+{
+  "label": "HC2",
+  "mp_id": "mp-995184",
+  "formula": "HC2",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "periodic_wide",
+  "chemsys": "C-H",
+  "source_query_note": "positive",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.1491960781249988,
+  "formation_energy_per_atom": 0.04271132354166459,
+  "theoretical": true,
+  "nsites": 6,
+  "spacegroup": "C2/m",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=0.0427 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

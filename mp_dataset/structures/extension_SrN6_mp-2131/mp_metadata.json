@@ -1,0 +1,20 @@
+{
+  "label": "SrN6",
+  "mp_id": "mp-2131",
+  "formula": "SrN6",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "N-Sr",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 3.6681,
+  "energy_above_hull_eV_per_atom": 0.009174299285714227,
+  "formation_energy_per_atom": -0.25793000178571546,
+  "theoretical": false,
+  "nsites": 14,
+  "spacegroup": "Fddd",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.2579 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}

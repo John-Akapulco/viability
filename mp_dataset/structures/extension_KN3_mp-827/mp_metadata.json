@@ -1,0 +1,20 @@
+{
+  "label": "KN3",
+  "mp_id": "mp-827",
+  "formula": "KN3",
+  "family": "extension",
+  "batch": "marginal_formation_energy_campaign",
+  "campaign_source": "ionic_targeted",
+  "chemsys": "K-N",
+  "source_query_note": "extended",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 4.1465,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "formation_energy_per_atom": -0.2211123337500016,
+  "theoretical": false,
+  "nsites": 8,
+  "spacegroup": "I4/mcm",
+  "note": "marginal_formation_energy_campaign: selected for formation_energy_per_atom=-0.2211 eV/atom near the marginal boundary; see marginal_candidates_merged.json / select_marginal_formation_energy.py / select_marginal_ionic.py for the exact selection rule."
+}
