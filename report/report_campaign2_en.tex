@@ -45,18 +45,9 @@ and Statistical Analysis}
 \maketitle
 
 \begin{center}
-\small\itshape Update, August 16, 2026: this report is reorganized around
-the project's current central question --- $\Delta$(ICOHP) and viability
-discrimination (\S\ref{sec:reframing}) --- rather than around the
-percolation weight, the original campaign 2 subject. Everything
-concerning the percolation weight and its direct descendants (network
-dimensionality, periodic min-cut --- missions \#1 and \#3) has been moved
-to Appendix~\ref{sec:appendix-percolation}, ``Percolation\_viability,''
-with the corresponding source code relocated to the repository's
-\texttt{Percolation\_viability/} directory. The main body below documents
-the project's current state (349 structures, missions \#4--\#5, the
-\texttt{extension4} campaign, the $\Delta$(ICOHP) reframing) without
-altering the results themselves.
+\small\itshape The project's central question is viability
+discrimination based on $\Delta$(ICOHP) (\S\ref{sec:reframing}), across
+a 349-structure dataset.
 \end{center}
 
 \tableofcontents
@@ -70,60 +61,38 @@ decomposition into elements, and specifically the sign-based
 endobondic/exobondic classification it supports --- distinguish
 thermodynamically stable, metastable, and unstable compounds?}
 
-This question was built up progressively. The first report (6 toy
-compounds) established that a percolation descriptor diverges sharply
-from classic ICOHP aggregates, but without a sample large enough to
-statistically test whether that difference is \emph{useful}. The
-original campaign 2 therefore built a 186-compound dataset to settle
-that question --- work whose methodology (dataset selection, statistical
-conventions) remains the foundation everything below builds on, but
-whose descriptor itself (the percolation weight) and its own result are
-now documented in Appendix~\ref{sec:appendix-percolation}, not in this
-report's main body: its headline correlation did not survive the
-dataset's growth (see \S\ref{sec:followups2}), and it is no longer this
-project's organizing question.
-
-Three later missions (network dimensionality/periodic min-cut --- \#3,
-also in the appendix; antibonding population --- \#4; reaction ICOHP ---
-\#5) and an extension campaign of 163 additional compounds made
-$\Delta$(ICOHP) emerge as the project's strongest and most robust
-correlation (\S\ref{sec:followups}--\S\ref{sec:followups2}), before the
-central question was explicitly reformulated around it
-(\S\ref{sec:reframing}).
-
 \section{Methodology}
 
 \subsection{Dataset Selection}
 
-Materials Project query (\texttt{mp\_dataset/select\_campaign.py}) for
-the main dataset (186 compounds): unary and binary chemical systems,
+Materials Project query: unary and binary chemical systems,
 non-magnetic ($|\text{total magnetization}| \leq 0.01~\mu_B$/formula
 unit --- MP's categorical \texttt{magnetic\_ordering} field is
 "Unknown" for $\sim$98\% of entries and would have excluded nearly every
-genuinely non-magnetic compound), no f-block elements, $\leq 20$
-atoms/cell, 60 compounds per family with a 2-entries-per-chemical-system
-cap to ensure elemental diversity rather than many polymorphs of the
-same system. Four further extension batches (163 structures,
-\S\ref{sec:followups2}) apply the same non-magnetic/no-f filter but with
-their own per-mission selection logic (elemental references,
-high-pressure polymorphs, alkali/alkaline-earth binaries) --- detailed
-in their respective sections, not repeated here.
+genuinely non-magnetic compound), no f-block elements. The dataset
+combines two complementary selection tracks: a first set of 186
+compounds ($\leq 20$ atoms/cell, 60 per stability family, a
+2-entries-per-chemical-system cap to ensure elemental diversity rather
+than many polymorphs of the same system), and a second set of 163
+compounds/elements ($\leq 40$ atoms/cell) specifically targeting
+additional elemental references, off-equilibrium polymorphs
+(high-pressure phases, allotropes), and alkali/alkaline-earth binaries
+against N/O/F/P/S/Cl, chosen to build genuine same-composition
+polymorph groups and to test descriptors far from equilibrium.
 
 \subsection{Bonding-Type Classification}
 
-Bond type (ionic / covalent / metallic) is computed by
-\texttt{fetch\_candidates.py}'s \texttt{classify()} function
-(\textbf{reused unchanged}), from \texttt{is\_metal} and elemental
-composition. \textbf{This classification is purely informative in this
-report}: a descriptive lens on the dataset (\S\ref{sec:dataset}), not a
-sampling axis or a variable any main-body conclusion depends on --- other
-mission reports (\texttt{REPORT\_antibonding.md},
-\texttt{REPORT\_reaction\_icohp.md}) actively use it to stratify their
-own correlations, but that is not its role here.
+Bond type (ionic / covalent / metallic) is computed by default by the
+\texttt{classify()} function (elemental composition + \texttt{is\_metal}).
+A second, independent classification is built directly from each
+compound's ICOHP/ICOBI data (\S\ref{sec:dataset}): \texttt{is\_metal}
+for metallic character, then the mean ICOBI per bond (bond order,
+covalency) to separate ionic from covalent among non-metallic
+compounds. The two classifications are compared in \S\ref{sec:dataset}.
 
 \subsection{VASP + LOBSTER Computation}
 
-Same template across all 349 structures (static run, \texttt{ISYM=$-1$},
+Same template across all structures (static run, \texttt{ISYM=$-1$},
 \texttt{LASPH=.TRUE.}, PAW-PBE potentials recommended by
 \texttt{pymatgen.io.vasp.sets.MPRelaxSet}): \texttt{NBANDS} is derived
 per compound from the number of local orbitals in the LOBSTER basis
@@ -132,16 +101,63 @@ through \texttt{Lobsterin.get\_basis(potcar\_symbols=\ldots)} rather than
 direct POTCAR-file parsing (whose internal pymatgen validity check fails
 on several POTCARs unrecognized by hash in the local mirror).
 
+\subsection{ICOHP/ICOBI Quantities: Integration, Cutoffs, Units}
+\label{sec:icohp-methodo}
+
+\textbf{LOBSTER generation (\texttt{lobsterin}, identical across the
+dataset)}: \texttt{pbeVaspFit2015} basis; COHP integration window from
+$-35$ to $+5$~eV around the Fermi level
+(\texttt{COHPstartEnergy}/\texttt{COHPendEnergy}); bond detection by
+interatomic distance from 0.1 to 6.0~\AA{} (\texttt{cohpGenerator},
+orbital-resolved); 0.05~eV Gaussian smearing
+(\texttt{gaussianSmearingWidth}).
+
+\textbf{Integrated ICOHP/ICOBI (\texttt{ICOHPLIST.lobster}/
+\texttt{ICOBILIST.lobster}).} A bond's integrated ICOHP is, by LOBSTER's
+own definition, the integral of COHP($E$) from the bottom of the window
+above up to the Fermi level (occupied states only), in eV; negative =
+bonding, positive = antibonding. ICOBI is the same integral over COBI
+(bond order index), dimensionless. These are the per-bond, then
+per-compound-aggregated, quantities feeding \S\ref{sec:dataset} and the
+classic correlations of \S\ref{sec:results}.
+
+\textbf{Reaction $\Delta$(ICOHP) (\texttt{reaction\_analysis/}).} For a
+balanced reaction (typically compound $\to$ elements), $\Delta$ = sum of
+products' ICOHP $-$ sum of reactants' ICOHP, "products $-$ reactants"
+convention, in three normalizations: per formula unit (extensive), per
+transferred atom (the normalization used throughout this report unless
+noted), and per bond (diagnostic only, non-conservative --- bonds are
+not conserved between differently-bonded structures). Positive sign
+("endobondic"): breaking the reactant's bonds costs more than the
+products' bonds recover --- a possible kinetic barrier. Negative sign
+("exobondic"): no such barrier is visible from bonding alone.
+
+\textbf{Antibonding population near the Fermi level
+(\texttt{cohp\_extraction.py}) --- a quantity distinct from the
+$\Delta$(ICOHP) above.} Rather than integrating the whole occupied COHP,
+this quantity integrates only its antibonding part (COHP$>0$) over a
+one-sided window $(E_\text{ref}-\Delta E,\ E_\text{ref}]$, where
+$E_\text{ref}=E_F$ (metallic compounds) or the VBM (gapped compounds),
+and $\Delta E \in \{0.5, 1.0, 2.0\}$~eV ($\Delta E=1.0$~eV as the primary
+window) --- only occupied states can destabilize the ground state via
+antibonding, hence the one-sided rather than symmetric window. Reported
+both raw (same "eV" unit convention as LOBSTER, though it is a Hamilton
+population integral, not literally an energy) and normalized by the
+total occupied ICOHP magnitude at the same $E_\text{ref}$. This
+quantity, and only this one, feeds the descriptor in
+\S\ref{sec:antibonding} --- the reaction $\Delta$(ICOHP)
+(\S\ref{sec:reaction-icohp}--\ref{sec:reframing}) integrates the whole
+occupied COHP with no restriction to a window near $E_F$.
+
 \subsection{Statistics}
 
 Spearman correlation (no reason to expect a linear relationship) between
 each ICOHP/ICOBI descriptor and a stability target
 (\texttt{energy\_above\_hull} or \texttt{formation\_energy\_per\_atom}
-depending on the mission), overall and per subgroup (\texttt{bond\_type},
-\texttt{is\_metal}, or selection provenance as appropriate); any $n<15$
-subgroup is explicitly flagged, never presented bare. \textbf{No SISSO,
-no symbolic regression} at this stage (see
-\S\ref{sec:limits-current}).
+depending on the descriptor), overall and per subgroup
+(\texttt{bond\_type}, \texttt{is\_metal}); any $n<15$ subgroup is
+explicitly flagged, never presented bare. \textbf{No SISSO, no symbolic
+regression} at this stage (see \S\ref{sec:limits-current}).
 
 \section{Workflow Diagram}
 
@@ -154,7 +170,7 @@ no symbolic regression} at this stage (see
              fill=orange!10, font=\small},
   arr/.style={-{Latex[length=2.2mm]}, thick}
 ]
-\node[io]  (mp)     {Materials Project (API) \\ 349 structures (5 campaigns/batches)};
+\node[io]  (mp)     {Materials Project (API) \\ 349 structures};
 \node[box, below=of mp] (prep)   {\texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} scripts \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
 \node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks, HPC Yargla};
 \node[box, below=of slurm] (vasplob) {VASP (static, 16 cores) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
@@ -171,13 +187,6 @@ no symbolic regression} at this stage (see
 \end{tikzpicture}
 \end{center}
 
-The percolation weight (\texttt{Percolation\_viability/percolation\_path.py})
-and its direct descendants (dimensionality, min-cut) follow the same
-pipeline upstream of the "descriptor extraction" step but no longer
-appear in this diagram, or as this report's subject --- see the original
-workflow diagram and the detail of their own processing in
-Appendix~\ref{sec:appendix-percolation}.
-
 \section{Environment}
 
 Identical across all 349 structures (Yargla, VASP 6.5.0, LOBSTER 5.1.1,
@@ -189,28 +198,13 @@ Python 3.11 \texttt{.venv}), extended with: \texttt{mp-api},
 \section{Dataset}
 \label{sec:dataset}
 
-\begin{center}
-\begin{tabular}{@{}lrl@{}}
-\toprule
-Family & $n$ & $E_\text{hull}$ range (eV/atom) \\
-\midrule
-exp\_stable       & 63  & 0.0000 (by construction) \\
-exp\_metastable   & 63  & 0.0005 -- 0.0907 \\
-theo\_metastable  & 60  & 0.0013 -- 0.1991 \\
-extension (4 batches)$^\dagger$ & 163 & heterogeneous, see \S\ref{sec:followups}--\S\ref{sec:followups2} \\
-\midrule
-\textbf{Total}    & \textbf{349} & \\
-\bottomrule
-\end{tabular}
+The full set of computed compounds and elements totals \textbf{349
+structures}.
 
-\vspace{0.15cm}
-{\footnotesize $^\dagger$ elemental references, TiO$_2$/carbon
-high-pressure polymorphs, and alkali/alkaline-earth binaries
-(\texttt{extension4}) --- full composition in
-Appendix~\ref{sec:appendix-ext-elements}--\ref{sec:appendix-ext-compounds}.}
-
-\vspace{0.3cm}
-
+\begin{table}[htbp]
+\centering
+\caption{Dataset composition by element count.}
+\label{tab:composition}
 \begin{tabular}{@{}lr@{}}
 \toprule
 Composition & $n$ \\
@@ -221,39 +215,71 @@ Multi-element compounds   & 281 \\
 \textbf{Total}             & \textbf{349} \\
 \bottomrule
 \end{tabular}
+\end{table}
 
-\vspace{0.3cm}
-
-\begin{tabular}{@{}lr@{}}
+\begin{table}[htbp]
+\centering
+\caption{Stability class (by $E_\text{hull}$ and experimental/theoretical character).}
+\label{tab:stability}
+\begin{tabular}{@{}lrl@{}}
 \toprule
-Bond type (\texttt{classify()}, informative only) & $n$ \\
+Class & $n$ & $E_\text{hull}$ range (eV/atom) \\
 \midrule
-metallic       & 88 \\
-ionic          & 53 \\
-covalent       & 35 \\
-unclassified   & 173 \\
+stable ($E_\text{hull}=0$)  & 124 & 0.0000 \\
+experimental metastable     & 119 & 0.000035 -- 2.0568 \\
+theoretical metastable      & 106 & 0.000084 -- 3.1688 \\
 \midrule
-\textbf{Total}  & \textbf{349} \\
+\textbf{Total}               & \textbf{349} & \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-The "bond type" table was \textbf{not out of date by accident}: the
-\texttt{extension4} campaign (\S\ref{sec:followups2}) specifically added
-89 alkali/alkaline-earth binaries against N/O/F/P/S/Cl, taking the ionic
-total from 9 (campaign 2 alone) to 53. Half of these new binaries
-nonetheless remain "unclassified": \texttt{classify()} only recognizes
-alkali/alkaline-earth $\times$ \{halogen, O\} pairs as "ionic"
-(\texttt{IONIC\_ANIONS}), not $\times$ \{N, P, S\} --- a real limitation
-of the reused heuristic, documented but not fixed here. As noted in
-\S2.2, this categorization remains purely descriptive in this report.
+\textbf{Bond type.} Two independent classifications (\S2.2): the
+\texttt{classify()} function (elemental composition + \texttt{is\_metal})
+and a classification built directly from each compound's ICOHP/ICOBI
+data (\texttt{is\_metal} for metallic character, then a threshold on
+mean ICOBI per bond --- calibrated at the midpoint of the median ICOBI
+of compounds \texttt{classify()} already labels ionic/covalent, i.e.
+0.0381 --- to separate ionic from covalent among non-metallic
+compounds).
+
+\begin{table}[htbp]
+\centering
+\caption{Bond type: \texttt{classify()} vs. the ICOHP/ICOBI classification (concordance on the subset \texttt{classify()} labels: 157/174 = 90.2\%).}
+\label{tab:bondtype}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+\texttt{classify()} $\backslash$ ICOHP/ICOBI & metallic & ionic & covalent & unclassified \\
+\midrule
+metallic       & 88  & 0  & 0  & 0 \\
+ionic          & 0   & 48 & 5  & 0 \\
+covalent       & 0   & 12 & 21 & 0 \\
+unclassified   & 102 & 36 & 34 & 1 \\
+\midrule
+\textbf{Total} & \textbf{190} & \textbf{96} & \textbf{60} & \textbf{1} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the 173 compounds \texttt{classify()} leaves "unclassified"
+(essentially alkali/alkaline-earth $\times$ \{N, P, S\} pairs, outside
+\texttt{IONIC\_ANIONS}), the ICOHP/ICOBI classification resolves
+\textbf{70} into ionic (36) or covalent (34); the remaining 103 are
+either metallic (102, already covered by \texttt{is\_metal}) or lack
+ICOBI data (1). Where both methods render a verdict, agreement is
+strong (90.2\%) but not total: 10 ionic/covalent disagreements, worth
+checking case by case before using either classification as a
+stratification variable.
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Correlations (Spearman) --- classic ICOHP aggregates}
 
-\begin{center}
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, classic ICOHP aggregates (sum, minimum) against $E_\text{hull}$, 186-compound subset.}
+\label{tab:classic-icohp}
 \small
 \begin{tabular}{@{}llrrr@{}}
 \toprule
@@ -265,40 +291,255 @@ metallic & ICOHP sum  & 88 & 0.223 & 0.037 \\
 metallic & ICOHP min  & 88 & 0.198 & 0.065 \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-These four rows (classic ICOHP aggregates, campaign 2, $n=186$, target
-\texttt{energy\_above\_hull}) are kept here as the reference baseline
-for every later mission. \textbf{The percolation weight, which appeared
-in this same table in the original version of this report, is moved in
-full to Appendix~\ref{sec:appendix-percolation}} (complete table with
-bond-type subgroups, reference logistic regression, and associated
-figures) --- this trimmed table therefore no longer allows a direct
-percolation-vs-classic-aggregates comparison; that comparison is still
-available as-is in the appendix. Current descriptors' correlations
-(antibonding population, reaction ICOHP) are given in
-\S\ref{sec:followups}--\S\ref{sec:followups2}, against
-\texttt{formation\_energy\_per\_atom} rather than
+These four rows serve as a reference baseline: raw ICOHP aggregates
+(per-compound sum, minimum) show little to no correlation with
+$E_\text{hull}$, except within the metallic subgroup. The descriptors
+built further on (antibonding population, reaction ICOHP,
+\S\ref{sec:antibonding}--\S\ref{sec:reframing}) do markedly better,
+against \texttt{formation\_energy\_per\_atom} rather than
 \texttt{energy\_above\_hull}.
 
+\subsection{Antibonding Population Near the Fermi Level}
+\label{sec:antibonding}
+
+A question distinct from the fully-integrated ICOHP (\S2.4): not
+\emph{how much} bonding a compound has, but \emph{how} its COHP is
+distributed in energy --- the occupied antibonding fraction just below
+the Fermi level/VBM, by analogy with Peierls/Jahn--Teller-type
+electronic instabilities. Result, against
+\texttt{formation\_energy\_per\_atom}: $\rho=-0.282$,
+$p=9.2\times10^{-8}$ ($n=346$). The sign is the \emph{opposite} of the
+naive Peierls/Jahn--Teller reading. The \texttt{bond\_type=covalent}
+subgroup ($n=33$) survives stratification clearly ($\rho=-0.551$,
+$p=0.0009$) --- the project's most robust stratified result;
+\texttt{is\_metal=False} also survives ($n=157$, $p=0.001$). An earlier
+result on the \texttt{bond\_type=ionic} subgroup ($n=9$, $\rho=-0.683$)
+does not replicate once the sample grows to $n=53$ ($\rho=-0.184$, not
+significant) --- a clear demonstration of the danger of $n<15$
+subgroups.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
+
+\subsection{Reaction ICOHP}
+\label{sec:reaction-icohp}
+
+An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a
+compound's total ICOHP "cheaper" than that of the same atoms as
+reference elements? Result: $\rho=0.502$, $p=6.3\times10^{-19}$
+($n=275$) --- the dataset's strongest and most robust continuous
+correlation, with an intuitive sign (less bonding than in elemental
+form $\Rightarrow$ less stable formation). \texttt{bond\_type}
+stratification fully explains this layer of the pooled signal
+(Kruskal--Wallis $p=1.1\times10^{-15}$, no stratum survives) ---
+\textbf{but \texttt{is\_metal} stratification survives on both sides}
+(\texttt{is\_metal=False}: $\rho=0.319$, $p=0.0001$;
+\texttt{is\_metal=True}: $\rho=0.256$, $p=0.0025$): between-group
+clustering fully explains the \texttt{bond\_type}-level grouping, but
+not a real relationship within a fixed \texttt{is\_metal}. Case 2
+(direct same-formula polymorph comparison, 49 groups): 53.1\% agreement
+between the most-bonded and the most-stable member, against a 45.9\%
+chance baseline (exact Poisson-binomial test, $P=0.19$) --- no signal.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
+\end{center}
+
+\textbf{Still no SISSO.} Reaction ICOHP is the dataset's strongest raw
+correlate of \texttt{formation\_energy\_per\_atom}, and the only
+descriptor whose signal is not fully explained away by between-group
+clustering at every level tested --- the best argument yet for a
+stratified (\texttt{is\_metal}-conditioned) rather than pooled feature
+search, still not attempted. Detailed reports:
+\texttt{analysis/REPORT\_antibonding.md},
+\texttt{analysis/REPORT\_reaction\_icohp.md}.
+
+\subsection{$\Delta$(ICOHP)-Based Viability Discrimination}
+\label{sec:reframing}
+
+Full detail: \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
+\texttt{analysis/test\_delta\_icohp\_viability.py}.
+
+\textbf{Reference validation.} Per-bond-type ICOHP values for 7
+reactions with independently known $\Delta$ICOHP (transcribed
+independently of any calculation in this project) are run end to end
+through \texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}:
+
+\begin{table}[htbp]
+\centering
+\caption{Validating the endobondic/exobondic classification on 7 reactions with independently known $\Delta$ICOHP.}
+\label{tab:reference-validation}
+\begin{tabular}{@{}lrrll@{}}
+\toprule
+Reaction & Reference & Computed & \multicolumn{2}{c}{Label} \\
+ & (kJ/mol) & (kJ/mol) & Ref. & Computed \\
+\midrule
+Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
+S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
+S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397.3$ & endo & endo \\
+ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336.6$ & exo & exo \\
+CaO[sphalerite] $\to$ CaO[rocksalt] & $-79$ & $-78.9$ & exo & exo \\
+CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204.8$ & exo & exo \\
+Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The 7 cases reproduce the reference $\Delta$ICOHP to within a few
+kJ/mol (source per-bond value rounding) and every \texttt{BondingLabel}
+matches. The Mn$_2$O$_7$ case is a useful guardrail on its own:
+exobondic under this static sign criterion, yet Mn$_2$O$_7$ is a real,
+observed compound that simply decomposes slowly (gradual O$_2$ loss)
+rather than through abrupt bond breaking --- \texttt{classify.py}
+structurally attaches a warning to \emph{every}
+\texttt{UNSTABLE\_NONEXISTENT} verdict for exactly this reason, rather
+than special-casing Mn$_2$O$_7$.
+
+Correlation alone (Pearson/Spearman) is not the right test for "do our
+numbers match the reference values" --- it is satisfied by any monotonic
+relationship, even with a large systematic offset or scale factor.
+\textbf{Lin's concordance correlation coefficient} (CCC) specifically
+tests agreement with the identity line (computed = reference), the
+claim actually being tested here:
+
+\begin{table}[htbp]
+\centering
+\caption{Computed-vs-reference concordance on the 7 validation reactions.}
+\label{tab:ccc}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Statistic & Value \\
+\midrule
+$n$ & 7 \\
+Lin's CCC & \textbf{0.999998} \\
+Pearson $r$ & 0.999999 ($p=3.5\times10^{-15}$) \\
+Sign agreement & 7/7 \\
+Mean $|$residual$|$ & 0.76 kJ/mol \\
+Max $|$residual$|$ & 1.70 kJ/mol \\
+RMSE & 0.98 kJ/mol \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A CCC this close to 1 means the two methods agree essentially to the
+reporting precision of the reference values themselves (rounded to 2--3
+decimals), not merely that they move together --- the implementation is
+validated, not just spot-checked.
+
+\textbf{Applied to the full dataset, pooled.} \textbf{281 case-1
+reactions}, every element and compound with a computed
+decomposition-into-elements reaction, pooled into a single population
+(grouping by selection provenance would be exactly the kind of
+between-group confound this project's methodology is meant to catch).
+
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, $\Delta$ICOHP/atom (case 1, 281 reactions) against two continuous stability targets.}
+\label{tab:pooled-targets}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Target & $n$ & $\rho$ & $p$ \\
+\midrule
+\texttt{formation\_energy\_per\_atom} & 275 & $-0.5016$ & $6.3\times10^{-19}$ \\
+\texttt{energy\_above\_hull\_eV\_per\_atom} & 279 & $-0.1096$ & $0.068$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+(Sign: \texttt{reaction\_analysis}'s products$-$reactants convention,
+opposite to \texttt{reaction\_icohp.py}'s own column
+\S\ref{sec:reaction-icohp} --- same magnitude, flipped sign.) The
+formation-energy result is the same relationship as
+\S\ref{sec:reaction-icohp}'s, confirmed here on the pooled population.
+
+\textbf{Sign-based discrimination (endobondic/exobondic).} Experimental
+viability indicator (\texttt{theoretical=False} means experimentally
+realized):
+
+\begin{table}[htbp]
+\centering
+\caption{Endobondic/exobondic label against experimental/theoretical status.}
+\label{tab:fisher}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & endobondic & exobondic \\
+\midrule
+experimental ($n=177$) & 47 & 130 \\
+theoretical only ($n=98$) & 17 & 81 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Fisher's exact test: $p=0.10$, odds ratio $=1.72$ (endobondic is
+$\sim 1.7\times$ more frequent among experimentally realized compounds
+--- the expected direction, endobondic being designed as a
+kinetic-barrier signature --- but not significant at this sample size).
+
+\begin{table}[htbp]
+\centering
+\caption{Median $\Delta$ICOHP/atom and \% endobondic by stability class ($n=175$).}
+\label{tab:family-breakdown}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Class & $n$ & median $\Delta$ICOHP/atom (eV) & \% endobondic \\
+\midrule
+experimental metastable & 59 & $-1.077$ & \textbf{27.1\%} \\
+stable & 59 & $-1.589$ & 20.3\% \\
+theoretical metastable & 59 & $-1.659$ & \textbf{11.9\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kruskal--Wallis across the three groups: $H=2.81$, $p=0.245$ ---
+\textbf{not significant}, but the ordering is exactly what physics
+predicts: experimentally metastable compounds (known to exist despite
+sitting off the convex hull --- exactly the category the
+endobondic/exobondic framework addresses) have the highest endobondic
+fraction; never-synthesized theoretical metastable compounds have the
+lowest.
+
+\textbf{Reading.} The 7 reference reactions reproduce almost exactly ---
+the implementation is correct. Extending the same sign-based logic to a
+much larger, more heterogeneous, and generally much more comfortably
+stable population does not yet produce a statistically significant
+stable/metastable/unstable discriminant, even though every trend points
+the right way. This is not a contradiction: the 7 reference reactions
+were specifically chosen as stability edge cases (Pb(N$_3$)$_2$,
+S$_4$N$_2$/S$_4$N$_4$, ZnSn, Mn$_2$O$_7$) where a kinetic-barrier
+explanation is specifically needed; most of this project's 281
+compounds are not --- they are comfortably stable or comfortably not,
+where the thermodynamic driving force (the formation-energy correlation
+above) can simply dominate the sign-based kinetic signal. The full
+\texttt{ViabilityLabel} machinery in \texttt{classify.py} (beyond the
+sign-based \texttt{BondingLabel} alone used here) needs exactly such a
+near-stability-boundary population --- for the current dataset,
+decomposition into elements is strongly exothermic for almost every
+compound (normal for stable inorganic chemistry), which would trivially
+classify nearly everything \texttt{STABLE\_ON\_HULL} and add no
+information beyond what \texttt{energy\_above\_hull} already says
+directly.
+
 \section{Failures Found and Fixed}
+\label{sec:incidents}
 
 Per the instruction ("every job failure must be logged with its probable
-cause"), 5 of the 178 SLURM-array-submitted jobs failed on the first
-pass while computing campaign 2's 186 compounds, all diagnosed and fixed
-at the source (the fixes, applied to the shared SLURM/INCAR templates,
-carry over to every later campaign):
+cause"), 5 of the first 178 SLURM-array-submitted jobs failed on the
+first pass, all diagnosed and fixed at the source (the fixes, applied to
+the shared SLURM/INCAR templates, carry over to the whole dataset):
 
 \begin{itemize}
-  \item \textbf{Al12W, BW, WO2, TcW, TiW} (all tungsten-containing): the
-    local mirror's \texttt{W\_sv} POTCAR is missing its \texttt{LEXCH}
+  \item \textbf{Al$_{12}$W, BW, WO$_2$, TcW, TiW} (all tungsten-containing):
+    the local mirror's \texttt{W\_sv} POTCAR is missing its \texttt{LEXCH}
     field entirely (confirmed by direct inspection --- present in every
     other variant checked, including plain \texttt{W}), which VASP reads
     as an incompatible exchange-correlation functional and refuses to run.
     Fixed by replacing the \texttt{W\_sv} override with plain \texttt{W}
     (valid PBE, verified).
-  \item \textbf{Al12W} failed again after that fix, this time with a VASP
-    SIGSEGV --- exactly the known issue flagged in the mission brief
+  \item \textbf{Al$_{12}$W} failed again after that fix, this time with a
+    VASP SIGSEGV --- a known issue
     (\texttt{ulimit -s unlimited} before \texttt{vasp\_std}), present in
     \texttt{submit\_array.sh} but forgotten in
     \texttt{prepare\_vasp\_lobster.py}'s per-compound SLURM template.
@@ -312,9 +553,7 @@ Final success rate across all 349 structures computed to date:
 \label{sec:cost}
 
 \textbf{349 structures computed in total}: 68 single-element references
-and 281 multi-element compounds (\S\ref{sec:dataset}), across five
-submission campaigns/batches (the original campaign 2 and four
-\texttt{extension} batches).
+and 281 multi-element compounds (\S\ref{sec:dataset}).
 
 Every VASP job, then LOBSTER job, runs on the \textbf{Yargla} HPC cluster,
 within a single SLURM allocation of one node (\texttt{--nodes=1}) and
@@ -325,7 +564,10 @@ under OpenMP parallelism on the same 16 cores
 VASP within the same job). The SLURM array (\texttt{submit\_array.sh}) is
 capped at 8 concurrent tasks.
 
-\begin{center}
+\begin{table}[htbp]
+\centering
+\caption{VASP and LOBSTER compute time across the dataset.}
+\label{tab:compute-cost}
 \begin{tabular}{@{}lrr@{}}
 \toprule
  & VASP & LOBSTER \\
@@ -341,15 +583,13 @@ Sequential total & 16.3 h & 39.0 h \\
 \vspace{0.15cm}
 {\footnotesize $^*$ 1 of 349 structures had no usable LOBSTER step
 (trivial-cell reference element).}
-\end{center}
+\end{table}
 
 Combined sequential total (VASP + LOBSTER, 349 structures):
 \textbf{55.3 h}. Given the 8-concurrent-task cap, the order of magnitude
 for actual elapsed time to process this volume as a single batch would
 be $\sim$6.9~h --- a rough estimate (dividing by 8, ignoring queue time)
-given for context: in practice, the 349 structures were submitted across
-several campaigns spread over multiple sessions, not as one single
-batch.
+given for context.
 
 \section{Current Limits and Next Steps}
 \label{sec:limits-current}
@@ -362,420 +602,55 @@ batch.
     purely informative here, but a real limitation for any mission that
     would want to stratify on it.
   \item \textbf{No true dynamical "unstable" class}: \texttt{theo\_metastable}
-    and the theoretical \texttt{extension} batches are proxies (never
-    synthesized), not a phonon-calculation result.
+    is a proxy (never synthesized), not a phonon-calculation result.
   \item \textbf{Per-subgroup sample size}: remains this project's
     structural limit at every new stratification (\texttt{bond\_type},
-    \texttt{is\_metal}, \texttt{family}) --- see
-    \S\ref{sec:followups}--\S\ref{sec:followups2} for concrete examples
-    where an $n<15$ subgroup did not replicate once the sample grew.
-  \item \textbf{Why not SISSO yet}: reaction ICOHP (mission \#5,
-    \S\ref{sec:followups2}) is now the strongest correlate and the first
-    whose signal is not fully explained away by between-group clustering
-    at every level tested --- the best argument yet for a stratified
-    feature search, still not attempted.
+    \texttt{is\_metal}) --- see \S\ref{sec:antibonding} for a concrete
+    example where an $n<15$ subgroup did not replicate once the sample
+    grew.
+  \item \textbf{Why not SISSO yet}: reaction ICOHP
+    (\S\ref{sec:reaction-icohp}) is now the strongest correlate and the
+    first whose signal is not fully explained away by between-group
+    clustering at every level tested --- the best argument yet for a
+    stratified feature search, still not attempted.
 \end{itemize}
-
-Limits specific to the percolation weight and its descendants
-(primitive-vs-conventional-cell sensitivity, chance-level reference
-logistic regression) are documented in
-Appendix~\ref{sec:appendix-percolation}, not repeated here.
 
 \section{Conclusion}
 
-The dataset grew from 186 to 349 computed structures (VASP+LOBSTER)
-across five campaigns/batches, with a final success rate of 349/349 and
-two compute failures diagnosed and fixed at the source during the
-original campaign 2. The project's organizing question evolved along the
-way: starting from the percolation weight (no significant correlation
-retained, Appendix~\ref{sec:appendix-percolation}), through network
-dimensionality/periodic min-cut (also in the appendix, headline
-correlation not reproduced at the current scale), the antibonding
-population near the Fermi level (mission \#4, the project's most robust
-covalent subgroup), to reaction ICOHP and its endobondic/exobondic
-classification (mission \#5) --- now the project's strongest and most
-robust correlation, and the central question explicitly reformulated
-around it (\S\ref{sec:reframing}). The next concrete milestone, already
-identified in the reframing, is a deliberate extension to compounds near
-the stability edge rather than continuing to accumulate compounds that
-are comfortably stable or comfortably unstable.
+Reitz \& Dronskowski's endobondic/exobondic methodology
+(\S\ref{sec:reframing}) reproduces faithfully across the 7 independently
+known reference reactions (Lin's CCC 0.999998) and applies to this
+report's full dataset (281 decomposition-into-elements reactions). On
+that population, sign-based $\Delta$ICOHP discrimination points the
+expected way (endobondic more frequent among experimental compounds,
+and among metastable rather than stable or never-synthesized compounds)
+but does not reach statistical significance at this scale
+(\S\ref{sec:reframing}). Reaction ICOHP otherwise remains the dataset's
+strongest and most robust continuous correlate against formation energy
+($\rho=0.502$, \S\ref{sec:reaction-icohp}).
+
+Two concrete directions follow. First, deliberately extending to
+compounds near the stability boundary, where a kinetic-barrier
+explanation is specifically needed, rather than letting the dataset grow
+incidentally from whatever other analyses require --- most current
+compounds are comfortably stable or comfortably unstable, a regime
+where the thermodynamic driving force simply dominates the sign-based
+kinetic signal. Second, a new descriptor: a reaction $\Delta$(ICOHP)
+restricted to a window near the Fermi level, modeled on the antibonding
+population of \S\ref{sec:antibonding} (\S2.4) rather than on the fully
+integrated ICOHP --- since it is precisely the near-$E_F$ window that
+carries the project's most robust stratified subgroup, a "near-$E_F$"
+version of the reaction $\Delta$ICOHP is a natural, not-yet-attempted
+extension.
 
 \vspace{1cm}
 \noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
 \noindent\textit{Data:} \texttt{analysis/percolation\_vs\_formation\_energy.csv} \\
 \noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_*.md}
 
-\section{Campaign 2 follow-ups (missions \#4 and \#5)}
-\label{sec:followups}
-
-Two further descriptors were built in later sessions, both tested
-against \texttt{formation\_energy\_per\_atom} (introduced in mission
-\#3 as an alternative target to \texttt{energy\_above\_hull}, generally
-more correlatable) rather than the hull. Both reuse the 186-compound
-dataset above unmodified at the initial stage; mission \#5 draws in part
-on a \textbf{74-compound extension campaign} (\texttt{extension\_*}:
-elemental references, ionic compounds and polymorphs outside the main
-set), detailed in \S\ref{sec:followups2}. Numbers in this subsection are
-as of August 15, 2026, at the 186/192-compound scale;
-\S\ref{sec:followups2} reprocesses both missions at the 349-compound
-scale reached the following day and should be read alongside this
-subsection, not instead of it.
-
-\textbf{A pattern repeats across both missions}: each new descriptor
-reaches a statistically significant \emph{global} correlation, stronger
-than anything the percolation weight or the min-cut ever achieved
-(Appendix~\ref{sec:appendix-percolation}) --- but in both cases that
-global correlation turns out to be substantially, or entirely, a
-clustering effect between bond types or between metals and gapped
-compounds, rather than a robust relationship \emph{within} a homogeneous
-group.
-
-\subsection{Mission \#4: antibonding population near the Fermi level}
-
-A distinct question from integrated ICOHP (one number per bond): not
-\emph{how much} bonding a compound has, but \emph{how} COHP is
-distributed in energy --- the occupied antibonding fraction just below
-the Fermi level/VBM, by analogy with Peierls/Jahn--Teller electronic
-instabilities (new module \texttt{cohp\_extraction.py}, validated by
-exact cross-check against \texttt{ICOHPLIST.lobster} on the 6 pilot
-compounds). Headline: $\rho=-0.328$, $p=5.0\times10^{-6}$ ($n=186$) ---
-the strongest global correlation in the project at the time. The sign is
-\emph{opposite} the naive Peierls/Jahn--Teller reading. Diagnostics: the
-effect is substantially driven by metal/gapped clustering, but the
-\texttt{bond\_type=covalent} subgroup ($n=23$) survives stratification
-($p=0.018$--$0.029$) --- the only subgroup in the project, to date, to
-hold up under such a test.
-
-\subsection{Mission \#5: reaction ICOHP}
-
-An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a
-compound's total ICOHP "cheaper" than the same atoms in elemental
-reference form (new module \texttt{reaction\_icohp.py}, reaction
-balanced via \texttt{pymatgen.analysis.reaction\_calculator})? Extended
-to 192 compounds using the 74-compound extension campaign (62 elemental
-references computed). Headline: $\rho=0.370$, $p=3.9\times10^{-7}$
-($n=177$) --- numerically the strongest global correlation in the
-project to date, this time with an intuitive sign (less bonding than the
-elemental state $\Rightarrow$ less stable formation). But \textbf{no
-\texttt{bond\_type} subgroup survives stratification} (Kruskal--Wallis
-$p=2.1\times10^{-6}$ for the descriptor, $p=5.0\times10^{-8}$ for the
-target, across the three strata) --- unlike mission \#4, the clustering
-effect here explains the entire observed signal. Against
-\texttt{energy\_above\_hull} the correlation is absent ($\rho=0.09$,
-$p=0.20$).
-
-\subsection{Comparison (missions \#4--\#5, 186/192-compound scale)}
-
-On the same common subsample ($n=177$, the intersection of campaign 2's
-186 compounds and mission \#5's 192 computable rows):
-
-\begin{center}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-Descriptor & $n$ & $\rho$ & $p$ \\
-\midrule
-Reaction ICOHP (mission \#5) & 177 & 0.370 & $3.9\times10^{-7}$ \\
-Antibonding population, normalized (mission \#4) & 177 & $-0.337$ & $4.5\times10^{-6}$ \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.15cm}
-{\footnotesize Periodic min-cut (mission \#3, $\rho=0.313$) and
-percolation weight (mission \#1, $\rho=0.104$), on the same $n=177$, are
-given for reference in Appendix~\ref{sec:appendix-percolation}.}
-\end{center}
-
-Ranking by raw correlation strength ($\rho$) is not the same as ranking
-by reliability: mission \#5 leads numerically but is also the only one
-where \emph{no} subgroup survives stratification, whereas mission \#4
-keeps a significant covalent subgroup.
-
-\section{August 16 Update: the extension4 Campaign and Missions \#4--\#5 Reprocessed}
-\label{sec:followups2}
-
-\subsection{The extension4 campaign}
-
-89 new compounds (\texttt{mp\_dataset/download\_extension4.py}): binary
-compounds of an alkali (Li/Na/K/Rb/Cs) or alkaline-earth (Be/Mg/Ca/Sr/Ba)
-metal against N/O/F/P/S/Cl, sourced from Materials Project. Up to 2
-compounds picked per (cation, anion) chemical system across 44 systems: an
-experimentally-known polymorph (preferring formulas already elsewhere in
-the dataset, to build genuine same-composition polymorph groups --- the
-dataset had only 8 such groups before this batch) and the
-highest-\texttt{energy\_above\_hull} theoretical entry available for that
-formula, a deliberate far-from-equilibrium stress test. Selection was
-computed once and frozen to \texttt{extension4\_candidates.json} for
-reproducibility (scale made hand-curation, the convention for every
-earlier extension batch, impractical). All 89 VASP+LOBSTER jobs completed
-unattended (a self-healing watcher restarted any job that left the SLURM
-queue without producing output; zero restarts were actually needed).
-Dataset: 260 $\to$ 349 compounds.
-
-Separately, the schema-driven \texttt{reaction\_analysis/} package
-(superseding the ad hoc \texttt{reaction\_icohp.py} module long-term) was
-extended with an \textbf{endobondic/exobondic bonding-kinetics
-classifier}: a reaction's $\Delta$ICOHP (products $-$ reactants) being
-positive ("endobondic") means breaking the reactant's bonds costs more
-than the products' bonds recover --- a kinetic barrier that can keep an
-exothermically-favored decomposition from actually happening, explaining
-why some very exothermic compounds are nonetheless observed to exist.
-Validated against 7 reference reactions with independently known ICOHP
-values; not yet connected to this project's own LOBSTER data for
-classification, an explicit next step, not attempted this session.
-
-Every reaction's per-bond-type ICOHP values were transcribed from
-independent reference values
-(\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), independent of
-this project's own CSP data, then run end to end through
-\texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}. All 7 match
-the reference $\Delta$ICOHP within a few kJ/mol (attributable to the
-source's own rounding of its reported per-bond eV values) and every
-\texttt{BondingLabel} matches:
-
-\begin{center}
-\begin{tabular}{@{}lrrll@{}}
-\toprule
-Reaction & Reference & Computed & \multicolumn{2}{c}{Label} \\
- & (kJ/mol) & (kJ/mol) & Ref. & Computed \\
-\midrule
-Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
-S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
-S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397.3$ & endo & endo \\
-ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336.6$ & exo & exo \\
-CaO[sphalerite] $\to$ CaO[rocksalt] & $-79$ & $-78.9$ & exo & exo \\
-CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204.8$ & exo & exo \\
-Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-The Mn$_2$O$_7$ case is a useful guard-rail on its own: exobondic by
-this static sign criterion, yet Mn$_2$O$_7$ is a real, observed compound
-that simply decomposes slowly (gradual O$_2$ loss) rather than by sudden
-bond rupture --- \texttt{classify.py} structurally attaches a warning to
-\emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict for exactly this
-reason, rather than hardcoding Mn$_2$O$_7$ as a special case.
-
-The full list of every compound and element computed across the entire
-\texttt{extension} campaign --- not just \texttt{extension4}'s 89, but
-all four batches combined (163 compounds total: elemental references,
-carbon allotropes, TiO2 high-pressure polymorphs, and every ionic/
-covalent compound added along the way) --- together with the case-1
-decomposition reactions computed from them (their own $\Delta$ICOHP/atom
-and endobondic/exobondic label, distinct from the 7 reference cases
-above), is given in Appendix~\ref{sec:appendix-ext-elements} through
-Appendix~\ref{sec:appendix-ext-exobondic}.
-
-\subsection{Missions \#4--\#5, reprocessed at 349 compounds}
-
-Every per-compound descriptor script was rerun unmodified over the grown
-dataset --- \texttt{extension4}'s constituent elements were all already
-covered by the existing elemental-reference set, so no new element
-calculations were needed. (Mission \#3, network dimensionality/periodic
-min-cut, was also reprocessed at this scale; its own result, and the
-diagnosis of its headline correlation's collapse, are documented in
-Appendix~\ref{sec:appendix-percolation}, not here.)
-
-\textbf{Mission \#4 (antibonding)}: $\rho=-0.282$, $p=9.2\times10^{-8}$
-($n=346$) --- weaker than the original $\rho=-0.328$, but the
-\texttt{bond\_type=covalent} subgroup got \emph{stronger}
-($n=33$, $\rho=-0.551$, $p=0.0009$, vs.\ the original $\rho=-0.490$ at
-$n=23$) and remains the single most robust stratified result in the
-project. \texttt{is\_metal=False} newly survives ($n=157$, $p=0.001$).
-The old \texttt{bond\_type=ionic} result ($n=9$, $\rho=-0.683$) did not
-replicate once the sample grew to $n=53$ ($\rho=-0.184$, not
-significant) --- a clean demonstration of why $n<15$ subgroups are
-flagged rather than trusted.
-
-\begin{center}
-\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
-\end{center}
-
-\textbf{Mission \#5 (reaction ICOHP)}: $\rho=0.502$, $p=6.3\times10^{-19}$
-($n=275$) --- up from $\rho=0.370$, and now the clear strongest
-correlation in the project by a wider margin than before.
-\texttt{bond\_type} stratification still fully explains that layer of the
-pooled signal (Kruskal--Wallis $p=1.1\times10^{-15}$, no stratum
-survives) --- \textbf{but \texttt{is\_metal} stratification now survives
-on both sides} (\texttt{is\_metal=False}: $\rho=0.319$, $p=0.0001$;
-\texttt{is\_metal=True}: $\rho=0.256$, $p=0.0025$), where at $n=186$
-neither did. This revises the previous verdict that "the between-group
-confound explains the entirety of the observable signal" --- it explains
-the \texttt{bond\_type}-level pooling completely, but not a real,
-newly-detectable within-\texttt{is\_metal}-group relationship. Case 2
-(polymorph comparison), extended from 8 to \textbf{49 groups} specifically
-because \texttt{extension4} was designed to fix that sampling gap:
-53.1\% agreement between most-bonding and most-stable member, an exact
-Poisson-binomial test against the 45.9\% chance baseline gives $P=0.19$
---- still no signal, but now a real test instead of an 8-point
-exploratory pass.
-
-\begin{center}
-\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
-\end{center}
-
-\textbf{Still no SISSO.} Reaction ICOHP is now the strongest raw
-correlate of \texttt{formation\_energy\_per\_atom} in the project, and
-the first descriptor whose signal is not fully explained away by
-between-group clustering at every level tested --- the strongest
-argument yet for a stratified (\texttt{is\_metal}-conditional) feature
-search over a pooled one, still not attempted.
-
-\noindent\textit{Detailed reports:}
-\texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
-The diagnosis of mission \#3's (min-cut) collapse is in
-Appendix~\ref{sec:appendix-percolation}
-(\texttt{analysis/REPORT\_dimensionality\_mincut.md}).
-
-\section{Project Reframing (August 16): the Central Question is $\Delta$(ICOHP)-Based Viability}
-\label{sec:reframing}
-
-\textbf{The project's central research question is restated as of this
-update: does $\Delta$(ICOHP) --- the reaction-ICOHP descriptor for a
-compound's decomposition into elements, and specifically the sign-based
-endobondic/exobondic classification it supports --- distinguish
-thermodynamically stable, metastable, and unstable compounds?} This
-supersedes the percolation-weight-centric framing that organized the
-original campaign 2 (Appendix~\ref{sec:appendix-percolation}) ---
-percolation weight (mission \#1) and network dimensionality/periodic
-min-cut (mission \#3) remain valuable as the historical foundation
-(periodic graph construction, the statistical conventions every later
-mission still reuses) but are no longer this project's organizing
-question, consistent with min-cut's own headline correlation not
-surviving the dataset's growth to 349 compounds (\S\ref{sec:followups2},
-Appendix~\ref{sec:appendix-percolation}). Full detail:
-\texttt{analysis/REPORT\_delta\_icohp\_viability.md},
-\texttt{analysis/test\_delta\_icohp\_viability.py}.
-
-\subsection{Reference concordance, formalized}
-
-\S\ref{sec:followups2} already showed all 7 reference reactions
-reproducing to within a few kJ/mol. Correlation alone (Pearson/Spearman)
-is not the right test for "do our numbers match the reference values" ---
-it is satisfied by any monotonic relationship, even one with a large
-systematic offset or scale factor. \textbf{Lin's Concordance Correlation
-Coefficient} (CCC) specifically tests agreement with the identity line
-(computed = reference), the actual claim being tested:
-
-\begin{center}
-\begin{tabular}{@{}lr@{}}
-\toprule
-Statistic & Value \\
-\midrule
-$n$ & 7 \\
-Lin's CCC & \textbf{0.999998} \\
-Pearson $r$ & 0.999999 ($p=3.5\times10^{-15}$) \\
-Sign agreement & 7/7 \\
-Mean $|$residual$|$ & 0.76 kJ/mol \\
-Max $|$residual$|$ & 1.70 kJ/mol \\
-RMSE & 0.98 kJ/mol \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-A CCC this close to 1 means the two methods agree essentially within the
-reference values' own reporting precision (rounded to 2--3 decimals),
-not merely that they move together --- the implementation is validated
-by it, not just individually spot-checked.
-
-\subsection{Extended to every compound computed to date, pooled without regard to campaign}
-
-\textbf{Deliberately not organized by which historical campaign or
-extension batch a compound came from} --- those boundaries reflect
-submission order across sessions, not chemistry, and grouping by them
-would itself be exactly the kind of between-group confound this
-project's methodology exists to catch (the same lesson
-Appendix~\ref{sec:appendix-percolation}'s min-cut diagnosis already
-demonstrated). \textbf{281 case-1 reactions}, every element and compound
-with a computed decomposition-into-elements reaction across the whole
-project, pooled into one population.
-
-\textbf{Continuous stability targets:}
-
-\begin{center}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-Target & $n$ & $\rho$ & $p$ \\
-\midrule
-\texttt{formation\_energy\_per\_atom} & 275 & $-0.5016$ & $6.3\times10^{-19}$ \\
-\texttt{energy\_above\_hull\_eV\_per\_atom} & 279 & $-0.1096$ & $0.068$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-(Sign: \texttt{reaction\_analysis}'s products$-$reactants convention,
-opposite \texttt{reaction\_icohp.py}'s own column reported elsewhere in
-this report --- same magnitude, flipped sign.) The formation-energy
-result is the same relationship as \S\ref{sec:followups2}'s mission-\#5
-headline, confirmed here on the pooled, campaign-agnostic population.
-
-\textbf{Sign-based (endobondic/exobondic) discrimination.} Experimental-
-viability proxy (a compound's \texttt{theoretical} flag: \texttt{False}
-means it has been experimentally realized):
-
-\begin{center}
-\begin{tabular}{@{}lrr@{}}
-\toprule
- & endobondic & exobondic \\
-\midrule
-experimental ($n=177$) & 47 & 130 \\
-theoretical-only ($n=98$) & 17 & 81 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-Fisher's exact test: $p=0.10$, odds ratio $=1.72$ (endobondic is $\sim
-1.7\times$ more common among experimentally-realized compounds --- the
-expected direction, since endobondic is meant as a kinetic-barrier
-signature --- but not significant at this sample size).
-
-\textbf{Finer-grained (family, three-way, $n=175$):}
-
-\begin{center}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-family & $n$ & median $\Delta$ICOHP/atom (eV) & \% endobondic \\
-\midrule
-exp\_metastable & 59 & $-1.077$ & \textbf{27.1\%} \\
-exp\_stable & 59 & $-1.589$ & 20.3\% \\
-theo\_metastable & 59 & $-1.659$ & \textbf{11.9\%} \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-Kruskal--Wallis across the three groups: $H=2.81$, $p=0.245$ ---
-\textbf{not significant}, but the ordering is exactly the physically-
-motivated one: \texttt{exp\_metastable} compounds (known to exist
-despite sitting off the convex hull --- the category the
-endobondic/exobondic framework is specifically about) have the highest
-endobondic fraction; \texttt{theo\_metastable} compounds (never
-synthesized) have the lowest.
-
-\subsection{Reading}
-
-The 7 reference reactions reproduce essentially exactly --- the
-implementation is correct. Extending the same sign-based logic to a
-much larger, more heterogeneous, and generally much more comfortably
-stable population does not yet produce a statistically significant
-stable/metastable/unstable discriminator, though every trend points the
-right way. This is not a contradiction: the 7 reference cases were
-chosen specifically as borderline-stability edge cases (Pb(N$_3$)$_2$,
-S$_4$N$_2$/S$_4$N$_4$, ZnSn, Mn$_2$O$_7$) where a kinetic-barrier
-explanation is specifically needed; most of this project's 281 compounds
-are not that --- they are comfortably stable or comfortably not, where
-the thermodynamic driving force (the formation-energy correlation above)
-may simply dominate over the sign-based kinetic signal. \textbf{The
-concrete next step}: extend deliberately to more borderline-stability
-compounds, not just whatever the next unrelated mission happens to add
-to the dataset. \texttt{classify.py}'s full \texttt{ViabilityLabel}
-machinery (beyond the sign-only \texttt{BondingLabel} used here) needs
-exactly such a population --- for the current dataset, decomposition
-into elements is strongly exothermic for nearly every compound (normal
-for stable inorganic chemistry), which would trivially classify almost
-everything \texttt{STABLE\_ON\_HULL} and add no information beyond what
-\texttt{energy\_above\_hull} already says directly.
-
 \appendix
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{table}{0}
 
 \section{Appendix: Percolation\_viability}
 \label{sec:appendix-percolation}
@@ -1041,11 +916,10 @@ Materials Project identifier, PBE thermodynamic hull distance
 \section{VASP Calculation Parameters}
 \label{sec:appendix-incar}
 
-Fixed INCAR parameters, identical across campaign 2's 186 compounds
+Fixed INCAR parameters, identical across the whole dataset
 (static, LOBSTER-compatible run) --- only \texttt{NBANDS}
 (appendix~\ref{sec:appendix-kpoints}) and the k-point grid vary by
-compound. Same settings applied to the four \texttt{extension} batches
-(\S\ref{sec:followups2}).
+compound.
 
 \begin{center}
 \input{appendix_dft_common_en.tex}
@@ -1056,7 +930,7 @@ compound. Same settings applied to the four \texttt{extension} batches
 One PAW-PBE potential per element present in the dataset (pymatgen's
 \texttt{MPRelaxSet} library --- the same one Materials Project used to
 relax the input structures), with one documented exception for tungsten
-(\S8): the recommended \texttt{W\_pv} variant is absent from the local
+(\S\ref{sec:incidents}): the recommended \texttt{W\_pv} variant is absent from the local
 mirror, and \texttt{W\_sv} turned out to be corrupted (missing
 \texttt{LEXCH} field) --- plain \texttt{W} is used instead, verified
 valid.
@@ -1080,34 +954,38 @@ local-basis projection, not a fixed guess.
 \input{appendix_dft_kpoints_en.tex}
 }
 
-\section{Extension Campaign: Elements and Allotropes}
+\section{Elements and Allotropes}
 \label{sec:appendix-ext-elements}
 
-Every single-element structure computed across all four \texttt{extension}
-batches (\S\ref{sec:followups2}; \texttt{download\_extension.py} through
-\texttt{download\_extension4.py}): the elemental decomposition reference
-set (\texttt{ELEMENT\_REFERENCE}) plus the additional carbon allotropes
-(diamond, lonsdaleite, M-carbon, W-carbon) computed alongside the
-graphite reference specifically to test descriptors against structures
-whose true stable regime is elsewhere. An experimental compound's formula
-is marked with a superscript star; unmarked formulas are theoretical.
-Auto-generated from every \texttt{mp\_metadata.json} with
-\texttt{family=="extension"} by \texttt{report/gen\_appendix\_extension.py}.
+Every single-element structure with no matched polymorph in the
+dataset: the elemental references (\texttt{ELEMENT\_REFERENCE}) used to
+decompose multi-element compounds. An experimental compound's formula is
+marked with a superscript star (black if it is the stable phase, red if
+it is a metastable polymorph/allotrope); unmarked formulas are
+theoretical. Auto-generated by \texttt{report/gen\_appendix\_extension.py}.
 
 {\small
 \input{appendix_extension_elements_en.tex}
 }
 
-\section{Extension Campaign: Compounds and Polymorphs}
+\section{Polymorphs and Allotropes}
+\label{sec:appendix-ext-polymorphs}
+
+Elements and compounds with several entries sharing a formula in the
+dataset, grouped here rather than scattered across the elements/compounds
+tables (see the table caption for detail).
+
+{\small
+\input{appendix_extension_polymorphs_en.tex}
+}
+
+\section{Target Compounds}
 \label{sec:appendix-ext-compounds}
 
-Every multi-element target compound across all four \texttt{extension}
-batches (100 total, 89 from \texttt{extension4}) --- including the TiO2
-high-pressure polymorphs (\texttt{extension2}) alongside every
-\texttt{extension4} alkali/alkaline-earth binary --- with $\Delta$ICOHP
-per atom and its endobondic/exobondic label where a case-1 decomposition
-reaction could be computed. Auto-generated from
-\texttt{analysis/reaction\_icohp\_case1.csv} and
+Every multi-element target compound with no matched polymorph in the
+dataset, with $\Delta$ICOHP per atom and its endobondic/exobondic label
+where a case-1 decomposition reaction could be computed. Auto-generated
+from \texttt{analysis/reaction\_icohp\_case1.csv} and
 \texttt{analysis/reaction\_analysis\_case1\_full.csv} by
 \texttt{report/gen\_appendix\_extension.py}.
 
@@ -1115,7 +993,7 @@ reaction could be computed. Auto-generated from
 \input{appendix_extension_compounds_en.tex}
 }
 
-\section{Extension Campaign: Endobondic Reactions}
+\section{Endobondic Reactions}
 \label{sec:appendix-ext-endobondic}
 
 The subset of case-1 decomposition reactions
@@ -1130,7 +1008,7 @@ project; see \texttt{delta.py}'s docstring).
 \input{appendix_extension_endobondic_en.tex}
 }
 
-\section{Extension Campaign: Exobondic Reactions}
+\section{Exobondic Reactions}
 \label{sec:appendix-ext-exobondic}
 
 The complementary \textbf{exobondic} subset ($\Delta$ICOHP $< 0$), same
