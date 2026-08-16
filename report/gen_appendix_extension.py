@@ -1,13 +1,7 @@
-"""Generate LaTeX appendix fragments for the FULL "extension" family
-(163 compounds: extension batches 1-4, download_extension.py through
-download_extension4.py -- elemental references, carbon allotropes, TiO2
-high-pressure polymorphs, ionic/covalent extension compounds, and the
-89-compound extension4 batch). Batch 5 (maxhull_binaries_stress_test,
-2026-08-16, still computing) is deliberately excluded here -- these
-fragments describe the already-analyzed 163, not a moving target; rerun
-this script once that batch finishes to fold it in as its own update.
+"""Generate LaTeX appendix fragments for every compound/element with
+family=="extension" in mp_dataset/structures/mp_metadata.json.
 
-Per the user's table-layout requests (2026-08-16 and 2026-08-16 follow-up):
+Per the user's table-layout requests:
   - every compound and element listed, reactions detailed, endobondic/
     exobondic split into separate tables, hull distance shown;
   - stoichiometric numbers in every formula are LaTeX-subscripted
@@ -70,8 +64,6 @@ from pymatgen.core import Composition
 HERE = Path(__file__).parent
 REPO_ROOT = HERE.parent
 STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
-
-EXCLUDED_BATCHES = {"maxhull_binaries_stress_test"}
 
 # A digit run immediately after a letter or ")" is a stoichiometric
 # subscript (TiO2 -> Ti, O2; Ca3N2 -> Ca3, N2); a digit run at the start
@@ -140,7 +132,7 @@ TEXT = {
         "polymorphs_caption": (
             "Éléments (allotropes) et composés (polymorphes) ayant "
             "\\textbf{plusieurs entrées de même formule} dans la campagne "
-            "\\texttt{extension} (39 groupes, 84 entrées) --- regroupés ici "
+            "\\texttt{extension} (__N_GROUPS__ groupes, __N_GROUPED__ entrées) --- regroupés ici "
             "plutôt que dispersés dans les tableaux d'éléments/composés, car "
             "la comparaison naturelle pour un groupe de polymorphes est "
             "polymorphe-à-polymorphe, pas la réaction de décomposition en "
@@ -152,13 +144,13 @@ TEXT = {
         ),
         "endo_caption": (
             "Réactions de décomposition en éléments (cas 1) classées \\textbf{endobondic} "
-            "($\\Delta$ICOHP $\\geq 0$, produits $-$ réactifs) parmi les 163 composés de "
+            "($\\Delta$ICOHP $\\geq 0$, produits $-$ réactifs) parmi les __N_TOTAL__ composés de "
             "la campagne \\texttt{extension}. $^*$ noir = composé de départ expérimental "
             "stable ; \\textcolor{red}{$^*$} rouge = expérimental métastable."
         ),
         "exo_caption": (
             "Réactions de décomposition en éléments (cas 1) classées \\textbf{exobondic} "
-            "($\\Delta$ICOHP $< 0$, produits $-$ réactifs) parmi les 163 composés de la "
+            "($\\Delta$ICOHP $< 0$, produits $-$ réactifs) parmi les __N_TOTAL__ composés de la "
             "campagne \\texttt{extension}. $^*$ noir = composé de départ expérimental "
             "stable ; \\textcolor{red}{$^*$} rouge = expérimental métastable."
         ),
@@ -194,7 +186,7 @@ TEXT = {
         "polymorphs_caption": (
             "Elements (allotropes) and compounds (polymorphs) with "
             "\\textbf{several entries sharing a formula} in the "
-            "\\texttt{extension} campaign (39 groups, 84 entries) --- "
+            "\\texttt{extension} campaign (__N_GROUPS__ groups, __N_GROUPED__ entries) --- "
             "grouped here rather than scattered across the elements/"
             "compounds tables, since the natural comparison for a polymorph "
             "group is polymorph-to-polymorph, not the decomposition-to-"
@@ -206,13 +198,13 @@ TEXT = {
         ),
         "endo_caption": (
             "Decomposition-into-elements (case 1) reactions labeled \\textbf{endobondic} "
-            "($\\Delta$ICOHP $\\geq 0$, products $-$ reactants) among the 163 compounds "
+            "($\\Delta$ICOHP $\\geq 0$, products $-$ reactants) among the __N_TOTAL__ compounds "
             "of the \\texttt{extension} campaign. Black $^*$ = stable experimental "
             "starting compound; red \\textcolor{red}{$^*$} = metastable experimental."
         ),
         "exo_caption": (
             "Decomposition-into-elements (case 1) reactions labeled \\textbf{exobondic} "
-            "($\\Delta$ICOHP $< 0$, products $-$ reactants) among the 163 compounds of "
+            "($\\Delta$ICOHP $< 0$, products $-$ reactants) among the __N_TOTAL__ compounds of "
             "the \\texttt{extension} campaign. Black $^*$ = stable experimental starting "
             "compound; red \\textcolor{red}{$^*$} = metastable experimental."
         ),
@@ -230,8 +222,6 @@ def load_all_rows():
             continue
         meta = json.loads(meta_path.read_text())
         if meta.get("family") != "extension":
-            continue
-        if meta.get("batch") in EXCLUDED_BATCHES:
             continue
         formula = meta.get("formula")
         if not formula:
@@ -314,6 +304,7 @@ def write_polymorphs(lang: str, element_rows: list[dict], compound_rows: list[di
     L = TEXT[lang]
     grouped = [r for r in element_rows + compound_rows if formula_counts[r["formula"]] >= 2]
     grouped.sort(key=lambda r: (r["formula"], r["eah"] if r["eah"] is not None else 0.0))
+    n_groups = sum(1 for c in formula_counts.values() if c >= 2)
 
     body = []
     prev_formula = None
@@ -324,7 +315,8 @@ def write_polymorphs(lang: str, element_rows: list[dict], compound_rows: list[di
         body.append(f"{_star(r['formula'], r['theoretical'], r['eah'])} & {_esc(r['id_label'])} & {_esc(r['spacegroup'])} & {eah} \\\\")
         prev_formula = r["formula"]
 
-    out = _longtable(L["polymorphs_caption"], L["elements_header"], "llll", body, label="tab:ext-polymorphs")
+    caption = L["polymorphs_caption"].replace("__N_GROUPS__", str(n_groups)).replace("__N_GROUPED__", str(len(grouped)))
+    out = _longtable(caption, L["elements_header"], "llll", body, label="tab:ext-polymorphs")
     (HERE / f"appendix_extension_polymorphs_{lang}.tex").write_text(out)
 
 
@@ -337,7 +329,7 @@ def _starred_reaction_string(r: dict) -> str:
     return rxn
 
 
-def write_reactions(lang: str, rows: list[dict], endobondic: bool) -> None:
+def write_reactions(lang: str, rows: list[dict], endobondic: bool, n_total: int) -> None:
     L = TEXT[lang]
     subset = [r for r in rows if r["delta_per_atom_eV"] is not None and (r["delta_per_atom_eV"] >= 0) == endobondic]
     body = []
@@ -346,7 +338,7 @@ def write_reactions(lang: str, rows: list[dict], endobondic: bool) -> None:
         body.append(
             f"{_starred_reaction_string(r)} & {_esc(r['id_label'])} & {eah} & {r['delta_per_atom_eV']:.4f} \\\\"
         )
-    caption = L["endo_caption"] if endobondic else L["exo_caption"]
+    caption = (L["endo_caption"] if endobondic else L["exo_caption"]).replace("__N_TOTAL__", str(n_total))
     out = _longtable(caption, L["reactions_header"], "lrrr", body)
     suffix = "endobondic" if endobondic else "exobondic"
     (HERE / f"appendix_extension_{suffix}_{lang}.tex").write_text(out)
@@ -354,8 +346,9 @@ def write_reactions(lang: str, rows: list[dict], endobondic: bool) -> None:
 
 def main():
     element_rows, compound_rows, formula_counts = load_all_rows()
+    n_total = len(element_rows) + len(compound_rows)
     n_grouped = sum(1 for r in element_rows + compound_rows if formula_counts[r["formula"]] >= 2)
-    print(f"{len(element_rows)} element/allotrope rows, {len(compound_rows)} compound/polymorph rows")
+    print(f"{len(element_rows)} element/allotrope rows, {len(compound_rows)} compound/polymorph rows ({n_total} total)")
     print(f"{n_grouped} rows belong to a polymorph/allotrope group ({sum(1 for c in formula_counts.values() if c >= 2)} groups)")
     n_with_reaction = sum(1 for r in compound_rows if r["delta_per_atom_eV"] is not None)
     n_endo = sum(1 for r in compound_rows if r["delta_per_atom_eV"] is not None and r["delta_per_atom_eV"] >= 0)
@@ -366,8 +359,8 @@ def main():
         write_elements(lang, element_rows, formula_counts)
         write_compounds(lang, compound_rows, formula_counts)
         write_polymorphs(lang, element_rows, compound_rows, formula_counts)
-        write_reactions(lang, compound_rows, endobondic=True)
-        write_reactions(lang, compound_rows, endobondic=False)
+        write_reactions(lang, compound_rows, endobondic=True, n_total=n_total)
+        write_reactions(lang, compound_rows, endobondic=False, n_total=n_total)
 
     for stale in list(HERE.glob("appendix_extension4_*.tex")):
         stale.unlink()

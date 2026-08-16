@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_C3N4_anchor_mp-571653",
+  "formula": "C3N4",
+  "composition": {
+    "C": 3,
+    "N": 4
+  },
+  "Z": 1,
+  "space_group_symbol": "P-43m",
+  "space_group_number": 215,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -128.43264000000005,
+    "sum_per_atom_eV": -18.347520000000006,
+    "sum_per_formula_unit_eV": -128.43264000000005,
+    "mean_per_bond_eV": -0.21334325581395358,
+    "n_bonds": 602,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": -0.003599347826086956,
+        "sum_eV": -0.49670999999999993,
+        "n_bonds": 138
+      },
+      "C-N": {
+        "mean_eV": -0.5282672916666662,
+        "sum_eV": -126.7841499999999,
+        "n_bonds": 240
+      },
+      "N-N": {
+        "mean_eV": -0.005141874999999995,
+        "sum_eV": -1.151779999999999,
+        "n_bonds": 224
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.448339999999995,
+    "sum_per_atom_eV": 1.778334285714285,
+    "sum_per_formula_unit_eV": 12.448339999999995,
+    "mean_per_bond_eV": 0.020678305647840522,
+    "n_bonds": 602,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": 0.00045905797101449236,
+        "sum_eV": 0.06334999999999995,
+        "n_bonds": 138
+      },
+      "C-N": {
+        "mean_eV": 0.04911708333333332,
+        "sum_eV": 11.788099999999996,
+        "n_bonds": 240
+      },
+      "N-N": {
+        "mean_eV": 0.002664687500000003,
+        "sum_eV": 0.5968900000000007,
+        "n_bonds": 224
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_anchor_mp-571653"
+}
