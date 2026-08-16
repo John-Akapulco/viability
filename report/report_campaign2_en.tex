@@ -30,41 +30,33 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Campaign 2 --- Percolation vs. Thermodynamic Stability}
+\fancyhead[L]{Campaign 2 --- ICOHP Descriptors and Thermodynamic Stability}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\title{\bfseries Percolation Weight and Thermodynamic Stability \\
-Across a 186-Compound Dataset \\
+\title{\bfseries ICOHP Descriptors and Thermodynamic Stability \\
+Across a 349-Structure Dataset \\
 \large Campaign 2: Dataset Construction, VASP+LOBSTER Computation,
 and Statistical Analysis}
 \author{Gilles Frapper \\ Professor, Theoretical Chemistry \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Report generated as part of the \texttt{viability} project}
-\date{August 14, 2026}
+\date{August 16, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{center}
-\small\itshape Update, August 15, 2026: missions \#3--\#5 added
-(dimensionality/min-cut, antibonding population, reaction ICOHP), see
-\S\ref{sec:followups}. The body of this report below (through the
-conclusion and appendices) documents the original campaign 2 (186
-compounds, percolation weight only) unmodified.
-
-\smallskip
-\small\itshape Update, August 16, 2026: dataset extended to 349
-compounds (89-compound \texttt{extension4} batch, alkali/alkaline-earth
-binaries), missions \#3--\#5 reprocessed at the new scale, and the
-periodic min-cut correlation's collapse at that scale diagnosed --- see
-\S\ref{sec:followups2}.
-
-\smallskip
-\small\itshape Update, August 16, 2026 (later the same day): the
-project's central question reformulated around $\Delta$(ICOHP)-based
-viability discrimination, with a formal manuscript concordance test and
-an extension to every compound computed to date, pooled across all
-campaigns --- see \S\ref{sec:reframing}. \texttt{percolation\_path.py}
-is now background/historical material, not the organizing question.
+\small\itshape Update, August 16, 2026: this report is reorganized around
+the project's current central question --- $\Delta$(ICOHP) and viability
+discrimination (\S\ref{sec:reframing}) --- rather than around the
+percolation weight, the original campaign 2 subject. Everything
+concerning the percolation weight and its direct descendants (network
+dimensionality, periodic min-cut --- missions \#1 and \#3) has been moved
+to Appendix~\ref{sec:appendix-percolation}, ``Percolation\_viability,''
+with the corresponding source code relocated to the repository's
+\texttt{Percolation\_viability/} directory. The main body below documents
+the project's current state (349 structures, missions \#4--\#5, the
+\texttt{extension4} campaign, the $\Delta$(ICOHP) reframing) without
+altering the results themselves.
 \end{center}
 
 \tableofcontents
@@ -72,61 +64,69 @@ is now background/historical material, not the organizing question.
 
 \section{Objective and Problem Statement}
 
-The first report (6 toy compounds) established that the percolation
-descriptor computed by \texttt{percolation\_path.py} diverges sharply from
-classic ICOHP aggregates (sum, mean, min, max), but without a sample large
-enough to statistically test whether that difference is \emph{useful}:
-does the percolation descriptor carry predictive information about
-thermodynamic stability (\texttt{energy\_above\_hull}) that the classic
-aggregates don't already carry?
+\textbf{Central research question (see \S\ref{sec:reframing}): does
+$\Delta$(ICOHP) --- the reaction-ICOHP descriptor for a compound's
+decomposition into elements, and specifically the sign-based
+endobondic/exobondic classification it supports --- distinguish
+thermodynamically stable, metastable, and unstable compounds?}
 
-This second campaign builds a 186-compound dataset (180 new + the 6 pilot
-compounds) split into three families:
-\begin{itemize}
-  \item \textbf{exp\_stable}: experimental (ICSD-referenced) compounds on
-    the Materials Project thermodynamic convex hull;
-  \item \textbf{exp\_metastable}: experimental metastable compounds
-    ($0 < E_\text{hull} \leq 100$~meV/atom);
-  \item \textbf{theo\_metastable}: theoretical (never experimentally
-    observed) metastable compounds ($0 < E_\text{hull} \leq 200$~meV/atom).
-\end{itemize}
+This question was built up progressively. The first report (6 toy
+compounds) established that a percolation descriptor diverges sharply
+from classic ICOHP aggregates, but without a sample large enough to
+statistically test whether that difference is \emph{useful}. The
+original campaign 2 therefore built a 186-compound dataset to settle
+that question --- work whose methodology (dataset selection, statistical
+conventions) remains the foundation everything below builds on, but
+whose descriptor itself (the percolation weight) and its own result are
+now documented in Appendix~\ref{sec:appendix-percolation}, not in this
+report's main body: its headline correlation did not survive the
+dataset's growth (see \S\ref{sec:followups2}), and it is no longer this
+project's organizing question.
 
-The \texttt{exp\_metastable} / \texttt{theo\_metastable} split serves as a
-proxy for kinetic persistence: an experimentally observed metastable
-compound has, by definition, survived long enough to be synthesized and
-characterized, unlike a theoretical compound of comparable thermodynamic
-metastability.
+Three later missions (network dimensionality/periodic min-cut --- \#3,
+also in the appendix; antibonding population --- \#4; reaction ICOHP ---
+\#5) and an extension campaign of 163 additional compounds made
+$\Delta$(ICOHP) emerge as the project's strongest and most robust
+correlation (\S\ref{sec:followups}--\S\ref{sec:followups2}), before the
+central question was explicitly reformulated around it
+(\S\ref{sec:reframing}).
 
 \section{Methodology}
 
 \subsection{Dataset Selection}
 
-Materials Project query (\texttt{mp\_dataset/select\_campaign.py}): unary
-and binary chemical systems, non-magnetic ($|\text{total magnetization}|
-\leq 0.01~\mu_B$/formula unit --- MP's categorical
-\texttt{magnetic\_ordering} field is "Unknown" for $\sim$98\% of entries
-and would have excluded nearly every genuinely non-magnetic compound), no
-f-block elements, $\leq 20$ atoms/cell, 60 compounds per family with a
-2-entries-per-chemical-system cap to ensure elemental diversity rather than
-many polymorphs of the same system.
+Materials Project query (\texttt{mp\_dataset/select\_campaign.py}) for
+the main dataset (186 compounds): unary and binary chemical systems,
+non-magnetic ($|\text{total magnetization}| \leq 0.01~\mu_B$/formula
+unit --- MP's categorical \texttt{magnetic\_ordering} field is
+"Unknown" for $\sim$98\% of entries and would have excluded nearly every
+genuinely non-magnetic compound), no f-block elements, $\leq 20$
+atoms/cell, 60 compounds per family with a 2-entries-per-chemical-system
+cap to ensure elemental diversity rather than many polymorphs of the
+same system. Four further extension batches (163 structures,
+\S\ref{sec:followups2}) apply the same non-magnetic/no-f filter but with
+their own per-mission selection logic (elemental references,
+high-pressure polymorphs, alkali/alkaline-earth binaries) --- detailed
+in their respective sections, not repeated here.
 
 \subsection{Bonding-Type Classification}
 
 Bond type (ionic / covalent / metallic) is computed by
 \texttt{fetch\_candidates.py}'s \texttt{classify()} function
-(\textbf{reused unchanged}, per the campaign's instructions), from
-\texttt{is\_metal} and elemental composition. This is a secondary analysis
-axis here, not the primary sampling axis (unlike the campaign's originally
-proposed plan, replaced at the user's request with the stable/metastable
-scheme above).
+(\textbf{reused unchanged}), from \texttt{is\_metal} and elemental
+composition. \textbf{This classification is purely informative in this
+report}: a descriptive lens on the dataset (\S\ref{sec:dataset}), not a
+sampling axis or a variable any main-body conclusion depends on --- other
+mission reports (\texttt{REPORT\_antibonding.md},
+\texttt{REPORT\_reaction\_icohp.md}) actively use it to stratify their
+own correlations, but that is not its role here.
 
 \subsection{VASP + LOBSTER Computation}
 
-Same template as the pilot campaign (static run, \texttt{ISYM=$-1$},
+Same template across all 349 structures (static run, \texttt{ISYM=$-1$},
 \texttt{LASPH=.TRUE.}, PAW-PBE potentials recommended by
-\texttt{pymatgen.io.vasp.sets.MPRelaxSet}), with two improvements:
-\texttt{NBANDS} is no longer a fixed value but derived per compound from
-the number of local orbitals in the LOBSTER basis
+\texttt{pymatgen.io.vasp.sets.MPRelaxSet}): \texttt{NBANDS} is derived
+per compound from the number of local orbitals in the LOBSTER basis
 (\texttt{Lobsterin.write\_INCAR}), and basis-function determination goes
 through \texttt{Lobsterin.get\_basis(potcar\_symbols=\ldots)} rather than
 direct POTCAR-file parsing (whose internal pymatgen validity check fails
@@ -135,59 +135,90 @@ on several POTCARs unrecognized by hash in the local mirror).
 \subsection{Statistics}
 
 Spearman correlation (no reason to expect a linear relationship) between
-percolation weight (raw and normalized by $|\text{ICOHP}_\text{min}|$) and
-\texttt{energy\_above\_hull}, overall and per bond type; same for the
-classic ICOHP aggregates, for direct comparison; a reference logistic
-regression (stable vs. metastable, 2--3 features, 5-fold cross-validation)
-for a reference AUC. \textbf{No SISSO, no symbolic regression}: premature
-with a single candidate descriptor at this sample size (see
-\S\ref{sec:limits}).
+each ICOHP/ICOBI descriptor and a stability target
+(\texttt{energy\_above\_hull} or \texttt{formation\_energy\_per\_atom}
+depending on the mission), overall and per subgroup (\texttt{bond\_type},
+\texttt{is\_metal}, or selection provenance as appropriate); any $n<15$
+subgroup is explicitly flagged, never presented bare. \textbf{No SISSO,
+no symbolic regression} at this stage (see
+\S\ref{sec:limits-current}).
 
 \section{Workflow Diagram}
 
 \begin{center}
 \begin{tikzpicture}[
   node distance=0.75cm and 1.6cm,
-  box/.style={draw, rounded corners, minimum width=5.0cm, minimum height=1.0cm,
+  box/.style={draw, rounded corners, minimum width=6.2cm, minimum height=1.0cm,
               align=center, fill=blue!6, font=\small},
-  io/.style={draw, minimum width=5.0cm, minimum height=1.0cm, align=center,
+  io/.style={draw, minimum width=6.2cm, minimum height=1.0cm, align=center,
              fill=orange!10, font=\small},
   arr/.style={-{Latex[length=2.2mm]}, thick}
 ]
-\node[io]  (mp)     {Materials Project (API) \\ 180 compounds (3 families $\times$ 60)};
-\node[box, below=of mp] (prep)   {\texttt{download\_campaign.py} + \texttt{prepare\_vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
-\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks};
-\node[box, below=of slurm] (vasplob) {VASP (static) $\rightarrow$ LOBSTER 5.1.1 \\ ICOHPLIST.lobster, ICOBILIST.lobster};
-\node[box, below=of vasplob] (perc)   {\texttt{percolation\_path.py} (unchanged) \\ 186 compounds (180 + 6 pilots)};
-\node[box, below=of perc] (join)   {\texttt{analysis/build\_dataset.py} \\ join + normalized descriptor + bond\_type};
-\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis.py} \\ correlations, logistic regression, figures};
+\node[io]  (mp)     {Materials Project (API) \\ 349 structures (5 campaigns/batches)};
+\node[box, below=of mp] (prep)   {\texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} scripts \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
+\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks, HPC Yargla};
+\node[box, below=of slurm] (vasplob) {VASP (static, 16 cores) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
+\node[box, below=of vasplob] (desc)   {Per-mission descriptor extraction \\ \texttt{reaction\_icohp.py}, \texttt{cohp\_extraction.py}, \texttt{reaction\_analysis/}, \ldots};
+\node[box, below=of desc] (join)   {\texttt{analysis/build\_dataset*.py} \\ join + normalized descriptors + bond\_type};
+\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis*.py} \\ correlations, stratification, figures};
 
 \draw[arr] (mp) -- (prep);
 \draw[arr] (prep) -- (slurm);
 \draw[arr] (slurm) -- (vasplob);
-\draw[arr] (vasplob) -- (perc);
-\draw[arr] (perc) -- (join);
+\draw[arr] (vasplob) -- (desc);
+\draw[arr] (desc) -- (join);
 \draw[arr] (join) -- (stats);
 \end{tikzpicture}
 \end{center}
 
+The percolation weight (\texttt{Percolation\_viability/percolation\_path.py})
+and its direct descendants (dimensionality, min-cut) follow the same
+pipeline upstream of the "descriptor extraction" step but no longer
+appear in this diagram, or as this report's subject --- see the original
+workflow diagram and the detail of their own processing in
+Appendix~\ref{sec:appendix-percolation}.
+
 \section{Environment}
 
-Same as the pilot campaign (Yargla, VASP 6.5.0, LOBSTER 5.1.1, Python 3.11
-\texttt{.venv}), extended with: \texttt{mp-api}, \texttt{pandas},
-\texttt{scipy}, \texttt{scikit-learn}, \texttt{matplotlib} (see
-\texttt{requirements.txt}).
+Identical across all 349 structures (Yargla, VASP 6.5.0, LOBSTER 5.1.1,
+Python 3.11 \texttt{.venv}), extended with: \texttt{mp-api},
+\texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn},
+\texttt{matplotlib}, \texttt{pydantic}, \texttt{pyyaml} (see
+\texttt{requirements.txt}). Per-step core allocation: \S\ref{sec:cost}.
 
 \section{Dataset}
+\label{sec:dataset}
 
 \begin{center}
 \begin{tabular}{@{}lrl@{}}
 \toprule
 Family & $n$ & $E_\text{hull}$ range (eV/atom) \\
 \midrule
-exp\_stable      & 63 & 0.0000 (by construction) \\
-exp\_metastable  & 63 & 0.0005 -- 0.0907 \\
-theo\_metastable & 60 & 0.0013 -- 0.1991 \\
+exp\_stable       & 63  & 0.0000 (by construction) \\
+exp\_metastable   & 63  & 0.0005 -- 0.0907 \\
+theo\_metastable  & 60  & 0.0013 -- 0.1991 \\
+extension (4 batches)$^\dagger$ & 163 & heterogeneous, see \S\ref{sec:followups}--\S\ref{sec:followups2} \\
+\midrule
+\textbf{Total}    & \textbf{349} & \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^\dagger$ elemental references, TiO$_2$/carbon
+high-pressure polymorphs, and alkali/alkaline-earth binaries
+(\texttt{extension4}) --- full composition in
+Appendix~\ref{sec:appendix-ext-elements}--\ref{sec:appendix-ext-compounds}.}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}lr@{}}
+\toprule
+Composition & $n$ \\
+\midrule
+Single-element references & 68 \\
+Multi-element compounds   & 281 \\
+\midrule
+\textbf{Total}             & \textbf{349} \\
 \bottomrule
 \end{tabular}
 
@@ -195,24 +226,32 @@ theo\_metastable & 60 & 0.0013 -- 0.1991 \\
 
 \begin{tabular}{@{}lr@{}}
 \toprule
-Bond type (\texttt{classify()}) & $n$ \\
+Bond type (\texttt{classify()}, informative only) & $n$ \\
 \midrule
 metallic       & 88 \\
-covalent       & 23 \\
-ionic          & 9 \\
-unclassified   & 66 \\
+ionic          & 53 \\
+covalent       & 35 \\
+unclassified   & 173 \\
+\midrule
+\textbf{Total}  & \textbf{349} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-35\% of compounds (66/186) fall outside \texttt{classify()}'s three
-categories --- mostly transition-metal pnictides/chalcogenides and
-hydrogen-containing compounds, a real limitation of the reused heuristic,
-documented but not fixed here.
+The "bond type" table was \textbf{not out of date by accident}: the
+\texttt{extension4} campaign (\S\ref{sec:followups2}) specifically added
+89 alkali/alkaline-earth binaries against N/O/F/P/S/Cl, taking the ionic
+total from 9 (campaign 2 alone) to 53. Half of these new binaries
+nonetheless remain "unclassified": \texttt{classify()} only recognizes
+alkali/alkaline-earth $\times$ \{halogen, O\} pairs as "ionic"
+(\texttt{IONIC\_ANIONS}), not $\times$ \{N, P, S\} --- a real limitation
+of the reused heuristic, documented but not fixed here. As noted in
+\S2.2, this categorization remains purely descriptive in this report.
 
 \section{Results}
+\label{sec:results}
 
-\subsection{Correlations (Spearman)}
+\subsection{Correlations (Spearman) --- classic ICOHP aggregates}
 
 \begin{center}
 \small
@@ -220,66 +259,35 @@ documented but not fixed here.
 \toprule
 Group & Metric & $n$ & $\rho$ & $p$ \\
 \midrule
-all & percolation weight (raw)        & 186 & 0.064 & 0.383 \\
-all & percolation weight (normalized) & 186 & 0.071 & 0.339 \\
-metallic & percolation weight (raw)        & 88 & 0.191 & 0.075 \\
-metallic & percolation weight (normalized) & 88 & \textbf{0.222} & \textbf{0.038} \\
-ionic$^*$ & percolation weight (raw)       & 9  & $-$0.402 & 0.284 \\
-covalent & percolation weight (raw)        & 23 & 0.165 & 0.453 \\
-\midrule
 all & ICOHP sum    & 186 & 0.032 & 0.670 \\
 all & ICOHP min    & 186 & 0.093 & 0.209 \\
 metallic & ICOHP sum  & 88 & 0.223 & 0.037 \\
 metallic & ICOHP min  & 88 & 0.198 & 0.065 \\
 \bottomrule
 \end{tabular}
-
-\footnotesize $^*$ $n<15$: do not over-interpret.
 \end{center}
 
-In the one subgroup where any result reaches nominal significance
-(metallic, $n=88$), the normalized percolation weight ($\rho=0.222$,
-$p=0.038$) and the ICOHP sum ($\rho=0.223$, $p=0.037$) are statistically
-indistinguishable in strength. \textbf{The percolation descriptor does not
-demonstrate additional predictive power over the classic aggregates on
-this dataset} --- a more precise answer than the previous (6-compound)
-report's "qualitatively different" framing, and a more directly
-actionable one.
-
-\subsection{Reference Logistic Regression}
-
-Stable (on-hull) vs. metastable, features: normalized percolation weight,
-mean ICOHP, bond-type dummies ($n=120$ after dropping unclassified
-compounds).
-
-\begin{center}
-\begin{tabular}{@{}lr@{}}
-\toprule
-AUC (5-fold cross-validation) & $0.496 \pm 0.141$ \\
-per-fold AUC & 0.556, 0.430, 0.252, 0.637, 0.607 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-AUC $\approx 0.5$: chance level. The wide spread across folds
-(0.25--0.64) is itself informative: it indicates the absence of a stable,
-learnable signal at this sample size, not merely a "weak but real" one.
-
-\subsection{Figures}
-
-\begin{center}
-\includegraphics[width=0.85\textwidth]{percolation_vs_ehull.png}
-\end{center}
-
-\begin{center}
-\includegraphics[width=0.55\textwidth]{roc_stable_vs_metastable.png}
-\end{center}
+These four rows (classic ICOHP aggregates, campaign 2, $n=186$, target
+\texttt{energy\_above\_hull}) are kept here as the reference baseline
+for every later mission. \textbf{The percolation weight, which appeared
+in this same table in the original version of this report, is moved in
+full to Appendix~\ref{sec:appendix-percolation}} (complete table with
+bond-type subgroups, reference logistic regression, and associated
+figures) --- this trimmed table therefore no longer allows a direct
+percolation-vs-classic-aggregates comparison; that comparison is still
+available as-is in the appendix. Current descriptors' correlations
+(antibonding population, reaction ICOHP) are given in
+\S\ref{sec:followups}--\S\ref{sec:followups2}, against
+\texttt{formation\_energy\_per\_atom} rather than
+\texttt{energy\_above\_hull}.
 
 \section{Failures Found and Fixed}
 
 Per the instruction ("every job failure must be logged with its probable
-cause"), 5 of the 178 SLURM-array-submitted jobs failed on the first pass,
-all diagnosed and fixed at the source:
+cause"), 5 of the 178 SLURM-array-submitted jobs failed on the first
+pass while computing campaign 2's 186 compounds, all diagnosed and fixed
+at the source (the fixes, applied to the shared SLURM/INCAR templates,
+carry over to every later campaign):
 
 \begin{itemize}
   \item \textbf{Al12W, BW, WO2, TcW, TiW} (all tungsten-containing): the
@@ -297,145 +305,168 @@ all diagnosed and fixed at the source:
     Fixed; recovered on retry.
 \end{itemize}
 
-Final success rate: \textbf{186/186}.
+Final success rate across all 349 structures computed to date:
+\textbf{349/349}.
 
 \section{Compute Cost}
+\label{sec:cost}
+
+\textbf{349 structures computed in total}: 68 single-element references
+and 281 multi-element compounds (\S\ref{sec:dataset}), across five
+submission campaigns/batches (the original campaign 2 and four
+\texttt{extension} batches).
+
+Every VASP job, then LOBSTER job, runs on the \textbf{Yargla} HPC cluster,
+within a single SLURM allocation of one node (\texttt{--nodes=1}) and
+\textbf{16 cores}: VASP under MPI parallelism
+(\texttt{--ntasks=16 --cpus-per-task=1}, \texttt{srun}), then LOBSTER
+under OpenMP parallelism on the same 16 cores
+(\texttt{OMP\_NUM\_THREADS=16}, single process, run sequentially after
+VASP within the same job). The SLURM array (\texttt{submit\_array.sh}) is
+capped at 8 concurrent tasks.
 
 \begin{center}
 \begin{tabular}{@{}lrr@{}}
 \toprule
  & VASP & LOBSTER \\
 \midrule
-Mean (s) & 124 & 397 \\
-Median (s) & 72 & 145 \\
-Max (s) & 1440 & 6675 \\
-Sequential total & 6.4 h & 19.1 h \\
+$n$ & 349 & 348$^*$ \\
+Mean (s) & 168 & 404 \\
+Median (s) & 58 & 110 \\
+Max (s) & 5715 (1.6 h) & 12063 (3.4 h) \\
+Sequential total & 16.3 h & 39.0 h \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^*$ 1 of 349 structures had no usable LOBSTER step
+(trivial-cell reference element).}
 \end{center}
 
-Actual elapsed wall-clock time (8-way concurrency): $\sim$3.5~h, within the
-6~h overnight budget.
+Combined sequential total (VASP + LOBSTER, 349 structures):
+\textbf{55.3 h}. Given the 8-concurrent-task cap, the order of magnitude
+for actual elapsed time to process this volume as a single batch would
+be $\sim$6.9~h --- a rough estimate (dividing by 8, ignoring queue time)
+given for context: in practice, the 349 structures were submitted across
+several campaigns spread over multiple sessions, not as one single
+batch.
 
-\section{Limits and Next Steps}
-\label{sec:limits}
+\section{Current Limits and Next Steps}
+\label{sec:limits-current}
 
 \begin{itemize}
-  \item \textbf{Sample size}: 186 overall, but 88/23/9 once split by bond
-    type --- the "ionic" correlations ($n=9$) are not interpretable.
-  \item \textbf{Primitive vs. conventional cell} (carried over from the
-    pilot report): not addressed here. Most likely explanation for the
-    weak observed correlations --- the strongest bond can sit entirely
-    inside the primitive cell and contribute to no non-contractile cycle
-    at all, biasing the measured "weakest link."
+  \item \textbf{\texttt{classify()} coverage}: 173/349 structures (50\%)
+    fall outside the ionic/covalent/metallic categories, mostly
+    alkali/alkaline-earth $\times$ \{N, P, S\} bonds that
+    \texttt{IONIC\_ANIONS} does not recognize (\S\ref{sec:dataset}) ---
+    purely informative here, but a real limitation for any mission that
+    would want to stratify on it.
   \item \textbf{No true dynamical "unstable" class}: \texttt{theo\_metastable}
-    is a proxy (never synthesized), not a phonon-calculation result.
-  \item \textbf{\texttt{classify()} coverage}: 35\% of compounds
-    unclassified.
-  \item \textbf{Why not SISSO yet}: a single candidate descriptor (the
-    percolation weight, in two algebraically related variants), compared
-    against aggregates that are themselves functions of the same
-    underlying ICOHP values --- no meaningful combinatorial search space
-    yet. Justifying SISSO would require: (a) several conceptually novel
-    candidate descriptors, (b) per-stratum $n \geq 50$--100, (c) a clearer
-    signal than AUC $\approx 0.5$.
+    and the theoretical \texttt{extension} batches are proxies (never
+    synthesized), not a phonon-calculation result.
+  \item \textbf{Per-subgroup sample size}: remains this project's
+    structural limit at every new stratification (\texttt{bond\_type},
+    \texttt{is\_metal}, \texttt{family}) --- see
+    \S\ref{sec:followups}--\S\ref{sec:followups2} for concrete examples
+    where an $n<15$ subgroup did not replicate once the sample grew.
+  \item \textbf{Why not SISSO yet}: reaction ICOHP (mission \#5,
+    \S\ref{sec:followups2}) is now the strongest correlate and the first
+    whose signal is not fully explained away by between-group clustering
+    at every level tested --- the best argument yet for a stratified
+    feature search, still not attempted.
 \end{itemize}
+
+Limits specific to the percolation weight and its descendants
+(primitive-vs-conventional-cell sensitivity, chance-level reference
+logistic regression) are documented in
+Appendix~\ref{sec:appendix-percolation}, not repeated here.
 
 \section{Conclusion}
 
-The 186-compound dataset was built, computed (VASP+LOBSTER), and analyzed
-end to end, with two compute failures diagnosed and fixed at the source.
-The headline result is a \emph{negative} but quantified and honest one: at
-this sample size, the percolation descriptor shows no significant
-correlation with thermodynamic stability, and demonstrates no advantage
-over classic ICOHP aggregates. The priority actions (\S\ref{sec:limits})
---- especially conventional-cell reprocessing and a targeted extension of
-the metallic subsample --- are likely to move this result before a
-SISSO-class tool is warranted.
+The dataset grew from 186 to 349 computed structures (VASP+LOBSTER)
+across five campaigns/batches, with a final success rate of 349/349 and
+two compute failures diagnosed and fixed at the source during the
+original campaign 2. The project's organizing question evolved along the
+way: starting from the percolation weight (no significant correlation
+retained, Appendix~\ref{sec:appendix-percolation}), through network
+dimensionality/periodic min-cut (also in the appendix, headline
+correlation not reproduced at the current scale), the antibonding
+population near the Fermi level (mission \#4, the project's most robust
+covalent subgroup), to reaction ICOHP and its endobondic/exobondic
+classification (mission \#5) --- now the project's strongest and most
+robust correlation, and the central question explicitly reformulated
+around it (\S\ref{sec:reframing}). The next concrete milestone, already
+identified in the reframing, is a deliberate extension to compounds near
+the stability edge rather than continuing to accumulate compounds that
+are comfortably stable or comfortably unstable.
 
 \vspace{1cm}
 \noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
-\noindent\textit{Data:} \texttt{analysis/percolation\_vs\_hull.csv} \\
-\noindent\textit{Detailed report:} \texttt{analysis/REPORT.md}
+\noindent\textit{Data:} \texttt{analysis/percolation\_vs\_formation\_energy.csv} \\
+\noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_*.md}
 
-\section{Campaign 2 follow-ups (missions \#3 to \#5)}
+\section{Campaign 2 follow-ups (missions \#4 and \#5)}
 \label{sec:followups}
 
-Three further descriptors were built in later sessions, all tested against
-\texttt{formation\_energy\_per\_atom} (introduced in mission \#3 as an
-alternative target to \texttt{energy\_above\_hull}, generally more
-correlatable) rather than the hull. Missions \#3 and \#4 reuse the
-186-compound dataset above unmodified; mission \#5 draws in part on a
-\textbf{74-compound extension campaign} (\texttt{extension\_*}: elemental
-references, ionic compounds and polymorphs outside the main set), not
-reprocessed into this report's appendices --- see the repository's
-\texttt{README.md} for its full detail. Numbers in this subsection are as
-of August 15, 2026, at the 186/192-compound scale; \S\ref{sec:followups2}
-reprocesses all three at the 349-compound scale reached the following day
-and should be read alongside this subsection, not instead of it.
+Two further descriptors were built in later sessions, both tested
+against \texttt{formation\_energy\_per\_atom} (introduced in mission
+\#3 as an alternative target to \texttt{energy\_above\_hull}, generally
+more correlatable) rather than the hull. Both reuse the 186-compound
+dataset above unmodified at the initial stage; mission \#5 draws in part
+on a \textbf{74-compound extension campaign} (\texttt{extension\_*}:
+elemental references, ionic compounds and polymorphs outside the main
+set), detailed in \S\ref{sec:followups2}. Numbers in this subsection are
+as of August 15, 2026, at the 186/192-compound scale;
+\S\ref{sec:followups2} reprocesses both missions at the 349-compound
+scale reached the following day and should be read alongside this
+subsection, not instead of it.
 
-\textbf{A pattern repeats across all three missions}: each new descriptor
+\textbf{A pattern repeats across both missions}: each new descriptor
 reaches a statistically significant \emph{global} correlation, stronger
-than anything the percolation weight ever achieved
-(\S\ref{sec:limits}) --- but in all three cases that global correlation
-turns out to be substantially, or entirely, a clustering effect between
-bond types or between metals and gapped compounds, rather than a robust
-relationship \emph{within} a homogeneous group.
-
-\subsection{Mission \#3: network dimensionality and periodic min-cut}
-
-Two new descriptors, \texttt{percolation\_path.py} left unchanged:
-\texttt{network\_dimensionality.py} (0D--3D classification via a relative
-bond-strength threshold + breadth-first search) and
-\texttt{periodic\_mincut.py} (minimum cut via \texttt{networkx} max-flow,
-separability rather than traversability). Headline: the normalized min-cut
-is the \textbf{first descriptor in the project to reach a significant
-global correlation} ($\rho=0.285$, $p=1.0\times10^{-4}$, $n=186$), likely
-driven in part by between-bond-type clustering; dimensionality alone does
-not separate \texttt{formation\_energy\_per\_atom}
-(Kruskal--Wallis $p=0.19$).
-
-\begin{center}
-\includegraphics[width=0.75\textwidth]{mincut_vs_formation_energy.png}
-\end{center}
+than anything the percolation weight or the min-cut ever achieved
+(Appendix~\ref{sec:appendix-percolation}) --- but in both cases that
+global correlation turns out to be substantially, or entirely, a
+clustering effect between bond types or between metals and gapped
+compounds, rather than a robust relationship \emph{within} a homogeneous
+group.
 
 \subsection{Mission \#4: antibonding population near the Fermi level}
 
-A distinct question: not the integrated ICOHP (one number per bond), but
-\emph{how} COHP is distributed in energy --- the occupied antibonding
-fraction just below the Fermi level/VBM, by analogy with
-Peierls/Jahn--Teller electronic instabilities (new module
-\texttt{cohp\_extraction.py}, validated by exact cross-check against
-\texttt{ICOHPLIST.lobster} on the 6 pilot compounds). Headline:
-$\rho=-0.328$, $p=5.0\times10^{-6}$ ($n=186$) --- the strongest global
-correlation in the project at the time. The sign is \emph{opposite} the
-naive Peierls/Jahn--Teller reading. Diagnostics: the effect is
-substantially driven by metal/gapped clustering, but the
+A distinct question from integrated ICOHP (one number per bond): not
+\emph{how much} bonding a compound has, but \emph{how} COHP is
+distributed in energy --- the occupied antibonding fraction just below
+the Fermi level/VBM, by analogy with Peierls/Jahn--Teller electronic
+instabilities (new module \texttt{cohp\_extraction.py}, validated by
+exact cross-check against \texttt{ICOHPLIST.lobster} on the 6 pilot
+compounds). Headline: $\rho=-0.328$, $p=5.0\times10^{-6}$ ($n=186$) ---
+the strongest global correlation in the project at the time. The sign is
+\emph{opposite} the naive Peierls/Jahn--Teller reading. Diagnostics: the
+effect is substantially driven by metal/gapped clustering, but the
 \texttt{bond\_type=covalent} subgroup ($n=23$) survives stratification
 ($p=0.018$--$0.029$) --- the only subgroup in the project, to date, to
 hold up under such a test.
 
 \subsection{Mission \#5: reaction ICOHP}
 
-An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a compound's
-total ICOHP ``cheaper'' than the same atoms in elemental reference
-form (new module \texttt{reaction\_icohp.py}, reaction balanced via
-\texttt{pymatgen.analysis.reaction\_calculator})? Extended to 192
-compounds using the 74-compound extension campaign (62 elemental
+An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a
+compound's total ICOHP "cheaper" than the same atoms in elemental
+reference form (new module \texttt{reaction\_icohp.py}, reaction
+balanced via \texttt{pymatgen.analysis.reaction\_calculator})? Extended
+to 192 compounds using the 74-compound extension campaign (62 elemental
 references computed). Headline: $\rho=0.370$, $p=3.9\times10^{-7}$
-($n=177$) --- numerically the strongest global correlation in the project
-to date, this time with an intuitive sign (less bonding than the elemental
-state $\Rightarrow$ less stable formation). But \textbf{no \texttt{bond\_type}
-subgroup survives stratification} (Kruskal--Wallis $p=2.1\times10^{-6}$ for
-the descriptor, $p=5.0\times10^{-8}$ for the target, across the three
-strata) --- unlike mission \#4, the clustering effect here explains the
-entire observed signal. Against \texttt{energy\_above\_hull} the
-correlation is absent ($\rho=0.09$, $p=0.20$).
+($n=177$) --- numerically the strongest global correlation in the
+project to date, this time with an intuitive sign (less bonding than the
+elemental state $\Rightarrow$ less stable formation). But \textbf{no
+\texttt{bond\_type} subgroup survives stratification} (Kruskal--Wallis
+$p=2.1\times10^{-6}$ for the descriptor, $p=5.0\times10^{-8}$ for the
+target, across the three strata) --- unlike mission \#4, the clustering
+effect here explains the entire observed signal. Against
+\texttt{energy\_above\_hull} the correlation is absent ($\rho=0.09$,
+$p=0.20$).
 
-\subsection{Comparative summary (186/192-compound scale)}
+\subsection{Comparison (missions \#4--\#5, 186/192-compound scale)}
 
-All four descriptors tested against \texttt{formation\_energy\_per\_atom},
-on the same common subsample ($n=177$, the intersection of campaign 2's
+On the same common subsample ($n=177$, the intersection of campaign 2's
 186 compounds and mission \#5's 192 computable rows):
 
 \begin{center}
@@ -445,18 +476,21 @@ Descriptor & $n$ & $\rho$ & $p$ \\
 \midrule
 Reaction ICOHP (mission \#5) & 177 & 0.370 & $3.9\times10^{-7}$ \\
 Antibonding population, normalized (mission \#4) & 177 & $-0.337$ & $4.5\times10^{-6}$ \\
-Periodic min-cut, normalized (mission \#3) & 177 & 0.313 & $2.3\times10^{-5}$ \\
-Percolation weight, normalized (mission \#1) & 177 & 0.104 & 0.170 \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize Periodic min-cut (mission \#3, $\rho=0.313$) and
+percolation weight (mission \#1, $\rho=0.104$), on the same $n=177$, are
+given for reference in Appendix~\ref{sec:appendix-percolation}.}
 \end{center}
 
-Ranking by raw correlation strength ($\rho$) is not the same as ranking by
-reliability: mission \#5 leads numerically but is also the only one where
-\emph{no} subgroup survives stratification (above), whereas mission \#4
+Ranking by raw correlation strength ($\rho$) is not the same as ranking
+by reliability: mission \#5 leads numerically but is also the only one
+where \emph{no} subgroup survives stratification, whereas mission \#4
 keeps a significant covalent subgroup.
 
-\section{August 16 update: the extension4 campaign, all three missions reprocessed, and the min-cut collapse}
+\section{August 16 Update: the extension4 Campaign and Missions \#4--\#5 Reprocessed}
 \label{sec:followups2}
 
 \subsection{The extension4 campaign}
@@ -480,29 +514,29 @@ Dataset: 260 $\to$ 349 compounds.
 Separately, the schema-driven \texttt{reaction\_analysis/} package
 (superseding the ad hoc \texttt{reaction\_icohp.py} module long-term) was
 extended with an \textbf{endobondic/exobondic bonding-kinetics
-classifier} following Reitz \& Dronskowski (ic-2026-04181q): a reaction's
-$\Delta$ICOHP (products $-$ reactants) being positive (``endobondic'')
-means breaking the reactant's bonds costs more than the products' bonds
-recover --- a kinetic barrier that can keep an exothermically-favored
-decomposition from actually happening, explaining why some very
-exothermic compounds are nonetheless observed to exist. Validated against
-all 7 worked numerical examples in the manuscript; not yet connected to
-this project's own LOBSTER data for classification, an explicit
-next step, not attempted this session.
+classifier}: a reaction's $\Delta$ICOHP (products $-$ reactants) being
+positive ("endobondic") means breaking the reactant's bonds costs more
+than the products' bonds recover --- a kinetic barrier that can keep an
+exothermically-favored decomposition from actually happening, explaining
+why some very exothermic compounds are nonetheless observed to exist.
+Validated against 7 reference reactions with independently known ICOHP
+values; not yet connected to this project's own LOBSTER data for
+classification, an explicit next step, not attempted this session.
 
-Every reaction's per-bond-type ICOHP values were hand-transcribed from the
-manuscript text (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}),
-independent of this project's own CSP data, then run end to end through
+Every reaction's per-bond-type ICOHP values were transcribed from
+independent reference values
+(\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), independent of
+this project's own CSP data, then run end to end through
 \texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}. All 7 match
-the manuscript's reported $\Delta$ICOHP within a few kJ/mol (attributable
-to the manuscript's own rounding of its reported per-bond eV values) and
-every \texttt{BondingLabel} matches:
+the reference $\Delta$ICOHP within a few kJ/mol (attributable to the
+source's own rounding of its reported per-bond eV values) and every
+\texttt{BondingLabel} matches:
 
 \begin{center}
 \begin{tabular}{@{}lrrll@{}}
 \toprule
-Reaction & Manuscript & Computed & \multicolumn{2}{c}{Label} \\
- & (kJ/mol) & (kJ/mol) & Ms. & Computed \\
+Reaction & Reference & Computed & \multicolumn{2}{c}{Label} \\
+ & (kJ/mol) & (kJ/mol) & Ref. & Computed \\
 \midrule
 Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
 S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
@@ -515,12 +549,12 @@ Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
 \end{tabular}
 \end{center}
 
-The Mn$_2$O$_7$ case is the manuscript's own guard-rail example: exobondic
-by this static sign criterion, yet Mn$_2$O$_7$ is a real, observed
-compound that simply decomposes slowly (gradual O$_2$ loss) rather than by
-sudden bond rupture --- \texttt{classify.py} structurally attaches a
-warning to \emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict for exactly
-this reason, rather than hardcoding Mn$_2$O$_7$ as a special case.
+The Mn$_2$O$_7$ case is a useful guard-rail on its own: exobondic by
+this static sign criterion, yet Mn$_2$O$_7$ is a real, observed compound
+that simply decomposes slowly (gradual O$_2$ loss) rather than by sudden
+bond rupture --- \texttt{classify.py} structurally attaches a warning to
+\emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict for exactly this
+reason, rather than hardcoding Mn$_2$O$_7$ as a special case.
 
 The full list of every compound and element computed across the entire
 \texttt{extension} campaign --- not just \texttt{extension4}'s 89, but
@@ -528,16 +562,19 @@ all four batches combined (163 compounds total: elemental references,
 carbon allotropes, TiO2 high-pressure polymorphs, and every ionic/
 covalent compound added along the way) --- together with the case-1
 decomposition reactions computed from them (their own $\Delta$ICOHP/atom
-and endobondic/exobondic label, distinct from the 7 literature cases
+and endobondic/exobondic label, distinct from the 7 reference cases
 above), is given in Appendix~\ref{sec:appendix-ext-elements} through
 Appendix~\ref{sec:appendix-ext-exobondic}.
 
-\subsection{Missions \#3--\#5, reprocessed at 349 compounds}
+\subsection{Missions \#4--\#5, reprocessed at 349 compounds}
 
 Every per-compound descriptor script was rerun unmodified over the grown
 dataset --- \texttt{extension4}'s constituent elements were all already
 covered by the existing elemental-reference set, so no new element
-calculations were needed.
+calculations were needed. (Mission \#3, network dimensionality/periodic
+min-cut, was also reprocessed at this scale; its own result, and the
+diagnosis of its headline correlation's collapse, are documented in
+Appendix~\ref{sec:appendix-percolation}, not here.)
 
 \textbf{Mission \#4 (antibonding)}: $\rho=-0.282$, $p=9.2\times10^{-8}$
 ($n=346$) --- weaker than the original $\rho=-0.328$, but the
@@ -562,8 +599,8 @@ pooled signal (Kruskal--Wallis $p=1.1\times10^{-15}$, no stratum
 survives) --- \textbf{but \texttt{is\_metal} stratification now survives
 on both sides} (\texttt{is\_metal=False}: $\rho=0.319$, $p=0.0001$;
 \texttt{is\_metal=True}: $\rho=0.256$, $p=0.0025$), where at $n=186$
-neither did. This revises the previous verdict that ``the between-group
-confound explains the entirety of the observable signal'' --- it explains
+neither did. This revises the previous verdict that "the between-group
+confound explains the entirety of the observable signal" --- it explains
 the \texttt{bond\_type}-level pooling completely, but not a real,
 newly-detectable within-\texttt{is\_metal}-group relationship. Case 2
 (polymorph comparison), extended from 8 to \textbf{49 groups} specifically
@@ -577,44 +614,6 @@ exploratory pass.
 \includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
 \end{center}
 
-\subsection{Why did the min-cut correlation collapse?}
-
-Mission \#3's headline, $\rho=0.285$ at $n=186$, collapsed to
-$\rho=0.089$, $p=0.098$ (not significant) at $n=349$. \textbf{This is not
-a refutation of the original result} --- isolated, the original 186
-compounds still give $\rho=0.2845$, $p=8.3\times10^{-5}$, essentially
-identical to the mission-\#3 number. The collapse is a dilution artifact
-from pooling populations added for unrelated reasons:
-
-\begin{itemize}
-\item 65 of the 74 extension-batch-1--3 compounds are single-element
-  reference structures (added for mission \#5's elemental references),
-  sitting at \texttt{formation\_energy\_per\_atom}$\approx 0$ by
-  construction with widely-scattered min-cut values --- mechanically
-  dilutes a rank correlation regardless of any true relationship.
-  Excluding them recovers $\rho=0.2157$ ($n=193$).
-\item \texttt{extension4} is not one population but two, with
-  \emph{opposite-sign} correlations: the experimental half is flat
-  ($\rho=0.06$, not significant, $n=50$); the deliberately
-  far-above-hull theoretical half shows a \emph{significant} correlation
-  of the \emph{opposite} sign ($\rho=-0.40$, $p=0.011$, $n=39$) --- not
-  established here whether this reflects real physics of far-from-hull
-  structures or a selection artifact of picking the single highest-EAH
-  entry per formula.
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=0.85\textwidth]{mincut_vs_formation_energy_by_population.png}
-\end{center}
-
-\textbf{Recommendation}: any future min-cut-vs-formation-energy number
-(or, by the same logic, any other descriptor's) should be conditioned on
-\texttt{family}/selection-provenance, the same way this project already
-conditions on \texttt{bond\_type}/\texttt{is\_metal} --- pooling
-compounds selected for unrelated reasons is exactly the between-group
-confound this project's own methodology exists to catch, and it had not
-been applied to the dataset's own growing denominator until now.
-
 \textbf{Still no SISSO.} Reaction ICOHP is now the strongest raw
 correlate of \texttt{formation\_energy\_per\_atom} in the project, and
 the first descriptor whose signal is not fully explained away by
@@ -622,8 +621,11 @@ between-group clustering at every level tested --- the strongest
 argument yet for a stratified (\texttt{is\_metal}-conditional) feature
 search over a pooled one, still not attempted.
 
-\noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
+\noindent\textit{Detailed reports:}
 \texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
+The diagnosis of mission \#3's (min-cut) collapse is in
+Appendix~\ref{sec:appendix-percolation}
+(\texttt{analysis/REPORT\_dimensionality\_mincut.md}).
 
 \section{Project Reframing (August 16): the Central Question is $\Delta$(ICOHP)-Based Viability}
 \label{sec:reframing}
@@ -631,30 +633,29 @@ search over a pooled one, still not attempted.
 \textbf{The project's central research question is restated as of this
 update: does $\Delta$(ICOHP) --- the reaction-ICOHP descriptor for a
 compound's decomposition into elements, and specifically the sign-based
-endobondic/exobondic classification it supports (Reitz \& Dronskowski,
-ic-2026-04181q) --- distinguish thermodynamically stable, metastable,
-and unstable compounds?} This supersedes the percolation-weight-centric
-framing that the body of this report (\S\ref{sec:reframing} and earlier)
-documents --- \texttt{percolation\_path.py} (mission \#1) and
-\texttt{network\_dimensionality.py}/\texttt{periodic\_mincut.py}
-(mission \#3) remain valuable as the historical foundation (periodic
-graph construction, the statistical conventions every later mission
-still reuses) but are no longer this project's organizing question,
-consistent with min-cut's own headline correlation not surviving the
-dataset's growth to 349 compounds (\S\ref{sec:followups2}). Full
-detail: \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
+endobondic/exobondic classification it supports --- distinguish
+thermodynamically stable, metastable, and unstable compounds?} This
+supersedes the percolation-weight-centric framing that organized the
+original campaign 2 (Appendix~\ref{sec:appendix-percolation}) ---
+percolation weight (mission \#1) and network dimensionality/periodic
+min-cut (mission \#3) remain valuable as the historical foundation
+(periodic graph construction, the statistical conventions every later
+mission still reuses) but are no longer this project's organizing
+question, consistent with min-cut's own headline correlation not
+surviving the dataset's growth to 349 compounds (\S\ref{sec:followups2},
+Appendix~\ref{sec:appendix-percolation}). Full detail:
+\texttt{analysis/REPORT\_delta\_icohp\_viability.md},
 \texttt{analysis/test\_delta\_icohp\_viability.py}.
 
-\subsection{Manuscript concordance, formalized}
+\subsection{Reference concordance, formalized}
 
-\S\ref{sec:followups2} already showed all 7 of Reitz \& Dronskowski's
-worked reactions reproducing to within a few kJ/mol. Correlation alone
-(Pearson/Spearman) is not the right test for ``do our numbers match the
-manuscript's'' --- it is satisfied by any monotonic relationship, even
-one with a large systematic offset or scale factor. \textbf{Lin's
-Concordance Correlation Coefficient} (CCC) specifically tests agreement
-with the identity line (computed = manuscript), the actual claim being
-tested:
+\S\ref{sec:followups2} already showed all 7 reference reactions
+reproducing to within a few kJ/mol. Correlation alone (Pearson/Spearman)
+is not the right test for "do our numbers match the reference values" ---
+it is satisfied by any monotonic relationship, even one with a large
+systematic offset or scale factor. \textbf{Lin's Concordance Correlation
+Coefficient} (CCC) specifically tests agreement with the identity line
+(computed = reference), the actual claim being tested:
 
 \begin{center}
 \begin{tabular}{@{}lr@{}}
@@ -673,9 +674,9 @@ RMSE & 0.98 kJ/mol \\
 \end{center}
 
 A CCC this close to 1 means the two methods agree essentially within the
-manuscript's own reporting precision (values rounded to 2--3 decimals in
-the original text), not merely that they move together --- the
-implementation is validated by it, not just individually spot-checked.
+reference values' own reporting precision (rounded to 2--3 decimals),
+not merely that they move together --- the implementation is validated
+by it, not just individually spot-checked.
 
 \subsection{Extended to every compound computed to date, pooled without regard to campaign}
 
@@ -684,10 +685,10 @@ extension batch a compound came from} --- those boundaries reflect
 submission order across sessions, not chemistry, and grouping by them
 would itself be exactly the kind of between-group confound this
 project's methodology exists to catch (the same lesson
-\S\ref{sec:followups2}'s min-cut diagnosis already demonstrated).
-\textbf{281 case-1 reactions}, every element and compound with a
-computed decomposition-into-elements reaction across the whole project,
-pooled into one population.
+Appendix~\ref{sec:appendix-percolation}'s min-cut diagnosis already
+demonstrated). \textbf{281 case-1 reactions}, every element and compound
+with a computed decomposition-into-elements reaction across the whole
+project, pooled into one population.
 
 \textbf{Continuous stability targets:}
 
@@ -725,8 +726,8 @@ theoretical-only ($n=98$) & 17 & 81 \\
 
 Fisher's exact test: $p=0.10$, odds ratio $=1.72$ (endobondic is $\sim
 1.7\times$ more common among experimentally-realized compounds --- the
-expected direction, given endobondic's manuscript meaning as a kinetic-
-barrier signature --- but not significant at this sample size).
+expected direction, since endobondic is meant as a kinetic-barrier
+signature --- but not significant at this sample size).
 
 \textbf{Finer-grained (family, three-way, $n=175$):}
 
@@ -745,19 +746,19 @@ theo\_metastable & 59 & $-1.659$ & \textbf{11.9\%} \\
 Kruskal--Wallis across the three groups: $H=2.81$, $p=0.245$ ---
 \textbf{not significant}, but the ordering is exactly the physically-
 motivated one: \texttt{exp\_metastable} compounds (known to exist
-despite sitting off the convex hull --- the category the manuscript's
-own framework is specifically about) have the highest endobondic
-fraction; \texttt{theo\_metastable} compounds (never synthesized) have
-the lowest.
+despite sitting off the convex hull --- the category the
+endobondic/exobondic framework is specifically about) have the highest
+endobondic fraction; \texttt{theo\_metastable} compounds (never
+synthesized) have the lowest.
 
 \subsection{Reading}
 
-The manuscript's 7 cases reproduce essentially exactly --- the
+The 7 reference reactions reproduce essentially exactly --- the
 implementation is correct. Extending the same sign-based logic to a
 much larger, more heterogeneous, and generally much more comfortably
 stable population does not yet produce a statistically significant
 stable/metastable/unstable discriminator, though every trend points the
-right way. This is not a contradiction: the manuscript's 7 cases were
+right way. This is not a contradiction: the 7 reference cases were
 chosen specifically as borderline-stability edge cases (Pb(N$_3$)$_2$,
 S$_4$N$_2$/S$_4$N$_4$, ZnSn, Mn$_2$O$_7$) where a kinetic-barrier
 explanation is specifically needed; most of this project's 281 compounds
@@ -769,19 +770,268 @@ compounds, not just whatever the next unrelated mission happens to add
 to the dataset. \texttt{classify.py}'s full \texttt{ViabilityLabel}
 machinery (beyond the sign-only \texttt{BondingLabel} used here) needs
 exactly such a population --- for the current dataset, decomposition
-into elements is strongly endothermic for nearly every compound (normal
+into elements is strongly exothermic for nearly every compound (normal
 for stable inorganic chemistry), which would trivially classify almost
 everything \texttt{STABLE\_ON\_HULL} and add no information beyond what
 \texttt{energy\_above\_hull} already says directly.
 
 \appendix
-\section{Compound List}
 
-The 186 compounds in the dataset, grouped by category (family), with their
+\section{Appendix: Percolation\_viability}
+\label{sec:appendix-percolation}
+
+This appendix collects everything related to the percolation weight and
+its direct descendants (network dimensionality, periodic min-cut ---
+missions \#1 and \#3): this was the central subject of the original
+campaign 2, unmodified below from its first drafting, but it is no
+longer this project's organizing question (\S\ref{sec:reframing}). The
+corresponding source code has been moved to the repository's
+\texttt{Percolation\_viability/} directory
+(\texttt{percolation\_path.py}, \texttt{network\_dimensionality.py},
+\texttt{periodic\_mincut.py}, and their tests
+\texttt{tests/test\_percolation\_path.py},
+\texttt{tests/test\_network\_dimensionality.py},
+\texttt{tests/test\_periodic\_mincut.py}).
+
+\subsection{Original objective (mission \#1)}
+
+The very first report (6 toy compounds) established that the
+percolation descriptor computed by \texttt{percolation\_path.py}
+diverges sharply from classic ICOHP aggregates (sum, mean, min, max),
+but without a sample large enough to statistically test whether that
+difference is \emph{useful}: does the percolation descriptor carry
+predictive information about thermodynamic stability
+(\texttt{energy\_above\_hull}) that the classic aggregates don't already
+carry? Campaign 2 built a 186-compound dataset (180 new + the 6 pilot
+compounds) split into three families (\texttt{exp\_stable},
+\texttt{exp\_metastable}, \texttt{theo\_metastable}, \S\ref{sec:dataset})
+to settle that question.
+
+\subsection{Original workflow diagram}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.75cm and 1.6cm,
+  box/.style={draw, rounded corners, minimum width=5.0cm, minimum height=1.0cm,
+              align=center, fill=blue!6, font=\small},
+  io/.style={draw, minimum width=5.0cm, minimum height=1.0cm, align=center,
+             fill=orange!10, font=\small},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[io]  (mp)     {Materials Project (API) \\ 180 compounds (3 families $\times$ 60)};
+\node[box, below=of mp] (prep)   {\texttt{download\_campaign.py} + \texttt{prepare\_vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
+\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks};
+\node[box, below=of slurm] (vasplob) {VASP (static) $\rightarrow$ LOBSTER 5.1.1 \\ ICOHPLIST.lobster, ICOBILIST.lobster};
+\node[box, below=of vasplob] (perc)   {\texttt{Percolation\_viability/percolation\_path.py} (unchanged) \\ 186 compounds (180 + 6 pilots)};
+\node[box, below=of perc] (join)   {\texttt{analysis/build\_dataset.py} \\ join + normalized descriptor + bond\_type};
+\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis.py} \\ correlations, logistic regression, figures};
+
+\draw[arr] (mp) -- (prep);
+\draw[arr] (prep) -- (slurm);
+\draw[arr] (slurm) -- (vasplob);
+\draw[arr] (vasplob) -- (perc);
+\draw[arr] (perc) -- (join);
+\draw[arr] (join) -- (stats);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Campaign 2 dataset (186 compounds)}
+
+\begin{center}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Family & $n$ & $E_\text{hull}$ range (eV/atom) \\
+\midrule
+exp\_stable      & 63 & 0.0000 (by construction) \\
+exp\_metastable  & 63 & 0.0005 -- 0.0907 \\
+theo\_metastable & 60 & 0.0013 -- 0.1991 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}lr@{}}
+\toprule
+Bond type (\texttt{classify()}) & $n$ \\
+\midrule
+metallic       & 88 \\
+covalent       & 23 \\
+ionic          & 9 \\
+unclassified   & 66 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+35\% of compounds (66/186) fall outside \texttt{classify()}'s three
+categories --- mostly transition-metal pnictides/chalcogenides and
+hydrogen-containing compounds. (Historical snapshot of campaign 2 alone;
+the up-to-date table across the current 349 structures is in
+\S\ref{sec:dataset}.)
+
+\subsection{Results (with the percolation weight)}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Group & Metric & $n$ & $\rho$ & $p$ \\
+\midrule
+all & percolation weight (raw)        & 186 & 0.064 & 0.383 \\
+all & percolation weight (normalized) & 186 & 0.071 & 0.339 \\
+metallic & percolation weight (raw)        & 88 & 0.191 & 0.075 \\
+metallic & percolation weight (normalized) & 88 & \textbf{0.222} & \textbf{0.038} \\
+ionic$^*$ & percolation weight (raw)       & 9  & $-$0.402 & 0.284 \\
+covalent & percolation weight (raw)        & 23 & 0.165 & 0.453 \\
+\midrule
+all & ICOHP sum    & 186 & 0.032 & 0.670 \\
+all & ICOHP min    & 186 & 0.093 & 0.209 \\
+metallic & ICOHP sum  & 88 & 0.223 & 0.037 \\
+metallic & ICOHP min  & 88 & 0.198 & 0.065 \\
+\bottomrule
+\end{tabular}
+
+\footnotesize $^*$ $n<15$: do not over-interpret.
+\end{center}
+
+In the one subgroup where any result reaches nominal significance
+(metallic, $n=88$), the normalized percolation weight ($\rho=0.222$,
+$p=0.038$) and the ICOHP sum ($\rho=0.223$, $p=0.037$) are statistically
+indistinguishable in strength. \textbf{The percolation descriptor does
+not demonstrate additional predictive power over the classic aggregates
+on this dataset}.
+
+\textbf{Reference logistic regression.} Stable (on-hull) vs. metastable,
+features: normalized percolation weight, mean ICOHP, bond-type dummies
+($n=120$ after dropping unclassified compounds).
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+AUC (5-fold cross-validation) & $0.496 \pm 0.141$ \\
+per-fold AUC & 0.556, 0.430, 0.252, 0.637, 0.607 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+AUC $\approx 0.5$: chance level. The wide spread across folds
+(0.25--0.64) is itself informative: it indicates the absence of a stable,
+learnable signal at this sample size, not merely a "weak but real" one.
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{percolation_vs_ehull.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{roc_stable_vs_metastable.png}
+\end{center}
+
+\subsection{Mission \#3: network dimensionality and periodic min-cut}
+
+Two new descriptors, \texttt{percolation\_path.py} left unchanged:
+\texttt{network\_dimensionality.py} (0D--3D classification via a relative
+bond-strength threshold + breadth-first search) and
+\texttt{periodic\_mincut.py} (minimum cut via \texttt{networkx} max-flow,
+separability rather than traversability). Headline: the normalized min-cut
+is the \textbf{first descriptor in the project to reach a significant
+global correlation} ($\rho=0.285$, $p=1.0\times10^{-4}$, $n=186$), likely
+driven in part by between-bond-type clustering; dimensionality alone does
+not separate \texttt{formation\_energy\_per\_atom}
+(Kruskal--Wallis $p=0.19$).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{mincut_vs_formation_energy.png}
+\end{center}
+
+\textbf{Why did the min-cut correlation collapse?} Mission \#3's
+headline, $\rho=0.285$ at $n=186$, collapsed to $\rho=0.089$,
+$p=0.098$ (not significant) at $n=349$. \textbf{This is not a refutation
+of the original result} --- isolated, the original 186 compounds still
+give $\rho=0.2845$, $p=8.3\times10^{-5}$, essentially identical to the
+mission-\#3 number. The collapse is a dilution artifact from pooling
+populations added for unrelated reasons:
+
+\begin{itemize}
+\item 65 of the 74 extension-batch-1--3 compounds are single-element
+  reference structures (added for mission \#5's elemental references),
+  sitting at \texttt{formation\_energy\_per\_atom}$\approx 0$ by
+  construction with widely-scattered min-cut values --- mechanically
+  dilutes a rank correlation regardless of any true relationship.
+  Excluding them recovers $\rho=0.2157$ ($n=193$).
+\item \texttt{extension4} is not one population but two, with
+  \emph{opposite-sign} correlations: the experimental half is flat
+  ($\rho=0.06$, not significant, $n=50$); the deliberately
+  far-above-hull theoretical half shows a \emph{significant} correlation
+  of the \emph{opposite} sign ($\rho=-0.40$, $p=0.011$, $n=39$) --- a
+  higher min-cut there is associated with a \emph{more} negative
+  (more stable) formation energy, the reverse of the original
+  population's trend.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{mincut_vs_formation_energy_by_population.png}
+\end{center}
+
+\textbf{This opposite sign is itself resolved} (August-16 follow-up,
+four independent checks on the 39 \texttt{theo\_far\_hull} compounds,
+\texttt{analysis/investigate\_theo\_far\_hull\_signflip.py}): neither a
+cell-size/symmetry selection artifact (survives controlling for
+\texttt{n\_sites}+\texttt{sg\_number}, $\rho=-0.39$) nor a real physical
+effect of far-from-hull structures, but a \textbf{between-anion-chemistry
+confound} --- F-containing systems (high min-cut, strongly negative
+formation energy) and azide N$_3$-containing systems (near-zero min-cut,
+near-zero/positive formation energy) pull the pooled correlation in
+opposite directions. Controlling for anion identity (dummy regression,
+$n=39$) or comparing the experimental/theoretical pair within the exact
+same chemical system ($n=37$ pairs) both independently collapse the
+correlation to $\rho\approx-0.07$, not significant --- the same
+between-group clustering failure mode this project has now hit three
+times (min-cut/\texttt{bond\_type}, antibonding/\texttt{is\_metal}, and
+now min-cut/anion).
+
+\textbf{Recommendation}: any future min-cut-vs-formation-energy number
+(or, by the same logic, any other descriptor's) should be conditioned on
+\texttt{family}/selection-provenance, the same way this project already
+conditions on \texttt{bond\_type}/\texttt{is\_metal}.
+
+\subsection{Limits specific to the percolation weight}
+
+\begin{itemize}
+  \item \textbf{Primitive vs. conventional cell}: not reprocessed on the
+    186-compound dataset. Most likely explanation for the weak observed
+    correlations --- the strongest bond can sit entirely inside the
+    primitive cell and contribute to no non-contractile cycle at all,
+    biasing the measured "weakest link." Tested on the 6 pilot compounds
+    (mission \#2): the choice changes the percolation weight
+    substantially (3x-55x) but in the \emph{opposite} direction from the
+    hypothesis (the weight gets \emph{smaller} with a larger cell); not
+    extended to the full dataset based on this result.
+  \item \textbf{Chance-level reference logistic regression}
+    (AUC $\approx 0.5$) with percolation weight as a feature.
+  \item \textbf{Why not SISSO}: a single candidate descriptor (the
+    percolation weight, in two algebraically related variants), compared
+    against aggregates that are themselves functions of the same
+    underlying ICOHP values --- no meaningful combinatorial search space
+    at this stage.
+\end{itemize}
+
+\subsection{Conclusion of the original campaign}
+
+The 186-compound dataset was built, computed (VASP+LOBSTER), and
+analyzed end to end. The headline result is a \emph{negative} but
+quantified and honest one: at this sample size, the percolation
+descriptor shows no significant correlation with thermodynamic
+stability, and demonstrates no advantage over classic ICOHP aggregates.
+This result, together with the min-cut result (mission \#3), motivated
+the project's reframing around $\Delta$(ICOHP) documented in
+\S\ref{sec:reframing}.
+
+\subsection{Compound List (percolation weight)}
+
+Campaign 2's 186 compounds, grouped by category (family), with their
 Materials Project identifier, PBE thermodynamic hull distance
 (\texttt{energy\_above\_hull}), and the minimum ICOHP percolation weight
-(\texttt{icohp\_percolation\_weight\_min}, this work's main metric).
-Auto-generated from \texttt{analysis/percolation\_vs\_hull.csv} by
+(\texttt{icohp\_percolation\_weight\_min}). Auto-generated from
+\texttt{analysis/percolation\_vs\_hull.csv} by
 \texttt{report/gen\_appendix.py}.
 
 {\small
@@ -791,10 +1041,11 @@ Auto-generated from \texttt{analysis/percolation\_vs\_hull.csv} by
 \section{VASP Calculation Parameters}
 \label{sec:appendix-incar}
 
-Fixed INCAR parameters, identical across all 186 compounds (static,
-LOBSTER-compatible run) --- only \texttt{NBANDS}
+Fixed INCAR parameters, identical across campaign 2's 186 compounds
+(static, LOBSTER-compatible run) --- only \texttt{NBANDS}
 (appendix~\ref{sec:appendix-kpoints}) and the k-point grid vary by
-compound.
+compound. Same settings applied to the four \texttt{extension} batches
+(\S\ref{sec:followups2}).
 
 \begin{center}
 \input{appendix_dft_common_en.tex}
@@ -805,7 +1056,7 @@ compound.
 One PAW-PBE potential per element present in the dataset (pymatgen's
 \texttt{MPRelaxSet} library --- the same one Materials Project used to
 relax the input structures), with one documented exception for tungsten
-(\S7): the recommended \texttt{W\_pv} variant is absent from the local
+(\S8): the recommended \texttt{W\_pv} variant is absent from the local
 mirror, and \texttt{W\_sv} turned out to be corrupted (missing
 \texttt{LEXCH} field) --- plain \texttt{W} is used instead, verified
 valid.
@@ -834,7 +1085,7 @@ local-basis projection, not a fixed guess.
 
 Every single-element structure computed across all four \texttt{extension}
 batches (\S\ref{sec:followups2}; \texttt{download\_extension.py} through
-\texttt{download\_extension4.py}): the 62-element decomposition reference
+\texttt{download\_extension4.py}): the elemental decomposition reference
 set (\texttt{ELEMENT\_REFERENCE}) plus the additional carbon allotropes
 (diamond, lonsdaleite, M-carbon, W-carbon) computed alongside the
 graphite reference specifically to test descriptors against structures

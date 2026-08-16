@@ -20,7 +20,7 @@ import pandas as pd
 from pymatgen.core import Structure
 
 REPO_ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "Percolation_viability"))
 from percolation_path import load_bonds, max_translation_extent  # noqa: E402
 import network_dimensionality as nd  # noqa: E402
 import periodic_mincut as pmc  # noqa: E402

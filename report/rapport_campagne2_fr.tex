@@ -30,42 +30,34 @@
 \setlength{\headheight}{14pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Campagne 2 --- Percolation vs. stabilité thermodynamique}
+\fancyhead[L]{Campagne 2 --- Descripteurs ICOHP et stabilité thermodynamique}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\title{\bfseries Poids de percolation et stabilité thermodynamique \\
-sur un jeu de 186 composés \\
+\title{\bfseries Descripteurs ICOHP et stabilité thermodynamique \\
+sur un jeu de 349 structures \\
 \large Campagne 2 : construction du jeu de données, calcul VASP+LOBSTER,
 et analyse statistique}
 \author{Gilles Frapper \\ Professeur des Universités, Chimie Théorique \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Rapport généré dans le cadre du projet \texttt{viability}}
-\date{14 août 2026}
+\date{16 août 2026}
 
 \begin{document}
 \maketitle
 
 \begin{center}
-\small\itshape Mise à jour du 15 août 2026 : ajout des missions \#3 à \#5
-(dimensionnalité/coupe minimale, population antiliante, ICOHP de réaction),
-voir \S\ref{sec:suites}. Le corps du rapport ci-dessous (jusqu'à la
-conclusion et les annexes) documente la campagne 2 originale (186
-composés, poids de percolation seul) sans modification.
-
-\smallskip
-\small\itshape Mise à jour du 16 août 2026 : jeu de données étendu à 349
-composés (lot \texttt{extension4} de 89 composés, binaires
-alcalins/alcalino-terreux), missions \#3 à \#5 recalculées à cette
-nouvelle échelle, et effondrement de la corrélation de la coupe minimale
-diagnostiqué à cette échelle --- voir \S\ref{sec:suites2}.
-
-\smallskip
-\small\itshape Mise à jour du 16 août 2026 (plus tard le même jour) : la
-question centrale du projet reformulée autour de la discrimination de
-viabilité fondée sur $\Delta$(ICOHP), avec un test de concordance formel
-contre le manuscrit et une extension à tout composé calculé à ce jour,
-poolé sur l'ensemble des campagnes --- voir \S\ref{sec:reframing}.
-\texttt{percolation\_path.py} est désormais un matériau historique/de
-fond, plus la question organisatrice.
+\small\itshape Mise à jour du 16 août 2026 : le rapport est réorganisé
+autour de la question centrale actuelle du projet ---
+$\Delta$(ICOHP) et discrimination de viabilité (\S\ref{sec:reframing}) ---
+plutôt qu'autour du poids de percolation, sujet de la campagne 2
+d'origine. Tout ce qui concerne le poids de percolation et ses
+descendants directs (dimensionnalité du réseau, coupe minimale
+périodique, missions \#1 et \#3) a été déplacé dans
+l'Annexe~\ref{sec:appendix-percolation}, \og{}Percolation\_viability\fg{},
+avec le code source correspondant relocalisé dans le dossier
+\texttt{Percolation\_viability/} du dépôt. Le corps principal ci-dessous
+documente l'état actuel du projet (349 structures, missions \#4-\#5,
+campagne \texttt{extension4}, reformulation $\Delta$(ICOHP)) sans
+retoucher les résultats eux-mêmes.
 \end{center}
 
 \tableofcontents
@@ -73,64 +65,74 @@ fond, plus la question organisatrice.
 
 \section{Objectif et problématique}
 
-Le premier rapport (6 composés jouets) avait établi que le descripteur de
-percolation calculé par \texttt{percolation\_path.py} diverge fortement des
-agrégats ICOHP classiques (somme, moyenne, min, max), sans toutefois
-disposer d'un échantillon assez grand pour tester statistiquement si cette
-différence est \emph{utile} : le descripteur de percolation apporte-t-il une
-information prédictive sur la stabilité thermodynamique
-(\texttt{energy\_above\_hull}) que les agrégats classiques n'apportent pas
-déjà ?
+\textbf{Question de recherche centrale (voir \S\ref{sec:reframing}) : le
+$\Delta$(ICOHP) --- descripteur ICOHP de réaction pour la décomposition
+d'un composé en éléments, et en particulier la classification
+endobondic/exobondic fondée sur son signe --- distingue-t-il les
+composés thermodynamiquement stables, métastables et instables ?}
 
-Cette deuxième campagne construit un jeu de données de 186 composés
-(180 nouveaux + les 6 composés pilotes) réparti en trois familles :
-\begin{itemize}
-  \item \textbf{exp\_stable} : composés expérimentaux (référencés ICSD) sur
-    le hull convexe thermodynamique de Materials Project ;
-  \item \textbf{exp\_metastable} : composés expérimentaux métastables
-    ($0 < E_\text{hull} \leq 100$~meV/atome) ;
-  \item \textbf{theo\_metastable} : composés théoriques (jamais observés
-    expérimentalement) métastables ($0 < E_\text{hull} \leq 200$~meV/atome).
-\end{itemize}
+Cette question s'est construite progressivement. Le premier rapport
+(6 composés jouets) avait établi qu'un descripteur de percolation
+diverge fortement des agrégats ICOHP classiques, sans disposer d'un
+échantillon assez grand pour tester si cette différence est
+\emph{utile}. La campagne 2 originale a donc construit un jeu de
+186 composés pour trancher cette question --- un travail dont la
+méthodologie (sélection du jeu de données, conventions statistiques)
+reste la fondation de tout ce qui suit, mais dont le descripteur
+lui-même (le poids de percolation) et son résultat propre sont
+aujourd'hui documentés en Annexe~\ref{sec:appendix-percolation}, pas
+dans ce corps de rapport : sa corrélation phare n'a pas résisté à la
+croissance du jeu de données (voir \S\ref{sec:suites2}), et il n'est
+plus la question organisatrice du projet.
 
-La distinction \texttt{exp\_metastable} / \texttt{theo\_metastable} sert de
-proxy pour la persistance cinétique : un composé métastable observé
-expérimentalement a, par définition, survécu assez longtemps pour être
-synthétisé et caractérisé, contrairement à un composé théorique de même
-métastabilité thermodynamique.
+Trois missions ultérieures (dimensionnalité/coupe minimale --- \#3,
+elle aussi en annexe ; population antiliante --- \#4 ; ICOHP de
+réaction --- \#5) et une campagne d'extension de 163 composés
+supplémentaires ont fait émerger le $\Delta$(ICOHP) comme la
+corrélation la plus forte et la plus robuste du projet
+(\S\ref{sec:suites}--\S\ref{sec:suites2}), avant que la question
+centrale ne soit explicitement reformulée autour de lui
+(\S\ref{sec:reframing}).
 
 \section{Méthodologie}
 
 \subsection{Sélection du jeu de données}
 
-Requête Materials Project (\texttt{mp\_dataset/select\_campaign.py}) :
-systèmes chimiques unaires et binaires, non magnétiques
-($|\text{aimantation totale}| \leq 0.01~\mu_B$/unité formulaire --- le champ
-catégoriel \texttt{magnetic\_ordering} de MP est \og{}Unknown\fg{} pour
-$\sim$98\% des entrées et aurait exclu la quasi-totalité des composés
-réellement non magnétiques), sans éléments f, $\leq 20$ atomes/maille,
-60 composés par famille avec un plafond de 2 entrées par système chimique
+Requête Materials Project (\texttt{mp\_dataset/select\_campaign.py}) pour
+le jeu de données principal (186 composés) : systèmes chimiques unaires
+et binaires, non magnétiques ($|\text{aimantation totale}| \leq
+0.01~\mu_B$/unité formulaire --- le champ catégoriel
+\texttt{magnetic\_ordering} de MP est \og{}Unknown\fg{} pour $\sim$98\%
+des entrées et aurait exclu la quasi-totalité des composés réellement
+non magnétiques), sans éléments f, $\leq 20$ atomes/maille, 60 composés
+par famille avec un plafond de 2 entrées par système chimique
 (\texttt{chemsys}) pour garantir une diversité élémentaire plutôt qu'une
-accumulation de polymorphes d'un même système.
+accumulation de polymorphes d'un même système. Quatre lots
+d'extension supplémentaires (163 structures, \S\ref{sec:suites2})
+appliquent le même filtre non-magnétique/sans-f mais avec leur propre
+logique de sélection par mission (références élémentaires, polymorphes
+haute-pression, binaires alcalins/alcalino-terreux) --- détaillée dans
+leurs sections respectives, pas répétée ici.
 
 \subsection{Classification du type de liaison}
 
 Le type de liaison (ionique / covalent / métallique) est calculé par la
 fonction \texttt{classify()} de \texttt{fetch\_candidates.py}
-(\textbf{réutilisée sans modification}, conformément à la consigne de la
-campagne), à partir de \texttt{is\_metal} et de la composition élémentaire.
-Cette classification est un axe secondaire d'analyse ici, pas l'axe
-d'échantillonnage principal (contrairement à la proposition initiale de
-plan de campagne, remplacée à la demande de l'utilisateur par le schéma
-stable/métastable ci-dessus).
+(\textbf{réutilisée sans modification}), à partir de \texttt{is\_metal}
+et de la composition élémentaire. \textbf{Cette classification est
+purement informative dans ce rapport} : un axe de lecture descriptif du
+jeu de données (\S\ref{sec:dataset}), pas un axe d'échantillonnage ni
+une variable dont dépend une conclusion du corps principal --- d'autres
+rapports de mission (\texttt{REPORT\_antibonding.md},
+\texttt{REPORT\_reaction\_icohp.md}) l'utilisent activement pour
+stratifier leurs propres corrélations, mais ce n'est pas son rôle ici.
 
 \subsection{Calcul VASP + LOBSTER}
 
-Même gabarit que la campagne pilote (calcul statique, \texttt{ISYM=$-1$},
-\texttt{LASPH=.TRUE.}, potentiels PAW-PBE recommandés par
-\texttt{pymatgen.io.vasp.sets.MPRelaxSet}), avec deux améliorations :
-\texttt{NBANDS} n'est plus une valeur fixe mais dérivée par composé du
-nombre d'orbitales locales de la base LOBSTER
+Même gabarit pour l'ensemble des 349 structures (calcul statique,
+\texttt{ISYM=$-1$}, \texttt{LASPH=.TRUE.}, potentiels PAW-PBE recommandés
+par \texttt{pymatgen.io.vasp.sets.MPRelaxSet}) : \texttt{NBANDS} est
+dérivé par composé du nombre d'orbitales locales de la base LOBSTER
 (\texttt{Lobsterin.write\_INCAR}), et la détermination des fonctions de
 base passe par \texttt{Lobsterin.get\_basis(potcar\_symbols=\ldots)}
 plutôt que par le parsing direct du fichier POTCAR (dont la validation
@@ -140,60 +142,90 @@ empreinte de hachage dans le miroir local).
 \subsection{Statistiques}
 
 Corrélation de Spearman (pas de raison d'attendre une relation linéaire)
-entre le poids de percolation (brut et normalisé par
-$|\text{ICOHP}_\text{min}|$) et \texttt{energy\_above\_hull}, globalement et
-par type de liaison ; même chose pour les agrégats ICOHP classiques, pour
-comparaison directe ; régression logistique de référence (stable vs.
-métastable, 2--3 variables, validation croisée 5 plis) pour une AUC de
-référence. \textbf{Aucun SISSO, aucune régression symbolique} : prématuré
-avec un seul descripteur candidat et cet ordre de grandeur d'échantillon
-(voir \S\ref{sec:limites}).
+entre chaque descripteur ICOHP/ICOBI et une cible de stabilité
+(\texttt{energy\_above\_hull} ou \texttt{formation\_energy\_per\_atom}
+selon la mission), globalement et par sous-groupe (\texttt{bond\_type},
+\texttt{is\_metal}, ou provenance de sélection selon le cas) ; tout
+sous-groupe $n<15$ est explicitement signalé, jamais présenté nu.
+\textbf{Aucun SISSO, aucune régression symbolique} à ce stade (voir
+\S\ref{sec:limites-actuelles}).
 
 \section{Organigramme du workflow}
 
 \begin{center}
 \begin{tikzpicture}[
   node distance=0.75cm and 1.6cm,
-  box/.style={draw, rounded corners, minimum width=5.0cm, minimum height=1.0cm,
+  box/.style={draw, rounded corners, minimum width=6.2cm, minimum height=1.0cm,
               align=center, fill=blue!6, font=\small},
-  io/.style={draw, minimum width=5.0cm, minimum height=1.0cm, align=center,
+  io/.style={draw, minimum width=6.2cm, minimum height=1.0cm, align=center,
              fill=orange!10, font=\small},
   arr/.style={-{Latex[length=2.2mm]}, thick}
 ]
-\node[io]  (mp)     {Materials Project (API) \\ 180 composés (3 familles $\times$ 60)};
-\node[box, below=of mp] (prep)   {\texttt{download\_campaign.py} + \texttt{prepare\_vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
-\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ tableau plafonné à 8 t\^aches concurrentes};
-\node[box, below=of slurm] (vasplob) {VASP (statique) $\rightarrow$ LOBSTER 5.1.1 \\ ICOHPLIST.lobster, ICOBILIST.lobster};
-\node[box, below=of vasplob] (perc)   {\texttt{percolation\_path.py} (inchang\'e) \\ 186 composés (180 + 6 pilotes)};
-\node[box, below=of perc] (join)   {\texttt{analysis/build\_dataset.py} \\ jointure + descripteur normalisé + bond\_type};
-\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis.py} \\ corrélations, régression logistique, figures};
+\node[io]  (mp)     {Materials Project (API) \\ 349 structures (5 campagnes/lots)};
+\node[box, below=of mp] (prep)   {Scripts \texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
+\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ tableau plafonné à 8 t\^aches concurrentes, HPC Yargla};
+\node[box, below=of slurm] (vasplob) {VASP (statique, 16 c\oe urs) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
+\node[box, below=of vasplob] (desc)   {Extraction de descripteurs par mission \\ \texttt{reaction\_icohp.py}, \texttt{cohp\_extraction.py}, \texttt{reaction\_analysis/}, \ldots};
+\node[box, below=of desc] (join)   {\texttt{analysis/build\_dataset*.py} \\ jointure + descripteurs normalisés + bond\_type};
+\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis*.py} \\ corrélations, stratification, figures};
 
 \draw[arr] (mp) -- (prep);
 \draw[arr] (prep) -- (slurm);
 \draw[arr] (slurm) -- (vasplob);
-\draw[arr] (vasplob) -- (perc);
-\draw[arr] (perc) -- (join);
+\draw[arr] (vasplob) -- (desc);
+\draw[arr] (desc) -- (join);
 \draw[arr] (join) -- (stats);
 \end{tikzpicture}
 \end{center}
 
+Le poids de percolation (\texttt{Percolation\_viability/percolation\_path.py})
+et ses descendants directs (dimensionnalité, coupe minimale) suivent le
+même pipeline en amont de l'étape \og{}Extraction de descripteurs\fg{}
+mais n'apparaissent plus dans ce diagramme ni comme sujet de ce rapport
+--- voir l'organigramme d'origine et le détail de leur propre traitement
+en Annexe~\ref{sec:appendix-percolation}.
+
 \section{Environnement}
 
-Identique à la campagne pilote (Yargla, VASP 6.5.0, LOBSTER 5.1.1,
-\texttt{.venv} Python 3.11), complété par :
-\texttt{mp-api}, \texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn},
-\texttt{matplotlib} (voir \texttt{requirements.txt}).
+Identique sur l'ensemble des 349 structures (Yargla, VASP 6.5.0,
+LOBSTER 5.1.1, \texttt{.venv} Python 3.11), complété par : \texttt{mp-api},
+\texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn}, \texttt{matplotlib},
+\texttt{pydantic}, \texttt{pyyaml} (voir \texttt{requirements.txt}). Détail
+des c\oe urs alloués par étape de calcul : \S\ref{sec:cout}.
 
 \section{Jeu de données}
+\label{sec:dataset}
 
 \begin{center}
 \begin{tabular}{@{}lrl@{}}
 \toprule
 Famille & $n$ & Plage $E_\text{hull}$ (eV/atome) \\
 \midrule
-exp\_stable      & 63 & 0.0000 (par construction) \\
-exp\_metastable  & 63 & 0.0005 -- 0.0907 \\
-theo\_metastable & 60 & 0.0013 -- 0.1991 \\
+exp\_stable       & 63  & 0.0000 (par construction) \\
+exp\_metastable   & 63  & 0.0005 -- 0.0907 \\
+theo\_metastable  & 60  & 0.0013 -- 0.1991 \\
+extension (4 lots)$^\dagger$ & 163 & hétérogène, voir \S\ref{sec:suites}--\S\ref{sec:suites2} \\
+\midrule
+\textbf{Total}    & \textbf{349} & \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^\dagger$ références élémentaires, polymorphes haute-pression
+de TiO$_2$/carbone, et binaires alcalins/alcalino-terreux
+(\texttt{extension4}) --- composition détaillée en
+Annexe~\ref{sec:appendix-ext-elements}--\ref{sec:appendix-ext-compounds}.}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}lr@{}}
+\toprule
+Composition & $n$ \\
+\midrule
+Références à un seul élément & 68 \\
+Composés multi-éléments      & 281 \\
+\midrule
+\textbf{Total}                & \textbf{349} \\
 \bottomrule
 \end{tabular}
 
@@ -201,24 +233,34 @@ theo\_metastable & 60 & 0.0013 -- 0.1991 \\
 
 \begin{tabular}{@{}lr@{}}
 \toprule
-Type de liaison (\texttt{classify()}) & $n$ \\
+Type de liaison (\texttt{classify()}, informatif uniquement) & $n$ \\
 \midrule
 métallique       & 88 \\
-covalent         & 23 \\
-ionique          & 9 \\
-non classifié    & 66 \\
+ionique          & 53 \\
+covalent         & 35 \\
+non classifié    & 173 \\
+\midrule
+\textbf{Total}    & \textbf{349} \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-35\% des composés (66/186) ne correspondent à aucune des trois catégories
-de \texttt{classify()} --- principalement des pnictures/chalcogénures de
-métaux de transition et des composés hydrogénés, une limite réelle de
-l'heuristique réutilisée telle quelle, documentée mais non corrigée ici.
+Le tableau \og{}type de liaison\fg{} n'est \textbf{pas mis à jour depuis
+la campagne 2 d'origine} par accident : la campagne \texttt{extension4}
+(\S\ref{sec:suites2}) a spécifiquement ajouté 89 binaires
+alcalins/alcalino-terreux contre N/O/F/P/S/Cl, ce qui porte le total
+ionique de 9 (campagne 2 seule) à 53. La moitié de ces nouveaux binaires
+reste néanmoins \og{}non classifiée\fg{} : la fonction \texttt{classify()}
+ne reconnaît comme \og{}ionique\fg{} que les paires
+alcalin/alcalino-terreux $\times$ \{halogène, O\} (\texttt{IONIC\_ANIONS}),
+pas $\times$ \{N, P, S\} --- une limite réelle de l'heuristique réutilisée
+telle quelle, documentée mais non corrigée ici. Comme indiqué en
+\S2.2, cette catégorisation reste purement descriptive dans ce rapport.
 
 \section{Résultats}
+\label{sec:results}
 
-\subsection{Corrélations (Spearman)}
+\subsection{Corrélations (Spearman) --- agrégats ICOHP classiques}
 
 \begin{center}
 \small
@@ -226,67 +268,36 @@ l'heuristique réutilisée telle quelle, documentée mais non corrigée ici.
 \toprule
 Groupe & Métrique & $n$ & $\rho$ & $p$ \\
 \midrule
-tous & poids percolation (brut)       & 186 & 0.064 & 0.383 \\
-tous & poids percolation (normalisé)  & 186 & 0.071 & 0.339 \\
-métallique & poids percolation (brut)      & 88 & 0.191 & 0.075 \\
-métallique & poids percolation (normalisé) & 88 & \textbf{0.222} & \textbf{0.038} \\
-ionique$^*$ & poids percolation (brut)     & 9  & $-$0.402 & 0.284 \\
-covalent & poids percolation (brut)        & 23 & 0.165 & 0.453 \\
-\midrule
 tous & ICOHP somme    & 186 & 0.032 & 0.670 \\
 tous & ICOHP min      & 186 & 0.093 & 0.209 \\
 métallique & ICOHP somme  & 88 & 0.223 & 0.037 \\
 métallique & ICOHP min    & 88 & 0.198 & 0.065 \\
 \bottomrule
 \end{tabular}
-
-\footnotesize $^*$ $n<15$ : à ne pas surinterpréter.
 \end{center}
 
-Dans le seul sous-groupe où un résultat atteint la significativité nominale
-(métallique, $n=88$), le poids de percolation normalisé ($\rho=0.222$,
-$p=0.038$) et la somme des ICOHP ($\rho=0.223$, $p=0.037$) sont
-statistiquement indiscernables en force. \textbf{Le descripteur de
-percolation n'apporte pas d'avantage prédictif démontré par rapport aux
-agrégats classiques sur ce jeu de données} --- une réponse plus précise
-que la formulation \og{}qualitativement différent\fg{} du rapport
-précédent (6 composés), et plus directement exploitable.
-
-\subsection{Régression logistique de référence}
-
-Stable (hull) vs. métastable, variables : poids de percolation normalisé,
-ICOHP moyen, indicatrices de type de liaison ($n=120$ après exclusion des
-composés non classifiés).
-
-\begin{center}
-\begin{tabular}{@{}lr@{}}
-\toprule
-AUC (validation croisée, 5 plis) & $0.496 \pm 0.141$ \\
-AUC par pli & 0.556, 0.430, 0.252, 0.637, 0.607 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-AUC $\approx 0.5$ : niveau du hasard. La dispersion importante entre plis
-(0.25--0.64) indique elle-même l'absence de signal stable et apprenant à
-cette taille d'échantillon, pas seulement un signal \og{}faible mais
-réel\fg{}.
-
-\subsection{Figures}
-
-\begin{center}
-\includegraphics[width=0.85\textwidth]{percolation_vs_ehull.png}
-\end{center}
-
-\begin{center}
-\includegraphics[width=0.55\textwidth]{roc_stable_vs_metastable.png}
-\end{center}
+Ces quatre lignes (agrégats ICOHP classiques, campagne 2, $n=186$, cible
+\texttt{energy\_above\_hull}) sont conservées ici comme ligne de base de
+référence pour toute mission ultérieure. \textbf{Le poids de percolation,
+qui figurait dans cette même table dans la version originale du rapport,
+est déplacé dans son intégralité en
+Annexe~\ref{sec:appendix-percolation}} (tableau complet avec les
+sous-groupes par type de liaison, régression logistique de référence, et
+figures associées) --- ce tableau réduit ne permet donc plus de comparer
+directement percolation vs. agrégats classiques ; ce résultat comparatif
+reste néanmoins disponible tel quel dans l'annexe. Les corrélations des
+descripteurs actuels du projet (population antiliante, ICOHP de
+réaction) sont données \S\ref{sec:suites}--\S\ref{sec:suites2}, contre
+\texttt{formation\_energy\_per\_atom} plutôt que \texttt{energy\_above\_hull}.
 
 \section{Incidents résolus}
 
 Conformément à la consigne (\og{}chaque échec de job doit être loggé avec la
-raison probable\fg{}), 5 des 178 jobs soumis en tableau SLURM ont échoué au
-premier passage, tous diagnostiqués et corrigés à la source :
+raison probable\fg{}), 5 des 178 jobs soumis en tableau SLURM lors du
+calcul des 186 composés de la campagne 2 ont échoué au premier passage,
+tous diagnostiqués et corrigés à la source (les correctifs, portés sur
+les gabarits SLURM/INCAR partagés, s'appliquent à toutes les campagnes
+ultérieures) :
 
 \begin{itemize}
   \item \textbf{Al12W, BW, WO2, TcW, TiW} (tous contenant du tungstène) :
@@ -304,121 +315,145 @@ premier passage, tous diagnostiqués et corrigés à la source :
     second essai.
 \end{itemize}
 
-Taux de succès final : \textbf{186/186}.
+Taux de succès final sur l'ensemble des 349 structures calculées à ce
+jour : \textbf{349/349}.
 
 \section{Coût de calcul}
+\label{sec:cout}
+
+\textbf{349 structures calculées au total} : 68 références à un seul
+élément et 281 composés multi-éléments (\S\ref{sec:dataset}), sur
+l'ensemble des cinq campagnes/lots de soumission (campagne 2 originale
+et quatre lots \texttt{extension}).
+
+Chaque job VASP puis LOBSTER s'exécute sur le HPC \textbf{Yargla}, au sein
+d'une même allocation SLURM d'un n\oe ud (\texttt{--nodes=1}) et
+\textbf{16 c\oe urs} : VASP en parallélisme MPI
+(\texttt{--ntasks=16 --cpus-per-task=1}, \texttt{srun}), puis LOBSTER en
+parallélisme OpenMP sur les mêmes 16 c\oe urs
+(\texttt{OMP\_NUM\_THREADS=16}, processus unique, exécuté séquentiellement
+après VASP dans le même job). Le tableau SLURM (\texttt{submit\_array.sh})
+est plafonné à 8 tâches concurrentes.
 
 \begin{center}
 \begin{tabular}{@{}lrr@{}}
 \toprule
  & VASP & LOBSTER \\
 \midrule
-Moyenne (s) & 124 & 397 \\
-Médiane (s) & 72 & 145 \\
-Maximum (s) & 1440 & 6675 \\
-Total séquentiel & 6.4 h & 19.1 h \\
+$n$ & 349 & 348$^*$ \\
+Moyenne (s) & 168 & 404 \\
+Médiane (s) & 58 & 110 \\
+Maximum (s) & 5715 (1.6 h) & 12063 (3.4 h) \\
+Total séquentiel & 16.3 h & 39.0 h \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^*$ 1 structure sur 349 sans étape LOBSTER exploitable
+(élément de référence à maille triviale).}
 \end{center}
 
-Temps réel écoulé (parallélisme 8 tâches) : $\sim$3.5~h, dans le budget de
-6~h fixé pour la nuit.
+Total séquentiel combiné (VASP + LOBSTER, 349 structures) :
+\textbf{55.3 h}. Compte tenu du plafond de 8 tâches concurrentes,
+l'ordre de grandeur du temps réel écoulé pour traiter un tel volume en
+un seul lot serait de $\sim$6.9~h --- une estimation grossière (division
+par 8, sans tenir compte du temps de file d'attente), donnée à titre
+indicatif : en pratique, les 349 structures ont été soumises en
+plusieurs campagnes étalées sur plusieurs sessions, pas en un lot unique.
 
-\section{Limites et perspectives}
-\label{sec:limites}
+\section{Limites et perspectives actuelles}
+\label{sec:limites-actuelles}
 
 \begin{itemize}
-  \item \textbf{Taille d'échantillon} : 186 au total, mais 88/23/9 par type
-    de liaison une fois stratifié --- les corrélations \og{}ioniques\fg{}
-    ($n=9$) ne sont pas interprétables.
-  \item \textbf{Maille primitive vs. conventionnelle} (héritée du rapport
-    pilote) : non retraitée ici. C'est probablement la cause la plus
-    probable de la faiblesse des corrélations observées --- la liaison la
-    plus forte peut être entièrement intra-maille et ne contribuer à aucun
-    cycle non contractile, biaisant le \og{}maillon faible\fg{} mesuré.
+  \item \textbf{Couverture de \texttt{classify()}} : 173/349 structures
+    (50\%) hors des trois catégories ionique/covalent/métallique,
+    principalement les liaisons alcalin/alcalino-terreux $\times$
+    \{N, P, S\} qu'\texttt{IONIC\_ANIONS} ne reconnaît pas
+    (\S\ref{sec:dataset}) --- purement informatif ici, mais une vraie
+    limite pour toute mission qui voudrait s'appuyer dessus pour
+    stratifier.
   \item \textbf{Pas de classe \og{}instable\fg{} au sens dynamique} :
-    \texttt{theo\_metastable} est un proxy (composé jamais synthétisé), pas
-    un résultat de calcul de phonons.
-  \item \textbf{Couverture de \texttt{classify()}} : 35\% des composés non
-    classifiés.
-  \item \textbf{Pourquoi pas SISSO maintenant} : un seul descripteur
-    candidat (le poids de percolation, sous deux variantes algébriquement
-    liées), comparé à des agrégats eux-mêmes fonctions des mêmes valeurs
-    ICOHP sous-jacentes --- aucun espace combinatoire de recherche
-    significatif à ce stade. Justifier SISSO demanderait : (a) plusieurs
-    descripteurs candidats conceptuellement nouveaux, (b) un $n$ par strate
-    d'au moins 50--100, (c) un signal plus net qu'une AUC $\approx 0.5$.
+    \texttt{theo\_metastable} et les lots \texttt{extension} théoriques
+    sont des proxys (composés jamais synthétisés), pas un résultat de
+    calcul de phonons.
+  \item \textbf{Taille d'échantillon par sous-groupe} : reste la
+    limite structurelle de ce projet à chaque nouvelle stratification
+    (\texttt{bond\_type}, \texttt{is\_metal}, \texttt{family}) --- voir
+    \S\ref{sec:suites}--\S\ref{sec:suites2} pour des exemples concrets où
+    un sous-groupe $n<15$ ne s'est pas reproduit une fois l'échantillon
+    agrandi.
+  \item \textbf{Pourquoi pas SISSO maintenant} : l'ICOHP de réaction
+    (mission \#5, \S\ref{sec:suites2}) est désormais le corrélat le plus
+    fort et le premier dont le signal n'est pas entièrement expliqué par
+    un regroupement entre groupes à tous les niveaux testés --- le
+    meilleur argument à ce jour pour une recherche de caractéristiques
+    stratifiée, mais toujours pas tentée à ce stade.
 \end{itemize}
+
+Les limites spécifiques au poids de percolation et à ses descendants
+(sensibilité à la maille primitive/conventionnelle, régression logistique
+de référence au niveau du hasard) sont documentées en
+Annexe~\ref{sec:appendix-percolation}, pas répétées ici.
 
 \section{Conclusion}
 
-Le jeu de données de 186 composés a été construit, calculé (VASP+LOBSTER)
-et analysé de bout en bout, avec deux incidents de calcul diagnostiqués et
-corrigés à la source. Le résultat principal est un résultat \emph{négatif}
-mais chiffré et honnête : à cette taille d'échantillon, le descripteur de
-percolation ne montre pas de corrélation significative avec la stabilité
-thermodynamique, et n'apporte pas d'avantage démontré sur les agrégats
-ICOHP classiques. Les actions prioritaires (\S\ref{sec:limites}) --- en
-particulier le retraitement en maille conventionnelle et l'extension ciblée
-du sous-échantillon métallique --- sont susceptibles de faire évoluer ce
-résultat avant d'envisager un outillage de type SISSO.
+Le jeu de données est passé de 186 à 349 structures calculées
+(VASP+LOBSTER) au fil de cinq campagnes/lots, avec un taux de succès
+final de 349/349 et deux incidents de calcul diagnostiqués et corrigés à
+la source dès la campagne 2 originale. La question organisatrice du
+projet a évolué en cours de route : partie du poids de percolation
+(aucune corrélation significative retenue, Annexe~\ref{sec:appendix-percolation}),
+elle est passée par la dimensionnalité/coupe minimale périodique
+(également en annexe, corrélation phare non reproduite à l'échelle
+actuelle), la population antiliante près du niveau de Fermi (mission
+\#4, sous-groupe covalent le plus robuste du projet), pour aboutir à
+l'ICOHP de réaction et sa classification endobondic/exobondic (mission
+\#5) --- aujourd'hui la corrélation la plus forte et la plus robuste du
+projet, et la question centrale explicitement reformulée autour d'elle
+(\S\ref{sec:reframing}). Le prochain jalon concret, déjà identifié dans
+la reformulation, est l'extension délibérée à des composés proches de la
+limite de stabilité plutôt que l'accumulation continue de composés
+confortablement stables ou instables.
 
 \vspace{1cm}
 \noindent\textit{Code source :} \url{https://github.com/John-Akapulco/viability} \\
-\noindent\textit{Données :} \texttt{analysis/percolation\_vs\_hull.csv} \\
-\noindent\textit{Rapport détaillé :} \texttt{analysis/REPORT.md}
+\noindent\textit{Données :} \texttt{analysis/percolation\_vs\_formation\_energy.csv} \\
+\noindent\textit{Rapports détaillés :} \texttt{analysis/REPORT\_*.md}
 
-\section{Suites de la campagne 2 (missions \#3 à \#5)}
+\section{Suites de la campagne 2 (missions \#4 et \#5)}
 \label{sec:suites}
 
-Trois descripteurs supplémentaires ont été construits dans des sessions
-ultérieures, tous testés contre \texttt{formation\_energy\_per\_atom}
+Deux descripteurs supplémentaires ont été construits dans des sessions
+ultérieures, tous deux testés contre \texttt{formation\_energy\_per\_atom}
 (introduit en mission \#3 comme cible alternative à
-\texttt{energy\_above\_hull}, plus corrélable en général) plutôt que contre
-le hull. Les missions \#3 et \#4 réutilisent le jeu de 186 composés
-ci-dessus sans le modifier ; la mission \#5 s'appuie en partie sur une
-\textbf{campagne complémentaire de 74 composés} (\texttt{extension\_*} :
+\texttt{energy\_above\_hull}, plus corrélable en général) plutôt que
+contre le hull. Les deux réutilisent le jeu de 186 composés ci-dessus
+sans le modifier au stade initial ; la mission \#5 s'appuie en partie sur
+une \textbf{campagne complémentaire de 74 composés} (\texttt{extension\_*} :
 références élémentaires, composés ioniques et polymorphes hors du jeu
-principal), non retraitée dans les annexes de ce rapport --- voir
-\texttt{README.md} du dépôt pour son détail. Les chiffres de cette
+principal), détaillée au \S\ref{sec:suites2}. Les chiffres de cette
 sous-section datent du 15 août 2026, à l'échelle 186/192 composés ;
-\S\ref{sec:suites2} recalcule les trois missions à l'échelle de 349
+\S\ref{sec:suites2} recalcule les deux missions à l'échelle de 349
 composés atteinte le lendemain, à lire en complément de cette
 sous-section, pas à sa place.
 
-\textbf{Un motif se répète dans les trois missions} : chaque nouveau
+\textbf{Un motif se répète dans les deux missions} : chaque nouveau
 descripteur atteint une corrélation \emph{globale} statistiquement
-significative, plus forte que tout ce que le poids de percolation a jamais
-montré (\S\ref{sec:limites}) --- mais dans les trois cas, cette corrélation
-globale s'avère être substantiellement, voire entièrement, un effet de
-regroupement entre types de liaison ou entre métaux et composés à gap,
-plutôt qu'une relation robuste \emph{au sein} d'un groupe homogène.
-
-\subsection{Mission \#3 : dimensionnalité du réseau et coupe minimale périodique}
-
-Deux nouveaux descripteurs, \texttt{percolation\_path.py} inchangé :
-\texttt{network\_dimensionality.py} (classification 0D--3D par seuil de
-force de liaison relative + parcours en largeur) et
-\texttt{periodic\_mincut.py} (coupe minimale de flot maximal
-\texttt{networkx}, séparabilité plutôt que traversabilité). Résultat
-principal : la coupe minimale normalisée est le \textbf{premier
-descripteur du projet à atteindre une corrélation globale significative}
-($\rho=0.285$, $p=1.0\times10^{-4}$, $n=186$), mais probablement portée en
-partie par un regroupement entre types de liaison ; la dimensionnalité
-seule ne sépare pas \texttt{formation\_energy\_per\_atom}
-(Kruskal--Wallis $p=0.19$).
-
-\begin{center}
-\includegraphics[width=0.75\textwidth]{mincut_vs_formation_energy.png}
-\end{center}
+significative, plus forte que tout ce que le poids de percolation ou la
+coupe minimale ont jamais montré (Annexe~\ref{sec:appendix-percolation})
+--- mais dans les deux cas, cette corrélation globale s'avère être
+substantiellement, voire entièrement, un effet de regroupement entre
+types de liaison ou entre métaux et composés à gap, plutôt qu'une
+relation robuste \emph{au sein} d'un groupe homogène.
 
 \subsection{Mission \#4 : population antiliante près du niveau de Fermi}
 
-Question distincte : non plus l'ICOHP intégré (un nombre par liaison), mais
-\emph{comment} le COHP se répartit en énergie --- la fraction
-d'antiliaison occupée juste sous le niveau de Fermi/VBM, par analogie avec
-les instabilités électroniques de type Peierls/Jahn--Teller (nouveau
-module \texttt{cohp\_extraction.py}, validé par recoupement exact avec
+Question distincte de l'ICOHP intégré (un nombre par liaison) : non plus
+\emph{combien} de liaison un composé possède, mais \emph{comment} le
+COHP se répartit en énergie --- la fraction d'antiliaison occupée juste
+sous le niveau de Fermi/VBM, par analogie avec les instabilités
+électroniques de type Peierls/Jahn--Teller (nouveau module
+\texttt{cohp\_extraction.py}, validé par recoupement exact avec
 \texttt{ICOHPLIST.lobster} sur les 6 composés pilotes). Résultat :
 $\rho=-0.328$, $p=5.0\times10^{-6}$ ($n=186$) --- la corrélation globale la
 plus forte du projet à l'époque. Le signe est \emph{inverse} de la lecture
@@ -446,10 +481,9 @@ regroupement explique ici la totalité du signal observé. Contre
 \texttt{energy\_above\_hull}, la corrélation est absente ($\rho=0.09$,
 $p=0.20$).
 
-\subsection{Synthèse comparative (échelle 186/192 composés)}
+\subsection{Comparaison (missions \#4-\#5, échelle 186/192 composés)}
 
-Les quatre descripteurs testés contre \texttt{formation\_energy\_per\_atom},
-sur le même sous-échantillon commun ($n=177$, intersection des 186
+Sur le même sous-échantillon commun ($n=177$, intersection des 186
 composés de la campagne 2 et des 192 lignes calculables de la mission
 \#5) :
 
@@ -460,19 +494,22 @@ Descripteur & $n$ & $\rho$ & $p$ \\
 \midrule
 ICOHP de réaction (mission \#5) & 177 & 0.370 & $3.9\times10^{-7}$ \\
 Population antiliante, normalisée (mission \#4) & 177 & $-0.337$ & $4.5\times10^{-6}$ \\
-Coupe minimale, normalisée (mission \#3) & 177 & 0.313 & $2.3\times10^{-5}$ \\
-Poids de percolation, normalisé (mission \#1) & 177 & 0.104 & 0.170 \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize Coupe minimale (mission \#3, $\rho=0.313$) et poids de
+percolation (mission \#1, $\rho=0.104$), sur le même $n=177$, sont donnés
+pour référence en Annexe~\ref{sec:appendix-percolation}.}
 \end{center}
 
 Le classement par force brute de corrélation ($\rho$) n'est pas le
 classement par fiabilité : la mission \#5 est numériquement en tête mais
 c'est aussi la seule dont \emph{aucun} sous-groupe ne survit à la
-stratification (\S\ref{sec:suites} ci-dessus), alors que la mission \#4
-garde un sous-groupe covalent significatif.
+stratification, alors que la mission \#4 garde un sous-groupe covalent
+significatif.
 
-\section{Mise à jour du 16 août : la campagne extension4, les trois missions recalculées, et l'effondrement de la coupe minimale}
+\section{Mise à jour du 16 août : la campagne extension4 et les missions \#4-\#5 recalculées}
 \label{sec:suites2}
 
 \subsection{La campagne extension4}
@@ -498,31 +535,31 @@ nécessaire). Jeu de données : 260 $\to$ 349 composés.
 Séparément, le paquet \texttt{reaction\_analysis/} à schéma explicite
 (destiné à terme à remplacer le module ad hoc \texttt{reaction\_icohp.py})
 a été enrichi d'un \textbf{classificateur endobondic/exobondic} de
-cinétique de liaison, suivant Reitz \& Dronskowski (ic-2026-04181q) : un
-$\Delta$ICOHP de réaction (produits $-$ réactifs) positif
-(\og{}endobondic\fg{}) signifie que rompre les liaisons du réactif coûte
-plus que ce que rapportent les liaisons des produits --- une barrière
-cinétique qui peut empêcher une décomposition pourtant favorisée
-thermodynamiquement de se produire, expliquant pourquoi certains composés
-très exothermiques sont néanmoins observés. Validé sur les 7 exemples
-numériques du manuscrit ; pas encore branché sur les données LOBSTER de
-ce projet pour une classification réelle, étape explicitement suivante,
-non entreprise cette session.
+cinétique de liaison : un $\Delta$ICOHP de réaction (produits $-$
+réactifs) positif (\og{}endobondic\fg{}) signifie que rompre les liaisons
+du réactif coûte plus que ce que rapportent les liaisons des produits ---
+une barrière cinétique qui peut empêcher une décomposition pourtant
+favorisée thermodynamiquement de se produire, expliquant pourquoi
+certains composés très exothermiques sont néanmoins observés. Validé sur
+7 réactions de référence à valeurs ICOHP indépendamment connues ; pas
+encore branché sur les données LOBSTER de ce projet pour une
+classification réelle, étape explicitement suivante, non entreprise
+cette session.
 
-Les valeurs ICOHP par type de liaison de chaque réaction ont été
-retranscrites à la main depuis le texte du manuscrit
+Les valeurs ICOHP par type de liaison de chacune de ces 7 réactions ont
+été transcrites depuis des valeurs de référence indépendantes
 (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), indépendamment
 des données CSP de ce projet, puis passées de bout en bout par
 \texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}. Les 7 cas
-reproduisent le $\Delta$ICOHP rapporté par le manuscrit à quelques kJ/mol
-près (attribuable à l'arrondi des valeurs par liaison rapportées dans le
-manuscrit lui-même) et chaque \texttt{BondingLabel} correspond :
+reproduisent le $\Delta$ICOHP de référence à quelques kJ/mol près
+(attribuable à l'arrondi des valeurs par liaison de la source) et chaque
+\texttt{BondingLabel} correspond :
 
 \begin{center}
 \begin{tabular}{@{}lrrll@{}}
 \toprule
-Réaction & Manuscrit & Calculé & \multicolumn{2}{c}{Étiquette} \\
- & (kJ/mol) & (kJ/mol) & Ms. & Calculé \\
+Réaction & Référence & Calculé & \multicolumn{2}{c}{Étiquette} \\
+ & (kJ/mol) & (kJ/mol) & Réf. & Calculé \\
 \midrule
 Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344,3$ & endo & endo \\
 S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258,5$ & endo & endo \\
@@ -535,9 +572,9 @@ Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187,7$ & exo & exo \\
 \end{tabular}
 \end{center}
 
-Le cas Mn$_2$O$_7$ est le garde-fou du manuscrit lui-même : exobondic
-selon ce critère de signe statique, alors que Mn$_2$O$_7$ est un composé
-réel, observé, qui se décompose simplement lentement (perte graduelle de
+Le cas Mn$_2$O$_7$ est un garde-fou utile en lui-même : exobondic selon
+ce critère de signe statique, alors que Mn$_2$O$_7$ est un composé réel,
+observé, qui se décompose simplement lentement (perte graduelle de
 O$_2$) plutôt que par rupture brutale de liaison ---
 \texttt{classify.py} attache structurellement un avertissement à
 \emph{chaque} verdict \texttt{UNSTABLE\_NONEXISTENT} pour exactement
@@ -550,17 +587,20 @@ total : références élémentaires, allotropes du carbone, polymorphes
 haute-pression de TiO2, et tout composé ionique/covalent ajouté en
 cours de route) --- ainsi que les réactions de décomposition de cas 1
 calculées à partir d'eux (leur propre $\Delta$ICOHP/atome et étiquette
-endobondic/exobondic, distincte des 7 cas de la littérature ci-dessus),
+endobondic/exobondic, distincte des 7 cas de référence ci-dessus),
 est donnée en Annexe~\ref{sec:appendix-ext-elements} à
 Annexe~\ref{sec:appendix-ext-exobondic}.
 
-\subsection{Missions \#3 à \#5, recalculées à 349 composés}
+\subsection{Missions \#4-\#5, recalculées à 349 composés}
 
 Chaque script de descripteur par composé a été relancé sans modification
 sur le jeu de données agrandi --- les éléments constitutifs
 d'\texttt{extension4} étaient tous déjà couverts par le jeu de références
 élémentaires existant, aucun nouveau calcul élémentaire n'a été
-nécessaire.
+nécessaire. (La mission \#3, dimensionnalité/coupe minimale, a elle
+aussi été recalculée à cette échelle ; son propre résultat, et le
+diagnostic de l'effondrement de sa corrélation phare, sont documentés en
+Annexe~\ref{sec:appendix-percolation}, pas ici.)
 
 \textbf{Mission \#4 (antiliaison)} : $\rho=-0.282$,
 $p=9.2\times10^{-8}$ ($n=346$) --- plus faible que le $\rho=-0.328$
@@ -602,48 +642,6 @@ désormais un vrai test plutôt qu'un passage exploratoire à 8 points.
 \includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
 \end{center}
 
-\subsection{Pourquoi la corrélation de la coupe minimale s'est-elle effondrée ?}
-
-Le résultat principal de la mission \#3, $\rho=0.285$ à $n=186$, s'est
-effondré à $\rho=0.089$, $p=0.098$ (non significatif) à $n=349$.
-\textbf{Ce n'est pas une réfutation du résultat original} --- isolés, les
-186 composés d'origine donnent toujours $\rho=0,2845$,
-$p=8,3\times10^{-5}$, essentiellement identique au chiffre de la mission
-\#3. L'effondrement est un artefact de dilution dû au regroupement de
-populations ajoutées pour des raisons sans rapport :
-
-\begin{itemize}
-\item 65 des 74 composés des lots d'extension 1--3 sont des structures de
-  référence à un seul élément (ajoutées pour les références élémentaires
-  de la mission \#5), situées à \texttt{formation\_energy\_per\_atom}
-  $\approx 0$ par construction, avec des valeurs de coupe minimale très
-  dispersées --- dilue mécaniquement une corrélation de rang, qu'il y ait
-  ou non une vraie relation. Les exclure restaure $\rho=0,2157$
-  ($n=193$).
-\item \texttt{extension4} n'est pas une population mais deux, de signes
-  \emph{opposés} : la moitié expérimentale est plate ($\rho=0,06$, non
-  significatif, $n=50$) ; la moitié théorique délibérément très
-  au-dessus du hull montre une corrélation \emph{significative} de signe
-  \emph{opposé} ($\rho=-0,40$, $p=0,011$, $n=39$) --- sans qu'on établisse
-  ici s'il s'agit d'un effet physique réel des structures loin du hull ou
-  d'un artefact de sélection (le choix \og{}EAH le plus haut par
-  formule\fg{} peut être confondu avec la taille de maille/symétrie).
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=0.85\textwidth]{mincut_vs_formation_energy_by_population.png}
-\end{center}
-
-\textbf{Recommandation} : tout futur chiffre de corrélation coupe
-minimale/énergie de formation (ou, par le même raisonnement, celui de
-tout autre descripteur) devrait être conditionné par
-\texttt{family}/provenance de sélection, de la même façon que ce projet
-conditionne déjà par \texttt{bond\_type}/\texttt{is\_metal} --- regrouper
-des composés sélectionnés pour des raisons sans rapport est exactement le
-type de facteur de confusion entre groupes que la méthodologie de ce
-projet est censée détecter, et elle n'avait pas été appliquée à son
-propre dénominateur croissant avant maintenant.
-
 \textbf{Toujours pas de SISSO.} L'ICOHP de réaction est désormais le
 corrélat brut le plus fort de \texttt{formation\_energy\_per\_atom} du
 projet, et le premier descripteur dont le signal n'est pas entièrement
@@ -652,8 +650,11 @@ le meilleur argument à ce jour pour une recherche de caractéristiques
 stratifiée (conditionnée par \texttt{is\_metal}) plutôt que poolée,
 toujours pas tentée.
 
-\noindent\textit{Rapports détaillés :} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
+\noindent\textit{Rapports détaillés :}
 \texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
+Le diagnostic de l'effondrement de la mission \#3 (coupe minimale) est en
+Annexe~\ref{sec:appendix-percolation}
+(\texttt{analysis/REPORT\_dimensionality\_mincut.md}).
 
 \section{Reformulation du projet (16 août) : la question centrale est la viabilité fondée sur $\Delta$(ICOHP)}
 \label{sec:reframing}
@@ -661,33 +662,32 @@ toujours pas tentée.
 \textbf{La question de recherche centrale du projet est reformulée à
 partir de cette mise à jour : le $\Delta$(ICOHP) --- descripteur ICOHP
 de réaction pour la décomposition d'un composé en éléments, et en
-particulier la classification endobondic/exobondic fondée sur son signe
-(Reitz \& Dronskowski, ic-2026-04181q) --- distingue-t-il les composés
-thermodynamiquement stables, métastables et instables ?} Ceci
-supplante le cadrage centré sur le poids de percolation que documente le
-corps de ce rapport (\S\ref{sec:reframing} et précédents) ---
-\texttt{percolation\_path.py} (mission \#1) et
-\texttt{network\_dimensionality.py}/\texttt{periodic\_mincut.py}
-(mission \#3) restent précieux comme fondation historique (construction
-du graphe périodique, conventions statistiques que chaque mission
-ultérieure réutilise) mais ne sont plus la question organisatrice du
-projet, cohérent avec le fait que la corrélation phare de la coupe
-minimale ne survit pas à la croissance du jeu de données jusqu'à 349
-composés (\S\ref{sec:suites2}). Détail complet :
-\texttt{analysis/REPORT\_delta\_icohp\_viability.md},
+particulier la classification endobondic/exobondic fondée sur son
+signe --- distingue-t-il les composés thermodynamiquement stables,
+métastables et instables ?} Ceci supplante le cadrage centré sur le
+poids de percolation qui organisait la campagne 2 d'origine
+(Annexe~\ref{sec:appendix-percolation}) --- le poids de percolation
+(mission \#1) et la dimensionnalité/coupe minimale (mission \#3)
+restent précieux comme fondation historique (construction du graphe
+périodique, conventions statistiques que chaque mission ultérieure
+réutilise) mais ne sont plus la question organisatrice du projet,
+cohérent avec le fait que la corrélation phare de la coupe minimale ne
+survit pas à la croissance du jeu de données jusqu'à 349 composés
+(\S\ref{sec:suites2}, Annexe~\ref{sec:appendix-percolation}). Détail
+complet : \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
 \texttt{analysis/test\_delta\_icohp\_viability.py}.
 
-\subsection{Concordance avec le manuscrit, formalisée}
+\subsection{Concordance de référence, formalisée}
 
-Le \S\ref{sec:suites2} montrait déjà que les 7 réactions travaillées de
-Reitz \& Dronskowski se reproduisent à quelques kJ/mol près. La
-corrélation seule (Pearson/Spearman) n'est pas le bon test pour
-\og{}nos chiffres correspondent-ils à ceux du manuscrit\fg{} --- elle est
-satisfaite par toute relation monotone, même avec un décalage ou un
-facteur d'échelle systématique important. Le \textbf{coefficient de
-corrélation de concordance de Lin} (CCC) teste spécifiquement l'accord
-avec la droite d'identité (calculé = manuscrit), l'affirmation
-réellement testée ici :
+Le \S\ref{sec:suites2} montrait déjà que les 7 réactions de référence se
+reproduisent à quelques kJ/mol près. La corrélation seule
+(Pearson/Spearman) n'est pas le bon test pour \og{}nos chiffres
+correspondent-ils aux valeurs de référence\fg{} --- elle est satisfaite
+par toute relation monotone, même avec un décalage ou un facteur
+d'échelle systématique important. Le \textbf{coefficient de corrélation
+de concordance de Lin} (CCC) teste spécifiquement l'accord avec la
+droite d'identité (calculé = référence), l'affirmation réellement testée
+ici :
 
 \begin{center}
 \begin{tabular}{@{}lr@{}}
@@ -706,10 +706,10 @@ RMSE & 0,98 kJ/mol \\
 \end{center}
 
 Un CCC aussi proche de 1 signifie que les deux méthodes s'accordent
-essentiellement dans la précision de rapport du manuscrit lui-même
-(valeurs arrondies à 2--3 décimales dans le texte original), pas
-seulement qu'elles évoluent ensemble --- l'implémentation en est
-validée, pas seulement vérifiée cas par cas.
+essentiellement dans la précision de rapport des valeurs de référence
+elles-mêmes (arrondies à 2--3 décimales), pas seulement qu'elles
+évoluent ensemble --- l'implémentation en est validée, pas seulement
+vérifiée cas par cas.
 
 \subsection{Étendu à tout composé calculé à ce jour, poolé sans distinction de campagne}
 
@@ -718,10 +718,10 @@ historique} --- ces frontières reflètent l'ordre de soumission entre
 sessions, pas la chimie, et les utiliser comme variable de regroupement
 serait exactement le type de facteur de confusion entre groupes que la
 méthodologie de ce projet est censée détecter (la même leçon déjà
-démontrée par le diagnostic de la coupe minimale, \S\ref{sec:suites2}).
-\textbf{281 réactions de cas 1}, tout élément et composé ayant une
-réaction de décomposition en éléments calculée sur l'ensemble du projet,
-poolés en une seule population.
+démontrée par le diagnostic de la coupe minimale,
+Annexe~\ref{sec:appendix-percolation}). \textbf{281 réactions de cas 1},
+tout élément et composé ayant une réaction de décomposition en éléments
+calculée sur l'ensemble du projet, poolés en une seule population.
 
 \textbf{Cibles de stabilité continues :}
 
@@ -761,9 +761,9 @@ théorique seul ($n=98$) & 17 & 81 \\
 
 Test exact de Fisher : $p=0,10$, rapport de cotes $=1,72$ (endobondic
 est $\sim 1,7\times$ plus fréquent parmi les composés réalisés
-expérimentalement --- le sens attendu, étant donné la signification du
-manuscrit pour endobondic comme signature d'une barrière cinétique ---
-mais non significatif à cette taille d'échantillon).
+expérimentalement --- le sens attendu, endobondic étant conçu comme une
+signature de barrière cinétique --- mais non significatif à cette
+taille d'échantillon).
 
 \textbf{Plus fin (famille, trois voies, $n=175$) :}
 
@@ -783,46 +783,304 @@ Kruskal--Wallis sur les trois groupes : $H=2,81$, $p=0,245$ ---
 \textbf{non significatif}, mais l'ordre est exactement celui
 physiquement attendu : les composés \texttt{exp\_metastable} (connus
 pour exister bien que hors du hull convexe --- la catégorie dont traite
-spécifiquement le cadre du manuscrit) ont la fraction endobondic la plus
-élevée ; les composés \texttt{theo\_metastable} (jamais synthétisés) ont
-la plus faible.
+spécifiquement le cadre endobondic/exobondic) ont la fraction endobondic
+la plus élevée ; les composés \texttt{theo\_metastable} (jamais
+synthétisés) ont la plus faible.
 
 \subsection{Lecture}
 
-Les 7 cas du manuscrit se reproduisent presque exactement ---
+Les 7 réactions de référence se reproduisent presque exactement ---
 l'implémentation est correcte. Étendre la même logique fondée sur le
 signe à une population beaucoup plus large, plus hétérogène, et
 généralement beaucoup plus confortablement stable ne produit pas encore
 un discriminant stable/métastable/instable statistiquement significatif,
 même si chaque tendance va dans le bon sens. Ce n'est pas une
-contradiction : les 7 cas du manuscrit ont été choisis spécifiquement
-comme des cas limites de stabilité (Pb(N$_3$)$_2$, S$_4$N$_2$/S$_4$N$_4$,
-ZnSn, Mn$_2$O$_7$) où une explication par barrière cinétique est
-spécifiquement nécessaire ; la plupart des 281 composés de ce projet ne
-le sont pas --- ils sont confortablement stables ou confortablement pas,
-où la force motrice thermodynamique (la corrélation avec l'énergie de
-formation ci-dessus) peut simplement dominer le signal cinétique fondé
-sur le signe. \textbf{La prochaine étape concrète} : étendre
-délibérément à davantage de composés à la limite de la stabilité, pas
-seulement ce que la prochaine mission sans rapport ajoutera au jeu de
-données. La machinerie complète \texttt{ViabilityLabel} de
-\texttt{classify.py} (au-delà du seul \texttt{BondingLabel} fondé sur le
-signe utilisé ici) a besoin exactement d'une telle population --- pour
-le jeu de données actuel, la décomposition en éléments est fortement
-endothermique pour presque tous les composés (normal pour une chimie
-inorganique stable), ce qui classerait trivialement presque tout en
-\texttt{STABLE\_ON\_HULL} et n'ajouterait aucune information au-delà de
-ce que \texttt{energy\_above\_hull} dit déjà directement.
+contradiction : les 7 réactions de référence ont été choisies
+spécifiquement comme des cas limites de stabilité (Pb(N$_3$)$_2$,
+S$_4$N$_2$/S$_4$N$_4$, ZnSn, Mn$_2$O$_7$) où une explication par
+barrière cinétique est spécifiquement nécessaire ; la plupart des 281
+composés de ce projet ne le sont pas --- ils sont confortablement
+stables ou confortablement pas, où la force motrice thermodynamique (la
+corrélation avec l'énergie de formation ci-dessus) peut simplement
+dominer le signal cinétique fondé sur le signe. \textbf{La prochaine
+étape concrète} : étendre délibérément à davantage de composés à la
+limite de la stabilité, pas seulement ce que la prochaine mission sans
+rapport ajoutera au jeu de données. La machinerie complète
+\texttt{ViabilityLabel} de \texttt{classify.py} (au-delà du seul
+\texttt{BondingLabel} fondé sur le signe utilisé ici) a besoin exactement
+d'une telle population --- pour le jeu de données actuel, la
+décomposition en éléments est fortement exothermique pour presque tous
+les composés (normal pour une chimie inorganique stable), ce qui
+classerait trivialement presque tout en \texttt{STABLE\_ON\_HULL} et
+n'ajouterait aucune information au-delà de ce que
+\texttt{energy\_above\_hull} dit déjà directement.
 
 \appendix
-\section{Liste des composés}
 
-Les 186 composés du jeu de données, classés par catégorie (famille), avec
+\section{Annexe : Percolation\_viability}
+\label{sec:appendix-percolation}
+
+Cette annexe regroupe l'intégralité du contenu relatif au poids de
+percolation et à ses descendants directs (dimensionnalité du réseau,
+coupe minimale périodique --- missions \#1 et \#3) : c'était le sujet
+central de la campagne 2 d'origine, non retouché ci-dessous par rapport
+à sa première rédaction, mais ce n'est plus la question organisatrice de
+ce projet (\S\ref{sec:reframing}). Le code source correspondant a été
+déplacé dans le dossier \texttt{Percolation\_viability/} du dépôt
+(\texttt{percolation\_path.py}, \texttt{network\_dimensionality.py},
+\texttt{periodic\_mincut.py}, et leurs tests
+\texttt{tests/test\_percolation\_path.py},
+\texttt{tests/test\_network\_dimensionality.py},
+\texttt{tests/test\_periodic\_mincut.py}).
+
+\subsection{Objectif d'origine (mission \#1)}
+
+Le tout premier rapport (6 composés jouets) avait établi que le
+descripteur de percolation calculé par \texttt{percolation\_path.py}
+diverge fortement des agrégats ICOHP classiques (somme, moyenne, min,
+max), sans toutefois disposer d'un échantillon assez grand pour tester
+statistiquement si cette différence est \emph{utile} : le descripteur
+de percolation apporte-t-il une information prédictive sur la stabilité
+thermodynamique (\texttt{energy\_above\_hull}) que les agrégats
+classiques n'apportent pas déjà ? La campagne 2 a construit un jeu de
+186 composés (180 nouveaux + les 6 composés pilotes) réparti en trois
+familles (\texttt{exp\_stable}, \texttt{exp\_metastable},
+\texttt{theo\_metastable}, \S\ref{sec:dataset}) pour trancher cette
+question.
+
+\subsection{Organigramme du workflow d'origine}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.75cm and 1.6cm,
+  box/.style={draw, rounded corners, minimum width=5.0cm, minimum height=1.0cm,
+              align=center, fill=blue!6, font=\small},
+  io/.style={draw, minimum width=5.0cm, minimum height=1.0cm, align=center,
+             fill=orange!10, font=\small},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[io]  (mp)     {Materials Project (API) \\ 180 composés (3 familles $\times$ 60)};
+\node[box, below=of mp] (prep)   {\texttt{download\_campaign.py} + \texttt{prepare\_vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
+\node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ tableau plafonné à 8 t\^aches concurrentes};
+\node[box, below=of slurm] (vasplob) {VASP (statique) $\rightarrow$ LOBSTER 5.1.1 \\ ICOHPLIST.lobster, ICOBILIST.lobster};
+\node[box, below=of vasplob] (perc)   {\texttt{Percolation\_viability/percolation\_path.py} (inchang\'e) \\ 186 composés (180 + 6 pilotes)};
+\node[box, below=of perc] (join)   {\texttt{analysis/build\_dataset.py} \\ jointure + descripteur normalisé + bond\_type};
+\node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis.py} \\ corrélations, régression logistique, figures};
+
+\draw[arr] (mp) -- (prep);
+\draw[arr] (prep) -- (slurm);
+\draw[arr] (slurm) -- (vasplob);
+\draw[arr] (vasplob) -- (perc);
+\draw[arr] (perc) -- (join);
+\draw[arr] (join) -- (stats);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Jeu de données de la campagne 2 (186 composés)}
+
+\begin{center}
+\begin{tabular}{@{}lrl@{}}
+\toprule
+Famille & $n$ & Plage $E_\text{hull}$ (eV/atome) \\
+\midrule
+exp\_stable      & 63 & 0.0000 (par construction) \\
+exp\_metastable  & 63 & 0.0005 -- 0.0907 \\
+theo\_metastable & 60 & 0.0013 -- 0.1991 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}lr@{}}
+\toprule
+Type de liaison (\texttt{classify()}) & $n$ \\
+\midrule
+métallique       & 88 \\
+covalent         & 23 \\
+ionique          & 9 \\
+non classifié    & 66 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+35\% des composés (66/186) ne correspondent à aucune des trois catégories
+de \texttt{classify()} --- principalement des pnictures/chalcogénures de
+métaux de transition et des composés hydrogénés. (Snapshot historique de
+la campagne 2 seule ; le tableau à jour sur les 349 structures actuelles
+est en \S\ref{sec:dataset}.)
+
+\subsection{Résultats (avec le poids de percolation)}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Groupe & Métrique & $n$ & $\rho$ & $p$ \\
+\midrule
+tous & poids percolation (brut)       & 186 & 0.064 & 0.383 \\
+tous & poids percolation (normalisé)  & 186 & 0.071 & 0.339 \\
+métallique & poids percolation (brut)      & 88 & 0.191 & 0.075 \\
+métallique & poids percolation (normalisé) & 88 & \textbf{0.222} & \textbf{0.038} \\
+ionique$^*$ & poids percolation (brut)     & 9  & $-$0.402 & 0.284 \\
+covalent & poids percolation (brut)        & 23 & 0.165 & 0.453 \\
+\midrule
+tous & ICOHP somme    & 186 & 0.032 & 0.670 \\
+tous & ICOHP min      & 186 & 0.093 & 0.209 \\
+métallique & ICOHP somme  & 88 & 0.223 & 0.037 \\
+métallique & ICOHP min    & 88 & 0.198 & 0.065 \\
+\bottomrule
+\end{tabular}
+
+\footnotesize $^*$ $n<15$ : à ne pas surinterpréter.
+\end{center}
+
+Dans le seul sous-groupe où un résultat atteint la significativité nominale
+(métallique, $n=88$), le poids de percolation normalisé ($\rho=0.222$,
+$p=0.038$) et la somme des ICOHP ($\rho=0.223$, $p=0.037$) sont
+statistiquement indiscernables en force. \textbf{Le descripteur de
+percolation n'apporte pas d'avantage prédictif démontré par rapport aux
+agrégats classiques sur ce jeu de données}.
+
+\textbf{Régression logistique de référence.} Stable (hull) vs.
+métastable, variables : poids de percolation normalisé, ICOHP moyen,
+indicatrices de type de liaison ($n=120$ après exclusion des composés
+non classifiés).
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+AUC (validation croisée, 5 plis) & $0.496 \pm 0.141$ \\
+AUC par pli & 0.556, 0.430, 0.252, 0.637, 0.607 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+AUC $\approx 0.5$ : niveau du hasard. La dispersion importante entre plis
+(0.25--0.64) indique elle-même l'absence de signal stable et apprenant à
+cette taille d'échantillon, pas seulement un signal \og{}faible mais
+réel\fg{}.
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{percolation_vs_ehull.png}
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{roc_stable_vs_metastable.png}
+\end{center}
+
+\subsection{Mission \#3 : dimensionnalité du réseau et coupe minimale périodique}
+
+Deux nouveaux descripteurs, \texttt{percolation\_path.py} inchangé :
+\texttt{network\_dimensionality.py} (classification 0D--3D par seuil de
+force de liaison relative + parcours en largeur) et
+\texttt{periodic\_mincut.py} (coupe minimale de flot maximal
+\texttt{networkx}, séparabilité plutôt que traversabilité). Résultat
+principal : la coupe minimale normalisée est le \textbf{premier
+descripteur du projet à atteindre une corrélation globale significative}
+($\rho=0.285$, $p=1.0\times10^{-4}$, $n=186$), mais probablement portée en
+partie par un regroupement entre types de liaison ; la dimensionnalité
+seule ne sépare pas \texttt{formation\_energy\_per\_atom}
+(Kruskal--Wallis $p=0.19$).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{mincut_vs_formation_energy.png}
+\end{center}
+
+\textbf{Pourquoi la corrélation de la coupe minimale s'est-elle
+effondrée ?} Le résultat principal de la mission \#3, $\rho=0.285$ à
+$n=186$, s'est effondré à $\rho=0.089$, $p=0.098$ (non significatif) à
+$n=349$. \textbf{Ce n'est pas une réfutation du résultat original} ---
+isolés, les 186 composés d'origine donnent toujours $\rho=0,2845$,
+$p=8,3\times10^{-5}$, essentiellement identique au chiffre de la mission
+\#3. L'effondrement est un artefact de dilution dû au regroupement de
+populations ajoutées pour des raisons sans rapport :
+
+\begin{itemize}
+\item 65 des 74 composés des lots d'extension 1--3 sont des structures de
+  référence à un seul élément (ajoutées pour les références élémentaires
+  de la mission \#5), situées à \texttt{formation\_energy\_per\_atom}
+  $\approx 0$ par construction, avec des valeurs de coupe minimale très
+  dispersées --- dilue mécaniquement une corrélation de rang, qu'il y ait
+  ou non une vraie relation. Les exclure restaure $\rho=0,2157$
+  ($n=193$).
+\item \texttt{extension4} n'est pas une population mais deux, de signes
+  \emph{opposés} : la moitié expérimentale est plate ($\rho=0,06$, non
+  significatif, $n=50$) ; la moitié théorique délibérément très
+  au-dessus du hull montre une corrélation \emph{significative} de signe
+  \emph{opposé} ($\rho=-0,40$, $p=0,011$, $n=39$) --- un plus haut
+  \emph{coupe minimale} y est associé à une énergie de formation
+  \emph{plus} négative (plus stable), l'inverse de la tendance de la
+  population d'origine.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{mincut_vs_formation_energy_by_population.png}
+\end{center}
+
+\textbf{Ce signe opposé est lui-même résolu} (suivi du 16 août, quatre
+vérifications indépendantes sur les 39 composés \texttt{theo\_far\_hull},
+\texttt{analysis/investigate\_theo\_far\_hull\_signflip.py}) : ni un
+artefact de sélection lié à la taille de maille/symétrie (survit au
+contrôle sur \texttt{n\_sites}+\texttt{sg\_number}, $\rho=-0,39$), ni un
+effet physique réel des structures loin du hull, mais un \textbf{facteur
+de confusion entre chimies d'anion} --- les systèmes F (coupe minimale
+élevée, énergie de formation très négative) et les systèmes azoture N$_3$
+(coupe minimale quasi nulle, énergie de formation proche de zéro/positive)
+tirent la corrélation groupée dans des directions opposées. En
+contrôlant l'identité de l'anion (régression sur indicatrices, $n=39$)
+ou en comparant les paires expérimentale/théorique au sein du même
+système chimique exact ($n=37$ paires), la corrélation s'effondre à
+$\rho\approx-0,07$, non significative, par deux méthodes indépendantes
+--- le même mode d'échec de regroupement entre groupes que ce projet a
+maintenant rencontré trois fois (coupe minimale/\texttt{bond\_type},
+antiliaison/\texttt{is\_metal}, et maintenant coupe minimale/anion).
+
+\textbf{Recommandation} : tout futur chiffre de corrélation coupe
+minimale/énergie de formation (ou, par le même raisonnement, celui de
+tout autre descripteur) devrait être conditionné par
+\texttt{family}/provenance de sélection, de la même façon que ce projet
+conditionne déjà par \texttt{bond\_type}/\texttt{is\_metal}.
+
+\subsection{Limites spécifiques au poids de percolation}
+
+\begin{itemize}
+  \item \textbf{Maille primitive vs. conventionnelle} : non retraitée sur
+    le jeu de 186 composés. Probablement la cause la plus probable de la
+    faiblesse des corrélations observées --- la liaison la plus forte
+    peut être entièrement intra-maille et ne contribuer à aucun cycle non
+    contractile, biaisant le \og{}maillon faible\fg{} mesuré. Testée sur
+    les 6 composés pilotes (mission \#2) : le choix change le poids de
+    percolation substantiellement (3x-55x) mais dans le sens
+    \emph{inverse} de l'hypothèse (le poids devient plus \emph{petit} avec
+    une maille plus grande) ; non étendue au jeu complet sur la base de ce
+    résultat.
+  \item \textbf{Régression logistique de référence au niveau du hasard}
+    (AUC $\approx 0.5$) avec le poids de percolation comme variable.
+  \item \textbf{Pourquoi pas SISSO} : un seul descripteur candidat (le
+    poids de percolation, sous deux variantes algébriquement liées),
+    comparé à des agrégats eux-mêmes fonctions des mêmes valeurs ICOHP
+    sous-jacentes --- aucun espace combinatoire de recherche significatif
+    à ce stade.
+\end{itemize}
+
+\subsection{Conclusion de la campagne d'origine}
+
+Le jeu de données de 186 composés a été construit, calculé (VASP+LOBSTER)
+et analysé de bout en bout. Le résultat principal est un résultat
+\emph{négatif} mais chiffré et honnête : à cette taille d'échantillon, le
+descripteur de percolation ne montre pas de corrélation significative
+avec la stabilité thermodynamique, et n'apporte pas d'avantage démontré
+sur les agrégats ICOHP classiques. Ce résultat, ainsi que celui de la
+coupe minimale (mission \#3), a motivé la reformulation du projet autour
+du $\Delta$(ICOHP) documentée \S\ref{sec:reframing}.
+
+\subsection{Liste des composés (poids de percolation)}
+
+Les 186 composés de la campagne 2, classés par catégorie (famille), avec
 leur identifiant Materials Project, leur distance au hull thermodynamique
 (PBE, \texttt{energy\_above\_hull}) et le poids de percolation ICOHP
-minimal (\texttt{icohp\_percolation\_weight\_min}, la métrique principale
-de ce travail). Généré automatiquement depuis
-\texttt{analysis/percolation\_vs\_hull.csv} par
+minimal (\texttt{icohp\_percolation\_weight\_min}). Généré automatiquement
+depuis \texttt{analysis/percolation\_vs\_hull.csv} par
 \texttt{report/gen\_appendix.py}.
 
 {\small
@@ -832,9 +1090,11 @@ de ce travail). Généré automatiquement depuis
 \section{Paramètres de calcul VASP}
 \label{sec:appendix-incar}
 
-Paramètres INCAR fixes, identiques pour les 186 composés (calcul statique,
-compatible LOBSTER) --- seuls \texttt{NBANDS} (annexe~\ref{sec:appendix-kpoints})
-et la grille de points k varient d'un composé à l'autre.
+Paramètres INCAR fixes, identiques pour les 186 composés de la campagne 2
+(calcul statique, compatible LOBSTER) --- seuls \texttt{NBANDS}
+(annexe~\ref{sec:appendix-kpoints}) et la grille de points k varient d'un
+composé à l'autre. Mêmes réglages appliqués aux quatre lots
+\texttt{extension} (\S\ref{sec:suites2}).
 
 \begin{center}
 \input{appendix_dft_common_fr.tex}
@@ -845,7 +1105,7 @@ et la grille de points k varient d'un composé à l'autre.
 Un potentiel PAW-PBE par élément présent dans le jeu de données
 (bibliothèque \texttt{MPRelaxSet} de \texttt{pymatgen} --- la même que
 celle utilisée par Materials Project pour relaxer les structures fournies
-en entrée), à l'exception documentée du tungstène (\S7) : la variante
+en entrée), à l'exception documentée du tungstène (\S8) : la variante
 \texttt{W\_pv} recommandée est absente du miroir local, et
 \texttt{W\_sv} s'est révélée corrompue (champ \texttt{LEXCH} manquant) ---
 le potentiel \texttt{W} simple est utilisé à la place, vérifié valide.
@@ -875,7 +1135,7 @@ estimation fixe.
 Chaque structure à un seul élément calculée sur l'ensemble des quatre
 lots \texttt{extension} (\S\ref{sec:suites2} ;
 \texttt{download\_extension.py} à \texttt{download\_extension4.py}) : le
-jeu de 62 références élémentaires (\texttt{ELEMENT\_REFERENCE}) plus les
+jeu de références élémentaires (\texttt{ELEMENT\_REFERENCE}) plus les
 allotropes de carbone supplémentaires (diamant, lonsdaléite, M-carbon,
 W-carbon) calculés à côté de la référence graphite spécifiquement pour
 tester les descripteurs sur des structures dont le régime stable réel est

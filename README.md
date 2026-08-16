@@ -3,7 +3,7 @@
 **Central research question (reformulated 2026-08-16): does Δ(ICOHP) —
 the reaction-ICOHP descriptor for a compound's decomposition into
 elements, and specifically the sign-based endobondic/exobondic
-classification it supports (Reitz & Dronskowski, ic-2026-04181q) —
+classification it supports —
 distinguish thermodynamically stable, metastable, and unstable
 compounds?** Tested over every element and compound computed across the
 whole project to date (`mp_dataset/structures/`, 349 compounds, 281
@@ -11,8 +11,8 @@ case-1 decomposition reactions), pooled without regard to which
 historical campaign or extension batch a compound came from — see
 **[`analysis/REPORT_delta_icohp_viability.md`](analysis/REPORT_delta_icohp_viability.md)**.
 
-**Headline**: concordance against the manuscript's own 7 worked
-reactions is essentially exact (Lin's Concordance Correlation
+**Headline**: concordance against 7 reference validation reactions with
+independently known ΔICOHP values is essentially exact (Lin's Concordance Correlation
 Coefficient = 0.999998, sign agreement 7/7, mean residual 0.76 kJ/mol —
 this is a genuine agreement test against the identity line, not just a
 correlation, and the implementation is validated by it). Extended to the
@@ -24,7 +24,7 @@ ones (Fisher exact p=0.10) — though the trend across
 exp_metastable/exp_stable/theo_metastable is monotonic and physically
 sensible (endobondic fraction 27.1% → 20.3% → 11.9%), just not
 significant yet at n=175. See the report for the honest read on why: the
-manuscript's 7 cases were chosen as borderline-stability edge cases,
+7 reference cases were chosen as borderline-stability edge cases,
 while most of this project's compounds are comfortably stable or
 comfortably not — extending the test to more borderline compounds
 (deliberately, not just accumulating whatever the next unrelated mission
@@ -39,22 +39,24 @@ classifier. A second, independent line of evidence —
 mission #4 — asks a related but distinct question (how COHP is
 distributed in energy, not the total reaction-level ICOHP balance) and
 is documented alongside it below. The project's original graph-based
-methodology (`percolation_path.py`, mission #1; `network_dimensionality.py`/
-`periodic_mincut.py`, mission #3) established the periodic-graph
-representation of ICOHP/ICOBI data and the statistical conventions every
-later mission still reuses (Spearman correlation only, mandatory
-`bond_type`/`is_metal` stratification, n<15 subgroups always flagged,
-no SISSO until a signal is clean and well-powered per stratum) — but its
-own headline correlations did not hold up at the current dataset scale
-(see the Appendix) and it is no longer this project's central question,
-so it is documented as background/appendix material rather than a
-current descriptor.
+methodology (`Percolation_viability/percolation_path.py`, mission #1;
+`Percolation_viability/network_dimensionality.py`/
+`Percolation_viability/periodic_mincut.py`, mission #3) established the
+periodic-graph representation of ICOHP/ICOBI data and the statistical
+conventions every later mission still reuses (Spearman correlation only,
+mandatory `bond_type`/`is_metal` stratification, n<15 subgroups always
+flagged, no SISSO until a signal is clean and well-powered per stratum)
+— but its own headline correlations did not hold up at the current
+dataset scale (see the Appendix) and it is no longer this project's
+central question, so it now lives in its own `Percolation_viability/`
+directory as background/appendix material rather than a current
+descriptor.
 
 ## Descriptors (ordered by relevance to the central question, not by mission number)
 
-1. **[Reaction-ICOHP (Δ(ICOHP)) and endobondic/exobondic classification](#reaction-icohp-δicohp-and-endobondicexobondic-classification-mission-5--central-question)** — mission #5, `reaction_icohp.py` + `reaction_analysis/`. The project's central question as of 2026-08-16. Numerically the strongest correlation in the project (ρ=0.502 vs. `formation_energy_per_atom`) and the first descriptor whose signal survives an `is_metal` stratification; near-exact concordance with the Reitz & Dronskowski manuscript (CCC=0.999998); sign-based viability discrimination shows a real but not-yet-significant trend.
+1. **[Reaction-ICOHP (Δ(ICOHP)) and endobondic/exobondic classification](#reaction-icohp-δicohp-and-endobondicexobondic-classification-mission-5--central-question)** — mission #5, `reaction_icohp.py` + `reaction_analysis/`. The project's central question as of 2026-08-16. Numerically the strongest correlation in the project (ρ=0.502 vs. `formation_energy_per_atom`) and the first descriptor whose signal survives an `is_metal` stratification; near-exact concordance with 7 reference validation reactions (CCC=0.999998); sign-based viability discrimination shows a real but not-yet-significant trend.
 2. **[Antibonding population near the frontier (E_F/VBM)](#antibonding-population-near-the-frontier-ef-vbm-mission-4)** — mission #4, `cohp_extraction.py`. A related but distinct energy-resolved-COHP question. Its `bond_type=covalent` subgroup is the most robust bond-type-stratified result in the project.
-3. **[Appendix: original graph-based methodology](#appendix-original-graph-based-methodology-percolation-dimensionality-min-cut--missions-1-and-3)** — `percolation_path.py` (mission #1) and `network_dimensionality.py`/`periodic_mincut.py` (mission #3). Historical foundation (periodic graph construction, statistical conventions); no longer the project's central question, and min-cut's own headline correlation did not survive the dataset's growth to 349 compounds (diagnosed, not just noted — see the appendix).
+3. **[Appendix: original graph-based methodology](#appendix-original-graph-based-methodology-percolation-dimensionality-min-cut--missions-1-and-3)** — `Percolation_viability/percolation_path.py` (mission #1) and `Percolation_viability/network_dimensionality.py`/`Percolation_viability/periodic_mincut.py` (mission #3). Historical foundation (periodic graph construction, statistical conventions); no longer the project's central question, and min-cut's own headline correlation did not survive the dataset's growth to 349 compounds (diagnosed, not just noted — see the appendix).
 
 ---
 
@@ -119,35 +121,35 @@ reaction case-1 population (`analysis/populate_reaction_analysis_case1_full.py`,
 the known sign flip. Its sign convention (products − reactants) is the
 *opposite* of `reaction_icohp.py`'s — the two are not interchangeable.
 
-**Endobondic/exobondic classification** (Reitz & Dronskowski,
-ic-2026-04181q): `nearest_neighbor.py` (first-coordination-shell bond
-filtering — a relative, self-calibrating gap detector, no hardcoded
-Angstrom cutoff), `classify.py` (`BondingLabel`
+**Endobondic/exobondic classification**: `nearest_neighbor.py`
+(first-coordination-shell bond filtering — a relative, self-calibrating
+gap detector, no hardcoded Angstrom cutoff), `classify.py` (`BondingLabel`
 endobondic/exobondic from ΔICOHP's sign, and a deliberately more cautious
 `ViabilityLabel` — `UNSTABLE_NONEXISTENT` always carries a warning that an
-exobondic sign never proves non-existence, per the manuscript's own
-Mn2O7 caveat), and `units.py` (eV ↔ kJ/mol). `parse_lobster.py` gained an
+exobondic sign never proves non-existence, e.g. Mn2O7, a real compound
+that decomposes by slow, gradual O2 loss rather than abrupt bond
+rupture), and `units.py` (eV ↔ kJ/mol). `parse_lobster.py` gained an
 opt-in `bond_filter="nearest_neighbor"` (default stays `"unfiltered"`, to
 avoid silently changing the already-validated case-1 population above),
 and `delta.py`'s `ReactionResult` now carries a `bonding_label`.
 
-**Validation against the manuscript and extension to the full dataset**
-(**[`analysis/REPORT_delta_icohp_viability.md`](analysis/REPORT_delta_icohp_viability.md)**,
-`analysis/test_delta_icohp_viability.py`): all 7 worked examples from the
-manuscript reproduce to a Lin's CCC of 0.999998 (sign agreement 7/7,
-mean residual 0.76 kJ/mol) — published, external numbers, independent of
-this project's own CSP data. Extended to every case-1 reaction computed
-across the whole project (281, pooled across all campaigns — not split
-by which extension batch a compound happened to arrive in), the
-endobondic/exobondic sign shows a real but not-yet-significant trend
-toward distinguishing experimentally-viable from theoretical-only
-compounds (Fisher exact p=0.10; Kruskal-Wallis across
-exp_metastable/exp_stable/theo_metastable p=0.245, though the ordering
-is exactly the physically-expected one). **Not yet connected to real
-LOBSTER data for a full `ViabilityLabel` classification** (needs a
-population deliberately chosen to sit near a decomposition edge, closer
-to the manuscript's own 7 cases than to this project's general-purpose
-dataset) — the concrete next step for this central question.
+**Validation against 7 reference reactions and extension to the full
+dataset** (**[`analysis/REPORT_delta_icohp_viability.md`](analysis/REPORT_delta_icohp_viability.md)**,
+`analysis/test_delta_icohp_viability.py`): all 7 reference validation
+cases reproduce to a Lin's CCC of 0.999998 (sign agreement 7/7, mean
+residual 0.76 kJ/mol) — independent of this project's own CSP data.
+Extended to every case-1 reaction computed across the whole project (281,
+pooled across all campaigns — not split by which extension batch a
+compound happened to arrive in), the endobondic/exobondic sign shows a
+real but not-yet-significant trend toward distinguishing
+experimentally-viable from theoretical-only compounds (Fisher exact
+p=0.10; Kruskal-Wallis across exp_metastable/exp_stable/theo_metastable
+p=0.245, though the ordering is exactly the physically-expected one).
+**Not yet connected to real LOBSTER data for a full `ViabilityLabel`
+classification** (needs a population deliberately chosen to sit near a
+decomposition edge, closer to the 7 reference cases than to this
+project's general-purpose dataset) — the concrete next step for this
+central question.
 
 ## Antibonding population near the frontier (E_F/VBM) (mission #4)
 
@@ -244,7 +246,12 @@ for `reaction_icohp.py`, sitting at `formation_energy_per_atom`≈0 by
 construction) and `extension4`'s deliberately far-above-hull half (which
 shows a *significant correlation of the opposite sign*, ρ=−0.40, p=0.011,
 n=39) got pooled in without re-checking this descriptor specifically. See
-`REPORT_dimensionality_mincut.md` §5 for the full breakdown.**
+`REPORT_dimensionality_mincut.md` §5 for the full breakdown. **That
+opposite-sign result is itself now explained (§5.5): a between-anion-
+chemistry confound (F- vs. N-azide-vs-O/P/S/Cl-containing systems), not
+a cell-size/symmetry artifact or a real far-from-hull effect — it
+collapses to ρ≈−0.07, not significant, once anion identity or exact
+chemsys composition is controlled for.**
 
 ### `percolation_path.py` — the original descriptor (mission #1)
 
@@ -270,84 +277,83 @@ energy window) still builds on or was designed in explicit contrast to.
 pip install -r requirements.txt   # pymatgen
 ```
 
-Nécessite Python ≥ 3.9 (utilise `pymatgen.io.lobster.outputs.Icohplist`).
+Requires Python ≥ 3.9 (uses `pymatgen.io.lobster.outputs.Icohplist`).
 
-#### Format d'entrée attendu
+#### Expected input layout
 
 ```
 dataset/
   compound_A/
-    POSCAR (ou CONTCAR, ou *.cif)      # structure relaxée, maille primitive
-    ICOHPLIST.lobster                   # sortie LOBSTER, avec colonnes de translation
-    ICOBILIST.lobster                   # optionnel
+    POSCAR (or CONTCAR, or *.cif)      # relaxed structure, primitive cell
+    ICOHPLIST.lobster                   # LOBSTER output, with translation columns
+    ICOBILIST.lobster                   # optional
   compound_B/
     ...
 ```
 
-Chaque sous-répertoire de `--root` est traité comme un composé indépendant.
-Le fichier `ICOHPLIST.lobster`/`ICOBILIST.lobster` doit inclure la colonne
-de translation de réseau (`tx ty tz`) par liaison — c'est le cas standard
-depuis LOBSTER ≥ 3. C'est cette information qui permet de reconstruire le
-graphe périodique étiqueté sans jamais dupliquer physiquement les atomes.
+Each subdirectory of `--root` is treated as an independent compound. The
+`ICOHPLIST.lobster`/`ICOBILIST.lobster` file must include the per-bond
+lattice translation column (`tx ty tz`) — the standard case since LOBSTER
+≥ 3. This is the information that lets the labeled periodic graph be
+reconstructed without ever physically duplicating atoms.
 
-#### Utilisation
+#### Usage
 
 ```bash
-python percolation_path.py --root dataset --metric icohp --output results.csv
-python percolation_path.py --root dataset --metric icohp,icobi --output results.csv --also-json results.json
-python percolation_path.py --root dataset --metric icohp --bond-pair Fe-O --output results.csv
+python Percolation_viability/percolation_path.py --root dataset --metric icohp --output results.csv
+python Percolation_viability/percolation_path.py --root dataset --metric icohp,icobi --output results.csv --also-json results.json
+python Percolation_viability/percolation_path.py --root dataset --metric icohp --bond-pair Fe-O --output results.csv
 ```
 
-Options principales :
-- `--metric icohp|icobi|icohp,icobi` : quelle(s) grandeur(s) utiliser comme
-  poids d'arête (|ICOHP| ou |ICOBI|). Les deux peuvent être calculées côte
-  à côte pour comparaison.
-- `--bond-pair Fe-O` : restreint le graphe et les agrégats aux liaisons
-  entre ces deux espèces (sinon toutes les liaisons du fichier sont
-  utilisées).
-- `--coord-bound N` : borne du domaine d'exploration des translations
-  cumulées pendant la recherche de chemin. Par défaut, dérivée
-  automatiquement du plus grand vecteur de translation présent dans les
-  données d'entrée (donc directement liée au rayon de coupure du calcul
-  ICOHP/ICOBI amont, pas un paramètre de convergence à ajuster).
+Main options:
+- `--metric icohp|icobi|icohp,icobi`: which quantity/quantities to use as
+  edge weight (|ICOHP| or |ICOBI|). Both can be computed side by side for
+  comparison.
+- `--bond-pair Fe-O`: restricts the graph and the aggregates to bonds
+  between these two species (otherwise every bond in the file is used).
+- `--coord-bound N`: bound on the cumulative-translation search space
+  explored during pathfinding. Defaults to a value derived automatically
+  from the largest translation vector present in the input data (so it's
+  directly tied to the upstream ICOHP/ICOBI calculation's cutoff radius,
+  not a convergence parameter to tune by hand).
 
-#### Sortie
+#### Output
 
-Un enregistrement par composé (CSV, une ligne par composé ; ou JSON,
-structure imbriquée avec le détail par direction). Colonnes principales
-(préfixées par le nom de la métrique, ex. `icohp_...`) :
+One record per compound (CSV, one row per compound; or JSON, nested
+structure with per-direction detail). Main columns (prefixed by the
+metric name, e.g. `icohp_...`):
 
-- `*_percolation_weight_min` : poids du chemin de percolation le plus
-  faible, toutes directions confondues — le descripteur principal.
-- `*_percolation_direction` : direction (`a`, `b`, ou `c`) correspondante.
-- `*_percolation_weight_a/b/c` et `*_percolation_status_a/b/c` : poids
-  minimal par direction, avec statut explicite (`ok` ou `disconnected` si
-  aucun chemin non contractile n'existe dans cette direction — jamais une
-  valeur infinie silencieuse).
-- `*_sum`, `*_mean`, `*_min`, `*_max` : agrégats classiques sur les mêmes
-  liaisons, pour comparaison directe avec le descripteur de percolation.
-- `error`, `warnings` : diagnostics par composé (le traitement par lot ne
-  s'interrompt jamais sur un composé en échec — l'erreur est consignée
-  dans la ligne correspondante et le lot continue).
+- `*_percolation_weight_min`: weight of the weakest percolation path,
+  across all directions — the main descriptor.
+- `*_percolation_direction`: the corresponding direction (`a`, `b`, or `c`).
+- `*_percolation_weight_a/b/c` and `*_percolation_status_a/b/c`: minimum
+  weight per direction, with an explicit status (`ok` or `disconnected`
+  if no non-contractile path exists in that direction — never a silent
+  infinite value).
+- `*_sum`, `*_mean`, `*_min`, `*_max`: classic aggregates over the same
+  bonds, for direct comparison against the percolation descriptor.
+- `error`, `warnings`: per-compound diagnostics (batch processing never
+  stops on a failed compound — the error is logged in the corresponding
+  row and the batch continues).
 
-#### Algorithme (résumé)
+#### Algorithm (summary)
 
-1. Chaque liaison ICOHP/ICOBI devient une arête `(atome_i, atome_j, (nx,ny,nz))`
-   du graphe périodique, avec poids `|valeur|`. Les deux sens de l'arête
-   sont ajoutés (translation opposée dans l'autre sens).
-2. Pour chaque direction de réseau `a`, `b`, `c`, on cherche — pour chaque
-   atome de départ possible — le chemin de poids minimal dans l'espace
-   d'état `(atome, translation cumulée)` reliant `(atome, (0,0,0))` à
-   `(atome, direction)`. C'est un Dijkstra classique (poids ≥ 0 car
-   valeurs absolues), valide car l'espace d'état est fini une fois borné
-   par `--coord-bound`.
-3. Le minimum sur les atomes de départ donne le poids de percolation de
-   cette direction ; le minimum sur les trois directions donne le
-   descripteur principal.
-4. Si aucun état-cible n'est atteint dans une direction (réseau de
-   liaisons déconnecté selon cette direction compte tenu du rayon de
-   coupure ICOHP/ICOBI), c'est signalé explicitement (`status:
-   disconnected`), jamais silencieusement comme un poids infini ou nul.
+1. Each ICOHP/ICOBI bond becomes an edge `(atom_i, atom_j, (nx,ny,nz))`
+   of the periodic graph, weighted `|value|`. Both directions of the edge
+   are added (opposite translation the other way).
+2. For each lattice direction `a`, `b`, `c`, the minimum-weight path in
+   the state space `(atom, cumulative translation)` connecting
+   `(atom, (0,0,0))` to `(atom, direction)` is searched for each possible
+   starting atom. This is plain Dijkstra (weights ≥ 0 since they're
+   absolute values), valid because the state space is finite once bounded
+   by `--coord-bound`.
+3. The minimum over starting atoms gives that direction's percolation
+   weight; the minimum over the three directions gives the main
+   descriptor.
+4. If no target state is reached in a direction (bond network
+   disconnected along that direction given the ICOHP/ICOBI cutoff
+   radius), this is reported explicitly (`status: disconnected`), never
+   silently as an infinite or zero weight.
 
 #### Tests
 
@@ -355,23 +361,22 @@ structure imbriquée avec le détail par direction). Colonnes principales
 python -m unittest discover -s tests -v
 ```
 
-Couvre : cas isotrope (poids identique dans les 3 directions), cas
-anisotrope (direction la plus faible correctement identifiée), cas
-déconnecté (signalé explicitement, pas de crash ni de valeur erronée),
-cas où un chemin indirect à plusieurs sauts bat une liaison directe plus
-coûteuse (validation que l'algorithme résout bien un plus-court-chemin
-global et non une simple sélection de la liaison la plus faible), et un
-test d'intégration bout-en-bout avec un `ICOHPLIST.lobster` synthétique
-parsé via pymatgen.
+Covers: isotropic case (identical weight in all 3 directions), anisotropic
+case (weakest direction correctly identified), disconnected case (reported
+explicitly, no crash or wrong value), a case where a cheaper multi-hop
+indirect path beats a more expensive direct bond (validates that the
+algorithm actually solves a global shortest-path problem, not just picking
+the weakest bond), and an end-to-end integration test with a synthetic
+`ICOHPLIST.lobster` parsed through pymatgen.
 
-#### Exemples
+#### Examples
 
-`examples/dataset/` contient trois composés jouets illustrant les trois
-cas ci-dessus (anisotrope, chemin indirect moins cher que la liaison
-directe, direction déconnectée) :
+`examples/dataset/` contains three toy compounds illustrating the three
+cases above (anisotropic, indirect path cheaper than the direct bond,
+disconnected direction):
 
 ```bash
-python percolation_path.py --root examples/dataset --metric icohp --output /tmp/example_results.csv -v
+python Percolation_viability/percolation_path.py --root examples/dataset --metric icohp --output /tmp/example_results.csv -v
 ```
 
 #### Analysis of `percolation_path.py` (missions #1-#2)
@@ -410,11 +415,10 @@ result.
 
 #### Known limitations (`percolation_path.py` CLI)
 
-- Suppose que `ICOHPLIST.lobster`/`ICOBILIST.lobster` proviennent du même
-  calcul LOBSTER que la structure fournie (même ordre d'atomes, même
-  maille) ; aucune vérification croisée de cohérence structure/POSCAR
-  LOBSTER au-delà de la validation des indices d'atome.
-- La complexité du Dijkstra par direction est `O(atomes)` exécutions sur un
-  espace d'état de taille `atomes × (2·coord_bound+1)³` ; adapté à des
-  mailles de quelques dizaines à quelques centaines d'atomes par composé,
-  pas à des mailles géantes.
+- Assumes `ICOHPLIST.lobster`/`ICOBILIST.lobster` come from the same
+  LOBSTER calculation as the supplied structure (same atom order, same
+  cell); no cross-check of structure/POSCAR-LOBSTER consistency beyond
+  atom-index validation.
+- Per-direction Dijkstra complexity is `O(atoms)` runs over a state space
+  of size `atoms × (2·coord_bound+1)³`; suited to cells of a few dozen to
+  a few hundred atoms per compound, not to giant cells.
