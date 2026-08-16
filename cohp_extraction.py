@@ -392,3 +392,72 @@ def icobi_antibonding_population_near_frontier(
         "total_occupied_icobi_magnitude": total_occupied_magnitude,
         "w_antibond_icobi_normalized": w_antibond_normalized,
     }
+
+
+# ---------------------------------------------------------------------------
+# Step 3: a near-E_F reaction ICOHP -- the SIGNED (bonding AND antibonding,
+# not antibonding-only) ICOHP integrated over the same one-sided window as
+# the antibonding-population metric, but summed over EVERY bond label
+# (extensive, like the full ICOHPLIST.lobster sum reaction_icohp.py already
+# uses) rather than just the "average" trace -- so it can be combined with
+# reaction stoichiometry the same way reaction_icohp.reaction_delta_icohp()
+# combines full ICOHP sums, not the atomic-fraction-weighted-average
+# convention used for delta(antibonding) (see
+# analysis/compute_delta_antibonding_case1.py's docstring on why that
+# quantity needed a different convention: it is intensive by construction,
+# this one is not).
+#
+# Exact, not re-integrated: COHPCAR's per-label "ICOHP" array is already
+# LOBSTER's own cumulative (running) integral of COHP(E) from the bottom
+# of the calculation window up to each energy point -- so the windowed
+# contribution (E_ref-delta_e, E_ref] is exactly
+# ICOHP_cumulative(E_ref) - ICOHP_cumulative(E_ref - delta_e), read
+# directly off two grid points, no new trapezoidal integration needed and
+# no risk of a separate quadrature disagreeing with LOBSTER's own numbers.
+# ---------------------------------------------------------------------------
+
+
+def icohp_windowed_per_atom(
+    compound_dir: Path,
+    is_metal: bool,
+    delta_e: float = DEFAULT_DELTA_E,
+    vasprun_path: Optional[Path] = None,
+) -> Dict[str, object]:
+    """Sum, over every bond label in COHPCAR.lobster (all symmetry-
+    inequivalent periodic bonds, same population reaction_icohp.icohp_per_atom
+    sums from ICOHPLIST.lobster), the windowed ICOHP contribution
+    ICOHP_cumulative(E_ref) - ICOHP_cumulative(E_ref - delta_e), then
+    normalizes per atom (CONTCAR site count) -- the near-E_F analog of
+    reaction_icohp.icohp_per_atom(), same units (eV/atom), same sign
+    convention (negative = net bonding in the window)."""
+    from pymatgen.core import Structure
+
+    cohpcar = load_cohpcar(compound_dir)
+    e_ref = frontier_reference_energy(compound_dir, is_metal, vasprun_path)
+
+    energies = np.array(cohpcar.energies)
+    idx_hi = int(np.argmin(np.abs(energies - e_ref)))
+    idx_lo = int(np.argmin(np.abs(energies - (e_ref - delta_e))))
+
+    labels = [lbl for lbl in cohpcar.cohp_data if lbl != "average"]
+    windowed_total = 0.0
+    for label in labels:
+        spins = list(cohpcar.cohp_data[label]["ICOHP"].keys())
+        cumulative = sum(cohpcar.cohp_data[label]["ICOHP"][s] for s in spins)
+        windowed_total += float(cumulative[idx_hi] - cumulative[idx_lo])
+
+    structure = Structure.from_file(compound_dir / "CONTCAR")
+    n_sites = len(structure)
+
+    return {
+        "compound_dir": str(compound_dir),
+        "is_metal": is_metal,
+        "e_ref": e_ref,
+        "delta_e": delta_e,
+        "window": [e_ref - delta_e, e_ref],
+        "n_bonds": len(labels),
+        "n_sites": n_sites,
+        "icohp_windowed_total": windowed_total,
+        "icohp_windowed_per_atom": windowed_total / n_sites,
+        "composition": structure.composition,
+    }

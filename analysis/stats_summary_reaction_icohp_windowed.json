@@ -1,0 +1,125 @@
+{
+  "n_total": 320,
+  "vs_formation_energy_stratified": [
+    {
+      "group": "all",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 316,
+      "rho": 0.3712,
+      "p_value": 0.0,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 29,
+      "rho": 0.3635,
+      "p_value": 0.0526,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 51,
+      "rho": 0.5243,
+      "p_value": 0.0001,
+      "note": null
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 86,
+      "rho": 0.1721,
+      "p_value": 0.1131,
+      "note": null
+    },
+    {
+      "group": "is_metal=False",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 145,
+      "rho": 0.466,
+      "p_value": 0.0,
+      "note": null
+    },
+    {
+      "group": "is_metal=True",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 171,
+      "rho": 0.1848,
+      "p_value": 0.0155,
+      "note": null
+    }
+  ],
+  "vs_hull_stratified": [
+    {
+      "group": "all",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 320,
+      "rho": 0.1003,
+      "p_value": 0.0733,
+      "note": null
+    },
+    {
+      "group": "bond_type=covalent",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 29,
+      "rho": 0.0185,
+      "p_value": 0.9241,
+      "note": null
+    },
+    {
+      "group": "bond_type=ionic",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 53,
+      "rho": 0.1088,
+      "p_value": 0.4382,
+      "note": null
+    },
+    {
+      "group": "bond_type=metallic",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 88,
+      "rho": 0.0495,
+      "p_value": 0.6473,
+      "note": null
+    },
+    {
+      "group": "is_metal=False",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 147,
+      "rho": 0.0145,
+      "p_value": 0.8618,
+      "note": null
+    },
+    {
+      "group": "is_metal=True",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 173,
+      "rho": 0.0723,
+      "p_value": 0.3447,
+      "note": null
+    }
+  ],
+  "vs_full_reaction_icohp": {
+    "n": 320,
+    "rho": 0.2314,
+    "p_value": 0.0
+  },
+  "vs_delta_antibonding": {
+    "n": 320,
+    "rho": -0.5985,
+    "p_value": 0.0
+  }
+}
