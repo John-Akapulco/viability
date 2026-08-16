@@ -514,12 +514,15 @@ sudden bond rupture --- \texttt{classify.py} structurally attaches a
 warning to \emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict for exactly
 this reason, rather than hardcoding Mn$_2$O$_7$ as a special case.
 
-The full list of \texttt{extension4}'s 89 target compounds, its 16
-elemental references, and the 89 case-1 decomposition reactions computed
-from them (with their own $\Delta$ICOHP/atom and endobondic/exobondic
-label, distinct from the 7 literature cases above) is given in
-Appendix~\ref{sec:appendix-ext4-compounds} and
-Appendix~\ref{sec:appendix-ext4-reactions}.
+The full list of every compound and element computed across the entire
+\texttt{extension} campaign --- not just \texttt{extension4}'s 89, but
+all four batches combined (163 compounds total: elemental references,
+carbon allotropes, TiO2 high-pressure polymorphs, and every ionic/
+covalent compound added along the way) --- together with the case-1
+decomposition reactions computed from them (their own $\Delta$ICOHP/atom
+and endobondic/exobondic label, distinct from the 7 literature cases
+above), is given in Appendix~\ref{sec:appendix-ext-elements} through
+Appendix~\ref{sec:appendix-ext-exobondic}.
 
 \subsection{Missions \#3--\#5, reprocessed at 349 compounds}
 
@@ -669,39 +672,64 @@ local-basis projection, not a fixed guess.
 \input{appendix_dft_kpoints_en.tex}
 }
 
-\section{extension4: Compounds and Elements}
-\label{sec:appendix-ext4-compounds}
+\section{Extension Campaign: Elements and Allotropes}
+\label{sec:appendix-ext-elements}
 
-Every compound computed in the \texttt{extension4} campaign
-(\S\ref{sec:followups2}): 89 target compounds (alkali/alkaline-earth
-binaries against N/O/F/P/S/Cl, half experimentally known, half
-deliberately far above the convex hull) and the 16 elemental reference
-structures used to balance their case-1 decomposition reactions
-(Appendix~\ref{sec:appendix-ext4-reactions}). Auto-generated from
-\texttt{mp\_dataset/extension4\_candidates.json} and each compound's
-\texttt{mp\_metadata.json} by \texttt{report/gen\_appendix\_extension4.py}.
+Every single-element structure computed across all four \texttt{extension}
+batches (\S\ref{sec:followups2}; \texttt{download\_extension.py} through
+\texttt{download\_extension4.py}): the 62-element decomposition reference
+set (\texttt{ELEMENT\_REFERENCE}) plus the additional carbon allotropes
+(diamond, lonsdaleite, M-carbon, W-carbon) computed alongside the
+graphite reference specifically to test descriptors against structures
+whose true stable regime is elsewhere. An experimental compound's formula
+is marked with a superscript star; unmarked formulas are theoretical.
+Auto-generated from every \texttt{mp\_metadata.json} with
+\texttt{family=="extension"} by \texttt{report/gen\_appendix\_extension.py}.
 
 {\small
-\input{appendix_extension4_compounds_en.tex}
+\input{appendix_extension_elements_en.tex}
 }
 
-\section{extension4: Case-1 Decomposition Reactions}
-\label{sec:appendix-ext4-reactions}
+\section{Extension Campaign: Compounds and Polymorphs}
+\label{sec:appendix-ext-compounds}
 
-All 89 decomposition-into-elements reactions
-($A_aB_b \to a\,A + b\,B$, standard-state elemental references), balanced
-by \texttt{reaction\_icohp.py}, with $\Delta$ICOHP per atom and the
-endobondic/exobondic label computed by \texttt{reaction\_analysis}
-(products $-$ reactants convention --- note this is the sign
-\emph{opposite} \texttt{reaction\_icohp.py}'s own
-\texttt{delta\_icohp\_per\_atom} column reported elsewhere in this
-project; see \texttt{delta.py}'s docstring). Auto-generated from
+Every multi-element target compound across all four \texttt{extension}
+batches (100 total, 89 from \texttt{extension4}) --- including the TiO2
+high-pressure polymorphs (\texttt{extension2}) alongside every
+\texttt{extension4} alkali/alkaline-earth binary --- with $\Delta$ICOHP
+per atom and its endobondic/exobondic label where a case-1 decomposition
+reaction could be computed. Auto-generated from
 \texttt{analysis/reaction\_icohp\_case1.csv} and
 \texttt{analysis/reaction\_analysis\_case1\_full.csv} by
-\texttt{report/gen\_appendix\_extension4.py}.
+\texttt{report/gen\_appendix\_extension.py}.
 
 {\small
-\input{appendix_extension4_reactions_en.tex}
+\input{appendix_extension_compounds_en.tex}
+}
+
+\section{Extension Campaign: Endobondic Reactions}
+\label{sec:appendix-ext-endobondic}
+
+The subset of case-1 decomposition reactions
+($A_aB_b \to a\,A + b\,B$, standard-state elemental references, balanced
+by \texttt{reaction\_icohp.py}) labeled \textbf{endobondic}
+($\Delta$ICOHP $\geq 0$, products $-$ reactants convention --- note this
+is the sign \emph{opposite} \texttt{reaction\_icohp.py}'s own
+\texttt{delta\_icohp\_per\_atom} column reported elsewhere in this
+project; see \texttt{delta.py}'s docstring).
+
+{\small
+\input{appendix_extension_endobondic_en.tex}
+}
+
+\section{Extension Campaign: Exobondic Reactions}
+\label{sec:appendix-ext-exobondic}
+
+The complementary \textbf{exobondic} subset ($\Delta$ICOHP $< 0$), same
+convention and provenance as Appendix~\ref{sec:appendix-ext-endobondic}.
+
+{\small
+\input{appendix_extension_exobondic_en.tex}
 }
 
 \end{document}
