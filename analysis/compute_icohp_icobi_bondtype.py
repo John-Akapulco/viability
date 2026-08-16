@@ -50,10 +50,26 @@ from reaction_analysis.parse_lobster import parse_compound_entry  # noqa: E402
 IN_CSV = REPO_ROOT / "analysis" / "percolation_vs_antibonding.csv"
 STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 OUT_CSV = REPO_ROOT / "analysis" / "icohp_icobi_bondtype.csv"
-EXTRA_BATCH = "maxhull_binaries_stress_test"
+ICOHP_ANTIBOND_FULL_CSV = REPO_ROOT / "analysis" / "icohp_antibonding_full.csv"
+EXTRA_BATCHES = {"maxhull_binaries_stress_test"}
+# marginal_formation_energy_campaign deliberately NOT included yet: the
+# user asked for those 75 to be folded in as one deliberate batch once
+# the whole overnight campaign finishes, not piecemeal as individual
+# jobs happen to finish early overnight. Add it back to this set (and
+# rerun) only once the full campaign is done.
 
 
 def _extra_batch_rows() -> pd.DataFrame:
+    """Populates every column IN_CSV itself carries (formula, mp_id,
+    spacegroup_symbol, theoretical, energy_above_hull_eV_at, icohp_mean,
+    icobi_mean -- not just icobi_mean/is_metal), so downstream consumers
+    (report/gen_appendix_master_list.py in particular) don't silently
+    get NaN/"--" for these batches' formula/mp-id/space group/ICOHP --
+    exactly what happened before this was fixed (see project memory):
+    an earlier version of this function only filled 4 of the columns,
+    which pandas then padded with NaN for the rest on concat(), and
+    those NaNs rendered as literal "nan" text in the generated LaTeX
+    tables for every maxhull-batch row."""
     rows = []
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
@@ -62,7 +78,7 @@ def _extra_batch_rows() -> pd.DataFrame:
             if not meta_path.exists():
                 continue
             meta = json.loads(meta_path.read_text())
-            if meta.get("batch") != EXTRA_BATCH:
+            if meta.get("batch") not in EXTRA_BATCHES:
                 continue
             if not (compound_dir / "ICOHPLIST.lobster").exists():
                 continue
@@ -72,17 +88,31 @@ def _extra_batch_rows() -> pd.DataFrame:
                 continue
             rows.append({
                 "compound_id": compound_dir.name,
+                "mp_id": meta.get("mp_id"),
+                "formula": meta.get("formula"),
                 "bond_type": meta.get("bond_type"),
+                "family": meta.get("family"),
+                "theoretical": meta.get("theoretical"),
+                "energy_above_hull_eV_at": meta.get("energy_above_hull_eV_per_atom"),
+                "spacegroup_symbol": meta.get("spacegroup"),
                 "is_metal": meta.get("is_metal"),
+                "formation_energy_per_atom": meta.get("formation_energy_per_atom"),
+                "icohp_mean": entry.icohp.mean_per_bond_eV,
                 "icobi_mean": entry.icobi.mean_per_bond_eV if entry.icobi is not None else None,
             })
-    return pd.DataFrame(rows)
+    df = pd.DataFrame(rows)
+
+    if ICOHP_ANTIBOND_FULL_CSV.exists():
+        antibond = pd.read_csv(ICOHP_ANTIBOND_FULL_CSV)[["compound_id", "antibond_w_normalized"]]
+        df = df.merge(antibond, on="compound_id", how="left")
+
+    return df
 
 
 def main() -> None:
     df = pd.read_csv(IN_CSV)
     extra = _extra_batch_rows()
-    print(f"Adding {len(extra)} compounds from {EXTRA_BATCH!r} (parsed directly, not yet in {IN_CSV.name})")
+    print(f"Adding {len(extra)} compounds from {EXTRA_BATCHES!r} (parsed directly, not yet in {IN_CSV.name})")
     df = pd.concat([df, extra], ignore_index=True)
     df = df.dropna(subset=["is_metal"])
 
