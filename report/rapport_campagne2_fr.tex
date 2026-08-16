@@ -50,6 +50,13 @@ et analyse statistique}
 voir \S\ref{sec:suites}. Le corps du rapport ci-dessous (jusqu'à la
 conclusion et les annexes) documente la campagne 2 originale (186
 composés, poids de percolation seul) sans modification.
+
+\smallskip
+\small\itshape Mise à jour du 16 août 2026 : jeu de données étendu à 349
+composés (lot \texttt{extension4} de 89 composés, binaires
+alcalins/alcalino-terreux), missions \#3 à \#5 recalculées à cette
+nouvelle échelle, et effondrement de la corrélation de la coupe minimale
+diagnostiqué à cette échelle --- voir \S\ref{sec:suites2}.
 \end{center}
 
 \tableofcontents
@@ -364,7 +371,11 @@ ci-dessus sans le modifier ; la mission \#5 s'appuie en partie sur une
 \textbf{campagne complémentaire de 74 composés} (\texttt{extension\_*} :
 références élémentaires, composés ioniques et polymorphes hors du jeu
 principal), non retraitée dans les annexes de ce rapport --- voir
-\texttt{README.md} du dépôt pour son détail.
+\texttt{README.md} du dépôt pour son détail. Les chiffres de cette
+sous-section datent du 15 août 2026, à l'échelle 186/192 composés ;
+\S\ref{sec:suites2} recalcule les trois missions à l'échelle de 349
+composés atteinte le lendemain, à lire en complément de cette
+sous-section, pas à sa place.
 
 \textbf{Un motif se répète dans les trois missions} : chaque nouveau
 descripteur atteint une corrélation \emph{globale} statistiquement
@@ -407,10 +418,6 @@ le regroupement métal/gap, mais le sous-groupe \texttt{bond\_type=covalent}
 ($n=23$) survit à la stratification ($p=0.018$--$0.029$) --- seul
 sous-groupe de tout le projet, à ce jour, à résister à un tel test.
 
-\begin{center}
-\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
-\end{center}
-
 \subsection{Mission \#5 : ICOHP de réaction}
 
 Un analogue ICOHP de \texttt{formation\_energy\_per\_atom} : l'ICOHP total
@@ -430,11 +437,7 @@ regroupement explique ici la totalité du signal observé. Contre
 \texttt{energy\_above\_hull}, la corrélation est absente ($\rho=0.09$,
 $p=0.20$).
 
-\begin{center}
-\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
-\end{center}
-
-\subsection{Synthèse comparative}
+\subsection{Synthèse comparative (échelle 186/192 composés)}
 
 Les quatre descripteurs testés contre \texttt{formation\_energy\_per\_atom},
 sur le même sous-échantillon commun ($n=177$, intersection des 186
@@ -458,10 +461,142 @@ Le classement par force brute de corrélation ($\rho$) n'est pas le
 classement par fiabilité : la mission \#5 est numériquement en tête mais
 c'est aussi la seule dont \emph{aucun} sous-groupe ne survit à la
 stratification (\S\ref{sec:suites} ci-dessus), alors que la mission \#4
-garde un sous-groupe covalent significatif. \textbf{Toujours pas de SISSO}
-: quatre descripteurs montrent maintenant un signal global, mais aucun n'a
-encore la situation propre, bien alimentée par strate, qui justifierait une
-recherche symbolique combinatoire.
+garde un sous-groupe covalent significatif.
+
+\section{Mise à jour du 16 août : la campagne extension4, les trois missions recalculées, et l'effondrement de la coupe minimale}
+\label{sec:suites2}
+
+\subsection{La campagne extension4}
+
+89 nouveaux composés (\texttt{mp\_dataset/download\_extension4.py}) :
+composés binaires d'un métal alcalin (Li/Na/K/Rb/Cs) ou alcalino-terreux
+(Be/Mg/Ca/Sr/Ba) contre N/O/F/P/S/Cl, issus de Materials Project. Jusqu'à
+2 composés retenus par système chimique (cation, anion), sur 44 systèmes :
+un polymorphe expérimentalement connu (en privilégiant les formules déjà
+présentes ailleurs dans le jeu de données, pour construire de vrais
+groupes de polymorphes de même composition --- le jeu n'en comptait que 8
+avant ce lot) et l'entrée théorique de plus haute
+\texttt{energy\_above\_hull} disponible pour cette formule, un test de
+robustesse délibérément loin de l'équilibre. La sélection a été calculée
+une fois et figée dans \texttt{extension4\_candidates.json} pour rester
+reproductible (l'échelle rendait la curation manuelle, utilisée pour
+chaque lot d'extension précédent, impraticable). Les 89 calculs
+VASP+LOBSTER se sont terminés sans surveillance (un script de
+surveillance auto-réparateur relançait tout job sortant de la file SLURM
+sans avoir produit de sortie ; aucun relancement n'a en fait été
+nécessaire). Jeu de données : 260 $\to$ 349 composés.
+
+Séparément, le paquet \texttt{reaction\_analysis/} à schéma explicite
+(destiné à terme à remplacer le module ad hoc \texttt{reaction\_icohp.py})
+a été enrichi d'un \textbf{classificateur endobondic/exobondic} de
+cinétique de liaison, suivant Reitz \& Dronskowski (ic-2026-04181q) : un
+$\Delta$ICOHP de réaction (produits $-$ réactifs) positif
+(\og{}endobondic\fg{}) signifie que rompre les liaisons du réactif coûte
+plus que ce que rapportent les liaisons des produits --- une barrière
+cinétique qui peut empêcher une décomposition pourtant favorisée
+thermodynamiquement de se produire, expliquant pourquoi certains composés
+très exothermiques sont néanmoins observés. Validé sur les 7 exemples
+numériques du manuscrit ; pas encore branché sur les données LOBSTER de
+ce projet pour une classification réelle, étape explicitement suivante,
+non entreprise cette session.
+
+\subsection{Missions \#3 à \#5, recalculées à 349 composés}
+
+Chaque script de descripteur par composé a été relancé sans modification
+sur le jeu de données agrandi --- les éléments constitutifs
+d'\texttt{extension4} étaient tous déjà couverts par le jeu de références
+élémentaires existant, aucun nouveau calcul élémentaire n'a été
+nécessaire.
+
+\textbf{Mission \#4 (antiliaison)} : $\rho=-0.282$,
+$p=9.2\times10^{-8}$ ($n=346$) --- plus faible que le $\rho=-0.328$
+d'origine, mais le sous-groupe \texttt{bond\_type=covalent} s'est
+\emph{renforcé} ($n=33$, $\rho=-0.551$, $p=0.0009$, contre $\rho=-0.490$
+à $n=23$ à l'origine) et reste le résultat stratifié le plus robuste du
+projet. \texttt{is\_metal=False} survit désormais aussi ($n=157$,
+$p=0.001$). L'ancien résultat \texttt{bond\_type=ionic} ($n=9$,
+$\rho=-0.683$) ne se reproduit pas une fois l'échantillon monté à $n=53$
+($\rho=-0.184$, non significatif) --- démonstration nette du danger des
+sous-groupes $n<15$.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
+
+\textbf{Mission \#5 (ICOHP de réaction)} : $\rho=0.502$,
+$p=6.3\times10^{-19}$ ($n=275$) --- en hausse depuis $\rho=0.370$, et
+désormais nettement la corrélation la plus forte du projet, avec une
+marge plus large qu'avant. La stratification \texttt{bond\_type} explique
+toujours entièrement cette couche du signal poolé (Kruskal--Wallis
+$p=1.1\times10^{-15}$, aucune strate ne survit) --- \textbf{mais la
+stratification \texttt{is\_metal} survit désormais des deux côtés}
+(\texttt{is\_metal=False} : $\rho=0.319$, $p=0.0001$ ;
+\texttt{is\_metal=True} : $\rho=0.256$, $p=0.0025$), alors qu'à $n=186$
+aucune des deux ne survivait. Ceci révise le verdict précédent selon
+lequel \og{}le regroupement entre groupes explique la totalité du signal
+observable\fg{} --- il explique entièrement le regroupement au niveau
+\texttt{bond\_type}, mais pas une relation réelle, nouvellement
+détectable, au sein d'un \texttt{is\_metal} fixé. Le cas 2 (comparaison de
+polymorphes), étendu de 8 à \textbf{49 groupes} spécifiquement parce
+qu'\texttt{extension4} a été conçu pour combler cette lacune
+d'échantillonnage : 53,1\,\% d'accord entre le membre le plus liant et le
+plus stable, un test de Poisson-binomiale exact contre la ligne de base
+au hasard de 45,9\,\% donne $P=0,19$ --- toujours aucun signal, mais
+désormais un vrai test plutôt qu'un passage exploratoire à 8 points.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
+\end{center}
+
+\subsection{Pourquoi la corrélation de la coupe minimale s'est-elle effondrée ?}
+
+Le résultat principal de la mission \#3, $\rho=0.285$ à $n=186$, s'est
+effondré à $\rho=0.089$, $p=0.098$ (non significatif) à $n=349$.
+\textbf{Ce n'est pas une réfutation du résultat original} --- isolés, les
+186 composés d'origine donnent toujours $\rho=0,2845$,
+$p=8,3\times10^{-5}$, essentiellement identique au chiffre de la mission
+\#3. L'effondrement est un artefact de dilution dû au regroupement de
+populations ajoutées pour des raisons sans rapport :
+
+\begin{itemize}
+\item 65 des 74 composés des lots d'extension 1--3 sont des structures de
+  référence à un seul élément (ajoutées pour les références élémentaires
+  de la mission \#5), situées à \texttt{formation\_energy\_per\_atom}
+  $\approx 0$ par construction, avec des valeurs de coupe minimale très
+  dispersées --- dilue mécaniquement une corrélation de rang, qu'il y ait
+  ou non une vraie relation. Les exclure restaure $\rho=0,2157$
+  ($n=193$).
+\item \texttt{extension4} n'est pas une population mais deux, de signes
+  \emph{opposés} : la moitié expérimentale est plate ($\rho=0,06$, non
+  significatif, $n=50$) ; la moitié théorique délibérément très
+  au-dessus du hull montre une corrélation \emph{significative} de signe
+  \emph{opposé} ($\rho=-0,40$, $p=0,011$, $n=39$) --- sans qu'on établisse
+  ici s'il s'agit d'un effet physique réel des structures loin du hull ou
+  d'un artefact de sélection (le choix \og{}EAH le plus haut par
+  formule\fg{} peut être confondu avec la taille de maille/symétrie).
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{mincut_vs_formation_energy_by_population.png}
+\end{center}
+
+\textbf{Recommandation} : tout futur chiffre de corrélation coupe
+minimale/énergie de formation (ou, par le même raisonnement, celui de
+tout autre descripteur) devrait être conditionné par
+\texttt{family}/provenance de sélection, de la même façon que ce projet
+conditionne déjà par \texttt{bond\_type}/\texttt{is\_metal} --- regrouper
+des composés sélectionnés pour des raisons sans rapport est exactement le
+type de facteur de confusion entre groupes que la méthodologie de ce
+projet est censée détecter, et elle n'avait pas été appliquée à son
+propre dénominateur croissant avant maintenant.
+
+\textbf{Toujours pas de SISSO.} L'ICOHP de réaction est désormais le
+corrélat brut le plus fort de \texttt{formation\_energy\_per\_atom} du
+projet, et le premier descripteur dont le signal n'est pas entièrement
+expliqué par un regroupement entre groupes à tous les niveaux testés ---
+le meilleur argument à ce jour pour une recherche de caractéristiques
+stratifiée (conditionnée par \texttt{is\_metal}) plutôt que poolée,
+toujours pas tentée.
 
 \noindent\textit{Rapports détaillés :} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
 \texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.

@@ -50,6 +50,13 @@ and Statistical Analysis}
 \S\ref{sec:followups}. The body of this report below (through the
 conclusion and appendices) documents the original campaign 2 (186
 compounds, percolation weight only) unmodified.
+
+\smallskip
+\small\itshape Update, August 16, 2026: dataset extended to 349
+compounds (89-compound \texttt{extension4} batch, alkali/alkaline-earth
+binaries), missions \#3--\#5 reprocessed at the new scale, and the
+periodic min-cut correlation's collapse at that scale diagnosed --- see
+\S\ref{sec:followups2}.
 \end{center}
 
 \tableofcontents
@@ -354,7 +361,10 @@ correlatable) rather than the hull. Missions \#3 and \#4 reuse the
 \textbf{74-compound extension campaign} (\texttt{extension\_*}: elemental
 references, ionic compounds and polymorphs outside the main set), not
 reprocessed into this report's appendices --- see the repository's
-\texttt{README.md} for its full detail.
+\texttt{README.md} for its full detail. Numbers in this subsection are as
+of August 15, 2026, at the 186/192-compound scale; \S\ref{sec:followups2}
+reprocesses all three at the 349-compound scale reached the following day
+and should be read alongside this subsection, not instead of it.
 
 \textbf{A pattern repeats across all three missions}: each new descriptor
 reaches a statistically significant \emph{global} correlation, stronger
@@ -397,10 +407,6 @@ substantially driven by metal/gapped clustering, but the
 ($p=0.018$--$0.029$) --- the only subgroup in the project, to date, to
 hold up under such a test.
 
-\begin{center}
-\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
-\end{center}
-
 \subsection{Mission \#5: reaction ICOHP}
 
 An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a compound's
@@ -418,11 +424,7 @@ strata) --- unlike mission \#4, the clustering effect here explains the
 entire observed signal. Against \texttt{energy\_above\_hull} the
 correlation is absent ($\rho=0.09$, $p=0.20$).
 
-\begin{center}
-\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
-\end{center}
-
-\subsection{Comparative summary}
+\subsection{Comparative summary (186/192-compound scale)}
 
 All four descriptors tested against \texttt{formation\_energy\_per\_atom},
 on the same common subsample ($n=177$, the intersection of campaign 2's
@@ -444,10 +446,131 @@ Percolation weight, normalized (mission \#1) & 177 & 0.104 & 0.170 \\
 Ranking by raw correlation strength ($\rho$) is not the same as ranking by
 reliability: mission \#5 leads numerically but is also the only one where
 \emph{no} subgroup survives stratification (above), whereas mission \#4
-keeps a significant covalent subgroup. \textbf{Still no SISSO}: four
-descriptors now show a global signal, but none yet sits in the clean,
-well-powered-per-stratum situation that would justify a combinatorial
-symbolic search.
+keeps a significant covalent subgroup.
+
+\section{August 16 update: the extension4 campaign, all three missions reprocessed, and the min-cut collapse}
+\label{sec:followups2}
+
+\subsection{The extension4 campaign}
+
+89 new compounds (\texttt{mp\_dataset/download\_extension4.py}): binary
+compounds of an alkali (Li/Na/K/Rb/Cs) or alkaline-earth (Be/Mg/Ca/Sr/Ba)
+metal against N/O/F/P/S/Cl, sourced from Materials Project. Up to 2
+compounds picked per (cation, anion) chemical system across 44 systems: an
+experimentally-known polymorph (preferring formulas already elsewhere in
+the dataset, to build genuine same-composition polymorph groups --- the
+dataset had only 8 such groups before this batch) and the
+highest-\texttt{energy\_above\_hull} theoretical entry available for that
+formula, a deliberate far-from-equilibrium stress test. Selection was
+computed once and frozen to \texttt{extension4\_candidates.json} for
+reproducibility (scale made hand-curation, the convention for every
+earlier extension batch, impractical). All 89 VASP+LOBSTER jobs completed
+unattended (a self-healing watcher restarted any job that left the SLURM
+queue without producing output; zero restarts were actually needed).
+Dataset: 260 $\to$ 349 compounds.
+
+Separately, the schema-driven \texttt{reaction\_analysis/} package
+(superseding the ad hoc \texttt{reaction\_icohp.py} module long-term) was
+extended with an \textbf{endobondic/exobondic bonding-kinetics
+classifier} following Reitz \& Dronskowski (ic-2026-04181q): a reaction's
+$\Delta$ICOHP (products $-$ reactants) being positive (``endobondic'')
+means breaking the reactant's bonds costs more than the products' bonds
+recover --- a kinetic barrier that can keep an exothermically-favored
+decomposition from actually happening, explaining why some very
+exothermic compounds are nonetheless observed to exist. Validated against
+all 7 worked numerical examples in the manuscript; not yet connected to
+this project's own LOBSTER data for classification, an explicit
+next step, not attempted this session.
+
+\subsection{Missions \#3--\#5, reprocessed at 349 compounds}
+
+Every per-compound descriptor script was rerun unmodified over the grown
+dataset --- \texttt{extension4}'s constituent elements were all already
+covered by the existing elemental-reference set, so no new element
+calculations were needed.
+
+\textbf{Mission \#4 (antibonding)}: $\rho=-0.282$, $p=9.2\times10^{-8}$
+($n=346$) --- weaker than the original $\rho=-0.328$, but the
+\texttt{bond\_type=covalent} subgroup got \emph{stronger}
+($n=33$, $\rho=-0.551$, $p=0.0009$, vs.\ the original $\rho=-0.490$ at
+$n=23$) and remains the single most robust stratified result in the
+project. \texttt{is\_metal=False} newly survives ($n=157$, $p=0.001$).
+The old \texttt{bond\_type=ionic} result ($n=9$, $\rho=-0.683$) did not
+replicate once the sample grew to $n=53$ ($\rho=-0.184$, not
+significant) --- a clean demonstration of why $n<15$ subgroups are
+flagged rather than trusted.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
+
+\textbf{Mission \#5 (reaction ICOHP)}: $\rho=0.502$, $p=6.3\times10^{-19}$
+($n=275$) --- up from $\rho=0.370$, and now the clear strongest
+correlation in the project by a wider margin than before.
+\texttt{bond\_type} stratification still fully explains that layer of the
+pooled signal (Kruskal--Wallis $p=1.1\times10^{-15}$, no stratum
+survives) --- \textbf{but \texttt{is\_metal} stratification now survives
+on both sides} (\texttt{is\_metal=False}: $\rho=0.319$, $p=0.0001$;
+\texttt{is\_metal=True}: $\rho=0.256$, $p=0.0025$), where at $n=186$
+neither did. This revises the previous verdict that ``the between-group
+confound explains the entirety of the observable signal'' --- it explains
+the \texttt{bond\_type}-level pooling completely, but not a real,
+newly-detectable within-\texttt{is\_metal}-group relationship. Case 2
+(polymorph comparison), extended from 8 to \textbf{49 groups} specifically
+because \texttt{extension4} was designed to fix that sampling gap:
+53.1\% agreement between most-bonding and most-stable member, an exact
+Poisson-binomial test against the 45.9\% chance baseline gives $P=0.19$
+--- still no signal, but now a real test instead of an 8-point
+exploratory pass.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
+\end{center}
+
+\subsection{Why did the min-cut correlation collapse?}
+
+Mission \#3's headline, $\rho=0.285$ at $n=186$, collapsed to
+$\rho=0.089$, $p=0.098$ (not significant) at $n=349$. \textbf{This is not
+a refutation of the original result} --- isolated, the original 186
+compounds still give $\rho=0.2845$, $p=8.3\times10^{-5}$, essentially
+identical to the mission-\#3 number. The collapse is a dilution artifact
+from pooling populations added for unrelated reasons:
+
+\begin{itemize}
+\item 65 of the 74 extension-batch-1--3 compounds are single-element
+  reference structures (added for mission \#5's elemental references),
+  sitting at \texttt{formation\_energy\_per\_atom}$\approx 0$ by
+  construction with widely-scattered min-cut values --- mechanically
+  dilutes a rank correlation regardless of any true relationship.
+  Excluding them recovers $\rho=0.2157$ ($n=193$).
+\item \texttt{extension4} is not one population but two, with
+  \emph{opposite-sign} correlations: the experimental half is flat
+  ($\rho=0.06$, not significant, $n=50$); the deliberately
+  far-above-hull theoretical half shows a \emph{significant} correlation
+  of the \emph{opposite} sign ($\rho=-0.40$, $p=0.011$, $n=39$) --- not
+  established here whether this reflects real physics of far-from-hull
+  structures or a selection artifact of picking the single highest-EAH
+  entry per formula.
+\end{itemize}
+
+\begin{center}
+\includegraphics[width=0.85\textwidth]{mincut_vs_formation_energy_by_population.png}
+\end{center}
+
+\textbf{Recommendation}: any future min-cut-vs-formation-energy number
+(or, by the same logic, any other descriptor's) should be conditioned on
+\texttt{family}/selection-provenance, the same way this project already
+conditions on \texttt{bond\_type}/\texttt{is\_metal} --- pooling
+compounds selected for unrelated reasons is exactly the between-group
+confound this project's own methodology exists to catch, and it had not
+been applied to the dataset's own growing denominator until now.
+
+\textbf{Still no SISSO.} Reaction ICOHP is now the strongest raw
+correlate of \texttt{formation\_energy\_per\_atom} in the project, and
+the first descriptor whose signal is not fully explained away by
+between-group clustering at every level tested --- the strongest
+argument yet for a stratified (\texttt{is\_metal}-conditional) feature
+search over a pooled one, still not attempted.
 
 \noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
 \texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
