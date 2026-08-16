@@ -57,6 +57,15 @@ composés (lot \texttt{extension4} de 89 composés, binaires
 alcalins/alcalino-terreux), missions \#3 à \#5 recalculées à cette
 nouvelle échelle, et effondrement de la corrélation de la coupe minimale
 diagnostiqué à cette échelle --- voir \S\ref{sec:suites2}.
+
+\smallskip
+\small\itshape Mise à jour du 16 août 2026 (plus tard le même jour) : la
+question centrale du projet reformulée autour de la discrimination de
+viabilité fondée sur $\Delta$(ICOHP), avec un test de concordance formel
+contre le manuscrit et une extension à tout composé calculé à ce jour,
+poolé sur l'ensemble des campagnes --- voir \S\ref{sec:reframing}.
+\texttt{percolation\_path.py} est désormais un matériau historique/de
+fond, plus la question organisatrice.
 \end{center}
 
 \tableofcontents
@@ -645,6 +654,165 @@ toujours pas tentée.
 
 \noindent\textit{Rapports détaillés :} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
 \texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
+
+\section{Reformulation du projet (16 août) : la question centrale est la viabilité fondée sur $\Delta$(ICOHP)}
+\label{sec:reframing}
+
+\textbf{La question de recherche centrale du projet est reformulée à
+partir de cette mise à jour : le $\Delta$(ICOHP) --- descripteur ICOHP
+de réaction pour la décomposition d'un composé en éléments, et en
+particulier la classification endobondic/exobondic fondée sur son signe
+(Reitz \& Dronskowski, ic-2026-04181q) --- distingue-t-il les composés
+thermodynamiquement stables, métastables et instables ?} Ceci
+supplante le cadrage centré sur le poids de percolation que documente le
+corps de ce rapport (\S\ref{sec:reframing} et précédents) ---
+\texttt{percolation\_path.py} (mission \#1) et
+\texttt{network\_dimensionality.py}/\texttt{periodic\_mincut.py}
+(mission \#3) restent précieux comme fondation historique (construction
+du graphe périodique, conventions statistiques que chaque mission
+ultérieure réutilise) mais ne sont plus la question organisatrice du
+projet, cohérent avec le fait que la corrélation phare de la coupe
+minimale ne survit pas à la croissance du jeu de données jusqu'à 349
+composés (\S\ref{sec:suites2}). Détail complet :
+\texttt{analysis/REPORT\_delta\_icohp\_viability.md},
+\texttt{analysis/test\_delta\_icohp\_viability.py}.
+
+\subsection{Concordance avec le manuscrit, formalisée}
+
+Le \S\ref{sec:suites2} montrait déjà que les 7 réactions travaillées de
+Reitz \& Dronskowski se reproduisent à quelques kJ/mol près. La
+corrélation seule (Pearson/Spearman) n'est pas le bon test pour
+\og{}nos chiffres correspondent-ils à ceux du manuscrit\fg{} --- elle est
+satisfaite par toute relation monotone, même avec un décalage ou un
+facteur d'échelle systématique important. Le \textbf{coefficient de
+corrélation de concordance de Lin} (CCC) teste spécifiquement l'accord
+avec la droite d'identité (calculé = manuscrit), l'affirmation
+réellement testée ici :
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Statistique & Valeur \\
+\midrule
+$n$ & 7 \\
+CCC de Lin & \textbf{0,999998} \\
+$r$ de Pearson & 0,999999 ($p=3,5\times10^{-15}$) \\
+Accord de signe & 7/7 \\
+$|$résidu$|$ moyen & 0,76 kJ/mol \\
+$|$résidu$|$ max & 1,70 kJ/mol \\
+RMSE & 0,98 kJ/mol \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Un CCC aussi proche de 1 signifie que les deux méthodes s'accordent
+essentiellement dans la précision de rapport du manuscrit lui-même
+(valeurs arrondies à 2--3 décimales dans le texte original), pas
+seulement qu'elles évoluent ensemble --- l'implémentation en est
+validée, pas seulement vérifiée cas par cas.
+
+\subsection{Étendu à tout composé calculé à ce jour, poolé sans distinction de campagne}
+
+\textbf{Délibérément non organisé par campagne ou lot d'extension
+historique} --- ces frontières reflètent l'ordre de soumission entre
+sessions, pas la chimie, et les utiliser comme variable de regroupement
+serait exactement le type de facteur de confusion entre groupes que la
+méthodologie de ce projet est censée détecter (la même leçon déjà
+démontrée par le diagnostic de la coupe minimale, \S\ref{sec:suites2}).
+\textbf{281 réactions de cas 1}, tout élément et composé ayant une
+réaction de décomposition en éléments calculée sur l'ensemble du projet,
+poolés en une seule population.
+
+\textbf{Cibles de stabilité continues :}
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Cible & $n$ & $\rho$ & $p$ \\
+\midrule
+\texttt{formation\_energy\_per\_atom} & 275 & $-0,5016$ & $6,3\times10^{-19}$ \\
+\texttt{energy\_above\_hull\_eV\_per\_atom} & 279 & $-0,1096$ & $0,068$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(Signe : convention produits$-$réactifs de \texttt{reaction\_analysis},
+opposée à la colonne propre de \texttt{reaction\_icohp.py} rapportée
+ailleurs dans ce rapport --- même amplitude, signe inversé.) Le résultat
+sur l'énergie de formation est la même relation que le résultat
+principal de la mission \#5 (\S\ref{sec:suites2}), confirmée ici sur la
+population poolée, indépendante de la campagne.
+
+\textbf{Discrimination fondée sur le signe (endobondic/exobondic).}
+Indicateur de viabilité expérimentale (l'attribut \texttt{theoretical}
+d'un composé : \texttt{False} signifie qu'il a été réalisé
+expérimentalement) :
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & endobondic & exobondic \\
+\midrule
+expérimental ($n=177$) & 47 & 130 \\
+théorique seul ($n=98$) & 17 & 81 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Test exact de Fisher : $p=0,10$, rapport de cotes $=1,72$ (endobondic
+est $\sim 1,7\times$ plus fréquent parmi les composés réalisés
+expérimentalement --- le sens attendu, étant donné la signification du
+manuscrit pour endobondic comme signature d'une barrière cinétique ---
+mais non significatif à cette taille d'échantillon).
+
+\textbf{Plus fin (famille, trois voies, $n=175$) :}
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+famille & $n$ & médiane $\Delta$ICOHP/atome (eV) & \% endobondic \\
+\midrule
+exp\_metastable & 59 & $-1,077$ & \textbf{27,1\%} \\
+exp\_stable & 59 & $-1,589$ & 20,3\% \\
+theo\_metastable & 59 & $-1,659$ & \textbf{11,9\%} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Kruskal--Wallis sur les trois groupes : $H=2,81$, $p=0,245$ ---
+\textbf{non significatif}, mais l'ordre est exactement celui
+physiquement attendu : les composés \texttt{exp\_metastable} (connus
+pour exister bien que hors du hull convexe --- la catégorie dont traite
+spécifiquement le cadre du manuscrit) ont la fraction endobondic la plus
+élevée ; les composés \texttt{theo\_metastable} (jamais synthétisés) ont
+la plus faible.
+
+\subsection{Lecture}
+
+Les 7 cas du manuscrit se reproduisent presque exactement ---
+l'implémentation est correcte. Étendre la même logique fondée sur le
+signe à une population beaucoup plus large, plus hétérogène, et
+généralement beaucoup plus confortablement stable ne produit pas encore
+un discriminant stable/métastable/instable statistiquement significatif,
+même si chaque tendance va dans le bon sens. Ce n'est pas une
+contradiction : les 7 cas du manuscrit ont été choisis spécifiquement
+comme des cas limites de stabilité (Pb(N$_3$)$_2$, S$_4$N$_2$/S$_4$N$_4$,
+ZnSn, Mn$_2$O$_7$) où une explication par barrière cinétique est
+spécifiquement nécessaire ; la plupart des 281 composés de ce projet ne
+le sont pas --- ils sont confortablement stables ou confortablement pas,
+où la force motrice thermodynamique (la corrélation avec l'énergie de
+formation ci-dessus) peut simplement dominer le signal cinétique fondé
+sur le signe. \textbf{La prochaine étape concrète} : étendre
+délibérément à davantage de composés à la limite de la stabilité, pas
+seulement ce que la prochaine mission sans rapport ajoutera au jeu de
+données. La machinerie complète \texttt{ViabilityLabel} de
+\texttt{classify.py} (au-delà du seul \texttt{BondingLabel} fondé sur le
+signe utilisé ici) a besoin exactement d'une telle population --- pour
+le jeu de données actuel, la décomposition en éléments est fortement
+endothermique pour presque tous les composés (normal pour une chimie
+inorganique stable), ce qui classerait trivialement presque tout en
+\texttt{STABLE\_ON\_HULL} et n'ajouterait aucune information au-delà de
+ce que \texttt{energy\_above\_hull} dit déjà directement.
 
 \appendix
 \section{Liste des composés}

@@ -57,6 +57,14 @@ compounds (89-compound \texttt{extension4} batch, alkali/alkaline-earth
 binaries), missions \#3--\#5 reprocessed at the new scale, and the
 periodic min-cut correlation's collapse at that scale diagnosed --- see
 \S\ref{sec:followups2}.
+
+\smallskip
+\small\itshape Update, August 16, 2026 (later the same day): the
+project's central question reformulated around $\Delta$(ICOHP)-based
+viability discrimination, with a formal manuscript concordance test and
+an extension to every compound computed to date, pooled across all
+campaigns --- see \S\ref{sec:reframing}. \texttt{percolation\_path.py}
+is now background/historical material, not the organizing question.
 \end{center}
 
 \tableofcontents
@@ -616,6 +624,155 @@ search over a pooled one, still not attempted.
 
 \noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_dimensionality\_mincut.md},
 \texttt{analysis/REPORT\_antibonding.md}, \texttt{analysis/REPORT\_reaction\_icohp.md}.
+
+\section{Project Reframing (August 16): the Central Question is $\Delta$(ICOHP)-Based Viability}
+\label{sec:reframing}
+
+\textbf{The project's central research question is restated as of this
+update: does $\Delta$(ICOHP) --- the reaction-ICOHP descriptor for a
+compound's decomposition into elements, and specifically the sign-based
+endobondic/exobondic classification it supports (Reitz \& Dronskowski,
+ic-2026-04181q) --- distinguish thermodynamically stable, metastable,
+and unstable compounds?} This supersedes the percolation-weight-centric
+framing that the body of this report (\S\ref{sec:reframing} and earlier)
+documents --- \texttt{percolation\_path.py} (mission \#1) and
+\texttt{network\_dimensionality.py}/\texttt{periodic\_mincut.py}
+(mission \#3) remain valuable as the historical foundation (periodic
+graph construction, the statistical conventions every later mission
+still reuses) but are no longer this project's organizing question,
+consistent with min-cut's own headline correlation not surviving the
+dataset's growth to 349 compounds (\S\ref{sec:followups2}). Full
+detail: \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
+\texttt{analysis/test\_delta\_icohp\_viability.py}.
+
+\subsection{Manuscript concordance, formalized}
+
+\S\ref{sec:followups2} already showed all 7 of Reitz \& Dronskowski's
+worked reactions reproducing to within a few kJ/mol. Correlation alone
+(Pearson/Spearman) is not the right test for ``do our numbers match the
+manuscript's'' --- it is satisfied by any monotonic relationship, even
+one with a large systematic offset or scale factor. \textbf{Lin's
+Concordance Correlation Coefficient} (CCC) specifically tests agreement
+with the identity line (computed = manuscript), the actual claim being
+tested:
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Statistic & Value \\
+\midrule
+$n$ & 7 \\
+Lin's CCC & \textbf{0.999998} \\
+Pearson $r$ & 0.999999 ($p=3.5\times10^{-15}$) \\
+Sign agreement & 7/7 \\
+Mean $|$residual$|$ & 0.76 kJ/mol \\
+Max $|$residual$|$ & 1.70 kJ/mol \\
+RMSE & 0.98 kJ/mol \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A CCC this close to 1 means the two methods agree essentially within the
+manuscript's own reporting precision (values rounded to 2--3 decimals in
+the original text), not merely that they move together --- the
+implementation is validated by it, not just individually spot-checked.
+
+\subsection{Extended to every compound computed to date, pooled without regard to campaign}
+
+\textbf{Deliberately not organized by which historical campaign or
+extension batch a compound came from} --- those boundaries reflect
+submission order across sessions, not chemistry, and grouping by them
+would itself be exactly the kind of between-group confound this
+project's methodology exists to catch (the same lesson
+\S\ref{sec:followups2}'s min-cut diagnosis already demonstrated).
+\textbf{281 case-1 reactions}, every element and compound with a
+computed decomposition-into-elements reaction across the whole project,
+pooled into one population.
+
+\textbf{Continuous stability targets:}
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Target & $n$ & $\rho$ & $p$ \\
+\midrule
+\texttt{formation\_energy\_per\_atom} & 275 & $-0.5016$ & $6.3\times10^{-19}$ \\
+\texttt{energy\_above\_hull\_eV\_per\_atom} & 279 & $-0.1096$ & $0.068$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+(Sign: \texttt{reaction\_analysis}'s products$-$reactants convention,
+opposite \texttt{reaction\_icohp.py}'s own column reported elsewhere in
+this report --- same magnitude, flipped sign.) The formation-energy
+result is the same relationship as \S\ref{sec:followups2}'s mission-\#5
+headline, confirmed here on the pooled, campaign-agnostic population.
+
+\textbf{Sign-based (endobondic/exobondic) discrimination.} Experimental-
+viability proxy (a compound's \texttt{theoretical} flag: \texttt{False}
+means it has been experimentally realized):
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & endobondic & exobondic \\
+\midrule
+experimental ($n=177$) & 47 & 130 \\
+theoretical-only ($n=98$) & 17 & 81 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Fisher's exact test: $p=0.10$, odds ratio $=1.72$ (endobondic is $\sim
+1.7\times$ more common among experimentally-realized compounds --- the
+expected direction, given endobondic's manuscript meaning as a kinetic-
+barrier signature --- but not significant at this sample size).
+
+\textbf{Finer-grained (family, three-way, $n=175$):}
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+family & $n$ & median $\Delta$ICOHP/atom (eV) & \% endobondic \\
+\midrule
+exp\_metastable & 59 & $-1.077$ & \textbf{27.1\%} \\
+exp\_stable & 59 & $-1.589$ & 20.3\% \\
+theo\_metastable & 59 & $-1.659$ & \textbf{11.9\%} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Kruskal--Wallis across the three groups: $H=2.81$, $p=0.245$ ---
+\textbf{not significant}, but the ordering is exactly the physically-
+motivated one: \texttt{exp\_metastable} compounds (known to exist
+despite sitting off the convex hull --- the category the manuscript's
+own framework is specifically about) have the highest endobondic
+fraction; \texttt{theo\_metastable} compounds (never synthesized) have
+the lowest.
+
+\subsection{Reading}
+
+The manuscript's 7 cases reproduce essentially exactly --- the
+implementation is correct. Extending the same sign-based logic to a
+much larger, more heterogeneous, and generally much more comfortably
+stable population does not yet produce a statistically significant
+stable/metastable/unstable discriminator, though every trend points the
+right way. This is not a contradiction: the manuscript's 7 cases were
+chosen specifically as borderline-stability edge cases (Pb(N$_3$)$_2$,
+S$_4$N$_2$/S$_4$N$_4$, ZnSn, Mn$_2$O$_7$) where a kinetic-barrier
+explanation is specifically needed; most of this project's 281 compounds
+are not that --- they are comfortably stable or comfortably not, where
+the thermodynamic driving force (the formation-energy correlation above)
+may simply dominate over the sign-based kinetic signal. \textbf{The
+concrete next step}: extend deliberately to more borderline-stability
+compounds, not just whatever the next unrelated mission happens to add
+to the dataset. \texttt{classify.py}'s full \texttt{ViabilityLabel}
+machinery (beyond the sign-only \texttt{BondingLabel} used here) needs
+exactly such a population --- for the current dataset, decomposition
+into elements is strongly endothermic for nearly every compound (normal
+for stable inorganic chemistry), which would trivially classify almost
+everything \texttt{STABLE\_ON\_HULL} and add no information beyond what
+\texttt{energy\_above\_hull} already says directly.
 
 \appendix
 \section{Compound List}
