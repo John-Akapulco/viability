@@ -1,173 +1,173 @@
 compound_id,mp_id,formula,family,bond_type,is_metal,theoretical,energy_above_hull_eV_per_atom,reaction_string,delta_icohp_total,delta_icohp_per_atom
-exp_metastable_AgO_mp-1079720,mp-1079720,AgO,exp_metastable,,,False,0.04234811749999956,AgO -> Ag + 0.5 O2,37.29535500000017,4.661919375000021
-exp_metastable_Al12W_mp-11227,mp-11227,Al12W,exp_metastable,,,False,0.01520368538461625,0.08333 Al12W -> Al + 0.08333 W,128.9516999999999,9.919361538461532
-exp_metastable_Al3Os2_mp-16521,mp-16521,Al3Os2,exp_metastable,,,False,0.007409683000005884,0.3333 Al3Os2 -> Al + 0.6667 Os,21.395009999999985,4.279001999999997
-exp_metastable_AsPd2_mp-1080831,mp-1080831,AsPd2,exp_metastable,,,False,0.011756747500001552,AsPd2 -> As + 2 Pd,24.642094999999983,2.7380105555555536
-exp_metastable_AsRh2_mp-1102364,mp-1102364,AsRh2,exp_metastable,,,False,0.08062063166666178,AsRh2 -> As + 2 Rh,26.8991300000001,2.2415941666666748
-exp_metastable_AsRh_mp-22079,mp-22079,AsRh,exp_metastable,,,False,0.026917590833335225,AsRh -> As + Rh,8.022410000000065,1.002801250000008
-exp_metastable_BaSn5_mp-571353,mp-571353,BaSn5,exp_metastable,,,False,0.026217794166670583,BaSn5 -> Ba + 5 Sn,23.87222000000002,3.978703333333337
-exp_metastable_Be12Pd_mp-12666,mp-12666,Be12Pd,exp_metastable,,,False,0.07945158115384565,0.08333 Be12Pd -> Be + 0.08333 Pd,27.530620000000113,2.117740000000009
-exp_metastable_Be3N2_mp-6977,mp-6977,Be3N2,exp_metastable,,,False,0.03151386449999993,0.3333 Be3N2 -> Be + 0.3333 N2,-22.270894999999967,-2.227089499999997
-exp_metastable_CaGa2_mp-992,mp-992,CaGa2,exp_metastable,,,False,0.016981658333333982,CaGa2 -> Ca + 2 Ga,3.0332450000000115,1.0110816666666704
-exp_metastable_CaGa4_mp-2461,mp-2461,CaGa4,exp_metastable,,,False,0.0016006820000011857,CaGa4 -> Ca + 4 Ga,5.385349999999988,1.0770699999999978
-exp_metastable_CdI2_mp-567259,mp-567259,CdI2,exp_metastable,,,False,0.0005410511111105798,CdI2 -> Cd + 2 I,0.6790100000000194,0.22633666666667315
-exp_metastable_CdO2_mp-2310,mp-2310,CdO2,exp_metastable,,,False,0.05623419000000052,CdO2 -> Cd + O2,31.535219999999768,2.627934999999981
-exp_metastable_ClF3_mp-556767,mp-556767,ClF3,exp_metastable,,,False,0.0029946146875001745,2 ClF3 -> Cl2 + 3 F2,-11.013860000000221,-0.6883662500000138
-exp_metastable_Cs2Se_mp-1011696,mp-1011696,Cs2Se,exp_metastable,,,False,0.004232759166664213,0.5 Cs2Se -> Cs + 0.5 Se,-8.080250000000014,-0.6733541666666678
-exp_metastable_CsH_mp-632319,mp-632319,CsH,exp_metastable,,,False,0.016097849999999525,CsH -> Cs + 0.5 H2,-6.24663999999999,-3.123319999999995
-exp_metastable_Cu3Ge_mp-19724,mp-19724,Cu3Ge,exp_metastable,,,False,0.01263984624999992,0.3333 Cu3Ge -> Cu + 0.3333 Ge,9.58605999999999,1.1982574999999986
-exp_metastable_FeTe2_mp-1102002,mp-1102002,FeTe2,exp_metastable,,,False,0.04490969833333569,FeTe2 -> Fe + 2 Te,-11.024036666666653,-0.9186697222222211
-exp_metastable_Ge4Rh_mp-1104286,mp-1104286,Ge4Rh,exp_metastable,,,False,0.09073754899999997,0.25 Ge4Rh -> Ge + 0.25 Rh,16.377499999999884,1.0918333333333257
-exp_metastable_GeSe2_mp-10074,mp-10074,GeSe2,exp_metastable,,,False,0.012493755416668861,GeSe2 -> Ge + 2 Se,-4.629279999999987,-0.7715466666666645
-exp_metastable_H2O_mp-2739191,mp-2739191,H2O,exp_metastable,,,False,0.049447999166666534,H2O -> H2 + 0.5 O2,-20.308795000000046,-1.6923995833333372
-exp_metastable_H3N_mp-643432,mp-643432,H3N,exp_metastable,,,False,0.0038271875000006617,0.6667 H3N -> H2 + 0.3333 N2,-25.31635999999999,-1.5822724999999993
-exp_metastable_HI_mp-697025,mp-697025,HI,exp_metastable,,,False,0.004366291041667303,2 HI -> H2 + 2 I,-10.79871,-0.674919375
-exp_metastable_IF7_mp-27988,mp-27988,IF7,exp_metastable,,,False,0.006252095624999399,IF7 -> I + 3.5 F2,-27.424910000000224,-1.714056875000014
-exp_metastable_In3Ir_mp-630976,mp-630976,In3Ir,exp_metastable,,,False,0.004296428125002194,0.3333 In3Ir -> In + 0.3333 Ir,128.49157999999997,8.030723749999998
-exp_metastable_InCl_mp-571636,mp-571636,InCl,exp_metastable,,,False,0.0016458790624991337,InCl -> In + 0.5 Cl2,18.347510000000042,4.586877500000011
-exp_metastable_K2S_mp-559278,mp-559278,K2S,exp_metastable,,,False,0.0872531616666663,0.5 K2S -> K + 0.5 S,1.3742562499999948,0.22904270833333248
-exp_metastable_Li13Sn5_mp-30769,mp-30769,Li13Sn5,exp_metastable,,,False,0.0033475494444448195,0.07692 Li13Sn5 -> Li + 0.3846 Sn,3.823256666666765,0.21240314814815361
-exp_metastable_Li3Hg_mp-1646,mp-1646,Li3Hg,exp_metastable,,,False,0.0012975900000000706,0.3333 Li3Hg -> Li + 0.3333 Hg,-2.3900666666666837,-0.5975166666666709
-exp_metastable_MgCl2_mp-570259,mp-570259,MgCl2,exp_metastable,,,False,0.0006391266666669893,MgCl2 -> Mg + Cl2,-0.4634999999999998,-0.15449999999999994
-exp_metastable_MgH2_mp-23711,mp-23711,MgH2,exp_metastable,,,False,0.0018755891666670799,MgH2 -> Mg + H2,5.292710000000017,0.4410591666666681
-exp_metastable_MgPd3_mp-7753,mp-7753,MgPd3,exp_metastable,,,False,0.01137175124999068,MgPd3 -> Mg + 3 Pd,22.39867999999998,5.599669999999995
-exp_metastable_Mo3Se4_mp-21021,mp-21021,Mo3Se4,exp_metastable,,,False,0.06087143499999925,0.3333 Mo3Se4 -> Mo + 1.333 Se,39.33515000000001,2.8096535714285724
-exp_metastable_NaN3_mp-1066400,mp-1066400,NaN3,exp_metastable,,,False,0.0029249474999994973,NaN3 -> Na + 1.5 N2,-7.574484999999989,-1.8936212499999971
-exp_metastable_Nb2O5_mp-1595,mp-1595,Nb2O5,exp_metastable,,,False,0.007537548265307947,0.5 Nb2O5 -> Nb + 1.25 O2,14.482328750000079,2.068904107142868
-exp_metastable_NiB_mp-14019,mp-14019,NiB,exp_metastable,,,False,0.0018463106250017347,NiB -> Ni + B,3.2368733333333424,0.8092183333333356
-exp_metastable_NiHg4_mp-570835,mp-570835,NiHg4,exp_metastable,,,False,0.01705295800000073,NiHg4 -> Ni + 4 Hg,1.8045933333333366,0.36091866666666733
-exp_metastable_NiS_mp-1547,mp-1547,NiS,exp_metastable,,,False,0.014181840833332515,NiS -> Ni + S,6.885729374999993,1.1476215624999988
-exp_metastable_PS_mp-612,mp-612,PS,exp_metastable,,,False,0.026489451484373205,PS -> P + S,0.4068169047618255,0.025426056547614095
-exp_metastable_PbAu2_mp-19871,mp-19871,PbAu2,exp_metastable,,,False,0.004742635416668861,PbAu2 -> Pb + 2 Au,65.65555000000009,10.942591666666681
-exp_metastable_PbSe_mp-22009,mp-22009,PbSe,exp_metastable,,,False,0.07310882999999535,PbSe -> Pb + Se,11.809650000000008,2.952412500000002
-exp_metastable_Rb2Hg7_mp-31474,mp-31474,Rb2Hg7,exp_metastable,,,False,0.00452349037037425,0.5 Rb2Hg7 -> Rb + 3.5 Hg,10.656888333333384,1.1840987037037094
-exp_metastable_Re3Ge7_mp-29141,mp-29141,Re3Ge7,exp_metastable,,,False,0.012616640750003683,0.3333 Re3Ge7 -> Re + 2.333 Ge,4.913719999999898,0.2456859999999949
-exp_metastable_SiO2_mp-546794,mp-546794,SiO2,exp_metastable,,,False,0.005647450555557043,SiO2 -> Si + O2,-12.85172499999996,-2.1419541666666597
-exp_metastable_SiRh_mp-2287,mp-2287,SiRh,exp_metastable,,,False,0.02456185499999819,SiRh -> Si + Rh,8.30537000000001,1.0381712500000013
-exp_metastable_SiS2_mp-1095294,mp-1095294,SiS2,exp_metastable,,,False,0.003013171666665926,SiS2 -> Si + 2 S,-11.952554999999919,-0.9960462499999932
-exp_metastable_Sn7Ir5_mp-20466,mp-20466,Sn7Ir5,exp_metastable,,,False,0.002421364999996456,0.1429 Sn7Ir5 -> Sn + 0.7143 Ir,83.68484999999987,6.973737499999989
-exp_metastable_Sr2As_mp-15697,mp-15697,Sr2As,exp_metastable,,,False,0.08000544425926037,0.5 Sr2As -> Sr + 0.5 As,4.0013900000000255,0.6668983333333376
-exp_metastable_Sr5Sn3_mp-17720,mp-17720,Sr5Sn3,exp_metastable,,,False,0.003021452500000521,0.2 Sr5Sn3 -> Sr + 0.6 Sn,35.164369999999955,2.197773124999997
-exp_metastable_SrAl2_mp-1638,mp-1638,SrAl2,exp_metastable,,,False,0.013571949999999333,SrAl2 -> Sr + 2 Al,43.93181,7.321968333333333
-exp_metastable_Ta7Co6_mp-1104548,mp-1104548,Ta7Co6,exp_metastable,,,False,0.0014632612820477675,0.1429 Ta7Co6 -> Ta + 0.8571 Co,122.28420999999992,9.406477692307686
-exp_metastable_Te2Au_mp-567525,mp-567525,Te2Au,exp_metastable,,,False,0.027432493333336083,0.5 Te2Au -> Te + 0.5 Au,6.6925033333333594,2.230834444444453
-exp_metastable_Te2Ir_mp-1551,mp-1551,Te2Ir,exp_metastable,,,False,0.0030421406944398655,0.5 Te2Ir -> Te + 0.5 Ir,18.269080000000002,2.0298977777777782
-exp_metastable_Ti3Ge_mp-1189044,mp-1189044,Ti3Ge,exp_metastable,,,False,0.013003969652777059,0.3333 Ti3Ge -> Ti + 0.3333 Ge,21.784990000000093,1.3615618750000058
-exp_metastable_Y2O3_mp-558573,mp-558573,Y2O3,exp_metastable,,,False,0.03422779625000061,0.5 Y2O3 -> Y + 0.75 O2,-17.144416250000006,-1.1429610833333337
-exp_metastable_ZnAg_mp-1912,mp-1912,ZnAg,exp_metastable,,,False,0.011211470555556602,ZnAg -> Zn + Ag,9.156515000000002,4.578257500000001
-exp_metastable_ZrBr_mp-1065846,mp-1065846,ZrBr,exp_metastable,,,False,0.0007946975000017176,ZrBr -> Zr + Br,0.9956000000000316,0.2489000000000079
-exp_metastable_ZrGa3_mp-30685,mp-30685,ZrGa3,exp_metastable,,,False,0.013019501250001397,ZrGa3 -> Zr + 3 Ga,-4.8990525000000105,-1.2247631250000026
-exp_metastable_ZrRh_mp-2808,mp-2808,ZrRh,exp_metastable,,,False,0.08393397999999763,ZrRh -> Zr + Rh,2.3122150000000232,1.1561075000000116
-exp_stable_As2S3_mp-1189572,mp-1189572,As2S3,exp_stable,,,False,0.0,0.5 As2S3 -> As + 1.5 S,6.127967499999983,0.3063983749999991
-exp_stable_AsF3_mp-28027,mp-28027,AsF3,exp_stable,,,False,0.0,AsF3 -> As + 1.5 F2,-14.325110000000095,-0.8953193750000059
-exp_stable_BI3_mp-23189,mp-23189,BI3,exp_stable,,,False,0.0,BI3 -> B + 3 I,-0.004756666666636988,-0.0005945833333296235
-exp_stable_BW_mp-7832,mp-7832,BW,exp_stable,,,False,0.0,BW -> B + W,60.366356666666775,7.545794583333347
-exp_stable_BaAu2_mp-30363,mp-30363,BaAu2,exp_stable,,,False,0.0,BaAu2 -> Ba + 2 Au,26.217710000000036,8.73923666666668
-exp_stable_BaCl2_mp-568662,mp-568662,BaCl2,exp_stable,,,False,0.0,BaCl2 -> Ba + Cl2,0.3810100000000034,0.12700333333333447
-exp_stable_BaH2_mp-23715,mp-23715,BaH2,exp_stable,,,False,0.0,BaH2 -> Ba + H2,5.922340000000009,0.49352833333333407
-exp_stable_Be2Cu_mp-2031,mp-2031,Be2Cu,exp_stable,,,False,0.0,0.5 Be2Cu -> Be + 0.5 Cu,6.81375000000002,1.1356250000000034
-exp_stable_Be2Nb3_mp-11272,mp-11272,Be2Nb3,exp_stable,,,False,0.0,0.5 Be2Nb3 -> Be + 1.5 Nb,56.16182000000012,5.616182000000012
-exp_stable_Be2V_mp-11281,mp-11281,Be2V,exp_stable,,,False,0.0,0.5 Be2V -> Be + 0.5 V,36.0255600000002,3.0021300000000166
-exp_stable_CaAl4_mp-1749,mp-1749,CaAl4,exp_stable,,,False,0.0,CaAl4 -> Ca + 4 Al,44.904369999999986,8.980873999999996
-exp_stable_CaSn_mp-2450,mp-2450,CaSn,exp_stable,,,False,0.0,CaSn -> Ca + Sn,10.227590000000006,2.5568975000000016
-exp_stable_CdPd_mp-1696,mp-1696,CdPd,exp_stable,,,False,0.0,CdPd -> Cd + Pd,24.679710000000014,6.169927500000004
-exp_stable_CoB_mp-20857,mp-20857,CoB,exp_stable,,,False,0.0,CoB -> Co + B,38.02745666666662,4.753432083333328
-exp_stable_Cs2As3_mp-15557,mp-15557,Cs2As3,exp_stable,,,False,0.0,0.5 Cs2As3 -> Cs + 1.5 As,1.3861200000000409,0.1386120000000041
-exp_stable_FeS_mp-505531,mp-505531,FeS,exp_stable,,,False,0.0,FeS -> Fe + S,-0.7331337500000146,-0.18328343750000364
-exp_stable_Ge2Os_mp-10032,mp-10032,Ge2Os,exp_stable,,,False,0.0,0.5 Ge2Os -> Ge + 0.5 Os,-1.0690200000000019,-0.1781700000000003
-exp_stable_HfTc2_mp-1095669,mp-1095669,HfTc2,exp_stable,,,False,0.0,HfTc2 -> Hf + 2 Tc,43.10261000000003,3.5918841666666688
-exp_stable_Hg4Pt_mp-936,mp-936,Hg4Pt,exp_stable,,,False,0.0,0.25 Hg4Pt -> Hg + 0.25 Pt,12.953843333333317,2.5907686666666634
-exp_stable_HgF2_mp-8177,mp-8177,HgF2,exp_stable,,,False,0.0,HgF2 -> Hg + F2,-2.952206666666676,-0.984068888888892
-exp_stable_InBr_mp-22870,mp-22870,InBr,exp_stable,,,False,0.0,InBr -> In + Br,15.982190000000031,3.995547500000008
-exp_stable_KI_mp-22898,mp-22898,KI,exp_stable,,,False,0.0,KI -> K + I,-1.0996149999999982,-0.5498074999999991
-exp_stable_KN3_mp-827,mp-827,KN3,exp_stable,,,False,0.0,KN3 -> K + 1.5 N2,-14.568010000000044,-1.8210012500000055
-exp_stable_Li2Se_mp-2286,mp-2286,Li2Se,exp_stable,,,False,0.0,0.5 Li2Se -> Li + 0.5 Se,-7.2650266666666745,-2.421675555555558
-exp_stable_LiB_mp-1001835,mp-1001835,LiB,exp_stable,,,False,0.0,LiB -> Li + B,3.6185366666666994,0.9046341666666748
-exp_stable_Mg2Ni_mp-2137,mp-2137,Mg2Ni,exp_stable,,,False,0.0,0.5 Mg2Ni -> Mg + 0.5 Ni,25.029999999999994,1.3905555555555553
-exp_stable_MgP4_mp-384,mp-384,MgP4,exp_stable,,,False,0.0,MgP4 -> Mg + 4 P,1.067631904761896,0.10676319047618961
-exp_stable_MnAl12_mp-1104165,mp-1104165,MnAl12,exp_stable,,,False,0.0,MnAl12 -> Mn + 12 Al,106.27197620689655,8.174767400530504
-exp_stable_MoSe2_mp-1634,mp-1634,MoSe2,exp_stable,,,False,0.0,MoSe2 -> Mo + 2 Se,5.68490000000002,0.9474833333333367
-exp_stable_NaS_mp-2400,mp-2400,NaS,exp_stable,,,False,0.0,NaS -> Na + S,3.9621325000000027,0.49526656250000034
-exp_stable_Nb3Ir_mp-1458,mp-1458,Nb3Ir,exp_stable,,,False,0.0,0.3333 Nb3Ir -> Nb + 0.3333 Ir,80.97848999999997,10.122311249999996
-exp_stable_NbGa3_mp-1973,mp-1973,NbGa3,exp_stable,,,False,0.0,NbGa3 -> Nb + 3 Ga,3.0292725000000047,0.7573181250000012
-exp_stable_PI2_mp-29443,mp-29443,PI2,exp_stable,,,False,0.0,PI2 -> P + 2 I,0.5140254761905183,0.08567091269841971
-exp_stable_PbSe_mp-2201,mp-2201,PbSe,exp_stable,,,False,0.0,PbSe -> Pb + Se,4.96356000000001,2.481780000000005
-exp_stable_RbI_mp-22903,mp-22903,RbI,exp_stable,,,False,0.0,RbI -> Rb + I,-1.6384774999999987,-0.8192387499999993
-exp_stable_Sc5Ge3_mp-17190,mp-17190,Sc5Ge3,exp_stable,,,False,0.0,0.2 Sc5Ge3 -> Sc + 0.6 Ge,8.400039999999862,0.5250024999999914
-exp_stable_ScAg2_mp-1018128,mp-1018128,ScAg2,exp_stable,,,False,0.0,ScAg2 -> Sc + 2 Ag,8.052505000000018,2.6841683333333393
-exp_stable_ScTe_mp-10026,mp-10026,ScTe,exp_stable,,,False,0.0,ScTe -> Sc + Te,-3.6080966666666683,-0.9020241666666671
-exp_stable_SnPt_mp-19856,mp-19856,SnPt,exp_stable,,,False,0.0,SnPt -> Sn + Pt,20.721320000000034,5.1803300000000085
-exp_stable_SrO2_mp-2697,mp-2697,SrO2,exp_stable,,,False,0.0,SrO2 -> Sr + O2,2.5626125000000126,0.8542041666666709
-exp_stable_SrSi_mp-2661,mp-2661,SrSi,exp_stable,,,False,0.0,SrSi -> Sr + Si,5.365820000000015,1.3414550000000038
-exp_stable_Ta5Ge3_mp-17593,mp-17593,Ta5Ge3,exp_stable,,,False,0.0,0.2 Ta5Ge3 -> Ta + 0.6 Ge,81.38890999999998,5.086806874999999
-exp_stable_TaP_mp-1067587,mp-1067587,TaP,exp_stable,,,False,0.0,TaP -> Ta + P,9.092725476190502,2.2731813690476255
-exp_stable_TaSb2_mp-11697,mp-11697,TaSb2,exp_stable,,,False,0.0,TaSb2 -> Ta + 2 Sb,10.708130000000054,1.7846883333333423
-exp_stable_Te2Pd_mp-782,mp-782,Te2Pd,exp_stable,,,False,0.0,0.5 Te2Pd -> Te + 0.5 Pd,-4.134386666666661,-1.378128888888887
-exp_stable_Te2Ru_mp-267,mp-267,Te2Ru,exp_stable,,,False,0.0,0.5 Te2Ru -> Te + 0.5 Ru,-3.9416333333333498,-0.6569388888888916
-exp_stable_TeO2_mp-8377,mp-8377,TeO2,exp_stable,,,False,0.0,TeO2 -> Te + O2,1.7868466666665483,0.14890388888887904
-exp_stable_Ti3In_mp-866046,mp-866046,Ti3In,exp_stable,,,False,0.0,0.3333 Ti3In -> Ti + 0.3333 In,20.773649999999996,2.5967062499999995
-exp_stable_Ti3Pt_mp-2339,mp-2339,Ti3Pt,exp_stable,,,False,0.0,0.3333 Ti3Pt -> Ti + 0.3333 Pt,29.123690000000025,3.640461250000003
-exp_stable_TiBe12_mp-1104067,mp-1104067,TiBe12,exp_stable,,,False,0.0,TiBe12 -> Ti + 12 Be,22.65128500000003,1.7424065384615408
-exp_stable_TiNi_mp-1048,mp-1048,TiNi,exp_stable,,,False,0.0,TiNi -> Ti + Ni,6.355820000000012,1.588955000000003
-exp_stable_TiO_mp-1071163,mp-1071163,TiO,exp_stable,,,False,0.0,TiO -> Ti + 0.5 O2,0.8467762500001115,0.14112937500001857
-exp_stable_TiSi2_mp-1077503,mp-1077503,TiSi2,exp_stable,,,False,0.0,TiSi2 -> Ti + 2 Si,-5.280969999999996,-0.8801616666666661
-exp_stable_TlCl_mp-571079,mp-571079,TlCl,exp_stable,,,False,0.0,TlCl -> Tl + 0.5 Cl2,9.186970000000015,2.2967425000000037
-exp_stable_VNi2_mp-11531,mp-11531,VNi2,exp_stable,,,False,0.0,VNi2 -> V + 2 Ni,9.314180000000007,3.1047266666666693
-exp_stable_WO2_mp-1524394,mp-1524394,WO2,exp_stable,,,False,0.0,WO2 -> W + O2,55.16779000000028,4.597315833333357
-exp_stable_Zr2Au_mp-2348,mp-2348,Zr2Au,exp_stable,,,False,0.0,0.5 Zr2Au -> Zr + 0.5 Au,6.537570000000038,2.1791900000000126
-exp_stable_Zr5Pb3_mp-681992,mp-681992,Zr5Pb3,exp_stable,,,False,0.0,0.2 Zr5Pb3 -> Zr + 0.6 Pb,37.36045000000016,2.33502812500001
-exp_stable_ZrMo2_mp-2049,mp-2049,ZrMo2,exp_stable,,,False,0.0,ZrMo2 -> Zr + 2 Mo,41.217390000000044,6.869565000000008
-extension_Ag3As_mp-1183193,mp-1183193,Ag3As,extension,,True,True,0.08839697750000042,0.3333 Ag3As -> Ag + 0.3333 As,48.45451,6.05681375
+exp_metastable_AgO_mp-1079720,mp-1079720,AgO,exp_metastable,ionic,False,False,0.04234811749999956,AgO -> Ag + 0.5 O2,37.29535500000017,4.661919375000021
+exp_metastable_Al12W_mp-11227,mp-11227,Al12W,exp_metastable,metallic,True,False,0.01520368538461625,0.08333 Al12W -> Al + 0.08333 W,128.9516999999999,9.919361538461532
+exp_metastable_Al3Os2_mp-16521,mp-16521,Al3Os2,exp_metastable,metallic,True,False,0.007409683000005884,0.3333 Al3Os2 -> Al + 0.6667 Os,21.395009999999985,4.279001999999997
+exp_metastable_AsPd2_mp-1080831,mp-1080831,AsPd2,exp_metastable,metallic,True,False,0.011756747500001552,AsPd2 -> As + 2 Pd,24.642094999999983,2.7380105555555536
+exp_metastable_AsRh2_mp-1102364,mp-1102364,AsRh2,exp_metastable,metallic,True,False,0.08062063166666178,AsRh2 -> As + 2 Rh,26.8991300000001,2.2415941666666748
+exp_metastable_AsRh_mp-22079,mp-22079,AsRh,exp_metastable,metallic,True,False,0.026917590833335225,AsRh -> As + Rh,8.022410000000065,1.002801250000008
+exp_metastable_BaSn5_mp-571353,mp-571353,BaSn5,exp_metastable,metallic,True,False,0.026217794166670583,BaSn5 -> Ba + 5 Sn,23.87222000000002,3.978703333333337
+exp_metastable_Be12Pd_mp-12666,mp-12666,Be12Pd,exp_metastable,metallic,True,False,0.07945158115384565,0.08333 Be12Pd -> Be + 0.08333 Pd,27.530620000000113,2.117740000000009
+exp_metastable_Be3N2_mp-6977,mp-6977,Be3N2,exp_metastable,ionic,False,False,0.03151386449999993,0.3333 Be3N2 -> Be + 0.3333 N2,-22.270894999999967,-2.227089499999997
+exp_metastable_CaGa2_mp-992,mp-992,CaGa2,exp_metastable,metallic,True,False,0.016981658333333982,CaGa2 -> Ca + 2 Ga,3.0332450000000115,1.0110816666666704
+exp_metastable_CaGa4_mp-2461,mp-2461,CaGa4,exp_metastable,metallic,True,False,0.0016006820000011857,CaGa4 -> Ca + 4 Ga,5.385349999999988,1.0770699999999978
+exp_metastable_CdI2_mp-567259,mp-567259,CdI2,exp_metastable,ionic,False,False,0.0005410511111105798,CdI2 -> Cd + 2 I,0.6790100000000194,0.22633666666667315
+exp_metastable_CdO2_mp-2310,mp-2310,CdO2,exp_metastable,mixed,False,False,0.05623419000000052,CdO2 -> Cd + O2,31.535219999999768,2.627934999999981
+exp_metastable_ClF3_mp-556767,mp-556767,ClF3,exp_metastable,covalent,False,False,0.0029946146875001745,2 ClF3 -> Cl2 + 3 F2,-11.013860000000221,-0.6883662500000138
+exp_metastable_Cs2Se_mp-1011696,mp-1011696,Cs2Se,exp_metastable,ionic,False,False,0.004232759166664213,0.5 Cs2Se -> Cs + 0.5 Se,-8.080250000000014,-0.6733541666666678
+exp_metastable_CsH_mp-632319,mp-632319,CsH,exp_metastable,ionic,False,False,0.016097849999999525,CsH -> Cs + 0.5 H2,-6.24663999999999,-3.123319999999995
+exp_metastable_Cu3Ge_mp-19724,mp-19724,Cu3Ge,exp_metastable,metallic,True,False,0.01263984624999992,0.3333 Cu3Ge -> Cu + 0.3333 Ge,9.58605999999999,1.1982574999999986
+exp_metastable_FeTe2_mp-1102002,mp-1102002,FeTe2,exp_metastable,metallic,True,False,0.04490969833333569,FeTe2 -> Fe + 2 Te,-11.024036666666653,-0.9186697222222211
+exp_metastable_Ge4Rh_mp-1104286,mp-1104286,Ge4Rh,exp_metastable,metallic,True,False,0.09073754899999997,0.25 Ge4Rh -> Ge + 0.25 Rh,16.377499999999884,1.0918333333333257
+exp_metastable_GeSe2_mp-10074,mp-10074,GeSe2,exp_metastable,covalent,False,False,0.012493755416668861,GeSe2 -> Ge + 2 Se,-4.629279999999987,-0.7715466666666645
+exp_metastable_H2O_mp-2739191,mp-2739191,H2O,exp_metastable,ionic,False,False,0.049447999166666534,H2O -> H2 + 0.5 O2,-20.308795000000046,-1.6923995833333372
+exp_metastable_H3N_mp-643432,mp-643432,H3N,exp_metastable,covalent,False,False,0.0038271875000006617,0.6667 H3N -> H2 + 0.3333 N2,-25.31635999999999,-1.5822724999999993
+exp_metastable_HI_mp-697025,mp-697025,HI,exp_metastable,ionic,False,False,0.004366291041667303,2 HI -> H2 + 2 I,-10.79871,-0.674919375
+exp_metastable_IF7_mp-27988,mp-27988,IF7,exp_metastable,ionic,False,False,0.006252095624999399,IF7 -> I + 3.5 F2,-27.424910000000224,-1.714056875000014
+exp_metastable_In3Ir_mp-630976,mp-630976,In3Ir,exp_metastable,metallic,True,False,0.004296428125002194,0.3333 In3Ir -> In + 0.3333 Ir,128.49157999999997,8.030723749999998
+exp_metastable_InCl_mp-571636,mp-571636,InCl,exp_metastable,ionic,False,False,0.0016458790624991337,InCl -> In + 0.5 Cl2,18.347510000000042,4.586877500000011
+exp_metastable_K2S_mp-559278,mp-559278,K2S,exp_metastable,ionic,False,False,0.0872531616666663,0.5 K2S -> K + 0.5 S,1.3742562499999948,0.22904270833333248
+exp_metastable_Li13Sn5_mp-30769,mp-30769,Li13Sn5,exp_metastable,metallic,True,False,0.0033475494444448195,0.07692 Li13Sn5 -> Li + 0.3846 Sn,3.823256666666765,0.21240314814815361
+exp_metastable_Li3Hg_mp-1646,mp-1646,Li3Hg,exp_metastable,metallic,True,False,0.0012975900000000706,0.3333 Li3Hg -> Li + 0.3333 Hg,-2.3900666666666837,-0.5975166666666709
+exp_metastable_MgCl2_mp-570259,mp-570259,MgCl2,exp_metastable,ionic,False,False,0.0006391266666669893,MgCl2 -> Mg + Cl2,-0.4634999999999998,-0.15449999999999994
+exp_metastable_MgH2_mp-23711,mp-23711,MgH2,exp_metastable,ionic,False,False,0.0018755891666670799,MgH2 -> Mg + H2,5.292710000000017,0.4410591666666681
+exp_metastable_MgPd3_mp-7753,mp-7753,MgPd3,exp_metastable,metallic,True,False,0.01137175124999068,MgPd3 -> Mg + 3 Pd,22.39867999999998,5.599669999999995
+exp_metastable_Mo3Se4_mp-21021,mp-21021,Mo3Se4,exp_metastable,metallic,True,False,0.06087143499999925,0.3333 Mo3Se4 -> Mo + 1.333 Se,39.33515000000001,2.8096535714285724
+exp_metastable_NaN3_mp-1066400,mp-1066400,NaN3,exp_metastable,mixed,False,False,0.0029249474999994973,NaN3 -> Na + 1.5 N2,-7.574484999999989,-1.8936212499999971
+exp_metastable_Nb2O5_mp-1595,mp-1595,Nb2O5,exp_metastable,covalent,False,False,0.007537548265307947,0.5 Nb2O5 -> Nb + 1.25 O2,14.482328750000079,2.068904107142868
+exp_metastable_NiB_mp-14019,mp-14019,NiB,exp_metastable,metallic,True,False,0.0018463106250017347,NiB -> Ni + B,3.2368733333333424,0.8092183333333356
+exp_metastable_NiHg4_mp-570835,mp-570835,NiHg4,exp_metastable,metallic,True,False,0.01705295800000073,NiHg4 -> Ni + 4 Hg,1.8045933333333366,0.36091866666666733
+exp_metastable_NiS_mp-1547,mp-1547,NiS,exp_metastable,metallic,True,False,0.014181840833332515,NiS -> Ni + S,6.885729374999993,1.1476215624999988
+exp_metastable_PS_mp-612,mp-612,PS,exp_metastable,covalent,False,False,0.026489451484373205,PS -> P + S,0.4068169047618255,0.025426056547614095
+exp_metastable_PbAu2_mp-19871,mp-19871,PbAu2,exp_metastable,metallic,True,False,0.004742635416668861,PbAu2 -> Pb + 2 Au,65.65555000000009,10.942591666666681
+exp_metastable_PbSe_mp-22009,mp-22009,PbSe,exp_metastable,ionic,False,False,0.07310882999999535,PbSe -> Pb + Se,11.809650000000008,2.952412500000002
+exp_metastable_Rb2Hg7_mp-31474,mp-31474,Rb2Hg7,exp_metastable,metallic,True,False,0.00452349037037425,0.5 Rb2Hg7 -> Rb + 3.5 Hg,10.656888333333384,1.1840987037037094
+exp_metastable_Re3Ge7_mp-29141,mp-29141,Re3Ge7,exp_metastable,metallic,True,False,0.012616640750003683,0.3333 Re3Ge7 -> Re + 2.333 Ge,4.913719999999898,0.2456859999999949
+exp_metastable_SiO2_mp-546794,mp-546794,SiO2,exp_metastable,covalent,False,False,0.005647450555557043,SiO2 -> Si + O2,-12.85172499999996,-2.1419541666666597
+exp_metastable_SiRh_mp-2287,mp-2287,SiRh,exp_metastable,metallic,True,False,0.02456185499999819,SiRh -> Si + Rh,8.30537000000001,1.0381712500000013
+exp_metastable_SiS2_mp-1095294,mp-1095294,SiS2,exp_metastable,covalent,False,False,0.003013171666665926,SiS2 -> Si + 2 S,-11.952554999999919,-0.9960462499999932
+exp_metastable_Sn7Ir5_mp-20466,mp-20466,Sn7Ir5,exp_metastable,metallic,True,False,0.002421364999996456,0.1429 Sn7Ir5 -> Sn + 0.7143 Ir,83.68484999999987,6.973737499999989
+exp_metastable_Sr2As_mp-15697,mp-15697,Sr2As,exp_metastable,metallic,True,False,0.08000544425926037,0.5 Sr2As -> Sr + 0.5 As,4.0013900000000255,0.6668983333333376
+exp_metastable_Sr5Sn3_mp-17720,mp-17720,Sr5Sn3,exp_metastable,metallic,True,False,0.003021452500000521,0.2 Sr5Sn3 -> Sr + 0.6 Sn,35.164369999999955,2.197773124999997
+exp_metastable_SrAl2_mp-1638,mp-1638,SrAl2,exp_metastable,metallic,True,False,0.013571949999999333,SrAl2 -> Sr + 2 Al,43.93181,7.321968333333333
+exp_metastable_Ta7Co6_mp-1104548,mp-1104548,Ta7Co6,exp_metastable,metallic,True,False,0.0014632612820477675,0.1429 Ta7Co6 -> Ta + 0.8571 Co,122.28420999999992,9.406477692307686
+exp_metastable_Te2Au_mp-567525,mp-567525,Te2Au,exp_metastable,metallic,True,False,0.027432493333336083,0.5 Te2Au -> Te + 0.5 Au,6.6925033333333594,2.230834444444453
+exp_metastable_Te2Ir_mp-1551,mp-1551,Te2Ir,exp_metastable,metallic,True,False,0.0030421406944398655,0.5 Te2Ir -> Te + 0.5 Ir,18.269080000000002,2.0298977777777782
+exp_metastable_Ti3Ge_mp-1189044,mp-1189044,Ti3Ge,exp_metastable,metallic,True,False,0.013003969652777059,0.3333 Ti3Ge -> Ti + 0.3333 Ge,21.784990000000093,1.3615618750000058
+exp_metastable_Y2O3_mp-558573,mp-558573,Y2O3,exp_metastable,ionic,False,False,0.03422779625000061,0.5 Y2O3 -> Y + 0.75 O2,-17.144416250000006,-1.1429610833333337
+exp_metastable_ZnAg_mp-1912,mp-1912,ZnAg,exp_metastable,metallic,True,False,0.011211470555556602,ZnAg -> Zn + Ag,9.156515000000002,4.578257500000001
+exp_metastable_ZrBr_mp-1065846,mp-1065846,ZrBr,exp_metastable,metallic,True,False,0.0007946975000017176,ZrBr -> Zr + Br,0.9956000000000316,0.2489000000000079
+exp_metastable_ZrGa3_mp-30685,mp-30685,ZrGa3,exp_metastable,metallic,True,False,0.013019501250001397,ZrGa3 -> Zr + 3 Ga,-4.8990525000000105,-1.2247631250000026
+exp_metastable_ZrRh_mp-2808,mp-2808,ZrRh,exp_metastable,metallic,True,False,0.08393397999999763,ZrRh -> Zr + Rh,2.3122150000000232,1.1561075000000116
+exp_stable_As2S3_mp-1189572,mp-1189572,As2S3,exp_stable,covalent,False,False,0.0,0.5 As2S3 -> As + 1.5 S,6.127967499999983,0.3063983749999991
+exp_stable_AsF3_mp-28027,mp-28027,AsF3,exp_stable,covalent,False,False,0.0,AsF3 -> As + 1.5 F2,-14.325110000000095,-0.8953193750000059
+exp_stable_BI3_mp-23189,mp-23189,BI3,exp_stable,covalent,False,False,0.0,BI3 -> B + 3 I,-0.004756666666636988,-0.0005945833333296235
+exp_stable_BW_mp-7832,mp-7832,BW,exp_stable,metallic,True,False,0.0,BW -> B + W,60.366356666666775,7.545794583333347
+exp_stable_BaAu2_mp-30363,mp-30363,BaAu2,exp_stable,metallic,True,False,0.0,BaAu2 -> Ba + 2 Au,26.217710000000036,8.73923666666668
+exp_stable_BaCl2_mp-568662,mp-568662,BaCl2,exp_stable,ionic,False,False,0.0,BaCl2 -> Ba + Cl2,0.3810100000000034,0.12700333333333447
+exp_stable_BaH2_mp-23715,mp-23715,BaH2,exp_stable,ionic,False,False,0.0,BaH2 -> Ba + H2,5.922340000000009,0.49352833333333407
+exp_stable_Be2Cu_mp-2031,mp-2031,Be2Cu,exp_stable,metallic,True,False,0.0,0.5 Be2Cu -> Be + 0.5 Cu,6.81375000000002,1.1356250000000034
+exp_stable_Be2Nb3_mp-11272,mp-11272,Be2Nb3,exp_stable,metallic,True,False,0.0,0.5 Be2Nb3 -> Be + 1.5 Nb,56.16182000000012,5.616182000000012
+exp_stable_Be2V_mp-11281,mp-11281,Be2V,exp_stable,metallic,True,False,0.0,0.5 Be2V -> Be + 0.5 V,36.0255600000002,3.0021300000000166
+exp_stable_CaAl4_mp-1749,mp-1749,CaAl4,exp_stable,metallic,True,False,0.0,CaAl4 -> Ca + 4 Al,44.904369999999986,8.980873999999996
+exp_stable_CaSn_mp-2450,mp-2450,CaSn,exp_stable,metallic,True,False,0.0,CaSn -> Ca + Sn,10.227590000000006,2.5568975000000016
+exp_stable_CdPd_mp-1696,mp-1696,CdPd,exp_stable,metallic,True,False,0.0,CdPd -> Cd + Pd,24.679710000000014,6.169927500000004
+exp_stable_CoB_mp-20857,mp-20857,CoB,exp_stable,metallic,True,False,0.0,CoB -> Co + B,38.02745666666662,4.753432083333328
+exp_stable_Cs2As3_mp-15557,mp-15557,Cs2As3,exp_stable,mixed,False,False,0.0,0.5 Cs2As3 -> Cs + 1.5 As,1.3861200000000409,0.1386120000000041
+exp_stable_FeS_mp-505531,mp-505531,FeS,exp_stable,metallic,True,False,0.0,FeS -> Fe + S,-0.7331337500000146,-0.18328343750000364
+exp_stable_Ge2Os_mp-10032,mp-10032,Ge2Os,exp_stable,metallic,True,False,0.0,0.5 Ge2Os -> Ge + 0.5 Os,-1.0690200000000019,-0.1781700000000003
+exp_stable_HfTc2_mp-1095669,mp-1095669,HfTc2,exp_stable,metallic,True,False,0.0,HfTc2 -> Hf + 2 Tc,43.10261000000003,3.5918841666666688
+exp_stable_Hg4Pt_mp-936,mp-936,Hg4Pt,exp_stable,metallic,True,False,0.0,0.25 Hg4Pt -> Hg + 0.25 Pt,12.953843333333317,2.5907686666666634
+exp_stable_HgF2_mp-8177,mp-8177,HgF2,exp_stable,ionic,False,False,0.0,HgF2 -> Hg + F2,-2.952206666666676,-0.984068888888892
+exp_stable_InBr_mp-22870,mp-22870,InBr,exp_stable,ionic,False,False,0.0,InBr -> In + Br,15.982190000000031,3.995547500000008
+exp_stable_KI_mp-22898,mp-22898,KI,exp_stable,ionic,False,False,0.0,KI -> K + I,-1.0996149999999982,-0.5498074999999991
+exp_stable_KN3_mp-827,mp-827,KN3,exp_stable,mixed,False,False,0.0,KN3 -> K + 1.5 N2,-14.568010000000044,-1.8210012500000055
+exp_stable_Li2Se_mp-2286,mp-2286,Li2Se,exp_stable,ionic,False,False,0.0,0.5 Li2Se -> Li + 0.5 Se,-7.2650266666666745,-2.421675555555558
+exp_stable_LiB_mp-1001835,mp-1001835,LiB,exp_stable,metallic,True,False,0.0,LiB -> Li + B,3.6185366666666994,0.9046341666666748
+exp_stable_Mg2Ni_mp-2137,mp-2137,Mg2Ni,exp_stable,metallic,True,False,0.0,0.5 Mg2Ni -> Mg + 0.5 Ni,25.029999999999994,1.3905555555555553
+exp_stable_MgP4_mp-384,mp-384,MgP4,exp_stable,mixed,False,False,0.0,MgP4 -> Mg + 4 P,1.067631904761896,0.10676319047618961
+exp_stable_MnAl12_mp-1104165,mp-1104165,MnAl12,exp_stable,metallic,True,False,0.0,MnAl12 -> Mn + 12 Al,106.27197620689655,8.174767400530504
+exp_stable_MoSe2_mp-1634,mp-1634,MoSe2,exp_stable,covalent,False,False,0.0,MoSe2 -> Mo + 2 Se,5.68490000000002,0.9474833333333367
+exp_stable_NaS_mp-2400,mp-2400,NaS,exp_stable,mixed,False,False,0.0,NaS -> Na + S,3.9621325000000027,0.49526656250000034
+exp_stable_Nb3Ir_mp-1458,mp-1458,Nb3Ir,exp_stable,metallic,True,False,0.0,0.3333 Nb3Ir -> Nb + 0.3333 Ir,80.97848999999997,10.122311249999996
+exp_stable_NbGa3_mp-1973,mp-1973,NbGa3,exp_stable,metallic,True,False,0.0,NbGa3 -> Nb + 3 Ga,3.0292725000000047,0.7573181250000012
+exp_stable_PI2_mp-29443,mp-29443,PI2,exp_stable,mixed,False,False,0.0,PI2 -> P + 2 I,0.5140254761905183,0.08567091269841971
+exp_stable_PbSe_mp-2201,mp-2201,PbSe,exp_stable,ionic,False,False,0.0,PbSe -> Pb + Se,4.96356000000001,2.481780000000005
+exp_stable_RbI_mp-22903,mp-22903,RbI,exp_stable,ionic,False,False,0.0,RbI -> Rb + I,-1.6384774999999987,-0.8192387499999993
+exp_stable_Sc5Ge3_mp-17190,mp-17190,Sc5Ge3,exp_stable,metallic,True,False,0.0,0.2 Sc5Ge3 -> Sc + 0.6 Ge,8.400039999999862,0.5250024999999914
+exp_stable_ScAg2_mp-1018128,mp-1018128,ScAg2,exp_stable,metallic,True,False,0.0,ScAg2 -> Sc + 2 Ag,8.052505000000018,2.6841683333333393
+exp_stable_ScTe_mp-10026,mp-10026,ScTe,exp_stable,metallic,True,False,0.0,ScTe -> Sc + Te,-3.6080966666666683,-0.9020241666666671
+exp_stable_SnPt_mp-19856,mp-19856,SnPt,exp_stable,metallic,True,False,0.0,SnPt -> Sn + Pt,20.721320000000034,5.1803300000000085
+exp_stable_SrO2_mp-2697,mp-2697,SrO2,exp_stable,mixed,False,False,0.0,SrO2 -> Sr + O2,2.5626125000000126,0.8542041666666709
+exp_stable_SrSi_mp-2661,mp-2661,SrSi,exp_stable,metallic,True,False,0.0,SrSi -> Sr + Si,5.365820000000015,1.3414550000000038
+exp_stable_Ta5Ge3_mp-17593,mp-17593,Ta5Ge3,exp_stable,metallic,True,False,0.0,0.2 Ta5Ge3 -> Ta + 0.6 Ge,81.38890999999998,5.086806874999999
+exp_stable_TaP_mp-1067587,mp-1067587,TaP,exp_stable,metallic,True,False,0.0,TaP -> Ta + P,9.092725476190502,2.2731813690476255
+exp_stable_TaSb2_mp-11697,mp-11697,TaSb2,exp_stable,metallic,True,False,0.0,TaSb2 -> Ta + 2 Sb,10.708130000000054,1.7846883333333423
+exp_stable_Te2Pd_mp-782,mp-782,Te2Pd,exp_stable,metallic,True,False,0.0,0.5 Te2Pd -> Te + 0.5 Pd,-4.134386666666661,-1.378128888888887
+exp_stable_Te2Ru_mp-267,mp-267,Te2Ru,exp_stable,ionic,False,False,0.0,0.5 Te2Ru -> Te + 0.5 Ru,-3.9416333333333498,-0.6569388888888916
+exp_stable_TeO2_mp-8377,mp-8377,TeO2,exp_stable,covalent,False,False,0.0,TeO2 -> Te + O2,1.7868466666665483,0.14890388888887904
+exp_stable_Ti3In_mp-866046,mp-866046,Ti3In,exp_stable,metallic,True,False,0.0,0.3333 Ti3In -> Ti + 0.3333 In,20.773649999999996,2.5967062499999995
+exp_stable_Ti3Pt_mp-2339,mp-2339,Ti3Pt,exp_stable,metallic,True,False,0.0,0.3333 Ti3Pt -> Ti + 0.3333 Pt,29.123690000000025,3.640461250000003
+exp_stable_TiBe12_mp-1104067,mp-1104067,TiBe12,exp_stable,metallic,True,False,0.0,TiBe12 -> Ti + 12 Be,22.65128500000003,1.7424065384615408
+exp_stable_TiNi_mp-1048,mp-1048,TiNi,exp_stable,metallic,True,False,0.0,TiNi -> Ti + Ni,6.355820000000012,1.588955000000003
+exp_stable_TiO_mp-1071163,mp-1071163,TiO,exp_stable,metallic,True,False,0.0,TiO -> Ti + 0.5 O2,0.8467762500001115,0.14112937500001857
+exp_stable_TiSi2_mp-1077503,mp-1077503,TiSi2,exp_stable,metallic,True,False,0.0,TiSi2 -> Ti + 2 Si,-5.280969999999996,-0.8801616666666661
+exp_stable_TlCl_mp-571079,mp-571079,TlCl,exp_stable,ionic,False,False,0.0,TlCl -> Tl + 0.5 Cl2,9.186970000000015,2.2967425000000037
+exp_stable_VNi2_mp-11531,mp-11531,VNi2,exp_stable,metallic,True,False,0.0,VNi2 -> V + 2 Ni,9.314180000000007,3.1047266666666693
+exp_stable_WO2_mp-1524394,mp-1524394,WO2,exp_stable,metallic,True,False,0.0,WO2 -> W + O2,55.16779000000028,4.597315833333357
+exp_stable_Zr2Au_mp-2348,mp-2348,Zr2Au,exp_stable,metallic,True,False,0.0,0.5 Zr2Au -> Zr + 0.5 Au,6.537570000000038,2.1791900000000126
+exp_stable_Zr5Pb3_mp-681992,mp-681992,Zr5Pb3,exp_stable,metallic,True,False,0.0,0.2 Zr5Pb3 -> Zr + 0.6 Pb,37.36045000000016,2.33502812500001
+exp_stable_ZrMo2_mp-2049,mp-2049,ZrMo2,exp_stable,metallic,True,False,0.0,ZrMo2 -> Zr + 2 Mo,41.217390000000044,6.869565000000008
+extension_Ag3As_mp-1183193,mp-1183193,Ag3As,extension,metallic,True,True,0.08839697750000042,0.3333 Ag3As -> Ag + 0.3333 As,48.45451,6.05681375
 extension_Ag3Pt_mp-12065,mp-12065,Ag3Pt,extension,metallic,True,False,0.020805422500000503,0.3333 Ag3Pt -> Ag + 0.3333 Pt,38.22843999999997,9.557109999999993
 extension_Ag3Sb_mp-2273,mp-2273,Ag3Sb,extension,metallic,True,False,0.0508994350000016,0.3333 Ag3Sb -> Ag + 0.3333 Sb,19.190524999999973,4.797631249999993
-extension_AgH_mp-1096804,mp-1096804,AgH,extension,,False,True,0.1208983966666679,AgH -> Ag + 0.5 H2,12.010440000000042,3.0026100000000104
-extension_AgI_mp-22915,mp-22915,AgI,extension,,True,False,0.39273725999999964,AgI -> Ag + I,4.634185000000013,2.3170925000000064
-extension_AgN_anchor_mp-1091417,mp-1091417,AgN,extension,,True,False,1.5201297641666667,AgN -> Ag + 0.5 N2,41.00533000000014,5.125666250000018
-extension_AgN_poly_mp-1009766,mp-1009766,AgN,extension,,True,True,1.5494896491666665,AgN -> Ag + 0.5 N2,8.067615000000018,4.033807500000009
-extension_AgN_poly_mp-1424734,mp-1424734,AgN,extension,,True,True,1.9196186741666672,AgN -> Ag + 0.5 N2,22.515440000000027,5.628860000000007
-extension_AgN_poly_mp-1428312,mp-1428312,AgN,extension,,True,True,1.6518583891666676,AgN -> Ag + 0.5 N2,5.788045000000029,2.8940225000000144
+extension_AgH_mp-1096804,mp-1096804,AgH,extension,ionic,False,True,0.1208983966666679,AgH -> Ag + 0.5 H2,12.010440000000042,3.0026100000000104
+extension_AgI_mp-22915,mp-22915,AgI,extension,metallic,True,False,0.39273725999999964,AgI -> Ag + I,4.634185000000013,2.3170925000000064
+extension_AgN_anchor_mp-1091417,mp-1091417,AgN,extension,metallic,True,False,1.5201297641666667,AgN -> Ag + 0.5 N2,41.00533000000014,5.125666250000018
+extension_AgN_poly_mp-1009766,mp-1009766,AgN,extension,metallic,True,True,1.5494896491666665,AgN -> Ag + 0.5 N2,8.067615000000018,4.033807500000009
+extension_AgN_poly_mp-1424734,mp-1424734,AgN,extension,metallic,True,True,1.9196186741666672,AgN -> Ag + 0.5 N2,22.515440000000027,5.628860000000007
+extension_AgN_poly_mp-1428312,mp-1428312,AgN,extension,metallic,True,True,1.6518583891666676,AgN -> Ag + 0.5 N2,5.788045000000029,2.8940225000000144
 extension_AgPb3_mp-1183256,mp-1183256,AgPb3,extension,metallic,True,True,0.08509275833333874,AgPb3 -> Ag + 3 Pb,19.750670000000003,4.937667500000001
 extension_AgPd_mp-1183222,mp-1183222,AgPd,extension,metallic,True,True,0.0069558550000010655,AgPd -> Ag + Pd,2.919390000000014,1.459695000000007
 extension_Al12Mo_mp-550,mp-550,Al12Mo,extension,metallic,True,False,0.014142691923076711,0.08333 Al12Mo -> Al + 0.08333 Mo,118.71513000000002,9.131933076923078
 extension_Al2W_mp-12524,mp-12524,Al2W,extension,metallic,True,False,0.09311756111111436,0.5 Al2W -> Al + 0.5 W,108.5371900000001,12.059687777777789
 extension_Al3Ag_mp-1183130,mp-1183130,Al3Ag,extension,metallic,True,True,0.0712581868749993,0.3333 Al3Ag -> Al + 0.3333 Ag,32.291699999999956,8.072924999999989
-extension_Al3As_mp-1183129,mp-1183129,Al3As,extension,,True,True,0.36364852500000033,0.3333 Al3As -> Al + 0.3333 As,26.16308499999998,6.540771249999995
+extension_Al3As_mp-1183129,mp-1183129,Al3As,extension,metallic,True,True,0.36364852500000033,0.3333 Al3As -> Al + 0.3333 As,26.16308499999998,6.540771249999995
 extension_AlAg2_mp-985805,mp-985805,AlAg2,extension,metallic,True,True,0.007656157999999635,AlAg2 -> Al + 2 Ag,48.837850000000046,8.139641666666675
 extension_AlAg_mp-1228901,mp-1228901,AlAg,extension,metallic,True,True,0.01833040100000005,AlAg -> Al + Ag,9.105520000000002,4.552760000000001
-extension_AlH3_mp-1106356,mp-1106356,AlH3,extension,covalent,False,False,0.010014458750000621,AlH3 -> Al + 1.5 H2,36.48455000000034,2.2802843750000212
-extension_As3W2_mp-11696,mp-11696,As3W2,extension,,True,False,0.0,0.3333 As3W2 -> As + 0.6667 W,37.14043000000001,3.714043000000001
+extension_AlH3_mp-1106356,mp-1106356,AlH3,extension,ionic,False,False,0.010014458750000621,AlH3 -> Al + 1.5 H2,36.48455000000034,2.2802843750000212
+extension_As3W2_mp-11696,mp-11696,As3W2,extension,metallic,True,False,0.0,0.3333 As3W2 -> As + 0.6667 W,37.14043000000001,3.714043000000001
 extension_As4S3_mp-27543,mp-27543,As4S3,extension,covalent,False,False,0.006355647857141378,0.25 As4S3 -> As + 0.75 S,4.6735975,0.16691419642857142
 extension_As4S3_mp-557321,mp-557321,As4S3,extension,covalent,False,False,0.006840436428570129,0.25 As4S3 -> As + 0.75 S,4.306957500000067,0.1538199107142881
 extension_Au2S_mp-947,mp-947,Au2S,extension,covalent,False,False,0.0,0.5 Au2S -> Au + 0.5 S,59.72607625000005,9.954346041666675
-extension_BPd5_mp-1228665,mp-1228665,BPd5,extension,,True,True,0.13249513083333042,BPd5 -> B + 5 Pd,43.97202666666665,7.328671111111109
+extension_BPd5_mp-1228665,mp-1228665,BPd5,extension,metallic,True,True,0.13249513083333042,BPd5 -> B + 5 Pd,43.97202666666665,7.328671111111109
 extension_Ba3Ca_mp-1183342,mp-1183342,Ba3Ca,extension,metallic,True,True,0.03921404749999979,0.3333 Ba3Ca -> Ba + 0.3333 Ca,0.8387899999999997,0.20969749999999993
-extension_Ba3N2_mp-1013528,mp-1013528,Ba3N2,extension,,True,True,0.6831039496666662,0.3333 Ba3N2 -> Ba + 0.3333 N2,10.616520000000016,2.123304000000003
-extension_Ba4Pd_mp-1214438,mp-1214438,Ba4Pd,extension,,False,True,0.15571698099999987,0.25 Ba4Pd -> Ba + 0.25 Pd,5.459859999999939,0.5459859999999939
-extension_Ba5P4_exp_mp-17566,mp-17566,Ba5P4,extension,,False,False,3.472888887223746e-05,0.2 Ba5P4 -> Ba + 0.8 P,34.52278380952373,0.9589662169312148
+extension_Ba3N2_mp-1013528,mp-1013528,Ba3N2,extension,metallic,True,True,0.6831039496666662,0.3333 Ba3N2 -> Ba + 0.3333 N2,10.616520000000016,2.123304000000003
+extension_Ba4Pd_mp-1214438,mp-1214438,Ba4Pd,extension,ionic,False,True,0.15571698099999987,0.25 Ba4Pd -> Ba + 0.25 Pd,5.459859999999939,0.5459859999999939
+extension_Ba5P4_exp_mp-17566,mp-17566,Ba5P4,extension,mixed,False,False,3.472888887223746e-05,0.2 Ba5P4 -> Ba + 0.8 P,34.52278380952373,0.9589662169312148
 extension_BaCl2_exp_mp-23199,mp-23199,BaCl2,extension,ionic,False,False,0.006785772499999787,BaCl2 -> Ba + Cl2,2.6927899999999845,0.22439916666666537
 extension_BaF3_exp_mp-1080821,mp-1080821,BaF3,extension,ionic,False,False,0.0,BaF3 -> Ba + 1.5 F2,6.94371999999999,0.8679649999999988
-extension_BaF3_theo_mp-1183303,mp-1183303,BaF3,extension,,True,True,0.061207927499999926,BaF3 -> Ba + 1.5 F2,0.9973899999999922,0.24934749999999806
+extension_BaF3_theo_mp-1183303,mp-1183303,BaF3,extension,metallic,True,True,0.061207927499999926,BaF3 -> Ba + 1.5 F2,0.9973899999999922,0.24934749999999806
 extension_BaMg3_mp-1016218,mp-1016218,BaMg3,extension,metallic,True,True,0.17140638551136345,BaMg3 -> Ba + 3 Mg,-0.28713,-0.0717825
-extension_BaN2_exp_mp-1102371,mp-1102371,BaN2,extension,,True,False,2.056778179166667,BaN2 -> Ba + N2,64.10853999999999,5.342378333333333
+extension_BaN2_exp_mp-1102371,mp-1102371,BaN2,extension,metallic,True,False,2.056778179166667,BaN2 -> Ba + N2,64.10853999999999,5.342378333333333
 extension_BaO_exp_mp-1008500,mp-1008500,BaO,extension,ionic,False,False,0.01888829749999843,BaO -> Ba + 0.5 O2,1.288457500000007,0.32211437500000173
 extension_BaO_theo_mp-1950989,mp-1950989,BaO,extension,ionic,False,True,0.04343597749999972,BaO -> Ba + 0.5 O2,6.451647500000011,1.6129118750000027
-extension_BaP10_mp-28035,mp-28035,BaP10,extension,,False,False,0.0036162985064951414,BaP10 -> Ba + 10 P,8.081944761904793,0.367361125541127
-extension_BaS3_exp_mp-556296,mp-556296,BaS3,extension,,False,False,0.04356796437499888,BaS3 -> Ba + 3 S,9.972767499999932,0.6232979687499958
+extension_BaP10_mp-28035,mp-28035,BaP10,extension,mixed,False,False,0.0036162985064951414,BaP10 -> Ba + 10 P,8.081944761904793,0.367361125541127
+extension_BaS3_exp_mp-556296,mp-556296,BaS3,extension,mixed,False,False,0.04356796437499888,BaS3 -> Ba + 3 S,9.972767499999932,0.6232979687499958
 extension_Be12Mo_mp-1475,mp-1475,Be12Mo,extension,metallic,True,False,0.0,0.08333 Be12Mo -> Be + 0.08333 Mo,27.334499999999935,2.1026538461538413
-extension_Be3N2_exp_mp-18337,mp-18337,Be3N2,extension,,False,False,0.0,0.3333 Be3N2 -> Be + 0.3333 N2,-75.79385000000059,-1.8948462500000147
-extension_Be3N2_theo_mp-1017550,mp-1017550,Be3N2,extension,,False,True,0.20808621349999967,0.3333 Be3N2 -> Be + 0.3333 N2,-11.82761750000006,-2.3655235000000117
-extension_Be3P2_exp_mp-567841,mp-567841,Be3P2,extension,,False,False,0.0,0.3333 Be3P2 -> Be + 0.6667 P,8.44261380952446,0.2110653452381115
-extension_Be3P2_mp-1084771,mp-1084771,Be3P2,extension,,False,True,0.15672523674999983,0.3333 Be3P2 -> Be + 0.6667 P,1.7951959523811354,0.17951959523811353
-extension_Be3P2_mp-567841,mp-567841,Be3P2,extension,,False,False,0.0,0.3333 Be3P2 -> Be + 0.6667 P,8.442623809524378,0.21106559523810944
-extension_Be3P2_theo_mp-1084771,mp-1084771,Be3P2,extension,,False,True,0.15672523674999983,0.3333 Be3P2 -> Be + 0.6667 P,1.7951959523811354,0.17951959523811353
-extension_BeCl2_exp_mp-23267,mp-23267,BeCl2,extension,ionic,False,False,0.008707515833333623,BeCl2 -> Be + Cl2,-10.92223499999998,-1.8203724999999966
+extension_Be3N2_exp_mp-18337,mp-18337,Be3N2,extension,ionic,False,False,0.0,0.3333 Be3N2 -> Be + 0.3333 N2,-75.79385000000059,-1.8948462500000147
+extension_Be3N2_theo_mp-1017550,mp-1017550,Be3N2,extension,ionic,False,True,0.20808621349999967,0.3333 Be3N2 -> Be + 0.3333 N2,-11.82761750000006,-2.3655235000000117
+extension_Be3P2_exp_mp-567841,mp-567841,Be3P2,extension,covalent,False,False,0.0,0.3333 Be3P2 -> Be + 0.6667 P,8.44261380952446,0.2110653452381115
+extension_Be3P2_mp-1084771,mp-1084771,Be3P2,extension,covalent,False,True,0.15672523674999983,0.3333 Be3P2 -> Be + 0.6667 P,1.7951959523811354,0.17951959523811353
+extension_Be3P2_mp-567841,mp-567841,Be3P2,extension,covalent,False,False,0.0,0.3333 Be3P2 -> Be + 0.6667 P,8.442623809524378,0.21106559523810944
+extension_Be3P2_theo_mp-1084771,mp-1084771,Be3P2,extension,covalent,False,True,0.15672523674999983,0.3333 Be3P2 -> Be + 0.6667 P,1.7951959523811354,0.17951959523811353
+extension_BeCl2_exp_mp-23267,mp-23267,BeCl2,extension,covalent,False,False,0.008707515833333623,BeCl2 -> Be + Cl2,-10.92223499999998,-1.8203724999999966
 extension_BeCl2_theo_mp-1172909,mp-1172909,BeCl2,extension,ionic,False,True,3.1687985972222217,BeCl2 -> Be + Cl2,208.10443000000015,5.7806786111111155
 extension_BeF2_exp_mp-15951,mp-15951,BeF2,extension,ionic,False,False,0.00039670611111120024,BeF2 -> Be + F2,-28.362617499999786,-3.151401944444421
-extension_BeF2_theo_mp-975644,mp-975644,BeF2,extension,,True,True,2.518145377222223,BeF2 -> Be + F2,2.0446774999999526,0.6815591666666508
+extension_BeF2_theo_mp-975644,mp-975644,BeF2,extension,metallic,True,True,2.518145377222223,BeF2 -> Be + F2,2.0446774999999526,0.6815591666666508
 extension_BeO_exp_mp-7599,mp-7599,BeO,extension,ionic,False,False,0.015346631250000797,BeO -> Be + 0.5 O2,-22.290815000000066,-2.7863518750000082
 extension_BeO_theo_mp-1778,mp-1778,BeO,extension,ionic,False,True,0.006973667500000502,BeO -> Be + 0.5 O2,-8.878218749999956,-4.439109374999978
-extension_C(NO)2_mp-1197051,mp-1197051,C(NO)2,extension,covalent,False,False,1.1348039342500007,C(NO)2 -> C + N2 + O2,-86.8784100000006,-2.171960250000015
-extension_C2N2O_mp-1214250,mp-1214250,C2N2O,extension,covalent,False,True,0.47205626016666535,0.5 C2N2O -> C + 0.5 N2 + 0.25 O2,-40.81982750000077,-1.3606609166666923
+extension_C(NO)2_mp-1197051,mp-1197051,C(NO)2,extension,mixed,False,False,1.1348039342500007,C(NO)2 -> C + N2 + O2,-86.8784100000006,-2.171960250000015
+extension_C2N2O_mp-1214250,mp-1214250,C2N2O,extension,mixed,False,True,0.47205626016666535,0.5 C2N2O -> C + 0.5 N2 + 0.25 O2,-40.81982750000077,-1.3606609166666923
 extension_C3N4_anchor_mp-571653,mp-571653,C3N4,extension,covalent,False,False,0.4981181882142849,0.3333 C3N4 -> C + 0.6667 N2,-27.540524999999988,-3.9343607142857127
 extension_C3N4_mp-567885,mp-567885,C3N4,extension,covalent,False,True,0.1475561110714274,0.3333 C3N4 -> C + 0.6667 N2,-40.6460399999996,-2.903288571428543
 extension_C3N4_mp-570572,mp-570572,C3N4,extension,covalent,False,False,0.14726764821428517,0.3333 C3N4 -> C + 0.6667 N2,-20.204534999999908,-2.8863621428571298
@@ -175,23 +175,23 @@ extension_C3N4_mp-971683,mp-971683,C3N4,extension,covalent,False,True,0.12167648
 extension_C3N4_poly_mp-1182484,mp-1182484,C3N4,extension,covalent,False,True,0.5848164510714273,0.3333 C3N4 -> C + 0.6667 N2,11.569090000000017,0.8263635714285726
 extension_C3N4_poly_mp-2852,mp-2852,C3N4,extension,covalent,False,True,0.5033424574999987,0.3333 C3N4 -> C + 0.6667 N2,-65.22850000000042,-4.659178571428602
 extension_C3N4_poly_mp-563,mp-563,C3N4,extension,covalent,False,True,1.5118795946428563,0.3333 C3N4 -> C + 0.6667 N2,-33.092020000000076,-2.36371571428572
-extension_Ca3N2_exp_mp-1047,mp-1047,Ca3N2,extension,,False,False,0.01669766374999959,0.3333 Ca3N2 -> Ca + 0.3333 N2,25.18586000000003,2.518586000000003
-extension_Ca3N2_mp-844,mp-844,Ca3N2,extension,,False,False,0.0,0.3333 Ca3N2 -> Ca + 0.3333 N2,98.7172000000002,2.4679300000000053
-extension_Ca3N2_theo_mp-1013524,mp-1013524,Ca3N2,extension,,True,True,0.5111703895000002,0.3333 Ca3N2 -> Ca + 0.3333 N2,12.601520000000018,2.520304000000004
+extension_Ca3N2_exp_mp-1047,mp-1047,Ca3N2,extension,ionic,False,False,0.01669766374999959,0.3333 Ca3N2 -> Ca + 0.3333 N2,25.18586000000003,2.518586000000003
+extension_Ca3N2_mp-844,mp-844,Ca3N2,extension,ionic,False,False,0.0,0.3333 Ca3N2 -> Ca + 0.3333 N2,98.7172000000002,2.4679300000000053
+extension_Ca3N2_theo_mp-1013524,mp-1013524,Ca3N2,extension,metallic,True,True,0.5111703895000002,0.3333 Ca3N2 -> Ca + 0.3333 N2,12.601520000000018,2.520304000000004
 extension_Ca3Zn_mp-1039229,mp-1039229,Ca3Zn,extension,metallic,True,True,0.15884041124999992,0.3333 Ca3Zn -> Ca + 0.3333 Zn,12.460095000000003,3.1150237500000006
 extension_CaCl2_exp_mp-23214,mp-23214,CaCl2,extension,ionic,False,False,0.0011452108333331878,CaCl2 -> Ca + Cl2,1.9193799999999968,0.3198966666666661
 extension_CaCl2_theo_mp-1120739,mp-1120739,CaCl2,extension,ionic,False,True,0.04218543083333426,CaCl2 -> Ca + Cl2,0.6625400000000008,0.22084666666666694
 extension_CaF2_exp_mp-10464,mp-10464,CaF2,extension,ionic,False,False,0.03464170166666669,CaF2 -> Ca + F2,2.672039999999967,0.22266999999999726
 extension_CaF2_theo_mp-554355,mp-554355,CaF2,extension,ionic,False,True,0.24025145999999964,CaF2 -> Ca + F2,0.5442199999999993,0.1814066666666664
-extension_CaN6_mp-656097,mp-656097,CaN6,extension,,False,True,0.07920592142857252,CaN6 -> Ca + 3 N2,-20.29020000000014,-1.44930000000001
-extension_CaN6_mp-676,mp-676,CaN6,extension,,False,False,0.04061298999999963,CaN6 -> Ca + 3 N2,-23.774999999999977,-1.6982142857142841
-extension_CaN_mp-1058549,mp-1058549,CaN,extension,,True,False,0.39816828843749974,CaN -> Ca + 0.5 N2,4.912895000000013,2.4564475000000066
+extension_CaN6_mp-656097,mp-656097,CaN6,extension,mixed,False,True,0.07920592142857252,CaN6 -> Ca + 3 N2,-20.29020000000014,-1.44930000000001
+extension_CaN6_mp-676,mp-676,CaN6,extension,mixed,False,False,0.04061298999999963,CaN6 -> Ca + 3 N2,-23.774999999999977,-1.6982142857142841
+extension_CaN_mp-1058549,mp-1058549,CaN,extension,metallic,True,False,0.39816828843749974,CaN -> Ca + 0.5 N2,4.912895000000013,2.4564475000000066
 extension_CaNi_mp-1059707,mp-1059707,CaNi,extension,metallic,True,False,0.16564980624999937,CaNi -> Ca + Ni,3.8505300000000013,1.9252650000000007
 extension_CaO_exp_mp-1079707,mp-1079707,CaO,extension,ionic,False,False,0.20976985500000023,CaO -> Ca + 0.5 O2,17.701575000000037,2.2126968750000047
 extension_CaO_mp-2605,mp-2605,CaO,extension,ionic,False,False,0.0,CaO -> Ca + 0.5 O2,1.9049437500000082,0.9524718750000041
-extension_CaO_theo_mp-1181903,mp-1181903,CaO,extension,,True,True,2.7281320512499994,CaO -> Ca + 0.5 O2,23.976815000000034,2.9971018750000042
+extension_CaO_theo_mp-1181903,mp-1181903,CaO,extension,metallic,True,True,2.7281320512499994,CaO -> Ca + 0.5 O2,23.976815000000034,2.9971018750000042
 extension_CdIn3_mp-1183674,mp-1183674,CdIn3,extension,metallic,True,True,0.06416026750000015,CdIn3 -> Cd + 3 In,27.509610000000013,6.877402500000003
-extension_CdP4_mp-7904,mp-7904,CdP4,extension,covalent,False,False,0.0,CdP4 -> Cd + 4 P,5.11723190476188,0.511723190476188
+extension_CdP4_mp-7904,mp-7904,CdP4,extension,mixed,False,False,0.0,CdP4 -> Cd + 4 P,5.11723190476188,0.511723190476188
 extension_CdSb3_mp-1183739,mp-1183739,CdSb3,extension,metallic,True,True,0.13193314687499935,CdSb3 -> Cd + 3 Sb,14.047549999999994,1.7559437499999992
 extension_CoGe_mp-21237,mp-21237,CoGe,extension,metallic,True,False,0.0,CoGe -> Co + Ge,23.695149999999998,2.9618937499999998
 extension_CoRe_mp-1225995,mp-1225995,CoRe,extension,metallic,True,True,0.1217252000000002,CoRe -> Co + Re,2.0787250000000057,1.0393625000000029
@@ -199,26 +199,26 @@ extension_CoSn_mp-20536,mp-20536,CoSn,extension,metallic,True,False,0.0,CoSn -> 
 extension_Cr5Si3_mp-7506,mp-7506,Cr5Si3,extension,metallic,True,False,0.05473733324999941,0.2 Cr5Si3 -> Cr + 0.6 Si,-11.604539999999929,-0.7252837499999956
 extension_CrRe3_mp-1183703,mp-1183703,CrRe3,extension,metallic,True,True,0.13309992375000235,CrRe3 -> Cr + 3 Re,13.72989999999998,3.432474999999995
 extension_CrW_mp-1226162,mp-1226162,CrW,extension,metallic,True,True,0.12119496999999768,CrW -> Cr + W,8.119695000000014,4.059847500000007
-extension_Cs2S_exp_mp-1077814,mp-1077814,Cs2S,extension,,False,False,0.06672482000000102,0.5 Cs2S -> Cs + 0.5 S,-5.732433750000002,-0.9554056250000004
+extension_Cs2S_exp_mp-1077814,mp-1077814,Cs2S,extension,ionic,False,False,0.06672482000000102,0.5 Cs2S -> Cs + 0.5 S,-5.732433750000002,-0.9554056250000004
 extension_CsCl_exp_mp-573697,mp-573697,CsCl,extension,ionic,False,False,0.007141250000000099,CsCl -> Cs + 0.5 Cl2,-1.7659649999999978,-0.8829824999999989
 extension_CsF_exp_mp-8455,mp-8455,CsF,extension,ionic,False,False,0.10877166999999943,CsF -> Cs + 0.5 F2,-7.692800000000005,-3.8464000000000027
-extension_CsN3_exp_mp-510557,mp-510557,CsN3,extension,,False,False,0.0,CsN3 -> Cs + 1.5 N2,-11.219609999999989,-1.4024512499999986
-extension_CsN3_mp-1225892,mp-1225892,CsN3,extension,,False,True,0.011297812499998727,CsN3 -> Cs + 1.5 N2,-8.105405000000012,-2.026351250000003
-extension_CsN3_mp-510557,mp-510557,CsN3,extension,,False,False,0.0,CsN3 -> Cs + 1.5 N2,-11.219609999999989,-1.4024512499999986
-extension_CsN3_theo_mp-1225892,mp-1225892,CsN3,extension,,False,True,0.011297812499998727,CsN3 -> Cs + 1.5 N2,-8.105405000000012,-2.026351250000003
-extension_CsO2_exp_mp-1441,mp-1441,CsO2,extension,,True,False,0.03485998833333248,CsO2 -> Cs + O2,-0.19987249999999435,-0.06662416666666478
-extension_CsO2_theo_mp-1096936,mp-1096936,CsO2,extension,,True,True,0.0940473483333335,CsO2 -> Cs + O2,-2.322982500000009,-0.774327500000003
-extension_CsP7_exp_mp-1201790,mp-1201790,CsP7,extension,,False,False,0.0,CsP7 -> Cs + 7 P,9.528936666666596,0.2977792708333311
-extension_CsP7_mp-1201790,mp-1201790,CsP7,extension,,False,False,0.0,CsP7 -> Cs + 7 P,9.528926666666592,0.297778958333331
-extension_CsP7_mp-1213206,mp-1213206,CsP7,extension,,False,True,8.425187500016307e-05,CsP7 -> Cs + 7 P,8.533346666666574,0.26666708333333045
-extension_CsP7_theo_mp-1213206,mp-1213206,CsP7,extension,,False,True,8.425187500016307e-05,CsP7 -> Cs + 7 P,8.533346666666574,0.26666708333333045
+extension_CsN3_exp_mp-510557,mp-510557,CsN3,extension,mixed,False,False,0.0,CsN3 -> Cs + 1.5 N2,-11.219609999999989,-1.4024512499999986
+extension_CsN3_mp-1225892,mp-1225892,CsN3,extension,mixed,False,True,0.011297812499998727,CsN3 -> Cs + 1.5 N2,-8.105405000000012,-2.026351250000003
+extension_CsN3_mp-510557,mp-510557,CsN3,extension,mixed,False,False,0.0,CsN3 -> Cs + 1.5 N2,-11.219609999999989,-1.4024512499999986
+extension_CsN3_theo_mp-1225892,mp-1225892,CsN3,extension,mixed,False,True,0.011297812499998727,CsN3 -> Cs + 1.5 N2,-8.105405000000012,-2.026351250000003
+extension_CsO2_exp_mp-1441,mp-1441,CsO2,extension,metallic,True,False,0.03485998833333248,CsO2 -> Cs + O2,-0.19987249999999435,-0.06662416666666478
+extension_CsO2_theo_mp-1096936,mp-1096936,CsO2,extension,metallic,True,True,0.0940473483333335,CsO2 -> Cs + O2,-2.322982500000009,-0.774327500000003
+extension_CsP7_exp_mp-1201790,mp-1201790,CsP7,extension,mixed,False,False,0.0,CsP7 -> Cs + 7 P,9.528936666666596,0.2977792708333311
+extension_CsP7_mp-1201790,mp-1201790,CsP7,extension,mixed,False,False,0.0,CsP7 -> Cs + 7 P,9.528926666666592,0.297778958333331
+extension_CsP7_mp-1213206,mp-1213206,CsP7,extension,mixed,False,True,8.425187500016307e-05,CsP7 -> Cs + 7 P,8.533346666666574,0.26666708333333045
+extension_CsP7_theo_mp-1213206,mp-1213206,CsP7,extension,mixed,False,True,8.425187500016307e-05,CsP7 -> Cs + 7 P,8.533346666666574,0.26666708333333045
 extension_CsRb_mp-1225895,mp-1225895,CsRb,extension,metallic,True,True,0.03448047142241284,CsRb -> Cs + Rb,0.009727500000000555,0.004863750000000278
-extension_Cu2S_mp-12087,mp-12087,Cu2S,extension,,True,False,0.09426421770833393,0.5 Cu2S -> Cu + 0.5 S,3.4643231250000017,1.1547743750000006
-extension_Cu2S_mp-553942,mp-553942,Cu2S,extension,,True,False,0.23845627437500028,0.5 Cu2S -> Cu + 0.5 S,8.010066249999984,1.3350110416666638
-extension_Cu3Te2_mp-1225676,mp-1225676,Cu3Te2,extension,,True,True,0.02125787800000012,0.3333 Cu3Te2 -> Cu + 0.6667 Te,2.2746533333333367,0.45493066666666737
+extension_Cu2S_mp-12087,mp-12087,Cu2S,extension,metallic,True,False,0.09426421770833393,0.5 Cu2S -> Cu + 0.5 S,3.4643231250000017,1.1547743750000006
+extension_Cu2S_mp-553942,mp-553942,Cu2S,extension,metallic,True,False,0.23845627437500028,0.5 Cu2S -> Cu + 0.5 S,8.010066249999984,1.3350110416666638
+extension_Cu3Te2_mp-1225676,mp-1225676,Cu3Te2,extension,metallic,True,True,0.02125787800000012,0.3333 Cu3Te2 -> Cu + 0.6667 Te,2.2746533333333367,0.45493066666666737
 extension_Cu4Au_mp-1225761,mp-1225761,Cu4Au,extension,metallic,True,True,0.0940493460000007,0.25 Cu4Au -> Cu + 0.25 Au,1902.4773800000003,380.49547600000005
-extension_Cu7Te4_mp-624307,mp-624307,Cu7Te4,extension,,True,False,0.1459016827272741,0.1429 Cu7Te4 -> Cu + 0.5714 Te,18.329503333333243,0.8331592424242383
-extension_CuH_mp-1225705,mp-1225705,CuH,extension,,True,True,0.09820546499999949,CuH -> Cu + 0.5 H2,1.7757500000000181,0.44393750000000454
+extension_Cu7Te4_mp-624307,mp-624307,Cu7Te4,extension,metallic,True,False,0.1459016827272741,0.1429 Cu7Te4 -> Cu + 0.5714 Te,18.329503333333243,0.8331592424242383
+extension_CuH_mp-1225705,mp-1225705,CuH,extension,metallic,True,True,0.09820546499999949,CuH -> Cu + 0.5 H2,1.7757500000000181,0.44393750000000454
 extension_CuNi_mp-1184069,mp-1184069,CuNi,extension,metallic,True,True,0.05968355999999986,CuNi -> Cu + Ni,2.4457099999999974,1.2228549999999987
 extension_Ga2Au7_mp-571598,mp-571598,Ga2Au7,extension,metallic,True,False,0.017660370925923985,0.5 Ga2Au7 -> Ga + 3.5 Au,298.73682500000024,11.064326851851861
 extension_Ga3Hg_mp-1184289,mp-1184289,Ga3Hg,extension,metallic,True,True,0.08707534437500186,0.3333 Ga3Hg -> Ga + 0.3333 Hg,11.60229166666668,1.450286458333335
@@ -226,23 +226,23 @@ extension_Ga3Pb_mp-1184425,mp-1184425,Ga3Pb,extension,metallic,True,True,0.09109
 extension_Ga3Re_mp-1188393,mp-1188393,Ga3Re,extension,metallic,True,False,0.03857295171874853,0.3333 Ga3Re -> Ga + 0.3333 Re,20.454720000000037,1.2784200000000023
 extension_GaSb_mp-1224785,mp-1224785,GaSb,extension,metallic,True,True,0.1847465150000005,GaSb -> Ga + Sb,-2.17901749999999,-1.089508749999995
 extension_Ge3Mo5_mp-17094,mp-17094,Ge3Mo5,extension,metallic,True,False,0.04250976249999994,0.3333 Ge3Mo5 -> Ge + 1.667 Mo,70.05223999999995,4.378264999999997
-extension_Ge3O_mp-1184665,mp-1184665,Ge3O,extension,,True,True,0.89046678375,0.3333 Ge3O -> Ge + 0.1667 O2,9.169558750000004,2.292389687500001
-extension_GeAs_mp-7591,mp-7591,GeAs,extension,,True,False,0.10544380666666875,GeAs -> Ge + As,-0.015099999999980795,-0.007549999999990398
+extension_Ge3O_mp-1184665,mp-1184665,Ge3O,extension,metallic,True,True,0.89046678375,0.3333 Ge3O -> Ge + 0.1667 O2,9.169558750000004,2.292389687500001
+extension_GeAs_mp-7591,mp-7591,GeAs,extension,metallic,True,False,0.10544380666666875,GeAs -> Ge + As,-0.015099999999980795,-0.007549999999990398
 extension_GeSb_mp-9935,mp-9935,GeSb,extension,metallic,True,True,0.04942549249999928,GeSb -> Ge + Sb,0.4221200000000067,0.21106000000000336
-extension_GeTe_mp-938,mp-938,GeTe,extension,covalent,False,False,0.0,GeTe -> Ge + Te,2.12503166666667,1.062515833333335
+extension_GeTe_mp-938,mp-938,GeTe,extension,ionic,False,False,0.0,GeTe -> Ge + Te,2.12503166666667,1.062515833333335
 extension_H2CN2_mp-703527,mp-703527,H2CN2,extension,covalent,False,False,0.18741764774999492,H2CN2 -> H2 + C + N2,-45.6152500000004,-1.1403812500000101
-extension_H2CN5_mp-1212563,mp-1212563,H2CN5,extension,covalent,False,True,0.1617986478124971,H2CN5 -> H2 + C + 2.5 N2,-97.8283699999999,-3.0571365624999967
-extension_H3Pd4_mp-1224413,mp-1224413,H3Pd4,extension,,True,True,0.013056976428570621,0.6667 H3Pd4 -> H2 + 2.667 Pd,15.316879999999898,2.1881257142857
-extension_H4N_mp-1238814,mp-1238814,H4N,extension,,True,True,0.32451140000000045,0.5 H4N -> H2 + 0.25 N2,-4.86316500000002,-0.972633000000004
-extension_H9CN9_mp-1202455,mp-1202455,H9CN9,extension,covalent,False,False,0.15232914070175418,0.2222 H9CN9 -> H2 + 0.2222 C + N2,-80.45564000000076,-2.1172536842105463
+extension_H2CN5_mp-1212563,mp-1212563,H2CN5,extension,mixed,False,True,0.1617986478124971,H2CN5 -> H2 + C + 2.5 N2,-97.8283699999999,-3.0571365624999967
+extension_H3Pd4_mp-1224413,mp-1224413,H3Pd4,extension,metallic,True,True,0.013056976428570621,0.6667 H3Pd4 -> H2 + 2.667 Pd,15.316879999999898,2.1881257142857
+extension_H4N_mp-1238814,mp-1238814,H4N,extension,metallic,True,True,0.32451140000000045,0.5 H4N -> H2 + 0.25 N2,-4.86316500000002,-0.972633000000004
+extension_H9CN9_mp-1202455,mp-1202455,H9CN9,extension,mixed,False,False,0.15232914070175418,0.2222 H9CN9 -> H2 + 0.2222 C + N2,-80.45564000000076,-2.1172536842105463
 extension_HC2N3_mp-1103408,mp-1103408,HC2N3,extension,covalent,False,True,0.28976179152776993,2 HC2N3 -> H2 + 4 C + 3 N2,-48.97751999999997,-4.081459999999997
-extension_HC2_mp-995184,mp-995184,HC2,extension,,True,True,0.1491960781249988,2 HC2 -> H2 + 4 C,4.08149000000013,0.680248333333355
-extension_HC3_mp-995200,mp-995200,HC3,extension,,True,True,0.13767401546874858,2 HC3 -> H2 + 6 C,3.1995200000001063,0.3999400000000133
-extension_HC6_mp-995202,mp-995202,HC6,extension,,True,True,0.08574633205357074,2 HC6 -> H2 + 12 C,4.898539999999912,0.349895714285708
-extension_HC_mp-995197,mp-995197,HC,extension,covalent,False,True,0.10980436656249992,2 HC -> H2 + 2 C,7.516970000000157,0.4698106250000098
-extension_HN_mp-1224501,mp-1224501,HN,extension,covalent,False,True,0.1923862111458332,2 HN -> H2 + N2,-72.59614999999962,-2.2686296874999883
-extension_HN_mp-23922,mp-23922,HN,extension,covalent,False,False,0.16815524687499916,2 HN -> H2 + N2,-81.57148999999993,-2.5491090624999977
-extension_HN_mp-720515,mp-720515,HN,extension,covalent,False,False,0.14784463833333383,2 HN -> H2 + N2,-93.55942000000027,-2.338985500000007
+extension_HC2_mp-995184,mp-995184,HC2,extension,metallic,True,True,0.1491960781249988,2 HC2 -> H2 + 4 C,4.08149000000013,0.680248333333355
+extension_HC3_mp-995200,mp-995200,HC3,extension,metallic,True,True,0.13767401546874858,2 HC3 -> H2 + 6 C,3.1995200000001063,0.3999400000000133
+extension_HC6_mp-995202,mp-995202,HC6,extension,metallic,True,True,0.08574633205357074,2 HC6 -> H2 + 12 C,4.898539999999912,0.349895714285708
+extension_HC_mp-995197,mp-995197,HC,extension,mixed,False,True,0.10980436656249992,2 HC -> H2 + 2 C,7.516970000000157,0.4698106250000098
+extension_HN_mp-1224501,mp-1224501,HN,extension,mixed,False,True,0.1923862111458332,2 HN -> H2 + N2,-72.59614999999962,-2.2686296874999883
+extension_HN_mp-23922,mp-23922,HN,extension,mixed,False,False,0.16815524687499916,2 HN -> H2 + N2,-81.57148999999993,-2.5491090624999977
+extension_HN_mp-720515,mp-720515,HN,extension,mixed,False,False,0.14784463833333383,2 HN -> H2 + N2,-93.55942000000027,-2.338985500000007
 extension_Hf3Pb_mp-1184772,mp-1184772,Hf3Pb,extension,metallic,True,True,0.0,0.3333 Hf3Pb -> Hf + 0.3333 Pb,10.938789999999997,2.7346974999999993
 extension_HfCd_mp-1007758,mp-1007758,HfCd,extension,metallic,True,False,0.0,HfCd -> Hf + Cd,3.615180000000038,0.9037950000000095
 extension_HfCr2_mp-569624,mp-569624,HfCr2,extension,metallic,True,False,0.10305479333333167,HfCr2 -> Hf + 2 Cr,15.58225000000013,1.2985208333333442
@@ -252,7 +252,7 @@ extension_HfW2_mp-1224230,mp-1224230,HfW2,extension,metallic,True,True,0.2690691
 extension_Hg3Pb_mp-1184700,mp-1184700,Hg3Pb,extension,metallic,True,True,0.06834607812499627,0.3333 Hg3Pb -> Hg + 0.3333 Pb,11.656960000000062,1.4571200000000077
 extension_Hg3Sb_mp-977242,mp-977242,Hg3Sb,extension,metallic,True,True,0.12571606499999888,0.3333 Hg3Sb -> Hg + 0.3333 Sb,4.641360000000027,0.5801700000000034
 extension_Hg5Pd2_mp-30721,mp-30721,Hg5Pd2,extension,metallic,True,False,0.03967810749999523,0.2 Hg5Pd2 -> Hg + 0.4 Pd,-0.1527866666668274,-0.010913333333344813
-extension_In2Te3_mp-1105025,mp-1105025,In2Te3,extension,,True,False,0.30775990697777544,0.5 In2Te3 -> In + 1.5 Te,35.500830000000036,2.3667220000000024
+extension_In2Te3_mp-1105025,mp-1105025,In2Te3,extension,metallic,True,False,0.30775990697777544,0.5 In2Te3 -> In + 1.5 Te,35.500830000000036,2.3667220000000024
 extension_In7Cu10_mp-646039,mp-646039,In7Cu10,extension,metallic,True,False,0.0,0.1429 In7Cu10 -> In + 1.429 Cu,104.30062000000007,3.067665294117649
 extension_InNi_mp-20997,mp-20997,InNi,extension,metallic,True,False,0.09218754000000118,InNi -> In + Ni,0.4473900000000164,0.2236950000000082
 extension_InSn4_mp-1223653,mp-1223653,InSn4,extension,metallic,True,True,0.14784555200000327,InSn4 -> In + 4 Sn,2.1226399999999828,0.4245279999999966
@@ -260,44 +260,44 @@ extension_Ir3Ru_mp-974358,mp-974358,Ir3Ru,extension,metallic,True,True,0.0,0.333
 extension_Ir4W_mp-1223666,mp-1223666,Ir4W,extension,metallic,True,True,0.2319650820000021,0.25 Ir4W -> Ir + 0.25 W,71.41394999999991,14.282789999999983
 extension_IrPd_mp-1223675,mp-1223675,IrPd,extension,metallic,True,True,0.11000630500000597,IrPd -> Ir + Pd,12.363360000000043,6.181680000000021
 extension_K2O_exp_mp-971,mp-971,K2O,extension,ionic,False,False,0.0,0.5 K2O -> K + 0.25 O2,2.614227500000016,0.435704583333336
-extension_K2O_theo_mp-1223784,mp-1223784,K2O,extension,,True,True,0.19996455333333385,0.5 K2O -> K + 0.25 O2,4.691493750000002,1.5638312500000007
-extension_K2S_exp_mp-1022,mp-1022,K2S,extension,,False,False,0.0,0.5 K2S -> K + 0.5 S,1.007753124999998,0.3359177083333327
+extension_K2O_theo_mp-1223784,mp-1223784,K2O,extension,metallic,True,True,0.19996455333333385,0.5 K2O -> K + 0.25 O2,4.691493750000002,1.5638312500000007
+extension_K2S_exp_mp-1022,mp-1022,K2S,extension,ionic,False,False,0.0,0.5 K2S -> K + 0.5 S,1.007753124999998,0.3359177083333327
 extension_K3Rb_mp-976115,mp-976115,K3Rb,extension,metallic,True,True,0.037403925187500686,0.3333 K3Rb -> K + 0.3333 Rb,3.012224999999999,0.3765281249999999
 extension_KCl_exp_mp-23289,mp-23289,KCl,extension,ionic,False,False,0.07764382000000003,KCl -> K + 0.5 Cl2,-1.5232549999999927,-0.7616274999999963
 extension_KF3_exp_mp-1544557,mp-1544557,KF3,extension,ionic,False,False,0.01249103906249971,KF3 -> K + 1.5 F2,36.83634999999995,1.1511359374999985
 extension_KF3_theo_mp-2749823,mp-2749823,KF3,extension,ionic,False,True,0.011928009062500244,KF3 -> K + 1.5 F2,36.816239999999986,1.1505074999999996
 extension_KMg15_mp-1023498,mp-1023498,KMg15,extension,metallic,True,True,0.10105966356250029,KMg15 -> K + 15 Mg,-0.1289699999999937,-0.008060624999999606
-extension_KN2_anchor_mp-1071868,mp-1071868,KN2,extension,,True,False,1.1629511857777777,KN2 -> K + N2,0.8517299999999963,0.1419549999999994
-extension_KN2_poly_mp-1180757,mp-1180757,KN2,extension,,True,True,1.2293322591111107,KN2 -> K + N2,6.024060000000006,1.004010000000001
-extension_KN3_mp-827,mp-827,KN3,extension,,False,False,0.0,KN3 -> K + 1.5 N2,-14.568010000000044,-1.8210012500000055
-extension_KN3_theo_mp-636056,mp-636056,KN3,extension,,True,True,1.0369771337499998,KN3 -> K + 1.5 N2,18.450500000000005,2.3063125000000007
-extension_KP15_mp-1211471,mp-1211471,KP15,extension,,False,True,0.0,KP15 -> K + 15 P,3.7138221428570546,0.11605694196428296
-extension_KP_exp_mp-1058315,mp-1058315,KP,extension,,True,False,1.008041285,KP -> K + P,4.319927738095244,2.159963869047622
-extension_KP_theo_mp-1057787,mp-1057787,KP,extension,,True,True,1.0092306499999992,KP -> K + P,4.273297738095245,2.1366488690476224
+extension_KN2_anchor_mp-1071868,mp-1071868,KN2,extension,metallic,True,False,1.1629511857777777,KN2 -> K + N2,0.8517299999999963,0.1419549999999994
+extension_KN2_poly_mp-1180757,mp-1180757,KN2,extension,metallic,True,True,1.2293322591111107,KN2 -> K + N2,6.024060000000006,1.004010000000001
+extension_KN3_mp-827,mp-827,KN3,extension,mixed,False,False,0.0,KN3 -> K + 1.5 N2,-14.568010000000044,-1.8210012500000055
+extension_KN3_theo_mp-636056,mp-636056,KN3,extension,metallic,True,True,1.0369771337499998,KN3 -> K + 1.5 N2,18.450500000000005,2.3063125000000007
+extension_KP15_mp-1211471,mp-1211471,KP15,extension,mixed,False,True,0.0,KP15 -> K + 15 P,3.7138221428570546,0.11605694196428296
+extension_KP_exp_mp-1058315,mp-1058315,KP,extension,metallic,True,False,1.008041285,KP -> K + P,4.319927738095244,2.159963869047622
+extension_KP_theo_mp-1057787,mp-1057787,KP,extension,metallic,True,True,1.0092306499999992,KP -> K + P,4.273297738095245,2.1366488690476224
 extension_Li2O_exp_mp-1960,mp-1960,Li2O,extension,ionic,False,False,0.0,0.5 Li2O -> Li + 0.25 O2,-7.00976291666667,-2.33658763888889
 extension_Li2O_theo_mp-755894,mp-755894,Li2O,extension,ionic,False,True,0.0843597108333336,0.5 Li2O -> Li + 0.25 O2,-23.377551666666648,-1.948129305555554
-extension_Li2S_exp_mp-1125,mp-1125,Li2S,extension,,False,False,0.061509288333333245,0.5 Li2S -> Li + 0.5 S,-22.205444166666638,-1.8504536805555531
-extension_Li2S_theo_mp-557142,mp-557142,Li2S,extension,,False,True,0.1749633300000002,0.5 Li2S -> Li + 0.5 S,-9.031017083333332,-1.5051695138888885
+extension_Li2S_exp_mp-1125,mp-1125,Li2S,extension,ionic,False,False,0.061509288333333245,0.5 Li2S -> Li + 0.5 S,-22.205444166666638,-1.8504536805555531
+extension_Li2S_theo_mp-557142,mp-557142,Li2S,extension,ionic,False,True,0.1749633300000002,0.5 Li2S -> Li + 0.5 S,-9.031017083333332,-1.5051695138888885
 extension_Li3Ca_mp-976075,mp-976075,Li3Ca,extension,metallic,True,True,0.06004755895833336,0.3333 Li3Ca -> Li + 0.3333 Ca,3.5434199999999905,0.8858549999999976
-extension_Li3N_exp_mp-2341,mp-2341,Li3N,extension,,False,False,0.003927161250000033,0.3333 Li3N -> Li + 0.1667 N2,-14.779409999999984,-1.847426249999998
+extension_Li3N_exp_mp-2341,mp-2341,Li3N,extension,ionic,False,False,0.003927161250000033,0.3333 Li3N -> Li + 0.1667 N2,-14.779409999999984,-1.847426249999998
 extension_LiCl_exp_mp-22905,mp-22905,LiCl,extension,ionic,False,False,0.02431463874999995,LiCl -> Li + 0.5 Cl2,-22.42414333333332,-2.803017916666665
 extension_LiCl_theo_mp-1185319,mp-1185319,LiCl,extension,ionic,False,True,0.0038527562499997003,LiCl -> Li + 0.5 Cl2,-10.001836666666655,-2.500459166666664
 extension_LiF_exp_mp-1138,mp-1138,LiF,extension,ionic,False,False,0.0,LiF -> Li + 0.5 F2,-8.934693333333339,-4.4673466666666695
 extension_LiF_theo_mp-1009009,mp-1009009,LiF,extension,ionic,False,True,0.2875420599999998,LiF -> Li + 0.5 F2,-9.02611333333331,-4.513056666666655
-extension_LiN3_mp-2659,mp-2659,LiN3,extension,,False,False,0.0,LiN3 -> Li + 1.5 N2,-19.296948333333347,-4.824237083333337
-extension_LiP5_exp_mp-2412,mp-2412,LiP5,extension,,False,False,0.007694938690475439,LiP5 -> Li + 5 P,-21.70378857142856,-0.9043245238095233
-extension_LiP5_mp-2412,mp-2412,LiP5,extension,,False,False,0.007694938690475439,LiP5 -> Li + 5 P,-21.70378857142856,-0.9043245238095233
-extension_LiP5_mp-32760,mp-32760,LiP5,extension,,False,True,0.09630660601190577,LiP5 -> Li + 5 P,-20.861178571428553,-0.8692157738095231
-extension_LiP5_theo_mp-32760,mp-32760,LiP5,extension,,False,True,0.09630660601190577,LiP5 -> Li + 5 P,-20.861178571428553,-0.8692157738095231
+extension_LiN3_mp-2659,mp-2659,LiN3,extension,mixed,False,False,0.0,LiN3 -> Li + 1.5 N2,-19.296948333333347,-4.824237083333337
+extension_LiP5_exp_mp-2412,mp-2412,LiP5,extension,mixed,False,False,0.007694938690475439,LiP5 -> Li + 5 P,-21.70378857142856,-0.9043245238095233
+extension_LiP5_mp-2412,mp-2412,LiP5,extension,mixed,False,False,0.007694938690475439,LiP5 -> Li + 5 P,-21.70378857142856,-0.9043245238095233
+extension_LiP5_mp-32760,mp-32760,LiP5,extension,mixed,False,True,0.09630660601190577,LiP5 -> Li + 5 P,-20.861178571428553,-0.8692157738095231
+extension_LiP5_theo_mp-32760,mp-32760,LiP5,extension,mixed,False,True,0.09630660601190577,LiP5 -> Li + 5 P,-20.861178571428553,-0.8692157738095231
 extension_LiRh3_mp-1001787,mp-1001787,LiRh3,extension,metallic,True,False,0.0,LiRh3 -> Li + 3 Rh,7.660406666666642,1.9151016666666605
-extension_LiS4_mp-1143546,mp-1143546,LiS4,extension,,False,True,0.21230688803125108,LiS4 -> Li + 4 S,0.8966283333333038,0.08966283333333039
+extension_LiS4_mp-1143546,mp-1143546,LiS4,extension,mixed,False,True,0.21230688803125108,LiS4 -> Li + 4 S,0.8966283333333038,0.08966283333333039
 extension_Mg15Ni_mp-1023622,mp-1023622,Mg15Ni,extension,metallic,True,True,0.07608314989583365,0.06667 Mg15Ni -> Mg + 0.06667 Ni,4.493440000000186,0.28084000000001164
 extension_Mg2Ge_mp-250,mp-250,Mg2Ge,extension,metallic,True,False,0.4831721600000005,0.5 Mg2Ge -> Mg + 0.5 Ge,8.071619999999996,1.3452699999999993
 extension_Mg3Al_mp-978271,mp-978271,Mg3Al,extension,metallic,True,True,0.027507425520833628,0.3333 Mg3Al -> Mg + 0.3333 Al,11.93751,2.9843775
 extension_Mg3Ru2_mp-625,mp-625,Mg3Ru2,extension,metallic,True,False,0.0,0.3333 Mg3Ru2 -> Mg + 0.6667 Ru,38.55261000000004,1.9276305000000018
 extension_Mg3Zr_mp-1094466,mp-1094466,Mg3Zr,extension,metallic,True,True,0.06476887374999984,0.3333 Mg3Zr -> Mg + 0.3333 Zr,13.557570000000025,1.6946962500000031
 extension_Mg5Sc_mp-1185837,mp-1185837,Mg5Sc,extension,metallic,True,True,0.0599288583333335,0.2 Mg5Sc -> Mg + 0.2 Sc,2.8230349999999995,0.47050583333333323
-extension_Mg5Te_mp-1185828,mp-1185828,Mg5Te,extension,,True,True,0.22432475583333433,0.2 Mg5Te -> Mg + 0.2 Te,1.0028166666666656,0.16713611111111093
+extension_Mg5Te_mp-1185828,mp-1185828,Mg5Te,extension,metallic,True,True,0.22432475583333433,0.2 Mg5Te -> Mg + 0.2 Te,1.0028166666666656,0.16713611111111093
 extension_MgAl2_mp-1102064,mp-1102064,MgAl2,extension,metallic,True,False,0.04160550583333311,MgAl2 -> Mg + 2 Al,82.75525999999999,6.896271666666666
 extension_MgCd_mp-11307,mp-11307,MgCd,extension,metallic,True,False,0.0,MgCd -> Mg + Cd,8.546110000000002,2.1365275000000006
 extension_MgCl2_exp_mp-23210,mp-23210,MgCl2,extension,ionic,False,False,0.0,MgCl2 -> Mg + Cl2,-1.4115799999999616,-0.15684222222221797
@@ -308,211 +308,212 @@ extension_MgIn2_mp-1077016,mp-1077016,MgIn2,extension,metallic,True,False,0.1897
 extension_MgO_exp_mp-549706,mp-549706,MgO,extension,ionic,False,False,0.11804199249999936,MgO -> Mg + 0.5 O2,5.671627500000026,1.4179068750000066
 extension_MgO_theo_mp-1009127,mp-1009127,MgO,extension,ionic,False,True,0.7484379050000003,MgO -> Mg + 0.5 O2,2.1526437500000046,1.0763218750000023
 extension_MgPb2_mp-2016042,mp-2016042,MgPb2,extension,metallic,True,True,0.03419048000000657,MgPb2 -> Mg + 2 Pb,16.35163000000003,2.7252716666666714
-extension_MgS_exp_mp-1315,mp-1315,MgS,extension,,False,False,0.0,MgS -> Mg + S,0.6801231249999988,0.3400615624999994
-extension_MgS_theo_mp-13032,mp-13032,MgS,extension,,False,True,0.034344234999999834,MgS -> Mg + S,0.8326431249999979,0.41632156249999897
+extension_MgS_exp_mp-1315,mp-1315,MgS,extension,ionic,False,False,0.0,MgS -> Mg + S,0.6801231249999988,0.3400615624999994
+extension_MgS_theo_mp-13032,mp-13032,MgS,extension,ionic,False,True,0.034344234999999834,MgS -> Mg + S,0.8326431249999979,0.41632156249999897
 extension_MgTi_mp-1094346,mp-1094346,MgTi,extension,metallic,True,True,0.12570916333333226,MgTi -> Mg + Ti,19.192310000000063,1.599359166666672
 extension_MgTl3_mp-978262,mp-978262,MgTl3,extension,metallic,True,True,0.051357820833329626,MgTl3 -> Mg + 3 Tl,17.48807,2.18600875
-extension_Mn2O7_mp-28338,mp-28338,Mn2O7,extension,,False,False,0.3346113968981488,0.5 Mn2O7 -> Mn + 1.75 O2,105.74711931034449,1.4687099904214511
-extension_Mn4B_mp-1221769,mp-1221769,Mn4B,extension,,True,True,0.10306404682758696,0.25 Mn4B -> Mn + 0.25 B,-12.987417011494259,-1.2987417011494258
+extension_Mn2O7_mp-28338,mp-28338,Mn2O7,extension,covalent,False,False,0.3346113968981488,0.5 Mn2O7 -> Mn + 1.75 O2,105.74711931034449,1.4687099904214511
+extension_Mn4B_mp-1221769,mp-1221769,Mn4B,extension,metallic,True,True,0.10306404682758696,0.25 Mn4B -> Mn + 0.25 B,-12.987417011494259,-1.2987417011494258
 extension_Mn4Ga_mp-1221812,mp-1221812,Mn4Ga,extension,metallic,True,True,0.1642719892413762,0.25 Mn4Ga -> Mn + 0.25 Ga,-26.37846767241381,-5.275693534482762
-extension_MnO2_mp-510408,mp-510408,MnO2,extension,,True,False,0.04644304472222238,MnO2 -> Mn + O2,3.1644474137931553,0.5274079022988593
-extension_Mo2C_mp-1221498,mp-1221498,Mo2C,extension,,True,True,0.06276392999999914,0.5 Mo2C -> Mo + 0.5 C,14.985825000000027,4.995275000000009
+extension_MnO2_mp-510408,mp-510408,MnO2,extension,metallic,True,False,0.04644304472222238,MnO2 -> Mn + O2,3.1644474137931553,0.5274079022988593
+extension_Mo2C_mp-1221498,mp-1221498,Mo2C,extension,metallic,True,True,0.06276392999999914,0.5 Mo2C -> Mo + 0.5 C,14.985825000000027,4.995275000000009
 extension_MoPd2_mp-1206704,mp-1206704,MoPd2,extension,metallic,True,True,0.0,MoPd2 -> Mo + 2 Pd,16.619920000000022,5.53997333333334
 extension_MoRu_mp-1221386,mp-1221386,MoRu,extension,metallic,True,True,0.09995914916666493,MoRu -> Mo + Ru,4.5602500000000035,2.2801250000000017
-extension_N2O_mp-1180473,mp-1180473,N2O,extension,covalent,False,False,0.2568286241666655,N2O -> N2 + 0.5 O2,-43.659535000000034,-3.638294583333336
-extension_NO_mp-1180334,mp-1180334,NO,extension,,True,True,0.6216735074999997,2 NO -> N2 + O2,-17.096995000000064,-2.137124375000008
-extension_Na2Cl_theo_mp-1077015,mp-1077015,Na2Cl,extension,,True,True,0.23910790120689684,0.5 Na2Cl -> Na + 0.25 Cl2,2.3790500000000003,0.3965083333333334
+extension_N2O_mp-1180473,mp-1180473,N2O,extension,mixed,False,False,0.2568286241666655,N2O -> N2 + 0.5 O2,-43.659535000000034,-3.638294583333336
+extension_NO_mp-1180334,mp-1180334,NO,extension,metallic,True,True,0.6216735074999997,2 NO -> N2 + O2,-17.096995000000064,-2.137124375000008
+extension_Na2Cl_theo_mp-1077015,mp-1077015,Na2Cl,extension,metallic,True,True,0.23910790120689684,0.5 Na2Cl -> Na + 0.25 Cl2,2.3790500000000003,0.3965083333333334
 extension_Na2O_exp_mp-2352,mp-2352,Na2O,extension,ionic,False,False,0.0,0.5 Na2O -> Na + 0.25 O2,3.9170437500000013,1.3056812500000003
 extension_Na2O_theo_mp-1975297,mp-1975297,Na2O,extension,ionic,False,True,0.09812461166666742,0.5 Na2O -> Na + 0.25 O2,9.371217499999991,1.5618695833333318
 extension_Na3Hg_mp-1186050,mp-1186050,Na3Hg,extension,metallic,True,True,0.021215371458335852,0.3333 Na3Hg -> Na + 0.3333 Hg,4.096973333333339,1.0242433333333347
 extension_Na3In_mp-864758,mp-864758,Na3In,extension,metallic,True,True,0.040365352500000284,0.3333 Na3In -> Na + 0.3333 In,9.80150000000001,2.4503750000000024
 extension_Na3Mg_mp-982637,mp-982637,Na3Mg,extension,metallic,True,True,0.09973374989585748,0.3333 Na3Mg -> Na + 0.3333 Mg,0.30864999999999965,0.07716249999999991
 extension_Na3Si34_mp-1221235,mp-1221235,Na3Si34,extension,metallic,True,True,0.05178974374999967,0.3333 Na3Si34 -> Na + 11.33 Si,15.80032,0.42703567567567563
-extension_NaN3_exp_mp-22003,mp-22003,NaN3,extension,,False,False,0.0017140024999999781,NaN3 -> Na + 1.5 N2,-8.690514999999955,-2.172628749999989
-extension_NaN3_mp-1066400,mp-1066400,NaN3,extension,,False,False,0.0029249474999994973,NaN3 -> Na + 1.5 N2,-7.574484999999989,-1.8936212499999971
-extension_NaN3_mp-22003,mp-22003,NaN3,extension,,False,False,0.0017140024999999781,NaN3 -> Na + 1.5 N2,-8.690514999999955,-2.172628749999989
-extension_NaN3_mp-634410,mp-634410,NaN3,extension,,False,True,0.26956520750000035,NaN3 -> Na + 1.5 N2,-11.609224999999974,-2.9023062499999934
-extension_NaN3_theo_mp-1065265,mp-1065265,NaN3,extension,,False,True,1.0162235174999994,NaN3 -> Na + 1.5 N2,6.928054999999986,1.7320137499999966
-extension_NaP15_mp-1194653,mp-1194653,NaP15,extension,,False,False,0.0,NaP15 -> Na + 15 P,2.151822142857327,0.06724444196429147
-extension_NaP5_mp-31086,mp-31086,NaP5,extension,,False,False,0.009960415000000111,NaP5 -> Na + 5 P,0.4767447619048255,0.01986436507936773
-extension_NaS_exp_mp-409,mp-409,NaS,extension,,False,False,0.002286554999999524,NaS -> Na + S,5.892948750000016,0.4910790625000014
-extension_NaS_theo_mp-1180106,mp-1180106,NaS,extension,,False,True,1.0060650862499996,NaS -> Na + S,4.799773124999999,2.3998865624999994
+extension_NaN3_exp_mp-22003,mp-22003,NaN3,extension,mixed,False,False,0.0017140024999999781,NaN3 -> Na + 1.5 N2,-8.690514999999955,-2.172628749999989
+extension_NaN3_mp-1066400,mp-1066400,NaN3,extension,mixed,False,False,0.0029249474999994973,NaN3 -> Na + 1.5 N2,-7.574484999999989,-1.8936212499999971
+extension_NaN3_mp-22003,mp-22003,NaN3,extension,mixed,False,False,0.0017140024999999781,NaN3 -> Na + 1.5 N2,-8.690514999999955,-2.172628749999989
+extension_NaN3_mp-634410,mp-634410,NaN3,extension,mixed,False,True,0.26956520750000035,NaN3 -> Na + 1.5 N2,-11.609224999999974,-2.9023062499999934
+extension_NaN3_theo_mp-1065265,mp-1065265,NaN3,extension,mixed,False,True,1.0162235174999994,NaN3 -> Na + 1.5 N2,6.928054999999986,1.7320137499999966
+extension_NaP15_mp-1194653,mp-1194653,NaP15,extension,mixed,False,False,0.0,NaP15 -> Na + 15 P,2.151822142857327,0.06724444196429147
+extension_NaP5_mp-31086,mp-31086,NaP5,extension,mixed,False,False,0.009960415000000111,NaP5 -> Na + 5 P,0.4767447619048255,0.01986436507936773
+extension_NaS_exp_mp-409,mp-409,NaS,extension,ionic,False,False,0.002286554999999524,NaS -> Na + S,5.892948750000016,0.4910790625000014
+extension_NaS_theo_mp-1180106,mp-1180106,NaS,extension,ionic,False,True,1.0060650862499996,NaS -> Na + S,4.799773124999999,2.3998865624999994
 extension_Nb3Ni_mp-999394,mp-999394,Nb3Ni,extension,metallic,True,True,0.21315346375000033,0.3333 Nb3Ni -> Nb + 0.3333 Ni,27.40192999999997,6.850482499999993
 extension_Nb4Rh_mp-1220441,mp-1220441,Nb4Rh,extension,metallic,True,True,0.08011662799999897,0.25 Nb4Rh -> Nb + 0.25 Rh,24.380279999999992,4.876055999999998
 extension_NbCd3_mp-11309,mp-11309,NbCd3,extension,metallic,True,False,0.14487106500000024,NbCd3 -> Nb + 3 Cd,25.860579999999977,6.465144999999994
-extension_NbO_anchor_mp-2692,mp-2692,NbO,extension,,True,False,0.7887604083333315,NbO -> Nb + 0.5 O2,4.635733750000014,2.317866875000007
-extension_NbO_poly_mp-634965,mp-634965,NbO,extension,,True,True,0.8240059083333318,NbO -> Nb + 0.5 O2,6.298983749999977,3.1494918749999883
-extension_NbP_anchor_mp-9830,mp-9830,NbP,extension,,True,False,0.6020631175000002,NbP -> Nb + P,9.889645476190502,2.4724113690476255
-extension_NbP_poly_mp-1220317,mp-1220317,NbP,extension,,True,True,0.6208620024999991,NbP -> Nb + P,2.3462377380952724,1.1731188690476362
+extension_NbO_anchor_mp-2692,mp-2692,NbO,extension,metallic,True,False,0.7887604083333315,NbO -> Nb + 0.5 O2,4.635733750000014,2.317866875000007
+extension_NbO_poly_mp-634965,mp-634965,NbO,extension,metallic,True,True,0.8240059083333318,NbO -> Nb + 0.5 O2,6.298983749999977,3.1494918749999883
+extension_NbP_anchor_mp-9830,mp-9830,NbP,extension,metallic,True,False,0.6020631175000002,NbP -> Nb + P,9.889645476190502,2.4724113690476255
+extension_NbP_poly_mp-1220317,mp-1220317,NbP,extension,metallic,True,True,0.6208620024999991,NbP -> Nb + P,2.3462377380952724,1.1731188690476362
 extension_NbZn16_mp-640041,mp-640041,NbZn16,extension,metallic,True,False,0.0,NbZn16 -> Nb + 16 Zn,242.1592499999997,7.122330882352933
 extension_Ni3Mo_mp-11506,mp-11506,Ni3Mo,extension,metallic,True,False,0.0,0.3333 Ni3Mo -> Ni + 0.3333 Mo,34.36340999999996,4.295426249999995
 extension_NiSb3_mp-1106023,mp-1106023,NiSb3,extension,metallic,True,False,0.01561135500000077,NiSb3 -> Ni + 3 Sb,3.417580000000015,0.21359875000000095
-extension_OsC_anchor_mp-7142,mp-7142,OsC,extension,,True,False,0.9160852612500001,OsC -> Os + C,4.033535000000008,2.016767500000004
-extension_OsC_poly_mp-1009537,mp-1009537,OsC,extension,,True,True,1.4795162512500006,OsC -> Os + C,4.636775000000025,2.3183875000000125
-extension_OsC_poly_mp-1009539,mp-1009539,OsC,extension,,True,True,1.3918186662499998,OsC -> Os + C,6.228205000000024,3.114102500000012
-extension_OsC_poly_mp-999308,mp-999308,OsC,extension,,True,True,0.9277737837499984,OsC -> Os + C,11.828770000000027,2.9571925000000068
+extension_OsC_anchor_mp-7142,mp-7142,OsC,extension,metallic,True,False,0.9160852612500001,OsC -> Os + C,4.033535000000008,2.016767500000004
+extension_OsC_poly_mp-1009537,mp-1009537,OsC,extension,metallic,True,True,1.4795162512500006,OsC -> Os + C,4.636775000000025,2.3183875000000125
+extension_OsC_poly_mp-1009539,mp-1009539,OsC,extension,metallic,True,True,1.3918186662499998,OsC -> Os + C,6.228205000000024,3.114102500000012
+extension_OsC_poly_mp-999308,mp-999308,OsC,extension,metallic,True,True,0.9277737837499984,OsC -> Os + C,11.828770000000027,2.9571925000000068
 extension_P4Se5_mp-2447,mp-2447,P4Se5,extension,covalent,False,False,0.00974189644444401,0.25 P4Se5 -> P + 1.25 Se,-12.828536190476399,-0.3563482275132333
-extension_PNO_mp-675742,mp-675742,PNO,extension,covalent,False,True,1.4997472041111104,PNO -> P + 0.5 N2 + 0.5 O2,-12.139051071428554,-0.6743917261904753
-extension_PW3_mp-1209828,mp-1209828,PW3,extension,,True,True,0.057999603124997634,PW3 -> P + 3 W,190.06838095238083,11.879273809523802
+extension_PNO_mp-675742,mp-675742,PNO,extension,mixed,False,True,1.4997472041111104,PNO -> P + 0.5 N2 + 0.5 O2,-12.139051071428554,-0.6743917261904753
+extension_PW3_mp-1209828,mp-1209828,PW3,extension,metallic,True,True,0.057999603124997634,PW3 -> P + 3 W,190.06838095238083,11.879273809523802
 extension_Pb2Au_mp-22795,mp-22795,Pb2Au,extension,metallic,True,False,0.0,0.5 Pb2Au -> Pb + 0.5 Au,40.87089000000002,6.811815000000003
 extension_PbAu3_mp-982246,mp-982246,PbAu3,extension,metallic,True,True,0.081645635000001,PbAu3 -> Pb + 3 Au,43.214819999999996,10.803704999999999
-extension_PbN6_mp-620058,mp-620058,PbN6,extension,covalent,False,False,0.1096255538095221,PbN6 -> Pb + 3 N2,-141.5782800000036,-1.685455714285757
-extension_PbN6_mp-667338,mp-667338,PbN6,extension,covalent,False,False,0.10931083119047358,PbN6 -> Pb + 3 N2,-142.3440500000031,-1.6945720238095607
+extension_PbN6_mp-620058,mp-620058,PbN6,extension,mixed,False,False,0.1096255538095221,PbN6 -> Pb + 3 N2,-141.5782800000036,-1.685455714285757
+extension_PbN6_mp-667338,mp-667338,PbN6,extension,mixed,False,False,0.10931083119047358,PbN6 -> Pb + 3 N2,-142.3440500000031,-1.6945720238095607
 extension_Rb2O_exp_mp-1394,mp-1394,Rb2O,extension,ionic,False,False,0.0031695866666665573,0.5 Rb2O -> Rb + 0.25 O2,-4.34121249999999,-0.7235354166666651
 extension_Rb2O_theo_mp-2023482,mp-2023482,Rb2O,extension,ionic,False,True,0.047853428888886995,0.5 Rb2O -> Rb + 0.25 O2,6.832676250000002,0.7591862500000003
 extension_Rb3In_mp-974948,mp-974948,Rb3In,extension,metallic,True,True,0.16634191892045447,0.3333 Rb3In -> Rb + 0.3333 In,10.394512500000005,2.598628125000001
 extension_Rb3Li_mp-974938,mp-974938,Rb3Li,extension,metallic,True,True,0.14514899354166677,0.3333 Rb3Li -> Rb + 0.3333 Li,3.0241791666666664,0.7560447916666666
-extension_Rb3P11_mp-1173444,mp-1173444,Rb3P11,extension,,True,True,0.27383845571428367,0.3333 Rb3P11 -> Rb + 3.667 P,0.013205238095309824,0.0004716156462610651
-extension_Rb3P_mp-974822,mp-974822,Rb3P,extension,,False,True,0.11857260520833357,0.3333 Rb3P -> Rb + 0.3333 P,-3.626959761904759,-0.9067399404761898
+extension_Rb3P11_mp-1173444,mp-1173444,Rb3P11,extension,metallic,True,True,0.27383845571428367,0.3333 Rb3P11 -> Rb + 3.667 P,0.013205238095309824,0.0004716156462610651
+extension_Rb3P_mp-974822,mp-974822,Rb3P,extension,ionic,False,True,0.11857260520833357,0.3333 Rb3P -> Rb + 0.3333 P,-3.626959761904759,-0.9067399404761898
 extension_RbCl_exp_mp-23299,mp-23299,RbCl,extension,ionic,False,False,0.02977404000000128,RbCl -> Rb + 0.5 Cl2,-3.5848174999999998,-1.7924087499999999
 extension_RbF_exp_mp-2064,mp-2064,RbF,extension,ionic,False,False,0.05158332500000107,RbF -> Rb + 0.5 F2,-7.8487725000000035,-3.9243862500000017
 extension_RbF_theo_mp-11718,mp-11718,RbF,extension,ionic,False,True,0.0,RbF -> Rb + 0.5 F2,-3.8994024999999954,-1.9497012499999977
-extension_RbN3_exp_mp-581833,mp-581833,RbN3,extension,,False,False,0.019336026250000415,RbN3 -> Rb + 1.5 N2,-9.380027500000004,-2.345006875000001
-extension_RbN3_theo_mp-1219567,mp-1219567,RbN3,extension,,False,True,0.79660387875,RbN3 -> Rb + 1.5 N2,-0.5168874999999602,-0.12922187499999005
-extension_RbP15_mp-1209298,mp-1209298,RbP15,extension,,False,True,0.0,RbP15 -> Rb + 15 P,3.410207142856933,0.10656897321427916
-extension_RbP_exp_mp-1179688,mp-1179688,RbP,extension,,True,False,0.9878872979166671,RbP -> Rb + P,3.8629052380952427,1.9314526190476213
-extension_RbP_theo_mp-1058499,mp-1058499,RbP,extension,,True,True,0.9881531929166671,RbP -> Rb + P,3.820805238095244,1.910402619047622
-extension_RbS_exp_mp-558071,mp-558071,RbS,extension,,False,False,0.0018650299999998232,RbS -> Rb + S,1.2867712499999975,0.32169281249999937
-extension_RbS_theo_mp-1179684,mp-1179684,RbS,extension,,False,True,0.9974513208333313,RbS -> Rb + S,5.4694306249999975,2.7347153124999988
+extension_RbN3_exp_mp-581833,mp-581833,RbN3,extension,mixed,False,False,0.019336026250000415,RbN3 -> Rb + 1.5 N2,-9.380027500000004,-2.345006875000001
+extension_RbN3_theo_mp-1219567,mp-1219567,RbN3,extension,mixed,False,True,0.79660387875,RbN3 -> Rb + 1.5 N2,-0.5168874999999602,-0.12922187499999005
+extension_RbP15_mp-1209298,mp-1209298,RbP15,extension,mixed,False,True,0.0,RbP15 -> Rb + 15 P,3.410207142856933,0.10656897321427916
+extension_RbP_exp_mp-1179688,mp-1179688,RbP,extension,metallic,True,False,0.9878872979166671,RbP -> Rb + P,3.8629052380952427,1.9314526190476213
+extension_RbP_theo_mp-1058499,mp-1058499,RbP,extension,metallic,True,True,0.9881531929166671,RbP -> Rb + P,3.820805238095244,1.910402619047622
+extension_RbS_exp_mp-558071,mp-558071,RbS,extension,mixed,False,False,0.0018650299999998232,RbS -> Rb + S,1.2867712499999975,0.32169281249999937
+extension_RbS_theo_mp-1179684,mp-1179684,RbS,extension,ionic,False,True,0.9974513208333313,RbS -> Rb + S,5.4694306249999975,2.7347153124999988
 extension_Re2Si_mp-669547,mp-669547,Re2Si,extension,metallic,True,False,0.3323728517857134,0.5 Re2Si -> Re + 0.5 Si,63.52615999999992,2.64692333333333
-extension_Re3N5_mp-1080194,mp-1080194,Re3N5,extension,,True,True,0.15380868749999976,0.3333 Re3N5 -> Re + 0.8333 N2,16.43613000000002,2.0545162500000025
+extension_Re3N5_mp-1080194,mp-1080194,Re3N5,extension,metallic,True,True,0.15380868749999976,0.3333 Re3N5 -> Re + 0.8333 N2,16.43613000000002,2.0545162500000025
 extension_Re3Pd_mp-862586,mp-862586,Re3Pd,extension,metallic,True,True,0.0,0.3333 Re3Pd -> Re + 0.3333 Pd,30.79588999999997,3.8494862499999964
 extension_Re5Si3_mp-1105959,mp-1105959,Re5Si3,extension,metallic,True,False,0.15830164888392595,0.2 Re5Si3 -> Re + 0.6 Si,30.616909999999933,1.9135568749999958
-extension_ReC_anchor_mp-1079494,mp-1079494,ReC,extension,,True,False,0.636191904375,ReC -> Re + C,21.299850000000063,2.662481250000008
-extension_ReC_poly_mp-1009731,mp-1009731,ReC,extension,,True,True,1.1149929443750004,ReC -> Re + C,3.991029999999988,1.995514999999994
-extension_RuC_anchor_mp-10030,mp-10030,RuC,extension,,True,False,0.6494276712500024,RuC -> Ru + C,4.260265000000015,2.1301325000000073
-extension_RuC_poly_mp-1009787,mp-1009787,RuC,extension,,True,True,0.9096720512499985,RuC -> Ru + C,5.720965000000028,2.860482500000014
+extension_ReC_anchor_mp-1079494,mp-1079494,ReC,extension,metallic,True,False,0.636191904375,ReC -> Re + C,21.299850000000063,2.662481250000008
+extension_ReC_poly_mp-1009731,mp-1009731,ReC,extension,metallic,True,True,1.1149929443750004,ReC -> Re + C,3.991029999999988,1.995514999999994
+extension_RuC_anchor_mp-10030,mp-10030,RuC,extension,metallic,True,False,0.6494276712500024,RuC -> Ru + C,4.260265000000015,2.1301325000000073
+extension_RuC_poly_mp-1009787,mp-1009787,RuC,extension,metallic,True,True,0.9096720512499985,RuC -> Ru + C,5.720965000000028,2.860482500000014
 extension_RuRh3_mp-974335,mp-974335,RuRh3,extension,metallic,True,True,0.0347198320833364,RuRh3 -> Ru + 3 Rh,16.545210000000008,4.136302500000002
 extension_S4N2_cod4031496,,S2N,extension,covalent,,,,0.5 S2N -> S + 0.25 N2,-15.948280000000238,-0.6645116666666766
 extension_S4N4_cod7017102,,SN,extension,covalent,,,,SN -> S + 0.5 N2,-34.09620999999913,-1.0655065624999729
 extension_SN_anchor_mp-236,mp-236,SN,extension,covalent,False,False,0.5086555859375004,SN -> S + 0.5 N2,-1.1517475000000843,-0.14396843750001054
-extension_SN_poly_mp-1078816,mp-1078816,SN,extension,,True,True,0.8090262296875004,SN -> S + 0.5 N2,9.970602499999991,1.246325312499999
-extension_SN_poly_mp-1173453,mp-1173453,SN,extension,,True,True,0.7225484081597227,SN -> S + 0.5 N2,25.395266250000248,0.7054240625000069
-extension_SN_poly_mp-684642,mp-684642,SN,extension,,True,True,0.5498053901041668,SN -> S + 0.5 N2,-26.12277375000042,-0.7256326041666783
-extension_Sb2S5_mp-1359089,mp-1359089,Sb2S5,extension,,True,True,0.08012190446428491,0.5 Sb2S5 -> Sb + 2.5 S,12.790122499999939,0.4567900892857121
+extension_SN_poly_mp-1078816,mp-1078816,SN,extension,metallic,True,True,0.8090262296875004,SN -> S + 0.5 N2,9.970602499999991,1.246325312499999
+extension_SN_poly_mp-1173453,mp-1173453,SN,extension,metallic,True,True,0.7225484081597227,SN -> S + 0.5 N2,25.395266250000248,0.7054240625000069
+extension_SN_poly_mp-684642,mp-684642,SN,extension,metallic,True,True,0.5498053901041668,SN -> S + 0.5 N2,-26.12277375000042,-0.7256326041666783
+extension_Sb2S5_mp-1359089,mp-1359089,Sb2S5,extension,metallic,True,True,0.08012190446428491,0.5 Sb2S5 -> Sb + 2.5 S,12.790122499999939,0.4567900892857121
 extension_ScOs3_mp-981384,mp-981384,ScOs3,extension,metallic,True,True,0.384095409375,ScOs3 -> Sc + 3 Os,10.692895000000007,2.673223750000002
-extension_Si3H_mp-995193,mp-995193,Si3H,extension,covalent,False,True,0.03147248546874959,0.3333 Si3H -> Si + 0.1667 H2,0.31855000000008005,0.039818750000010006
+extension_Si3H_mp-995193,mp-995193,Si3H,extension,mixed,False,True,0.03147248546874959,0.3333 Si3H -> Si + 0.1667 H2,0.31855000000008005,0.039818750000010006
 extension_Si3Pt_mp-972763,mp-972763,Si3Pt,extension,metallic,True,True,0.2618652343750014,0.3333 Si3Pt -> Si + 0.3333 Pt,3.869650000000007,0.4837062500000009
 extension_Si3W5_mp-31219,mp-31219,Si3W5,extension,metallic,True,False,0.025065460000000428,0.3333 Si3W5 -> Si + 1.667 W,162.67545000000007,10.167215625000004
-extension_SiH2_mp-1192532,mp-1192532,SiH2,extension,covalent,False,False,0.04434195949999964,SiH2 -> Si + H2,2.9411099999999237,0.09803699999999746
-extension_SiO2_anchor_mp-9258,mp-9258,SiO2,extension,covalent,False,False,0.5770440263888901,SiO2 -> Si + O2,-39.9978600000004,-3.3331550000000334
-extension_SiO2_poly_mp-10064,mp-10064,SiO2,extension,covalent,False,True,1.27794353388889,SiO2 -> Si + O2,-6.520467500000009,-2.17348916666667
-extension_SiO2_poly_mp-556044,mp-556044,SiO2,extension,,True,True,1.4573660394444454,SiO2 -> Si + O2,-3.4497799999999756,-0.09582722222222155
-extension_SiO2_poly_mp-638049,mp-638049,SiO2,extension,,True,True,1.7447606447222235,SiO2 -> Si + O2,-13.85662999999937,-0.3849063888888714
+extension_SiH2_mp-1192532,mp-1192532,SiH2,extension,mixed,False,False,0.04434195949999964,SiH2 -> Si + H2,2.9411099999999237,0.09803699999999746
+extension_SiO2_anchor_mp-9258,mp-9258,SiO2,extension,ionic,False,False,0.5770440263888901,SiO2 -> Si + O2,-39.9978600000004,-3.3331550000000334
+extension_SiO2_poly_mp-10064,mp-10064,SiO2,extension,ionic,False,True,1.27794353388889,SiO2 -> Si + O2,-6.520467500000009,-2.17348916666667
+extension_SiO2_poly_mp-556044,mp-556044,SiO2,extension,metallic,True,True,1.4573660394444454,SiO2 -> Si + O2,-3.4497799999999756,-0.09582722222222155
+extension_SiO2_poly_mp-638049,mp-638049,SiO2,extension,metallic,True,True,1.7447606447222235,SiO2 -> Si + O2,-13.85662999999937,-0.3849063888888714
 extension_SiTc3_mp-972784,mp-972784,SiTc3,extension,metallic,True,True,0.1528513418749995,SiTc3 -> Si + 3 Tc,20.201460000000026,2.525182500000003
-extension_SiTe2_mp-2755,mp-2755,SiTe2,extension,,True,False,0.0482593716666635,SiTe2 -> Si + 2 Te,-1.6808216666666596,-0.5602738888888865
-extension_Sn3S_mp-1187038,mp-1187038,Sn3S,extension,,True,True,0.3167847331250009,0.3333 Sn3S -> Sn + 0.3333 S,16.181113124999964,4.045278281249991
-extension_Sn3Se_mp-1187055,mp-1187055,Sn3Se,extension,,True,True,0.2596551493749999,0.3333 Sn3Se -> Sn + 0.3333 Se,15.561609999999966,3.8904024999999915
-extension_SnP_mp-475,mp-475,SnP,extension,,True,False,0.040785102499999226,SnP -> Sn + P,2.4042977380952557,1.2021488690476279
+extension_SiTe2_mp-2755,mp-2755,SiTe2,extension,metallic,True,False,0.0482593716666635,SiTe2 -> Si + 2 Te,-1.6808216666666596,-0.5602738888888865
+extension_Sn3S_mp-1187038,mp-1187038,Sn3S,extension,metallic,True,True,0.3167847331250009,0.3333 Sn3S -> Sn + 0.3333 S,16.181113124999964,4.045278281249991
+extension_Sn3Se_mp-1187055,mp-1187055,Sn3Se,extension,metallic,True,True,0.2596551493749999,0.3333 Sn3Se -> Sn + 0.3333 Se,15.561609999999966,3.8904024999999915
+extension_SnP_mp-475,mp-475,SnP,extension,metallic,True,False,0.040785102499999226,SnP -> Sn + P,2.4042977380952557,1.2021488690476279
 extension_SnPb3_mp-1187118,mp-1187118,SnPb3,extension,metallic,True,True,0.08925198000000023,SnPb3 -> Sn + 3 Pb,41.564649999999965,5.195581249999996
-extension_Sr3N2_mp-1013529,mp-1013529,Sr3N2,extension,,True,True,0.5582295490000018,0.3333 Sr3N2 -> Sr + 0.3333 N2,12.16303500000002,2.432607000000004
-extension_Sr3P4_exp_mp-14288,mp-14288,Sr3P4,extension,,False,False,0.0,0.3333 Sr3P4 -> Sr + 1.333 P,14.660611904761929,1.047186564625852
-extension_Sr3P4_theo_mp-682953,mp-682953,Sr3P4,extension,,False,True,0.00811516785714339,0.3333 Sr3P4 -> Sr + 1.333 P,15.110811904761931,1.079343707482995
-extension_SrB2_mp-1008755,mp-1008755,SrB2,extension,,True,True,0.5325422407407405,SrB2 -> Sr + 2 B,8.365578333333335,2.788526111111112
+extension_Sr3N2_mp-1013529,mp-1013529,Sr3N2,extension,metallic,True,True,0.5582295490000018,0.3333 Sr3N2 -> Sr + 0.3333 N2,12.16303500000002,2.432607000000004
+extension_Sr3P4_exp_mp-14288,mp-14288,Sr3P4,extension,mixed,False,False,0.0,0.3333 Sr3P4 -> Sr + 1.333 P,14.660611904761929,1.047186564625852
+extension_Sr3P4_theo_mp-682953,mp-682953,Sr3P4,extension,mixed,False,True,0.00811516785714339,0.3333 Sr3P4 -> Sr + 1.333 P,15.110811904761931,1.079343707482995
+extension_SrB2_mp-1008755,mp-1008755,SrB2,extension,metallic,True,True,0.5325422407407405,SrB2 -> Sr + 2 B,8.365578333333335,2.788526111111112
 extension_SrF2_exp_mp-1102240,mp-1102240,SrF2,extension,ionic,False,False,0.06457278833333291,SrF2 -> Sr + F2,6.505420000000004,0.5421183333333337
 extension_SrF2_theo_mp-1102911,mp-1102911,SrF2,extension,ionic,False,True,0.02665916666666579,SrF2 -> Sr + F2,1.7766600000000032,0.14805500000000027
-extension_SrN6_mp-2131,mp-2131,SrN6,extension,,False,False,0.009174299285714227,SrN6 -> Sr + 3 N2,-26.2081000000002,-1.8720071428571572
-extension_SrN_exp_mp-1058586,mp-1058586,SrN,extension,,True,False,0.4343258274999986,SrN -> Sr + 0.5 N2,4.155350000000007,2.0776750000000037
-extension_SrO10_mp-1208655,mp-1208655,SrO10,extension,,True,True,0.6930220472727271,SrO10 -> Sr + 5 O2,29.474742499999877,2.6795220454545343
-extension_SrO2_exp_mp-726705,mp-726705,SrO2,extension,ionic,False,False,0.009602360833331325,SrO2 -> Sr + O2,23.046230000000016,1.9205191666666679
-extension_SrO2_theo_mp-2763179,mp-2763179,SrO2,extension,ionic,False,True,0.011030372499999608,SrO2 -> Sr + O2,21.026519999999962,1.752209999999997
-extension_SrS_exp_mp-10627,mp-10627,SrS,extension,,False,False,0.2996298049999986,SrS -> Sr + S,0.21766812499999766,0.10883406249999883
+extension_SrN6_mp-2131,mp-2131,SrN6,extension,mixed,False,False,0.009174299285714227,SrN6 -> Sr + 3 N2,-26.2081000000002,-1.8720071428571572
+extension_SrN_exp_mp-1058586,mp-1058586,SrN,extension,metallic,True,False,0.4343258274999986,SrN -> Sr + 0.5 N2,4.155350000000007,2.0776750000000037
+extension_SrO10_mp-1208655,mp-1208655,SrO10,extension,metallic,True,True,0.6930220472727271,SrO10 -> Sr + 5 O2,29.474742499999877,2.6795220454545343
+extension_SrO2_exp_mp-726705,mp-726705,SrO2,extension,mixed,False,False,0.009602360833331325,SrO2 -> Sr + O2,23.046230000000016,1.9205191666666679
+extension_SrO2_theo_mp-2763179,mp-2763179,SrO2,extension,mixed,False,True,0.011030372499999608,SrO2 -> Sr + O2,21.026519999999962,1.752209999999997
+extension_SrS_exp_mp-10627,mp-10627,SrS,extension,ionic,False,False,0.2996298049999986,SrS -> Sr + S,0.21766812499999766,0.10883406249999883
 extension_TaBe12_mp-567842,mp-567842,TaBe12,extension,metallic,True,False,0.0,TaBe12 -> Ta + 12 Be,28.966340000000315,2.228180000000024
-extension_TaN_anchor_mp-1497,mp-1497,TaN,extension,,True,False,0.4515790083333364,TaN -> Ta + 0.5 N2,20.814055000000053,3.4690091666666754
-extension_TaN_poly_mp-1009831,mp-1009831,TaN,extension,,True,True,0.8162796533333321,TaN -> Ta + 0.5 N2,3.184395000000034,1.592197500000017
-extension_TaN_poly_mp-1009833,mp-1009833,TaN,extension,,True,True,0.49169759333333474,TaN -> Ta + 0.5 N2,5.753205000000026,2.876602500000013
+extension_TaN_anchor_mp-1497,mp-1497,TaN,extension,metallic,True,False,0.4515790083333364,TaN -> Ta + 0.5 N2,20.814055000000053,3.4690091666666754
+extension_TaN_poly_mp-1009831,mp-1009831,TaN,extension,metallic,True,True,0.8162796533333321,TaN -> Ta + 0.5 N2,3.184395000000034,1.592197500000017
+extension_TaN_poly_mp-1009833,mp-1009833,TaN,extension,metallic,True,True,0.49169759333333474,TaN -> Ta + 0.5 N2,5.753205000000026,2.876602500000013
 extension_Tc3Mo_mp-1187395,mp-1187395,Tc3Mo,extension,metallic,True,True,0.11694241874999989,0.3333 Tc3Mo -> Tc + 0.3333 Mo,19.774985000000015,4.943746250000004
 extension_Tc3Os_mp-862779,mp-862779,Tc3Os,extension,metallic,True,True,0.0,0.3333 Tc3Os -> Tc + 0.3333 Os,30.39429000000004,3.799286250000005
 extension_Tc3W_mp-1187398,mp-1187398,Tc3W,extension,metallic,True,True,0.10723927500000485,0.3333 Tc3W -> Tc + 0.3333 W,56.633440000000036,7.0791800000000045
-extension_Te2Pd7_mp-1217443,mp-1217443,Te2Pd7,extension,,True,True,0.11441960977299814,0.5 Te2Pd7 -> Te + 3.5 Pd,133.5187700000002,4.945139629629637
+extension_Te2Pd7_mp-1217443,mp-1217443,Te2Pd7,extension,metallic,True,True,0.11441960977299814,0.5 Te2Pd7 -> Te + 3.5 Pd,133.5187700000002,4.945139629629637
 extension_Ti2Cu_mp-742,mp-742,Ti2Cu,extension,metallic,True,False,0.0,0.5 Ti2Cu -> Ti + 0.5 Cu,2.1548700000000096,0.7182900000000032
 extension_Ti3Nb_mp-1217091,mp-1217091,Ti3Nb,extension,metallic,True,True,0.06679139250000077,0.3333 Ti3Nb -> Ti + 0.3333 Nb,5.674004999999987,1.4185012499999967
 extension_TiMo2_mp-1216675,mp-1216675,TiMo2,extension,metallic,True,True,0.061337100370366215,TiMo2 -> Ti + 2 Mo,10.12679500000003,3.3755983333333432
-extension_TiO2II_mp-1439,mp-1439,TiO2,extension,,False,False,0.004523600833332253,TiO2 -> Ti + O2,7.753200000000064,0.6461000000000053
-extension_TiO2OII_mp-9173,mp-9173,TiO2,extension,,False,False,0.05749979000000138,TiO2 -> Ti + O2,7.811000000000192,0.6509166666666827
-extension_TiO2baddeleyite_mp-430,mp-430,TiO2,extension,,False,False,0.03948350083333452,TiO2 -> Ti + O2,7.519990000000064,0.6266658333333387
+extension_TiO2II_mp-1439,mp-1439,TiO2,extension,covalent,False,False,0.004523600833332253,TiO2 -> Ti + O2,7.753200000000064,0.6461000000000053
+extension_TiO2OII_mp-9173,mp-9173,TiO2,extension,covalent,False,False,0.05749979000000138,TiO2 -> Ti + O2,7.811000000000192,0.6509166666666827
+extension_TiO2baddeleyite_mp-430,mp-430,TiO2,extension,ionic,False,False,0.03948350083333452,TiO2 -> Ti + O2,7.519990000000064,0.6266658333333387
 extension_Tl3Au_mp-1080569,mp-1080569,Tl3Au,extension,metallic,True,True,0.06940479416666534,0.3333 Tl3Au -> Tl + 0.3333 Au,49.093369999999986,6.136671249999998
-extension_TlAs_mp-1007770,mp-1007770,TlAs,extension,,True,True,0.11668702583332902,TlAs -> Tl + As,1.02865500000002,0.51432750000001
+extension_TlAs_mp-1007770,mp-1007770,TlAs,extension,metallic,True,True,0.11668702583332902,TlAs -> Tl + As,1.02865500000002,0.51432750000001
 extension_TlAu3_mp-1187508,mp-1187508,TlAu3,extension,metallic,True,True,0.12302775499999541,TlAu3 -> Tl + 3 Au,44.569069999999996,11.142267499999999
-extension_TlC_anchor_mp-567465,mp-567465,TlC,extension,,True,False,2.10802690958333,TlC -> Tl + C,6.280745000000039,3.1403725000000193
-extension_TlC_poly_mp-1058887,mp-1058887,TlC,extension,,True,True,2.375719474583331,TlC -> Tl + C,6.727645000000017,3.3638225000000084
-extension_TlN_anchor_mp-1017982,mp-1017982,TlN,extension,,True,False,0.7334453533333338,TlN -> Tl + 0.5 N2,5.151840000000028,1.287960000000007
-extension_TlN_poly_mp-1002222,mp-1002222,TlN,extension,,True,True,0.9711865358333327,TlN -> Tl + 0.5 N2,-0.2780649999999838,-0.1390324999999919
-extension_TlN_poly_mp-1007778,mp-1007778,TlN,extension,,True,True,0.733738815833334,TlN -> Tl + 0.5 N2,1.4659950000000137,0.7329975000000069
-extension_W9C4_mp-684989,mp-684989,W9C4,extension,,True,True,0.07193477384615221,0.1111 W9C4 -> W + 0.4444 C,356.8896600000002,13.726525384615393
-extension_WBr5_mp-1436789,mp-1436789,WBr5,extension,,True,True,0.9777983063888893,WBr5 -> W + 5 Br,21.872379999999822,1.8226983333333184
-extension_WC_anchor_mp-13136,mp-13136,WC,extension,,True,False,0.4476605100000022,WC -> W + C,12.536875000000059,6.268437500000029
-extension_WC_poly_mp-1008630,mp-1008630,WC,extension,,True,True,0.8989987500000005,WC -> W + C,11.880085000000008,5.940042500000004
-extension_WC_poly_mp-1008635,mp-1008635,WC,extension,,True,True,0.6728768300000034,WC -> W + C,15.463095000000052,7.731547500000026
+extension_TlC_anchor_mp-567465,mp-567465,TlC,extension,metallic,True,False,2.10802690958333,TlC -> Tl + C,6.280745000000039,3.1403725000000193
+extension_TlC_poly_mp-1058887,mp-1058887,TlC,extension,metallic,True,True,2.375719474583331,TlC -> Tl + C,6.727645000000017,3.3638225000000084
+extension_TlN_anchor_mp-1017982,mp-1017982,TlN,extension,metallic,True,False,0.7334453533333338,TlN -> Tl + 0.5 N2,5.151840000000028,1.287960000000007
+extension_TlN_poly_mp-1002222,mp-1002222,TlN,extension,metallic,True,True,0.9711865358333327,TlN -> Tl + 0.5 N2,-0.2780649999999838,-0.1390324999999919
+extension_TlN_poly_mp-1007778,mp-1007778,TlN,extension,metallic,True,True,0.733738815833334,TlN -> Tl + 0.5 N2,1.4659950000000137,0.7329975000000069
+extension_W9C4_mp-684989,mp-684989,W9C4,extension,metallic,True,True,0.07193477384615221,0.1111 W9C4 -> W + 0.4444 C,356.8896600000002,13.726525384615393
+extension_WBr5_mp-1436789,mp-1436789,WBr5,extension,metallic,True,True,0.9777983063888893,WBr5 -> W + 5 Br,21.872379999999822,1.8226983333333184
+extension_WC_anchor_mp-13136,mp-13136,WC,extension,metallic,True,False,0.4476605100000022,WC -> W + C,12.536875000000059,6.268437500000029
+extension_WC_poly_mp-1008630,mp-1008630,WC,extension,metallic,True,True,0.8989987500000005,WC -> W + C,11.880085000000008,5.940042500000004
+extension_WC_poly_mp-1008635,mp-1008635,WC,extension,metallic,True,True,0.6728768300000034,WC -> W + C,15.463095000000052,7.731547500000026
 extension_Y3Co_mp-1105598,mp-1105598,Y3Co,extension,metallic,True,False,0.0,0.3333 Y3Co -> Y + 0.3333 Co,46.55465000000001,2.9096656250000006
 extension_Zn13Rh_mp-13447,mp-13447,Zn13Rh,extension,metallic,True,False,0.0,0.07692 Zn13Rh -> Zn + 0.07692 Rh,95.48866500000008,6.8206189285714345
 extension_Zn2Ag_mp-1093999,mp-1093999,Zn2Ag,extension,metallic,True,True,0.0,0.5 Zn2Ag -> Zn + 0.5 Ag,85.80920000000015,7.150766666666679
 extension_Zn3Au_mp-1188000,mp-1188000,Zn3Au,extension,metallic,True,True,0.027401257187502637,0.3333 Zn3Au -> Zn + 0.3333 Au,69.32246999999997,8.665308749999996
-extension_Zn3N2_mp-1524551,mp-1524551,Zn3N2,extension,,True,True,0.014135124999999249,0.3333 Zn3N2 -> Zn + 0.3333 N2,85.92135999999996,4.296067999999998
-extension_Zn3N2_mp-9460,mp-9460,Zn3N2,extension,,True,False,0.0,0.3333 Zn3N2 -> Zn + 0.3333 N2,177.11498999999986,4.427874749999996
+extension_Zn3N2_mp-1524551,mp-1524551,Zn3N2,extension,metallic,True,True,0.014135124999999249,0.3333 Zn3N2 -> Zn + 0.3333 N2,85.92135999999996,4.296067999999998
+extension_Zn3N2_mp-9460,mp-9460,Zn3N2,extension,metallic,True,False,0.0,0.3333 Zn3N2 -> Zn + 0.3333 N2,177.11498999999986,4.427874749999996
 extension_Zn7Tc_mp-1206378,mp-1206378,Zn7Tc,extension,metallic,True,True,0.0825775456249982,0.1429 Zn7Tc -> Zn + 0.1429 Tc,49.86276999999991,6.232846249999989
 extension_Zr3Fe_mp-31205,mp-31205,Zr3Fe,extension,metallic,True,False,0.0,0.3333 Zr3Fe -> Zr + 0.3333 Fe,12.668559999999985,1.5835699999999981
 extension_ZrHg3_mp-1608,mp-1608,ZrHg3,extension,metallic,True,False,0.02171306624999403,ZrHg3 -> Zr + 3 Hg,-4.430874999999972,-1.107718749999993
-hull_ionic_NaCl_mp-22862,,NaCl,hull,ionic,,,0.0,NaCl -> Na + 0.5 Cl2,-0.7470949999999985,-0.37354749999999926
-hull_metallic_AlNi_mp-1487,,AlNi,hull,metallic,,,0.0,AlNi -> Al + Ni,-6.039459999999995,-3.0197299999999974
-metastable_ionic_LiBr_mp-23259,,LiBr,metastable,ionic,,,0.009895712500000542,LiBr -> Li + Br,-8.116458333333334,-4.058229166666667
-metastable_metallic_BeCu_mp-2323,,BeCu,metastable,metallic,,,0.005036342500000401,BeCu -> Be + Cu,-10.074172499999978,-5.037086249999989
-theo_metastable_Al4Si_mp-1228120,mp-1228120,Al4Si,theo_metastable,,,True,0.11491430399999913,0.25 Al4Si -> Al + 0.25 Si,-3.301565000000025,-0.660313000000005
-theo_metastable_AlSb_mp-1023918,mp-1023918,AlSb,theo_metastable,,,True,0.18779470750000016,AlSb -> Al + Sb,16.665740000000035,4.166435000000009
-theo_metastable_B3Ir2_mp-1228647,mp-1228647,B3Ir2,theo_metastable,,,True,0.06085322616666744,0.3333 B3Ir2 -> B + 0.6667 Ir,64.39124000000015,6.439124000000016
-theo_metastable_B6Pb_mp-1096825,mp-1096825,B6Pb,theo_metastable,,,True,0.115100015000003,0.1667 B6Pb -> B + 0.1667 Pb,14.713150000000056,2.1018785714285793
-theo_metastable_BPd5_mp-1228665,mp-1228665,BPd5,theo_metastable,,,True,0.13249513083333042,BPd5 -> B + 5 Pd,43.94649666666665,7.324416111111108
-theo_metastable_BeAu3_mp-983539,mp-983539,BeAu3,theo_metastable,,,True,0.18183134000000178,BeAu3 -> Be + 3 Au,45.04971750000003,11.262429375000007
-theo_metastable_BeCl2_mp-1190080,mp-1190080,BeCl2,theo_metastable,,,True,0.01870443305555547,BeCl2 -> Be + Cl2,-35.767364999999984,-1.9870758333333325
-theo_metastable_CaGe2_mp-643542,mp-643542,CaGe2,theo_metastable,,,True,0.0978748566666674,CaGe2 -> Ca + 2 Ge,4.352050000000011,1.4506833333333369
-theo_metastable_CoSe2_mp-1390196,mp-1390196,CoSe2,theo_metastable,,,True,0.07343032750000056,CoSe2 -> Co + 2 Se,7.569800000000043,0.6308166666666702
-theo_metastable_Cr2C_mp-1226378,mp-1226378,Cr2C,theo_metastable,,,True,0.06254013708333694,0.5 Cr2C -> Cr + 0.5 C,0.7770250000000232,0.25900833333334106
-theo_metastable_CrMo_mp-1226200,mp-1226200,CrMo,theo_metastable,,,True,0.11631646000000018,CrMo -> Cr + Mo,2.679375000000011,1.3396875000000055
-theo_metastable_Ga2Se3_mp-1224809,mp-1224809,Ga2Se3,theo_metastable,,,True,0.006252534999998005,0.5 Ga2Se3 -> Ga + 1.5 Se,-7.033145000000012,-1.4066290000000023
-theo_metastable_GeS_mp-12910,mp-12910,GeS,theo_metastable,,,True,0.0761541225000002,GeS -> Ge + S,5.022606250000003,1.2556515625000007
-theo_metastable_HCl_mp-684609,mp-684609,HCl,theo_metastable,,,True,0.053566722500000274,2 HCl -> H2 + Cl2,-1.980934999999997,-0.9904674999999985
-theo_metastable_HfMo_mp-1224314,mp-1224314,HfMo,theo_metastable,,,True,0.19909284749999756,HfMo -> Hf + Mo,4.630750000000017,2.3153750000000084
-theo_metastable_IN2_mp-1097011,mp-1097011,IN2,theo_metastable,,,True,0.07299064583333248,IN2 -> I + N2,0.47153000000001555,0.07858833333333592
-theo_metastable_InSe2_mp-1232036,mp-1232036,InSe2,theo_metastable,,,True,0.17326202766492926,InSe2 -> In + 2 Se,8.645460000000014,1.4409100000000024
-theo_metastable_IrCl3_mp-729507,mp-729507,IrCl3,theo_metastable,,,True,0.030088630624999446,IrCl3 -> Ir + 1.5 Cl2,30.32839000000004,1.8955243750000026
-theo_metastable_K5As4_mp-684799,mp-684799,K5As4,theo_metastable,,,True,0.05643723222222263,0.2 K5As4 -> K + 0.8 As,4.430620000000033,0.4922911111111148
-theo_metastable_KSn3_mp-1185151,mp-1185151,KSn3,theo_metastable,,,True,0.05729916087053466,KSn3 -> K + 3 Sn,30.23839999999997,3.7797999999999963
-theo_metastable_Li3Ag_mp-976408,mp-976408,Li3Ag,theo_metastable,,,True,0.0013151149999997003,0.3333 Li3Ag -> Li + 0.3333 Ag,2.6126700000000156,0.6531675000000039
-theo_metastable_LiTl3_mp-1185253,mp-1185253,LiTl3,theo_metastable,,,True,0.046669947499999864,LiTl3 -> Li + 3 Tl,5.769486666666634,1.4423716666666584
-theo_metastable_Mg15B_mp-1023515,mp-1023515,Mg15B,theo_metastable,,,True,0.19432971906249996,0.06667 Mg15B -> Mg + 0.06667 B,11.486796666667125,0.7179247916666953
-theo_metastable_MgF2_mp-560236,mp-560236,MgF2,theo_metastable,,,True,0.10763880333333375,MgF2 -> Mg + F2,2.3437,0.39061666666666667
-theo_metastable_MgSn_mp-1094669,mp-1094669,MgSn,theo_metastable,,,True,0.0559883787500004,MgSn -> Mg + Sn,2.7707300000000012,1.3853650000000006
-theo_metastable_MgSn_mp-1094801,mp-1094801,MgSn,theo_metastable,,,True,0.021182148749999463,MgSn -> Mg + Sn,1.7922800000000016,0.8961400000000008
-theo_metastable_MnN_mp-1009130,mp-1009130,MnN,theo_metastable,,,True,0.01508596781249949,MnN -> Mn + 0.5 N2,-4.244658793103419,-2.1223293965517094
-theo_metastable_Na2Cl_mp-990084,mp-990084,Na2Cl,theo_metastable,,,True,0.1105395928735633,0.5 Na2Cl -> Na + 0.25 Cl2,0.7417050000000014,0.24723500000000045
-theo_metastable_Na3Cl_mp-1064484,mp-1064484,Na3Cl,theo_metastable,,,True,0.145649899310345,0.3333 Na3Cl -> Na + 0.1667 Cl2,0.5529950000000019,0.13824875000000048
-theo_metastable_NbRh2_mp-1220414,mp-1220414,NbRh2,theo_metastable,,,True,0.10426935750000332,NbRh2 -> Nb + 2 Rh,31.640390000000025,5.273398333333337
-theo_metastable_NbS2_mp-774873,mp-774873,NbS2,theo_metastable,,,True,0.05761998666666823,NbS2 -> Nb + 2 S,11.980572500000022,1.996762083333337
-theo_metastable_PtCl2_mp-1219748,mp-1219748,PtCl2,theo_metastable,,,True,0.04902293166666505,PtCl2 -> Pt + Cl2,11.04673000000001,1.8411216666666685
-theo_metastable_Sc2O3_mp-755313,mp-755313,Sc2O3,theo_metastable,,,True,0.03639289474999963,0.5 Sc2O3 -> Sc + 0.75 O2,-0.8295675000001808,-0.08295675000001808
-theo_metastable_ScTc3_mp-867262,mp-867262,ScTc3,theo_metastable,,,True,0.11536893812500004,ScTc3 -> Sc + 3 Tc,9.77876999999998,2.444692499999995
-theo_metastable_SiAu3_mp-1186998,mp-1186998,SiAu3,theo_metastable,,,True,0.16429186749999758,SiAu3 -> Si + 3 Au,43.493705,10.87342625
-theo_metastable_Sn7Pd5_mp-1219006,mp-1219006,Sn7Pd5,theo_metastable,,,True,0.04139117625000566,0.1429 Sn7Pd5 -> Sn + 0.7143 Pd,33.00643999999997,2.750536666666664
-theo_metastable_SnBr2_mp-978985,mp-978985,SnBr2,theo_metastable,,,True,0.040465399999999985,SnBr2 -> Sn + 2 Br,9.17257999999999,1.5287633333333315
-theo_metastable_Sr3As4_mp-678007,mp-678007,Sr3As4,theo_metastable,,,True,0.006247547857142877,0.3333 Sr3As4 -> Sr + 1.333 As,10.443770000000065,0.7459835714285761
-theo_metastable_Sr3Sn_mp-1187136,mp-1187136,Sr3Sn,theo_metastable,,,True,0.11112304583333454,0.3333 Sr3Sn -> Sr + 0.3333 Sn,6.405574999999997,1.6013937499999993
-theo_metastable_SrTl3_mp-1206636,mp-1206636,SrTl3,theo_metastable,,,True,0.029404816250000465,SrTl3 -> Sr + 3 Tl,8.822684999999996,2.205671249999999
-theo_metastable_Ta4C3_mp-1218000,mp-1218000,Ta4C3,theo_metastable,,,True,0.03350051428571277,0.25 Ta4C3 -> Ta + 0.75 C,38.893215000000026,5.556173571428575
-theo_metastable_TaP_mp-1187244,mp-1187244,TaP,theo_metastable,,,True,0.0032522499999991794,TaP -> Ta + P,2.4079677380952482,1.2039838690476241
-theo_metastable_TaRe_mp-1217894,mp-1217894,TaRe,theo_metastable,,,True,0.11133223291667349,TaRe -> Ta + Re,5.216265000000028,2.608132500000014
-theo_metastable_TcW_mp-1217337,mp-1217337,TcW,theo_metastable,,,True,0.10564943749999856,TcW -> Tc + W,7.42338500000001,3.711692500000005
-theo_metastable_TiMo2_mp-1216675,mp-1216675,TiMo2,theo_metastable,,,True,0.061337100370366215,TiMo2 -> Ti + 2 Mo,10.12679500000003,3.3755983333333432
-theo_metastable_TiNi_mp-1067248,mp-1067248,TiNi,theo_metastable,,,True,0.0020067824999996375,TiNi -> Ti + Ni,6.634860000000035,1.6587150000000088
-theo_metastable_TiSi2_mp-570991,mp-570991,TiSi2,theo_metastable,,,True,0.17960538666666537,TiSi2 -> Ti + 2 Si,-4.002004999999979,-1.3340016666666596
-theo_metastable_TiW_mp-1216621,mp-1216621,TiW,theo_metastable,,,True,0.022547341666665943,TiW -> Ti + W,6.920195000000007,3.4600975000000034
-theo_metastable_Tl3Ga_mp-1187539,mp-1187539,Tl3Ga,theo_metastable,,,True,0.09724636562500422,0.3333 Tl3Ga -> Tl + 0.3333 Ga,13.506927499999986,3.3767318749999964
-theo_metastable_Tl4Sn_mp-1216560,mp-1216560,Tl4Sn,theo_metastable,,,True,0.045918155999999044,0.25 Tl4Sn -> Tl + 0.25 Sn,-9.181490000000025,-1.836298000000005
-theo_metastable_VCo3_mp-1095057,mp-1095057,VCo3,theo_metastable,,,True,0.09418410500000007,VCo3 -> V + 3 Co,70.70285999999987,8.837857499999984
-theo_metastable_VN_mp-1017532,mp-1017532,VN,theo_metastable,,,True,0.10796184249999996,VN -> V + 0.5 N2,6.516410000000086,1.6291025000000214
-theo_metastable_Y3Co_mp-1189329,mp-1189329,Y3Co,theo_metastable,,,True,0.0015564962500009827,0.3333 Y3Co -> Y + 0.3333 Co,46.13566000000003,2.883478750000002
-theo_metastable_YAg3_mp-1187811,mp-1187811,YAg3,theo_metastable,,,True,0.059440931413043074,YAg3 -> Y + 3 Ag,20.831834999999963,5.207958749999991
-theo_metastable_ZnPb3_mp-1187949,mp-1187949,ZnPb3,theo_metastable,,,True,0.11069147749999786,ZnPb3 -> Zn + 3 Pb,23.305644999999995,5.826411249999999
-theo_metastable_Zr3Be_mp-1188016,mp-1188016,Zr3Be,theo_metastable,,,True,0.14302901249999955,0.3333 Zr3Be -> Zr + 0.3333 Be,7.518172500000034,1.8795431250000085
-theo_metastable_Zr3Ge_mp-1188039,mp-1188039,Zr3Ge,theo_metastable,,,True,0.18508675843749955,0.3333 Zr3Ge -> Zr + 0.3333 Ge,13.33900999999996,1.667376249999995
-theo_metastable_ZrO2_mp-775909,mp-775909,ZrO2,theo_metastable,,,True,0.06265508166666578,ZrO2 -> Zr + O2,3.3100149999999857,0.5516691666666643
-theo_metastable_ZrTi_mp-1215236,mp-1215236,ZrTi,theo_metastable,,,True,0.0883353483333309,ZrTi -> Zr + Ti,0.5065600000000217,0.25328000000001083
+gasref_ZnSn_NiAs,,ZnSn,extension,metallic,True,True,,ZnSn -> Zn + Sn,20.054990000000018,5.0137475000000045
+hull_ionic_NaCl_mp-22862,,NaCl,hull,ionic,False,,0.0,NaCl -> Na + 0.5 Cl2,-0.7470949999999985,-0.37354749999999926
+hull_metallic_AlNi_mp-1487,,AlNi,hull,metallic,True,,0.0,AlNi -> Al + Ni,-6.039459999999995,-3.0197299999999974
+metastable_ionic_LiBr_mp-23259,,LiBr,metastable,ionic,False,,0.009895712500000542,LiBr -> Li + Br,-8.116458333333334,-4.058229166666667
+metastable_metallic_BeCu_mp-2323,,BeCu,metastable,metallic,True,,0.005036342500000401,BeCu -> Be + Cu,-10.074172499999978,-5.037086249999989
+theo_metastable_Al4Si_mp-1228120,mp-1228120,Al4Si,theo_metastable,metallic,True,True,0.11491430399999913,0.25 Al4Si -> Al + 0.25 Si,-3.301565000000025,-0.660313000000005
+theo_metastable_AlSb_mp-1023918,mp-1023918,AlSb,theo_metastable,metallic,True,True,0.18779470750000016,AlSb -> Al + Sb,16.665740000000035,4.166435000000009
+theo_metastable_B3Ir2_mp-1228647,mp-1228647,B3Ir2,theo_metastable,metallic,True,True,0.06085322616666744,0.3333 B3Ir2 -> B + 0.6667 Ir,64.39124000000015,6.439124000000016
+theo_metastable_B6Pb_mp-1096825,mp-1096825,B6Pb,theo_metastable,ionic,False,True,0.115100015000003,0.1667 B6Pb -> B + 0.1667 Pb,14.713150000000056,2.1018785714285793
+theo_metastable_BPd5_mp-1228665,mp-1228665,BPd5,theo_metastable,metallic,True,True,0.13249513083333042,BPd5 -> B + 5 Pd,43.94649666666665,7.324416111111108
+theo_metastable_BeAu3_mp-983539,mp-983539,BeAu3,theo_metastable,metallic,True,True,0.18183134000000178,BeAu3 -> Be + 3 Au,45.04971750000003,11.262429375000007
+theo_metastable_BeCl2_mp-1190080,mp-1190080,BeCl2,theo_metastable,covalent,False,True,0.01870443305555547,BeCl2 -> Be + Cl2,-35.767364999999984,-1.9870758333333325
+theo_metastable_CaGe2_mp-643542,mp-643542,CaGe2,theo_metastable,metallic,True,True,0.0978748566666674,CaGe2 -> Ca + 2 Ge,4.352050000000011,1.4506833333333369
+theo_metastable_CoSe2_mp-1390196,mp-1390196,CoSe2,theo_metastable,metallic,True,True,0.07343032750000056,CoSe2 -> Co + 2 Se,7.569800000000043,0.6308166666666702
+theo_metastable_Cr2C_mp-1226378,mp-1226378,Cr2C,theo_metastable,metallic,True,True,0.06254013708333694,0.5 Cr2C -> Cr + 0.5 C,0.7770250000000232,0.25900833333334106
+theo_metastable_CrMo_mp-1226200,mp-1226200,CrMo,theo_metastable,metallic,True,True,0.11631646000000018,CrMo -> Cr + Mo,2.679375000000011,1.3396875000000055
+theo_metastable_Ga2Se3_mp-1224809,mp-1224809,Ga2Se3,theo_metastable,covalent,False,True,0.006252534999998005,0.5 Ga2Se3 -> Ga + 1.5 Se,-7.033145000000012,-1.4066290000000023
+theo_metastable_GeS_mp-12910,mp-12910,GeS,theo_metastable,ionic,False,True,0.0761541225000002,GeS -> Ge + S,5.022606250000003,1.2556515625000007
+theo_metastable_HCl_mp-684609,mp-684609,HCl,theo_metastable,covalent,False,True,0.053566722500000274,2 HCl -> H2 + Cl2,-1.980934999999997,-0.9904674999999985
+theo_metastable_HfMo_mp-1224314,mp-1224314,HfMo,theo_metastable,metallic,True,True,0.19909284749999756,HfMo -> Hf + Mo,4.630750000000017,2.3153750000000084
+theo_metastable_IN2_mp-1097011,mp-1097011,IN2,theo_metastable,metallic,True,True,0.07299064583333248,IN2 -> I + N2,0.47153000000001555,0.07858833333333592
+theo_metastable_InSe2_mp-1232036,mp-1232036,InSe2,theo_metastable,metallic,True,True,0.17326202766492926,InSe2 -> In + 2 Se,8.645460000000014,1.4409100000000024
+theo_metastable_IrCl3_mp-729507,mp-729507,IrCl3,theo_metastable,covalent,False,True,0.030088630624999446,IrCl3 -> Ir + 1.5 Cl2,30.32839000000004,1.8955243750000026
+theo_metastable_K5As4_mp-684799,mp-684799,K5As4,theo_metastable,metallic,True,True,0.05643723222222263,0.2 K5As4 -> K + 0.8 As,4.430620000000033,0.4922911111111148
+theo_metastable_KSn3_mp-1185151,mp-1185151,KSn3,theo_metastable,metallic,True,True,0.05729916087053466,KSn3 -> K + 3 Sn,30.23839999999997,3.7797999999999963
+theo_metastable_Li3Ag_mp-976408,mp-976408,Li3Ag,theo_metastable,metallic,True,True,0.0013151149999997003,0.3333 Li3Ag -> Li + 0.3333 Ag,2.6126700000000156,0.6531675000000039
+theo_metastable_LiTl3_mp-1185253,mp-1185253,LiTl3,theo_metastable,metallic,True,True,0.046669947499999864,LiTl3 -> Li + 3 Tl,5.769486666666634,1.4423716666666584
+theo_metastable_Mg15B_mp-1023515,mp-1023515,Mg15B,theo_metastable,metallic,True,True,0.19432971906249996,0.06667 Mg15B -> Mg + 0.06667 B,11.486796666667125,0.7179247916666953
+theo_metastable_MgF2_mp-560236,mp-560236,MgF2,theo_metastable,ionic,False,True,0.10763880333333375,MgF2 -> Mg + F2,2.3437,0.39061666666666667
+theo_metastable_MgSn_mp-1094669,mp-1094669,MgSn,theo_metastable,metallic,True,True,0.0559883787500004,MgSn -> Mg + Sn,2.7707300000000012,1.3853650000000006
+theo_metastable_MgSn_mp-1094801,mp-1094801,MgSn,theo_metastable,metallic,True,True,0.021182148749999463,MgSn -> Mg + Sn,1.7922800000000016,0.8961400000000008
+theo_metastable_MnN_mp-1009130,mp-1009130,MnN,theo_metastable,covalent,False,True,0.01508596781249949,MnN -> Mn + 0.5 N2,-4.244658793103419,-2.1223293965517094
+theo_metastable_Na2Cl_mp-990084,mp-990084,Na2Cl,theo_metastable,metallic,True,True,0.1105395928735633,0.5 Na2Cl -> Na + 0.25 Cl2,0.7417050000000014,0.24723500000000045
+theo_metastable_Na3Cl_mp-1064484,mp-1064484,Na3Cl,theo_metastable,metallic,True,True,0.145649899310345,0.3333 Na3Cl -> Na + 0.1667 Cl2,0.5529950000000019,0.13824875000000048
+theo_metastable_NbRh2_mp-1220414,mp-1220414,NbRh2,theo_metastable,metallic,True,True,0.10426935750000332,NbRh2 -> Nb + 2 Rh,31.640390000000025,5.273398333333337
+theo_metastable_NbS2_mp-774873,mp-774873,NbS2,theo_metastable,metallic,True,True,0.05761998666666823,NbS2 -> Nb + 2 S,11.980572500000022,1.996762083333337
+theo_metastable_PtCl2_mp-1219748,mp-1219748,PtCl2,theo_metastable,covalent,False,True,0.04902293166666505,PtCl2 -> Pt + Cl2,11.04673000000001,1.8411216666666685
+theo_metastable_Sc2O3_mp-755313,mp-755313,Sc2O3,theo_metastable,ionic,False,True,0.03639289474999963,0.5 Sc2O3 -> Sc + 0.75 O2,-0.8295675000001808,-0.08295675000001808
+theo_metastable_ScTc3_mp-867262,mp-867262,ScTc3,theo_metastable,metallic,True,True,0.11536893812500004,ScTc3 -> Sc + 3 Tc,9.77876999999998,2.444692499999995
+theo_metastable_SiAu3_mp-1186998,mp-1186998,SiAu3,theo_metastable,metallic,True,True,0.16429186749999758,SiAu3 -> Si + 3 Au,43.493705,10.87342625
+theo_metastable_Sn7Pd5_mp-1219006,mp-1219006,Sn7Pd5,theo_metastable,metallic,True,True,0.04139117625000566,0.1429 Sn7Pd5 -> Sn + 0.7143 Pd,33.00643999999997,2.750536666666664
+theo_metastable_SnBr2_mp-978985,mp-978985,SnBr2,theo_metastable,ionic,False,True,0.040465399999999985,SnBr2 -> Sn + 2 Br,9.17257999999999,1.5287633333333315
+theo_metastable_Sr3As4_mp-678007,mp-678007,Sr3As4,theo_metastable,mixed,False,True,0.006247547857142877,0.3333 Sr3As4 -> Sr + 1.333 As,10.443770000000065,0.7459835714285761
+theo_metastable_Sr3Sn_mp-1187136,mp-1187136,Sr3Sn,theo_metastable,metallic,True,True,0.11112304583333454,0.3333 Sr3Sn -> Sr + 0.3333 Sn,6.405574999999997,1.6013937499999993
+theo_metastable_SrTl3_mp-1206636,mp-1206636,SrTl3,theo_metastable,metallic,True,True,0.029404816250000465,SrTl3 -> Sr + 3 Tl,8.822684999999996,2.205671249999999
+theo_metastable_Ta4C3_mp-1218000,mp-1218000,Ta4C3,theo_metastable,metallic,True,True,0.03350051428571277,0.25 Ta4C3 -> Ta + 0.75 C,38.893215000000026,5.556173571428575
+theo_metastable_TaP_mp-1187244,mp-1187244,TaP,theo_metastable,metallic,True,True,0.0032522499999991794,TaP -> Ta + P,2.4079677380952482,1.2039838690476241
+theo_metastable_TaRe_mp-1217894,mp-1217894,TaRe,theo_metastable,metallic,True,True,0.11133223291667349,TaRe -> Ta + Re,5.216265000000028,2.608132500000014
+theo_metastable_TcW_mp-1217337,mp-1217337,TcW,theo_metastable,metallic,True,True,0.10564943749999856,TcW -> Tc + W,7.42338500000001,3.711692500000005
+theo_metastable_TiMo2_mp-1216675,mp-1216675,TiMo2,theo_metastable,metallic,True,True,0.061337100370366215,TiMo2 -> Ti + 2 Mo,10.12679500000003,3.3755983333333432
+theo_metastable_TiNi_mp-1067248,mp-1067248,TiNi,theo_metastable,metallic,True,True,0.0020067824999996375,TiNi -> Ti + Ni,6.634860000000035,1.6587150000000088
+theo_metastable_TiSi2_mp-570991,mp-570991,TiSi2,theo_metastable,metallic,True,True,0.17960538666666537,TiSi2 -> Ti + 2 Si,-4.002004999999979,-1.3340016666666596
+theo_metastable_TiW_mp-1216621,mp-1216621,TiW,theo_metastable,metallic,True,True,0.022547341666665943,TiW -> Ti + W,6.920195000000007,3.4600975000000034
+theo_metastable_Tl3Ga_mp-1187539,mp-1187539,Tl3Ga,theo_metastable,metallic,True,True,0.09724636562500422,0.3333 Tl3Ga -> Tl + 0.3333 Ga,13.506927499999986,3.3767318749999964
+theo_metastable_Tl4Sn_mp-1216560,mp-1216560,Tl4Sn,theo_metastable,metallic,True,True,0.045918155999999044,0.25 Tl4Sn -> Tl + 0.25 Sn,-9.181490000000025,-1.836298000000005
+theo_metastable_VCo3_mp-1095057,mp-1095057,VCo3,theo_metastable,metallic,True,True,0.09418410500000007,VCo3 -> V + 3 Co,70.70285999999987,8.837857499999984
+theo_metastable_VN_mp-1017532,mp-1017532,VN,theo_metastable,metallic,True,True,0.10796184249999996,VN -> V + 0.5 N2,6.516410000000086,1.6291025000000214
+theo_metastable_Y3Co_mp-1189329,mp-1189329,Y3Co,theo_metastable,metallic,True,True,0.0015564962500009827,0.3333 Y3Co -> Y + 0.3333 Co,46.13566000000003,2.883478750000002
+theo_metastable_YAg3_mp-1187811,mp-1187811,YAg3,theo_metastable,metallic,True,True,0.059440931413043074,YAg3 -> Y + 3 Ag,20.831834999999963,5.207958749999991
+theo_metastable_ZnPb3_mp-1187949,mp-1187949,ZnPb3,theo_metastable,metallic,True,True,0.11069147749999786,ZnPb3 -> Zn + 3 Pb,23.305644999999995,5.826411249999999
+theo_metastable_Zr3Be_mp-1188016,mp-1188016,Zr3Be,theo_metastable,metallic,True,True,0.14302901249999955,0.3333 Zr3Be -> Zr + 0.3333 Be,7.518172500000034,1.8795431250000085
+theo_metastable_Zr3Ge_mp-1188039,mp-1188039,Zr3Ge,theo_metastable,metallic,True,True,0.18508675843749955,0.3333 Zr3Ge -> Zr + 0.3333 Ge,13.33900999999996,1.667376249999995
+theo_metastable_ZrO2_mp-775909,mp-775909,ZrO2,theo_metastable,covalent,False,True,0.06265508166666578,ZrO2 -> Zr + O2,3.3100149999999857,0.5516691666666643
+theo_metastable_ZrTi_mp-1215236,mp-1215236,ZrTi,theo_metastable,metallic,True,True,0.0883353483333309,ZrTi -> Zr + Ti,0.5065600000000217,0.25328000000001083

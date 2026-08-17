@@ -12062,6 +12062,32 @@
   "extension_Zr_mp-131": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
+  "gasref_ZnSn_NiAs": {
+    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/gasref_ZnSn_NiAs",
+    "reactant_formula": "ZnSn",
+    "reactant_n_sites": 4,
+    "reactant_icohp_total": -35.98122000000001,
+    "reaction_string": "ZnSn -> Zn + Sn",
+    "products": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Zn_mp-79",
+        "reduced_formula": "Zn",
+        "coeff_formula_units": 2.0000000000000013,
+        "icohp_per_atom": -17.401605,
+        "contribution_to_total": -34.80321000000002
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Sn_mp-623511",
+        "reduced_formula": "Sn",
+        "coeff_formula_units": 2.000000000000001,
+        "icohp_per_atom": -10.616499999999997,
+        "contribution_to_total": -21.233000000000004
+      }
+    ],
+    "predicted_icohp_total_from_products": -56.036210000000025,
+    "delta_icohp_total": 20.054990000000018,
+    "delta_icohp_per_atom": 5.0137475000000045
+  },
   "hull_covalent_Si_mp-149": {
     "error": "single-element compound -- case 2 (polymorph), not case 1"
   },
