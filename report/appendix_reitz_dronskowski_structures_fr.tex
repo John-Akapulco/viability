@@ -1,4 +1,4 @@
-\begin{longtable}{@{}l p{3.6cm} p{3.6cm} p{5.0cm}@{}}
+\begin{longtable}{@{}p{2.6cm} p{3.0cm} p{3.6cm} p{5.2cm}@{}}
 \caption{Les 16 espèces des 7 réactions de Reitz \& Dronskowski (ic-2026-04181q, Tableau~\ref{tab:reference-validation}) : structure décrite par le manuscrit, entrée MP/COD utilisée dans ce jeu de données, et statut de vérification.}\label{tab:reitz-dronskowski-structures}\\
 \toprule
 Espèce (rôle) & Structure manuscrit & Notre source & Vérification \\
@@ -42,6 +42,38 @@ MnO$_2$ (produit) & non précisé & mp-510408, P4\_2/mnm (rutile/pyrolusite) & n
 \midrule
 O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet & mp-1524462, C2/m, $E_{hull}=0{,}000$, on-hull, traitement spin-polarisé dédié & structurel --- dimère isolé $d$(O-O)$=1{,}222$~\AA\ vs 1,208~\AA\ littérature (à 1\% près) \\
 \end{longtable}
+
+\begin{table}[htbp]
+\centering
+\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit, pour les deux espèces où un calcul local a été mené (N$_2$ : \texttt{gasref\_N2\_dimerbox} ; ZnSn : \texttt{gasref\_ZnSn\_NiAs} décomposé contre la référence $\beta$-Sn par défaut du jeu de données, \texttt{extension\_Sn\_mp-623511}) --- contrairement au Tableau~\ref{tab:reference-validation}, il s'agit ici de calculs VASP+LOBSTER indépendants, non d'une reconstruction des valeurs du manuscrit.}
+\label{tab:reitz-dronskowski-dft}
+\begin{tabular}{@{}p{4.6cm}rrr@{}}
+\toprule
+Espèce / réaction & Manuscrit (eV) & DFT propre à ce projet (eV) & Écart \\
+\midrule
+N$_2$ (élément) & $-23{,}161$ & $-22{,}998$ & $0,7\%$ \\
+ZnSn (réactif) & $-16{,}869$ & $-17{,}991$ & $6,6\%$ \\
+Zn (produit) & $-12{,}686$ & $-17{,}402$ & $37,2\%$ \\
+Sn (produit, $\beta$) & $-7{,}672$ & $-10{,}617$ & $38,4\%$ \\
+\midrule
+$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-10{,}027$~eV ($-968$~kJ/mol) & $2,9\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+N$_2$ reproduit étroitement la valeur du manuscrit (0,7\%). Ce n'est pas
+le cas de ZnSn : les deux références élémentaires (Zn, Sn) divergent
+chacune de $\sim$37--38\%, alors que le composé ZnSn lui-même est
+beaucoup plus proche (6,6\%) --- comme le $\Delta$ICOHP de la réaction
+est la petite différence de deux grands nombres, cet écart se
+compose en un $\Delta$ICOHP $\sim$2,9$\times$ plus grand en magnitude
+que celui du manuscrit, même si le signe et la conclusion qualitative
+(décomposition favorable en liaison) concordent. Ceci est cohérent
+avec une sensibilité aux choix de base/pseudopotentiel/cutoff bien
+plus grande pour la somme ICOHP d'un intermétallique massif que pour
+un simple dimère gazeux, et non avec un bug d'implémentation (la
+validation à 7 cas de \S\ref{sec:reframing}, qui utilise les valeurs du
+manuscrit de bout en bout, les reproduit quasi exactement).
 
 \vspace{0.5em}
 \noindent\textbf{Lecture.} ``Vérification: Oui'' signifie que la structure a été confirmée correspondre à la description explicite du manuscrit (groupe d'espace cité, ou distance de liaison recalculée et comparée). ``Partiel'' signifie que la géométrie/chimie est cohérente avec ce que le manuscrit décrit mais qu'aucune citation cristallographique indépendante n'a permis une confirmation stricte. ``Non'' signifie que seule la composition a été vérifiée : le manuscrit ne précise pas de groupe d'espace pour cette espèce, donc l'entrée MP/COD la plus raisonnable a été utilisée sans garantie qu'elle soit \emph{la} structure exacte utilisée par les auteurs. Ceci n'invalide pas la validation de \S\ref{sec:reframing} (qui ne compare que la reconstruction arithmétique des valeurs ICOHP publiées, indépendante de toute structure locale) mais borne la portée de toute comparaison future entre nos propres calculs DFT+LOBSTER et les valeurs du manuscrit pour ces espèces.

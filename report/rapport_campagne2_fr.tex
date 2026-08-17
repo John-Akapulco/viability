@@ -16,6 +16,10 @@
 \usepackage{amsmath}
 \usepackage{longtable}
 
+\sloppy
+\tolerance=9999
+\emergencystretch=3em
+
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 
 \lstset{
@@ -448,10 +452,11 @@ dans ce jeu de données et si elle a pu être vérifiée conforme à la
 description du manuscrit (3 corrections réelles identifiées : N$_2$,
 le polymorphe de Pb(N$_3$)$_2$, l'étain compétiteur de ZnSn). Pour N$_2$
 et ZnSn, un calcul DFT+LOBSTER propre à ce projet (et non plus la seule
-arithmétique du manuscrit) a en outre été comparé directement : N$_2$
+arithmétique du manuscrit) a en outre été comparé directement aux
+valeurs du manuscrit (Tableau~\ref{tab:reitz-dronskowski-dft}) : N$_2$
 reproduit l'ICOHP du manuscrit à 0,7\% près ; ZnSn reproduit le même
 signe (décomposition favorable en énergie de liaison) mais avec une
-amplitude $\sim$1,9$\times$ plus grande --- écart jugé non
+amplitude $\sim$2,9$\times$ plus grande --- écart jugé non
 significatif à ce stade, la somme d'ICOHP d'un intermétallique massif
 étant beaucoup plus sensible aux choix de base/pseudopotentiel/coupure
 qu'un simple dimère gazeux.
