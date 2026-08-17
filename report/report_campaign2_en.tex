@@ -16,6 +16,10 @@
 \usepackage{amsmath}
 \usepackage{longtable}
 
+\sloppy
+\tolerance=9999
+\emergencystretch=3em
+
 \hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
 
 \lstset{
@@ -434,9 +438,10 @@ dataset and whether it could be verified to match the manuscript's
 description (3 real corrections identified: N$_2$, the Pb(N$_3$)$_2$
 polymorph, ZnSn's competing tin phase). For N$_2$ and ZnSn, a
 DFT+LOBSTER calculation of this project's own (not just the
-manuscript's arithmetic) was additionally compared directly: N$_2$
+manuscript's arithmetic) was additionally compared directly against
+the manuscript's numbers (Table~\ref{tab:reitz-dronskowski-dft}): N$_2$
 reproduces the manuscript's ICOHP to within 0.7\%; ZnSn reproduces the
-same sign (bonding-favorable decomposition) but with $\sim$1.9$\times$
+same sign (bonding-favorable decomposition) but with $\sim$2.9$\times$
 larger magnitude --- a gap judged not significant at this stage, since
 a bulk intermetallic's ICOHP sum is far more sensitive to
 basis/pseudopotential/cutoff choices than a simple gas dimer.

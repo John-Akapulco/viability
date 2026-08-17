@@ -6,11 +6,18 @@ appendix_compounds_en.tex (included via \\input{} from the two report
 automated analysis pipeline.
 """
 
+import re
 import pandas as pd
 from pathlib import Path
 
 HERE = Path(__file__).parent
 CSV_PATH = HERE.parent / "analysis" / "percolation_vs_hull.csv"
+
+_SUBSCRIPT_RE = re.compile(r"(?<=[A-Za-z\)])(\d+)")
+
+
+def _subscript(text: str) -> str:
+    return _SUBSCRIPT_RE.sub(r"$_{\1}$", text)
 
 FAMILY_ORDER = ["exp_stable", "exp_metastable", "theo_metastable"]
 
@@ -78,7 +85,7 @@ def build(lang: str) -> str:
         lines.append(rf"\multicolumn{{5}}{{@{{}}l}}{{\textbf{{{flabel}}} ($n={len(sub)}$)}} \\")
         lines.append(r"\midrule")
         for _, row in sub.iterrows():
-            formula = str(row["formula"])
+            formula = _subscript(str(row["formula"]))
             mp_id = str(row["mp_id"])
             bt = row["bond_type"] if pd.notna(row["bond_type"]) else None
             bt_str = bond_label.get(bt, bt)

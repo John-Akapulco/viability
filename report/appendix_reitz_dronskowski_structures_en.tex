@@ -1,4 +1,4 @@
-\begin{longtable}{@{}l p{3.6cm} p{3.6cm} p{5.0cm}@{}}
+\begin{longtable}{@{}p{2.6cm} p{3.0cm} p{3.6cm} p{5.2cm}@{}}
 \caption{The 16 species across Reitz \& Dronskowski's 7 reactions (ic-2026-04181q, Table~\ref{tab:reference-validation}): structure as described by the manuscript, the MP/COD entry used in this dataset, and verification status.}\label{tab:reitz-dronskowski-structures}\\
 \toprule
 Species (role) & Manuscript structure & Our source & Verification \\
@@ -42,6 +42,37 @@ MnO$_2$ (product) & not specified & mp-510408, P4\_2/mnm (rutile/pyrolusite) & n
 \midrule
 O$_2$ (element) & gaseous O$_2$, triplet ground state & mp-1524462, C2/m, $E_{hull}=0.000$, on-hull, dedicated spin-polarized treatment & structural --- isolated dimer $d$(O-O)$=1.222$~\AA\ vs. 1.208~\AA\ literature (within 1\%) \\
 \end{longtable}
+
+\begin{table}[htbp]
+\centering
+\caption{This project's own DFT+LOBSTER ICOHP values against the manuscript's transcribed values, for the two species where a local calculation was run (N$_2$: \texttt{gasref\_N2\_dimerbox}; ZnSn: \texttt{gasref\_ZnSn\_NiAs} decomposing against the dataset's default $\beta$-Sn reference, \texttt{extension\_Sn\_mp-623511}) --- unlike Table~\ref{tab:reference-validation}, these are independent VASP+LOBSTER runs, not a reconstruction of the manuscript's own numbers.}
+\label{tab:reitz-dronskowski-dft}
+\begin{tabular}{@{}p{4.6cm}rrr@{}}
+\toprule
+Species / reaction & Manuscript (eV) & This project's DFT (eV) & Difference \\
+\midrule
+N$_2$ (element) & $-23.161$ & $-22.998$ & $0.7\%$ \\
+ZnSn (reactant) & $-16.869$ & $-17.991$ & $6.6\%$ \\
+Zn (product) & $-12.686$ & $-17.402$ & $37.2\%$ \\
+Sn (product, $\beta$) & $-7.672$ & $-10.617$ & $38.4\%$ \\
+\midrule
+$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3.489$~eV ($-337$~kJ/mol) & $-10.027$~eV ($-968$~kJ/mol) & $2.9\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+N$_2$ reproduces the manuscript's value tightly (0.7\%). ZnSn does not:
+the two elemental references (Zn, Sn) each diverge by $\sim$37--38\%,
+while the ZnSn compound itself is much closer (6.6\%) --- because the
+reaction's $\Delta$ICOHP is the small difference of large numbers, this
+compounds into a $\Delta$ICOHP $\sim$2.9$\times$ larger in magnitude
+than the manuscript's, even though the sign and qualitative conclusion
+(bonding-favorable decomposition) match. This is consistent with a
+bulk intermetallic's ICOHP sum being far more sensitive to
+basis/pseudopotential/cutoff choices than a simple gas dimer, not with
+an implementation bug (\S\ref{sec:reframing}'s 7-case validation,
+which uses the manuscript's own numbers throughout, reproduces those
+numbers essentially exactly).
 
 \vspace{0.5em}
 \noindent\textbf{Reading key.} ``Verification: Yes'' means the structure was confirmed to match the manuscript's explicit description (a cited space group, or a recomputed bond distance compared directly). ``Partial'' means the geometry/chemistry is consistent with what the manuscript describes but no independent crystallographic citation allowed a strict confirmation. ``No'' means only the composition was verified: the manuscript does not specify a space group for that species, so the most reasonable MP/COD entry was used with no guarantee it is \emph{the} exact structure the authors used. This does not invalidate the \S\ref{sec:reframing} validation (which only compares the arithmetic reconstruction of the manuscript's own published ICOHP values, independent of any local structure) but it does bound the scope of any future comparison between our own DFT+LOBSTER calculations and the manuscript's numbers for these species.
