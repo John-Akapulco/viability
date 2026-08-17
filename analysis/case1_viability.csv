@@ -7,7 +7,7 @@ exp_metastable_AsRh2_mp-1102364,mp-1102364,AsRh2,False,0.08062063166666178,-0.44
 exp_metastable_AsRh_mp-22079,mp-22079,AsRh,False,0.026917590833335225,-0.5242963187500003,0.5242963187500003,-1.0028012500000028,exobondic,stable_on_hull,
 exp_metastable_BaSn5_mp-571353,mp-571353,BaSn5,False,0.026217794166670583,-0.2692301474999965,0.2692301474999965,-3.978703333333332,exobondic,stable_on_hull,
 exp_metastable_Be12Pd_mp-12666,mp-12666,Be12Pd,False,0.07945158115384565,-0.06609085384615444,0.06609085384615444,-2.1177400000000044,exobondic,stable_on_hull,
-exp_metastable_Be3N2_mp-6977,mp-6977,Be3N2,False,0.03151386449999993,-1.1858389340000008,1.1858389340000008,0.2576094999999981,endobondic,stable_on_hull,
+exp_metastable_Be3N2_mp-6977,mp-6977,Be3N2,False,0.03151386449999993,-1.1858389340000008,1.1858389340000008,2.2270895000000053,endobondic,stable_on_hull,
 exp_metastable_CaGa2_mp-992,mp-992,CaGa2,False,0.016981658333333982,-0.5780275900000001,0.5780275900000001,-1.0110816666666669,exobondic,stable_on_hull,
 exp_metastable_CaGa4_mp-2461,mp-2461,CaGa4,False,0.0016006820000011857,-0.4217521700000006,0.4217521700000006,-1.0770699999999978,exobondic,stable_on_hull,
 exp_metastable_CdI2_mp-567259,mp-567259,CdI2,False,0.0005410511111105798,-0.8265425073333326,0.8265425073333326,-0.2263366666666684,exobondic,stable_on_hull,
@@ -20,7 +20,7 @@ exp_metastable_FeTe2_mp-1102002,mp-1102002,FeTe2,False,0.04490969833333569,-0.41
 exp_metastable_Ge4Rh_mp-1104286,mp-1104286,Ge4Rh,False,0.09073754899999997,-0.1339630540000011,0.1339630540000011,-1.0918333333333279,exobondic,stable_on_hull,
 exp_metastable_GeSe2_mp-10074,mp-10074,GeSe2,False,0.012493755416668861,-0.566828659895832,0.566828659895832,0.7715466666666693,endobondic,stable_on_hull,
 exp_metastable_H2O_mp-2739191,mp-2739191,H2O,False,0.049447999166666534,-1.230554994166667,1.230554994166667,1.6923995833333383,endobondic,stable_on_hull,
-exp_metastable_H3N_mp-643432,mp-643432,H3N,False,0.0038271875000006617,-0.3450917143750001,0.3450917143750001,0.35134749999999393,endobondic,stable_on_hull,
+exp_metastable_H3N_mp-643432,mp-643432,H3N,False,0.0038271875000006617,-0.3450917143750001,0.3450917143750001,1.5822724999999984,endobondic,stable_on_hull,
 exp_metastable_HI_mp-697025,mp-697025,HI,False,0.004366291041667303,-0.17565745749999984,0.17565745749999984,0.674919375,endobondic,stable_on_hull,
 exp_metastable_IF7_mp-27988,mp-27988,IF7,False,0.006252095624999399,-1.685239713125,1.685239713125,1.7140568750000145,endobondic,stable_on_hull,
 exp_metastable_In3Ir_mp-630976,mp-630976,In3Ir,False,0.004296428125002194,-0.2710954262499996,0.2710954262499996,-8.030723749999998,exobondic,stable_on_hull,
@@ -32,7 +32,7 @@ exp_metastable_MgCl2_mp-570259,mp-570259,MgCl2,False,0.0006391266666669893,-2.25
 exp_metastable_MgH2_mp-23711,mp-23711,MgH2,False,0.0018755891666670799,-0.2808434833333333,0.2808434833333333,-0.4410591666666681,exobondic,stable_on_hull,
 exp_metastable_MgPd3_mp-7753,mp-7753,MgPd3,False,0.01137175124999068,-0.47724602249999126,0.47724602249999126,-5.599669999999997,exobondic,stable_on_hull,
 exp_metastable_Mo3Se4_mp-21021,mp-21021,Mo3Se4,False,0.06087143499999925,-0.5819315730357175,0.5819315730357175,-2.80965357142857,exobondic,stable_on_hull,
-exp_metastable_NaN3_mp-1066400,mp-1066400,NaN3,False,0.0029249474999994973,-0.16403737406250052,0.16403737406250052,-1.7991537500000145,exobondic,stable_on_hull,
+exp_metastable_NaN3_mp-1066400,mp-1066400,NaN3,False,0.0029249474999994973,-0.16403737406250052,0.16403737406250052,1.8936212499999971,endobondic,stable_on_hull,
 exp_metastable_Nb2O5_mp-1595,mp-1595,Nb2O5,False,0.007537548265307947,-3.0266677264285726,3.0266677264285726,-2.068904107142864,exobondic,stable_on_hull,
 exp_metastable_NiB_mp-14019,mp-14019,NiB,False,0.0018463106250017347,-0.24070358374999934,0.24070358374999934,-0.8092183333333285,exobondic,stable_on_hull,
 exp_metastable_NiHg4_mp-570835,mp-570835,NiHg4,False,0.01705295800000073,0.017052957999993623,-0.017052957999993623,-0.36091866666666733,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
@@ -80,7 +80,7 @@ exp_stable_Hg4Pt_mp-936,mp-936,Hg4Pt,False,0.0,-0.12306363999999803,0.1230636399
 exp_stable_HgF2_mp-8177,mp-8177,HgF2,False,0.0,-1.7027978508333355,1.7027978508333355,0.984068888888892,endobondic,stable_on_hull,
 exp_stable_InBr_mp-22870,mp-22870,InBr,False,0.0,-0.9348113258333335,0.9348113258333335,-3.9955475000000025,exobondic,stable_on_hull,
 exp_stable_KI_mp-22898,mp-22898,KI,False,0.0,-1.6699892911249994,1.6699892911249994,0.5498074999999998,endobondic,stable_on_hull,
-exp_stable_KN3_mp-827,mp-827,KN3,False,0.0,-0.2211123337500016,0.2211123337500016,-1.8717737500000062,exobondic,stable_on_hull,
+exp_stable_KN3_mp-827,mp-827,KN3,False,0.0,-0.2211123337500016,0.2211123337500016,1.8210012500000055,endobondic,stable_on_hull,
 exp_stable_Li2Se_mp-2286,mp-2286,Li2Se,False,0.0,-1.4516769874652777,1.4516769874652777,2.4216755555555594,endobondic,stable_on_hull,
 exp_stable_LiB_mp-1001835,mp-1001835,LiB,False,0.0,-0.22468806208333358,0.22468806208333358,-0.9046341666666695,exobondic,stable_on_hull,
 exp_stable_Mg2Ni_mp-2137,mp-2137,Mg2Ni,False,0.0,-0.153033664444444,0.153033664444444,-1.3905555555555544,exobondic,stable_on_hull,
@@ -117,17 +117,44 @@ exp_stable_WO2_mp-1524394,mp-1524394,WO2,False,0.0,-2.0675175558333336,2.0675175
 exp_stable_Zr2Au_mp-2348,mp-2348,Zr2Au,False,0.0,-0.468447070000001,0.468447070000001,-2.1791900000000055,exobondic,stable_on_hull,
 exp_stable_Zr5Pb3_mp-681992,mp-681992,Zr5Pb3,False,0.0,-0.37525825500000565,0.37525825500000565,-2.33502812500001,exobondic,stable_on_hull,
 exp_stable_ZrMo2_mp-2049,mp-2049,ZrMo2,False,0.0,-0.1390927483333352,0.1390927483333352,-6.869564999999998,exobondic,stable_on_hull,
+extension_Ag3As_mp-1183193,mp-1183193,Ag3As,True,0.08839697750000042,,,-6.056813750000003,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ag3Pt_mp-12065,mp-12065,Ag3Pt,False,0.020805422500000503,,,-9.557109999999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ag3Sb_mp-2273,mp-2273,Ag3Sb,False,0.0508994350000016,,,-4.797631249999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AgH_mp-1096804,mp-1096804,AgH,True,0.1208983966666679,,,-3.0026100000000016,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AgI_mp-22915,mp-22915,AgI,False,0.39273725999999964,,,-2.317092500000001,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AgPb3_mp-1183256,mp-1183256,AgPb3,True,0.08509275833333874,,,-4.9376675000000025,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AgPd_mp-1183222,mp-1183222,AgPd,True,0.0069558550000010655,,,-1.4596949999999964,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Al12Mo_mp-550,mp-550,Al12Mo,False,0.014142691923076711,,,-9.131933076923074,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Al2W_mp-12524,mp-12524,Al2W,False,0.09311756111111436,,,-12.059687777777775,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Al3Ag_mp-1183130,mp-1183130,Al3Ag,True,0.0712581868749993,,,-8.072924999999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Al3As_mp-1183129,mp-1183129,Al3As,True,0.36364852500000033,,,-6.540771250000001,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AlAg2_mp-985805,mp-985805,AlAg2,True,0.007656157999999635,,,-8.139641666666662,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AlAg_mp-1228901,mp-1228901,AlAg,True,0.01833040100000005,,,-4.552759999999994,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_AlH3_mp-1106356,mp-1106356,AlH3,False,0.010014458750000621,,,-2.2802843750000203,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_As3W2_mp-11696,mp-11696,As3W2,False,0.0,,,-3.7140429999999953,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_As4S3_mp-27543,mp-27543,As4S3,False,0.006355647857141378,,,-0.16691419642857142,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_As4S3_mp-557321,mp-557321,As4S3,False,0.006840436428570129,,,-0.1538199107142881,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Au2S_mp-947,mp-947,Au2S,False,0.0,,,-9.954346041666668,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_BPd5_mp-1228665,mp-1228665,BPd5,True,0.13249513083333042,-0.08821138208333441,0.08821138208333441,-7.328671111111109,exobondic,stable_on_hull,
+extension_Ba3Ca_mp-1183342,mp-1183342,Ba3Ca,True,0.03921404749999979,,,-0.20969749999999995,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ba3N2_mp-1013528,mp-1013528,Ba3N2,True,0.6831039496666662,,,-2.123304,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ba4Pd_mp-1214438,mp-1214438,Ba4Pd,True,0.15571698099999987,,,-0.5459859999999981,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_Ba5P4_exp_mp-17566,mp-17566,Ba5P4,False,3.472888887223746e-05,-1.0102398348412531,1.0102398348412531,-0.9589662169312148,exobondic,stable_on_hull,
 extension_BaCl2_exp_mp-23199,mp-23199,BaCl2,False,0.006785772499999787,-2.9614528075,2.9614528075,-0.22439916666666537,exobondic,stable_on_hull,
 extension_BaF3_exp_mp-1080821,mp-1080821,BaF3,False,0.0,-3.19264289375,3.19264289375,-0.8679649999999988,exobondic,stable_on_hull,
 extension_BaF3_theo_mp-1183303,mp-1183303,BaF3,True,0.061207927499999926,-3.13143496625,3.13143496625,-0.24934749999999806,exobondic,stable_on_hull,
-extension_BaN2_exp_mp-1102371,mp-1102371,BaN2,False,2.056778179166667,1.3050746108333324,-1.3050746108333324,-8.62484500000001,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_BaMg3_mp-1016218,mp-1016218,BaMg3,True,0.17140638551136345,,,0.0717825,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_BaN2_exp_mp-1102371,mp-1102371,BaN2,False,2.056778179166667,1.3050746108333324,-1.3050746108333324,-5.342378333333333,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
 extension_BaO_exp_mp-1008500,mp-1008500,BaO,False,0.01888829749999843,-2.804754410000002,2.804754410000002,-0.3221143749999982,exobondic,stable_on_hull,
 extension_BaO_theo_mp-1950989,mp-1950989,BaO,True,0.04343597749999972,-2.7802067300000006,2.7802067300000006,-1.612911874999999,exobondic,stable_on_hull,
+extension_BaP10_mp-28035,mp-28035,BaP10,False,0.0036162985064951414,,,-0.3673611255411244,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_BaS3_exp_mp-556296,mp-556296,BaS3,False,0.04356796437499888,-1.3907245862499997,1.3907245862499997,-0.6232979687499967,exobondic,stable_on_hull,
-extension_Be3N2_exp_mp-18337,mp-18337,Be3N2,False,0.0,-1.2173527985000014,1.2173527985000014,-0.07463374999998393,exobondic,stable_on_hull,
-extension_Be3N2_theo_mp-1017550,mp-1017550,Be3N2,True,0.20808621349999967,-1.009266585000001,1.009266585000001,0.3960435000000132,endobondic,stable_on_hull,
+extension_Be12Mo_mp-1475,mp-1475,Be12Mo,False,0.0,,,-2.102653846153837,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Be3N2_exp_mp-18337,mp-18337,Be3N2,False,0.0,-1.2173527985000014,1.2173527985000014,1.8948462500000232,endobondic,stable_on_hull,
+extension_Be3N2_theo_mp-1017550,mp-1017550,Be3N2,True,0.20808621349999967,-1.009266585000001,1.009266585000001,2.3655235000000205,endobondic,stable_on_hull,
 extension_Be3P2_exp_mp-567841,mp-567841,Be3P2,False,0.0,-0.23136165360714217,0.23136165360714217,-0.2110653452381058,exobondic,stable_on_hull,
+extension_Be3P2_mp-1084771,mp-1084771,Be3P2,True,0.15672523674999983,-0.0746364168571425,0.0746364168571425,-0.17951959523810784,exobondic,stable_on_hull,
+extension_Be3P2_mp-567841,mp-567841,Be3P2,False,0.0,-0.23136165360714217,0.23136165360714217,-0.21106559523810375,exobondic,stable_on_hull,
 extension_Be3P2_theo_mp-1084771,mp-1084771,Be3P2,True,0.15672523674999983,-0.0746364168571425,0.0746364168571425,-0.17951959523810784,exobondic,stable_on_hull,
 extension_BeCl2_exp_mp-23267,mp-23267,BeCl2,False,0.008707515833333623,-1.837467066666666,1.837467066666666,1.8203724999999977,endobondic,stable_on_hull,
 extension_BeCl2_theo_mp-1172909,mp-1172909,BeCl2,True,3.1687985972222217,1.322624014722222,-1.322624014722222,-5.780678611111114,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
@@ -135,88 +162,257 @@ extension_BeF2_exp_mp-15951,mp-15951,BeF2,False,0.00039670611111120024,-3.550195
 extension_BeF2_theo_mp-975644,mp-975644,BeF2,True,2.518145377222223,-1.0324467716666665,1.0324467716666665,-0.6815591666666497,exobondic,stable_on_hull,
 extension_BeO_exp_mp-7599,mp-7599,BeO,False,0.015346631250000797,-3.087509171249999,3.087509171249999,2.786351875000017,endobondic,stable_on_hull,
 extension_BeO_theo_mp-1778,mp-1778,BeO,True,0.006973667500000502,-3.095882134999999,3.095882134999999,4.439109374999987,endobondic,stable_on_hull,
-extension_Ca3N2_exp_mp-1047,mp-1047,Ca3N2,False,0.01669766374999959,-0.9430230205000001,0.9430230205000001,-4.488066000000008,exobondic,stable_on_hull,
-extension_Ca3N2_mp-844,mp-844,Ca3N2,False,0.0,-0.95972068425,0.95972068425,-4.43741000000001,exobondic,stable_on_hull,
-extension_Ca3N2_theo_mp-1013524,mp-1013524,Ca3N2,True,0.5111703895000002,-0.4485502947499995,0.4485502947499995,-4.489784000000008,exobondic,stable_on_hull,
+extension_C(NO)2_mp-1197051,mp-1197051,C(NO)2,False,1.1348039342500007,,,2.171960250000005,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_C2N2O_mp-1214250,mp-1214250,C2N2O,True,0.47205626016666535,,,1.3606609166666856,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_C3N4_mp-567885,mp-567885,C3N4,True,0.1475561110714274,,,2.903288571428545,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_C3N4_mp-570572,mp-570572,C3N4,False,0.14726764821428517,,,2.8863621428571316,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_C3N4_mp-971683,mp-971683,C3N4,True,0.12167648535714193,,,3.2291516666666604,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ca3N2_exp_mp-1047,mp-1047,Ca3N2,False,0.01669766374999959,-0.9430230205000001,0.9430230205000001,-2.518586,exobondic,stable_on_hull,
+extension_Ca3N2_mp-844,mp-844,Ca3N2,False,0.0,-0.95972068425,0.95972068425,-2.467930000000002,exobondic,stable_on_hull,
+extension_Ca3N2_theo_mp-1013524,mp-1013524,Ca3N2,True,0.5111703895000002,-0.4485502947499995,0.4485502947499995,-2.5203040000000008,exobondic,stable_on_hull,
+extension_Ca3Zn_mp-1039229,mp-1039229,Ca3Zn,True,0.15884041124999992,,,-3.1150237499999998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_CaCl2_exp_mp-23214,mp-23214,CaCl2,False,0.0011452108333331878,-2.8042218233333327,2.8042218233333327,-0.3198966666666661,exobondic,stable_on_hull,
 extension_CaCl2_theo_mp-1120739,mp-1120739,CaCl2,True,0.04218543083333426,-2.7631816033333325,2.7631816033333325,-0.22084666666666694,exobondic,stable_on_hull,
 extension_CaF2_exp_mp-10464,mp-10464,CaF2,False,0.03464170166666669,-4.187573868333334,4.187573868333334,-0.22266999999999726,exobondic,stable_on_hull,
 extension_CaF2_theo_mp-554355,mp-554355,CaF2,True,0.24025145999999964,-3.98196411,3.98196411,-0.1814066666666664,exobondic,stable_on_hull,
-extension_CaN_mp-1058549,mp-1058549,CaN,False,0.39816828843749974,-0.4413817726562499,0.4413817726562499,-4.91829750000001,exobondic,stable_on_hull,
+extension_CaN6_mp-656097,mp-656097,CaN6,True,0.07920592142857252,,,1.449300000000008,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CaN6_mp-676,mp-676,CaN6,False,0.04061298999999963,,,1.6982142857142821,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CaN_mp-1058549,mp-1058549,CaN,False,0.39816828843749974,-0.4413817726562499,0.4413817726562499,-2.456447500000003,exobondic,stable_on_hull,
+extension_CaNi_mp-1059707,mp-1059707,CaNi,False,0.16564980624999937,,,-1.9252649999999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_CaO_exp_mp-1079707,mp-1079707,CaO,False,0.20976985500000023,-3.0962495374999994,3.0962495374999994,-2.212696875000002,exobondic,stable_on_hull,
 extension_CaO_mp-2605,mp-2605,CaO,False,0.0,-3.3060193924999997,3.3060193924999997,-0.9524718750000014,exobondic,stable_on_hull,
 extension_CaO_theo_mp-1181903,mp-1181903,CaO,True,2.7281320512499994,-0.5778873412500003,0.5778873412500003,-2.9971018750000016,exobondic,stable_on_hull,
+extension_CdIn3_mp-1183674,mp-1183674,CdIn3,True,0.06416026750000015,,,-6.877402500000005,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CdP4_mp-7904,mp-7904,CdP4,False,0.0,,,-0.511723190476188,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CdSb3_mp-1183739,mp-1183739,CdSb3,True,0.13193314687499935,,,-1.7559437500000001,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CoGe_mp-21237,mp-21237,CoGe,False,0.0,,,-2.9618937499999856,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CoRe_mp-1225995,mp-1225995,CoRe,True,0.1217252000000002,,,-1.0393624999999886,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CoSn_mp-20536,mp-20536,CoSn,False,0.0,,,-5.0954616666666706,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Cr5Si3_mp-7506,mp-7506,Cr5Si3,False,0.05473733324999941,,,0.7252837499999956,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CrRe3_mp-1183703,mp-1183703,CrRe3,True,0.13309992375000235,,,-3.432474999999995,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CrW_mp-1226162,mp-1226162,CrW,True,0.12119496999999768,,,-4.0598475,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_Cs2S_exp_mp-1077814,mp-1077814,Cs2S,False,0.06672482000000102,-1.1257135284374986,1.1257135284374986,0.9554056250000015,endobondic,stable_on_hull,
 extension_CsCl_exp_mp-573697,mp-573697,CsCl,False,0.007141250000000099,-2.2486625248275875,2.2486625248275875,0.8829825000000002,endobondic,stable_on_hull,
 extension_CsF_exp_mp-8455,mp-8455,CsF,False,0.10877166999999943,-2.7259756223275873,2.7259756223275873,3.8464000000000045,endobondic,stable_on_hull,
-extension_CsN3_exp_mp-510557,mp-510557,CsN3,False,0.0,-0.21685479031249955,0.21685479031249955,-2.290323750000013,exobondic,stable_on_hull,
-extension_CsN3_theo_mp-1225892,mp-1225892,CsN3,True,0.011297812499998727,-0.20555697781250082,0.20555697781250082,-1.6664237500000088,exobondic,stable_on_hull,
+extension_CsN3_exp_mp-510557,mp-510557,CsN3,False,0.0,-0.21685479031249955,0.21685479031249955,1.4024512499999986,endobondic,stable_on_hull,
+extension_CsN3_mp-1225892,mp-1225892,CsN3,True,0.011297812499998727,-0.20555697781250082,0.20555697781250082,2.026351250000003,endobondic,stable_on_hull,
+extension_CsN3_mp-510557,mp-510557,CsN3,False,0.0,-0.21685479031249955,0.21685479031249955,1.4024512499999986,endobondic,stable_on_hull,
+extension_CsN3_theo_mp-1225892,mp-1225892,CsN3,True,0.011297812499998727,-0.20555697781250082,0.20555697781250082,2.026351250000003,endobondic,stable_on_hull,
 extension_CsO2_exp_mp-1441,mp-1441,CsO2,False,0.03485998833333248,-0.9756556932183914,0.9756556932183914,0.06662416666666478,endobondic,stable_on_hull,
 extension_CsO2_theo_mp-1096936,mp-1096936,CsO2,True,0.0940473483333335,-0.916468333218391,0.916468333218391,0.774327500000003,endobondic,stable_on_hull,
 extension_CsP7_exp_mp-1201790,mp-1201790,CsP7,False,0.0,-0.24634146729166595,0.24634146729166595,-0.2977792708333302,exobondic,stable_on_hull,
+extension_CsP7_mp-1201790,mp-1201790,CsP7,False,0.0,-0.24634146729166595,0.24634146729166595,-0.2977789583333301,exobondic,stable_on_hull,
+extension_CsP7_mp-1213206,mp-1213206,CsP7,True,8.425187500016307e-05,-0.2462572154166658,0.2462572154166658,-0.26666708333332956,exobondic,stable_on_hull,
 extension_CsP7_theo_mp-1213206,mp-1213206,CsP7,True,8.425187500016307e-05,-0.2462572154166658,0.2462572154166658,-0.26666708333332956,exobondic,stable_on_hull,
+extension_CsRb_mp-1225895,mp-1225895,CsRb,True,0.03448047142241284,,,-0.0048637499999998335,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Cu2S_mp-12087,mp-12087,Cu2S,False,0.09426421770833393,,,-1.1547743749999988,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Cu2S_mp-553942,mp-553942,Cu2S,False,0.23845627437500028,,,-1.335011041666662,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Cu3Te2_mp-1225676,mp-1225676,Cu3Te2,True,0.02125787800000012,,,-0.45493066666666593,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Cu4Au_mp-1225761,mp-1225761,Cu4Au,True,0.0940493460000007,,,-380.49547600000005,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Cu7Te4_mp-624307,mp-624307,Cu7Te4,False,0.1459016827272741,,,-0.833159242424239,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CuH_mp-1225705,mp-1225705,CuH,True,0.09820546499999949,,,-0.4439375000000019,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_CuNi_mp-1184069,mp-1184069,CuNi,True,0.05968355999999986,,,-1.222854999999996,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ga2Au7_mp-571598,mp-571598,Ga2Au7,False,0.017660370925923985,,,-11.064326851851852,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ga3Hg_mp-1184289,mp-1184289,Ga3Hg,True,0.08707534437500186,,,-1.4502864583333368,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ga3Pb_mp-1184425,mp-1184425,Ga3Pb,True,0.09109193937500137,,,-2.8016781250000005,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ga3Re_mp-1188393,mp-1188393,Ga3Re,False,0.03857295171874853,,,-1.278420000000004,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_GaSb_mp-1224785,mp-1224785,GaSb,True,0.1847465150000005,,,1.0895087500000002,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ge3Mo5_mp-17094,mp-17094,Ge3Mo5,False,0.04250976249999994,,,-4.378264999999999,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ge3O_mp-1184665,mp-1184665,Ge3O,True,0.89046678375,,,-2.2923896874999974,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_GeAs_mp-7591,mp-7591,GeAs,False,0.10544380666666875,,,0.007549999999994839,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_GeSb_mp-9935,mp-9935,GeSb,True,0.04942549249999928,,,-0.21105999999999892,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_GeTe_mp-938,mp-938,GeTe,False,0.0,,,-1.0625158333333315,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_H2CN2_mp-703527,mp-703527,H2CN2,False,0.18741764774999492,,,1.1403812500000101,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_H2CN5_mp-1212563,mp-1212563,H2CN5,True,0.1617986478124971,,,3.057136562499995,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_H3Pd4_mp-1224413,mp-1224413,H3Pd4,True,0.013056976428570621,,,-2.188125714285708,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_H4N_mp-1238814,mp-1238814,H4N,True,0.32451140000000045,,,0.972632999999999,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_H9CN9_mp-1202455,mp-1202455,H9CN9,False,0.15232914070175418,,,2.117253684210543,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HC2N3_mp-1103408,mp-1103408,HC2N3,True,0.28976179152776993,,,4.081459999999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HC2_mp-995184,mp-995184,HC2,True,0.1491960781249988,,,-0.6802483333333479,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HC3_mp-995200,mp-995200,HC3,True,0.13767401546874858,,,-0.3999400000000115,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HC6_mp-995202,mp-995202,HC6,True,0.08574633205357074,,,-0.3498957142857161,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HC_mp-995197,mp-995197,HC,True,0.10980436656249992,,,-0.4698106250000098,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HN_mp-1224501,mp-1224501,HN,True,0.1923862111458332,,,2.26862968749999,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HN_mp-23922,mp-23922,HN,False,0.16815524687499916,,,2.5491090624999995,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HN_mp-720515,mp-720515,HN,False,0.14784463833333383,,,2.3389855000000086,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Hf3Pb_mp-1184772,mp-1184772,Hf3Pb,True,0.0,,,-2.7346974999999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HfCd_mp-1007758,mp-1007758,HfCd,False,0.0,,,-0.9037950000000023,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HfCr2_mp-569624,mp-569624,HfCr2,False,0.10305479333333167,,,-1.2985208333333382,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HfCu3_mp-1184704,mp-1184704,HfCu3,True,0.07249532007622062,,,-1.5767025000000023,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HfMg15_mp-1023478,mp-1023478,HfMg15,True,0.07120114031250013,,,-0.44254812500000024,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_HfW2_mp-1224230,mp-1224230,HfW2,True,0.2690691899999962,,,-7.285349999999994,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Hg3Pb_mp-1184700,mp-1184700,Hg3Pb,True,0.06834607812499627,,,-1.4571200000000095,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Hg3Sb_mp-977242,mp-977242,Hg3Sb,True,0.12571606499999888,,,-0.5801700000000043,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Hg5Pd2_mp-30721,mp-30721,Hg5Pd2,False,0.03967810749999523,,,0.010913333333338724,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_In2Te3_mp-1105025,mp-1105025,In2Te3,False,0.30775990697777544,,,-2.3667219999999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_In7Cu10_mp-646039,mp-646039,In7Cu10,False,0.0,,,-3.067665294117654,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_InNi_mp-20997,mp-20997,InNi,False,0.09218754000000118,,,-0.22369500000000286,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_InSn4_mp-1223653,mp-1223653,InSn4,True,0.14784555200000327,,,-0.4245279999999966,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ir3Ru_mp-974358,mp-974358,Ir3Ru,True,0.0,,,-11.896402499999994,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ir4W_mp-1223666,mp-1223666,Ir4W,True,0.2319650820000021,,,-14.282789999999995,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_IrPd_mp-1223675,mp-1223675,IrPd,True,0.11000630500000597,,,-6.181680000000007,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_K2O_exp_mp-971,mp-971,K2O,False,0.0,-1.2338780364999995,1.2338780364999995,-0.4357045833333366,exobondic,stable_on_hull,
 extension_K2O_theo_mp-1223784,mp-1223784,K2O,True,0.19996455333333385,-1.0339134831666659,1.0339134831666659,-1.5638312500000013,exobondic,stable_on_hull,
 extension_K2S_exp_mp-1022,mp-1022,K2S,False,0.0,-1.2478866567708333,1.2478866567708333,-0.3359177083333315,exobondic,stable_on_hull,
+extension_K3Rb_mp-976115,mp-976115,K3Rb,True,0.037403925187500686,,,-0.3765281250000001,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_KCl_exp_mp-23289,mp-23289,KCl,False,0.07764382000000003,-2.1701050336249996,2.1701050336249996,0.7616274999999977,endobondic,stable_on_hull,
 extension_KF3_exp_mp-1544557,mp-1544557,KF3,False,0.01249103906249971,-1.458083969375,1.458083969375,-1.151135937499998,exobondic,stable_on_hull,
 extension_KF3_theo_mp-2749823,mp-2749823,KF3,True,0.011928009062500244,-1.4586469993749995,1.4586469993749995,-1.1505074999999991,exobondic,stable_on_hull,
-extension_KN3_theo_mp-636056,mp-636056,KN3,True,1.0369771337499998,0.8158647999999982,-0.8158647999999982,-5.999087500000012,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_KMg15_mp-1023498,mp-1023498,KMg15,True,0.10105966356250029,,,0.008060625000000009,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_KN3_mp-827,mp-827,KN3,False,0.0,-0.2211123337500016,0.2211123337500016,1.8210012500000055,endobondic,stable_on_hull,
+extension_KN3_theo_mp-636056,mp-636056,KN3,True,1.0369771337499998,0.8158647999999982,-0.8158647999999982,-2.3063125000000007,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_KP15_mp-1211471,mp-1211471,KP15,True,0.0,,,-0.11605694196428384,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_KP_exp_mp-1058315,mp-1058315,KP,False,1.008041285,0.47145372788690576,-0.47145372788690576,-2.1599638690476204,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
 extension_KP_theo_mp-1057787,mp-1057787,KP,True,1.0092306499999992,0.472643092886905,-0.472643092886905,-2.1366488690476206,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
 extension_Li2O_exp_mp-1960,mp-1960,Li2O,False,0.0,-2.0615979138888885,2.0615979138888885,2.33658763888889,endobondic,stable_on_hull,
 extension_Li2O_theo_mp-755894,mp-755894,Li2O,True,0.0843597108333336,-1.9772382030555544,1.9772382030555544,1.948129305555554,endobondic,stable_on_hull,
 extension_Li2S_exp_mp-1125,mp-1125,Li2S,False,0.061509288333333245,-1.4419439997222228,1.4419439997222228,1.8504536805555556,endobondic,stable_on_hull,
 extension_Li2S_theo_mp-557142,mp-557142,Li2S,True,0.1749633300000002,-1.3284899580555554,1.3284899580555554,1.505169513888891,endobondic,stable_on_hull,
-extension_Li3N_exp_mp-2341,mp-2341,Li3N,False,0.003927161250000033,-0.4785742609375001,0.4785742609375001,0.6165012499999971,endobondic,stable_on_hull,
+extension_Li3Ca_mp-976075,mp-976075,Li3Ca,True,0.06004755895833336,,,-0.8858549999999985,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Li3N_exp_mp-2341,mp-2341,Li3N,False,0.003927161250000033,-0.4785742609375001,0.4785742609375001,1.8474262499999998,endobondic,stable_on_hull,
 extension_LiCl_exp_mp-22905,mp-22905,LiCl,False,0.02431463874999995,-2.1164624016666664,2.1164624016666664,2.8030179166666684,endobondic,stable_on_hull,
 extension_LiCl_theo_mp-1185319,mp-1185319,LiCl,True,0.0038527562499997003,-2.1369242841666667,2.1369242841666667,2.5004591666666673,endobondic,stable_on_hull,
 extension_LiF_exp_mp-1138,mp-1138,LiF,False,0.0,-3.164395454166666,3.164395454166666,4.467346666666674,endobondic,stable_on_hull,
 extension_LiF_theo_mp-1009009,mp-1009009,LiF,True,0.2875420599999998,-2.876853394166666,2.876853394166666,4.513056666666659,endobondic,stable_on_hull,
+extension_LiN3_mp-2659,mp-2659,LiN3,False,0.0,,,4.824237083333339,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_LiP5_exp_mp-2412,mp-2412,LiP5,False,0.007694938690475439,-0.23905247275793565,0.23905247275793565,0.9043245238095245,endobondic,stable_on_hull,
+extension_LiP5_mp-2412,mp-2412,LiP5,False,0.007694938690475439,-0.23905247275793565,0.23905247275793565,0.9043245238095245,endobondic,stable_on_hull,
+extension_LiP5_mp-32760,mp-32760,LiP5,True,0.09630660601190577,-0.1504408054365065,0.1504408054365065,0.8692157738095242,endobondic,stable_on_hull,
 extension_LiP5_theo_mp-32760,mp-32760,LiP5,True,0.09630660601190577,-0.1504408054365065,0.1504408054365065,0.8692157738095242,endobondic,stable_on_hull,
+extension_LiRh3_mp-1001787,mp-1001787,LiRh3,False,0.0,,,-1.9151016666666623,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_LiS4_mp-1143546,mp-1143546,LiS4,True,0.21230688803125108,,,-0.08966283333333039,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg15Ni_mp-1023622,mp-1023622,Mg15Ni,True,0.07608314989583365,,,-0.28083999999999976,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg2Ge_mp-250,mp-250,Mg2Ge,False,0.4831721600000005,,,-1.3452699999999982,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg3Al_mp-978271,mp-978271,Mg3Al,True,0.027507425520833628,,,-2.984377499999999,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg3Ru2_mp-625,mp-625,Mg3Ru2,False,0.0,,,-1.9276304999999998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg3Zr_mp-1094466,mp-1094466,Mg3Zr,True,0.06476887374999984,,,-1.6946962500000022,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg5Sc_mp-1185837,mp-1185837,Mg5Sc,True,0.0599288583333335,,,-0.47050583333333296,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mg5Te_mp-1185828,mp-1185828,Mg5Te,True,0.22432475583333433,,,-0.1671361111111108,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_MgAl2_mp-1102064,mp-1102064,MgAl2,False,0.04160550583333311,,,-6.896271666666661,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_MgCd_mp-11307,mp-11307,MgCd,False,0.0,,,-2.136527499999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_MgCl2_exp_mp-23210,mp-23210,MgCl2,False,0.0,-2.255453941666667,2.255453941666667,0.15684222222221797,endobondic,stable_on_hull,
 extension_MgCl2_theo_mp-569626,mp-569626,MgCl2,True,0.19913082333333376,-2.0563231183333333,2.0563231183333333,-0.08623500000000088,exobondic,stable_on_hull,
 extension_MgF2_exp_mp-1072956,mp-1072956,MgF2,False,0.0024727899999996694,-3.814811965,3.814811965,0.0014516666666709217,endobondic,stable_on_hull,
 extension_MgF2_theo_mp-1062842,mp-1062842,MgF2,True,0.26364889999999974,-3.553635855,3.553635855,0.02290000000000288,endobondic,stable_on_hull,
+extension_MgIn2_mp-1077016,mp-1077016,MgIn2,False,0.1897874227777776,,,-4.701525000000004,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_MgO_exp_mp-549706,mp-549706,MgO,False,0.11804199249999936,-2.9202671775000004,2.9202671775000004,-1.417906875000004,exobondic,stable_on_hull,
 extension_MgO_theo_mp-1009127,mp-1009127,MgO,True,0.7484379050000003,-2.2898712649999995,2.2898712649999995,-1.0763218749999997,exobondic,stable_on_hull,
+extension_MgPb2_mp-2016042,mp-2016042,MgPb2,True,0.03419048000000657,,,-2.725271666666668,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_MgS_exp_mp-1315,mp-1315,MgS,False,0.0,-1.661984376249999,1.661984376249999,-0.3400615624999981,exobondic,stable_on_hull,
 extension_MgS_theo_mp-13032,mp-13032,MgS,True,0.034344234999999834,-1.6276401412499992,1.6276401412499992,-0.41632156249999763,exobondic,stable_on_hull,
+extension_MgTi_mp-1094346,mp-1094346,MgTi,True,0.12570916333333226,,,-1.59935916666667,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_MgTl3_mp-978262,mp-978262,MgTl3,True,0.051357820833329626,,,-2.186008750000001,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_Mn2O7_mp-28338,mp-28338,Mn2O7,False,0.3346113968981488,-0.8804072191235627,0.8804072191235627,-1.468709990421448,exobondic,stable_on_hull,
+extension_Mn4B_mp-1221769,mp-1221769,Mn4B,True,0.10306404682758696,,,1.2987417011494216,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Mn4Ga_mp-1221812,mp-1221812,Mn4Ga,True,0.1642719892413762,,,5.275693534482758,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_MnO2_mp-510408,mp-510408,MnO2,False,0.04644304472222238,-1.7760848793103463,1.7760848793103463,-0.527407902298858,exobondic,stable_on_hull,
+extension_Mo2C_mp-1221498,mp-1221498,Mo2C,True,0.06276392999999914,,,-4.995275000000004,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_MoPd2_mp-1206704,mp-1206704,MoPd2,True,0.0,,,-5.539973333333331,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_MoRu_mp-1221386,mp-1221386,MoRu,True,0.09995914916666493,,,-2.280124999999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_N2O_mp-1180473,mp-1180473,N2O,False,0.2568286241666655,,,3.638294583333341,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NO_mp-1180334,mp-1180334,NO,True,0.6216735074999997,,,2.1371243750000115,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_Na2Cl_theo_mp-1077015,mp-1077015,Na2Cl,True,0.23910790120689684,-1.1609046559195402,1.1609046559195402,-0.3965083333333337,exobondic,stable_on_hull,
 extension_Na2O_exp_mp-2352,mp-2352,Na2O,False,0.0,-1.4257386859195398,1.4257386859195398,-1.305681250000001,exobondic,stable_on_hull,
 extension_Na2O_theo_mp-1975297,mp-1975297,Na2O,True,0.09812461166666742,-1.3276140742528726,1.3276140742528726,-1.5618695833333325,exobondic,stable_on_hull,
-extension_NaN3_exp_mp-22003,mp-22003,NaN3,False,0.0017140024999999781,-0.16524831906250004,0.16524831906250004,-1.520146250000023,exobondic,stable_on_hull,
-extension_NaN3_theo_mp-1065265,mp-1065265,NaN3,True,1.0162235174999994,0.8492611959374994,-0.8492611959374994,-5.424788750000008,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_Na3Hg_mp-1186050,mp-1186050,Na3Hg,True,0.021215371458335852,,,-1.0242433333333347,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Na3In_mp-864758,mp-864758,Na3In,True,0.040365352500000284,,,-2.4503750000000015,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Na3Mg_mp-982637,mp-982637,Na3Mg,True,0.09973374989585748,,,-0.07716250000000002,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Na3Si34_mp-1221235,mp-1221235,Na3Si34,True,0.05178974374999967,,,-0.42703567567567563,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NaN3_exp_mp-22003,mp-22003,NaN3,False,0.0017140024999999781,-0.16524831906250004,0.16524831906250004,2.172628749999989,endobondic,stable_on_hull,
+extension_NaN3_mp-1066400,mp-1066400,NaN3,False,0.0029249474999994973,-0.16403737406250052,0.16403737406250052,1.8936212499999971,endobondic,stable_on_hull,
+extension_NaN3_mp-22003,mp-22003,NaN3,False,0.0017140024999999781,-0.16524831906250004,0.16524831906250004,2.172628749999989,endobondic,stable_on_hull,
+extension_NaN3_mp-634410,mp-634410,NaN3,True,0.26956520750000035,,,2.9023062499999934,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NaN3_theo_mp-1065265,mp-1065265,NaN3,True,1.0162235174999994,0.8492611959374994,-0.8492611959374994,-1.7320137499999966,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_NaP15_mp-1194653,mp-1194653,NaP15,False,0.0,,,-0.06724444196429324,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NaP5_mp-31086,mp-31086,NaP5,False,0.009960415000000111,,,-0.019864365079364177,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_NaS_exp_mp-409,mp-409,NaS,False,0.002286554999999524,-1.0019840564062494,1.0019840564062494,-0.49107906249999944,exobondic,stable_on_hull,
 extension_NaS_theo_mp-1180106,mp-1180106,NaS,True,1.0060650862499996,0.001794474843749505,-0.001794474843749505,-2.3998865624999977,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
-extension_PbN6_mp-667338,mp-667338,PbN6,False,0.10931083119047358,0.10931083119047139,-0.10931083119047139,-2.525742261904745,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_Nb3Ni_mp-999394,mp-999394,Nb3Ni,True,0.21315346375000033,,,-6.850482499999998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Nb4Rh_mp-1220441,mp-1220441,Nb4Rh,True,0.08011662799999897,,,-4.876056000000004,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NbCd3_mp-11309,mp-11309,NbCd3,False,0.14487106500000024,,,-6.465144999999994,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NbZn16_mp-640041,mp-640041,NbZn16,False,0.0,,,-7.122330882352929,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ni3Mo_mp-11506,mp-11506,Ni3Mo,False,0.0,,,-4.295426249999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_NiSb3_mp-1106023,mp-1106023,NiSb3,False,0.01561135500000077,,,-0.21359875000000184,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_P4Se5_mp-2447,mp-2447,P4Se5,False,0.00974189644444401,,,0.3563482275132333,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_PNO_mp-675742,mp-675742,PNO,True,1.4997472041111104,,,0.6743917261904736,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_PW3_mp-1209828,mp-1209828,PW3,True,0.057999603124997634,,,-11.879273809523806,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Pb2Au_mp-22795,mp-22795,Pb2Au,False,0.0,,,-6.811814999999998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_PbAu3_mp-982246,mp-982246,PbAu3,True,0.081645635000001,,,-10.803705000000003,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_PbN6_mp-620058,mp-620058,PbN6,False,0.1096255538095221,,,1.6854557142857516,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_PbN6_mp-667338,mp-667338,PbN6,False,0.10931083119047358,0.10931083119047139,-0.10931083119047139,1.694572023809554,endobondic,metastable_viable,
 extension_Rb2O_exp_mp-1394,mp-1394,Rb2O,False,0.0031695866666665573,-1.1299987866666665,1.1299987866666665,0.7235354166666644,endobondic,stable_on_hull,
 extension_Rb2O_theo_mp-2023482,mp-2023482,Rb2O,True,0.047853428888886995,-1.0192492748611117,1.0192492748611117,-0.7591862500000012,exobondic,stable_on_hull,
+extension_Rb3In_mp-974948,mp-974948,Rb3In,True,0.16634191892045447,,,-2.5986281250000007,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Rb3Li_mp-974938,mp-974938,Rb3Li,True,0.14514899354166677,,,-0.7560447916666662,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Rb3P11_mp-1173444,mp-1173444,Rb3P11,True,0.27383845571428367,,,-0.0004716156462610651,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Rb3P_mp-974822,mp-974822,Rb3P,True,0.11857260520833357,,,0.9067399404761902,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_RbCl_exp_mp-23299,mp-23299,RbCl,False,0.02977404000000128,-2.2150984737499986,2.2150984737499986,1.792408750000001,endobondic,stable_on_hull,
 extension_RbF_exp_mp-2064,mp-2064,RbF,False,0.05158332500000107,-2.8214060062499984,2.8214060062499984,3.924386250000003,endobondic,stable_on_hull,
 extension_RbF_theo_mp-11718,mp-11718,RbF,True,0.0,-2.8729893312499994,2.8729893312499994,1.949701249999999,endobondic,stable_on_hull,
-extension_RbN3_exp_mp-581833,mp-581833,RbN3,False,0.019336026250000415,-0.39161828312500013,0.39161828312500013,-1.3477681250000106,exobondic,stable_on_hull,
-extension_RbN3_theo_mp-1219567,mp-1219567,RbN3,True,0.79660387875,0.3856495693749995,-0.3856495693749995,-3.5635531250000216,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
+extension_RbN3_exp_mp-581833,mp-581833,RbN3,False,0.019336026250000415,-0.39161828312500013,0.39161828312500013,2.345006875000001,endobondic,stable_on_hull,
+extension_RbN3_theo_mp-1219567,mp-1219567,RbN3,True,0.79660387875,0.3856495693749995,-0.3856495693749995,0.12922187499999005,endobondic,metastable_viable,
+extension_RbP15_mp-1209298,mp-1209298,RbP15,True,0.0,,,-0.10656897321428094,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_RbP_exp_mp-1179688,mp-1179688,RbP,False,0.9878872979166671,0.6284900989285722,-0.6284900989285722,-1.9314526190476196,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
 extension_RbP_theo_mp-1058499,mp-1058499,RbP,True,0.9881531929166671,0.6287559939285723,-0.6287559939285723,-1.9104026190476202,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
 extension_RbS_exp_mp-558071,mp-558071,RbS,False,0.0018650299999998232,-1.1575999733333306,1.1575999733333306,-0.32169281249999804,exobondic,stable_on_hull,
 extension_RbS_theo_mp-1179684,mp-1179684,RbS,True,0.9974513208333313,-0.16201368249999915,0.16201368249999915,-2.7347153124999974,exobondic,stable_on_hull,
-extension_S4N2_cod4031496,,S2N,,,,,-0.9767216666666627,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
-extension_S4N4_cod7017102,,SN,,,,,-1.396343437500029,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Re2Si_mp-669547,mp-669547,Re2Si,False,0.3323728517857134,,,-2.646923333333325,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Re3N5_mp-1080194,mp-1080194,Re3N5,True,0.15380868749999976,,,-2.0545162500000007,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Re3Pd_mp-862586,mp-862586,Re3Pd,True,0.0,,,-3.849486249999998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Re5Si3_mp-1105959,mp-1105959,Re5Si3,False,0.15830164888392595,,,-1.9135568749999976,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_RuRh3_mp-974335,mp-974335,RuRh3,True,0.0347198320833364,,,-4.136302500000004,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_S4N2_cod4031496,,S2N,,,,,0.6645116666666766,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_S4N4_cod7017102,,SN,,,,,1.06550656249998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Sb2S5_mp-1359089,mp-1359089,Sb2S5,True,0.08012190446428491,,,-0.45679008928571513,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_ScOs3_mp-981384,mp-981384,ScOs3,True,0.384095409375,,,-2.6732237500000036,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Si3H_mp-995193,mp-995193,Si3H,True,0.03147248546874959,,,-0.03981875000000734,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Si3Pt_mp-972763,mp-972763,Si3Pt,True,0.2618652343750014,,,-0.4837062500000009,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Si3W5_mp-31219,mp-31219,Si3W5,False,0.025065460000000428,,,-10.167215625000008,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_SiH2_mp-1192532,mp-1192532,SiH2,False,0.04434195949999964,,,-0.09803699999999733,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_SiTc3_mp-972784,mp-972784,SiTc3,True,0.1528513418749995,,,-2.525182500000005,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_SiTe2_mp-2755,mp-2755,SiTe2,False,0.0482593716666635,,,0.5602738888888901,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Sn3S_mp-1187038,mp-1187038,Sn3S,True,0.3167847331250009,,,-4.045278281249993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Sn3Se_mp-1187055,mp-1187055,Sn3Se,True,0.2596551493749999,,,-3.890402499999995,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_SnP_mp-475,mp-475,SnP,False,0.040785102499999226,,,-1.2021488690476225,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_SnPb3_mp-1187118,mp-1187118,SnPb3,True,0.08925198000000023,,,-5.195581249999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Sr3N2_mp-1013529,mp-1013529,Sr3N2,True,0.5582295490000018,,,-2.4326070000000013,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_Sr3P4_exp_mp-14288,mp-14288,Sr3P4,False,0.0,-1.1078930374149658,1.1078930374149658,-1.047186564625852,exobondic,stable_on_hull,
 extension_Sr3P4_theo_mp-682953,mp-682953,Sr3P4,True,0.00811516785714339,-1.0997778695578222,1.0997778695578222,-1.079343707482995,exobondic,stable_on_hull,
+extension_SrB2_mp-1008755,mp-1008755,SrB2,True,0.5325422407407405,,,-2.788526111111107,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_SrF2_exp_mp-1102240,mp-1102240,SrF2,False,0.06457278833333291,-4.164941925,4.164941925,-0.5421183333333337,exobondic,stable_on_hull,
 extension_SrF2_theo_mp-1102911,mp-1102911,SrF2,True,0.02665916666666579,-4.202855546666667,4.202855546666667,-0.14805500000000027,exobondic,stable_on_hull,
-extension_SrN_exp_mp-1058586,mp-1058586,SrN,False,0.4343258274999986,-0.23450164187500278,0.23450164187500278,-4.539525000000008,exobondic,stable_on_hull,
+extension_SrN6_mp-2131,mp-2131,SrN6,False,0.009174299285714227,,,1.8720071428571552,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_SrN_exp_mp-1058586,mp-1058586,SrN,False,0.4343258274999986,-0.23450164187500278,0.23450164187500278,-2.077675,exobondic,stable_on_hull,
+extension_SrO10_mp-1208655,mp-1208655,SrO10,True,0.6930220472727271,,,-2.6795220454545357,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 extension_SrO2_exp_mp-726705,mp-726705,SrO2,False,0.009602360833331325,-2.1948767725000002,2.1948767725000002,-1.9205191666666679,exobondic,stable_on_hull,
 extension_SrO2_theo_mp-2763179,mp-2763179,SrO2,True,0.011030372499999608,-2.193448760833332,2.193448760833332,-1.752209999999997,exobondic,stable_on_hull,
 extension_SrS_exp_mp-10627,mp-10627,SrS,False,0.2996298049999986,-2.125360496406252,2.125360496406252,-0.1088340624999975,exobondic,stable_on_hull,
+extension_TaBe12_mp-567842,mp-567842,TaBe12,False,0.0,,,-2.2281800000000307,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Tc3Mo_mp-1187395,mp-1187395,Tc3Mo,True,0.11694241874999989,,,-4.943746250000006,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Tc3Os_mp-862779,mp-862779,Tc3Os,True,0.0,,,-3.7992862500000086,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Tc3W_mp-1187398,mp-1187398,Tc3W,True,0.10723927500000485,,,-7.079180000000008,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Te2Pd7_mp-1217443,mp-1217443,Te2Pd7,True,0.11441960977299814,,,-4.945139629629632,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ti2Cu_mp-742,mp-742,Ti2Cu,False,0.0,,,-0.718290000000002,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Ti3Nb_mp-1217091,mp-1217091,Ti3Nb,True,0.06679139250000077,,,-1.4185012499999967,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_TiMo2_mp-1216675,mp-1216675,TiMo2,True,0.061337100370366215,-0.058206392222227045,0.058206392222227045,-3.375598333333336,exobondic,stable_on_hull,
 extension_TiO2II_mp-1439,mp-1439,TiO2,False,0.004523600833332253,-3.5035318511111115,3.5035318511111115,-0.6461000000000053,exobondic,stable_on_hull,
 extension_TiO2OII_mp-9173,mp-9173,TiO2,False,0.05749979000000138,-3.4505556619444433,3.4505556619444433,-0.6509166666666827,exobondic,stable_on_hull,
 extension_TiO2baddeleyite_mp-430,mp-430,TiO2,False,0.03948350083333452,-3.46857195111111,3.46857195111111,-0.6266658333333387,exobondic,stable_on_hull,
+extension_Tl3Au_mp-1080569,mp-1080569,Tl3Au,True,0.06940479416666534,,,-6.136671249999998,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_TlAs_mp-1007770,mp-1007770,TlAs,True,0.11668702583332902,,,-0.5143275000000056,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_TlAu3_mp-1187508,mp-1187508,TlAu3,True,0.12302775499999541,,,-11.142267500000003,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_W9C4_mp-684989,mp-684989,W9C4,True,0.07193477384615221,,,-13.726525384615389,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_WBr5_mp-1436789,mp-1436789,WBr5,True,0.9777983063888893,,,-1.8226983333333326,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Y3Co_mp-1105598,mp-1105598,Y3Co,False,0.0,,,-2.9096656250000006,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zn13Rh_mp-13447,mp-13447,Zn13Rh,False,0.0,,,-6.820618928571436,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zn2Ag_mp-1093999,mp-1093999,Zn2Ag,True,0.0,,,-7.150766666666674,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zn3Au_mp-1188000,mp-1188000,Zn3Au,True,0.027401257187502637,,,-8.66530875,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zn3N2_mp-1524551,mp-1524551,Zn3N2,True,0.014135124999999249,,,-4.296067999999987,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zn3N2_mp-9460,mp-9460,Zn3N2,False,0.0,,,-4.427874749999985,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zn7Tc_mp-1206378,mp-1206378,Zn7Tc,True,0.0825775456249982,,,-6.232846249999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_Zr3Fe_mp-31205,mp-31205,Zr3Fe,False,0.0,,,-1.5835700000000017,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+extension_ZrHg3_mp-1608,mp-1608,ZrHg3,False,0.02171306624999403,,,1.107718749999993,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+gasref_ZnSn_NiAs,,ZnSn,True,,,,-5.013747499999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 hull_ionic_NaCl_mp-22862,,NaCl,,0.0,,,0.37354750000000037,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 hull_metallic_AlNi_mp-1487,,AlNi,,0.0,,,3.0197300000000045,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
 metastable_ionic_LiBr_mp-23259,,LiBr,,0.009895712500000542,,,4.0582291666666706,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
@@ -236,7 +432,7 @@ theo_metastable_Ga2Se3_mp-1224809,mp-1224809,Ga2Se3,True,0.006252534999998005,-0
 theo_metastable_GeS_mp-12910,mp-12910,GeS,True,0.0761541225000002,-0.42503283624999977,0.42503283624999977,-1.2556515624999962,exobondic,stable_on_hull,
 theo_metastable_HCl_mp-684609,mp-684609,HCl,True,0.053566722500000274,-0.7609282406249998,0.7609282406249998,0.9904674999999994,endobondic,stable_on_hull,
 theo_metastable_HfMo_mp-1224314,mp-1224314,HfMo,True,0.19909284749999756,0.0690783037499898,-0.0690783037499898,-2.3153750000000013,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
-theo_metastable_IN2_mp-1097011,mp-1097011,IN2,True,0.07299064583333248,-0.0824328016666674,0.0824328016666674,-3.3610550000000123,exobondic,stable_on_hull,
+theo_metastable_IN2_mp-1097011,mp-1097011,IN2,True,0.07299064583333248,-0.0824328016666674,0.0824328016666674,-0.07858833333333592,exobondic,stable_on_hull,
 theo_metastable_InSe2_mp-1232036,mp-1232036,InSe2,True,0.17326202766492926,-0.3989775288107656,0.3989775288107656,-1.4409099999999977,exobondic,stable_on_hull,
 theo_metastable_IrCl3_mp-729507,mp-729507,IrCl3,True,0.030088630624999446,-0.9297515512499994,0.9297515512499994,-1.8955243750000008,exobondic,stable_on_hull,
 theo_metastable_K5As4_mp-684799,mp-684799,K5As4,True,0.05643723222222263,-0.3641723795833336,0.3641723795833336,-0.4922911111111144,exobondic,stable_on_hull,
@@ -247,7 +443,7 @@ theo_metastable_Mg15B_mp-1023515,mp-1023515,Mg15B,True,0.19432971906249996,0.177
 theo_metastable_MgF2_mp-560236,mp-560236,MgF2,True,0.10763880333333375,-3.709645951666666,3.709645951666666,-0.39061666666666667,exobondic,stable_on_hull,
 theo_metastable_MgSn_mp-1094669,mp-1094669,MgSn,True,0.0559883787500004,-0.06933570499999853,0.06933570499999853,-1.385364999999998,exobondic,stable_on_hull,
 theo_metastable_MgSn_mp-1094801,mp-1094801,MgSn,True,0.021182148749999463,-0.10414193499999946,0.10414193499999946,-0.8961399999999982,exobondic,stable_on_hull,
-theo_metastable_MnN_mp-1009130,mp-1009130,MnN,True,0.01508596781249949,-0.3115266166163799,0.3115266166163799,-0.33952060344829427,exobondic,stable_on_hull,
+theo_metastable_MnN_mp-1009130,mp-1009130,MnN,True,0.01508596781249949,-0.3115266166163799,0.3115266166163799,2.1223293965517147,endobondic,stable_on_hull,
 theo_metastable_Na2Cl_mp-990084,mp-990084,Na2Cl,True,0.1105395928735633,-1.2894729642528737,1.2894729642528737,-0.24723500000000076,exobondic,stable_on_hull,
 theo_metastable_Na3Cl_mp-1064484,mp-1064484,Na3Cl,True,0.145649899310345,-0.904359518534483,0.904359518534483,-0.13824875000000048,exobondic,stable_on_hull,
 theo_metastable_NbRh2_mp-1220414,mp-1220414,NbRh2,True,0.10426935750000332,-0.36841257833333313,0.36841257833333313,-5.27339833333333,exobondic,stable_on_hull,
@@ -272,7 +468,7 @@ theo_metastable_TiW_mp-1216621,mp-1216621,TiW,True,0.022547341666665943,0.022547
 theo_metastable_Tl3Ga_mp-1187539,mp-1187539,Tl3Ga,True,0.09724636562500422,0.09724636562500422,-0.09724636562500422,-3.376731874999998,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
 theo_metastable_Tl4Sn_mp-1216560,mp-1216560,Tl4Sn,True,0.045918155999999044,0.045918155999999044,-0.045918155999999044,1.8362980000000007,endobondic,metastable_viable,
 theo_metastable_VCo3_mp-1095057,mp-1095057,VCo3,True,0.09418410500000007,0.019661535000000896,-0.019661535000000896,-8.837857499999988,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
-theo_metastable_VN_mp-1017532,mp-1017532,VN,True,0.10796184249999996,-1.2445660768749995,1.2445660768749995,-4.09095250000002,exobondic,stable_on_hull,
+theo_metastable_VN_mp-1017532,mp-1017532,VN,True,0.10796184249999996,-1.2445660768749995,1.2445660768749995,-1.6291025000000108,exobondic,stable_on_hull,
 theo_metastable_Y3Co_mp-1189329,mp-1189329,Y3Co,True,0.0015564962500009827,-0.10440807624999948,0.10440807624999948,-2.883478750000002,exobondic,stable_on_hull,
 theo_metastable_YAg3_mp-1187811,mp-1187811,YAg3,True,0.059440931413043074,-0.20675142624999765,0.20675142624999765,-5.207958749999992,exobondic,stable_on_hull,
 theo_metastable_ZnPb3_mp-1187949,mp-1187949,ZnPb3,True,0.11069147749999786,0.11069147749999786,-0.11069147749999786,-5.826411249999999,exobondic,unstable_nonexistent,"exobondic sign means no bonding-derived kinetic barrier was found, but per Reitz & Dronskowski (ic-2026-04181q) this never proves the compound cannot exist -- slow, non-bond-breaking decomposition pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this static sign criterion; check the literature before concluding UNSTABLE_NONEXISTENT."
