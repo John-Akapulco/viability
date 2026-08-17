@@ -40,7 +40,7 @@ DATASET_ROOT = REPO_ROOT / "reactions_dataset"
 # (target compound_id, [element compound_ids], reaction_icohp_case1.csv compound_id)
 CASES = [
     ("extension_CaO_mp-2605", ["extension_Ca_mp-21", "extension_O2_mp-1524462"], "extension_CaO_mp-2605"),
-    ("extension_Ca3N2_mp-844", ["extension_Ca_mp-21", "extension_N2_mp-1059834"], "extension_Ca3N2_mp-844"),
+    ("extension_Ca3N2_mp-844", ["extension_Ca_mp-21", "gasref_N2_dimerbox"], "extension_Ca3N2_mp-844"),
     ("exp_metastable_AsPd2_mp-1080831", ["extension_As_mp-158", "extension_Pd_mp-2"], "exp_metastable_AsPd2_mp-1080831"),
 ]
 

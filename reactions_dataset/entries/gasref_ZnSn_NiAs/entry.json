@@ -1,0 +1,63 @@
+{
+  "compound_id": "gasref_ZnSn_NiAs",
+  "formula": "ZnSn",
+  "composition": {
+    "Zn": 2,
+    "Sn": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -35.98122000000001,
+    "sum_per_atom_eV": -8.995305000000002,
+    "sum_per_formula_unit_eV": -17.990610000000004,
+    "mean_per_bond_eV": -0.38277893617021286,
+    "n_bonds": 94,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.24667966666666666,
+        "sum_eV": -7.40039,
+        "n_bonds": 30
+      },
+      "Sn-Zn": {
+        "mean_eV": -0.7080172222222223,
+        "sum_eV": -25.48862,
+        "n_bonds": 36
+      },
+      "Sn-Sn": {
+        "mean_eV": -0.11043607142857144,
+        "sum_eV": -3.09221,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.593359999999998,
+    "sum_per_atom_eV": 1.6483399999999995,
+    "sum_per_formula_unit_eV": 3.296679999999999,
+    "mean_per_bond_eV": 0.07014212765957445,
+    "n_bonds": 94,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.03870366666666665,
+        "sum_eV": 1.1611099999999994,
+        "n_bonds": 30
+      },
+      "Sn-Zn": {
+        "mean_eV": 0.12199583333333333,
+        "sum_eV": 4.39185,
+        "n_bonds": 36
+      },
+      "Sn-Sn": {
+        "mean_eV": 0.03715714285714287,
+        "sum_eV": 1.0404000000000002,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/gasref_ZnSn_NiAs"
+}
