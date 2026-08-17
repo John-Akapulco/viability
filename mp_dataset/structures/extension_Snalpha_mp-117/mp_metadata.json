@@ -1,0 +1,16 @@
+{
+  "label": "Sn",
+  "mp_id": "mp-117",
+  "formula": "Sn",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": 0.0,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Fd-3m",
+  "requested_spacegroup": "Fd-3m",
+  "note": "diamond-cubic alpha-Sn (gray tin) -- the allotrope Reitz & Dronskowski use for ZnSn's competing phase (Fd-3m); distinct from extension_Sn_mp-623511 (I4/mmm, beta-Sn/white tin), already in this dataset for unrelated reactions"
+}

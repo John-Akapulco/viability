@@ -34,6 +34,7 @@ STRUCTURES_ROOT = Path(__file__).parent / "structures"
 # element -> initial MAGMOM (mu_B/atom); elements not listed get 0.0
 EXTENSION_SPIN_OVERRIDES = {
     "extension_O2_mp-1524462": {"O": 1.5},
+    "gasref_O2_dimerbox": {"O": 1.5},  # isolated-dimer gas-reference test (same triplet treatment as the periodic O2 reference)
     "extension_MnO2_mp-510408": {"Mn": 3.0, "O": 0.0},
     "extension_Mn_mp-35": {"Mn": 3.0},
     "extension_Fe_mp-13": {"Fe": 2.2},

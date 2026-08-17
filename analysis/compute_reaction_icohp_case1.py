@@ -52,12 +52,17 @@ OUT_CSV = Path(__file__).parent / "reaction_icohp_case1.csv"
 # (fcc, EAH=6.9 meV/at, non-theoretical) is the best available pick, same
 # "not individually verified, best available" caveat as several of the
 # download_elements_reference.py entries. Left as-is rather than guessed.
+# N was extension_N2_mp-1059834 until 2026-08-17: that MP entry is a
+# polymeric N-N solid (1.296 A, two contacts/atom), not molecular N2 (gas
+# N-N is 1.10 A). Replaced by gasref_N2_dimerbox, an isolated-dimer
+# relaxation (1.113 A, ICOHP -22.998 eV, matching Reitz & Dronskowski's
+# -23.161 eV to 0.7%) built specifically to fix this reference.
 ELEMENT_REFERENCE = {
     "Ca": "extension_Ca_mp-21",
     "C": "extension_Cgraphite_mp-48",
     "K": "exp_metastable_K_mp-10157",
     "Mn": "extension_Mn_mp-35",
-    "N": "extension_N2_mp-1059834",
+    "N": "gasref_N2_dimerbox",
     "Na": "exp_stable_Na_mp-10172",
     "O": "extension_O2_mp-1524462",
     "Pb": "extension_Pb_mp-20483",
