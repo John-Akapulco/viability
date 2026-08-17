@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_AlH3_mp-1106356",
+  "formula": "AlH3",
+  "composition": {
+    "Al": 4,
+    "H": 12
+  },
+  "Z": 4,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -67.64504999999966,
+    "sum_per_atom_eV": -4.2278156249999785,
+    "sum_per_formula_unit_eV": -16.911262499999914,
+    "mean_per_bond_eV": -0.1084055288461533,
+    "n_bonds": 624,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.19841166666666665,
+        "sum_eV": -7.1428199999999995,
+        "n_bonds": 36
+      },
+      "Al-H": {
+        "mean_eV": -0.24941449999999998,
+        "sum_eV": -59.85948,
+        "n_bonds": 240
+      },
+      "H-H": {
+        "mean_eV": -0.0018469827586206904,
+        "sum_eV": -0.6427500000000003,
+        "n_bonds": 348
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.03585999999998,
+    "sum_per_atom_eV": 0.7522412499999988,
+    "sum_per_formula_unit_eV": 3.008964999999995,
+    "mean_per_bond_eV": 0.019288237179487147,
+    "n_bonds": 624,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.03489916666666666,
+        "sum_eV": 1.2563699999999998,
+        "n_bonds": 36
+      },
+      "Al-H": {
+        "mean_eV": 0.042900708333333384,
+        "sum_eV": 10.296170000000012,
+        "n_bonds": 240
+      },
+      "H-H": {
+        "mean_eV": 0.0013888505747126426,
+        "sum_eV": 0.48331999999999964,
+        "n_bonds": 348
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_AlH3_mp-1106356"
+}

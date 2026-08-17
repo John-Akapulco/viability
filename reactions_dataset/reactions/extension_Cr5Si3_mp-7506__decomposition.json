@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Cr5Si3_mp-7506__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Cr5Si3_mp-7506",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cr_mp-90",
+      "coefficient": 5.0
+    },
+    {
+      "compound_id": "hull_covalent_Si_mp-149",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

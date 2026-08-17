@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_MoRu_mp-1221386__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_MoRu_mp-1221386",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mo_mp-129",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ru_mp-33",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

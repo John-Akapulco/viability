@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_NbCd3_mp-11309",
+  "formula": "NbCd3",
+  "composition": {
+    "Nb": 1,
+    "Cd": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -35.40298000000001,
+    "sum_per_atom_eV": -8.850745000000002,
+    "sum_per_formula_unit_eV": -35.40298000000001,
+    "mean_per_bond_eV": -0.36878104166666675,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": -0.04234666666666667,
+        "sum_eV": -0.25408000000000003,
+        "n_bonds": 6
+      },
+      "Cd-Nb": {
+        "mean_eV": -0.35507222222222223,
+        "sum_eV": -12.7826,
+        "n_bonds": 36
+      },
+      "Cd-Cd": {
+        "mean_eV": -0.41419074074074075,
+        "sum_eV": -22.3663,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.410079999999998,
+    "sum_per_atom_eV": 1.8525199999999995,
+    "sum_per_formula_unit_eV": 7.410079999999998,
+    "mean_per_bond_eV": 0.07718833333333332,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Nb-Nb": {
+        "mean_eV": 0.09891333333333334,
+        "sum_eV": 0.59348,
+        "n_bonds": 6
+      },
+      "Cd-Nb": {
+        "mean_eV": 0.09506722222222222,
+        "sum_eV": 3.42242,
+        "n_bonds": 36
+      },
+      "Cd-Cd": {
+        "mean_eV": 0.06285518518518518,
+        "sum_eV": 3.3941799999999995,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_NbCd3_mp-11309"
+}

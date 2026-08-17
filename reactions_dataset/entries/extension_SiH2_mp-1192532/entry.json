@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_SiH2_mp-1192532",
+  "formula": "SiH2",
+  "composition": {
+    "Si": 10,
+    "H": 20
+  },
+  "Z": 10,
+  "space_group_symbol": "P2_1/m",
+  "space_group_number": 11,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -141.43814000000012,
+    "sum_per_atom_eV": -4.714604666666671,
+    "sum_per_formula_unit_eV": -14.143814000000011,
+    "mean_per_bond_eV": -0.1890884224598932,
+    "n_bonds": 748,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": -0.4920152127659573,
+        "sum_eV": -46.24942999999998,
+        "n_bonds": 94
+      },
+      "H-Si": {
+        "mean_eV": -0.30922110389610385,
+        "sum_eV": -95.24009999999998,
+        "n_bonds": 308
+      },
+      "H-H": {
+        "mean_eV": 0.00014852601156069368,
+        "sum_eV": 0.05139000000000001,
+        "n_bonds": 346
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 29.518609999999914,
+    "sum_per_atom_eV": 0.9839536666666638,
+    "sum_per_formula_unit_eV": 2.951860999999991,
+    "mean_per_bond_eV": 0.039463382352941064,
+    "n_bonds": 748,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": 0.10587829787234043,
+        "sum_eV": 9.95256,
+        "n_bonds": 94
+      },
+      "H-Si": {
+        "mean_eV": 0.06302412337662333,
+        "sum_eV": 19.411429999999985,
+        "n_bonds": 308
+      },
+      "H-H": {
+        "mean_eV": 0.0004468786127167635,
+        "sum_eV": 0.15462000000000017,
+        "n_bonds": 346
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_SiH2_mp-1192532"
+}

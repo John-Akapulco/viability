@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_Mg15Ni_mp-1023622",
+  "formula": "Mg15Ni",
+  "composition": {
+    "Mg": 15,
+    "Ni": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -2.0598000000000005,
+    "sum_per_atom_eV": -0.12873750000000003,
+    "sum_per_formula_unit_eV": -2.0598000000000005,
+    "mean_per_bond_eV": -0.005507486631016044,
+    "n_bonds": 374,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.0053300923076923055,
+        "sum_eV": -1.7322799999999992,
+        "n_bonds": 325
+      },
+      "Mg-Ni": {
+        "mean_eV": -0.00668408163265306,
+        "sum_eV": -0.3275199999999999,
+        "n_bonds": 49
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.26020000000000004,
+    "sum_per_atom_eV": 0.016262500000000003,
+    "sum_per_formula_unit_eV": 0.26020000000000004,
+    "mean_per_bond_eV": 0.00069572192513369,
+    "n_bonds": 374,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0006363384615384618,
+        "sum_eV": 0.2068100000000001,
+        "n_bonds": 325
+      },
+      "Mg-Ni": {
+        "mean_eV": 0.0010895918367346943,
+        "sum_eV": 0.05339000000000002,
+        "n_bonds": 49
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mg15Ni_mp-1023622"
+}

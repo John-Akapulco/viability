@@ -1,0 +1,94 @@
+{
+  "compound_id": "extension_C(NO)2_mp-1197051",
+  "formula": "C(NO)2",
+  "composition": {
+    "C": 8,
+    "N": 16,
+    "O": 16
+  },
+  "Z": 8,
+  "space_group_symbol": "P2_12_12_1",
+  "space_group_number": 19,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -560.6608300000004,
+    "sum_per_atom_eV": -14.016520750000009,
+    "sum_per_formula_unit_eV": -70.08260375000005,
+    "mean_per_bond_eV": -0.5060115794223831,
+    "n_bonds": 1108,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": -1.37530825,
+        "sum_eV": -55.01233,
+        "n_bonds": 40
+      },
+      "C-N": {
+        "mean_eV": -0.8950990760869574,
+        "sum_eV": -164.69823000000017,
+        "n_bonds": 184
+      },
+      "C-O": {
+        "mean_eV": -0.020837336956521745,
+        "sum_eV": -3.8340700000000014,
+        "n_bonds": 184
+      },
+      "N-N": {
+        "mean_eV": -0.3471243333333333,
+        "sum_eV": -62.48238,
+        "n_bonds": 180
+      },
+      "N-O": {
+        "mean_eV": -0.7854469767441857,
+        "sum_eV": -270.1937599999999,
+        "n_bonds": 344
+      },
+      "O-O": {
+        "mean_eV": -0.025227613636363635,
+        "sum_eV": -4.44006,
+        "n_bonds": 176
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 59.584920000000025,
+    "sum_per_atom_eV": 1.4896230000000006,
+    "sum_per_formula_unit_eV": 7.448115000000003,
+    "mean_per_bond_eV": 0.05377700361010833,
+    "n_bonds": 1108,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": 0.15791025,
+        "sum_eV": 6.31641,
+        "n_bonds": 40
+      },
+      "C-N": {
+        "mean_eV": 0.08980619565217389,
+        "sum_eV": 16.524339999999995,
+        "n_bonds": 184
+      },
+      "C-O": {
+        "mean_eV": 0.010929021739130438,
+        "sum_eV": 2.0109400000000006,
+        "n_bonds": 184
+      },
+      "N-N": {
+        "mean_eV": 0.040674833333333334,
+        "sum_eV": 7.32147,
+        "n_bonds": 180
+      },
+      "N-O": {
+        "mean_eV": 0.0693959302325581,
+        "sum_eV": 23.87219999999999,
+        "n_bonds": 344
+      },
+      "O-O": {
+        "mean_eV": 0.020111136363636366,
+        "sum_eV": 3.5395600000000003,
+        "n_bonds": 176
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_C(NO)2_mp-1197051"
+}

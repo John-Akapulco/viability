@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Zn7Tc_mp-1206378",
+  "formula": "Zn7Tc",
+  "composition": {
+    "Zn": 7,
+    "Tc": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -84.47417000000006,
+    "sum_per_atom_eV": -10.559271250000007,
+    "sum_per_formula_unit_eV": -84.47417000000006,
+    "mean_per_bond_eV": -0.31997791666666686,
+    "n_bonds": 264,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.32629638095238106,
+        "sum_eV": -68.52224000000002,
+        "n_bonds": 210
+      },
+      "Tc-Zn": {
+        "mean_eV": -0.38305547619047625,
+        "sum_eV": -16.088330000000003,
+        "n_bonds": 42
+      },
+      "Tc-Tc": {
+        "mean_eV": 0.011366666666666664,
+        "sum_eV": 0.13639999999999997,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 13.010209999999999,
+    "sum_per_atom_eV": 1.6262762499999999,
+    "sum_per_formula_unit_eV": 13.010209999999999,
+    "mean_per_bond_eV": 0.04928109848484848,
+    "n_bonds": 264,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.04229223809523813,
+        "sum_eV": 8.881370000000008,
+        "n_bonds": 210
+      },
+      "Tc-Zn": {
+        "mean_eV": 0.09260523809523813,
+        "sum_eV": 3.889420000000001,
+        "n_bonds": 42
+      },
+      "Tc-Tc": {
+        "mean_eV": 0.019951666666666666,
+        "sum_eV": 0.23942,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Zn7Tc_mp-1206378"
+}

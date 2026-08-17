@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Y3Co_mp-1105598",
+  "formula": "Y3Co",
+  "composition": {
+    "Y": 12,
+    "Co": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -149.62317,
+    "sum_per_atom_eV": -9.351448125,
+    "sum_per_formula_unit_eV": -37.4057925,
+    "mean_per_bond_eV": -0.5844655078125,
+    "n_bonds": 256,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": -0.3661555147058823,
+        "sum_eV": -49.797149999999995,
+        "n_bonds": 136
+      },
+      "Co-Y": {
+        "mean_eV": -0.9048568518518513,
+        "sum_eV": -97.72453999999993,
+        "n_bonds": 108
+      },
+      "Co-Co": {
+        "mean_eV": -0.17512333333333333,
+        "sum_eV": -2.10148,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 31.60827,
+    "sum_per_atom_eV": 1.975516875,
+    "sum_per_formula_unit_eV": 7.9020675,
+    "mean_per_bond_eV": 0.1234698046875,
+    "n_bonds": 256,
+    "by_bond_type": {
+      "Y-Y": {
+        "mean_eV": 0.09343926470588239,
+        "sum_eV": 12.707740000000005,
+        "n_bonds": 136
+      },
+      "Co-Y": {
+        "mean_eV": 0.16852092592592596,
+        "sum_eV": 18.200260000000004,
+        "n_bonds": 108
+      },
+      "Co-Co": {
+        "mean_eV": 0.05835583333333333,
+        "sum_eV": 0.70027,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Y3Co_mp-1105598"
+}

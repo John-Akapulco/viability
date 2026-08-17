@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MgTi_mp-1094346",
+  "formula": "MgTi",
+  "composition": {
+    "Mg": 6,
+    "Ti": 6
+  },
+  "Z": 6,
+  "space_group_symbol": "P2_1/m",
+  "space_group_number": 11,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -26.60103999999999,
+    "sum_per_atom_eV": -2.2167533333333327,
+    "sum_per_formula_unit_eV": -4.433506666666665,
+    "mean_per_bond_eV": -0.08418050632911389,
+    "n_bonds": 316,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.024689078947368413,
+        "sum_eV": -1.8763699999999994,
+        "n_bonds": 76
+      },
+      "Mg-Ti": {
+        "mean_eV": -0.0427976219512195,
+        "sum_eV": -7.018809999999998,
+        "n_bonds": 164
+      },
+      "Ti-Ti": {
+        "mean_eV": -0.23297184210526303,
+        "sum_eV": -17.70585999999999,
+        "n_bonds": 76
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 13.480580000000005,
+    "sum_per_atom_eV": 1.1233816666666672,
+    "sum_per_formula_unit_eV": 2.2467633333333343,
+    "mean_per_bond_eV": 0.04266006329113926,
+    "n_bonds": 316,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.0051382894736842115,
+        "sum_eV": 0.3905100000000001,
+        "n_bonds": 76
+      },
+      "Mg-Ti": {
+        "mean_eV": 0.014948536585365855,
+        "sum_eV": 2.45156,
+        "n_bonds": 164
+      },
+      "Ti-Ti": {
+        "mean_eV": 0.1399803947368421,
+        "sum_eV": 10.638509999999998,
+        "n_bonds": 76
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MgTi_mp-1094346"
+}

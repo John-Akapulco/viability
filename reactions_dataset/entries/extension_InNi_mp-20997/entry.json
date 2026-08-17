@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_InNi_mp-20997",
+  "formula": "InNi",
+  "composition": {
+    "In": 1,
+    "Ni": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -20.047529999999995,
+    "sum_per_atom_eV": -10.023764999999997,
+    "sum_per_formula_unit_eV": -20.047529999999995,
+    "mean_per_bond_eV": -0.23866107142857138,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": -0.458736923076923,
+        "sum_eV": -11.927159999999997,
+        "n_bonds": 26
+      },
+      "In-Ni": {
+        "mean_eV": -0.23474593750000006,
+        "sum_eV": -7.511870000000002,
+        "n_bonds": 32
+      },
+      "Ni-Ni": {
+        "mean_eV": -0.02340384615384615,
+        "sum_eV": -0.6084999999999999,
+        "n_bonds": 26
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.135830000000001,
+    "sum_per_atom_eV": 2.0679150000000006,
+    "sum_per_formula_unit_eV": 4.135830000000001,
+    "mean_per_bond_eV": 0.04923607142857144,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": 0.07812538461538462,
+        "sum_eV": 2.03126,
+        "n_bonds": 26
+      },
+      "In-Ni": {
+        "mean_eV": 0.0502315625,
+        "sum_eV": 1.60741,
+        "n_bonds": 32
+      },
+      "Ni-Ni": {
+        "mean_eV": 0.01912153846153846,
+        "sum_eV": 0.49715999999999994,
+        "n_bonds": 26
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_InNi_mp-20997"
+}

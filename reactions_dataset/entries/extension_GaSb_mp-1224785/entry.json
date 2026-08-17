@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_GaSb_mp-1224785",
+  "formula": "GaSb",
+  "composition": {
+    "Ga": 1,
+    "Sb": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I-4m2",
+  "space_group_number": 119,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.925060000000002,
+    "sum_per_atom_eV": -8.462530000000001,
+    "sum_per_formula_unit_eV": -16.925060000000002,
+    "mean_per_bond_eV": -0.42312650000000007,
+    "n_bonds": 40,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": -0.20101142857142856,
+        "sum_eV": -2.8141599999999998,
+        "n_bonds": 14
+      },
+      "Ga-Sb": {
+        "mean_eV": -0.9845050000000001,
+        "sum_eV": -11.814060000000001,
+        "n_bonds": 12
+      },
+      "Sb-Sb": {
+        "mean_eV": -0.16406000000000004,
+        "sum_eV": -2.2968400000000004,
+        "n_bonds": 14
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.661119999999999,
+    "sum_per_atom_eV": 1.8305599999999995,
+    "sum_per_formula_unit_eV": 3.661119999999999,
+    "mean_per_bond_eV": 0.09152799999999997,
+    "n_bonds": 40,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": 0.04508142857142857,
+        "sum_eV": 0.63114,
+        "n_bonds": 14
+      },
+      "Ga-Sb": {
+        "mean_eV": 0.19191500000000003,
+        "sum_eV": 2.3029800000000002,
+        "n_bonds": 12
+      },
+      "Sb-Sb": {
+        "mean_eV": 0.05192857142857144,
+        "sum_eV": 0.7270000000000002,
+        "n_bonds": 14
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_GaSb_mp-1224785"
+}

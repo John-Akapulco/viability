@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ir3Ru_mp-974358__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ir3Ru_mp-974358",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ir_mp-101",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Ru_mp-33",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Al3As_mp-1183129__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Al3As_mp-1183129",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Al_mp-134",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_As_mp-158",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

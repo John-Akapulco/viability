@@ -1,0 +1,42 @@
+{
+  "compound_id": "gasref_N2_dimerbox",
+  "formula": "N2",
+  "composition": {
+    "N": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P4/mmm",
+  "space_group_number": 123,
+  "role": "element",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -22.99827,
+    "sum_per_atom_eV": -11.499135,
+    "sum_per_formula_unit_eV": -22.99827,
+    "mean_per_bond_eV": -22.99827,
+    "n_bonds": 1,
+    "by_bond_type": {
+      "N-N": {
+        "mean_eV": -22.99827,
+        "sum_eV": -22.99827,
+        "n_bonds": 1
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.99131,
+    "sum_per_atom_eV": 1.495655,
+    "sum_per_formula_unit_eV": 2.99131,
+    "mean_per_bond_eV": 2.99131,
+    "n_bonds": 1,
+    "by_bond_type": {
+      "N-N": {
+        "mean_eV": 2.99131,
+        "sum_eV": 2.99131,
+        "n_bonds": 1
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/gasref_N2_dimerbox"
+}

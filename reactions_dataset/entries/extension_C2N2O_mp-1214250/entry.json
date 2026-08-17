@@ -1,0 +1,94 @@
+{
+  "compound_id": "extension_C2N2O_mp-1214250",
+  "formula": "C2N2O",
+  "composition": {
+    "C": 12,
+    "N": 12,
+    "O": 6
+  },
+  "Z": 6,
+  "space_group_symbol": "P6_3/m",
+  "space_group_number": 176,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -452.16977000000077,
+    "sum_per_atom_eV": -15.072325666666693,
+    "sum_per_formula_unit_eV": -75.36162833333346,
+    "mean_per_bond_eV": -0.5887627213541676,
+    "n_bonds": 768,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": -1.373980111111111,
+        "sum_eV": -123.65820999999998,
+        "n_bonds": 90
+      },
+      "C-N": {
+        "mean_eV": -0.3330438768115943,
+        "sum_eV": -91.92011000000002,
+        "n_bonds": 276
+      },
+      "C-O": {
+        "mean_eV": -0.765519924242424,
+        "sum_eV": -101.04862999999996,
+        "n_bonds": 132
+      },
+      "N-N": {
+        "mean_eV": -1.0241101515151518,
+        "sum_eV": -135.18254000000005,
+        "n_bonds": 132
+      },
+      "N-O": {
+        "mean_eV": -0.002291018518518519,
+        "sum_eV": -0.24743000000000004,
+        "n_bonds": 108
+      },
+      "O-O": {
+        "mean_eV": -0.003761666666666666,
+        "sum_eV": -0.11284999999999999,
+        "n_bonds": 30
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 49.558210000000045,
+    "sum_per_atom_eV": 1.651940333333335,
+    "sum_per_formula_unit_eV": 8.259701666666674,
+    "mean_per_bond_eV": 0.06452891927083339,
+    "n_bonds": 768,
+    "by_bond_type": {
+      "C-C": {
+        "mean_eV": 0.1396551111111111,
+        "sum_eV": 12.568959999999999,
+        "n_bonds": 90
+      },
+      "C-N": {
+        "mean_eV": 0.03642050724637683,
+        "sum_eV": 10.052060000000006,
+        "n_bonds": 276
+      },
+      "C-O": {
+        "mean_eV": 0.08486818181818187,
+        "sum_eV": 11.202600000000007,
+        "n_bonds": 132
+      },
+      "N-N": {
+        "mean_eV": 0.11265007575757578,
+        "sum_eV": 14.869810000000003,
+        "n_bonds": 132
+      },
+      "N-O": {
+        "mean_eV": 0.0070823148148148165,
+        "sum_eV": 0.7648900000000002,
+        "n_bonds": 108
+      },
+      "O-O": {
+        "mean_eV": 0.0033296666666666674,
+        "sum_eV": 0.09989000000000002,
+        "n_bonds": 30
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_C2N2O_mp-1214250"
+}

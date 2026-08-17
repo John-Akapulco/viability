@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_WBr5_mp-1436789__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_WBr5_mp-1436789",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_W_mp-91",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Br_mp-23154",
+      "coefficient": 5.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

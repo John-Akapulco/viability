@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_HC2_mp-995184",
+  "formula": "HC2",
+  "composition": {
+    "H": 2,
+    "C": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -74.24516999999996,
+    "sum_per_atom_eV": -12.374194999999993,
+    "sum_per_formula_unit_eV": -37.12258499999998,
+    "mean_per_bond_eV": -0.3788018877551018,
+    "n_bonds": 196,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.0031804166666666665,
+        "sum_eV": -0.07633,
+        "n_bonds": 24
+      },
+      "C-H": {
+        "mean_eV": -0.18481792682926826,
+        "sum_eV": -15.155069999999997,
+        "n_bonds": 82
+      },
+      "C-C": {
+        "mean_eV": -0.6557085555555555,
+        "sum_eV": -59.01377,
+        "n_bonds": 90
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.49481999999999,
+    "sum_per_atom_eV": 1.4158033333333317,
+    "sum_per_formula_unit_eV": 4.247409999999995,
+    "mean_per_bond_eV": 0.04334091836734689,
+    "n_bonds": 196,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.00017416666666666668,
+        "sum_eV": 0.0041800000000000006,
+        "n_bonds": 24
+      },
+      "C-H": {
+        "mean_eV": 0.023554999999999986,
+        "sum_eV": 1.931509999999999,
+        "n_bonds": 82
+      },
+      "C-C": {
+        "mean_eV": 0.07287922222222223,
+        "sum_eV": 6.559130000000001,
+        "n_bonds": 90
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HC2_mp-995184"
+}

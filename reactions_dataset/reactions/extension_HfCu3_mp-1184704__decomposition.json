@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_HfCu3_mp-1184704__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_HfCu3_mp-1184704",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Hf_mp-103",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Cu_mp-30",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

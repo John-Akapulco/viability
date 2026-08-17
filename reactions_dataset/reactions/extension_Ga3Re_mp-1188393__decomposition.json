@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ga3Re_mp-1188393__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ga3Re_mp-1188393",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Re_mp-8",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

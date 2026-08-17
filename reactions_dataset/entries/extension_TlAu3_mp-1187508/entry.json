@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_TlAu3_mp-1187508",
+  "formula": "TlAu3",
+  "composition": {
+    "Tl": 1,
+    "Au": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -40.808229999999995,
+    "sum_per_atom_eV": -10.202057499999999,
+    "sum_per_formula_unit_eV": -40.808229999999995,
+    "mean_per_bond_eV": -0.4250857291666666,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Tl-Tl": {
+        "mean_eV": -0.12332333333333334,
+        "sum_eV": -0.73994,
+        "n_bonds": 6
+      },
+      "Au-Tl": {
+        "mean_eV": -0.5164088888888888,
+        "sum_eV": -18.590719999999997,
+        "n_bonds": 36
+      },
+      "Au-Au": {
+        "mean_eV": -0.39773277777777744,
+        "sum_eV": -21.477569999999982,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.187460000000003,
+    "sum_per_atom_eV": 1.5468650000000008,
+    "sum_per_formula_unit_eV": 6.187460000000003,
+    "mean_per_bond_eV": 0.06445270833333337,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Tl-Tl": {
+        "mean_eV": 0.03877,
+        "sum_eV": 0.23262,
+        "n_bonds": 6
+      },
+      "Au-Tl": {
+        "mean_eV": 0.0755980555555556,
+        "sum_eV": 2.7215300000000013,
+        "n_bonds": 36
+      },
+      "Au-Au": {
+        "mean_eV": 0.0598761111111111,
+        "sum_eV": 3.2333099999999995,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_TlAu3_mp-1187508"
+}

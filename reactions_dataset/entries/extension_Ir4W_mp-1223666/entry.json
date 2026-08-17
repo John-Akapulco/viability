@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ir4W_mp-1223666",
+  "formula": "Ir4W",
+  "composition": {
+    "Ir": 4,
+    "W": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -94.99587,
+    "sum_per_atom_eV": -18.999174,
+    "sum_per_formula_unit_eV": -94.99587,
+    "mean_per_bond_eV": -1.1727885185185185,
+    "n_bonds": 81,
+    "by_bond_type": {
+      "Ir-Ir": {
+        "mean_eV": -1.1245191228070175,
+        "sum_eV": -64.09759,
+        "n_bonds": 57
+      },
+      "Ir-W": {
+        "mean_eV": -0.9990411111111109,
+        "sum_eV": -17.982739999999996,
+        "n_bonds": 18
+      },
+      "W-W": {
+        "mean_eV": -2.15259,
+        "sum_eV": -12.91554,
+        "n_bonds": 6
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 14.402000000000003,
+    "sum_per_atom_eV": 2.8804000000000007,
+    "sum_per_formula_unit_eV": 14.402000000000003,
+    "mean_per_bond_eV": 0.1778024691358025,
+    "n_bonds": 81,
+    "by_bond_type": {
+      "Ir-Ir": {
+        "mean_eV": 0.1651012280701755,
+        "sum_eV": 9.410770000000003,
+        "n_bonds": 57
+      },
+      "Ir-W": {
+        "mean_eV": 0.1446138888888889,
+        "sum_eV": 2.60305,
+        "n_bonds": 18
+      },
+      "W-W": {
+        "mean_eV": 0.39803000000000005,
+        "sum_eV": 2.38818,
+        "n_bonds": 6
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ir4W_mp-1223666"
+}

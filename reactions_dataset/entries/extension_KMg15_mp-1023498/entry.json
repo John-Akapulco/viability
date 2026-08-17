@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_KMg15_mp-1023498",
+  "formula": "KMg15",
+  "composition": {
+    "K": 1,
+    "Mg": 15
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -1.0979700000000003,
+    "sum_per_atom_eV": -0.06862312500000002,
+    "sum_per_formula_unit_eV": -1.0979700000000003,
+    "mean_per_bond_eV": -0.0035648376623376634,
+    "n_bonds": 308,
+    "by_bond_type": {
+      "K-Mg": {
+        "mean_eV": -0.0022247368421052624,
+        "sum_eV": -0.08453999999999998,
+        "n_bonds": 38
+      },
+      "Mg-Mg": {
+        "mean_eV": -0.003753444444444442,
+        "sum_eV": -1.0134299999999994,
+        "n_bonds": 270
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.11566000000000003,
+    "sum_per_atom_eV": 0.007228750000000002,
+    "sum_per_formula_unit_eV": 0.11566000000000003,
+    "mean_per_bond_eV": 0.0003755194805194806,
+    "n_bonds": 308,
+    "by_bond_type": {
+      "K-Mg": {
+        "mean_eV": 0.00015394736842105263,
+        "sum_eV": 0.00585,
+        "n_bonds": 38
+      },
+      "Mg-Mg": {
+        "mean_eV": 0.0004067037037037037,
+        "sum_eV": 0.10981,
+        "n_bonds": 270
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_KMg15_mp-1023498"
+}

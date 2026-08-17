@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Mg2Ge_mp-250",
+  "formula": "Mg2Ge",
+  "composition": {
+    "Mg": 4,
+    "Ge": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -10.49759000000001,
+    "sum_per_atom_eV": -1.749598333333335,
+    "sum_per_formula_unit_eV": -5.248795000000005,
+    "mean_per_bond_eV": -0.06248565476190482,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.03617809523809522,
+        "sum_eV": -3.038959999999998,
+        "n_bonds": 84
+      },
+      "Ge-Mg": {
+        "mean_eV": -0.0770255357142857,
+        "sum_eV": -4.313429999999999,
+        "n_bonds": 56
+      },
+      "Ge-Ge": {
+        "mean_eV": -0.1123285714285714,
+        "sum_eV": -3.145199999999999,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.7012099999999992,
+    "sum_per_atom_eV": 0.6168683333333332,
+    "sum_per_formula_unit_eV": 1.8506049999999996,
+    "mean_per_bond_eV": 0.0220310119047619,
+    "n_bonds": 168,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.010360000000000001,
+        "sum_eV": 0.8702400000000001,
+        "n_bonds": 84
+      },
+      "Ge-Mg": {
+        "mean_eV": 0.02357196428571428,
+        "sum_eV": 1.3200299999999996,
+        "n_bonds": 56
+      },
+      "Ge-Ge": {
+        "mean_eV": 0.05396214285714285,
+        "sum_eV": 1.5109399999999997,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mg2Ge_mp-250"
+}

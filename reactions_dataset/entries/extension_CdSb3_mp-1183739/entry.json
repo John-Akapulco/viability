@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CdSb3_mp-1183739",
+  "formula": "CdSb3",
+  "composition": {
+    "Cd": 2,
+    "Sb": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -46.136700000000005,
+    "sum_per_atom_eV": -5.767087500000001,
+    "sum_per_formula_unit_eV": -23.068350000000002,
+    "mean_per_bond_eV": -0.28835437500000005,
+    "n_bonds": 160,
+    "by_bond_type": {
+      "Cd-Cd": {
+        "mean_eV": -0.07741500000000001,
+        "sum_eV": -0.7741500000000001,
+        "n_bonds": 10
+      },
+      "Cd-Sb": {
+        "mean_eV": -0.47363016666666674,
+        "sum_eV": -28.417810000000003,
+        "n_bonds": 60
+      },
+      "Sb-Sb": {
+        "mean_eV": -0.18827488888888894,
+        "sum_eV": -16.944740000000003,
+        "n_bonds": 90
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.852830000000004,
+    "sum_per_atom_eV": 1.3566037500000006,
+    "sum_per_formula_unit_eV": 5.426415000000002,
+    "mean_per_bond_eV": 0.06783018750000003,
+    "n_bonds": 160,
+    "by_bond_type": {
+      "Cd-Cd": {
+        "mean_eV": 0.013261,
+        "sum_eV": 0.13261,
+        "n_bonds": 10
+      },
+      "Cd-Sb": {
+        "mean_eV": 0.08608266666666661,
+        "sum_eV": 5.164959999999997,
+        "n_bonds": 60
+      },
+      "Sb-Sb": {
+        "mean_eV": 0.061725111111111106,
+        "sum_eV": 5.55526,
+        "n_bonds": 90
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CdSb3_mp-1183739"
+}

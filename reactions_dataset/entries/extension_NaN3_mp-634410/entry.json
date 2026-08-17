@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_NaN3_mp-634410",
+  "formula": "NaN3",
+  "composition": {
+    "Na": 1,
+    "N": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "C2",
+  "space_group_number": 5,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -46.85863999999997,
+    "sum_per_atom_eV": -11.714659999999993,
+    "sum_per_formula_unit_eV": -46.85863999999997,
+    "mean_per_bond_eV": -0.2892508641975307,
+    "n_bonds": 162,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": -0.02833875,
+        "sum_eV": -0.45342,
+        "n_bonds": 16
+      },
+      "N-Na": {
+        "mean_eV": -0.06884580000000001,
+        "sum_eV": -3.4422900000000003,
+        "n_bonds": 50
+      },
+      "N-N": {
+        "mean_eV": -0.44753052083333295,
+        "sum_eV": -42.962929999999965,
+        "n_bonds": 96
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.099980000000002,
+    "sum_per_atom_eV": 1.2749950000000005,
+    "sum_per_formula_unit_eV": 5.099980000000002,
+    "mean_per_bond_eV": 0.031481358024691375,
+    "n_bonds": 162,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": 0.0020875,
+        "sum_eV": 0.0334,
+        "n_bonds": 16
+      },
+      "N-Na": {
+        "mean_eV": 0.0088458,
+        "sum_eV": 0.44228999999999996,
+        "n_bonds": 50
+      },
+      "N-N": {
+        "mean_eV": 0.0481696875,
+        "sum_eV": 4.62429,
+        "n_bonds": 96
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_NaN3_mp-634410"
+}

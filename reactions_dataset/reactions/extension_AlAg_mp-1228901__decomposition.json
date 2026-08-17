@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_AlAg_mp-1228901__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_AlAg_mp-1228901",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Al_mp-134",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

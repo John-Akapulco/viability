@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_BaP10_mp-28035",
+  "formula": "BaP10",
+  "composition": {
+    "Ba": 2,
+    "P": 20
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmc2_1",
+  "space_group_number": 36,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -149.51831000000007,
+    "sum_per_atom_eV": -6.796286818181821,
+    "sum_per_formula_unit_eV": -74.75915500000004,
+    "mean_per_bond_eV": -0.36467880487804893,
+    "n_bonds": 410,
+    "by_bond_type": {
+      "Ba-P": {
+        "mean_eV": -0.09679238095238094,
+        "sum_eV": -8.13056,
+        "n_bonds": 84
+      },
+      "P-P": {
+        "mean_eV": -0.43370475460122687,
+        "sum_eV": -141.38774999999995,
+        "n_bonds": 326
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 30.477579999999993,
+    "sum_per_atom_eV": 1.3853445454545452,
+    "sum_per_formula_unit_eV": 15.238789999999996,
+    "mean_per_bond_eV": 0.07433556097560974,
+    "n_bonds": 410,
+    "by_bond_type": {
+      "Ba-P": {
+        "mean_eV": 0.016447738095238095,
+        "sum_eV": 1.38161,
+        "n_bonds": 84
+      },
+      "P-P": {
+        "mean_eV": 0.08925144171779137,
+        "sum_eV": 29.095969999999987,
+        "n_bonds": 326
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BaP10_mp-28035"
+}

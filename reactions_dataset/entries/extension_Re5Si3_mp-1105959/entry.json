@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Re5Si3_mp-1105959",
+  "formula": "Re5Si3",
+  "composition": {
+    "Re": 10,
+    "Si": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "I4/mcm",
+  "space_group_number": 140,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -170.08252999999996,
+    "sum_per_atom_eV": -10.630158124999998,
+    "sum_per_formula_unit_eV": -85.04126499999998,
+    "mean_per_bond_eV": -0.31613853159851296,
+    "n_bonds": 538,
+    "by_bond_type": {
+      "Re-Re": {
+        "mean_eV": -0.20369043478260873,
+        "sum_eV": -46.84880000000001,
+        "n_bonds": 230
+      },
+      "Re-Si": {
+        "mean_eV": -0.4572950833333334,
+        "sum_eV": -109.75082000000002,
+        "n_bonds": 240
+      },
+      "Si-Si": {
+        "mean_eV": -0.19827808823529414,
+        "sum_eV": -13.48291,
+        "n_bonds": 68
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 36.29061999999999,
+    "sum_per_atom_eV": 2.2681637499999994,
+    "sum_per_formula_unit_eV": 18.145309999999995,
+    "mean_per_bond_eV": 0.06745468401486987,
+    "n_bonds": 538,
+    "by_bond_type": {
+      "Re-Re": {
+        "mean_eV": 0.06812247826086958,
+        "sum_eV": 15.668170000000002,
+        "n_bonds": 230
+      },
+      "Re-Si": {
+        "mean_eV": 0.07790674999999993,
+        "sum_eV": 18.697619999999983,
+        "n_bonds": 240
+      },
+      "Si-Si": {
+        "mean_eV": 0.028306323529411773,
+        "sum_eV": 1.9248300000000005,
+        "n_bonds": 68
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Re5Si3_mp-1105959"
+}

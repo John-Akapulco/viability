@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_AgI_mp-22915__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_AgI_mp-22915",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_I_mp-23153",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

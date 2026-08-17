@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_HfCd_mp-1007758__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_HfCd_mp-1007758",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Hf_mp-103",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Cd_mp-94",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

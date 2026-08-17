@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Hg3Sb_mp-977242",
+  "formula": "Hg3Sb",
+  "composition": {
+    "Hg": 6,
+    "Sb": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -58.81868999999999,
+    "sum_per_atom_eV": -7.352336249999999,
+    "sum_per_formula_unit_eV": -29.409344999999995,
+    "mean_per_bond_eV": -0.36761681249999995,
+    "n_bonds": 160,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": -0.38334833333333335,
+        "sum_eV": -34.50135,
+        "n_bonds": 90
+      },
+      "Hg-Sb": {
+        "mean_eV": -0.3998745000000001,
+        "sum_eV": -23.992470000000004,
+        "n_bonds": 60
+      },
+      "Sb-Sb": {
+        "mean_eV": -0.032487,
+        "sum_eV": -0.32487000000000005,
+        "n_bonds": 10
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.040550000000003,
+    "sum_per_atom_eV": 1.3800687500000004,
+    "sum_per_formula_unit_eV": 5.520275000000002,
+    "mean_per_bond_eV": 0.06900343750000001,
+    "n_bonds": 160,
+    "by_bond_type": {
+      "Hg-Hg": {
+        "mean_eV": 0.06383433333333334,
+        "sum_eV": 5.745090000000001,
+        "n_bonds": 90
+      },
+      "Hg-Sb": {
+        "mean_eV": 0.08281466666666668,
+        "sum_eV": 4.96888,
+        "n_bonds": 60
+      },
+      "Sb-Sb": {
+        "mean_eV": 0.032658,
+        "sum_eV": 0.32658,
+        "n_bonds": 10
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Hg3Sb_mp-977242"
+}

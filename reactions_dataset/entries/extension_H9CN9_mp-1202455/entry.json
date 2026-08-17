@@ -1,0 +1,94 @@
+{
+  "compound_id": "extension_H9CN9_mp-1202455",
+  "formula": "H9CN9",
+  "composition": {
+    "H": 18,
+    "C": 2,
+    "N": 18
+  },
+  "Z": 2,
+  "space_group_symbol": "P-1",
+  "space_group_number": 2,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -370.2301600000007,
+    "sum_per_atom_eV": -9.74289894736844,
+    "sum_per_formula_unit_eV": -185.11508000000035,
+    "mean_per_bond_eV": -0.20308840373011558,
+    "n_bonds": 1823,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.0031137837837837833,
+        "sum_eV": -1.2673099999999997,
+        "n_bonds": 407
+      },
+      "C-H": {
+        "mean_eV": -0.0008502127659574467,
+        "sum_eV": -0.07991999999999999,
+        "n_bonds": 94
+      },
+      "H-N": {
+        "mean_eV": -0.1887584987593055,
+        "sum_eV": -152.13935000000023,
+        "n_bonds": 806
+      },
+      "C-C": {
+        "mean_eV": -0.019006666666666665,
+        "sum_eV": -0.11403999999999999,
+        "n_bonds": 6
+      },
+      "C-N": {
+        "mean_eV": -0.8130620652173913,
+        "sum_eV": -74.80171,
+        "n_bonds": 92
+      },
+      "N-N": {
+        "mean_eV": -0.339301028708134,
+        "sum_eV": -141.82783,
+        "n_bonds": 418
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 40.31456999999991,
+    "sum_per_atom_eV": 1.060909736842103,
+    "sum_per_formula_unit_eV": 20.157284999999955,
+    "mean_per_bond_eV": 0.022114410312671372,
+    "n_bonds": 1823,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.00021034398034398046,
+        "sum_eV": 0.08561000000000005,
+        "n_bonds": 407
+      },
+      "C-H": {
+        "mean_eV": 0.00014489361702127654,
+        "sum_eV": 0.013619999999999995,
+        "n_bonds": 94
+      },
+      "H-N": {
+        "mean_eV": 0.020336265508684767,
+        "sum_eV": 16.391029999999922,
+        "n_bonds": 806
+      },
+      "C-C": {
+        "mean_eV": 0.0025900000000000003,
+        "sum_eV": 0.015540000000000002,
+        "n_bonds": 6
+      },
+      "C-N": {
+        "mean_eV": 0.08506217391304348,
+        "sum_eV": 7.8257200000000005,
+        "n_bonds": 92
+      },
+      "N-N": {
+        "mean_eV": 0.038236961722488055,
+        "sum_eV": 15.983050000000008,
+        "n_bonds": 418
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_H9CN9_mp-1202455"
+}

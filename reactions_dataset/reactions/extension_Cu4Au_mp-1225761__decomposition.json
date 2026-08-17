@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Cu4Au_mp-1225761__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Cu4Au_mp-1225761",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cu_mp-30",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Au_mp-81",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_In7Cu10_mp-646039",
+  "formula": "In7Cu10",
+  "composition": {
+    "In": 14,
+    "Cu": 20
+  },
+  "Z": 2,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -167.7032999999998,
+    "sum_per_atom_eV": -4.932449999999995,
+    "sum_per_formula_unit_eV": -83.8516499999999,
+    "mean_per_bond_eV": -0.1877976483762596,
+    "n_bonds": 893,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": -0.41282547445255474,
+        "sum_eV": -56.55709,
+        "n_bonds": 137
+      },
+      "Cu-In": {
+        "mean_eV": -0.21565692982456142,
+        "sum_eV": -98.33956,
+        "n_bonds": 456
+      },
+      "Cu-Cu": {
+        "mean_eV": -0.04268883333333333,
+        "sum_eV": -12.80665,
+        "n_bonds": 300
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 34.75661000000006,
+    "sum_per_atom_eV": 1.0222532352941194,
+    "sum_per_formula_unit_eV": 17.37830500000003,
+    "mean_per_bond_eV": 0.038921175811870164,
+    "n_bonds": 893,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": 0.09420226277372268,
+        "sum_eV": 12.905710000000006,
+        "n_bonds": 137
+      },
+      "Cu-In": {
+        "mean_eV": 0.041587609649122816,
+        "sum_eV": 18.963950000000004,
+        "n_bonds": 456
+      },
+      "Cu-Cu": {
+        "mean_eV": 0.009623166666666653,
+        "sum_eV": 2.886949999999996,
+        "n_bonds": 300
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_In7Cu10_mp-646039"
+}

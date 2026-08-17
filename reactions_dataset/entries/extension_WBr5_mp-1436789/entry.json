@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_WBr5_mp-1436789",
+  "formula": "WBr5",
+  "composition": {
+    "W": 2,
+    "Br": 10
+  },
+  "Z": 2,
+  "space_group_symbol": "P-1",
+  "space_group_number": 2,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -74.91504999999998,
+    "sum_per_atom_eV": -6.242920833333332,
+    "sum_per_formula_unit_eV": -37.45752499999999,
+    "mean_per_bond_eV": -0.5549262962962962,
+    "n_bonds": 135,
+    "by_bond_type": {
+      "W-W": {
+        "mean_eV": -0.22684500000000002,
+        "sum_eV": -0.45369000000000004,
+        "n_bonds": 2
+      },
+      "Br-W": {
+        "mean_eV": -1.6875866666666663,
+        "sum_eV": -70.87863999999999,
+        "n_bonds": 42
+      },
+      "Br-Br": {
+        "mean_eV": -0.03937054945054945,
+        "sum_eV": -3.58272,
+        "n_bonds": 91
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 15.528290000000004,
+    "sum_per_atom_eV": 1.294024166666667,
+    "sum_per_formula_unit_eV": 7.764145000000002,
+    "mean_per_bond_eV": 0.1150243703703704,
+    "n_bonds": 135,
+    "by_bond_type": {
+      "W-W": {
+        "mean_eV": 0.170575,
+        "sum_eV": 0.34115,
+        "n_bonds": 2
+      },
+      "Br-W": {
+        "mean_eV": 0.32306333333333337,
+        "sum_eV": 13.568660000000001,
+        "n_bonds": 42
+      },
+      "Br-Br": {
+        "mean_eV": 0.017785494505494503,
+        "sum_eV": 1.6184799999999997,
+        "n_bonds": 91
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_WBr5_mp-1436789"
+}

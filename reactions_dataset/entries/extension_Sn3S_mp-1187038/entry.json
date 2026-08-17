@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Sn3S_mp-1187038",
+  "formula": "Sn3S",
+  "composition": {
+    "Sn": 3,
+    "S": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -21.780230000000014,
+    "sum_per_atom_eV": -5.445057500000003,
+    "sum_per_formula_unit_eV": -21.780230000000014,
+    "mean_per_bond_eV": -0.28658197368421073,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Sn-Sn": {
+        "mean_eV": -0.31118359999999995,
+        "sum_eV": -15.559179999999998,
+        "n_bonds": 50
+      },
+      "S-Sn": {
+        "mean_eV": -0.44126214285714277,
+        "sum_eV": -6.177669999999999,
+        "n_bonds": 14
+      },
+      "S-S": {
+        "mean_eV": -0.003615,
+        "sum_eV": -0.04338,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.997020000000004,
+    "sum_per_atom_eV": 1.249255000000001,
+    "sum_per_formula_unit_eV": 4.997020000000004,
+    "mean_per_bond_eV": 0.06575026315789478,
+    "n_bonds": 76,
+    "by_bond_type": {
+      "Sn-Sn": {
+        "mean_eV": 0.06790039999999993,
+        "sum_eV": 3.3950199999999966,
+        "n_bonds": 50
+      },
+      "S-Sn": {
+        "mean_eV": 0.11086142857142856,
+        "sum_eV": 1.5520599999999998,
+        "n_bonds": 14
+      },
+      "S-S": {
+        "mean_eV": 0.004161666666666665,
+        "sum_eV": 0.049939999999999984,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Sn3S_mp-1187038"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Cu4Au_mp-1225761",
+  "formula": "Cu4Au",
+  "composition": {
+    "Cu": 4,
+    "Au": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": 1861.8173400000003,
+    "sum_per_atom_eV": 372.36346800000007,
+    "sum_per_formula_unit_eV": 1861.8173400000003,
+    "mean_per_bond_eV": 22.705089512195126,
+    "n_bonds": 82,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": 6.082949310344828,
+        "sum_eV": 352.81106000000005,
+        "n_bonds": 58
+      },
+      "Au-Cu": {
+        "mean_eV": 22.05601,
+        "sum_eV": 397.00818000000004,
+        "n_bonds": 18
+      },
+      "Au-Au": {
+        "mean_eV": 185.33301666666668,
+        "sum_eV": 1111.9981,
+        "n_bonds": 6
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 19.423910000000003,
+    "sum_per_atom_eV": 3.8847820000000004,
+    "sum_per_formula_unit_eV": 19.423910000000003,
+    "mean_per_bond_eV": 0.23687695121951224,
+    "n_bonds": 82,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": 0.09765344827586206,
+        "sum_eV": 5.663899999999999,
+        "n_bonds": 58
+      },
+      "Au-Cu": {
+        "mean_eV": 0.18780833333333335,
+        "sum_eV": 3.3805500000000004,
+        "n_bonds": 18
+      },
+      "Au-Au": {
+        "mean_eV": 1.72991,
+        "sum_eV": 10.37946,
+        "n_bonds": 6
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cu4Au_mp-1225761"
+}

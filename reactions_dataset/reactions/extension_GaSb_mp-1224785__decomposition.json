@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_GaSb_mp-1224785__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_GaSb_mp-1224785",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Sb_mp-104",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

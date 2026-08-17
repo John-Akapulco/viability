@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Hf3Pb_mp-1184772__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Hf3Pb_mp-1184772",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Hf_mp-103",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Pb_mp-20483",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

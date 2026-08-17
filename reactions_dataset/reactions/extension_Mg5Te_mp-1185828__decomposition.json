@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Mg5Te_mp-1185828__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Mg5Te_mp-1185828",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 5.0
+    },
+    {
+      "compound_id": "extension_Te_mp-19",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

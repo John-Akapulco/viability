@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Zn3Au_mp-1188000",
+  "formula": "Zn3Au",
+  "composition": {
+    "Zn": 6,
+    "Au": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -85.67908000000001,
+    "sum_per_atom_eV": -10.709885000000002,
+    "sum_per_formula_unit_eV": -42.83954000000001,
+    "mean_per_bond_eV": -0.33468390625000005,
+    "n_bonds": 256,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.2536774666666665,
+        "sum_eV": -38.05161999999998,
+        "n_bonds": 150
+      },
+      "Au-Zn": {
+        "mean_eV": -0.5386960714285716,
+        "sum_eV": -45.250470000000014,
+        "n_bonds": 84
+      },
+      "Au-Au": {
+        "mean_eV": -0.108045,
+        "sum_eV": -2.37699,
+        "n_bonds": 22
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.750010000000007,
+    "sum_per_atom_eV": 1.4687512500000008,
+    "sum_per_formula_unit_eV": 5.875005000000003,
+    "mean_per_bond_eV": 0.045898476562500026,
+    "n_bonds": 256,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.03710833333333335,
+        "sum_eV": 5.566250000000002,
+        "n_bonds": 150
+      },
+      "Au-Zn": {
+        "mean_eV": 0.06895464285714288,
+        "sum_eV": 5.792190000000002,
+        "n_bonds": 84
+      },
+      "Au-Au": {
+        "mean_eV": 0.017798636363636364,
+        "sum_eV": 0.39157000000000003,
+        "n_bonds": 22
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Zn3Au_mp-1188000"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ga3Hg_mp-1184289",
+  "formula": "Ga3Hg",
+  "composition": {
+    "Ga": 6,
+    "Hg": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -63.65947999999998,
+    "sum_per_atom_eV": -7.957434999999998,
+    "sum_per_formula_unit_eV": -31.82973999999999,
+    "mean_per_bond_eV": -0.32479326530612235,
+    "n_bonds": 196,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": -0.2773415686274511,
+        "sum_eV": -28.28884000000001,
+        "n_bonds": 102
+      },
+      "Ga-Hg": {
+        "mean_eV": -0.40940190476190497,
+        "sum_eV": -34.38976000000002,
+        "n_bonds": 84
+      },
+      "Hg-Hg": {
+        "mean_eV": -0.09808800000000001,
+        "sum_eV": -0.9808800000000001,
+        "n_bonds": 10
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.405850000000008,
+    "sum_per_atom_eV": 1.425731250000001,
+    "sum_per_formula_unit_eV": 5.702925000000004,
+    "mean_per_bond_eV": 0.058193112244898,
+    "n_bonds": 196,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": 0.055316960784313716,
+        "sum_eV": 5.642329999999999,
+        "n_bonds": 102
+      },
+      "Ga-Hg": {
+        "mean_eV": 0.06616321428571428,
+        "sum_eV": 5.557709999999999,
+        "n_bonds": 84
+      },
+      "Hg-Hg": {
+        "mean_eV": 0.020581,
+        "sum_eV": 0.20581,
+        "n_bonds": 10
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ga3Hg_mp-1184289"
+}

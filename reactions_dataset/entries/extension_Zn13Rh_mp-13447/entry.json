@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Zn13Rh_mp-13447",
+  "formula": "Zn13Rh",
+  "composition": {
+    "Zn": 13,
+    "Rh": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -141.1312399999999,
+    "sum_per_atom_eV": -10.080802857142851,
+    "sum_per_formula_unit_eV": -141.1312399999999,
+    "mean_per_bond_eV": -0.3244396321839078,
+    "n_bonds": 435,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": -0.33733952506596293,
+        "sum_eV": -127.85167999999994,
+        "n_bonds": 379
+      },
+      "Rh-Zn": {
+        "mean_eV": -0.2459737037037037,
+        "sum_eV": -13.28258,
+        "n_bonds": 54
+      },
+      "Rh-Rh": {
+        "mean_eV": 0.00151,
+        "sum_eV": 0.00302,
+        "n_bonds": 2
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 20.451999999999995,
+    "sum_per_atom_eV": 1.4608571428571424,
+    "sum_per_formula_unit_eV": 20.451999999999995,
+    "mean_per_bond_eV": 0.047016091954022975,
+    "n_bonds": 435,
+    "by_bond_type": {
+      "Zn-Zn": {
+        "mean_eV": 0.04679931398416882,
+        "sum_eV": 17.736939999999983,
+        "n_bonds": 379
+      },
+      "Rh-Zn": {
+        "mean_eV": 0.0502140740740741,
+        "sum_eV": 2.7115600000000013,
+        "n_bonds": 54
+      },
+      "Rh-Rh": {
+        "mean_eV": 0.00175,
+        "sum_eV": 0.0035,
+        "n_bonds": 2
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Zn13Rh_mp-13447"
+}

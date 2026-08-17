@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_RuRh3_mp-974335",
+  "formula": "RuRh3",
+  "composition": {
+    "Ru": 1,
+    "Rh": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -24.979769999999984,
+    "sum_per_atom_eV": -6.244942499999996,
+    "sum_per_formula_unit_eV": -24.979769999999984,
+    "mean_per_bond_eV": -0.17347062499999988,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Ru-Ru": {
+        "mean_eV": -0.07914444444444446,
+        "sum_eV": -1.4246000000000003,
+        "n_bonds": 18
+      },
+      "Rh-Ru": {
+        "mean_eV": -0.30927750000000004,
+        "sum_eV": -11.13399,
+        "n_bonds": 36
+      },
+      "Rh-Rh": {
+        "mean_eV": -0.1380131111111111,
+        "sum_eV": -12.421179999999998,
+        "n_bonds": 90
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.106430000000005,
+    "sum_per_atom_eV": 2.0266075000000012,
+    "sum_per_formula_unit_eV": 8.106430000000005,
+    "mean_per_bond_eV": 0.056294652777777815,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Ru-Ru": {
+        "mean_eV": 0.05176333333333334,
+        "sum_eV": 0.9317400000000001,
+        "n_bonds": 18
+      },
+      "Rh-Ru": {
+        "mean_eV": 0.0822075,
+        "sum_eV": 2.95947,
+        "n_bonds": 36
+      },
+      "Rh-Rh": {
+        "mean_eV": 0.0468357777777778,
+        "sum_eV": 4.215220000000002,
+        "n_bonds": 90
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_RuRh3_mp-974335"
+}

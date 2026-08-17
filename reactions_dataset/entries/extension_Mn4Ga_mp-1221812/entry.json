@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Mn4Ga_mp-1221812",
+  "formula": "Mn4Ga",
+  "composition": {
+    "Mn": 4,
+    "Ga": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -54.42468,
+    "sum_per_atom_eV": -10.884936,
+    "sum_per_formula_unit_eV": -54.42468,
+    "mean_per_bond_eV": -0.22582854771784233,
+    "n_bonds": 241,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": -0.1962043558282208,
+        "sum_eV": -31.98130999999999,
+        "n_bonds": 163
+      },
+      "Ga-Mn": {
+        "mean_eV": -0.11272383333333331,
+        "sum_eV": -6.763429999999999,
+        "n_bonds": 60
+      },
+      "Ga-Ga": {
+        "mean_eV": -0.8711077777777778,
+        "sum_eV": -15.67994,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 17.118610000000004,
+    "sum_per_atom_eV": 3.4237220000000006,
+    "sum_per_formula_unit_eV": 17.118610000000004,
+    "mean_per_bond_eV": 0.0710315767634855,
+    "n_bonds": 241,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": 0.08287773006134969,
+        "sum_eV": 13.509069999999998,
+        "n_bonds": 163
+      },
+      "Ga-Mn": {
+        "mean_eV": 0.027632666666666663,
+        "sum_eV": 1.6579599999999999,
+        "n_bonds": 60
+      },
+      "Ga-Ga": {
+        "mean_eV": 0.10842111111111112,
+        "sum_eV": 1.95158,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mn4Ga_mp-1221812"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Mn4Ga_mp-1221812__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Mn4Ga_mp-1221812",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mn_mp-35",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_AlAg2_mp-985805",
+  "formula": "AlAg2",
+  "composition": {
+    "Al": 2,
+    "Ag": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -56.693749999999994,
+    "sum_per_atom_eV": -9.448958333333332,
+    "sum_per_formula_unit_eV": -28.346874999999997,
+    "mean_per_bond_eV": -0.2952799479166666,
+    "n_bonds": 192,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.13638375000000003,
+        "sum_eV": -3.2732100000000006,
+        "n_bonds": 24
+      },
+      "Ag-Al": {
+        "mean_eV": -0.383934,
+        "sum_eV": -30.71472,
+        "n_bonds": 80
+      },
+      "Ag-Ag": {
+        "mean_eV": -0.25802068181818194,
+        "sum_eV": -22.70582000000001,
+        "n_bonds": 88
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.767060000000003,
+    "sum_per_atom_eV": 1.461176666666667,
+    "sum_per_formula_unit_eV": 4.383530000000001,
+    "mean_per_bond_eV": 0.045661770833333344,
+    "n_bonds": 192,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.03355375,
+        "sum_eV": 0.80529,
+        "n_bonds": 24
+      },
+      "Ag-Al": {
+        "mean_eV": 0.059639750000000026,
+        "sum_eV": 4.771180000000002,
+        "n_bonds": 80
+      },
+      "Ag-Ag": {
+        "mean_eV": 0.036256704545454536,
+        "sum_eV": 3.1905899999999994,
+        "n_bonds": 88
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_AlAg2_mp-985805"
+}

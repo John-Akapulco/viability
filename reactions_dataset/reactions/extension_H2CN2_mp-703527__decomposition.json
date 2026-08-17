@@ -1,0 +1,26 @@
+{
+  "reaction_id": "extension_H2CN2_mp-703527__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_H2CN2_mp-703527",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_H_mp-730101",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Cgraphite_mp-48",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "gasref_N2_dimerbox",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

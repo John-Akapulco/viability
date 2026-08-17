@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_As3W2_mp-11696",
+  "formula": "As3W2",
+  "composition": {
+    "As": 6,
+    "W": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "C2/m",
+  "space_group_number": 12,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -152.05654000000007,
+    "sum_per_atom_eV": -15.205654000000006,
+    "sum_per_formula_unit_eV": -76.02827000000003,
+    "mean_per_bond_eV": -0.5489405776173287,
+    "n_bonds": 277,
+    "by_bond_type": {
+      "As-As": {
+        "mean_eV": -0.11606591836734696,
+        "sum_eV": -11.374460000000003,
+        "n_bonds": 98
+      },
+      "As-W": {
+        "mean_eV": -0.7830204411764708,
+        "sum_eV": -106.49078000000003,
+        "n_bonds": 136
+      },
+      "W-W": {
+        "mean_eV": -0.7951465116279071,
+        "sum_eV": -34.191300000000005,
+        "n_bonds": 43
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 27.02992000000001,
+    "sum_per_atom_eV": 2.702992000000001,
+    "sum_per_formula_unit_eV": 13.514960000000006,
+    "mean_per_bond_eV": 0.09758093862815889,
+    "n_bonds": 277,
+    "by_bond_type": {
+      "As-As": {
+        "mean_eV": 0.022859591836734694,
+        "sum_eV": 2.24024,
+        "n_bonds": 98
+      },
+      "As-W": {
+        "mean_eV": 0.13392102941176473,
+        "sum_eV": 18.213260000000002,
+        "n_bonds": 136
+      },
+      "W-W": {
+        "mean_eV": 0.15294,
+        "sum_eV": 6.57642,
+        "n_bonds": 43
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_As3W2_mp-11696"
+}

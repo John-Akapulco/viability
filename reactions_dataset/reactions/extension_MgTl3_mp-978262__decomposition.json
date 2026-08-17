@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_MgTl3_mp-978262__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_MgTl3_mp-978262",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Tl_mp-82",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

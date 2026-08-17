@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ba4Pd_mp-1214438",
+  "formula": "Ba4Pd",
+  "composition": {
+    "Ba": 8,
+    "Pd": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -31.07602000000001,
+    "sum_per_atom_eV": -3.107602000000001,
+    "sum_per_formula_unit_eV": -15.538010000000005,
+    "mean_per_bond_eV": -0.36995261904761917,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.05471000000000001,
+        "sum_eV": -2.6260800000000004,
+        "n_bonds": 48
+      },
+      "Ba-Pd": {
+        "mean_eV": -0.8767993750000003,
+        "sum_eV": -28.05758000000001,
+        "n_bonds": 32
+      },
+      "Pd-Pd": {
+        "mean_eV": -0.09809000000000001,
+        "sum_eV": -0.39236000000000004,
+        "n_bonds": 4
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 5.17335,
+    "sum_per_atom_eV": 0.517335,
+    "sum_per_formula_unit_eV": 2.586675,
+    "mean_per_bond_eV": 0.0615875,
+    "n_bonds": 84,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.009688958333333336,
+        "sum_eV": 0.46507000000000015,
+        "n_bonds": 48
+      },
+      "Ba-Pd": {
+        "mean_eV": 0.1394415625,
+        "sum_eV": 4.46213,
+        "n_bonds": 32
+      },
+      "Pd-Pd": {
+        "mean_eV": 0.0615375,
+        "sum_eV": 0.24615,
+        "n_bonds": 4
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ba4Pd_mp-1214438"
+}

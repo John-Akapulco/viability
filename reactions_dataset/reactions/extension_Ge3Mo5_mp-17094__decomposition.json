@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ge3Mo5_mp-17094__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ge3Mo5_mp-17094",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ge_mp-32",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Mo_mp-129",
+      "coefficient": 5.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

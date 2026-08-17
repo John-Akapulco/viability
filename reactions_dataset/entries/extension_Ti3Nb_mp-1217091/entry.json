@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ti3Nb_mp-1217091",
+  "formula": "Ti3Nb",
+  "composition": {
+    "Ti": 3,
+    "Nb": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Amm2",
+  "space_group_number": 38,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -34.606430000000024,
+    "sum_per_atom_eV": -8.651607500000006,
+    "sum_per_formula_unit_eV": -34.606430000000024,
+    "mean_per_bond_eV": -0.24032243055555572,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.2194600000000001,
+        "sum_eV": -18.87356000000001,
+        "n_bonds": 86
+      },
+      "Nb-Ti": {
+        "mean_eV": -0.1855969047619047,
+        "sum_eV": -7.795069999999998,
+        "n_bonds": 42
+      },
+      "Nb-Nb": {
+        "mean_eV": -0.49611249999999996,
+        "sum_eV": -7.937799999999999,
+        "n_bonds": 16
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.654969999999999,
+    "sum_per_atom_eV": 3.1637424999999997,
+    "sum_per_formula_unit_eV": 12.654969999999999,
+    "mean_per_bond_eV": 0.08788173611111111,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.08651046511627908,
+        "sum_eV": 7.439900000000001,
+        "n_bonds": 86
+      },
+      "Nb-Ti": {
+        "mean_eV": 0.066655,
+        "sum_eV": 2.79951,
+        "n_bonds": 42
+      },
+      "Nb-Nb": {
+        "mean_eV": 0.1509725,
+        "sum_eV": 2.41556,
+        "n_bonds": 16
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ti3Nb_mp-1217091"
+}

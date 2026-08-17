@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_HC6_mp-995202__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_HC6_mp-995202",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_H_mp-730101",
+      "coefficient": 0.5
+    },
+    {
+      "compound_id": "extension_Cgraphite_mp-48",
+      "coefficient": 6.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

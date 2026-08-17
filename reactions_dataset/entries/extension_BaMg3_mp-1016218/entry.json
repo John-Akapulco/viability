@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_BaMg3_mp-1016218",
+  "formula": "BaMg3",
+  "composition": {
+    "Ba": 1,
+    "Mg": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Pmm2",
+  "space_group_number": 25,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -0.47117999999999993,
+    "sum_per_atom_eV": -0.11779499999999998,
+    "sum_per_formula_unit_eV": -0.47117999999999993,
+    "mean_per_bond_eV": -0.009816249999999999,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": -0.026655,
+        "sum_eV": -0.10662,
+        "n_bonds": 4
+      },
+      "Ba-Mg": {
+        "mean_eV": -0.012954999999999998,
+        "sum_eV": -0.20727999999999996,
+        "n_bonds": 16
+      },
+      "Mg-Mg": {
+        "mean_eV": -0.005617142857142856,
+        "sum_eV": -0.15727999999999998,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.07234000000000003,
+    "sum_per_atom_eV": 0.018085000000000007,
+    "sum_per_formula_unit_eV": 0.07234000000000003,
+    "mean_per_bond_eV": 0.001507083333333334,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "Ba-Ba": {
+        "mean_eV": 0.004455,
+        "sum_eV": 0.01782,
+        "n_bonds": 4
+      },
+      "Ba-Mg": {
+        "mean_eV": 0.0014349999999999999,
+        "sum_eV": 0.022959999999999998,
+        "n_bonds": 16
+      },
+      "Mg-Mg": {
+        "mean_eV": 0.0011271428571428572,
+        "sum_eV": 0.03156,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_BaMg3_mp-1016218"
+}
