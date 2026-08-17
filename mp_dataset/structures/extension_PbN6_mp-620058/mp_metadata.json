@@ -1,0 +1,16 @@
+{
+  "label": "PbN6",
+  "mp_id": "mp-620058",
+  "formula": "PbN6",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": "covalent",
+  "is_metal": false,
+  "band_gap_eV": 2.2802000000000007,
+  "energy_above_hull_eV_per_atom": 0.1096255538095221,
+  "theoretical": false,
+  "nsites": 84,
+  "spacegroup": "Pna2_1",
+  "requested_spacegroup": "Pna2_1",
+  "note": "lead azide, Pna2_1 polymorph -- the exact structure (Glen 1963, ICSD 28336/16887) cited by Reitz & Dronskowski (ic-2026-04181q); distinct from extension_PbN6_mp-667338 (Pnma polymorph already in this dataset)"
+}

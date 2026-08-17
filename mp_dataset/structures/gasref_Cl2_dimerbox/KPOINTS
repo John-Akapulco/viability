@@ -1,4 +1,4 @@
-Automatic kpoint scheme
+pymatgen with grid density = 50 / number of atoms
 0
-Gamma
-1 1 1
+Monkhorst
+2 2 2
