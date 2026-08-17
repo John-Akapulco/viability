@@ -1,0 +1,15 @@
+{
+  "label": "ZnSn",
+  "formula": "ZnSn",
+  "family": "extension",
+  "source": "synthetic_prototype",
+  "bond_type": "metallic",
+  "is_metal": true,
+  "band_gap_eV": 0.0,
+  "energy_above_hull_eV_per_atom": null,
+  "theoretical": true,
+  "nsites": 4,
+  "spacegroup": "P6_3/mmc",
+  "spacegroup_number": 194,
+  "note": "hand-built NiAs-type (B8_1) ZnSn prototype -- no Materials Project or COD entry exists for this composition/structure (Zn-Sn has no stable intermetallic on the real phase diagram). Built to match the ZnSn used in Reitz & Dronskowski's (ic-2026-04181q) worked bonding-calculus example: 6 Zn-Sn + 1 Zn-Zn bond/formula unit, consistent with NiAs's octahedral B-site (Sn) coordination of A (Zn) plus a short Zn-Zn contact along c. Case-1 decomposition of this compound should use extension_Zn_mp-79 and extension_Snalpha_mp-117 (diamond-cubic alpha-Sn, gray tin) as references -- NOT the dataset's default ELEMENT_REFERENCE['Sn'] (extension_Sn_mp-623511, beta-Sn/white tin) -- since alpha-Sn is the competing phase the manuscript's ZnSn decomposition actually compares against."
+}
