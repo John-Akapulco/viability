@@ -1,4 +1,124 @@
 {
+  "AgN": {
+    "reduced_formula": "AgN",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1428312",
+        "reduced_formula": "AgN",
+        "n_sites": 2,
+        "icohp_per_atom": -11.463604999999996,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_AgN_poly_mp-1428312",
+        "mp_id": "mp-1428312",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.6518583891666676
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1009766",
+        "reduced_formula": "AgN",
+        "n_sites": 2,
+        "icohp_per_atom": -10.323820000000001,
+        "delta_icohp_per_atom_vs_most_bonding": 1.1397849999999945,
+        "compound_id": "extension_AgN_poly_mp-1009766",
+        "mp_id": "mp-1009766",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.5494896491666665
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_anchor_mp-1091417",
+        "reduced_formula": "AgN",
+        "n_sites": 8,
+        "icohp_per_atom": -9.231961249999992,
+        "delta_icohp_per_atom_vs_most_bonding": 2.2316437500000035,
+        "compound_id": "extension_AgN_anchor_mp-1091417",
+        "mp_id": "mp-1091417",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 1.5201297641666667
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_AgN_poly_mp-1424734",
+        "reduced_formula": "AgN",
+        "n_sites": 4,
+        "icohp_per_atom": -8.728767500000004,
+        "delta_icohp_per_atom_vs_most_bonding": 2.7348374999999923,
+        "compound_id": "extension_AgN_poly_mp-1424734",
+        "mp_id": "mp-1424734",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.9196186741666672
+      }
+    ],
+    "most_bonding_compound_id": "extension_AgN_poly_mp-1428312",
+    "most_stable_compound_id": "extension_AgN_anchor_mp-1091417",
+    "most_bonding_matches_most_stable": false
+  },
+  "As4S3": {
+    "reduced_formula": "As4S3",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_As4S3_mp-557321",
+        "reduced_formula": "As4S3",
+        "n_sites": 28,
+        "icohp_per_atom": -6.168818571428572,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_As4S3_mp-557321",
+        "mp_id": "mp-557321",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.006840436428570129
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_As4S3_mp-27543",
+        "reduced_formula": "As4S3",
+        "n_sites": 28,
+        "icohp_per_atom": -6.155724285714288,
+        "delta_icohp_per_atom_vs_most_bonding": 0.013094285714283949,
+        "compound_id": "extension_As4S3_mp-27543",
+        "mp_id": "mp-27543",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.006355647857141378
+      }
+    ],
+    "most_bonding_compound_id": "extension_As4S3_mp-557321",
+    "most_stable_compound_id": "extension_As4S3_mp-27543",
+    "most_bonding_matches_most_stable": false
+  },
+  "BPd5": {
+    "reduced_formula": "BPd5",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/theo_metastable_BPd5_mp-1228665",
+        "reduced_formula": "BPd5",
+        "n_sites": 6,
+        "icohp_per_atom": -9.930291666666667,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "theo_metastable_BPd5_mp-1228665",
+        "mp_id": "mp-1228665",
+        "family": "theo_metastable",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.13249513083333042
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_BPd5_mp-1228665",
+        "reduced_formula": "BPd5",
+        "n_sites": 6,
+        "icohp_per_atom": -9.926036666666667,
+        "delta_icohp_per_atom_vs_most_bonding": 0.004255000000000564,
+        "compound_id": "extension_BPd5_mp-1228665",
+        "mp_id": "mp-1228665",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.13249513083333042
+      }
+    ],
+    "most_bonding_compound_id": "theo_metastable_BPd5_mp-1228665",
+    "most_stable_compound_id": "theo_metastable_BPd5_mp-1228665",
+    "most_bonding_matches_most_stable": true
+  },
   "BaCl2": {
     "reduced_formula": "BaCl2",
     "polymorphs": [
@@ -143,6 +263,18 @@
     "reduced_formula": "Be3P2",
     "polymorphs": [
       {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Be3P2_mp-1084771",
+        "reduced_formula": "Be3P2",
+        "n_sites": 10,
+        "icohp_per_atom": -10.969421999999993,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_Be3P2_mp-1084771",
+        "mp_id": "mp-1084771",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.15672523674999983
+      },
+      {
         "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Be3P2_theo_mp-1084771",
         "reduced_formula": "Be3P2",
         "n_sites": 10,
@@ -165,9 +297,21 @@
         "family": "extension",
         "theoretical": false,
         "energy_above_hull_eV_per_atom": 0.0
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Be3P2_mp-567841",
+        "reduced_formula": "Be3P2",
+        "n_sites": 40,
+        "icohp_per_atom": -10.937875999999997,
+        "delta_icohp_per_atom_vs_most_bonding": 0.03154599999999519,
+        "compound_id": "extension_Be3P2_mp-567841",
+        "mp_id": "mp-567841",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
       }
     ],
-    "most_bonding_compound_id": "extension_Be3P2_theo_mp-1084771",
+    "most_bonding_compound_id": "extension_Be3P2_mp-1084771",
     "most_stable_compound_id": "extension_Be3P2_exp_mp-567841",
     "most_bonding_matches_most_stable": false
   },
@@ -279,6 +423,62 @@
     "most_stable_compound_id": "extension_BeO_theo_mp-1778",
     "most_bonding_matches_most_stable": true
   },
+  "Bi2O3": {
+    "reduced_formula": "Bi2O3",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Bi2O3_poly_mp-714859",
+        "reduced_formula": "Bi2O3",
+        "n_sites": 5,
+        "icohp_per_atom": -5.885178000000002,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_Bi2O3_poly_mp-714859",
+        "mp_id": "mp-714859",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 2.402893258000003
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Bi2O3_poly_mp-674644",
+        "reduced_formula": "Bi2O3",
+        "n_sites": 20,
+        "icohp_per_atom": -5.5592545,
+        "delta_icohp_per_atom_vs_most_bonding": 0.3259235000000018,
+        "compound_id": "extension_Bi2O3_poly_mp-674644",
+        "mp_id": "mp-674644",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.6198849705000029
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Bi2O3_poly_mp-1383505",
+        "reduced_formula": "Bi2O3",
+        "n_sites": 5,
+        "icohp_per_atom": -5.418416000000001,
+        "delta_icohp_per_atom_vs_most_bonding": 0.466762000000001,
+        "compound_id": "extension_Bi2O3_poly_mp-1383505",
+        "mp_id": "mp-1383505",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.9067888160000024
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Bi2O3_anchor_mp-558953",
+        "reduced_formula": "Bi2O3",
+        "n_sites": 20,
+        "icohp_per_atom": -5.408816000000002,
+        "delta_icohp_per_atom_vs_most_bonding": 0.47636199999999995,
+        "compound_id": "extension_Bi2O3_anchor_mp-558953",
+        "mp_id": "mp-558953",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.600030676500003
+      }
+    ],
+    "most_bonding_compound_id": "extension_Bi2O3_poly_mp-714859",
+    "most_stable_compound_id": "extension_Bi2O3_anchor_mp-558953",
+    "most_bonding_matches_most_stable": false
+  },
   "C": {
     "reduced_formula": "C",
     "polymorphs": [
@@ -357,6 +557,98 @@
     ],
     "most_bonding_compound_id": "extension_Clonsdaleite_mp-47",
     "most_stable_compound_id": "metastable_covalent_C_rhombohedral_mp-169",
+    "most_bonding_matches_most_stable": false
+  },
+  "C3N4": {
+    "reduced_formula": "C3N4",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_poly_mp-2852",
+        "reduced_formula": "C3N4",
+        "n_sites": 14,
+        "icohp_per_atom": -19.072337857142895,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_C3N4_poly_mp-2852",
+        "mp_id": "mp-2852",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.5033424574999987
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_anchor_mp-571653",
+        "reduced_formula": "C3N4",
+        "n_sites": 7,
+        "icohp_per_atom": -18.347520000000006,
+        "delta_icohp_per_atom_vs_most_bonding": 0.724817857142888,
+        "compound_id": "extension_C3N4_anchor_mp-571653",
+        "mp_id": "mp-571653",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.4981181882142849
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_mp-971683",
+        "reduced_formula": "C3N4",
+        "n_sites": 21,
+        "icohp_per_atom": -17.642310952380953,
+        "delta_icohp_per_atom_vs_most_bonding": 1.4300269047619416,
+        "compound_id": "extension_C3N4_mp-971683",
+        "mp_id": "mp-971683",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.12167648535714193
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_mp-567885",
+        "reduced_formula": "C3N4",
+        "n_sites": 14,
+        "icohp_per_atom": -17.316447857142837,
+        "delta_icohp_per_atom_vs_most_bonding": 1.7558900000000577,
+        "compound_id": "extension_C3N4_mp-567885",
+        "mp_id": "mp-567885",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.1475561110714274
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_mp-570572",
+        "reduced_formula": "C3N4",
+        "n_sites": 7,
+        "icohp_per_atom": -17.299521428571424,
+        "delta_icohp_per_atom_vs_most_bonding": 1.7728164285714705,
+        "compound_id": "extension_C3N4_mp-570572",
+        "mp_id": "mp-570572",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.14726764821428517
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_poly_mp-563",
+        "reduced_formula": "C3N4",
+        "n_sites": 14,
+        "icohp_per_atom": -16.776875000000015,
+        "delta_icohp_per_atom_vs_most_bonding": 2.29546285714288,
+        "compound_id": "extension_C3N4_poly_mp-563",
+        "mp_id": "mp-563",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.5118795946428563
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_C3N4_poly_mp-1182484",
+        "reduced_formula": "C3N4",
+        "n_sites": 14,
+        "icohp_per_atom": -13.586795714285723,
+        "delta_icohp_per_atom_vs_most_bonding": 5.485542142857172,
+        "compound_id": "extension_C3N4_poly_mp-1182484",
+        "mp_id": "mp-1182484",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.5848164510714273
+      }
+    ],
+    "most_bonding_compound_id": "extension_C3N4_poly_mp-2852",
+    "most_stable_compound_id": "extension_C3N4_mp-971683",
     "most_bonding_matches_most_stable": false
   },
   "Ca3N2": {
@@ -467,6 +759,38 @@
     "most_stable_compound_id": "extension_CaF2_exp_mp-10464",
     "most_bonding_matches_most_stable": false
   },
+  "CaN6": {
+    "reduced_formula": "CaN6",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CaN6_mp-676",
+        "reduced_formula": "CaN6",
+        "n_sites": 14,
+        "icohp_per_atom": -11.595564285714284,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_CaN6_mp-676",
+        "mp_id": "mp-676",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.04061298999999963
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CaN6_mp-656097",
+        "reduced_formula": "CaN6",
+        "n_sites": 14,
+        "icohp_per_atom": -11.34665000000001,
+        "delta_icohp_per_atom_vs_most_bonding": 0.24891428571427454,
+        "compound_id": "extension_CaN6_mp-656097",
+        "mp_id": "mp-656097",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.07920592142857252
+      }
+    ],
+    "most_bonding_compound_id": "extension_CaN6_mp-676",
+    "most_stable_compound_id": "extension_CaN6_mp-676",
+    "most_bonding_matches_most_stable": true
+  },
   "CaO": {
     "reduced_formula": "CaO",
     "polymorphs": [
@@ -515,6 +839,18 @@
     "reduced_formula": "CsN3",
     "polymorphs": [
       {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsN3_mp-1225892",
+        "reduced_formula": "CsN3",
+        "n_sites": 4,
+        "icohp_per_atom": -10.896702500000004,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_CsN3_mp-1225892",
+        "mp_id": "mp-1225892",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.011297812499998727
+      },
+      {
         "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsN3_theo_mp-1225892",
         "reduced_formula": "CsN3",
         "n_sites": 4,
@@ -537,9 +873,21 @@
         "family": "extension",
         "theoretical": false,
         "energy_above_hull_eV_per_atom": 0.0
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsN3_mp-510557",
+        "reduced_formula": "CsN3",
+        "n_sites": 8,
+        "icohp_per_atom": -10.2728025,
+        "delta_icohp_per_atom_vs_most_bonding": 0.6239000000000043,
+        "compound_id": "extension_CsN3_mp-510557",
+        "mp_id": "mp-510557",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
       }
     ],
-    "most_bonding_compound_id": "extension_CsN3_theo_mp-1225892",
+    "most_bonding_compound_id": "extension_CsN3_mp-1225892",
     "most_stable_compound_id": "extension_CsN3_exp_mp-510557",
     "most_bonding_matches_most_stable": false
   },
@@ -579,6 +927,18 @@
     "reduced_formula": "CsP7",
     "polymorphs": [
       {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsP7_mp-1213206",
+        "reduced_formula": "CsP7",
+        "n_sites": 32,
+        "icohp_per_atom": -6.735239687500006,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_CsP7_mp-1213206",
+        "mp_id": "mp-1213206",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 8.425187500016307e-05
+      },
+      {
         "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsP7_theo_mp-1213206",
         "reduced_formula": "CsP7",
         "n_sites": 32,
@@ -589,6 +949,18 @@
         "family": "extension",
         "theoretical": true,
         "energy_above_hull_eV_per_atom": 8.425187500016307e-05
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsP7_mp-1201790",
+        "reduced_formula": "CsP7",
+        "n_sites": 32,
+        "icohp_per_atom": -6.704127812500006,
+        "delta_icohp_per_atom_vs_most_bonding": 0.031111875000000566,
+        "compound_id": "extension_CsP7_mp-1201790",
+        "mp_id": "mp-1201790",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
       },
       {
         "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_CsP7_exp_mp-1201790",
@@ -603,8 +975,84 @@
         "energy_above_hull_eV_per_atom": 0.0
       }
     ],
-    "most_bonding_compound_id": "extension_CsP7_theo_mp-1213206",
-    "most_stable_compound_id": "extension_CsP7_exp_mp-1201790",
+    "most_bonding_compound_id": "extension_CsP7_mp-1213206",
+    "most_stable_compound_id": "extension_CsP7_mp-1201790",
+    "most_bonding_matches_most_stable": false
+  },
+  "Cu2S": {
+    "reduced_formula": "Cu2S",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cu2S_mp-12087",
+        "reduced_formula": "Cu2S",
+        "n_sites": 3,
+        "icohp_per_atom": -3.4431866666666657,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_Cu2S_mp-12087",
+        "mp_id": "mp-12087",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.09426421770833393
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cu2S_mp-553942",
+        "reduced_formula": "Cu2S",
+        "n_sites": 6,
+        "icohp_per_atom": -3.2629500000000022,
+        "delta_icohp_per_atom_vs_most_bonding": 0.1802366666666635,
+        "compound_id": "extension_Cu2S_mp-553942",
+        "mp_id": "mp-553942",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.23845627437500028
+      }
+    ],
+    "most_bonding_compound_id": "extension_Cu2S_mp-12087",
+    "most_stable_compound_id": "extension_Cu2S_mp-12087",
+    "most_bonding_matches_most_stable": true
+  },
+  "HN": {
+    "reduced_formula": "HN",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_HN_mp-23922",
+        "reduced_formula": "HN",
+        "n_sites": 32,
+        "icohp_per_atom": -9.5818165625,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_HN_mp-23922",
+        "mp_id": "mp-23922",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.16815524687499916
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_HN_mp-720515",
+        "reduced_formula": "HN",
+        "n_sites": 40,
+        "icohp_per_atom": -9.37169300000001,
+        "delta_icohp_per_atom_vs_most_bonding": 0.21012356249999087,
+        "compound_id": "extension_HN_mp-720515",
+        "mp_id": "mp-720515",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.14784463833333383
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_HN_mp-1224501",
+        "reduced_formula": "HN",
+        "n_sites": 32,
+        "icohp_per_atom": -9.30133718749999,
+        "delta_icohp_per_atom_vs_most_bonding": 0.2804793750000094,
+        "compound_id": "extension_HN_mp-1224501",
+        "mp_id": "mp-1224501",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.1923862111458332
+      }
+    ],
+    "most_bonding_compound_id": "extension_HN_mp-23922",
+    "most_stable_compound_id": "extension_HN_mp-720515",
     "most_bonding_matches_most_stable": false
   },
   "K2O": {
@@ -703,6 +1151,38 @@
     "most_stable_compound_id": "extension_KF3_theo_mp-2749823",
     "most_bonding_matches_most_stable": true
   },
+  "KN2": {
+    "reduced_formula": "KN2",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_KN2_anchor_mp-1071868",
+        "reduced_formula": "KN2",
+        "n_sites": 6,
+        "icohp_per_atom": -7.8471350000000015,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_KN2_anchor_mp-1071868",
+        "mp_id": "mp-1071868",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 1.1629511857777777
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_KN2_poly_mp-1180757",
+        "reduced_formula": "KN2",
+        "n_sites": 6,
+        "icohp_per_atom": -6.98508,
+        "delta_icohp_per_atom_vs_most_bonding": 0.8620550000000016,
+        "compound_id": "extension_KN2_poly_mp-1180757",
+        "mp_id": "mp-1180757",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.2293322591111107
+      }
+    ],
+    "most_bonding_compound_id": "extension_KN2_anchor_mp-1071868",
+    "most_stable_compound_id": "extension_KN2_anchor_mp-1071868",
+    "most_bonding_matches_most_stable": true
+  },
   "KN3": {
     "reduced_formula": "KN3",
     "polymorphs": [
@@ -715,6 +1195,18 @@
         "compound_id": "exp_stable_KN3_mp-827",
         "mp_id": "mp-827",
         "family": "exp_stable",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_KN3_mp-827",
+        "reduced_formula": "KN3",
+        "n_sites": 8,
+        "icohp_per_atom": -10.687602500000006,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_KN3_mp-827",
+        "mp_id": "mp-827",
+        "family": "extension",
         "theoretical": false,
         "energy_above_hull_eV_per_atom": 0.0
       },
@@ -909,6 +1401,30 @@
         "family": "extension",
         "theoretical": false,
         "energy_above_hull_eV_per_atom": 0.007694938690475439
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_LiP5_mp-2412",
+        "reduced_formula": "LiP5",
+        "n_sites": 24,
+        "icohp_per_atom": -8.561532083333335,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_LiP5_mp-2412",
+        "mp_id": "mp-2412",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.007694938690475439
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_LiP5_mp-32760",
+        "reduced_formula": "LiP5",
+        "n_sites": 24,
+        "icohp_per_atom": -8.526423333333335,
+        "delta_icohp_per_atom_vs_most_bonding": 0.035108749999999134,
+        "compound_id": "extension_LiP5_mp-32760",
+        "mp_id": "mp-32760",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.09630660601190577
       },
       {
         "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_LiP5_theo_mp-32760",
@@ -1179,12 +1695,36 @@
     "reduced_formula": "NaN3",
     "polymorphs": [
       {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NaN3_mp-634410",
+        "reduced_formula": "NaN3",
+        "n_sites": 4,
+        "icohp_per_atom": -11.714659999999993,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_NaN3_mp-634410",
+        "mp_id": "mp-634410",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.26956520750000035
+      },
+      {
         "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NaN3_exp_mp-22003",
         "reduced_formula": "NaN3",
         "n_sites": 4,
         "icohp_per_atom": -10.984982499999989,
-        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "delta_icohp_per_atom_vs_most_bonding": 0.7296775000000046,
         "compound_id": "extension_NaN3_exp_mp-22003",
+        "mp_id": "mp-22003",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0017140024999999781
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NaN3_mp-22003",
+        "reduced_formula": "NaN3",
+        "n_sites": 4,
+        "icohp_per_atom": -10.984982499999989,
+        "delta_icohp_per_atom_vs_most_bonding": 0.7296775000000046,
+        "compound_id": "extension_NaN3_mp-22003",
         "mp_id": "mp-22003",
         "family": "extension",
         "theoretical": false,
@@ -1195,10 +1735,22 @@
         "reduced_formula": "NaN3",
         "n_sites": 4,
         "icohp_per_atom": -10.705974999999997,
-        "delta_icohp_per_atom_vs_most_bonding": 0.27900749999999164,
+        "delta_icohp_per_atom_vs_most_bonding": 1.0086849999999963,
         "compound_id": "exp_metastable_NaN3_mp-1066400",
         "mp_id": "mp-1066400",
         "family": "exp_metastable",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0029249474999994973
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NaN3_mp-1066400",
+        "reduced_formula": "NaN3",
+        "n_sites": 4,
+        "icohp_per_atom": -10.705974999999997,
+        "delta_icohp_per_atom_vs_most_bonding": 1.0086849999999963,
+        "compound_id": "extension_NaN3_mp-1066400",
+        "mp_id": "mp-1066400",
+        "family": "extension",
         "theoretical": false,
         "energy_above_hull_eV_per_atom": 0.0029249474999994973
       },
@@ -1207,7 +1759,7 @@
         "reduced_formula": "NaN3",
         "n_sites": 4,
         "icohp_per_atom": -7.080340000000003,
-        "delta_icohp_per_atom_vs_most_bonding": 3.9046424999999854,
+        "delta_icohp_per_atom_vs_most_bonding": 4.63431999999999,
         "compound_id": "extension_NaN3_theo_mp-1065265",
         "mp_id": "mp-1065265",
         "family": "extension",
@@ -1215,9 +1767,9 @@
         "energy_above_hull_eV_per_atom": 1.0162235174999994
       }
     ],
-    "most_bonding_compound_id": "extension_NaN3_exp_mp-22003",
+    "most_bonding_compound_id": "extension_NaN3_mp-634410",
     "most_stable_compound_id": "extension_NaN3_exp_mp-22003",
-    "most_bonding_matches_most_stable": true
+    "most_bonding_matches_most_stable": false
   },
   "NaS": {
     "reduced_formula": "NaS",
@@ -1262,6 +1814,158 @@
     "most_bonding_compound_id": "extension_NaS_exp_mp-409",
     "most_stable_compound_id": "exp_stable_NaS_mp-2400",
     "most_bonding_matches_most_stable": false
+  },
+  "NbO": {
+    "reduced_formula": "NbO",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbO_anchor_mp-2692",
+        "reduced_formula": "NbO",
+        "n_sites": 2,
+        "icohp_per_atom": -10.855515000000004,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_NbO_anchor_mp-2692",
+        "mp_id": "mp-2692",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.7887604083333315
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbO_poly_mp-634965",
+        "reduced_formula": "NbO",
+        "n_sites": 2,
+        "icohp_per_atom": -10.023890000000023,
+        "delta_icohp_per_atom_vs_most_bonding": 0.8316249999999812,
+        "compound_id": "extension_NbO_poly_mp-634965",
+        "mp_id": "mp-634965",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.8240059083333318
+      }
+    ],
+    "most_bonding_compound_id": "extension_NbO_anchor_mp-2692",
+    "most_stable_compound_id": "extension_NbO_anchor_mp-2692",
+    "most_bonding_matches_most_stable": true
+  },
+  "NbP": {
+    "reduced_formula": "NbP",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbP_poly_mp-1220317",
+        "reduced_formula": "NbP",
+        "n_sites": 2,
+        "icohp_per_atom": -11.449564999999991,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_NbP_poly_mp-1220317",
+        "mp_id": "mp-1220317",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.6208620024999991
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_NbP_anchor_mp-9830",
+        "reduced_formula": "NbP",
+        "n_sites": 4,
+        "icohp_per_atom": -10.150272500000002,
+        "delta_icohp_per_atom_vs_most_bonding": 1.2992924999999893,
+        "compound_id": "extension_NbP_anchor_mp-9830",
+        "mp_id": "mp-9830",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.6020631175000002
+      }
+    ],
+    "most_bonding_compound_id": "extension_NbP_poly_mp-1220317",
+    "most_stable_compound_id": "extension_NbP_anchor_mp-9830",
+    "most_bonding_matches_most_stable": false
+  },
+  "OsC": {
+    "reduced_formula": "OsC",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_anchor_mp-7142",
+        "reduced_formula": "OsC",
+        "n_sites": 2,
+        "icohp_per_atom": -13.460360000000009,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_OsC_anchor_mp-7142",
+        "mp_id": "mp-7142",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.9160852612500001
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_poly_mp-1009537",
+        "reduced_formula": "OsC",
+        "n_sites": 2,
+        "icohp_per_atom": -13.15874,
+        "delta_icohp_per_atom_vs_most_bonding": 0.30162000000000866,
+        "compound_id": "extension_OsC_poly_mp-1009537",
+        "mp_id": "mp-1009537",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.4795162512500006
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_poly_mp-999308",
+        "reduced_formula": "OsC",
+        "n_sites": 4,
+        "icohp_per_atom": -12.519935000000006,
+        "delta_icohp_per_atom_vs_most_bonding": 0.940425000000003,
+        "compound_id": "extension_OsC_poly_mp-999308",
+        "mp_id": "mp-999308",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.9277737837499984
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_OsC_poly_mp-1009539",
+        "reduced_formula": "OsC",
+        "n_sites": 2,
+        "icohp_per_atom": -12.363025,
+        "delta_icohp_per_atom_vs_most_bonding": 1.0973350000000082,
+        "compound_id": "extension_OsC_poly_mp-1009539",
+        "mp_id": "mp-1009539",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.3918186662499998
+      }
+    ],
+    "most_bonding_compound_id": "extension_OsC_anchor_mp-7142",
+    "most_stable_compound_id": "extension_OsC_anchor_mp-7142",
+    "most_bonding_matches_most_stable": true
+  },
+  "PbN6": {
+    "reduced_formula": "PbN6",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_PbN6_mp-667338",
+        "reduced_formula": "PbN6",
+        "n_sites": 84,
+        "icohp_per_atom": -13.01379630952384,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_PbN6_mp-667338",
+        "mp_id": "mp-667338",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.10931083119047358
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_PbN6_mp-620058",
+        "reduced_formula": "PbN6",
+        "n_sites": 84,
+        "icohp_per_atom": -13.004680000000038,
+        "delta_icohp_per_atom_vs_most_bonding": 0.009116309523802713,
+        "compound_id": "extension_PbN6_mp-620058",
+        "mp_id": "mp-620058",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.1096255538095221
+      }
+    ],
+    "most_bonding_compound_id": "extension_PbN6_mp-667338",
+    "most_stable_compound_id": "extension_PbN6_mp-667338",
+    "most_bonding_matches_most_stable": true
   },
   "PbSe": {
     "reduced_formula": "PbSe",
@@ -1455,6 +2159,238 @@
     "most_stable_compound_id": "extension_RbS_exp_mp-558071",
     "most_bonding_matches_most_stable": true
   },
+  "ReC": {
+    "reduced_formula": "ReC",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_ReC_poly_mp-1009731",
+        "reduced_formula": "ReC",
+        "n_sites": 2,
+        "icohp_per_atom": -14.397110000000016,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_ReC_poly_mp-1009731",
+        "mp_id": "mp-1009731",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.1149929443750004
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_ReC_anchor_mp-1079494",
+        "reduced_formula": "ReC",
+        "n_sites": 8,
+        "icohp_per_atom": -13.730143750000002,
+        "delta_icohp_per_atom_vs_most_bonding": 0.666966250000014,
+        "compound_id": "extension_ReC_anchor_mp-1079494",
+        "mp_id": "mp-1079494",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.636191904375
+      }
+    ],
+    "most_bonding_compound_id": "extension_ReC_poly_mp-1009731",
+    "most_stable_compound_id": "extension_ReC_anchor_mp-1079494",
+    "most_bonding_matches_most_stable": false
+  },
+  "RuC": {
+    "reduced_formula": "RuC",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_RuC_anchor_mp-10030",
+        "reduced_formula": "RuC",
+        "n_sites": 2,
+        "icohp_per_atom": -12.183060000000003,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_RuC_anchor_mp-10030",
+        "mp_id": "mp-10030",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.6494276712500024
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_RuC_poly_mp-1009787",
+        "reduced_formula": "RuC",
+        "n_sites": 2,
+        "icohp_per_atom": -11.452709999999996,
+        "delta_icohp_per_atom_vs_most_bonding": 0.7303500000000067,
+        "compound_id": "extension_RuC_poly_mp-1009787",
+        "mp_id": "mp-1009787",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.9096720512499985
+      }
+    ],
+    "most_bonding_compound_id": "extension_RuC_anchor_mp-10030",
+    "most_stable_compound_id": "extension_RuC_anchor_mp-10030",
+    "most_bonding_matches_most_stable": true
+  },
+  "SN": {
+    "reduced_formula": "SN",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_S4N4_cod7017102",
+        "reduced_formula": "SN",
+        "n_sites": 32,
+        "icohp_per_atom": -9.870995624999978,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_S4N4_cod7017102",
+        "mp_id": null,
+        "family": "extension",
+        "theoretical": null,
+        "energy_above_hull_eV_per_atom": null
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_poly_mp-684642",
+        "reduced_formula": "SN",
+        "n_sites": 36,
+        "icohp_per_atom": -9.531121666666685,
+        "delta_icohp_per_atom_vs_most_bonding": 0.3398739583332926,
+        "compound_id": "extension_SN_poly_mp-684642",
+        "mp_id": "mp-684642",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.5498053901041668
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_anchor_mp-236",
+        "reduced_formula": "SN",
+        "n_sites": 8,
+        "icohp_per_atom": -8.949457500000015,
+        "delta_icohp_per_atom_vs_most_bonding": 0.9215381249999623,
+        "compound_id": "extension_SN_anchor_mp-236",
+        "mp_id": "mp-236",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.5086555859375004
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_poly_mp-1173453",
+        "reduced_formula": "SN",
+        "n_sites": 36,
+        "icohp_per_atom": -8.100064999999999,
+        "delta_icohp_per_atom_vs_most_bonding": 1.7709306249999788,
+        "compound_id": "extension_SN_poly_mp-1173453",
+        "mp_id": "mp-1173453",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.7225484081597227
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SN_poly_mp-1078816",
+        "reduced_formula": "SN",
+        "n_sites": 8,
+        "icohp_per_atom": -7.559163750000006,
+        "delta_icohp_per_atom_vs_most_bonding": 2.311831874999972,
+        "compound_id": "extension_SN_poly_mp-1078816",
+        "mp_id": "mp-1078816",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.8090262296875004
+      }
+    ],
+    "most_bonding_compound_id": "extension_S4N4_cod7017102",
+    "most_stable_compound_id": "extension_SN_anchor_mp-236",
+    "most_bonding_matches_most_stable": false
+  },
+  "SiO2": {
+    "reduced_formula": "SiO2",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_anchor_mp-9258",
+        "reduced_formula": "SiO2",
+        "n_sites": 12,
+        "icohp_per_atom": -12.410279166666703,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_SiO2_anchor_mp-9258",
+        "mp_id": "mp-9258",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.5770440263888901
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_poly_mp-10064",
+        "reduced_formula": "SiO2",
+        "n_sites": 3,
+        "icohp_per_atom": -11.25061333333334,
+        "delta_icohp_per_atom_vs_most_bonding": 1.1596658333333636,
+        "compound_id": "extension_SiO2_poly_mp-10064",
+        "mp_id": "mp-10064",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.27794353388889
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/exp_metastable_SiO2_mp-546794",
+        "reduced_formula": "SiO2",
+        "n_sites": 6,
+        "icohp_per_atom": -11.219078333333329,
+        "delta_icohp_per_atom_vs_most_bonding": 1.1912008333333741,
+        "compound_id": "exp_metastable_SiO2_mp-546794",
+        "mp_id": "mp-546794",
+        "family": "exp_metastable",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.005647450555557043
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_poly_mp-638049",
+        "reduced_formula": "SiO2",
+        "n_sites": 36,
+        "icohp_per_atom": -9.462030555555542,
+        "delta_icohp_per_atom_vs_most_bonding": 2.948248611111161,
+        "compound_id": "extension_SiO2_poly_mp-638049",
+        "mp_id": "mp-638049",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.7447606447222235
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_SiO2_poly_mp-556044",
+        "reduced_formula": "SiO2",
+        "n_sites": 36,
+        "icohp_per_atom": -9.172951388888892,
+        "delta_icohp_per_atom_vs_most_bonding": 3.2373277777778107,
+        "compound_id": "extension_SiO2_poly_mp-556044",
+        "mp_id": "mp-556044",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 1.4573660394444454
+      }
+    ],
+    "most_bonding_compound_id": "extension_SiO2_anchor_mp-9258",
+    "most_stable_compound_id": "exp_metastable_SiO2_mp-546794",
+    "most_bonding_matches_most_stable": false
+  },
+  "Sn": {
+    "reduced_formula": "Sn",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Sn_mp-623511",
+        "reduced_formula": "Sn",
+        "n_sites": 1,
+        "icohp_per_atom": -10.616499999999997,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_Sn_mp-623511",
+        "mp_id": "mp-623511",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.061407004999999515
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Snalpha_mp-117",
+        "reduced_formula": "Sn",
+        "n_sites": 2,
+        "icohp_per_atom": -7.292620000000006,
+        "delta_icohp_per_atom_vs_most_bonding": 3.323879999999991,
+        "compound_id": "extension_Snalpha_mp-117",
+        "mp_id": "mp-117",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
+      }
+    ],
+    "most_bonding_compound_id": "extension_Sn_mp-623511",
+    "most_stable_compound_id": "extension_Snalpha_mp-117",
+    "most_bonding_matches_most_stable": false
+  },
   "Sr3P4": {
     "reduced_formula": "Sr3P4",
     "polymorphs": [
@@ -1563,6 +2499,50 @@
     "most_stable_compound_id": "exp_stable_SrO2_mp-2697",
     "most_bonding_matches_most_stable": true
   },
+  "TaN": {
+    "reduced_formula": "TaN",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TaN_poly_mp-1009831",
+        "reduced_formula": "TaN",
+        "n_sites": 2,
+        "icohp_per_atom": -13.913729999999992,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_TaN_poly_mp-1009831",
+        "mp_id": "mp-1009831",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.8162796533333321
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TaN_poly_mp-1009833",
+        "reduced_formula": "TaN",
+        "n_sites": 2,
+        "icohp_per_atom": -12.629324999999996,
+        "delta_icohp_per_atom_vs_most_bonding": 1.284404999999996,
+        "compound_id": "extension_TaN_poly_mp-1009833",
+        "mp_id": "mp-1009833",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.49169759333333474
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TaN_anchor_mp-1497",
+        "reduced_formula": "TaN",
+        "n_sites": 6,
+        "icohp_per_atom": -12.036918333333332,
+        "delta_icohp_per_atom_vs_most_bonding": 1.8768116666666597,
+        "compound_id": "extension_TaN_anchor_mp-1497",
+        "mp_id": "mp-1497",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.4515790083333364
+      }
+    ],
+    "most_bonding_compound_id": "extension_TaN_poly_mp-1009831",
+    "most_stable_compound_id": "extension_TaN_anchor_mp-1497",
+    "most_bonding_matches_most_stable": false
+  },
   "TaP": {
     "reduced_formula": "TaP",
     "polymorphs": [
@@ -1594,6 +2574,38 @@
     "most_bonding_compound_id": "theo_metastable_TaP_mp-1187244",
     "most_stable_compound_id": "exp_stable_TaP_mp-1067587",
     "most_bonding_matches_most_stable": false
+  },
+  "TiMo2": {
+    "reduced_formula": "TiMo2",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TiMo2_mp-1216675",
+        "reduced_formula": "TiMo2",
+        "n_sites": 3,
+        "icohp_per_atom": -10.787116666666664,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_TiMo2_mp-1216675",
+        "mp_id": "mp-1216675",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.061337100370366215
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/theo_metastable_TiMo2_mp-1216675",
+        "reduced_formula": "TiMo2",
+        "n_sites": 3,
+        "icohp_per_atom": -10.787116666666664,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "theo_metastable_TiMo2_mp-1216675",
+        "mp_id": "mp-1216675",
+        "family": "theo_metastable",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.061337100370366215
+      }
+    ],
+    "most_bonding_compound_id": "extension_TiMo2_mp-1216675",
+    "most_stable_compound_id": "extension_TiMo2_mp-1216675",
+    "most_bonding_matches_most_stable": true
   },
   "TiNi": {
     "reduced_formula": "TiNi",
@@ -1703,6 +2715,158 @@
     "most_stable_compound_id": "exp_stable_TiSi2_mp-1077503",
     "most_bonding_matches_most_stable": false
   },
+  "TlC": {
+    "reduced_formula": "TlC",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlC_anchor_mp-567465",
+        "reduced_formula": "TlC",
+        "n_sites": 2,
+        "icohp_per_atom": -10.753599999999993,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_TlC_anchor_mp-567465",
+        "mp_id": "mp-567465",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 2.10802690958333
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlC_poly_mp-1058887",
+        "reduced_formula": "TlC",
+        "n_sites": 2,
+        "icohp_per_atom": -10.530150000000004,
+        "delta_icohp_per_atom_vs_most_bonding": 0.22344999999998905,
+        "compound_id": "extension_TlC_poly_mp-1058887",
+        "mp_id": "mp-1058887",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 2.375719474583331
+      }
+    ],
+    "most_bonding_compound_id": "extension_TlC_anchor_mp-567465",
+    "most_stable_compound_id": "extension_TlC_anchor_mp-567465",
+    "most_bonding_matches_most_stable": true
+  },
+  "TlN": {
+    "reduced_formula": "TlN",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlN_poly_mp-1002222",
+        "reduced_formula": "TlN",
+        "n_sites": 2,
+        "icohp_per_atom": -10.63331,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_TlN_poly_mp-1002222",
+        "mp_id": "mp-1002222",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.9711865358333327
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlN_poly_mp-1007778",
+        "reduced_formula": "TlN",
+        "n_sites": 2,
+        "icohp_per_atom": -9.761280000000001,
+        "delta_icohp_per_atom_vs_most_bonding": 0.8720299999999988,
+        "compound_id": "extension_TlN_poly_mp-1007778",
+        "mp_id": "mp-1007778",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.733738815833334
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_TlN_anchor_mp-1017982",
+        "reduced_formula": "TlN",
+        "n_sites": 4,
+        "icohp_per_atom": -9.2063175,
+        "delta_icohp_per_atom_vs_most_bonding": 1.426992499999999,
+        "compound_id": "extension_TlN_anchor_mp-1017982",
+        "mp_id": "mp-1017982",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.7334453533333338
+      }
+    ],
+    "most_bonding_compound_id": "extension_TlN_poly_mp-1002222",
+    "most_stable_compound_id": "extension_TlN_anchor_mp-1017982",
+    "most_bonding_matches_most_stable": false
+  },
+  "WC": {
+    "reduced_formula": "WC",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_WC_poly_mp-1008630",
+        "reduced_formula": "WC",
+        "n_sites": 2,
+        "icohp_per_atom": -21.998290000000015,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_WC_poly_mp-1008630",
+        "mp_id": "mp-1008630",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.8989987500000005
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_WC_anchor_mp-13136",
+        "reduced_formula": "WC",
+        "n_sites": 2,
+        "icohp_per_atom": -21.66989499999999,
+        "delta_icohp_per_atom_vs_most_bonding": 0.3283950000000253,
+        "compound_id": "extension_WC_anchor_mp-13136",
+        "mp_id": "mp-13136",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.4476605100000022
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_WC_poly_mp-1008635",
+        "reduced_formula": "WC",
+        "n_sites": 2,
+        "icohp_per_atom": -20.206784999999993,
+        "delta_icohp_per_atom_vs_most_bonding": 1.791505000000022,
+        "compound_id": "extension_WC_poly_mp-1008635",
+        "mp_id": "mp-1008635",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.6728768300000034
+      }
+    ],
+    "most_bonding_compound_id": "extension_WC_poly_mp-1008630",
+    "most_stable_compound_id": "extension_WC_anchor_mp-13136",
+    "most_bonding_matches_most_stable": false
+  },
+  "Y3Co": {
+    "reduced_formula": "Y3Co",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/theo_metastable_Y3Co_mp-1189329",
+        "reduced_formula": "Y3Co",
+        "n_sites": 16,
+        "icohp_per_atom": -9.377634999999998,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "theo_metastable_Y3Co_mp-1189329",
+        "mp_id": "mp-1189329",
+        "family": "theo_metastable",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.0015564962500009827
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Y3Co_mp-1105598",
+        "reduced_formula": "Y3Co",
+        "n_sites": 16,
+        "icohp_per_atom": -9.351448125,
+        "delta_icohp_per_atom_vs_most_bonding": 0.02618687499999872,
+        "compound_id": "extension_Y3Co_mp-1105598",
+        "mp_id": "mp-1105598",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
+      }
+    ],
+    "most_bonding_compound_id": "theo_metastable_Y3Co_mp-1189329",
+    "most_stable_compound_id": "extension_Y3Co_mp-1105598",
+    "most_bonding_matches_most_stable": false
+  },
   "Zn": {
     "reduced_formula": "Zn",
     "polymorphs": [
@@ -1733,6 +2897,38 @@
     ],
     "most_bonding_compound_id": "theo_metastable_Zn_mp-2647117",
     "most_stable_compound_id": "extension_Zn_mp-79",
+    "most_bonding_matches_most_stable": false
+  },
+  "Zn3N2": {
+    "reduced_formula": "Zn3N2",
+    "polymorphs": [
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Zn3N2_mp-1524551",
+        "reduced_formula": "Zn3N2",
+        "n_sites": 20,
+        "icohp_per_atom": -10.744549000000013,
+        "delta_icohp_per_atom_vs_most_bonding": 0.0,
+        "compound_id": "extension_Zn3N2_mp-1524551",
+        "mp_id": "mp-1524551",
+        "family": "extension",
+        "theoretical": true,
+        "energy_above_hull_eV_per_atom": 0.014135124999999249
+      },
+      {
+        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Zn3N2_mp-9460",
+        "reduced_formula": "Zn3N2",
+        "n_sites": 40,
+        "icohp_per_atom": -10.612742250000014,
+        "delta_icohp_per_atom_vs_most_bonding": 0.13180674999999908,
+        "compound_id": "extension_Zn3N2_mp-9460",
+        "mp_id": "mp-9460",
+        "family": "extension",
+        "theoretical": false,
+        "energy_above_hull_eV_per_atom": 0.0
+      }
+    ],
+    "most_bonding_compound_id": "extension_Zn3N2_mp-1524551",
+    "most_stable_compound_id": "extension_Zn3N2_mp-9460",
     "most_bonding_matches_most_stable": false
   }
 }

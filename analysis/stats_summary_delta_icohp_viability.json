@@ -47,39 +47,39 @@
     "rmse_kJ_per_mol": 0.981
   },
   "viability_prediction": {
-    "n_total": 281,
+    "n_total": 517,
     "spearman_vs_energy_above_hull_eV_per_atom": {
-      "n": 279,
-      "rho": -0.1096,
-      "p": 0.067578
+      "n": 515,
+      "rho": -0.0579,
+      "p": 0.189823
     },
     "spearman_vs_formation_energy_per_atom": {
-      "n": 275,
-      "rho": -0.5016,
+      "n": 329,
+      "rho": -0.37,
       "p": 0.0
     },
     "bonding_label_vs_theoretical": {
       "contingency_table": {
         "endobondic": {
-          "false": 47,
-          "true": 17
+          "false": 79,
+          "true": 46
         },
         "exobondic": {
-          "false": 130,
-          "true": 81
+          "false": 188,
+          "true": 198
         }
       },
-      "fisher_exact_p": 0.1013,
-      "odds_ratio": 1.7226,
-      "chi2": 2.5008,
-      "chi2_p": 0.1138
+      "fisher_exact_p": 0.0054,
+      "odds_ratio": 1.8087,
+      "chi2": 7.3816,
+      "chi2_p": 0.0066
     },
     "delta_per_atom_eV_experimental_vs_theoretical": {
-      "n_experimental": 177,
+      "n_experimental": 267,
       "median_experimental": -0.868,
-      "n_theoretical": 98,
-      "median_theoretical": -1.4416,
-      "mann_whitney_p": 0.1365
+      "n_theoretical": 244,
+      "median_theoretical": -1.4539,
+      "mann_whitney_p": 0.0103
     },
     "kruskal_wallis_by_family": {
       "groups": [
@@ -87,22 +87,22 @@
         "exp_metastable",
         "theo_metastable"
       ],
-      "H": 2.8122,
-      "p": 0.2451,
+      "H": 2.5612,
+      "p": 0.2779,
       "n_per_group": {
         "exp_metastable": 59,
         "exp_stable": 59,
         "theo_metastable": 59
       },
       "median_delta_per_atom_eV_per_group": {
-        "exp_metastable": -1.0771,
-        "exp_stable": -1.589,
-        "theo_metastable": -1.6587
+        "exp_metastable": -1.0382,
+        "exp_stable": -1.3906,
+        "theo_metastable": -1.6014
       },
       "endobondic_fraction_per_group": {
-        "exp_metastable": 0.2712,
-        "exp_stable": 0.2034,
-        "theo_metastable": 0.1186
+        "exp_metastable": 0.2881,
+        "exp_stable": 0.2203,
+        "theo_metastable": 0.1356
       }
     }
   }
