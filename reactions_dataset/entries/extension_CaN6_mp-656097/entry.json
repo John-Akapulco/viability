@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CaN6_mp-656097",
+  "formula": "CaN6",
+  "composition": {
+    "Ca": 2,
+    "N": 12
+  },
+  "Z": 2,
+  "space_group_symbol": "P1",
+  "space_group_number": 1,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -158.85310000000013,
+    "sum_per_atom_eV": -11.34665000000001,
+    "sum_per_formula_unit_eV": -79.42655000000006,
+    "mean_per_bond_eV": -0.34608518518518544,
+    "n_bonds": 459,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.03623222222222223,
+        "sum_eV": -0.32609000000000005,
+        "n_bonds": 9
+      },
+      "Ca-N": {
+        "mean_eV": -0.07304807692307692,
+        "sum_eV": -9.49625,
+        "n_bonds": 130
+      },
+      "N-N": {
+        "mean_eV": -0.4657211250000004,
+        "sum_eV": -149.03076000000013,
+        "n_bonds": 320
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 19.727220000000013,
+    "sum_per_atom_eV": 1.4090871428571439,
+    "sum_per_formula_unit_eV": 9.863610000000007,
+    "mean_per_bond_eV": 0.04297869281045755,
+    "n_bonds": 459,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.0018633333333333334,
+        "sum_eV": 0.01677,
+        "n_bonds": 9
+      },
+      "Ca-N": {
+        "mean_eV": 0.00978853846153846,
+        "sum_eV": 1.2725099999999998,
+        "n_bonds": 130
+      },
+      "N-N": {
+        "mean_eV": 0.057618562500000046,
+        "sum_eV": 18.437940000000015,
+        "n_bonds": 320
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CaN6_mp-656097"
+}

@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_K3Rb_mp-976115",
+  "formula": "K3Rb",
+  "composition": {
+    "K": 6,
+    "Rb": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -3.86149,
+    "sum_per_atom_eV": -0.48268625,
+    "sum_per_formula_unit_eV": -1.930745,
+    "mean_per_bond_eV": -0.08044770833333333,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": -0.07049416666666668,
+        "sum_eV": -1.6918600000000001,
+        "n_bonds": 24
+      },
+      "K-Rb": {
+        "mean_eV": -0.09040125,
+        "sum_eV": -2.16963,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.0015300000000007,
+    "sum_per_atom_eV": 0.2501912500000001,
+    "sum_per_formula_unit_eV": 1.0007650000000003,
+    "mean_per_bond_eV": 0.04169854166666668,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "K-K": {
+        "mean_eV": 0.03857041666666667,
+        "sum_eV": 0.92569,
+        "n_bonds": 24
+      },
+      "K-Rb": {
+        "mean_eV": 0.04482666666666666,
+        "sum_eV": 1.07584,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_K3Rb_mp-976115"
+}

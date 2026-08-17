@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_Al12Mo_mp-550",
+  "formula": "Al12Mo",
+  "composition": {
+    "Al": 12,
+    "Mo": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Im-3",
+  "space_group_number": 204,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -118.71554999999998,
+    "sum_per_atom_eV": -9.131965384615382,
+    "sum_per_formula_unit_eV": -118.71554999999998,
+    "mean_per_bond_eV": -0.3471214912280701,
+    "n_bonds": 342,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.3405011904761905,
+        "sum_eV": -100.10735,
+        "n_bonds": 294
+      },
+      "Al-Mo": {
+        "mean_eV": -0.38767083333333324,
+        "sum_eV": -18.608199999999997,
+        "n_bonds": 48
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 22.33787000000001,
+    "sum_per_atom_eV": 1.7182976923076931,
+    "sum_per_formula_unit_eV": 22.33787000000001,
+    "mean_per_bond_eV": 0.06531540935672517,
+    "n_bonds": 342,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.06010231292517008,
+        "sum_eV": 17.670080000000002,
+        "n_bonds": 294
+      },
+      "Al-Mo": {
+        "mean_eV": 0.097245625,
+        "sum_eV": 4.66779,
+        "n_bonds": 48
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Al12Mo_mp-550"
+}

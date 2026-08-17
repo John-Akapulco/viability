@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_ZrHg3_mp-1608",
+  "formula": "ZrHg3",
+  "composition": {
+    "Zr": 1,
+    "Hg": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -43.56312999999999,
+    "sum_per_atom_eV": -10.890782499999997,
+    "sum_per_formula_unit_eV": -43.56312999999999,
+    "mean_per_bond_eV": -0.45378260416666655,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.05679,
+        "sum_eV": -0.34074,
+        "n_bonds": 6
+      },
+      "Hg-Zr": {
+        "mean_eV": -0.48856527777777775,
+        "sum_eV": -17.58835,
+        "n_bonds": 36
+      },
+      "Hg-Hg": {
+        "mean_eV": -0.4747044444444444,
+        "sum_eV": -25.634039999999995,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.25863,
+    "sum_per_atom_eV": 1.8146575,
+    "sum_per_formula_unit_eV": 7.25863,
+    "mean_per_bond_eV": 0.07561072916666667,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.07365999999999999,
+        "sum_eV": 0.44195999999999996,
+        "n_bonds": 6
+      },
+      "Hg-Zr": {
+        "mean_eV": 0.08751166666666667,
+        "sum_eV": 3.15042,
+        "n_bonds": 36
+      },
+      "Hg-Hg": {
+        "mean_eV": 0.06789351851851853,
+        "sum_eV": 3.6662500000000007,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_ZrHg3_mp-1608"
+}

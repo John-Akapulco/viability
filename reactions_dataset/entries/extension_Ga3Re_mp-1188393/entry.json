@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ga3Re_mp-1188393",
+  "formula": "Ga3Re",
+  "composition": {
+    "Ga": 12,
+    "Re": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "P4_2/mnm",
+  "space_group_number": 136,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -152.5825899999999,
+    "sum_per_atom_eV": -9.536411874999994,
+    "sum_per_formula_unit_eV": -38.145647499999974,
+    "mean_per_bond_eV": -0.39123741025641,
+    "n_bonds": 390,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": -0.3380158653846151,
+        "sum_eV": -70.30729999999994,
+        "n_bonds": 208
+      },
+      "Ga-Re": {
+        "mean_eV": -0.4881698124999998,
+        "sum_eV": -78.10716999999997,
+        "n_bonds": 160
+      },
+      "Re-Re": {
+        "mean_eV": -0.18946,
+        "sum_eV": -4.16812,
+        "n_bonds": 22
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 30.231660000000037,
+    "sum_per_atom_eV": 1.8894787500000023,
+    "sum_per_formula_unit_eV": 7.557915000000009,
+    "mean_per_bond_eV": 0.07751707692307702,
+    "n_bonds": 390,
+    "by_bond_type": {
+      "Ga-Ga": {
+        "mean_eV": 0.056532499999999986,
+        "sum_eV": 11.758759999999997,
+        "n_bonds": 208
+      },
+      "Ga-Re": {
+        "mean_eV": 0.10493668750000004,
+        "sum_eV": 16.789870000000008,
+        "n_bonds": 160
+      },
+      "Re-Re": {
+        "mean_eV": 0.07650136363636363,
+        "sum_eV": 1.68303,
+        "n_bonds": 22
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ga3Re_mp-1188393"
+}

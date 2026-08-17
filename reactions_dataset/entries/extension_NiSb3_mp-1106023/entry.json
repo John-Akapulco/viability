@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_NiSb3_mp-1106023",
+  "formula": "NiSb3",
+  "composition": {
+    "Ni": 4,
+    "Sb": 12
+  },
+  "Z": 4,
+  "space_group_symbol": "Im-3",
+  "space_group_number": 204,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -84.65747999999998,
+    "sum_per_atom_eV": -5.291092499999999,
+    "sum_per_formula_unit_eV": -21.164369999999995,
+    "mean_per_bond_eV": -0.276658431372549,
+    "n_bonds": 306,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": -0.025823333333333334,
+        "sum_eV": -0.30988,
+        "n_bonds": 12
+      },
+      "Ni-Sb": {
+        "mean_eV": -0.2560143750000001,
+        "sum_eV": -36.866070000000015,
+        "n_bonds": 144
+      },
+      "Sb-Sb": {
+        "mean_eV": -0.3165435333333333,
+        "sum_eV": -47.48152999999999,
+        "n_bonds": 150
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 21.81245,
+    "sum_per_atom_eV": 1.363278125,
+    "sum_per_formula_unit_eV": 5.4531125,
+    "mean_per_bond_eV": 0.07128251633986928,
+    "n_bonds": 306,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": 0.012536666666666666,
+        "sum_eV": 0.15044,
+        "n_bonds": 12
+      },
+      "Ni-Sb": {
+        "mean_eV": 0.06277777777777777,
+        "sum_eV": 9.04,
+        "n_bonds": 144
+      },
+      "Sb-Sb": {
+        "mean_eV": 0.0841467333333333,
+        "sum_eV": 12.622009999999996,
+        "n_bonds": 150
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_NiSb3_mp-1106023"
+}

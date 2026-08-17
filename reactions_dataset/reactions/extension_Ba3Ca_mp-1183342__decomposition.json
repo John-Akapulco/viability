@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ba3Ca_mp-1183342__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ba3Ca_mp-1183342",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ba_mp-122",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Ca_mp-21",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

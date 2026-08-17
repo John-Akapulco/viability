@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_HfCr2_mp-569624",
+  "formula": "HfCr2",
+  "composition": {
+    "Hf": 4,
+    "Cr": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -90.53826999999994,
+    "sum_per_atom_eV": -7.544855833333329,
+    "sum_per_formula_unit_eV": -22.634567499999985,
+    "mean_per_bond_eV": -0.21556730952380937,
+    "n_bonds": 420,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.17787015624999994,
+        "sum_eV": -11.383689999999996,
+        "n_bonds": 64
+      },
+      "Cr-Hf": {
+        "mean_eV": -0.2794009523809523,
+        "sum_eV": -46.939359999999986,
+        "n_bonds": 168
+      },
+      "Cr-Cr": {
+        "mean_eV": -0.1713575531914893,
+        "sum_eV": -32.21521999999999,
+        "n_bonds": 188
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 32.256719999999994,
+    "sum_per_atom_eV": 2.6880599999999997,
+    "sum_per_formula_unit_eV": 8.064179999999999,
+    "mean_per_bond_eV": 0.07680171428571428,
+    "n_bonds": 420,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.038479843749999985,
+        "sum_eV": 2.462709999999999,
+        "n_bonds": 64
+      },
+      "Cr-Hf": {
+        "mean_eV": 0.08912285714285716,
+        "sum_eV": 14.972640000000002,
+        "n_bonds": 168
+      },
+      "Cr-Cr": {
+        "mean_eV": 0.07883707446808512,
+        "sum_eV": 14.821370000000003,
+        "n_bonds": 188
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HfCr2_mp-569624"
+}

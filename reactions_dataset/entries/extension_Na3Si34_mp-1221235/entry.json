@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_Na3Si34_mp-1221235",
+  "formula": "Na3Si34",
+  "composition": {
+    "Na": 3,
+    "Si": 34
+  },
+  "Z": 1,
+  "space_group_symbol": "R-3m",
+  "space_group_number": 166,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -302.83812000000006,
+    "sum_per_atom_eV": -8.184814054054055,
+    "sum_per_formula_unit_eV": -302.83812000000006,
+    "mean_per_bond_eV": -0.3757296774193549,
+    "n_bonds": 806,
+    "by_bond_type": {
+      "Na-Si": {
+        "mean_eV": -0.05875354166666671,
+        "sum_eV": -5.640340000000004,
+        "n_bonds": 96
+      },
+      "Si-Si": {
+        "mean_eV": -0.4185884225352113,
+        "sum_eV": -297.19778,
+        "n_bonds": 710
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 65.03064999999994,
+    "sum_per_atom_eV": 1.7575851351351335,
+    "sum_per_formula_unit_eV": 65.03064999999994,
+    "mean_per_bond_eV": 0.08068318858560786,
+    "n_bonds": 806,
+    "by_bond_type": {
+      "Na-Si": {
+        "mean_eV": 0.010289583333333335,
+        "sum_eV": 0.9878000000000001,
+        "n_bonds": 96
+      },
+      "Si-Si": {
+        "mean_eV": 0.09020119718309849,
+        "sum_eV": 64.04284999999993,
+        "n_bonds": 710
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Na3Si34_mp-1221235"
+}

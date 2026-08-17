@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ti2Cu_mp-742",
+  "formula": "Ti2Cu",
+  "composition": {
+    "Ti": 2,
+    "Cu": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.950600000000005,
+    "sum_per_atom_eV": -5.650200000000002,
+    "sum_per_formula_unit_eV": -16.950600000000005,
+    "mean_per_bond_eV": -0.13780975609756102,
+    "n_bonds": 123,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": -0.19077377049180327,
+        "sum_eV": -11.6372,
+        "n_bonds": 61
+      },
+      "Cu-Ti": {
+        "mean_eV": -0.11746000000000001,
+        "sum_eV": -4.93332,
+        "n_bonds": 42
+      },
+      "Cu-Cu": {
+        "mean_eV": -0.019004,
+        "sum_eV": -0.38008000000000003,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.778070000000001,
+    "sum_per_atom_eV": 2.259356666666667,
+    "sum_per_formula_unit_eV": 6.778070000000001,
+    "mean_per_bond_eV": 0.05510626016260164,
+    "n_bonds": 123,
+    "by_bond_type": {
+      "Ti-Ti": {
+        "mean_eV": 0.08799704918032787,
+        "sum_eV": 5.36782,
+        "n_bonds": 61
+      },
+      "Cu-Ti": {
+        "mean_eV": 0.03176166666666667,
+        "sum_eV": 1.33399,
+        "n_bonds": 42
+      },
+      "Cu-Cu": {
+        "mean_eV": 0.0038129999999999995,
+        "sum_eV": 0.07626,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ti2Cu_mp-742"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Zn13Rh_mp-13447__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Zn13Rh_mp-13447",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zn_mp-79",
+      "coefficient": 13.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

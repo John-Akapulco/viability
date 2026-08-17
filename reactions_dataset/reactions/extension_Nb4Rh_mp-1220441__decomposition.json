@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Nb4Rh_mp-1220441__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Nb4Rh_mp-1220441",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Nb_mp-75",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Zr3Fe_mp-31205",
+  "formula": "Zr3Fe",
+  "composition": {
+    "Zr": 6,
+    "Fe": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmcm",
+  "space_group_number": 63,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -75.53001000000003,
+    "sum_per_atom_eV": -9.441251250000004,
+    "sum_per_formula_unit_eV": -37.765005000000016,
+    "mean_per_bond_eV": -0.35294397196261695,
+    "n_bonds": 214,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": -0.3842067741935483,
+        "sum_eV": -47.64163999999999,
+        "n_bonds": 124
+      },
+      "Fe-Zr": {
+        "mean_eV": -0.3664486486486485,
+        "sum_eV": -27.11719999999999,
+        "n_bonds": 74
+      },
+      "Fe-Fe": {
+        "mean_eV": -0.048198125,
+        "sum_eV": -0.77117,
+        "n_bonds": 16
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 20.24708,
+    "sum_per_atom_eV": 2.530885,
+    "sum_per_formula_unit_eV": 10.12354,
+    "mean_per_bond_eV": 0.09461252336448599,
+    "n_bonds": 214,
+    "by_bond_type": {
+      "Zr-Zr": {
+        "mean_eV": 0.09282750000000001,
+        "sum_eV": 11.510610000000002,
+        "n_bonds": 124
+      },
+      "Fe-Zr": {
+        "mean_eV": 0.111772027027027,
+        "sum_eV": 8.271129999999998,
+        "n_bonds": 74
+      },
+      "Fe-Fe": {
+        "mean_eV": 0.02908375,
+        "sum_eV": 0.46534,
+        "n_bonds": 16
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Zr3Fe_mp-31205"
+}

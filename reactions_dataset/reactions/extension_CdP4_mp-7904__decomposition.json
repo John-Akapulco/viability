@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_CdP4_mp-7904__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_CdP4_mp-7904",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cd_mp-94",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_P_mp-568348",
+      "coefficient": 4.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

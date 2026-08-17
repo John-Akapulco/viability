@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_NiSb3_mp-1106023__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_NiSb3_mp-1106023",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ni_mp-23",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Sb_mp-104",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

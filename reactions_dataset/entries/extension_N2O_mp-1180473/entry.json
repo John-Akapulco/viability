@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_N2O_mp-1180473",
+  "formula": "N2O",
+  "composition": {
+    "N": 8,
+    "O": 4
+  },
+  "Z": 4,
+  "space_group_symbol": "Pnma",
+  "space_group_number": 62,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -171.5046300000001,
+    "sum_per_atom_eV": -14.29205250000001,
+    "sum_per_formula_unit_eV": -42.876157500000026,
+    "mean_per_bond_eV": -0.3862716891891894,
+    "n_bonds": 444,
+    "by_bond_type": {
+      "N-N": {
+        "mean_eV": -0.4810541489361698,
+        "sum_eV": -90.43817999999993,
+        "n_bonds": 188
+      },
+      "N-O": {
+        "mean_eV": -0.412901836734694,
+        "sum_eV": -80.92876000000003,
+        "n_bonds": 196
+      },
+      "O-O": {
+        "mean_eV": -0.0022948333333333345,
+        "sum_eV": -0.13769000000000006,
+        "n_bonds": 60
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 18.215259999999972,
+    "sum_per_atom_eV": 1.517938333333331,
+    "sum_per_formula_unit_eV": 4.553814999999993,
+    "mean_per_bond_eV": 0.0410253603603603,
+    "n_bonds": 444,
+    "by_bond_type": {
+      "N-N": {
+        "mean_eV": 0.04962202127659572,
+        "sum_eV": 9.328939999999996,
+        "n_bonds": 188
+      },
+      "N-O": {
+        "mean_eV": 0.04524321428571424,
+        "sum_eV": 8.867669999999992,
+        "n_bonds": 196
+      },
+      "O-O": {
+        "mean_eV": 0.0003108333333333331,
+        "sum_eV": 0.018649999999999986,
+        "n_bonds": 60
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_N2O_mp-1180473"
+}

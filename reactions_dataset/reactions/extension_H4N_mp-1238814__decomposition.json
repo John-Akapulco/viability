@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_H4N_mp-1238814__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_H4N_mp-1238814",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_H_mp-730101",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "gasref_N2_dimerbox",
+      "coefficient": 0.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

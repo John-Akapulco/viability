@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_AgPb3_mp-1183256__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_AgPb3_mp-1183256",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Pb_mp-20483",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

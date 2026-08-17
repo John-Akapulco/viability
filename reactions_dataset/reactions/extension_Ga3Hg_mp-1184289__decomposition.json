@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ga3Hg_mp-1184289__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ga3Hg_mp-1184289",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

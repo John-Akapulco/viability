@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_SiTe2_mp-2755",
+  "formula": "SiTe2",
+  "composition": {
+    "Si": 1,
+    "Te": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -17.78114,
+    "sum_per_atom_eV": -5.927046666666667,
+    "sum_per_formula_unit_eV": -17.78114,
+    "mean_per_bond_eV": -0.37044041666666666,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": -0.028743333333333333,
+        "sum_eV": -0.17246,
+        "n_bonds": 6
+      },
+      "Si-Te": {
+        "mean_eV": -0.9173594444444445,
+        "sum_eV": -16.51247,
+        "n_bonds": 18
+      },
+      "Te-Te": {
+        "mean_eV": -0.04567541666666666,
+        "sum_eV": -1.09621,
+        "n_bonds": 24
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.31605,
+    "sum_per_atom_eV": 1.4386833333333333,
+    "sum_per_formula_unit_eV": 4.31605,
+    "mean_per_bond_eV": 0.08991770833333333,
+    "n_bonds": 48,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": 0.005639999999999999,
+        "sum_eV": 0.033839999999999995,
+        "n_bonds": 6
+      },
+      "Si-Te": {
+        "mean_eV": 0.18992,
+        "sum_eV": 3.4185600000000003,
+        "n_bonds": 18
+      },
+      "Te-Te": {
+        "mean_eV": 0.03598541666666667,
+        "sum_eV": 0.8636500000000001,
+        "n_bonds": 24
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_SiTe2_mp-2755"
+}

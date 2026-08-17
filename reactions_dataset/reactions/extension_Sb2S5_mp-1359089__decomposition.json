@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Sb2S5_mp-1359089__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Sb2S5_mp-1359089",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Sb_mp-104",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_S_mp-77",
+      "coefficient": 5.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

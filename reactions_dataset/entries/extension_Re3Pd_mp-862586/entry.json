@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Re3Pd_mp-862586",
+  "formula": "Re3Pd",
+  "composition": {
+    "Re": 6,
+    "Pd": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -91.18793999999994,
+    "sum_per_atom_eV": -11.398492499999993,
+    "sum_per_formula_unit_eV": -45.59396999999997,
+    "mean_per_bond_eV": -0.35620289062499977,
+    "n_bonds": 256,
+    "by_bond_type": {
+      "Re-Re": {
+        "mean_eV": -0.2638819333333336,
+        "sum_eV": -39.582290000000036,
+        "n_bonds": 150
+      },
+      "Pd-Re": {
+        "mean_eV": -0.552147857142857,
+        "sum_eV": -46.38041999999999,
+        "n_bonds": 84
+      },
+      "Pd-Pd": {
+        "mean_eV": -0.2375104545454546,
+        "sum_eV": -5.225230000000002,
+        "n_bonds": 22
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 20.95124,
+    "sum_per_atom_eV": 2.618905,
+    "sum_per_formula_unit_eV": 10.47562,
+    "mean_per_bond_eV": 0.08184078125,
+    "n_bonds": 256,
+    "by_bond_type": {
+      "Re-Re": {
+        "mean_eV": 0.07677619999999993,
+        "sum_eV": 11.51642999999999,
+        "n_bonds": 150
+      },
+      "Pd-Re": {
+        "mean_eV": 0.10198238095238098,
+        "sum_eV": 8.566520000000002,
+        "n_bonds": 84
+      },
+      "Pd-Pd": {
+        "mean_eV": 0.039467727272727265,
+        "sum_eV": 0.8682899999999998,
+        "n_bonds": 22
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Re3Pd_mp-862586"
+}

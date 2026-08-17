@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CuH_mp-1225705",
+  "formula": "CuH",
+  "composition": {
+    "Cu": 2,
+    "H": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -11.038849999999993,
+    "sum_per_atom_eV": -2.7597124999999982,
+    "sum_per_formula_unit_eV": -5.5194249999999965,
+    "mean_per_bond_eV": -0.03914485815602834,
+    "n_bonds": 282,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": -0.03780090909090911,
+        "sum_eV": -3.3264800000000014,
+        "n_bonds": 88
+      },
+      "Cu-H": {
+        "mean_eV": -0.06701235849056601,
+        "sum_eV": -7.103309999999998,
+        "n_bonds": 106
+      },
+      "H-H": {
+        "mean_eV": -0.006921136363636366,
+        "sum_eV": -0.6090600000000003,
+        "n_bonds": 88
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.383879999999996,
+    "sum_per_atom_eV": 0.595969999999999,
+    "sum_per_formula_unit_eV": 1.191939999999998,
+    "mean_per_bond_eV": 0.00845347517730495,
+    "n_bonds": 282,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": 0.011352613636363631,
+        "sum_eV": 0.9990299999999995,
+        "n_bonds": 88
+      },
+      "Cu-H": {
+        "mean_eV": 0.011278018867924523,
+        "sum_eV": 1.1954699999999994,
+        "n_bonds": 106
+      },
+      "H-H": {
+        "mean_eV": 0.002152045454545451,
+        "sum_eV": 0.18937999999999972,
+        "n_bonds": 88
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CuH_mp-1225705"
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CoSn_mp-20536",
+  "formula": "CoSn",
+  "composition": {
+    "Co": 3,
+    "Sn": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P6/mmm",
+  "space_group_number": 191,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -75.02296999999996,
+    "sum_per_atom_eV": -12.503828333333326,
+    "sum_per_formula_unit_eV": -25.00765666666665,
+    "mean_per_bond_eV": -0.4238585875706212,
+    "n_bonds": 177,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": -0.38864208333333344,
+        "sum_eV": -18.654820000000004,
+        "n_bonds": 48
+      },
+      "Co-Sn": {
+        "mean_eV": -0.6046955952380954,
+        "sum_eV": -50.794430000000006,
+        "n_bonds": 84
+      },
+      "Sn-Sn": {
+        "mean_eV": -0.12386044444444443,
+        "sum_eV": -5.573719999999999,
+        "n_bonds": 45
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 14.176580000000008,
+    "sum_per_atom_eV": 2.362763333333335,
+    "sum_per_formula_unit_eV": 4.72552666666667,
+    "mean_per_bond_eV": 0.08009367231638423,
+    "n_bonds": 177,
+    "by_bond_type": {
+      "Co-Co": {
+        "mean_eV": 0.09341833333333331,
+        "sum_eV": 4.484079999999999,
+        "n_bonds": 48
+      },
+      "Co-Sn": {
+        "mean_eV": 0.10198809523809524,
+        "sum_eV": 8.567,
+        "n_bonds": 84
+      },
+      "Sn-Sn": {
+        "mean_eV": 0.02501111111111111,
+        "sum_eV": 1.1255,
+        "n_bonds": 45
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CoSn_mp-20536"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_LiRh3_mp-1001787__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_LiRh3_mp-1001787",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Li_mp-1018134",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MgTl3_mp-978262",
+  "formula": "MgTl3",
+  "composition": {
+    "Mg": 2,
+    "Tl": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -39.44844999999999,
+    "sum_per_atom_eV": -4.931056249999998,
+    "sum_per_formula_unit_eV": -19.724224999999993,
+    "mean_per_bond_eV": -0.35221830357142847,
+    "n_bonds": 112,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.0024419999999999997,
+        "sum_eV": -0.024419999999999997,
+        "n_bonds": 10
+      },
+      "Mg-Tl": {
+        "mean_eV": -0.23557875000000003,
+        "sum_eV": -5.6538900000000005,
+        "n_bonds": 24
+      },
+      "Tl-Tl": {
+        "mean_eV": -0.4329505128205129,
+        "sum_eV": -33.770140000000005,
+        "n_bonds": 78
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.699420000000003,
+    "sum_per_atom_eV": 1.0874275000000004,
+    "sum_per_formula_unit_eV": 4.349710000000002,
+    "mean_per_bond_eV": 0.07767339285714289,
+    "n_bonds": 112,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.00030000000000000003,
+        "sum_eV": 0.0030000000000000005,
+        "n_bonds": 10
+      },
+      "Mg-Tl": {
+        "mean_eV": 0.05475208333333334,
+        "sum_eV": 1.3140500000000002,
+        "n_bonds": 24
+      },
+      "Tl-Tl": {
+        "mean_eV": 0.09464576923076927,
+        "sum_eV": 7.3823700000000025,
+        "n_bonds": 78
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MgTl3_mp-978262"
+}

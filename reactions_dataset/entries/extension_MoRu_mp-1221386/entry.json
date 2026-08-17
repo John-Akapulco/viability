@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MoRu_mp-1221386",
+  "formula": "MoRu",
+  "composition": {
+    "Mo": 1,
+    "Ru": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -23.195570000000007,
+    "sum_per_atom_eV": -11.597785000000004,
+    "sum_per_formula_unit_eV": -23.195570000000007,
+    "mean_per_bond_eV": -0.26358602272727283,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": -0.292675625,
+        "sum_eV": -9.36562,
+        "n_bonds": 32
+      },
+      "Mo-Ru": {
+        "mean_eV": -0.33406374999999994,
+        "sum_eV": -8.017529999999999,
+        "n_bonds": 24
+      },
+      "Ru-Ru": {
+        "mean_eV": -0.18163812500000004,
+        "sum_eV": -5.812420000000001,
+        "n_bonds": 32
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.099040000000002,
+    "sum_per_atom_eV": 3.549520000000001,
+    "sum_per_formula_unit_eV": 7.099040000000002,
+    "mean_per_bond_eV": 0.08067090909090911,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": 0.08800687500000003,
+        "sum_eV": 2.816220000000001,
+        "n_bonds": 32
+      },
+      "Mo-Ru": {
+        "mean_eV": 0.098715,
+        "sum_eV": 2.36916,
+        "n_bonds": 24
+      },
+      "Ru-Ru": {
+        "mean_eV": 0.059801875000000004,
+        "sum_eV": 1.9136600000000001,
+        "n_bonds": 32
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MoRu_mp-1221386"
+}

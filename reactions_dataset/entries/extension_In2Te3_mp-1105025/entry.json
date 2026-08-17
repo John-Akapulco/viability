@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_In2Te3_mp-1105025",
+  "formula": "In2Te3",
+  "composition": {
+    "In": 6,
+    "Te": 9
+  },
+  "Z": 3,
+  "space_group_symbol": "I4mm",
+  "space_group_number": 107,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -78.72654,
+    "sum_per_atom_eV": -5.248436,
+    "sum_per_formula_unit_eV": -26.24218,
+    "mean_per_bond_eV": -0.5392228767123287,
+    "n_bonds": 146,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": -0.39116499999999993,
+        "sum_eV": -7.823299999999999,
+        "n_bonds": 20
+      },
+      "In-Te": {
+        "mean_eV": -0.858453947368421,
+        "sum_eV": -65.24249999999999,
+        "n_bonds": 76
+      },
+      "Te-Te": {
+        "mean_eV": -0.11321479999999993,
+        "sum_eV": -5.660739999999997,
+        "n_bonds": 50
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 19.65384999999999,
+    "sum_per_atom_eV": 1.3102566666666662,
+    "sum_per_formula_unit_eV": 6.5512833333333305,
+    "mean_per_bond_eV": 0.13461541095890406,
+    "n_bonds": 146,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": 0.08851149999999999,
+        "sum_eV": 1.77023,
+        "n_bonds": 20
+      },
+      "In-Te": {
+        "mean_eV": 0.19805092105263167,
+        "sum_eV": 15.051870000000006,
+        "n_bonds": 76
+      },
+      "Te-Te": {
+        "mean_eV": 0.05663499999999999,
+        "sum_eV": 2.8317499999999995,
+        "n_bonds": 50
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_In2Te3_mp-1105025"
+}

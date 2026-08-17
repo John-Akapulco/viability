@@ -1,0 +1,94 @@
+{
+  "compound_id": "extension_HC2N3_mp-1103408",
+  "formula": "HC2N3",
+  "composition": {
+    "H": 2,
+    "C": 4,
+    "N": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "Cmc2_1",
+  "space_group_number": 36,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -196.29899,
+    "sum_per_atom_eV": -16.358249166666667,
+    "sum_per_formula_unit_eV": -98.149495,
+    "mean_per_bond_eV": -0.2129056290672451,
+    "n_bonds": 922,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": -0.0008900000000000001,
+        "sum_eV": -0.0267,
+        "n_bonds": 30
+      },
+      "C-H": {
+        "mean_eV": -0.0029290384615384604,
+        "sum_eV": -0.3046199999999999,
+        "n_bonds": 104
+      },
+      "H-N": {
+        "mean_eV": -0.1340554285714285,
+        "sum_eV": -18.76775999999999,
+        "n_bonds": 140
+      },
+      "C-C": {
+        "mean_eV": -0.006691634615384612,
+        "sum_eV": -0.6959299999999997,
+        "n_bonds": 104
+      },
+      "C-N": {
+        "mean_eV": -0.536635277777778,
+        "sum_eV": -173.86983000000006,
+        "n_bonds": 324
+      },
+      "N-N": {
+        "mean_eV": -0.011973409090909085,
+        "sum_eV": -2.6341499999999987,
+        "n_bonds": 220
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 18.706799999999944,
+    "sum_per_atom_eV": 1.5588999999999953,
+    "sum_per_formula_unit_eV": 9.353399999999972,
+    "mean_per_bond_eV": 0.02028937093275482,
+    "n_bonds": 922,
+    "by_bond_type": {
+      "H-H": {
+        "mean_eV": 0.000049333333333333344,
+        "sum_eV": 0.0014800000000000004,
+        "n_bonds": 30
+      },
+      "C-H": {
+        "mean_eV": 0.00015124999999999994,
+        "sum_eV": 0.015729999999999994,
+        "n_bonds": 104
+      },
+      "H-N": {
+        "mean_eV": 0.013225285714285714,
+        "sum_eV": 1.85154,
+        "n_bonds": 140
+      },
+      "C-C": {
+        "mean_eV": 0.00041846153846153823,
+        "sum_eV": 0.043519999999999975,
+        "n_bonds": 104
+      },
+      "C-N": {
+        "mean_eV": 0.04866632716049382,
+        "sum_eV": 15.767889999999998,
+        "n_bonds": 324
+      },
+      "N-N": {
+        "mean_eV": 0.004666545454545455,
+        "sum_eV": 1.0266400000000002,
+        "n_bonds": 220
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HC2N3_mp-1103408"
+}

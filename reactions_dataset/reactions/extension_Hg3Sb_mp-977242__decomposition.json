@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Hg3Sb_mp-977242__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Hg3Sb_mp-977242",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Sb_mp-104",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

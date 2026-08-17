@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_CsN3_mp-1225892__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_CsN3_mp-1225892",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Cs_mp-1",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "gasref_N2_dimerbox",
+      "coefficient": 1.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

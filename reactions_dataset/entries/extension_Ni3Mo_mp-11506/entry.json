@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ni3Mo_mp-11506",
+  "formula": "Ni3Mo",
+  "composition": {
+    "Ni": 6,
+    "Mo": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Pmmn",
+  "space_group_number": 59,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -39.81195000000001,
+    "sum_per_atom_eV": -4.976493750000001,
+    "sum_per_formula_unit_eV": -19.905975000000005,
+    "mean_per_bond_eV": -0.13449983108108113,
+    "n_bonds": 296,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": -0.06475232142857143,
+        "sum_eV": -10.87839,
+        "n_bonds": 168
+      },
+      "Mo-Ni": {
+        "mean_eV": -0.2446100000000001,
+        "sum_eV": -26.41788000000001,
+        "n_bonds": 108
+      },
+      "Mo-Mo": {
+        "mean_eV": -0.125784,
+        "sum_eV": -2.51568,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 13.449330000000002,
+    "sum_per_atom_eV": 1.6811662500000002,
+    "sum_per_formula_unit_eV": 6.724665000000001,
+    "mean_per_bond_eV": 0.04543692567567568,
+    "n_bonds": 296,
+    "by_bond_type": {
+      "Ni-Ni": {
+        "mean_eV": 0.023261130952380943,
+        "sum_eV": 3.9078699999999986,
+        "n_bonds": 168
+      },
+      "Mo-Ni": {
+        "mean_eV": 0.07690416666666666,
+        "sum_eV": 8.30565,
+        "n_bonds": 108
+      },
+      "Mo-Mo": {
+        "mean_eV": 0.06179049999999999,
+        "sum_eV": 1.2358099999999999,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ni3Mo_mp-11506"
+}

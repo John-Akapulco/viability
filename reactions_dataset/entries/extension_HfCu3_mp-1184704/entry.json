@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_HfCu3_mp-1184704",
+  "formula": "HfCu3",
+  "composition": {
+    "Hf": 1,
+    "Cu": 3
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.719949999999994,
+    "sum_per_atom_eV": -4.179987499999998,
+    "sum_per_formula_unit_eV": -16.719949999999994,
+    "mean_per_bond_eV": -0.10717916666666663,
+    "n_bonds": 156,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.18772374999999997,
+        "sum_eV": -3.0035799999999995,
+        "n_bonds": 16
+      },
+      "Cu-Hf": {
+        "mean_eV": -0.23453804347826085,
+        "sum_eV": -10.788749999999999,
+        "n_bonds": 46
+      },
+      "Cu-Cu": {
+        "mean_eV": -0.031144893617021267,
+        "sum_eV": -2.9276199999999992,
+        "n_bonds": 94
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.8098700000000045,
+    "sum_per_atom_eV": 1.2024675000000011,
+    "sum_per_formula_unit_eV": 4.8098700000000045,
+    "mean_per_bond_eV": 0.03083250000000003,
+    "n_bonds": 156,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.0809,
+        "sum_eV": 1.2944,
+        "n_bonds": 16
+      },
+      "Cu-Hf": {
+        "mean_eV": 0.060891521739130414,
+        "sum_eV": 2.801009999999999,
+        "n_bonds": 46
+      },
+      "Cu-Cu": {
+        "mean_eV": 0.007600638297872346,
+        "sum_eV": 0.7144600000000005,
+        "n_bonds": 94
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HfCu3_mp-1184704"
+}

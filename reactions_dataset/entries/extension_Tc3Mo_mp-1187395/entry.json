@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Tc3Mo_mp-1187395",
+  "formula": "Tc3Mo",
+  "composition": {
+    "Tc": 3,
+    "Mo": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Pm-3m",
+  "space_group_number": 221,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -35.23008999999999,
+    "sum_per_atom_eV": -8.807522499999997,
+    "sum_per_formula_unit_eV": -35.23008999999999,
+    "mean_per_bond_eV": -0.2446534027777777,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Tc-Tc": {
+        "mean_eV": -0.19702744444444437,
+        "sum_eV": -17.732469999999992,
+        "n_bonds": 90
+      },
+      "Mo-Tc": {
+        "mean_eV": -0.45118222222222204,
+        "sum_eV": -16.242559999999994,
+        "n_bonds": 36
+      },
+      "Mo-Mo": {
+        "mean_eV": -0.06972555555555555,
+        "sum_eV": -1.25506,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.941190000000004,
+    "sum_per_atom_eV": 2.735297500000001,
+    "sum_per_formula_unit_eV": 10.941190000000004,
+    "mean_per_bond_eV": 0.07598048611111113,
+    "n_bonds": 144,
+    "by_bond_type": {
+      "Tc-Tc": {
+        "mean_eV": 0.06410133333333332,
+        "sum_eV": 5.769119999999998,
+        "n_bonds": 90
+      },
+      "Mo-Tc": {
+        "mean_eV": 0.12861361111111108,
+        "sum_eV": 4.630089999999999,
+        "n_bonds": 36
+      },
+      "Mo-Mo": {
+        "mean_eV": 0.03011,
+        "sum_eV": 0.54198,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Tc3Mo_mp-1187395"
+}

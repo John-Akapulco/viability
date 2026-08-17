@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Y3Co_mp-1105598__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Y3Co_mp-1105598",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Y_mp-112",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Co_mp-102",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

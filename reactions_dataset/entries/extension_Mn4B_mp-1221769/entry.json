@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Mn4B_mp-1221769",
+  "formula": "Mn4B",
+  "composition": {
+    "Mn": 8,
+    "B": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "F222",
+  "space_group_number": 22,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -81.63719999999996,
+    "sum_per_atom_eV": -8.163719999999996,
+    "sum_per_formula_unit_eV": -40.81859999999998,
+    "mean_per_bond_eV": -0.2005828009828009,
+    "n_bonds": 407,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": -0.15555046511627893,
+        "sum_eV": -40.13201999999996,
+        "n_bonds": 258
+      },
+      "B-Mn": {
+        "mean_eV": -0.3194040476190476,
+        "sum_eV": -40.24491,
+        "n_bonds": 126
+      },
+      "B-B": {
+        "mean_eV": -0.054794347826086956,
+        "sum_eV": -1.26027,
+        "n_bonds": 23
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 24.815649999999987,
+    "sum_per_atom_eV": 2.481564999999999,
+    "sum_per_formula_unit_eV": 12.407824999999994,
+    "mean_per_bond_eV": 0.06097211302211299,
+    "n_bonds": 407,
+    "by_bond_type": {
+      "Mn-Mn": {
+        "mean_eV": 0.06691147286821704,
+        "sum_eV": 17.263159999999996,
+        "n_bonds": 258
+      },
+      "B-Mn": {
+        "mean_eV": 0.05834857142857143,
+        "sum_eV": 7.35192,
+        "n_bonds": 126
+      },
+      "B-B": {
+        "mean_eV": 0.008720434782608694,
+        "sum_eV": 0.20056999999999994,
+        "n_bonds": 23
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mn4B_mp-1221769"
+}

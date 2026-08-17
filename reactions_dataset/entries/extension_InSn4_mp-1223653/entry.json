@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_InSn4_mp-1223653",
+  "formula": "InSn4",
+  "composition": {
+    "In": 1,
+    "Sn": 4
+  },
+  "Z": 1,
+  "space_group_symbol": "Cmmm",
+  "space_group_number": 65,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -54.28504000000001,
+    "sum_per_atom_eV": -10.857008000000002,
+    "sum_per_formula_unit_eV": -54.28504000000001,
+    "mean_per_bond_eV": -0.7050005194805196,
+    "n_bonds": 77,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": -1.0930149999999998,
+        "sum_eV": -8.744119999999999,
+        "n_bonds": 8
+      },
+      "In-Sn": {
+        "mean_eV": -0.33234187499999995,
+        "sum_eV": -5.317469999999999,
+        "n_bonds": 16
+      },
+      "Sn-Sn": {
+        "mean_eV": -0.7589330188679246,
+        "sum_eV": -40.22345000000001,
+        "n_bonds": 53
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 11.184900000000004,
+    "sum_per_atom_eV": 2.236980000000001,
+    "sum_per_formula_unit_eV": 11.184900000000004,
+    "mean_per_bond_eV": 0.14525844155844161,
+    "n_bonds": 77,
+    "by_bond_type": {
+      "In-In": {
+        "mean_eV": 0.204375,
+        "sum_eV": 1.635,
+        "n_bonds": 8
+      },
+      "In-Sn": {
+        "mean_eV": 0.07935437499999999,
+        "sum_eV": 1.2696699999999999,
+        "n_bonds": 16
+      },
+      "Sn-Sn": {
+        "mean_eV": 0.1562307547169812,
+        "sum_eV": 8.280230000000003,
+        "n_bonds": 53
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_InSn4_mp-1223653"
+}

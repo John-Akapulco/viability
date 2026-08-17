@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_HfCd_mp-1007758",
+  "formula": "HfCd",
+  "composition": {
+    "Hf": 2,
+    "Cd": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P4/nmm",
+  "space_group_number": 129,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -48.64541999999999,
+    "sum_per_atom_eV": -12.161354999999997,
+    "sum_per_formula_unit_eV": -24.322709999999994,
+    "mean_per_bond_eV": -0.4864541999999999,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.64146,
+        "sum_eV": -17.96088,
+        "n_bonds": 28
+      },
+      "Cd-Hf": {
+        "mean_eV": -0.21143613636363637,
+        "sum_eV": -9.30319,
+        "n_bonds": 44
+      },
+      "Cd-Cd": {
+        "mean_eV": -0.763619642857143,
+        "sum_eV": -21.381350000000005,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 10.207270000000003,
+    "sum_per_atom_eV": 2.5518175000000007,
+    "sum_per_formula_unit_eV": 5.1036350000000015,
+    "mean_per_bond_eV": 0.10207270000000003,
+    "n_bonds": 100,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.17820642857142857,
+        "sum_eV": 4.98978,
+        "n_bonds": 28
+      },
+      "Cd-Hf": {
+        "mean_eV": 0.04175636363636364,
+        "sum_eV": 1.83728,
+        "n_bonds": 44
+      },
+      "Cd-Cd": {
+        "mean_eV": 0.1207217857142857,
+        "sum_eV": 3.3802099999999995,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HfCd_mp-1007758"
+}

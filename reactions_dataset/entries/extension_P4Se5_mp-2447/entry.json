@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_P4Se5_mp-2447",
+  "formula": "P4Se5",
+  "composition": {
+    "P": 16,
+    "Se": 20
+  },
+  "Z": 4,
+  "space_group_symbol": "Pna2_1",
+  "space_group_number": 33,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -229.21426000000022,
+    "sum_per_atom_eV": -6.367062777777784,
+    "sum_per_formula_unit_eV": -57.303565000000056,
+    "mean_per_bond_eV": -0.45842852000000045,
+    "n_bonds": 500,
+    "by_bond_type": {
+      "P-P": {
+        "mean_eV": -0.4478053571428572,
+        "sum_eV": -37.61565,
+        "n_bonds": 84
+      },
+      "P-Se": {
+        "mean_eV": -0.6793828623188409,
+        "sum_eV": -187.50967000000009,
+        "n_bonds": 276
+      },
+      "Se-Se": {
+        "mean_eV": -0.029206714285714273,
+        "sum_eV": -4.088939999999998,
+        "n_bonds": 140
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 47.871729999999985,
+    "sum_per_atom_eV": 1.3297702777777773,
+    "sum_per_formula_unit_eV": 11.967932499999996,
+    "mean_per_bond_eV": 0.09574345999999997,
+    "n_bonds": 500,
+    "by_bond_type": {
+      "P-P": {
+        "mean_eV": 0.08718488095238097,
+        "sum_eV": 7.323530000000002,
+        "n_bonds": 84
+      },
+      "P-Se": {
+        "mean_eV": 0.13440742753623186,
+        "sum_eV": 37.09644999999999,
+        "n_bonds": 276
+      },
+      "Se-Se": {
+        "mean_eV": 0.024655357142857146,
+        "sum_eV": 3.4517500000000005,
+        "n_bonds": 140
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_P4Se5_mp-2447"
+}

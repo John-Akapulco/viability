@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Ca3Zn_mp-1039229",
+  "formula": "Ca3Zn",
+  "composition": {
+    "Ca": 3,
+    "Zn": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -5.801430000000001,
+    "sum_per_atom_eV": -1.4503575000000002,
+    "sum_per_formula_unit_eV": -5.801430000000001,
+    "mean_per_bond_eV": -0.13185068181818183,
+    "n_bonds": 44,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": -0.02563692307692308,
+        "sum_eV": -0.6665600000000002,
+        "n_bonds": 26
+      },
+      "Ca-Zn": {
+        "mean_eV": -0.3346892857142857,
+        "sum_eV": -4.68565,
+        "n_bonds": 14
+      },
+      "Zn-Zn": {
+        "mean_eV": -0.112305,
+        "sum_eV": -0.44922,
+        "n_bonds": 4
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.9722399999999995,
+    "sum_per_atom_eV": 0.4930599999999999,
+    "sum_per_formula_unit_eV": 1.9722399999999995,
+    "mean_per_bond_eV": 0.04482363636363635,
+    "n_bonds": 44,
+    "by_bond_type": {
+      "Ca-Ca": {
+        "mean_eV": 0.006701153846153846,
+        "sum_eV": 0.17423,
+        "n_bonds": 26
+      },
+      "Ca-Zn": {
+        "mean_eV": 0.10521499999999998,
+        "sum_eV": 1.4730099999999997,
+        "n_bonds": 14
+      },
+      "Zn-Zn": {
+        "mean_eV": 0.08125,
+        "sum_eV": 0.325,
+        "n_bonds": 4
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Ca3Zn_mp-1039229"
+}

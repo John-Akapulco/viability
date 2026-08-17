@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Ba4Pd_mp-1214438__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Ba4Pd_mp-1214438",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Ba_mp-122",
+      "coefficient": 4.0
+    },
+    {
+      "compound_id": "extension_Pd_mp-2",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_In2Te3_mp-1105025__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_In2Te3_mp-1105025",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_In_mp-1055994",
+      "coefficient": 2.0
+    },
+    {
+      "compound_id": "extension_Te_mp-19",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

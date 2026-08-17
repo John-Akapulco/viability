@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_SrB2_mp-1008755__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_SrB2_mp-1008755",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Sr_mp-139",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_B_mp-160",
+      "coefficient": 2.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

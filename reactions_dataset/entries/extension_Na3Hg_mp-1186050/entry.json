@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Na3Hg_mp-1186050",
+  "formula": "Na3Hg",
+  "composition": {
+    "Na": 3,
+    "Hg": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "I4/mmm",
+  "space_group_number": 139,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -7.01734,
+    "sum_per_atom_eV": -1.754335,
+    "sum_per_formula_unit_eV": -7.01734,
+    "mean_per_bond_eV": -0.06497537037037036,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": -0.009824848484848485,
+        "sum_eV": -0.64844,
+        "n_bonds": 66
+      },
+      "Hg-Na": {
+        "mean_eV": -0.1794593333333334,
+        "sum_eV": -5.383780000000002,
+        "n_bonds": 30
+      },
+      "Hg-Hg": {
+        "mean_eV": -0.08209333333333332,
+        "sum_eV": -0.9851199999999999,
+        "n_bonds": 12
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.60379,
+    "sum_per_atom_eV": 0.6509475,
+    "sum_per_formula_unit_eV": 2.60379,
+    "mean_per_bond_eV": 0.024109166666666668,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Na-Na": {
+        "mean_eV": 0.003143181818181819,
+        "sum_eV": 0.20745000000000005,
+        "n_bonds": 66
+      },
+      "Hg-Na": {
+        "mean_eV": 0.04978266666666667,
+        "sum_eV": 1.4934800000000001,
+        "n_bonds": 30
+      },
+      "Hg-Hg": {
+        "mean_eV": 0.07523833333333334,
+        "sum_eV": 0.9028600000000001,
+        "n_bonds": 12
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Na3Hg_mp-1186050"
+}

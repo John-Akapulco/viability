@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Mg3Ru2_mp-625",
+  "formula": "Mg3Ru2",
+  "composition": {
+    "Mg": 12,
+    "Ru": 8
+  },
+  "Z": 4,
+  "space_group_symbol": "P4_132",
+  "space_group_number": 213,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -44.07026999999997,
+    "sum_per_atom_eV": -2.203513499999999,
+    "sum_per_formula_unit_eV": -11.017567499999993,
+    "mean_per_bond_eV": -0.07758850352112671,
+    "n_bonds": 568,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.02324372549019607,
+        "sum_eV": -4.741719999999998,
+        "n_bonds": 204
+      },
+      "Mg-Ru": {
+        "mean_eV": -0.061364999999999975,
+        "sum_eV": -16.200359999999993,
+        "n_bonds": 264
+      },
+      "Ru-Ru": {
+        "mean_eV": -0.2312819,
+        "sum_eV": -23.12819,
+        "n_bonds": 100
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 16.302990000000005,
+    "sum_per_atom_eV": 0.8151495000000002,
+    "sum_per_formula_unit_eV": 4.075747500000001,
+    "mean_per_bond_eV": 0.0287024471830986,
+    "n_bonds": 568,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.005625245098039216,
+        "sum_eV": 1.14755,
+        "n_bonds": 204
+      },
+      "Mg-Ru": {
+        "mean_eV": 0.0182555681818182,
+        "sum_eV": 4.819470000000004,
+        "n_bonds": 264
+      },
+      "Ru-Ru": {
+        "mean_eV": 0.10335970000000003,
+        "sum_eV": 10.335970000000003,
+        "n_bonds": 100
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mg3Ru2_mp-625"
+}

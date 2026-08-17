@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MoPd2_mp-1206704",
+  "formula": "MoPd2",
+  "composition": {
+    "Mo": 1,
+    "Pd": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Immm",
+  "space_group_number": 71,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -35.87152,
+    "sum_per_atom_eV": -11.957173333333332,
+    "sum_per_formula_unit_eV": -35.87152,
+    "mean_per_bond_eV": -0.33214370370370366,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": -0.1648177777777778,
+        "sum_eV": -2.9667200000000005,
+        "n_bonds": 18
+      },
+      "Mo-Pd": {
+        "mean_eV": -0.3875436111111111,
+        "sum_eV": -13.951569999999998,
+        "n_bonds": 36
+      },
+      "Pd-Pd": {
+        "mean_eV": -0.3509857407407407,
+        "sum_eV": -18.953229999999998,
+        "n_bonds": 54
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 7.437279999999997,
+    "sum_per_atom_eV": 2.4790933333333323,
+    "sum_per_formula_unit_eV": 7.437279999999997,
+    "mean_per_bond_eV": 0.06886370370370368,
+    "n_bonds": 108,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": 0.08737888888888887,
+        "sum_eV": 1.5728199999999997,
+        "n_bonds": 18
+      },
+      "Mo-Pd": {
+        "mean_eV": 0.08851861111111109,
+        "sum_eV": 3.1866699999999994,
+        "n_bonds": 36
+      },
+      "Pd-Pd": {
+        "mean_eV": 0.04958870370370368,
+        "sum_eV": 2.677789999999999,
+        "n_bonds": 54
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MoPd2_mp-1206704"
+}

@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_BPd5_mp-1228665__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_BPd5_mp-1228665",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_B_mp-160",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Pd_mp-2",
+      "coefficient": 5.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

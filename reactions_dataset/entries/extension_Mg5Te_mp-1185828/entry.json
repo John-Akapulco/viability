@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Mg5Te_mp-1185828",
+  "formula": "Mg5Te",
+  "composition": {
+    "Mg": 5,
+    "Te": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "R32",
+  "space_group_number": 155,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -2.39466,
+    "sum_per_atom_eV": -0.39911,
+    "sum_per_formula_unit_eV": -2.39466,
+    "mean_per_bond_eV": -0.01856325581395349,
+    "n_bonds": 129,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.012231428571428567,
+        "sum_eV": -1.1130599999999995,
+        "n_bonds": 91
+      },
+      "Mg-Te": {
+        "mean_eV": -0.03766125,
+        "sum_eV": -1.20516,
+        "n_bonds": 32
+      },
+      "Te-Te": {
+        "mean_eV": -0.01274,
+        "sum_eV": -0.07644,
+        "n_bonds": 6
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 0.5619499999999998,
+    "sum_per_atom_eV": 0.0936583333333333,
+    "sum_per_formula_unit_eV": 0.5619499999999998,
+    "mean_per_bond_eV": 0.004356201550387595,
+    "n_bonds": 129,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.003627362637362636,
+        "sum_eV": 0.3300899999999999,
+        "n_bonds": 91
+      },
+      "Mg-Te": {
+        "mean_eV": 0.006195625000000001,
+        "sum_eV": 0.19826000000000002,
+        "n_bonds": 32
+      },
+      "Te-Te": {
+        "mean_eV": 0.0056,
+        "sum_eV": 0.0336,
+        "n_bonds": 6
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mg5Te_mp-1185828"
+}

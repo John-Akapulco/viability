@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Si3Pt_mp-972763",
+  "formula": "Si3Pt",
+  "composition": {
+    "Si": 6,
+    "Pt": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3/mmc",
+  "space_group_number": 194,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -101.77906,
+    "sum_per_atom_eV": -12.7223825,
+    "sum_per_formula_unit_eV": -50.88953,
+    "mean_per_bond_eV": -0.410399435483871,
+    "n_bonds": 248,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": -0.3317113194444445,
+        "sum_eV": -47.76643000000001,
+        "n_bonds": 144
+      },
+      "Pt-Si": {
+        "mean_eV": -0.4999120238095239,
+        "sum_eV": -41.992610000000006,
+        "n_bonds": 84
+      },
+      "Pt-Pt": {
+        "mean_eV": -0.601001,
+        "sum_eV": -12.02002,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 17.31558,
+    "sum_per_atom_eV": 2.1644475,
+    "sum_per_formula_unit_eV": 8.65779,
+    "mean_per_bond_eV": 0.0698208870967742,
+    "n_bonds": 248,
+    "by_bond_type": {
+      "Si-Si": {
+        "mean_eV": 0.060780208333333335,
+        "sum_eV": 8.75235,
+        "n_bonds": 144
+      },
+      "Pt-Si": {
+        "mean_eV": 0.07943559523809525,
+        "sum_eV": 6.6725900000000005,
+        "n_bonds": 84
+      },
+      "Pt-Pt": {
+        "mean_eV": 0.09453199999999999,
+        "sum_eV": 1.8906399999999999,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Si3Pt_mp-972763"
+}

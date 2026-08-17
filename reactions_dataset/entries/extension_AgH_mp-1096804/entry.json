@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_AgH_mp-1096804",
+  "formula": "AgH",
+  "composition": {
+    "Ag": 2,
+    "H": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "P6_3mc",
+  "space_group_number": 186,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -27.554359999999985,
+    "sum_per_atom_eV": -6.888589999999996,
+    "sum_per_formula_unit_eV": -13.777179999999992,
+    "mean_per_bond_eV": -0.1530797777777777,
+    "n_bonds": 180,
+    "by_bond_type": {
+      "Ag-Ag": {
+        "mean_eV": -0.28517461538461536,
+        "sum_eV": -14.829079999999998,
+        "n_bonds": 52
+      },
+      "Ag-H": {
+        "mean_eV": -0.16401894736842107,
+        "sum_eV": -12.465440000000001,
+        "n_bonds": 76
+      },
+      "H-H": {
+        "mean_eV": -0.004996923076923075,
+        "sum_eV": -0.2598399999999999,
+        "n_bonds": 52
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 4.176240000000001,
+    "sum_per_atom_eV": 1.0440600000000002,
+    "sum_per_formula_unit_eV": 2.0881200000000004,
+    "mean_per_bond_eV": 0.023201333333333338,
+    "n_bonds": 180,
+    "by_bond_type": {
+      "Ag-Ag": {
+        "mean_eV": 0.043512692307692315,
+        "sum_eV": 2.2626600000000003,
+        "n_bonds": 52
+      },
+      "Ag-H": {
+        "mean_eV": 0.023939605263157897,
+        "sum_eV": 1.8194100000000002,
+        "n_bonds": 76
+      },
+      "H-H": {
+        "mean_eV": 0.0018109615384615386,
+        "sum_eV": 0.09417,
+        "n_bonds": 52
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_AgH_mp-1096804"
+}

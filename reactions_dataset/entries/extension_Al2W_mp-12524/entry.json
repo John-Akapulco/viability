@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Al2W_mp-12524",
+  "formula": "Al2W",
+  "composition": {
+    "Al": 6,
+    "W": 3
+  },
+  "Z": 3,
+  "space_group_symbol": "P6_422",
+  "space_group_number": 181,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -114.19858999999994,
+    "sum_per_atom_eV": -12.688732222222216,
+    "sum_per_formula_unit_eV": -38.06619666666665,
+    "mean_per_bond_eV": -0.37319800653594754,
+    "n_bonds": 306,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": -0.17793710144927533,
+        "sum_eV": -24.555319999999995,
+        "n_bonds": 138
+      },
+      "Al-W": {
+        "mean_eV": -0.5863012121212118,
+        "sum_eV": -77.39175999999995,
+        "n_bonds": 132
+      },
+      "W-W": {
+        "mean_eV": -0.3403197222222221,
+        "sum_eV": -12.251509999999996,
+        "n_bonds": 36
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 21.278760000000013,
+    "sum_per_atom_eV": 2.364306666666668,
+    "sum_per_formula_unit_eV": 7.092920000000004,
+    "mean_per_bond_eV": 0.06953843137254906,
+    "n_bonds": 306,
+    "by_bond_type": {
+      "Al-Al": {
+        "mean_eV": 0.025687826086956515,
+        "sum_eV": 3.544919999999999,
+        "n_bonds": 138
+      },
+      "Al-W": {
+        "mean_eV": 0.10119053030303031,
+        "sum_eV": 13.35715,
+        "n_bonds": 132
+      },
+      "W-W": {
+        "mean_eV": 0.12157472222222217,
+        "sum_eV": 4.376689999999998,
+        "n_bonds": 36
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Al2W_mp-12524"
+}

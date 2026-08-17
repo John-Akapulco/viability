@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Re3N5_mp-1080194__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Re3N5_mp-1080194",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Re_mp-8",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "gasref_N2_dimerbox",
+      "coefficient": 2.5
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

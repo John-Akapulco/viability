@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Al12Mo_mp-550__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Al12Mo_mp-550",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Al_mp-134",
+      "coefficient": 12.0
+    },
+    {
+      "compound_id": "extension_Mo_mp-129",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

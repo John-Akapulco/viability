@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_MgIn2_mp-1077016",
+  "formula": "MgIn2",
+  "composition": {
+    "Mg": 2,
+    "In": 4
+  },
+  "Z": 2,
+  "space_group_symbol": "Fd-3m",
+  "space_group_number": 227,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -27.55756999999999,
+    "sum_per_atom_eV": -4.592928333333332,
+    "sum_per_formula_unit_eV": -13.778784999999996,
+    "mean_per_bond_eV": -0.28705802083333326,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": -0.001925,
+        "sum_eV": -0.0077,
+        "n_bonds": 4
+      },
+      "In-Mg": {
+        "mean_eV": -0.07483714285714287,
+        "sum_eV": -4.190880000000001,
+        "n_bonds": 56
+      },
+      "In-In": {
+        "mean_eV": -0.6488608333333332,
+        "sum_eV": -23.358989999999995,
+        "n_bonds": 36
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 6.695129999999999,
+    "sum_per_atom_eV": 1.1158549999999998,
+    "sum_per_formula_unit_eV": 3.3475649999999995,
+    "mean_per_bond_eV": 0.06974093749999999,
+    "n_bonds": 96,
+    "by_bond_type": {
+      "Mg-Mg": {
+        "mean_eV": 0.00047,
+        "sum_eV": 0.00188,
+        "n_bonds": 4
+      },
+      "In-Mg": {
+        "mean_eV": 0.02492803571428571,
+        "sum_eV": 1.39597,
+        "n_bonds": 56
+      },
+      "In-In": {
+        "mean_eV": 0.14714666666666665,
+        "sum_eV": 5.29728,
+        "n_bonds": 36
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_MgIn2_mp-1077016"
+}

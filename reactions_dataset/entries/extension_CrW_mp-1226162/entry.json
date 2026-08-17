@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CrW_mp-1226162",
+  "formula": "CrW",
+  "composition": {
+    "Cr": 1,
+    "W": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Cmmm",
+  "space_group_number": 65,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -36.97165999999999,
+    "sum_per_atom_eV": -18.485829999999996,
+    "sum_per_formula_unit_eV": -36.97165999999999,
+    "mean_per_bond_eV": -0.4201324999999999,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": -0.10830799999999999,
+        "sum_eV": -3.2492399999999995,
+        "n_bonds": 30
+      },
+      "Cr-W": {
+        "mean_eV": -0.37538714285714275,
+        "sum_eV": -10.510839999999996,
+        "n_bonds": 28
+      },
+      "W-W": {
+        "mean_eV": -0.7737193333333334,
+        "sum_eV": -23.21158,
+        "n_bonds": 30
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 9.082740000000001,
+    "sum_per_atom_eV": 4.541370000000001,
+    "sum_per_formula_unit_eV": 9.082740000000001,
+    "mean_per_bond_eV": 0.10321295454545455,
+    "n_bonds": 88,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": 0.063672,
+        "sum_eV": 1.91016,
+        "n_bonds": 30
+      },
+      "Cr-W": {
+        "mean_eV": 0.11057142857142857,
+        "sum_eV": 3.096,
+        "n_bonds": 28
+      },
+      "W-W": {
+        "mean_eV": 0.13588600000000003,
+        "sum_eV": 4.076580000000001,
+        "n_bonds": 30
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CrW_mp-1226162"
+}

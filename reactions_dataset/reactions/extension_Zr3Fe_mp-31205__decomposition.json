@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_Zr3Fe_mp-31205__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_Zr3Fe_mp-31205",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Fe_mp-13",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

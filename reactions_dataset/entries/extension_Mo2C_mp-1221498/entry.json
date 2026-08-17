@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Mo2C_mp-1221498",
+  "formula": "Mo2C",
+  "composition": {
+    "Mo": 2,
+    "C": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-3m1",
+  "space_group_number": 164,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -38.16862,
+    "sum_per_atom_eV": -12.722873333333332,
+    "sum_per_formula_unit_eV": -38.16862,
+    "mean_per_bond_eV": -0.25445746666666663,
+    "n_bonds": 150,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": -0.19637171052631583,
+        "sum_eV": -14.924250000000002,
+        "n_bonds": 76
+      },
+      "C-Mo": {
+        "mean_eV": -0.47399729166666665,
+        "sum_eV": -22.75187,
+        "n_bonds": 48
+      },
+      "C-C": {
+        "mean_eV": -0.01894230769230769,
+        "sum_eV": -0.49249999999999994,
+        "n_bonds": 26
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.466259999999988,
+    "sum_per_atom_eV": 2.8220866666666624,
+    "sum_per_formula_unit_eV": 8.466259999999988,
+    "mean_per_bond_eV": 0.05644173333333325,
+    "n_bonds": 150,
+    "by_bond_type": {
+      "Mo-Mo": {
+        "mean_eV": 0.0623511842105263,
+        "sum_eV": 4.738689999999999,
+        "n_bonds": 76
+      },
+      "C-Mo": {
+        "mean_eV": 0.07586187500000002,
+        "sum_eV": 3.641370000000001,
+        "n_bonds": 48
+      },
+      "C-C": {
+        "mean_eV": 0.0033153846153846163,
+        "sum_eV": 0.08620000000000003,
+        "n_bonds": 26
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Mo2C_mp-1221498"
+}

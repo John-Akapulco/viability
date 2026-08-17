@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_CuNi_mp-1184069",
+  "formula": "CuNi",
+  "composition": {
+    "Cu": 1,
+    "Ni": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -7.948550000000004,
+    "sum_per_atom_eV": -3.974275000000002,
+    "sum_per_formula_unit_eV": -7.948550000000004,
+    "mean_per_bond_eV": -0.06410120967741938,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": -0.048940000000000025,
+        "sum_eV": -2.153360000000001,
+        "n_bonds": 44
+      },
+      "Cu-Ni": {
+        "mean_eV": -0.0630552777777778,
+        "sum_eV": -2.2699900000000004,
+        "n_bonds": 36
+      },
+      "Ni-Ni": {
+        "mean_eV": -0.08011818181818182,
+        "sum_eV": -3.5252000000000003,
+        "n_bonds": 44
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 2.5344899999999995,
+    "sum_per_atom_eV": 1.2672449999999997,
+    "sum_per_formula_unit_eV": 2.5344899999999995,
+    "mean_per_bond_eV": 0.020439435483870963,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": 0.01109090909090909,
+        "sum_eV": 0.488,
+        "n_bonds": 44
+      },
+      "Cu-Ni": {
+        "mean_eV": 0.017418611111111103,
+        "sum_eV": 0.6270699999999997,
+        "n_bonds": 36
+      },
+      "Ni-Ni": {
+        "mean_eV": 0.03225954545454545,
+        "sum_eV": 1.4194199999999997,
+        "n_bonds": 44
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_CuNi_mp-1184069"
+}

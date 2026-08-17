@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_K3Rb_mp-976115__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_K3Rb_mp-976115",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "exp_metastable_K_mp-10157",
+      "coefficient": 3.0
+    },
+    {
+      "compound_id": "extension_Rb_mp-70",
+      "coefficient": 1.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

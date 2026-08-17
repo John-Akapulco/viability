@@ -1,0 +1,53 @@
+{
+  "compound_id": "extension_HfMg15_mp-1023478",
+  "formula": "HfMg15",
+  "composition": {
+    "Hf": 1,
+    "Mg": 15
+  },
+  "Z": 1,
+  "space_group_symbol": "P-6m2",
+  "space_group_number": 187,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -4.422929999999998,
+    "sum_per_atom_eV": -0.2764331249999999,
+    "sum_per_formula_unit_eV": -4.422929999999998,
+    "mean_per_bond_eV": -0.013821656249999995,
+    "n_bonds": 320,
+    "by_bond_type": {
+      "Hf-Mg": {
+        "mean_eV": -0.0489921052631579,
+        "sum_eV": -1.8617000000000001,
+        "n_bonds": 38
+      },
+      "Mg-Mg": {
+        "mean_eV": -0.009082375886524824,
+        "sum_eV": -2.5612300000000006,
+        "n_bonds": 282
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 1.1801499999999994,
+    "sum_per_atom_eV": 0.07375937499999996,
+    "sum_per_formula_unit_eV": 1.1801499999999994,
+    "mean_per_bond_eV": 0.003687968749999998,
+    "n_bonds": 320,
+    "by_bond_type": {
+      "Hf-Mg": {
+        "mean_eV": 0.020169736842105265,
+        "sum_eV": 0.7664500000000001,
+        "n_bonds": 38
+      },
+      "Mg-Mg": {
+        "mean_eV": 0.0014670212765957454,
+        "sum_eV": 0.41370000000000023,
+        "n_bonds": 282
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HfMg15_mp-1023478"
+}

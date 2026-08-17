@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_ZrHg3_mp-1608__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_ZrHg3_mp-1608",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

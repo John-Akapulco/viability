@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_HfW2_mp-1224230",
+  "formula": "HfW2",
+  "composition": {
+    "Hf": 1,
+    "W": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "Fmmm",
+  "space_group_number": 69,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -64.80393000000001,
+    "sum_per_atom_eV": -21.60131,
+    "sum_per_formula_unit_eV": -64.80393000000001,
+    "mean_per_bond_eV": -0.5838191891891893,
+    "n_bonds": 111,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": -0.48898250000000004,
+        "sum_eV": -7.823720000000001,
+        "n_bonds": 16
+      },
+      "Hf-W": {
+        "mean_eV": -0.33506380952380954,
+        "sum_eV": -14.072680000000002,
+        "n_bonds": 42
+      },
+      "W-W": {
+        "mean_eV": -0.8095760377358492,
+        "sum_eV": -42.90753000000001,
+        "n_bonds": 53
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 12.893030000000003,
+    "sum_per_atom_eV": 4.297676666666668,
+    "sum_per_formula_unit_eV": 12.893030000000003,
+    "mean_per_bond_eV": 0.11615342342342345,
+    "n_bonds": 111,
+    "by_bond_type": {
+      "Hf-Hf": {
+        "mean_eV": 0.09816875,
+        "sum_eV": 1.5707,
+        "n_bonds": 16
+      },
+      "Hf-W": {
+        "mean_eV": 0.06791380952380953,
+        "sum_eV": 2.85238,
+        "n_bonds": 42
+      },
+      "W-W": {
+        "mean_eV": 0.15981037735849057,
+        "sum_eV": 8.46995,
+        "n_bonds": 53
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_HfW2_mp-1224230"
+}

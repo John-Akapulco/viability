@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Au2S_mp-947",
+  "formula": "Au2S",
+  "composition": {
+    "Au": 4,
+    "S": 2
+  },
+  "Z": 2,
+  "space_group_symbol": "Pn-3m",
+  "space_group_number": 224,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -53.68145,
+    "sum_per_atom_eV": -8.946908333333333,
+    "sum_per_formula_unit_eV": -26.840725,
+    "mean_per_bond_eV": -0.43291491935483867,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Au-Au": {
+        "mean_eV": -0.2691972916666666,
+        "sum_eV": -12.921469999999998,
+        "n_bonds": 48
+      },
+      "Au-S": {
+        "mean_eV": -0.7209301785714286,
+        "sum_eV": -40.37209,
+        "n_bonds": 56
+      },
+      "S-S": {
+        "mean_eV": -0.0193945,
+        "sum_eV": -0.38788999999999996,
+        "n_bonds": 20
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 8.466309999999998,
+    "sum_per_atom_eV": 1.4110516666666664,
+    "sum_per_formula_unit_eV": 4.233154999999999,
+    "mean_per_bond_eV": 0.06827669354838709,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Au-Au": {
+        "mean_eV": 0.05067062500000002,
+        "sum_eV": 2.4321900000000007,
+        "n_bonds": 48
+      },
+      "Au-S": {
+        "mean_eV": 0.10173321428571426,
+        "sum_eV": 5.697059999999999,
+        "n_bonds": 56
+      },
+      "S-S": {
+        "mean_eV": 0.016853,
+        "sum_eV": 0.33706,
+        "n_bonds": 20
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Au2S_mp-947"
+}

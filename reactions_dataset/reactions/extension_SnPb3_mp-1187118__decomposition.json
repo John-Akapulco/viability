@@ -1,0 +1,22 @@
+{
+  "reaction_id": "extension_SnPb3_mp-1187118__decomposition",
+  "type": "decomposition_to_elements",
+  "reactants": [
+    {
+      "compound_id": "extension_SnPb3_mp-1187118",
+      "coefficient": 1.0
+    }
+  ],
+  "products": [
+    {
+      "compound_id": "extension_Sn_mp-623511",
+      "coefficient": 1.0
+    },
+    {
+      "compound_id": "extension_Pb_mp-20483",
+      "coefficient": 3.0
+    }
+  ],
+  "metric": "icohp",
+  "bond_pair": null
+}

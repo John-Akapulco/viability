@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_GeSb_mp-9935",
+  "formula": "GeSb",
+  "composition": {
+    "Ge": 1,
+    "Sb": 1
+  },
+  "Z": 1,
+  "space_group_symbol": "Fm-3m",
+  "space_group_number": 225,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -14.017660000000003,
+    "sum_per_atom_eV": -7.0088300000000014,
+    "sum_per_formula_unit_eV": -14.017660000000003,
+    "mean_per_bond_eV": -0.2803532000000001,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Ge-Ge": {
+        "mean_eV": -0.02925444444444444,
+        "sum_eV": -0.5265799999999999,
+        "n_bonds": 18
+      },
+      "Ge-Sb": {
+        "mean_eV": -0.9244028571428574,
+        "sum_eV": -12.941640000000003,
+        "n_bonds": 14
+      },
+      "Sb-Sb": {
+        "mean_eV": -0.03052444444444444,
+        "sum_eV": -0.5494399999999999,
+        "n_bonds": 18
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.1659500000000023,
+    "sum_per_atom_eV": 1.5829750000000011,
+    "sum_per_formula_unit_eV": 3.1659500000000023,
+    "mean_per_bond_eV": 0.06331900000000004,
+    "n_bonds": 50,
+    "by_bond_type": {
+      "Ge-Ge": {
+        "mean_eV": 0.015248888888888888,
+        "sum_eV": 0.27448,
+        "n_bonds": 18
+      },
+      "Ge-Sb": {
+        "mean_eV": 0.18800357142857144,
+        "sum_eV": 2.63205,
+        "n_bonds": 14
+      },
+      "Sb-Sb": {
+        "mean_eV": 0.014412222222222222,
+        "sum_eV": 0.25942,
+        "n_bonds": 18
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_GeSb_mp-9935"
+}

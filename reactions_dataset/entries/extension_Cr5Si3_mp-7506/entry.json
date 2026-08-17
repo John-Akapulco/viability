@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Cr5Si3_mp-7506",
+  "formula": "Cr5Si3",
+  "composition": {
+    "Cr": 10,
+    "Si": 6
+  },
+  "Z": 2,
+  "space_group_symbol": "I4/mcm",
+  "space_group_number": 140,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -142.56887999999992,
+    "sum_per_atom_eV": -8.910554999999995,
+    "sum_per_formula_unit_eV": -71.28443999999996,
+    "mean_per_bond_eV": -0.23682538205980053,
+    "n_bonds": 602,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": -0.1472049565217391,
+        "sum_eV": -33.857139999999994,
+        "n_bonds": 230
+      },
+      "Cr-Si": {
+        "mean_eV": -0.30511253289473655,
+        "sum_eV": -92.75420999999992,
+        "n_bonds": 304
+      },
+      "Si-Si": {
+        "mean_eV": -0.23466955882352938,
+        "sum_eV": -15.957529999999998,
+        "n_bonds": 68
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 37.69866000000005,
+    "sum_per_atom_eV": 2.356166250000003,
+    "sum_per_formula_unit_eV": 18.849330000000023,
+    "mean_per_bond_eV": 0.06262235880398678,
+    "n_bonds": 602,
+    "by_bond_type": {
+      "Cr-Cr": {
+        "mean_eV": 0.07352995652173915,
+        "sum_eV": 16.911890000000003,
+        "n_bonds": 230
+      },
+      "Cr-Si": {
+        "mean_eV": 0.06067555921052631,
+        "sum_eV": 18.445369999999997,
+        "n_bonds": 304
+      },
+      "Si-Si": {
+        "mean_eV": 0.034432352941176476,
+        "sum_eV": 2.3414000000000006,
+        "n_bonds": 68
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cr5Si3_mp-7506"
+}

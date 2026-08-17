@@ -1,0 +1,63 @@
+{
+  "compound_id": "extension_Cu3Te2_mp-1225676",
+  "formula": "Cu3Te2",
+  "composition": {
+    "Cu": 3,
+    "Te": 2
+  },
+  "Z": 1,
+  "space_group_symbol": "P4mm",
+  "space_group_number": 99,
+  "role": "target",
+  "energy_total_eV": null,
+  "energy_per_atom_eV": null,
+  "icohp": {
+    "sum_total_eV": -16.04336,
+    "sum_per_atom_eV": -3.208672,
+    "sum_per_formula_unit_eV": -16.04336,
+    "mean_per_bond_eV": -0.12938193548387097,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": -0.04169419999999999,
+        "sum_eV": -2.0847099999999994,
+        "n_bonds": 50
+      },
+      "Cu-Te": {
+        "mean_eV": -0.26792782608695653,
+        "sum_eV": -12.32468,
+        "n_bonds": 46
+      },
+      "Te-Te": {
+        "mean_eV": -0.05835607142857143,
+        "sum_eV": -1.6339700000000001,
+        "n_bonds": 28
+      }
+    }
+  },
+  "icobi": {
+    "sum_total_eV": 3.5327700000000037,
+    "sum_per_atom_eV": 0.7065540000000008,
+    "sum_per_formula_unit_eV": 3.5327700000000037,
+    "mean_per_bond_eV": 0.02849008064516132,
+    "n_bonds": 124,
+    "by_bond_type": {
+      "Cu-Cu": {
+        "mean_eV": 0.010773800000000005,
+        "sum_eV": 0.5386900000000002,
+        "n_bonds": 50
+      },
+      "Cu-Te": {
+        "mean_eV": 0.051874347826086964,
+        "sum_eV": 2.3862200000000002,
+        "n_bonds": 46
+      },
+      "Te-Te": {
+        "mean_eV": 0.021709285714285716,
+        "sum_eV": 0.6078600000000001,
+        "n_bonds": 28
+      }
+    }
+  },
+  "source_path": "/home/gilles/viability/mp_dataset/structures/extension_Cu3Te2_mp-1225676"
+}
