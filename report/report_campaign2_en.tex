@@ -426,6 +426,21 @@ structurally attaches a warning to \emph{every}
 \texttt{UNSTABLE\_NONEXISTENT} verdict for exactly this reason, rather
 than special-casing Mn$_2$O$_7$.
 
+This validation only compares the arithmetic of the manuscript's own
+published ICOHP values, independent of any local crystal structure ---
+Appendix~\ref{sec:appendix-reitz-dronskowski-structures} documents,
+for the 16 species involved, which MP/COD structure was used in this
+dataset and whether it could be verified to match the manuscript's
+description (3 real corrections identified: N$_2$, the Pb(N$_3$)$_2$
+polymorph, ZnSn's competing tin phase). For N$_2$ and ZnSn, a
+DFT+LOBSTER calculation of this project's own (not just the
+manuscript's arithmetic) was additionally compared directly: N$_2$
+reproduces the manuscript's ICOHP to within 0.7\%; ZnSn reproduces the
+same sign (bonding-favorable decomposition) but with $\sim$1.9$\times$
+larger magnitude --- a gap judged not significant at this stage, since
+a bulk intermetallic's ICOHP sum is far more sensitive to
+basis/pseudopotential/cutoff choices than a simple gas dimer.
+
 Correlation alone (Pearson/Spearman) is not the right test for "do our
 numbers match the reference values" --- it is satisfied by any monotonic
 relationship, even with a large systematic offset or scale factor.
@@ -1107,6 +1122,26 @@ window, same $E_F$), a sign that clipping to the antibonding-only part
 the full signed ICOHP in the same window. Cross-correlation with the
 full reaction ICOHP: $\rho=0.231$ ($p<0.001$) --- related but clearly
 distinct, not simply a restriction of the same quantity.
+
+\section{Reitz \& Dronskowski reaction structures}
+\label{sec:appendix-reitz-dronskowski-structures}
+
+The \S\ref{sec:reframing} validation (Table~\ref{tab:reference-validation})
+only compares the arithmetic of the manuscript's own published ICOHP
+values --- independent of any local crystal structure. The table below
+documents, for each of the 16 species involved in these 7 reactions,
+the structure as described by the manuscript (where it specifies one),
+the Materials Project/COD entry used in this dataset, and whether an
+independent verification was possible. Three cases revealed a real bug
+or ambiguity, since fixed: N$_2$ (a theoretical polymeric phase
+substituted for an isolated gaseous dimer, \S\ref{sec:reframing}),
+Pb(N$_3$)$_2$ (the wrong Pnma polymorph substituted for the Pna2\_1 the
+manuscript cites), and ZnSn's competing tin phase ($\beta$-tin
+substituted for $\alpha$-tin).
+
+{\small
+\input{appendix_reitz_dronskowski_structures_en.tex}
+}
 
 \section{Percolation}
 \label{sec:appendix-percolation}

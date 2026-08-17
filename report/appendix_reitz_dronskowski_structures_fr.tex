@@ -1,0 +1,47 @@
+\begin{longtable}{@{}l p{3.6cm} p{3.6cm} p{5.0cm}@{}}
+\caption{Les 16 espèces des 7 réactions de Reitz \& Dronskowski (ic-2026-04181q, Tableau~\ref{tab:reference-validation}) : structure décrite par le manuscrit, entrée MP/COD utilisée dans ce jeu de données, et statut de vérification.}\label{tab:reitz-dronskowski-structures}\\
+\toprule
+Espèce (rôle) & Structure manuscrit & Notre source & Vérification \\
+\midrule
+\endfirsthead
+\toprule
+Espèce (rôle) & Structure manuscrit & Notre source & Vérification \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Pb(N$_3$)$_2$ (cible) & azoture de plomb, ICSD 28336/16887 (Glen 1963) & mp-620058, Pna2\_1, $E_{hull}=0{,}110$ & \textbf{Oui} --- polymorphe exact identifié 2026-08-17, substitué à mp-667338 (Pnma) déjà présent dans le jeu de données \\
+\midrule
+Pb (élément) & non précisé (référence élémentaire standard) & mp-20483, Fm-3m, $E_{hull}=0{,}000$, on-hull & non requis --- pas d'ambiguïté de polymorphe pour le Pb métallique cfc \\
+\midrule
+N$_2$ (élément, 4 réactions) & N$\equiv$N gazeux, $d\approx1{,}10$~\AA & \texttt{gasref\_N2\_dimerbox}, dimère isolé construit (boîte 10$\times$10$\times$10~\AA), $d$(N-N)$=1{,}113$~\AA, ICOHP$=-22{,}998$~eV & \textbf{Oui} --- à 0,7\% de la valeur manuscrit ($-23{,}161$~eV). Avant 2026-08-17 : mp-1059834 (théorique, phase polymérique N-N$=1{,}296$~\AA) --- erreur réelle, corrigée \\
+\midrule
+S$_4$N$_2$ (cible) & non précisé au-delà de composition/ICOHP & COD 4031496, P4\_2nm ($Z=4$), aucune entrée MP pour cette composition & non --- structure expérimentale COD utilisée telle quelle, pas de confirmation indépendante du polymorphe exact du manuscrit \\
+\midrule
+S$_8$ (élément) & non précisé & mp-77, Fddd ($\alpha$-S$_8$), $E_{hull}=0{,}000$, on-hull & non requis --- référence standard sans ambiguïté \\
+\midrule
+S$_4$N$_4$ (cible) & non précisé & COD 7017102, P2\_1/c ($Z=4$) & non \\
+\midrule
+ZnSn (cible) & implicite : 6 liaisons Zn-Sn $+$ 1 Zn-Zn/formule (cohérent avec un prototype NiAs) & \texttt{gasref\_ZnSn\_NiAs}, construite à la main, P6\_3/mmc (\#194), aucune entrée MP/COD (pas de composé intermétallique Zn-Sn stable réel) & partiel --- coordination (6+1) cohérente avec NiAs, mais aucune référence cristallographique indépendante trouvée pour les paramètres de maille exacts \\
+\midrule
+Zn (élément) & non précisé & mp-79, P6\_3/mmc, $E_{hull}=0{,}000$, on-hull & non requis \\
+\midrule
+Sn (élément, compétiteur de ZnSn) & implique une phase distincte de la $\beta$-étain ``par défaut'' du jeu de données & mp-117, Fd-3m ($\alpha$-étain, diamant cubique), substituée à mp-623511 ($\beta$-étain, I4/mmm) & partiel --- l'$\alpha$-étain (forme cfc basse-température) est la phase concurrente cohérente pour ZnSn ; pas de confirmation indépendante que le manuscrit utilise précisément mp-117 \\
+\midrule
+CaO[sphalérite] (cible) & F-43m (\#216), citée explicitement & \texttt{gasref\_CaO\_sphalerite}, construite à la main (aucune entrée MP pour ce polymorphe métastable), F-43m confirmé par symétrie & \textbf{Oui} (groupe d'espace) \\
+\midrule
+CaO[rocksalt] (produit) & Fm-3m (\#225), citée explicitement & mp-2605, Fm-3m, $E_{hull}=0{,}000$, on-hull & \textbf{Oui} \\
+\midrule
+CaN (cible) & non précisé & mp-1058549, Fm-3m (type rocksalt), $E_{hull}=0{,}398$ & non \\
+\midrule
+Ca$_3$N$_2$ (produit) & non précisé & mp-844, Ia-3 (anti-bixbyite), $E_{hull}=0{,}000$, on-hull & non --- seule entrée on-hull, choix par défaut le plus défendable \\
+\midrule
+Mn$_2$O$_7$ (cible) & non précisé & mp-28338, P2\_1/c, $E_{hull}=0{,}335$ & non \\
+\midrule
+MnO$_2$ (produit) & non précisé & mp-510408, P4\_2/mnm (rutile/pyrolusite) & non \\
+\midrule
+O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet & mp-1524462, C2/m, $E_{hull}=0{,}000$, on-hull, traitement spin-polarisé dédié & structurel --- dimère isolé $d$(O-O)$=1{,}222$~\AA\ vs 1,208~\AA\ littérature (à 1\% près) \\
+\end{longtable}
+
+\vspace{0.5em}
+\noindent\textbf{Lecture.} ``Vérification: Oui'' signifie que la structure a été confirmée correspondre à la description explicite du manuscrit (groupe d'espace cité, ou distance de liaison recalculée et comparée). ``Partiel'' signifie que la géométrie/chimie est cohérente avec ce que le manuscrit décrit mais qu'aucune citation cristallographique indépendante n'a permis une confirmation stricte. ``Non'' signifie que seule la composition a été vérifiée : le manuscrit ne précise pas de groupe d'espace pour cette espèce, donc l'entrée MP/COD la plus raisonnable a été utilisée sans garantie qu'elle soit \emph{la} structure exacte utilisée par les auteurs. Ceci n'invalide pas la validation de \S\ref{sec:reframing} (qui ne compare que la reconstruction arithmétique des valeurs ICOHP publiées, indépendante de toute structure locale) mais borne la portée de toute comparaison future entre nos propres calculs DFT+LOBSTER et les valeurs du manuscrit pour ces espèces.

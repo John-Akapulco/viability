@@ -440,6 +440,22 @@ avertissement à \emph{chaque} verdict \texttt{UNSTABLE\_NONEXISTENT}
 pour exactement cette raison, plutôt que de coder Mn$_2$O$_7$ en cas
 particulier.
 
+Cette validation ne compare que l'arithmétique des valeurs ICOHP
+publiées, indépendamment de toute structure cristalline locale ---
+l'Annexe~\ref{sec:appendix-reitz-dronskowski-structures} documente,
+pour les 16 espèces impliquées, quelle structure MP/COD a été retenue
+dans ce jeu de données et si elle a pu être vérifiée conforme à la
+description du manuscrit (3 corrections réelles identifiées : N$_2$,
+le polymorphe de Pb(N$_3$)$_2$, l'étain compétiteur de ZnSn). Pour N$_2$
+et ZnSn, un calcul DFT+LOBSTER propre à ce projet (et non plus la seule
+arithmétique du manuscrit) a en outre été comparé directement : N$_2$
+reproduit l'ICOHP du manuscrit à 0,7\% près ; ZnSn reproduit le même
+signe (décomposition favorable en énergie de liaison) mais avec une
+amplitude $\sim$1,9$\times$ plus grande --- écart jugé non
+significatif à ce stade, la somme d'ICOHP d'un intermétallique massif
+étant beaucoup plus sensible aux choix de base/pseudopotentiel/coupure
+qu'un simple dimère gazeux.
+
 La corrélation seule (Pearson/Spearman) n'est pas le bon test pour
 \og{}nos chiffres correspondent-ils aux valeurs de référence\fg{} ---
 elle est satisfaite par toute relation monotone, même avec un décalage
@@ -1147,6 +1163,26 @@ qualitativement différente de l'ICOHP signé complet dans la même
 fenêtre. Corrélation croisée avec l'ICOHP de réaction complet :
 $\rho=0{,}231$ ($p<0{,}001$) --- liée mais nettement distincte, pas une
 simple restriction de la même quantité.
+
+\section{Structures des réactions de Reitz \& Dronskowski}
+\label{sec:appendix-reitz-dronskowski-structures}
+
+La validation de \S\ref{sec:reframing} (Tableau~\ref{tab:reference-validation})
+ne compare que l'arithmétique des valeurs ICOHP publiées dans le
+manuscrit --- indépendante de toute structure cristalline locale. Le
+tableau ci-dessous documente, pour chacune des 16 espèces impliquées
+dans ces 7 réactions, la structure telle que décrite par le manuscrit
+(quand il la précise), l'entrée Materials Project/COD retenue dans ce
+jeu de données, et si une vérification indépendante a pu être faite.
+Trois cas ont révélé une erreur ou une ambiguïté réelle, corrigée
+depuis : N$_2$ (phase polymérique théorique substituée par un dimère
+gazeux isolé, \S\ref{sec:reframing}), Pb(N$_3$)$_2$ (mauvais polymorphe
+Pnma substitué par le Pna2$_1$ cité par le manuscrit) et l'étain
+compétiteur de ZnSn ($\beta$-étain substitué par l'$\alpha$-étain).
+
+{\small
+\input{appendix_reitz_dronskowski_structures_fr.tex}
+}
 
 \section{Percolation}
 \label{sec:appendix-percolation}
