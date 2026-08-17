@@ -70,15 +70,60 @@ FORMATION_ENERGIES_JSON = HERE.parent / "mp_dataset" / "formation_energies.json"
 
 def load_merged() -> pd.DataFrame:
     r = pd.read_csv(REACTION_CSV)
+    # r's own bond_type (written by compute_reaction_icohp_case1.py) is
+    # now sourced from the is_metal-first ICOBI classifier (commit
+    # 60fe81a via icohp_icobi_bondtype.csv), which covers every compound
+    # with LOBSTER data -- keep it under its own name so the merge below
+    # doesn't discard it in favor of `main`'s bond_type, which is only
+    # classify()'s composition-only heuristic (same flaw, restricted to
+    # the 186-compound main campaign to boot).
+    # Same reasoning for is_metal: r's own column (also written by
+    # compute_reaction_icohp_case1.py) is now sourced from
+    # icohp_icobi_bondtype.csv's is_metal (build_is_metal_map(), 0 NaN
+    # across the dataset) -- keep it out of the merge's way so it isn't
+    # discarded in favor of `antibond`'s is_metal, which only covers the
+    # 186-compound main campaign.
+    r = r.rename(columns={"bond_type": "bond_type_icobi", "is_metal": "is_metal_icobi"})
     main = pd.read_csv(MAIN_CSV)[[
         "mp_id", "bond_type", "formation_energy_per_atom",
         "icohp_percolation_weight_min_normalized", "mincut_icohp_min_normalized",
     ]]
     antibond = pd.read_csv(ANTIBOND_CSV)[["mp_id", "is_metal", "antibond_w_normalized"]]
 
-    df = r.drop(columns=["bond_type", "is_metal"]).merge(main, on="mp_id", how="left")
+    # pandas merge() treats NaN as a matching join key, so any compound
+    # missing mp_id (COD-sourced S4N2/S4N4, a few main-campaign rows that
+    # never got one populated, gasref_ZnSn_NiAs, ...) would otherwise
+    # fan out against every other NaN-mp_id row on the other side --
+    # silently inflating n_total_case1_rows and every correlation's n.
+    # Give each NaN a placeholder unique across all three frames (a plain
+    # per-frame counter would let e.g. r's row 0 collide with main's row 0)
+    # so it can never match anything.
+    _placeholder_counter = 0
+    for frame in (r, main, antibond):
+        na_mask = frame["mp_id"].isna()
+        n_na = int(na_mask.sum())
+        frame.loc[na_mask, "mp_id"] = [
+            f"__no_mp_id_{_placeholder_counter + i}__" for i in range(n_na)
+        ]
+        _placeholder_counter += n_na
+
+    df = r.merge(main, on="mp_id", how="left")
     df = df.merge(antibond, on="mp_id", how="left")
-    df["in_main_campaign"] = df["mp_id"].isin(main["mp_id"])
+    df["in_main_campaign"] = df["mp_id"].isin(main["mp_id"]) & ~df["mp_id"].str.startswith("__no_mp_id_")
+
+    # Prefer the ICOBI-based label (covers ~all compounds with LOBSTER
+    # data, not just the 186-compound main campaign); fall back to
+    # `main`'s classify()-heuristic bond_type only where the ICOBI
+    # classifier had nothing (compound outside mp_dataset/structures/
+    # entirely, or missing ICOHPLIST/ICOBILIST -- see
+    # compute_icohp_icobi_bondtype.py).
+    df["bond_type"] = df["bond_type_icobi"].fillna(df["bond_type"])
+    df = df.drop(columns=["bond_type_icobi"])
+
+    # Same preference for is_metal: ICOBI-classifier value first, main-
+    # campaign-only `antibond` value only as fallback.
+    df["is_metal"] = df["is_metal_icobi"].fillna(df["is_metal"])
+    df = df.drop(columns=["is_metal_icobi"])
 
     # formation_energy_per_atom for compounds outside the 186-compound main
     # campaign (extension_* only, e.g. Ca3N2, Mn2O7, TiO2 polymorphs):

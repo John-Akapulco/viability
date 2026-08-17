@@ -60,8 +60,11 @@ depending on analysis/percolation_vs_antibonding.csv's batch coverage --
 avoids the recurring "which batch is/isn't in the base CSV" bug class
 (see project memory: this exact bug recurred three times in three
 different scripts). marginal_formation_energy_campaign and
-marginal_widen_campaign are deliberately excluded for now (still
-running / not yet deliberately folded in per user instruction).
+marginal_widen_campaign are now included (both campaigns finished,
+194 compounds fully computed, already folded into reaction_icohp_case1.csv
+and reaction_analysis_case1_full.csv -- excluding them here left those
+two files' bond_type column ~70% NaN for no reason tied to data
+availability).
 
 Writes analysis/icohp_icobi_bondtype.csv and prints the calibration and
 the full classify_label x icobi_label cross-tabulation.
@@ -86,7 +89,7 @@ STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 OUT_CSV = REPO_ROOT / "analysis" / "icohp_icobi_bondtype.csv"
 ICOHP_ANTIBOND_FULL_CSV = REPO_ROOT / "analysis" / "icohp_antibonding_full.csv"
 
-EXCLUDED_BATCHES = {"marginal_formation_energy_campaign", "marginal_widen_campaign"}
+EXCLUDED_BATCHES: set[str] = set()
 
 
 def _element_pair(key: str) -> tuple[str, str]:

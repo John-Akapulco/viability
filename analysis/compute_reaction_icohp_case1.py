@@ -45,6 +45,30 @@ import reaction_icohp as ri  # noqa: E402
 STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 OUT_JSON = Path(__file__).parent / "reaction_icohp_case1.json"
 OUT_CSV = Path(__file__).parent / "reaction_icohp_case1.csv"
+BONDTYPE_CSV = Path(__file__).parent / "icohp_icobi_bondtype.csv"
+
+
+def _load_bondtype_and_ismetal_maps() -> tuple[dict, dict]:
+    """analysis/compute_icohp_icobi_bondtype.py's bond_type (is_metal-
+    first, first-shell-ICOBI classification, commit 60fe81a) and its
+    is_metal column (build_is_metal_map() in compute_icobi_antibonding_all.py:
+    main-campaign percolation CSV, mp_metadata.json fallback otherwise --
+    already covers the whole dataset with 0 NaN in icohp_icobi_bondtype.csv).
+    Both preferred over the raw mp_metadata.json fields directly: bond_type
+    is classify()'s composition-only heuristic, None for most is_metal=True
+    compounds containing an anion-like element; is_metal itself is None for
+    188/591 structures dirs (mostly main-campaign compounds whose metadata
+    predates is_metal being added directly -- see build_dataset.py's "present
+    for the 6 pilots, None for campaign compounds" comment). See
+    populate_reaction_analysis_case1_full.py's identically-named helper for
+    the same fix."""
+    if not BONDTYPE_CSV.exists():
+        return {}, {}
+    df = pd.read_csv(BONDTYPE_CSV)
+    return (
+        dict(zip(df["compound_id"], df["icobi_label"])),
+        dict(zip(df["compound_id"], df["is_metal"])),
+    )
 
 # element symbol -> reference compound_dir name
 # K has no low-energy non-theoretical bcc entry available in MP (the real
@@ -98,6 +122,7 @@ def main():
     results = {}
     rows = []
     n_ok = n_skipped_element = n_skipped_single = n_not_ready = n_failed = 0
+    bond_type_map, is_metal_map = _load_bondtype_and_ismetal_maps()
 
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
@@ -143,8 +168,8 @@ def main():
                     "mp_id": meta.get("mp_id"),
                     "formula": meta.get("formula"),
                     "family": meta.get("family"),
-                    "bond_type": meta.get("bond_type"),
-                    "is_metal": meta.get("is_metal"),
+                    "bond_type": bond_type_map.get(compound_id, meta.get("bond_type")),
+                    "is_metal": is_metal_map.get(compound_id, meta.get("is_metal")),
                     "theoretical": meta.get("theoretical"),
                     "energy_above_hull_eV_per_atom": meta.get("energy_above_hull_eV_per_atom"),
                     "reaction_string": r["reaction_string"],

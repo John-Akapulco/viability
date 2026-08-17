@@ -59,8 +59,35 @@ DATASET_ROOT = REPO_ROOT / "reactions_dataset"
 OLD_CSV = REPO_ROOT / "analysis" / "reaction_icohp_case1.csv"
 OUT_CSV = REPO_ROOT / "analysis" / "reaction_analysis_case1_full.csv"
 OUT_JSON = REPO_ROOT / "analysis" / "reaction_analysis_case1_full.json"
+BONDTYPE_CSV = REPO_ROOT / "analysis" / "icohp_icobi_bondtype.csv"
 
 _entry_cache: dict[str, CompoundEntry] = {}
+
+
+def _load_bondtype_and_ismetal_maps() -> tuple[dict[str, str], dict[str, bool]]:
+    """compute_icohp_icobi_bondtype.py's is_metal-first, first-shell-ICOBI
+    classification (commit 60fe81a) -- used here instead of the raw
+    mp_metadata.json bond_type, which is classify()'s composition-only
+    heuristic (fetch_candidates.py) and leaves ~2/3 of this dataset's
+    compounds (mostly is_metal=True compounds containing an anion-like
+    element, deliberately excluded from classify()'s "metallic" bucket)
+    with bond_type=None. Also returns its is_metal column (build_is_metal_map()
+    in compute_icobi_antibonding_all.py: main-campaign percolation CSV,
+    mp_metadata.json fallback otherwise -- 0 NaN across the whole dataset,
+    vs. 188/591 structures dirs where meta["is_metal"] itself is None,
+    mostly main-campaign compounds whose metadata predates is_metal being
+    added directly). Both fall back to the raw meta[...] value per-row (see
+    main()) for any compound not in this CSV, e.g. one added after the
+    classifier was last run."""
+    import pandas as pd
+
+    if not BONDTYPE_CSV.exists():
+        return {}, {}
+    df = pd.read_csv(BONDTYPE_CSV)
+    return (
+        dict(zip(df["compound_id"], df["icobi_label"])),
+        dict(zip(df["compound_id"], df["is_metal"])),
+    )
 
 
 def _get_entry(compound_id: str, role: str) -> CompoundEntry:
@@ -81,6 +108,7 @@ def main() -> None:
     n_ok = n_skipped_single = n_skipped_element = n_not_ready = n_failed = 0
     rows: list[dict] = []
     detail: dict[str, dict] = {}
+    bond_type_map, is_metal_map = _load_bondtype_and_ismetal_maps()
 
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
@@ -150,8 +178,8 @@ def main() -> None:
                     "mp_id": meta.get("mp_id"),
                     "formula": meta.get("formula"),
                     "family": meta.get("family"),
-                    "bond_type": meta.get("bond_type"),
-                    "is_metal": meta.get("is_metal"),
+                    "bond_type": bond_type_map.get(compound_id, meta.get("bond_type")),
+                    "is_metal": is_metal_map.get(compound_id, meta.get("is_metal")),
                     "theoretical": meta.get("theoretical"),
                     "energy_above_hull_eV_per_atom": meta.get("energy_above_hull_eV_per_atom"),
                     "delta_per_formula_unit_eV": result.delta_per_formula_unit_eV,
