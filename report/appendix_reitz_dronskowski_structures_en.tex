@@ -1,0 +1,47 @@
+\begin{longtable}{@{}l p{3.6cm} p{3.6cm} p{5.0cm}@{}}
+\caption{The 16 species across Reitz \& Dronskowski's 7 reactions (ic-2026-04181q, Table~\ref{tab:reference-validation}): structure as described by the manuscript, the MP/COD entry used in this dataset, and verification status.}\label{tab:reitz-dronskowski-structures}\\
+\toprule
+Species (role) & Manuscript structure & Our source & Verification \\
+\midrule
+\endfirsthead
+\toprule
+Species (role) & Manuscript structure & Our source & Verification \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Pb(N$_3$)$_2$ (target) & lead azide, ICSD 28336/16887 (Glen 1963) & mp-620058, Pna2\_1, $E_{hull}=0.110$ & \textbf{Yes} --- exact polymorph identified 2026-08-17, substituted for mp-667338 (Pnma) already present in the dataset \\
+\midrule
+Pb (element) & not specified (standard elemental reference) & mp-20483, Fm-3m, $E_{hull}=0.000$, on-hull & not required --- no polymorph ambiguity for fcc metallic Pb \\
+\midrule
+N$_2$ (element, 4 reactions) & gaseous N$\equiv$N, $d\approx1.10$~\AA & \texttt{gasref\_N2\_dimerbox}, hand-built isolated dimer (10$\times$10$\times$10~\AA\ box), $d$(N-N)$=1.113$~\AA, ICOHP$=-22.998$~eV & \textbf{Yes} --- within 0.7\% of the manuscript's value ($-23.161$~eV). Before 2026-08-17: mp-1059834 (theoretical, polymeric phase, N-N$=1.296$~\AA) --- a real bug, fixed \\
+\midrule
+S$_4$N$_2$ (target) & not specified beyond composition/ICOHP & COD 4031496, P4\_2nm ($Z=4$), no MP entry exists for this composition & no --- COD experimental structure used as-is, no independent confirmation it is the manuscript's exact polymorph \\
+\midrule
+S$_8$ (element) & not specified & mp-77, Fddd ($\alpha$-S$_8$), $E_{hull}=0.000$, on-hull & not required --- unambiguous standard reference \\
+\midrule
+S$_4$N$_4$ (target) & not specified & COD 7017102, P2\_1/c ($Z=4$) & no \\
+\midrule
+ZnSn (target) & implicit: 6 Zn-Sn bonds $+$ 1 Zn-Zn bond/formula unit (consistent with a NiAs prototype) & \texttt{gasref\_ZnSn\_NiAs}, hand-built, P6\_3/mmc (\#194), no MP/COD entry (no stable real Zn-Sn intermetallic exists) & partial --- the (6+1) coordination is consistent with NiAs, but no independent crystallographic reference was found to confirm the manuscript's exact lattice parameters \\
+\midrule
+Zn (element) & not specified & mp-79, P6\_3/mmc, $E_{hull}=0.000$, on-hull & not required \\
+\midrule
+Sn (element, ZnSn's competing phase) & implies a phase distinct from the dataset's ``default'' $\beta$-tin & mp-117, Fd-3m ($\alpha$-tin, diamond-cubic), substituted for mp-623511 ($\beta$-tin, I4/mmm) & partial --- $\alpha$-tin (the low-temperature fcc form) is the structurally consistent competing phase for ZnSn; no independent confirmation the manuscript uses mp-117 specifically \\
+\midrule
+CaO[sphalerite] (target) & F-43m (\#216), explicitly cited & \texttt{gasref\_CaO\_sphalerite}, hand-built (no MP entry for this metastable CaO polymorph), F-43m confirmed by symmetry & \textbf{Yes} (space group) \\
+\midrule
+CaO[rocksalt] (product) & Fm-3m (\#225), explicitly cited & mp-2605, Fm-3m, $E_{hull}=0.000$, on-hull & \textbf{Yes} \\
+\midrule
+CaN (target) & not specified & mp-1058549, Fm-3m (rocksalt-type), $E_{hull}=0.398$ & no \\
+\midrule
+Ca$_3$N$_2$ (product) & not specified & mp-844, Ia-3 (anti-bixbyite), $E_{hull}=0.000$, on-hull & no --- the only on-hull entry, the most defensible default choice \\
+\midrule
+Mn$_2$O$_7$ (target) & not specified & mp-28338, P2\_1/c, $E_{hull}=0.335$ & no \\
+\midrule
+MnO$_2$ (product) & not specified & mp-510408, P4\_2/mnm (rutile/pyrolusite) & no \\
+\midrule
+O$_2$ (element) & gaseous O$_2$, triplet ground state & mp-1524462, C2/m, $E_{hull}=0.000$, on-hull, dedicated spin-polarized treatment & structural --- isolated dimer $d$(O-O)$=1.222$~\AA\ vs. 1.208~\AA\ literature (within 1\%) \\
+\end{longtable}
+
+\vspace{0.5em}
+\noindent\textbf{Reading key.} ``Verification: Yes'' means the structure was confirmed to match the manuscript's explicit description (a cited space group, or a recomputed bond distance compared directly). ``Partial'' means the geometry/chemistry is consistent with what the manuscript describes but no independent crystallographic citation allowed a strict confirmation. ``No'' means only the composition was verified: the manuscript does not specify a space group for that species, so the most reasonable MP/COD entry was used with no guarantee it is \emph{the} exact structure the authors used. This does not invalidate the \S\ref{sec:reframing} validation (which only compares the arithmetic reconstruction of the manuscript's own published ICOHP values, independent of any local structure) but it does bound the scope of any future comparison between our own DFT+LOBSTER calculations and the manuscript's numbers for these species.
