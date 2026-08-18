@@ -138,6 +138,8 @@ def main() -> None:
                 continue
             compound_id = compound_dir.name
             meta = json.loads(meta_path.read_text())
+            if meta.get("quality_excluded"):
+                continue
             formula = meta.get("formula")
             if not formula:
                 continue
