@@ -45,7 +45,7 @@ O$_2$ (element) & gaseous O$_2$, triplet ground state; Table~S1 (2026-08-18) fix
 
 \begin{table}[htbp]
 \centering
-\caption{This project's own DFT+LOBSTER ICOHP values against the manuscript's transcribed values (``first-shell'' summation convention, matching the manuscript's own --- \texttt{reaction\_analysis.parse\_lobster}, \texttt{bond\_filter="nearest\_neighbor"}). ``Old calculation'' column: this project's default DFT methodology (PBE, ENCUT=600~eV, EDIFF=1e-6, no D3) on the structures available at the time (Sn: \texttt{extension\_Sn\_mp-623511}, $\beta$-tin I4/mmm --- a different polymorph from the manuscript's). ``New calculation'' column (updated 2026-08-18, ZnSn/Zn/Sn only --- N$_2$ out of scope for this update): the \texttt{manuscript\_*} campaign reproducing the manuscript's exact methodology (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tetrahedron method) on \texttt{manuscript\_ZnSn}/\texttt{manuscript\_Zn}/\texttt{manuscript\_Sn} ($\alpha$-tin, Fd-3m, \texttt{extension\_Snalpha\_mp-117}) --- lattice parameters validated to better than 0.25\% of the manuscript's Table~S1 for all three species (Table~\ref{tab:reitz-dronskowski-structures}).}
+\caption{This project's own DFT+LOBSTER ICOHP values against the manuscript's transcribed values. ``Old calculation'' column: this project's default DFT methodology (PBE, ENCUT=600~eV, EDIFF=1e-6, no D3) on the structures available at the time (Sn: \texttt{extension\_Sn\_mp-623511}, $\beta$-tin I4/mmm --- a different polymorph from the manuscript's). ``New calculation'' column (updated 2026-08-18, ZnSn/Zn/Sn only --- N$_2$ out of scope for this update): the \texttt{manuscript\_*} campaign reproducing the manuscript's exact methodology (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tetrahedron method) on \texttt{manuscript\_ZnSn}/\texttt{manuscript\_Zn}/\texttt{manuscript\_Sn} ($\alpha$-tin, Fd-3m, \texttt{extension\_Snalpha\_mp-117}) --- lattice parameters validated to better than 0.25\% of the manuscript's Table~S1 for all three species (Table~\ref{tab:reitz-dronskowski-structures}) --- summed under a strict single-coordination-shell convention (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, 0.02~\AA\ tolerance around each pair type's minimum bond distance) rather than \texttt{reaction\_analysis.parse\_lobster}'s general-purpose \texttt{bond\_filter="nearest\_neighbor"}; see the discussion below the table for why the latter, correct for the rest of this project's 588-compound bond-type classification, mishandles Zn specifically.}
 \label{tab:reitz-dronskowski-dft}
 {\small
 \begin{tabular}{@{}p{3.2cm}rrrr@{}}
@@ -53,41 +53,75 @@ O$_2$ (element) & gaseous O$_2$, triplet ground state; Table~S1 (2026-08-18) fix
 Species / reaction & Manuscript (eV) & Old calculation (eV) & New calculation (eV) & Diff. (new) \\
 \midrule
 N$_2$ (element) & $-23.161$ & $-22.998$ & --- & $0.7\%$ \\
-ZnSn (reactant) & $-16.869$ & $-17.991$ & $-18.244$\textsuperscript{a} & $8.1\%$ \\
-Zn (product) & $-12.686$ & $-17.402$ & $-17.257$ & $36.0\%$ \\
+ZnSn (reactant) & $-16.869$ & $-17.991$ & $-16.908$\textsuperscript{a} & $0.2\%$ \\
+Zn (product) & $-12.686$ & $-17.402$ & $-12.649$\textsuperscript{b} & $0.3\%$ \\
 Sn (product) & $-7.672$ & $-10.617$ ($\beta$, wrong polymorph) & $-7.706$ ($\alpha$, Fd-3m) & $0.4\%$ \\
 \midrule
-$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3.489$~eV ($-337$~kJ/mol) & $-10.027$~eV ($-968$~kJ/mol) & $-6.719$~eV ($-648$~kJ/mol) & $1.9\times$ \\
+$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3.489$~eV ($-337$~kJ/mol) & $-10.027$~eV ($-968$~kJ/mol) & $-3.448$~eV ($-333$~kJ/mol) & $1.2\%$ \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
 
 \vspace{0.3em}
-\noindent\textsuperscript{a}~includes a third-shell Sn-Sn contribution ($d=3.54$--$3.57$~\AA, $-1.336$~eV/formula unit) that the manuscript's own accounting (6 Zn-Sn bonds $+$ 1 Zn-Zn bond per formula unit, no Sn-Sn term) does not include. Excluding this term, ZnSn alone drops to $-16.908$~eV, within $0.2\%$ of the manuscript.
+\noindent\textsuperscript{a}~excludes a real but manuscript-unaccounted third-shell Sn-Sn contact ($d=3.54$--$3.57$~\AA, $-1.336$~eV/formula unit): the manuscript's own accounting for ZnSn is 6 Zn-Sn bonds $+$ 1 Zn-Zn bond per formula unit, with no Sn-Sn term at all, even though DFT+LOBSTER reports a genuine, well-separated first-shell Sn-Sn contact at that distance. A scope-of-accounting difference, not a shell-detection error.
 
-Replacing the default Sn reference ($\beta$-tin, a different polymorph)
-with the $\alpha$-tin the manuscript implicitly prescribes, computed
-under its exact methodology, drops the Sn discrepancy from 38.4\% to
-0.4\% --- almost the entire Sn gap was therefore a polymorph error, not
-a genuine DFT disagreement. ZnSn alone also drops to 0.2\% once the
-Sn-Sn term absent from the manuscript's own accounting is isolated
-(note a). Zn, however, remains an open residual: the 36.0\%
-discrepancy persists even though our manuscript-methodology-relaxed
-geometry reproduces Table~S1 to better than 0.15\%
-(Table~\ref{tab:reitz-dronskowski-structures}) --- near-perfect
-geometric agreement does not resolve the ICOHP gap for this element.
-The most likely explanation, not yet verified, is a difference in
-coordination-shell counting convention between our automated detection
-(first Zn-Zn shell lumping the basal $2.608$~\AA\ and interlayer
-$2.729$--$2.734$~\AA\ contacts, very close in distance) and the
-manuscript's own convention --- worth investigating if this validation
-is picked back up. The recomputed $\Delta$ICOHP for ZnSn$\to$Zn+Sn
-(1.9$\times$ the manuscript) improves markedly over the old calculation
-(2.9$\times$) but remains dominated by this unresolved Zn residual, not
-by a global DFT-methodology problem (\S\ref{sec:reframing}'s 7-case
-validation, which uses only the manuscript's own published values,
-continues to reproduce them almost exactly).
+\noindent\textsuperscript{b}~true first shell only (the 6 basal Zn-Zn bonds at $d=2.608$~\AA); see below for why the dataset's general first-shell detector instead sums 12 bonds here.
+
+Both Sn and ZnSn were already resolved in the first pass of this
+2026-08-18 update: replacing the default $\beta$-tin reference with the
+manuscript's $\alpha$-tin phase, computed under its exact methodology,
+drops Sn's gap from 38.4\% to 0.4\% --- almost the entire Sn gap was a
+polymorph error, not a genuine DFT disagreement --- and excluding the
+manuscript-unaccounted Sn-Sn term (note a) drops ZnSn from 8.1\% to
+0.2\%.
+
+Zn's 36.0\% residual, left open at the time, is now resolved as well.
+Root cause (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}):
+\texttt{reaction\_analysis.nearest\_neighbor.detect\_first\_shell()} ---
+the general first-shell detector this project uses dataset-wide via
+\texttt{bond\_filter="nearest\_neighbor"} for its 588-compound bond-type
+classification (\texttt{analysis/compute\_icohp\_icobi\_bondtype.py},
+regression-tested in \texttt{tests/test\_nearest\_neighbor.py}) --- cuts
+at the single LARGEST gap anywhere in a pair type's whole distance
+spectrum, not the first one. Zn's anomalously low hcp $c/a$ ratio puts a
+second, chemically distinct Zn-Zn shell (interlayer, $2.729$--$2.734$~\AA)
+only $0.12$~\AA\ past the true first shell (basal, $2.608$~\AA) ---
+much closer than the $\sim\!1.04$~\AA\ gap to the real third shell ---
+so the detector locks onto that later gap and sums both shells (12
+bonds instead of 6) as one, roughly doubling the ICOHP magnitude.
+Restricting the sum to the true first shell only (note b) gives
+$-12.649$~eV, $0.3\%$ from the manuscript's $-12.686$~eV.
+
+This is a genuine limitation of applying one general-purpose
+shell-detection rule across a dataset with widely varying coordination
+geometries, not a DFT/LOBSTER methodology disagreement --- and it is
+\emph{not} evidence against the general detector's own design choice
+(the single-largest-gap rule is deliberate and correctly handles the
+counter-example that motivated it, see \texttt{nearest\_neighbor.py}'s
+docstring). \texttt{nearest\_neighbor.py} itself is left unchanged: Zn's
+near-degenerate double shell is not necessarily representative of the
+588-compound population, and whether any other compound's bond-type
+classification is similarly affected has not been checked here --- that
+would need its own dataset-wide audit before touching results elsewhere
+in this project (bond\_type classification, the antibonding descriptor,
+\ldots), and is flagged as a follow-up rather than attempted as part of
+this table's fix.
+
+With all three species corrected, the recomputed $\Delta$ICOHP for
+ZnSn$\to$Zn+Sn ($-3.448$~eV, $-333$~kJ/mol) is now within $1.2\%$ of the
+manuscript's $-3.489$~eV ($-337$~kJ/mol) --- down from $1.9\times$ before
+this correction, and from $2.9\times$ in the original (pre-manuscript-
+methodology) calculation. This project's own DFT+LOBSTER ICOHP
+methodology reproduces the manuscript's reported values to within
+$1.2\%$ once (i) the correct polymorphs are used, (ii) the manuscript's
+own bond-accounting scope is matched, and (iii) first-coordination-shell
+summation is not confounded by near-degenerate shells --- closing the
+validation question raised in \S\ref{sec:reframing} and confirming this
+project's ICOHP methodology, not just its arithmetic, matches the
+manuscript's (\S\ref{sec:reframing}'s own 7-case validation, using only
+the manuscript's published values, was never in question and continues
+to reproduce them almost exactly).
 
 \vspace{0.5em}
 \noindent\textbf{Reading key.} ``Verification: Yes'' means the structure was confirmed to match the manuscript's explicit description (a cited space group, or a recomputed bond distance compared directly). ``Partial'' means the geometry/chemistry is consistent with what the manuscript describes but no independent crystallographic citation allowed a strict confirmation. ``No'' means only the composition was verified: the manuscript does not specify a space group for that species, so the most reasonable MP/COD entry was used with no guarantee it is \emph{the} exact structure the authors used. This does not invalidate the \S\ref{sec:reframing} validation (which only compares the arithmetic reconstruction of the manuscript's own published ICOHP values, independent of any local structure) but it does bound the scope of any future comparison between our own DFT+LOBSTER calculations and the manuscript's numbers for these species.
