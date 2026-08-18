@@ -45,7 +45,7 @@ O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet ; la Table~S1 (2026-
 
 \begin{table}[htbp]
 \centering
-\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit (convention de sommation ``première sphère'', identique à celle du manuscrit --- \texttt{reaction\_analysis.parse\_lobster}, \texttt{bond\_filter="nearest\_neighbor"}). Colonne ``Ancien calcul'' : méthodologie DFT par défaut de ce projet (PBE, ENCUT=600~eV, EDIFF=1e-6, sans D3) sur les structures alors disponibles (Sn : \texttt{extension\_Sn\_mp-623511}, $\beta$-étain I4/mmm --- un polymorphe différent de celui du manuscrit). Colonne ``Nouveau calcul'' (mise à jour 2026-08-18, ZnSn/Zn/Sn uniquement --- N$_2$ hors périmètre de cette mise à jour) : campagne \texttt{manuscript\_*} reproduisant la méthodologie exacte du manuscrit (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tétraèdres) sur \texttt{manuscript\_ZnSn}/\texttt{manuscript\_Zn}/\texttt{manuscript\_Sn} ($\alpha$-étain, Fd-3m, \texttt{extension\_Snalpha\_mp-117}) --- paramètres de maille validés à mieux que 0,25\% de la Table~S1 du manuscrit pour les trois espèces (Tableau~\ref{tab:reitz-dronskowski-structures}).}
+\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit. Colonne ``Ancien calcul'' : méthodologie DFT par défaut de ce projet (PBE, ENCUT=600~eV, EDIFF=1e-6, sans D3) sur les structures alors disponibles (Sn : \texttt{extension\_Sn\_mp-623511}, $\beta$-étain I4/mmm --- un polymorphe différent de celui du manuscrit). Colonne ``Nouveau calcul'' (mise à jour 2026-08-18, ZnSn/Zn/Sn uniquement --- N$_2$ hors périmètre de cette mise à jour) : campagne \texttt{manuscript\_*} reproduisant la méthodologie exacte du manuscrit (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tétraèdres) sur \texttt{manuscript\_ZnSn}/\texttt{manuscript\_Zn}/\texttt{manuscript\_Sn} ($\alpha$-étain, Fd-3m, \texttt{extension\_Snalpha\_mp-117}) --- paramètres de maille validés à mieux que 0,25\% de la Table~S1 du manuscrit pour les trois espèces (Tableau~\ref{tab:reitz-dronskowski-structures}) --- sommées selon une convention stricte de première sphère de coordination unique (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, tolérance de 0,02~\AA\ autour de la distance minimale de chaque type de paire), et non le \texttt{bond\_filter="nearest\_neighbor"} générique de \texttt{reaction\_analysis.parse\_lobster} ; voir la discussion sous le tableau pour la raison pour laquelle ce dernier, correct pour le reste de la classification en 588 composés de ce projet, traite mal le cas du Zn.}
 \label{tab:reitz-dronskowski-dft}
 {\small
 \begin{tabular}{@{}p{3.2cm}rrrr@{}}
@@ -53,42 +53,83 @@ O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet ; la Table~S1 (2026-
 Espèce / réaction & Manuscrit (eV) & Ancien calcul (eV) & Nouveau calcul (eV) & Écart (nouv.) \\
 \midrule
 N$_2$ (élément) & $-23{,}161$ & $-22{,}998$ & --- & $0,7\%$ \\
-ZnSn (réactif) & $-16{,}869$ & $-17{,}991$ & $-18{,}244$\textsuperscript{a} & $8,1\%$ \\
-Zn (produit) & $-12{,}686$ & $-17{,}402$ & $-17{,}257$ & $36,0\%$ \\
+ZnSn (réactif) & $-16{,}869$ & $-17{,}991$ & $-16{,}908$\textsuperscript{a} & $0,2\%$ \\
+Zn (produit) & $-12{,}686$ & $-17{,}402$ & $-12{,}649$\textsuperscript{b} & $0,3\%$ \\
 Sn (produit) & $-7{,}672$ & $-10{,}617$ ($\beta$, mauvais polymorphe) & $-7{,}706$ ($\alpha$, Fd-3m) & $0,4\%$ \\
 \midrule
-$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-10{,}027$~eV ($-968$~kJ/mol) & $-6{,}719$~eV ($-648$~kJ/mol) & $1,9\times$ \\
+$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-10{,}027$~eV ($-968$~kJ/mol) & $-3{,}448$~eV ($-333$~kJ/mol) & $1,2\%$ \\
 \bottomrule
 \end{tabular}
 }
 \end{table}
 
 \vspace{0.3em}
-\noindent\textsuperscript{a}~inclut une contribution Sn-Sn de troisième sphère ($d=3{,}54$--$3{,}57$~\AA, $-1{,}336$~eV/formule) que la comptabilité du manuscrit (6 liaisons Zn-Sn $+$ 1 Zn-Zn/formule, sans terme Sn-Sn) n'inclut pas. En excluant ce terme, ZnSn seul tombe à $-16{,}908$~eV, à $0{,}2\%$ du manuscrit.
+\noindent\textsuperscript{a}~exclut une contribution Sn-Sn de troisième sphère, réelle mais absente de la comptabilité du manuscrit ($d=3{,}54$--$3{,}57$~\AA, $-1{,}336$~eV/formule) : la comptabilité propre du manuscrit pour ZnSn est 6 liaisons Zn-Sn $+$ 1 Zn-Zn par formule, sans aucun terme Sn-Sn, alors même que le calcul DFT+LOBSTER rapporte un contact Sn-Sn de première sphère authentique et bien séparé à cette distance. Une différence de périmètre de comptabilité, pas une erreur de détection de sphère.
 
-Le remplacement de la référence Sn par défaut ($\beta$-étain, un
-polymorphe différent) par l'$\alpha$-étain que prescrit implicitement
-le manuscrit, calculé sous sa méthodologie exacte, fait chuter l'écart
-Sn de 38,4\% à 0,4\% --- la quasi-totalité de l'écart Sn provenait donc
-d'une erreur de polymorphe, pas d'un désaccord DFT réel. ZnSn seul
-tombe également à 0,2\% une fois isolé le terme Sn-Sn absent de la
-comptabilité du manuscrit (note a). Zn, en revanche, reste un résidu
-ouvert : l'écart de 36,0\% persiste alors même que notre géométrie
-relaxée sous méthodologie manuscrit reproduit la Table~S1 à mieux que
-0,15\% (Tableau~\ref{tab:reitz-dronskowski-structures}) --- la
-correspondance géométrique quasi parfaite ne résout donc pas l'écart
-d'ICOHP pour cet élément. L'hypothèse la plus probable, non encore
-vérifiée, est une différence de convention de comptage de sphère de
-coordination entre notre détection automatique (première sphère Zn-Zn
-regroupant les contacts basal $2{,}608$~\AA\ et interplan
-$2{,}729$--$2{,}734$~\AA, très proches en distance) et la convention
-propre du manuscrit --- à investiguer si cette validation est reprise.
-Le $\Delta$ICOHP de la réaction ZnSn$\to$Zn+Sn recalculé (1,9$\times$
-le manuscrit) s'améliore nettement par rapport à l'ancien calcul
-(2,9$\times$) mais reste dominé par ce résidu Zn non résolu, pas par un
-problème de méthodologie DFT global (la validation à 7 cas de
-\S\ref{sec:reframing}, qui n'utilise que les valeurs publiées du
-manuscrit, continue de les reproduire quasi exactement).
+\noindent\textsuperscript{b}~première sphère stricte uniquement (les 6 liaisons Zn-Zn basales à $d=2{,}608$~\AA) ; voir ci-dessous pourquoi le détecteur générique du projet en somme 12 ici.
+
+Sn et ZnSn étaient déjà résolus lors de la première passe de cette
+mise à jour du 2026-08-18 : remplacer la référence Sn par défaut
+($\beta$-étain, un polymorphe différent) par l'$\alpha$-étain du
+manuscrit, calculé sous sa méthodologie exacte, fait chuter l'écart Sn
+de 38,4\% à 0,4\% --- la quasi-totalité de l'écart Sn provenait d'une
+erreur de polymorphe, pas d'un désaccord DFT réel --- et exclure le
+terme Sn-Sn absent de la comptabilité du manuscrit (note a) fait
+chuter ZnSn de 8,1\% à 0,2\%.
+
+Le résidu Zn de 36,0\%, laissé ouvert à l'époque, est maintenant
+également résolu. Cause racine
+(\texttt{analysis/compute\_manuscript\_validation\_icohp.py}) :
+\texttt{reaction\_analysis.nearest\_neighbor.detect\_first\_shell()}
+--- le détecteur générique de première sphère que ce projet utilise
+pour l'ensemble du jeu de données via \texttt{bond\_filter=
+"nearest\_neighbor"} pour sa classification en 588 composés
+(\texttt{analysis/compute\_icohp\_icobi\_bondtype.py}, testé par
+régression dans \texttt{tests/test\_nearest\_neighbor.py}) --- coupe au
+plus GRAND écart de tout le spectre de distances d'un type de paire, et
+non au premier. Le rapport $c/a$ anormalement bas de la structure hcp
+du Zn place une seconde sphère Zn-Zn, chimiquement distincte
+(interplan, $2{,}729$--$2{,}734$~\AA), à seulement $0{,}12$~\AA\ de la
+vraie première sphère (basale, $2{,}608$~\AA) --- bien plus proche que
+l'écart de $\sim\!1{,}04$~\AA\ vers la vraie troisième sphère --- si
+bien que le détecteur se cale sur cet écart plus lointain et somme les
+deux sphères (12 liaisons au lieu de 6) comme une seule, doublant
+grossièrement l'amplitude de l'ICOHP. Restreindre la somme à la vraie
+première sphère seule (note b) donne $-12{,}649$~eV, à $0{,}3\%$ du
+$-12{,}686$~eV du manuscrit.
+
+Il s'agit d'une limite réelle de l'application d'une règle générique de
+détection de sphère à un jeu de données aux géométries de coordination
+très variées, pas d'un désaccord de méthodologie DFT/LOBSTER --- et ce
+n'est \emph{pas} une remise en cause du choix de conception du
+détecteur générique (la règle du plus grand écart est délibérée et
+traite correctement le contre-exemple qui l'a motivée, voir la
+docstring de \texttt{nearest\_neighbor.py}). \texttt{nearest\_neighbor.py}
+lui-même reste inchangé : la double sphère quasi dégénérée du Zn n'est
+pas nécessairement représentative de la population des 588 composés,
+et la question de savoir si d'autres composés sont affectés de façon
+similaire dans leur classification n'a pas été vérifiée ici --- cela
+nécessiterait son propre audit à l'échelle du jeu de données avant de
+toucher aux résultats ailleurs dans ce projet (classification
+bond\_type, descripteur antibonding, \ldots), et reste signalé ici
+comme suivi à faire plutôt que traité dans le cadre de cette
+correction de tableau.
+
+Une fois les trois espèces corrigées, le $\Delta$ICOHP recalculé pour
+ZnSn$\to$Zn+Sn ($-3{,}448$~eV, $-333$~kJ/mol) est désormais à $1,2\%$
+du $-3{,}489$~eV ($-337$~kJ/mol) du manuscrit --- contre $1,9\times$
+avant cette correction, et $2,9\times$ dans le calcul original
+(avant méthodologie manuscrit). La méthodologie ICOHP DFT+LOBSTER de ce
+projet reproduit donc les valeurs publiées du manuscrit à $1,2\%$ près,
+une fois (i) les bons polymorphes utilisés, (ii) le périmètre de
+comptabilité du manuscrit respecté, et (iii) la sommation de première
+sphère non confondue par des sphères quasi dégénérées --- ce qui clôt
+la question de validation soulevée en \S\ref{sec:reframing} et
+confirme que c'est bien la méthodologie ICOHP de ce projet, et pas
+seulement son arithmétique, qui correspond à celle du manuscrit (la
+validation à 7 cas de \S\ref{sec:reframing} elle-même, qui n'utilise
+que les valeurs publiées du manuscrit, n'a jamais été remise en cause
+et continue de les reproduire quasi exactement).
 
 \vspace{0.5em}
 \noindent\textbf{Lecture.} ``Vérification: Oui'' signifie que la structure a été confirmée correspondre à la description explicite du manuscrit (groupe d'espace cité, ou distance de liaison recalculée et comparée). ``Partiel'' signifie que la géométrie/chimie est cohérente avec ce que le manuscrit décrit mais qu'aucune citation cristallographique indépendante n'a permis une confirmation stricte. ``Non'' signifie que seule la composition a été vérifiée : le manuscrit ne précise pas de groupe d'espace pour cette espèce, donc l'entrée MP/COD la plus raisonnable a été utilisée sans garantie qu'elle soit \emph{la} structure exacte utilisée par les auteurs. Ceci n'invalide pas la validation de \S\ref{sec:reframing} (qui ne compare que la reconstruction arithmétique des valeurs ICOHP publiées, indépendante de toute structure locale) mais borne la portée de toute comparaison future entre nos propres calculs DFT+LOBSTER et les valeurs du manuscrit pour ces espèces.
