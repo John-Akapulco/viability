@@ -1,0 +1,3 @@
+Starting structure: extension_Mn2O7_mp-28338 (mp_dataset/structures/extension_Mn2O7_mp-28338/POSCAR)
+Workflow: mn
+k-points (Table S1): (9, 3, 7)

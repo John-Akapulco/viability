@@ -1,0 +1,3 @@
+Starting structure: extension_PbN6_mp-620058 (mp_dataset/structures/extension_PbN6_mp-620058/POSCAR)
+Workflow: standard
+k-points (Table S1): (9, 5, 3)

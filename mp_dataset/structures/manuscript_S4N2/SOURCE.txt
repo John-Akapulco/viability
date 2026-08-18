@@ -1,0 +1,3 @@
+Starting structure: extension_S4N2_cod4031496 (mp_dataset/structures/extension_S4N2_cod4031496/POSCAR)
+Workflow: standard
+k-points (Table S1): (5, 5, 15)

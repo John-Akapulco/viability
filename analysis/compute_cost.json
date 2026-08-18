@@ -1,0 +1,3006 @@
+{
+  "n_structure_dirs": 597,
+  "vasp": {
+    "n": 597,
+    "mean_s": 188.2,
+    "median_s": 72.2,
+    "max_s": 5714.8,
+    "total_s": 112369.3,
+    "total_h": 31.21
+  },
+  "lobster": {
+    "n": 596,
+    "mean_s": 578.4,
+    "median_s": 156.6,
+    "max_s": 22555.3,
+    "total_s": 344743.3,
+    "total_h": 95.76
+  },
+  "per_compound": [
+    {
+      "compound_id": "exp_metastable_AgO_mp-1079720",
+      "vasp_wall_time_s": 123.56,
+      "lobster_wall_time_s": 711.16
+    },
+    {
+      "compound_id": "exp_metastable_Al12W_mp-11227",
+      "vasp_wall_time_s": 114.771,
+      "lobster_wall_time_s": 160.439
+    },
+    {
+      "compound_id": "exp_metastable_Al3Os2_mp-16521",
+      "vasp_wall_time_s": 48.46,
+      "lobster_wall_time_s": 130.35
+    },
+    {
+      "compound_id": "exp_metastable_AsPd2_mp-1080831",
+      "vasp_wall_time_s": 112.36,
+      "lobster_wall_time_s": 431.16
+    },
+    {
+      "compound_id": "exp_metastable_AsRh2_mp-1102364",
+      "vasp_wall_time_s": 124.17,
+      "lobster_wall_time_s": 651.48
+    },
+    {
+      "compound_id": "exp_metastable_AsRh_mp-22079",
+      "vasp_wall_time_s": 92.9,
+      "lobster_wall_time_s": 258.52
+    },
+    {
+      "compound_id": "exp_metastable_BaSn5_mp-571353",
+      "vasp_wall_time_s": 94.66,
+      "lobster_wall_time_s": 107.93
+    },
+    {
+      "compound_id": "exp_metastable_Be12Pd_mp-12666",
+      "vasp_wall_time_s": 226.85,
+      "lobster_wall_time_s": 992.01
+    },
+    {
+      "compound_id": "exp_metastable_Be3N2_mp-6977",
+      "vasp_wall_time_s": 79.98,
+      "lobster_wall_time_s": 613.57
+    },
+    {
+      "compound_id": "exp_metastable_CaGa2_mp-992",
+      "vasp_wall_time_s": 38.65,
+      "lobster_wall_time_s": 69.66
+    },
+    {
+      "compound_id": "exp_metastable_CaGa4_mp-2461",
+      "vasp_wall_time_s": 101.41,
+      "lobster_wall_time_s": 200.25
+    },
+    {
+      "compound_id": "exp_metastable_CdI2_mp-567259",
+      "vasp_wall_time_s": 35.02,
+      "lobster_wall_time_s": 18.08
+    },
+    {
+      "compound_id": "exp_metastable_CdO2_mp-2310",
+      "vasp_wall_time_s": 128.3,
+      "lobster_wall_time_s": 392.34
+    },
+    {
+      "compound_id": "exp_metastable_ClF3_mp-556767",
+      "vasp_wall_time_s": 98.9,
+      "lobster_wall_time_s": 145.28
+    },
+    {
+      "compound_id": "exp_metastable_Cs2Se_mp-1011696",
+      "vasp_wall_time_s": 192.19,
+      "lobster_wall_time_s": 39.1
+    },
+    {
+      "compound_id": "exp_metastable_CsH_mp-632319",
+      "vasp_wall_time_s": 12.76,
+      "lobster_wall_time_s": 6.28
+    },
+    {
+      "compound_id": "exp_metastable_Cu3Ge_mp-19724",
+      "vasp_wall_time_s": 120.93,
+      "lobster_wall_time_s": 994.02
+    },
+    {
+      "compound_id": "exp_metastable_FeTe2_mp-1102002",
+      "vasp_wall_time_s": 162.21,
+      "lobster_wall_time_s": 251.61
+    },
+    {
+      "compound_id": "exp_metastable_Ge4Rh_mp-1104286",
+      "vasp_wall_time_s": 210.85,
+      "lobster_wall_time_s": 1691.17
+    },
+    {
+      "compound_id": "exp_metastable_GeSe2_mp-10074",
+      "vasp_wall_time_s": 86.38,
+      "lobster_wall_time_s": 53.91
+    },
+    {
+      "compound_id": "exp_metastable_H2O_mp-2739191",
+      "vasp_wall_time_s": 45.43,
+      "lobster_wall_time_s": 47.56
+    },
+    {
+      "compound_id": "exp_metastable_H3N_mp-643432",
+      "vasp_wall_time_s": 69.07,
+      "lobster_wall_time_s": 102.43
+    },
+    {
+      "compound_id": "exp_metastable_HI_mp-697025",
+      "vasp_wall_time_s": 102.88,
+      "lobster_wall_time_s": 19.92
+    },
+    {
+      "compound_id": "exp_metastable_IF7_mp-27988",
+      "vasp_wall_time_s": 108.3,
+      "lobster_wall_time_s": 153.43
+    },
+    {
+      "compound_id": "exp_metastable_In3Ir_mp-630976",
+      "vasp_wall_time_s": 440.42,
+      "lobster_wall_time_s": 2297.8
+    },
+    {
+      "compound_id": "exp_metastable_InCl_mp-571636",
+      "vasp_wall_time_s": 42.4,
+      "lobster_wall_time_s": 34.91
+    },
+    {
+      "compound_id": "exp_metastable_K2S_mp-559278",
+      "vasp_wall_time_s": 60.85,
+      "lobster_wall_time_s": 39.24
+    },
+    {
+      "compound_id": "exp_metastable_K_mp-10157",
+      "vasp_wall_time_s": 17.32,
+      "lobster_wall_time_s": 4.92
+    },
+    {
+      "compound_id": "exp_metastable_Li13Sn5_mp-30769",
+      "vasp_wall_time_s": 234.24,
+      "lobster_wall_time_s": 885.34
+    },
+    {
+      "compound_id": "exp_metastable_Li3Hg_mp-1646",
+      "vasp_wall_time_s": 56.21,
+      "lobster_wall_time_s": 111.57
+    },
+    {
+      "compound_id": "exp_metastable_MgCl2_mp-570259",
+      "vasp_wall_time_s": 30.67,
+      "lobster_wall_time_s": 27.75
+    },
+    {
+      "compound_id": "exp_metastable_MgH2_mp-23711",
+      "vasp_wall_time_s": 34.65,
+      "lobster_wall_time_s": 33.44
+    },
+    {
+      "compound_id": "exp_metastable_MgPd3_mp-7753",
+      "vasp_wall_time_s": 62.78,
+      "lobster_wall_time_s": 435.94
+    },
+    {
+      "compound_id": "exp_metastable_Mo3Se4_mp-21021",
+      "vasp_wall_time_s": 210.43,
+      "lobster_wall_time_s": 255.69
+    },
+    {
+      "compound_id": "exp_metastable_NaN3_mp-1066400",
+      "vasp_wall_time_s": 68.06,
+      "lobster_wall_time_s": 38.22
+    },
+    {
+      "compound_id": "exp_metastable_Nb2O5_mp-1595",
+      "vasp_wall_time_s": 77.85,
+      "lobster_wall_time_s": 155.22
+    },
+    {
+      "compound_id": "exp_metastable_NiB_mp-14019",
+      "vasp_wall_time_s": 58.2,
+      "lobster_wall_time_s": 519.0
+    },
+    {
+      "compound_id": "exp_metastable_NiHg4_mp-570835",
+      "vasp_wall_time_s": 107.18,
+      "lobster_wall_time_s": 241.76
+    },
+    {
+      "compound_id": "exp_metastable_NiS_mp-1547",
+      "vasp_wall_time_s": 134.67,
+      "lobster_wall_time_s": 242.08
+    },
+    {
+      "compound_id": "exp_metastable_PS_mp-612",
+      "vasp_wall_time_s": 158.87,
+      "lobster_wall_time_s": 114.01
+    },
+    {
+      "compound_id": "exp_metastable_PbAu2_mp-19871",
+      "vasp_wall_time_s": 94.51,
+      "lobster_wall_time_s": 285.6
+    },
+    {
+      "compound_id": "exp_metastable_PbSe_mp-22009",
+      "vasp_wall_time_s": 51.71,
+      "lobster_wall_time_s": 21.85
+    },
+    {
+      "compound_id": "exp_metastable_Rb2Hg7_mp-31474",
+      "vasp_wall_time_s": 157.4,
+      "lobster_wall_time_s": 147.73
+    },
+    {
+      "compound_id": "exp_metastable_Re3Ge7_mp-29141",
+      "vasp_wall_time_s": 733.51,
+      "lobster_wall_time_s": 6675.45
+    },
+    {
+      "compound_id": "exp_metastable_SiO2_mp-546794",
+      "vasp_wall_time_s": 57.12,
+      "lobster_wall_time_s": 101.27
+    },
+    {
+      "compound_id": "exp_metastable_SiRh_mp-2287",
+      "vasp_wall_time_s": 71.62,
+      "lobster_wall_time_s": 337.64
+    },
+    {
+      "compound_id": "exp_metastable_SiS2_mp-1095294",
+      "vasp_wall_time_s": 84.63,
+      "lobster_wall_time_s": 50.3
+    },
+    {
+      "compound_id": "exp_metastable_Sn7Ir5_mp-20466",
+      "vasp_wall_time_s": 263.43,
+      "lobster_wall_time_s": 1241.52
+    },
+    {
+      "compound_id": "exp_metastable_Sr2As_mp-15697",
+      "vasp_wall_time_s": 76.08,
+      "lobster_wall_time_s": 48.06
+    },
+    {
+      "compound_id": "exp_metastable_Sr5Sn3_mp-17720",
+      "vasp_wall_time_s": 374.97,
+      "lobster_wall_time_s": 164.19
+    },
+    {
+      "compound_id": "exp_metastable_SrAl2_mp-1638",
+      "vasp_wall_time_s": 46.44,
+      "lobster_wall_time_s": 41.23
+    },
+    {
+      "compound_id": "exp_metastable_Ta7Co6_mp-1104548",
+      "vasp_wall_time_s": 610.47,
+      "lobster_wall_time_s": 3963.52
+    },
+    {
+      "compound_id": "exp_metastable_Te2Au_mp-567525",
+      "vasp_wall_time_s": 33.69,
+      "lobster_wall_time_s": 27.03
+    },
+    {
+      "compound_id": "exp_metastable_Te2Ir_mp-1551",
+      "vasp_wall_time_s": 85.03,
+      "lobster_wall_time_s": 81.39
+    },
+    {
+      "compound_id": "exp_metastable_Ti3Ge_mp-1189044",
+      "vasp_wall_time_s": 564.3,
+      "lobster_wall_time_s": 3152.56
+    },
+    {
+      "compound_id": "exp_metastable_Y2O3_mp-558573",
+      "vasp_wall_time_s": 243.14,
+      "lobster_wall_time_s": 824.21
+    },
+    {
+      "compound_id": "exp_metastable_ZnAg_mp-1912",
+      "vasp_wall_time_s": 37.23,
+      "lobster_wall_time_s": 221.01
+    },
+    {
+      "compound_id": "exp_metastable_ZrBr_mp-1065846",
+      "vasp_wall_time_s": 51.28,
+      "lobster_wall_time_s": 74.21
+    },
+    {
+      "compound_id": "exp_metastable_ZrGa3_mp-30685",
+      "vasp_wall_time_s": 55.64,
+      "lobster_wall_time_s": 295.21
+    },
+    {
+      "compound_id": "exp_metastable_ZrRh_mp-2808",
+      "vasp_wall_time_s": 33.04,
+      "lobster_wall_time_s": 193.04
+    },
+    {
+      "compound_id": "exp_stable_As2S3_mp-1189572",
+      "vasp_wall_time_s": 187.06,
+      "lobster_wall_time_s": 96.24
+    },
+    {
+      "compound_id": "exp_stable_AsF3_mp-28027",
+      "vasp_wall_time_s": 112.26,
+      "lobster_wall_time_s": 149.89
+    },
+    {
+      "compound_id": "exp_stable_BI3_mp-23189",
+      "vasp_wall_time_s": 81.92,
+      "lobster_wall_time_s": 19.16
+    },
+    {
+      "compound_id": "exp_stable_BW_mp-7832",
+      "vasp_wall_time_s": 122.867,
+      "lobster_wall_time_s": 981.042
+    },
+    {
+      "compound_id": "exp_stable_BaAu2_mp-30363",
+      "vasp_wall_time_s": 40.91,
+      "lobster_wall_time_s": 63.93
+    },
+    {
+      "compound_id": "exp_stable_BaCl2_mp-568662",
+      "vasp_wall_time_s": 36.63,
+      "lobster_wall_time_s": 12.86
+    },
+    {
+      "compound_id": "exp_stable_BaH2_mp-23715",
+      "vasp_wall_time_s": 46.78,
+      "lobster_wall_time_s": 22.51
+    },
+    {
+      "compound_id": "exp_stable_Be2Cu_mp-2031",
+      "vasp_wall_time_s": 105.04,
+      "lobster_wall_time_s": 926.94
+    },
+    {
+      "compound_id": "exp_stable_Be2Nb3_mp-11272",
+      "vasp_wall_time_s": 170.9,
+      "lobster_wall_time_s": 616.63
+    },
+    {
+      "compound_id": "exp_stable_Be2V_mp-11281",
+      "vasp_wall_time_s": 204.93,
+      "lobster_wall_time_s": 1194.12
+    },
+    {
+      "compound_id": "exp_stable_CaAl4_mp-1749",
+      "vasp_wall_time_s": 51.39,
+      "lobster_wall_time_s": 47.57
+    },
+    {
+      "compound_id": "exp_stable_CaSn_mp-2450",
+      "vasp_wall_time_s": 44.79,
+      "lobster_wall_time_s": 48.05
+    },
+    {
+      "compound_id": "exp_stable_CdPd_mp-1696",
+      "vasp_wall_time_s": 40.5,
+      "lobster_wall_time_s": 273.58
+    },
+    {
+      "compound_id": "exp_stable_CoB_mp-20857",
+      "vasp_wall_time_s": 134.29,
+      "lobster_wall_time_s": 1741.99
+    },
+    {
+      "compound_id": "exp_stable_Cs2As3_mp-15557",
+      "vasp_wall_time_s": 120.45,
+      "lobster_wall_time_s": 31.81
+    },
+    {
+      "compound_id": "exp_stable_FeS_mp-505531",
+      "vasp_wall_time_s": 52.41,
+      "lobster_wall_time_s": 128.32
+    },
+    {
+      "compound_id": "exp_stable_Ge2Os_mp-10032",
+      "vasp_wall_time_s": 114.24,
+      "lobster_wall_time_s": 498.25
+    },
+    {
+      "compound_id": "exp_stable_HfTc2_mp-1095669",
+      "vasp_wall_time_s": 200.97,
+      "lobster_wall_time_s": 1293.32
+    },
+    {
+      "compound_id": "exp_stable_Hg4Pt_mp-936",
+      "vasp_wall_time_s": 92.16,
+      "lobster_wall_time_s": 263.57
+    },
+    {
+      "compound_id": "exp_stable_HgF2_mp-8177",
+      "vasp_wall_time_s": 50.81,
+      "lobster_wall_time_s": 146.36
+    },
+    {
+      "compound_id": "exp_stable_InBr_mp-22870",
+      "vasp_wall_time_s": 48.48,
+      "lobster_wall_time_s": 35.26
+    },
+    {
+      "compound_id": "exp_stable_KI_mp-22898",
+      "vasp_wall_time_s": 22.66,
+      "lobster_wall_time_s": 7.69
+    },
+    {
+      "compound_id": "exp_stable_KN3_mp-827",
+      "vasp_wall_time_s": 71.71,
+      "lobster_wall_time_s": 68.81
+    },
+    {
+      "compound_id": "exp_stable_Li2Se_mp-2286",
+      "vasp_wall_time_s": 28.64,
+      "lobster_wall_time_s": 35.14
+    },
+    {
+      "compound_id": "exp_stable_LiB_mp-1001835",
+      "vasp_wall_time_s": 28.69,
+      "lobster_wall_time_s": 83.15
+    },
+    {
+      "compound_id": "exp_stable_Mg2Ni_mp-2137",
+      "vasp_wall_time_s": 327.41,
+      "lobster_wall_time_s": 804.05
+    },
+    {
+      "compound_id": "exp_stable_MgP4_mp-384",
+      "vasp_wall_time_s": 52.03,
+      "lobster_wall_time_s": 51.03
+    },
+    {
+      "compound_id": "exp_stable_MnAl12_mp-1104165",
+      "vasp_wall_time_s": 114.5,
+      "lobster_wall_time_s": 98.51
+    },
+    {
+      "compound_id": "exp_stable_MoSe2_mp-1634",
+      "vasp_wall_time_s": 68.15,
+      "lobster_wall_time_s": 94.53
+    },
+    {
+      "compound_id": "exp_stable_NaS_mp-2400",
+      "vasp_wall_time_s": 55.9,
+      "lobster_wall_time_s": 48.72
+    },
+    {
+      "compound_id": "exp_stable_Na_mp-10172",
+      "vasp_wall_time_s": 9.29,
+      "lobster_wall_time_s": 5.12
+    },
+    {
+      "compound_id": "exp_stable_Nb3Ir_mp-1458",
+      "vasp_wall_time_s": 130.0,
+      "lobster_wall_time_s": 607.84
+    },
+    {
+      "compound_id": "exp_stable_NbGa3_mp-1973",
+      "vasp_wall_time_s": 79.04,
+      "lobster_wall_time_s": 409.37
+    },
+    {
+      "compound_id": "exp_stable_PI2_mp-29443",
+      "vasp_wall_time_s": 49.4,
+      "lobster_wall_time_s": 22.32
+    },
+    {
+      "compound_id": "exp_stable_PbSe_mp-2201",
+      "vasp_wall_time_s": 38.74,
+      "lobster_wall_time_s": 45.05
+    },
+    {
+      "compound_id": "exp_stable_RbI_mp-22903",
+      "vasp_wall_time_s": 27.0,
+      "lobster_wall_time_s": 8.37
+    },
+    {
+      "compound_id": "exp_stable_Sc5Ge3_mp-17190",
+      "vasp_wall_time_s": 445.96,
+      "lobster_wall_time_s": 3831.18
+    },
+    {
+      "compound_id": "exp_stable_ScAg2_mp-1018128",
+      "vasp_wall_time_s": 39.25,
+      "lobster_wall_time_s": 237.16
+    },
+    {
+      "compound_id": "exp_stable_ScTe_mp-10026",
+      "vasp_wall_time_s": 57.78,
+      "lobster_wall_time_s": 76.07
+    },
+    {
+      "compound_id": "exp_stable_SnPt_mp-19856",
+      "vasp_wall_time_s": 61.33,
+      "lobster_wall_time_s": 185.01
+    },
+    {
+      "compound_id": "exp_stable_SrO2_mp-2697",
+      "vasp_wall_time_s": 26.98,
+      "lobster_wall_time_s": 44.82
+    },
+    {
+      "compound_id": "exp_stable_SrSi_mp-2661",
+      "vasp_wall_time_s": 32.89,
+      "lobster_wall_time_s": 18.33
+    },
+    {
+      "compound_id": "exp_stable_Ta5Ge3_mp-17593",
+      "vasp_wall_time_s": 420.667,
+      "lobster_wall_time_s": 3616.521
+    },
+    {
+      "compound_id": "exp_stable_TaP_mp-1067587",
+      "vasp_wall_time_s": 45.31,
+      "lobster_wall_time_s": 121.94
+    },
+    {
+      "compound_id": "exp_stable_TaSb2_mp-11697",
+      "vasp_wall_time_s": 64.83,
+      "lobster_wall_time_s": 85.93
+    },
+    {
+      "compound_id": "exp_stable_Te2Pd_mp-782",
+      "vasp_wall_time_s": 33.78,
+      "lobster_wall_time_s": 27.02
+    },
+    {
+      "compound_id": "exp_stable_Te2Ru_mp-267",
+      "vasp_wall_time_s": 80.91,
+      "lobster_wall_time_s": 108.41
+    },
+    {
+      "compound_id": "exp_stable_TeO2_mp-8377",
+      "vasp_wall_time_s": 73.38,
+      "lobster_wall_time_s": 92.02
+    },
+    {
+      "compound_id": "exp_stable_Ti3In_mp-866046",
+      "vasp_wall_time_s": 182.45,
+      "lobster_wall_time_s": 750.96
+    },
+    {
+      "compound_id": "exp_stable_Ti3Pt_mp-2339",
+      "vasp_wall_time_s": 101.52,
+      "lobster_wall_time_s": 674.81
+    },
+    {
+      "compound_id": "exp_stable_TiBe12_mp-1104067",
+      "vasp_wall_time_s": 163.34,
+      "lobster_wall_time_s": 801.18
+    },
+    {
+      "compound_id": "exp_stable_TiNi_mp-1048",
+      "vasp_wall_time_s": 79.64,
+      "lobster_wall_time_s": 479.81
+    },
+    {
+      "compound_id": "exp_stable_TiO_mp-1071163",
+      "vasp_wall_time_s": 112.39,
+      "lobster_wall_time_s": 989.45
+    },
+    {
+      "compound_id": "exp_stable_TiSi2_mp-1077503",
+      "vasp_wall_time_s": 59.28,
+      "lobster_wall_time_s": 175.02
+    },
+    {
+      "compound_id": "exp_stable_TlCl_mp-571079",
+      "vasp_wall_time_s": 41.2,
+      "lobster_wall_time_s": 35.69
+    },
+    {
+      "compound_id": "exp_stable_VNi2_mp-11531",
+      "vasp_wall_time_s": 60.86,
+      "lobster_wall_time_s": 544.18
+    },
+    {
+      "compound_id": "exp_stable_WO2_mp-1524394",
+      "vasp_wall_time_s": 167.34,
+      "lobster_wall_time_s": 1065.39
+    },
+    {
+      "compound_id": "exp_stable_Zr2Au_mp-2348",
+      "vasp_wall_time_s": 57.2,
+      "lobster_wall_time_s": 190.24
+    },
+    {
+      "compound_id": "exp_stable_Zr5Pb3_mp-681992",
+      "vasp_wall_time_s": 448.82,
+      "lobster_wall_time_s": 2430.18
+    },
+    {
+      "compound_id": "exp_stable_ZrMo2_mp-2049",
+      "vasp_wall_time_s": 158.44,
+      "lobster_wall_time_s": 524.43
+    },
+    {
+      "compound_id": "extension_Ag3As_mp-1183193",
+      "vasp_wall_time_s": 114.739,
+      "lobster_wall_time_s": 455.691
+    },
+    {
+      "compound_id": "extension_Ag3Pt_mp-12065",
+      "vasp_wall_time_s": 49.235,
+      "lobster_wall_time_s": 355.943
+    },
+    {
+      "compound_id": "extension_Ag3Sb_mp-2273",
+      "vasp_wall_time_s": 46.132,
+      "lobster_wall_time_s": 145.483
+    },
+    {
+      "compound_id": "extension_AgH_mp-1096804",
+      "vasp_wall_time_s": 42.131,
+      "lobster_wall_time_s": 192.852
+    },
+    {
+      "compound_id": "extension_AgI_mp-22915",
+      "vasp_wall_time_s": 31.06,
+      "lobster_wall_time_s": 52.905
+    },
+    {
+      "compound_id": "extension_AgN_anchor_mp-1091417",
+      "vasp_wall_time_s": 142.513,
+      "lobster_wall_time_s": 544.056
+    },
+    {
+      "compound_id": "extension_AgN_poly_mp-1009766",
+      "vasp_wall_time_s": 36.277,
+      "lobster_wall_time_s": 70.574
+    },
+    {
+      "compound_id": "extension_AgN_poly_mp-1424734",
+      "vasp_wall_time_s": 62.791,
+      "lobster_wall_time_s": 140.609
+    },
+    {
+      "compound_id": "extension_AgN_poly_mp-1428312",
+      "vasp_wall_time_s": 37.079,
+      "lobster_wall_time_s": 142.477
+    },
+    {
+      "compound_id": "extension_AgPb3_mp-1183256",
+      "vasp_wall_time_s": 89.356,
+      "lobster_wall_time_s": 190.774
+    },
+    {
+      "compound_id": "extension_AgPd_mp-1183222",
+      "vasp_wall_time_s": 45.436,
+      "lobster_wall_time_s": 354.626
+    },
+    {
+      "compound_id": "extension_Ag_mp-124",
+      "vasp_wall_time_s": 40.222,
+      "lobster_wall_time_s": 262.018
+    },
+    {
+      "compound_id": "extension_Al12Mo_mp-550",
+      "vasp_wall_time_s": 116.404,
+      "lobster_wall_time_s": 153.385
+    },
+    {
+      "compound_id": "extension_Al2W_mp-12524",
+      "vasp_wall_time_s": 94.632,
+      "lobster_wall_time_s": 221.004
+    },
+    {
+      "compound_id": "extension_Al3Ag_mp-1183130",
+      "vasp_wall_time_s": 36.912,
+      "lobster_wall_time_s": 86.176
+    },
+    {
+      "compound_id": "extension_Al3As_mp-1183129",
+      "vasp_wall_time_s": 37.661,
+      "lobster_wall_time_s": 69.634
+    },
+    {
+      "compound_id": "extension_AlAg2_mp-985805",
+      "vasp_wall_time_s": 87.377,
+      "lobster_wall_time_s": 483.835
+    },
+    {
+      "compound_id": "extension_AlAg_mp-1228901",
+      "vasp_wall_time_s": 33.781,
+      "lobster_wall_time_s": 155.774
+    },
+    {
+      "compound_id": "extension_AlH3_mp-1106356",
+      "vasp_wall_time_s": 92.928,
+      "lobster_wall_time_s": 47.646
+    },
+    {
+      "compound_id": "extension_Al_mp-134",
+      "vasp_wall_time_s": 13.087,
+      "lobster_wall_time_s": 29.848
+    },
+    {
+      "compound_id": "extension_As3W2_mp-11696",
+      "vasp_wall_time_s": 106.52600000000001,
+      "lobster_wall_time_s": 201.393
+    },
+    {
+      "compound_id": "extension_As4S3_mp-27543",
+      "vasp_wall_time_s": 347.822,
+      "lobster_wall_time_s": 150.739
+    },
+    {
+      "compound_id": "extension_As4S3_mp-557321",
+      "vasp_wall_time_s": 365.478,
+      "lobster_wall_time_s": 215.013
+    },
+    {
+      "compound_id": "extension_As_mp-158",
+      "vasp_wall_time_s": 28.311,
+      "lobster_wall_time_s": 36.288
+    },
+    {
+      "compound_id": "extension_Au2S_mp-947",
+      "vasp_wall_time_s": 75.19800000000001,
+      "lobster_wall_time_s": 184.114
+    },
+    {
+      "compound_id": "extension_Au_mp-81",
+      "vasp_wall_time_s": 40.883,
+      "lobster_wall_time_s": 264.049
+    },
+    {
+      "compound_id": "extension_BPd5_mp-1228665",
+      "vasp_wall_time_s": 783.882,
+      "lobster_wall_time_s": 491.28
+    },
+    {
+      "compound_id": "extension_B_mp-160",
+      "vasp_wall_time_s": 82.512,
+      "lobster_wall_time_s": 393.953
+    },
+    {
+      "compound_id": "extension_Ba3Ca_mp-1183342",
+      "vasp_wall_time_s": 189.859,
+      "lobster_wall_time_s": 11.339
+    },
+    {
+      "compound_id": "extension_Ba3N2_mp-1013528",
+      "vasp_wall_time_s": 71.08500000000001,
+      "lobster_wall_time_s": 30.935
+    },
+    {
+      "compound_id": "extension_Ba4Pd_mp-1214438",
+      "vasp_wall_time_s": 224.797,
+      "lobster_wall_time_s": 37.883
+    },
+    {
+      "compound_id": "extension_Ba5P4_exp_mp-17566",
+      "vasp_wall_time_s": 578.745,
+      "lobster_wall_time_s": 285.344
+    },
+    {
+      "compound_id": "extension_BaCl2_exp_mp-23199",
+      "vasp_wall_time_s": 118.991,
+      "lobster_wall_time_s": 53.104
+    },
+    {
+      "compound_id": "extension_BaF3_exp_mp-1080821",
+      "vasp_wall_time_s": 107.251,
+      "lobster_wall_time_s": 107.094
+    },
+    {
+      "compound_id": "extension_BaF3_theo_mp-1183303",
+      "vasp_wall_time_s": 43.304,
+      "lobster_wall_time_s": 46.589
+    },
+    {
+      "compound_id": "extension_BaMg3_mp-1016218",
+      "vasp_wall_time_s": 39.389,
+      "lobster_wall_time_s": 18.423
+    },
+    {
+      "compound_id": "extension_BaN2_exp_mp-1102371",
+      "vasp_wall_time_s": 246.691,
+      "lobster_wall_time_s": 63.176
+    },
+    {
+      "compound_id": "extension_BaO_exp_mp-1008500",
+      "vasp_wall_time_s": 52.78,
+      "lobster_wall_time_s": 48.344
+    },
+    {
+      "compound_id": "extension_BaO_theo_mp-1950989",
+      "vasp_wall_time_s": 39.231,
+      "lobster_wall_time_s": 25.748
+    },
+    {
+      "compound_id": "extension_BaP10_mp-28035",
+      "vasp_wall_time_s": 278.793,
+      "lobster_wall_time_s": 213.584
+    },
+    {
+      "compound_id": "extension_BaS3_exp_mp-556296",
+      "vasp_wall_time_s": 135.35,
+      "lobster_wall_time_s": 66.049
+    },
+    {
+      "compound_id": "extension_Ba_mp-122",
+      "vasp_wall_time_s": 17.965,
+      "lobster_wall_time_s": 6.108
+    },
+    {
+      "compound_id": "extension_Be12Mo_mp-1475",
+      "vasp_wall_time_s": 144.901,
+      "lobster_wall_time_s": 801.112
+    },
+    {
+      "compound_id": "extension_Be3N2_exp_mp-18337",
+      "vasp_wall_time_s": 483.032,
+      "lobster_wall_time_s": 8739.728
+    },
+    {
+      "compound_id": "extension_Be3N2_theo_mp-1017550",
+      "vasp_wall_time_s": 42.255,
+      "lobster_wall_time_s": 302.916
+    },
+    {
+      "compound_id": "extension_Be3P2_exp_mp-567841",
+      "vasp_wall_time_s": 502.229,
+      "lobster_wall_time_s": 1976.626
+    },
+    {
+      "compound_id": "extension_Be3P2_mp-1084771",
+      "vasp_wall_time_s": 90.31,
+      "lobster_wall_time_s": 233.879
+    },
+    {
+      "compound_id": "extension_Be3P2_mp-567841",
+      "vasp_wall_time_s": 566.472,
+      "lobster_wall_time_s": 2863.988
+    },
+    {
+      "compound_id": "extension_Be3P2_theo_mp-1084771",
+      "vasp_wall_time_s": 70.423,
+      "lobster_wall_time_s": 136.346
+    },
+    {
+      "compound_id": "extension_BeCl2_exp_mp-23267",
+      "vasp_wall_time_s": 53.679,
+      "lobster_wall_time_s": 29.625
+    },
+    {
+      "compound_id": "extension_BeCl2_theo_mp-1172909",
+      "vasp_wall_time_s": 4694.916,
+      "lobster_wall_time_s": 195.558
+    },
+    {
+      "compound_id": "extension_BeF2_exp_mp-15951",
+      "vasp_wall_time_s": 82.314,
+      "lobster_wall_time_s": 260.74
+    },
+    {
+      "compound_id": "extension_BeF2_theo_mp-975644",
+      "vasp_wall_time_s": 39.782,
+      "lobster_wall_time_s": 91.42
+    },
+    {
+      "compound_id": "extension_BeO_exp_mp-7599",
+      "vasp_wall_time_s": 55.49,
+      "lobster_wall_time_s": 382.927
+    },
+    {
+      "compound_id": "extension_BeO_theo_mp-1778",
+      "vasp_wall_time_s": 37.347,
+      "lobster_wall_time_s": 148.125
+    },
+    {
+      "compound_id": "extension_Be_mp-87",
+      "vasp_wall_time_s": 32.662,
+      "lobster_wall_time_s": 265.993
+    },
+    {
+      "compound_id": "extension_Bi2O3_anchor_mp-558953",
+      "vasp_wall_time_s": 175.652,
+      "lobster_wall_time_s": 149.09
+    },
+    {
+      "compound_id": "extension_Bi2O3_poly_mp-1383505",
+      "vasp_wall_time_s": 37.181,
+      "lobster_wall_time_s": 34.821
+    },
+    {
+      "compound_id": "extension_Bi2O3_poly_mp-674644",
+      "vasp_wall_time_s": 175.48,
+      "lobster_wall_time_s": 117.763
+    },
+    {
+      "compound_id": "extension_Bi2O3_poly_mp-714859",
+      "vasp_wall_time_s": 37.271,
+      "lobster_wall_time_s": 35.508
+    },
+    {
+      "compound_id": "extension_Br_mp-23154",
+      "vasp_wall_time_s": 26.525,
+      "lobster_wall_time_s": 13.561
+    },
+    {
+      "compound_id": "extension_C(NO)2_mp-1197051",
+      "vasp_wall_time_s": 640.355,
+      "lobster_wall_time_s": 1498.835
+    },
+    {
+      "compound_id": "extension_C2N2O_mp-1214250",
+      "vasp_wall_time_s": 336.608,
+      "lobster_wall_time_s": 427.503
+    },
+    {
+      "compound_id": "extension_C3N4_anchor_mp-571653",
+      "vasp_wall_time_s": 49.762,
+      "lobster_wall_time_s": 331.602
+    },
+    {
+      "compound_id": "extension_C3N4_mp-567885",
+      "vasp_wall_time_s": 108.924,
+      "lobster_wall_time_s": 254.469
+    },
+    {
+      "compound_id": "extension_C3N4_mp-570572",
+      "vasp_wall_time_s": 51.749,
+      "lobster_wall_time_s": 137.418
+    },
+    {
+      "compound_id": "extension_C3N4_mp-971683",
+      "vasp_wall_time_s": 211.056,
+      "lobster_wall_time_s": 595.119
+    },
+    {
+      "compound_id": "extension_C3N4_poly_mp-1182484",
+      "vasp_wall_time_s": 193.905,
+      "lobster_wall_time_s": 100.368
+    },
+    {
+      "compound_id": "extension_C3N4_poly_mp-2852",
+      "vasp_wall_time_s": 122.093,
+      "lobster_wall_time_s": 1175.054
+    },
+    {
+      "compound_id": "extension_C3N4_poly_mp-563",
+      "vasp_wall_time_s": 96.56,
+      "lobster_wall_time_s": 616.272
+    },
+    {
+      "compound_id": "extension_CMcarbon_mp-1080826",
+      "vasp_wall_time_s": 54.276,
+      "lobster_wall_time_s": 410.332
+    },
+    {
+      "compound_id": "extension_CWcarbon_mp-1190171",
+      "vasp_wall_time_s": 105.68,
+      "lobster_wall_time_s": 932.703
+    },
+    {
+      "compound_id": "extension_Ca3N2_exp_mp-1047",
+      "vasp_wall_time_s": 168.815,
+      "lobster_wall_time_s": 96.82
+    },
+    {
+      "compound_id": "extension_Ca3N2_mp-844",
+      "vasp_wall_time_s": 1506.699,
+      "lobster_wall_time_s": 1854.173
+    },
+    {
+      "compound_id": "extension_Ca3N2_theo_mp-1013524",
+      "vasp_wall_time_s": 56.0,
+      "lobster_wall_time_s": 48.778
+    },
+    {
+      "compound_id": "extension_Ca3Zn_mp-1039229",
+      "vasp_wall_time_s": 66.204,
+      "lobster_wall_time_s": 20.674
+    },
+    {
+      "compound_id": "extension_CaCl2_exp_mp-23214",
+      "vasp_wall_time_s": 45.249,
+      "lobster_wall_time_s": 22.319
+    },
+    {
+      "compound_id": "extension_CaCl2_theo_mp-1120739",
+      "vasp_wall_time_s": 28.671,
+      "lobster_wall_time_s": 18.879
+    },
+    {
+      "compound_id": "extension_CaF2_exp_mp-10464",
+      "vasp_wall_time_s": 82.012,
+      "lobster_wall_time_s": 185.605
+    },
+    {
+      "compound_id": "extension_CaF2_theo_mp-554355",
+      "vasp_wall_time_s": 25.326,
+      "lobster_wall_time_s": 39.034
+    },
+    {
+      "compound_id": "extension_CaN6_mp-656097",
+      "vasp_wall_time_s": 215.428,
+      "lobster_wall_time_s": 154.916
+    },
+    {
+      "compound_id": "extension_CaN6_mp-676",
+      "vasp_wall_time_s": 160.702,
+      "lobster_wall_time_s": 278.673
+    },
+    {
+      "compound_id": "extension_CaN_mp-1058549",
+      "vasp_wall_time_s": 42.991,
+      "lobster_wall_time_s": 56.638
+    },
+    {
+      "compound_id": "extension_CaNi_mp-1059707",
+      "vasp_wall_time_s": 36.123,
+      "lobster_wall_time_s": 85.901
+    },
+    {
+      "compound_id": "extension_CaO_exp_mp-1079707",
+      "vasp_wall_time_s": 63.379,
+      "lobster_wall_time_s": 84.531
+    },
+    {
+      "compound_id": "extension_CaO_mp-2605",
+      "vasp_wall_time_s": 41.204,
+      "lobster_wall_time_s": 90.095
+    },
+    {
+      "compound_id": "extension_CaO_theo_mp-1181903",
+      "vasp_wall_time_s": 94.309,
+      "lobster_wall_time_s": 82.021
+    },
+    {
+      "compound_id": "extension_Ca_mp-21",
+      "vasp_wall_time_s": 20.487,
+      "lobster_wall_time_s": 8.368
+    },
+    {
+      "compound_id": "extension_CdIn3_mp-1183674",
+      "vasp_wall_time_s": 70.293,
+      "lobster_wall_time_s": 131.135
+    },
+    {
+      "compound_id": "extension_CdP4_mp-7904",
+      "vasp_wall_time_s": 74.146,
+      "lobster_wall_time_s": 83.63
+    },
+    {
+      "compound_id": "extension_CdSb3_mp-1183739",
+      "vasp_wall_time_s": 93.785,
+      "lobster_wall_time_s": 98.236
+    },
+    {
+      "compound_id": "extension_Cd_mp-94",
+      "vasp_wall_time_s": 27.498,
+      "lobster_wall_time_s": 125.54
+    },
+    {
+      "compound_id": "extension_Cdiamond_mp-66",
+      "vasp_wall_time_s": 26.071,
+      "lobster_wall_time_s": 169.067
+    },
+    {
+      "compound_id": "extension_Cgraphite_mp-48",
+      "vasp_wall_time_s": 22.94,
+      "lobster_wall_time_s": 68.776
+    },
+    {
+      "compound_id": "extension_Cl_mp-22848",
+      "vasp_wall_time_s": 23.794,
+      "lobster_wall_time_s": 14.266
+    },
+    {
+      "compound_id": "extension_Clonsdaleite_mp-47",
+      "vasp_wall_time_s": 31.874,
+      "lobster_wall_time_s": 225.233
+    },
+    {
+      "compound_id": "extension_CoGe_mp-21237",
+      "vasp_wall_time_s": 166.834,
+      "lobster_wall_time_s": 958.444
+    },
+    {
+      "compound_id": "extension_CoRe_mp-1225995",
+      "vasp_wall_time_s": 61.268,
+      "lobster_wall_time_s": 295.968
+    },
+    {
+      "compound_id": "extension_CoSn_mp-20536",
+      "vasp_wall_time_s": 125.703,
+      "lobster_wall_time_s": 699.795
+    },
+    {
+      "compound_id": "extension_Co_mp-102",
+      "vasp_wall_time_s": 110.368,
+      "lobster_wall_time_s": 781.193
+    },
+    {
+      "compound_id": "extension_Cr5Si3_mp-7506",
+      "vasp_wall_time_s": 420.934,
+      "lobster_wall_time_s": 2827.981
+    },
+    {
+      "compound_id": "extension_CrRe3_mp-1183703",
+      "vasp_wall_time_s": 115.533,
+      "lobster_wall_time_s": 656.655
+    },
+    {
+      "compound_id": "extension_CrW_mp-1226162",
+      "vasp_wall_time_s": 47.675,
+      "lobster_wall_time_s": 261.329
+    },
+    {
+      "compound_id": "extension_Cr_mp-90",
+      "vasp_wall_time_s": 60.925,
+      "lobster_wall_time_s": 572.439
+    },
+    {
+      "compound_id": "extension_Cs2S_exp_mp-1077814",
+      "vasp_wall_time_s": 84.605,
+      "lobster_wall_time_s": 22.925
+    },
+    {
+      "compound_id": "extension_CsCl_exp_mp-573697",
+      "vasp_wall_time_s": 20.676,
+      "lobster_wall_time_s": 7.354
+    },
+    {
+      "compound_id": "extension_CsF_exp_mp-8455",
+      "vasp_wall_time_s": 18.466,
+      "lobster_wall_time_s": 12.352
+    },
+    {
+      "compound_id": "extension_CsN3_exp_mp-510557",
+      "vasp_wall_time_s": 87.029,
+      "lobster_wall_time_s": 39.723
+    },
+    {
+      "compound_id": "extension_CsN3_mp-1225892",
+      "vasp_wall_time_s": 40.116,
+      "lobster_wall_time_s": 26.199
+    },
+    {
+      "compound_id": "extension_CsN3_mp-510557",
+      "vasp_wall_time_s": 86.80799999999999,
+      "lobster_wall_time_s": 38.652
+    },
+    {
+      "compound_id": "extension_CsN3_theo_mp-1225892",
+      "vasp_wall_time_s": 40.268,
+      "lobster_wall_time_s": 25.962
+    },
+    {
+      "compound_id": "extension_CsO2_exp_mp-1441",
+      "vasp_wall_time_s": 75.386,
+      "lobster_wall_time_s": 41.512
+    },
+    {
+      "compound_id": "extension_CsO2_theo_mp-1096936",
+      "vasp_wall_time_s": 57.002,
+      "lobster_wall_time_s": 55.758
+    },
+    {
+      "compound_id": "extension_CsP7_exp_mp-1201790",
+      "vasp_wall_time_s": 452.378,
+      "lobster_wall_time_s": 252.241
+    },
+    {
+      "compound_id": "extension_CsP7_mp-1201790",
+      "vasp_wall_time_s": 451.336,
+      "lobster_wall_time_s": 253.491
+    },
+    {
+      "compound_id": "extension_CsP7_mp-1213206",
+      "vasp_wall_time_s": 447.288,
+      "lobster_wall_time_s": 263.341
+    },
+    {
+      "compound_id": "extension_CsP7_theo_mp-1213206",
+      "vasp_wall_time_s": 457.737,
+      "lobster_wall_time_s": 265.077
+    },
+    {
+      "compound_id": "extension_CsRb_mp-1225895",
+      "vasp_wall_time_s": 22.678,
+      "lobster_wall_time_s": 6.549
+    },
+    {
+      "compound_id": "extension_Cs_mp-1",
+      "vasp_wall_time_s": 14.551,
+      "lobster_wall_time_s": 2.2800000000000002
+    },
+    {
+      "compound_id": "extension_Cu2S_mp-12087",
+      "vasp_wall_time_s": 40.297,
+      "lobster_wall_time_s": 159.548
+    },
+    {
+      "compound_id": "extension_Cu2S_mp-553942",
+      "vasp_wall_time_s": 131.75900000000001,
+      "lobster_wall_time_s": 656.052
+    },
+    {
+      "compound_id": "extension_Cu3Te2_mp-1225676",
+      "vasp_wall_time_s": 66.164,
+      "lobster_wall_time_s": 120.45
+    },
+    {
+      "compound_id": "extension_Cu4Au_mp-1225761",
+      "vasp_wall_time_s": 1861.264,
+      "lobster_wall_time_s": 278.587
+    },
+    {
+      "compound_id": "extension_Cu7Te4_mp-624307",
+      "vasp_wall_time_s": 477.224,
+      "lobster_wall_time_s": 1293.683
+    },
+    {
+      "compound_id": "extension_CuH_mp-1225705",
+      "vasp_wall_time_s": 54.749,
+      "lobster_wall_time_s": 441.901
+    },
+    {
+      "compound_id": "extension_CuNi_mp-1184069",
+      "vasp_wall_time_s": 54.371,
+      "lobster_wall_time_s": 424.417
+    },
+    {
+      "compound_id": "extension_Cu_mp-30",
+      "vasp_wall_time_s": 33.846,
+      "lobster_wall_time_s": 263.954
+    },
+    {
+      "compound_id": "extension_F_mp-561203",
+      "vasp_wall_time_s": 23.228,
+      "lobster_wall_time_s": 49.625
+    },
+    {
+      "compound_id": "extension_Fe_mp-13",
+      "vasp_wall_time_s": 89.431,
+      "lobster_wall_time_s": 819.186
+    },
+    {
+      "compound_id": "extension_Ga2Au7_mp-571598",
+      "vasp_wall_time_s": 803.35,
+      "lobster_wall_time_s": 9037.497
+    },
+    {
+      "compound_id": "extension_Ga3Hg_mp-1184289",
+      "vasp_wall_time_s": 123.1,
+      "lobster_wall_time_s": 563.603
+    },
+    {
+      "compound_id": "extension_Ga3Pb_mp-1184425",
+      "vasp_wall_time_s": 61.125,
+      "lobster_wall_time_s": 157.089
+    },
+    {
+      "compound_id": "extension_Ga3Re_mp-1188393",
+      "vasp_wall_time_s": 475.469,
+      "lobster_wall_time_s": 2728.976
+    },
+    {
+      "compound_id": "extension_GaSb_mp-1224785",
+      "vasp_wall_time_s": 32.566,
+      "lobster_wall_time_s": 36.798
+    },
+    {
+      "compound_id": "extension_Ga_mp-142",
+      "vasp_wall_time_s": 42.52,
+      "lobster_wall_time_s": 162.409
+    },
+    {
+      "compound_id": "extension_Ge3Mo5_mp-17094",
+      "vasp_wall_time_s": 445.827,
+      "lobster_wall_time_s": 4947.163
+    },
+    {
+      "compound_id": "extension_Ge3O_mp-1184665",
+      "vasp_wall_time_s": 127.462,
+      "lobster_wall_time_s": 231.445
+    },
+    {
+      "compound_id": "extension_GeAs_mp-7591",
+      "vasp_wall_time_s": 38.14,
+      "lobster_wall_time_s": 87.063
+    },
+    {
+      "compound_id": "extension_GeSb_mp-9935",
+      "vasp_wall_time_s": 31.715,
+      "lobster_wall_time_s": 57.927
+    },
+    {
+      "compound_id": "extension_GeTe_mp-938",
+      "vasp_wall_time_s": 36.35,
+      "lobster_wall_time_s": 44.392
+    },
+    {
+      "compound_id": "extension_Ge_mp-32",
+      "vasp_wall_time_s": 31.447,
+      "lobster_wall_time_s": 105.262
+    },
+    {
+      "compound_id": "extension_H2CN2_mp-703527",
+      "vasp_wall_time_s": 391.369,
+      "lobster_wall_time_s": 638.313
+    },
+    {
+      "compound_id": "extension_H2CN5_mp-1212563",
+      "vasp_wall_time_s": 306.882,
+      "lobster_wall_time_s": 524.961
+    },
+    {
+      "compound_id": "extension_H3Pd4_mp-1224413",
+      "vasp_wall_time_s": 62.141,
+      "lobster_wall_time_s": 400.892
+    },
+    {
+      "compound_id": "extension_H4N_mp-1238814",
+      "vasp_wall_time_s": 18.676,
+      "lobster_wall_time_s": 16.243
+    },
+    {
+      "compound_id": "extension_H9CN9_mp-1202455",
+      "vasp_wall_time_s": 336.299,
+      "lobster_wall_time_s": 571.285
+    },
+    {
+      "compound_id": "extension_HC2N3_mp-1103408",
+      "vasp_wall_time_s": 61.64,
+      "lobster_wall_time_s": 322.753
+    },
+    {
+      "compound_id": "extension_HC2_mp-995184",
+      "vasp_wall_time_s": 72.838,
+      "lobster_wall_time_s": 35.412
+    },
+    {
+      "compound_id": "extension_HC3_mp-995200",
+      "vasp_wall_time_s": 37.524,
+      "lobster_wall_time_s": 79.565
+    },
+    {
+      "compound_id": "extension_HC6_mp-995202",
+      "vasp_wall_time_s": 120.32,
+      "lobster_wall_time_s": 387.71
+    },
+    {
+      "compound_id": "extension_HC_mp-995197",
+      "vasp_wall_time_s": 118.97,
+      "lobster_wall_time_s": 159.842
+    },
+    {
+      "compound_id": "extension_HN_mp-1224501",
+      "vasp_wall_time_s": 143.402,
+      "lobster_wall_time_s": 158.096
+    },
+    {
+      "compound_id": "extension_HN_mp-23922",
+      "vasp_wall_time_s": 170.665,
+      "lobster_wall_time_s": 218.568
+    },
+    {
+      "compound_id": "extension_HN_mp-720515",
+      "vasp_wall_time_s": 348.762,
+      "lobster_wall_time_s": 574.189
+    },
+    {
+      "compound_id": "extension_H_mp-730101",
+      "vasp_wall_time_s": 23.507,
+      "lobster_wall_time_s": 3.16
+    },
+    {
+      "compound_id": "extension_Hf3Pb_mp-1184772",
+      "vasp_wall_time_s": 95.874,
+      "lobster_wall_time_s": 185.766
+    },
+    {
+      "compound_id": "extension_HfCd_mp-1007758",
+      "vasp_wall_time_s": 74.173,
+      "lobster_wall_time_s": 338.759
+    },
+    {
+      "compound_id": "extension_HfCr2_mp-569624",
+      "vasp_wall_time_s": 403.10699999999997,
+      "lobster_wall_time_s": 3104.506
+    },
+    {
+      "compound_id": "extension_HfCu3_mp-1184704",
+      "vasp_wall_time_s": 70.97,
+      "lobster_wall_time_s": 381.368
+    },
+    {
+      "compound_id": "extension_HfMg15_mp-1023478",
+      "vasp_wall_time_s": 181.763,
+      "lobster_wall_time_s": 156.077
+    },
+    {
+      "compound_id": "extension_HfW2_mp-1224230",
+      "vasp_wall_time_s": 49.974,
+      "lobster_wall_time_s": 242.417
+    },
+    {
+      "compound_id": "extension_Hf_mp-103",
+      "vasp_wall_time_s": 32.272,
+      "lobster_wall_time_s": 146.081
+    },
+    {
+      "compound_id": "extension_Hg3Pb_mp-1184700",
+      "vasp_wall_time_s": 117.25,
+      "lobster_wall_time_s": 261.152
+    },
+    {
+      "compound_id": "extension_Hg3Sb_mp-977242",
+      "vasp_wall_time_s": 101.822,
+      "lobster_wall_time_s": 170.955
+    },
+    {
+      "compound_id": "extension_Hg5Pd2_mp-30721",
+      "vasp_wall_time_s": 176.43099999999998,
+      "lobster_wall_time_s": 1536.346
+    },
+    {
+      "compound_id": "extension_Hg_mp-10861",
+      "vasp_wall_time_s": 36.325,
+      "lobster_wall_time_s": 83.775
+    },
+    {
+      "compound_id": "extension_I_mp-23153",
+      "vasp_wall_time_s": 26.601,
+      "lobster_wall_time_s": 11.339
+    },
+    {
+      "compound_id": "extension_In2Te3_mp-1105025",
+      "vasp_wall_time_s": 436.15,
+      "lobster_wall_time_s": 160.402
+    },
+    {
+      "compound_id": "extension_In7Cu10_mp-646039",
+      "vasp_wall_time_s": 2486.366,
+      "lobster_wall_time_s": 19729.163
+    },
+    {
+      "compound_id": "extension_InNi_mp-20997",
+      "vasp_wall_time_s": 43.458,
+      "lobster_wall_time_s": 224.938
+    },
+    {
+      "compound_id": "extension_InSn4_mp-1223653",
+      "vasp_wall_time_s": 352.387,
+      "lobster_wall_time_s": 118.365
+    },
+    {
+      "compound_id": "extension_In_mp-1055994",
+      "vasp_wall_time_s": 20.671,
+      "lobster_wall_time_s": 71.199
+    },
+    {
+      "compound_id": "extension_Ir3Ru_mp-974358",
+      "vasp_wall_time_s": 115.664,
+      "lobster_wall_time_s": 642.312
+    },
+    {
+      "compound_id": "extension_Ir4W_mp-1223666",
+      "vasp_wall_time_s": 1890.109,
+      "lobster_wall_time_s": 317.2
+    },
+    {
+      "compound_id": "extension_IrPd_mp-1223675",
+      "vasp_wall_time_s": 106.229,
+      "lobster_wall_time_s": 400.386
+    },
+    {
+      "compound_id": "extension_Ir_mp-101",
+      "vasp_wall_time_s": 35.544,
+      "lobster_wall_time_s": 185.022
+    },
+    {
+      "compound_id": "extension_K2O_exp_mp-971",
+      "vasp_wall_time_s": 45.627,
+      "lobster_wall_time_s": 44.654
+    },
+    {
+      "compound_id": "extension_K2O_theo_mp-1223784",
+      "vasp_wall_time_s": 31.648,
+      "lobster_wall_time_s": 18.562
+    },
+    {
+      "compound_id": "extension_K2S_exp_mp-1022",
+      "vasp_wall_time_s": 37.976,
+      "lobster_wall_time_s": 15.133
+    },
+    {
+      "compound_id": "extension_K3Rb_mp-976115",
+      "vasp_wall_time_s": 94.686,
+      "lobster_wall_time_s": 16.882
+    },
+    {
+      "compound_id": "extension_KCl_exp_mp-23289",
+      "vasp_wall_time_s": 19.389,
+      "lobster_wall_time_s": 12.538
+    },
+    {
+      "compound_id": "extension_KF3_exp_mp-1544557",
+      "vasp_wall_time_s": 821.21,
+      "lobster_wall_time_s": 804.302
+    },
+    {
+      "compound_id": "extension_KF3_theo_mp-2749823",
+      "vasp_wall_time_s": 841.064,
+      "lobster_wall_time_s": 801.792
+    },
+    {
+      "compound_id": "extension_KMg15_mp-1023498",
+      "vasp_wall_time_s": 98.44800000000001,
+      "lobster_wall_time_s": 65.837
+    },
+    {
+      "compound_id": "extension_KN2_anchor_mp-1071868",
+      "vasp_wall_time_s": 78.82,
+      "lobster_wall_time_s": 66.783
+    },
+    {
+      "compound_id": "extension_KN2_poly_mp-1180757",
+      "vasp_wall_time_s": 79.379,
+      "lobster_wall_time_s": 57.289
+    },
+    {
+      "compound_id": "extension_KN3_mp-827",
+      "vasp_wall_time_s": 83.99,
+      "lobster_wall_time_s": 113.612
+    },
+    {
+      "compound_id": "extension_KN3_theo_mp-636056",
+      "vasp_wall_time_s": 101.469,
+      "lobster_wall_time_s": 22.849
+    },
+    {
+      "compound_id": "extension_KP15_mp-1211471",
+      "vasp_wall_time_s": 548.309,
+      "lobster_wall_time_s": 311.04
+    },
+    {
+      "compound_id": "extension_KP_exp_mp-1058315",
+      "vasp_wall_time_s": 20.102,
+      "lobster_wall_time_s": 8.736
+    },
+    {
+      "compound_id": "extension_KP_theo_mp-1057787",
+      "vasp_wall_time_s": 20.313,
+      "lobster_wall_time_s": 8.783
+    },
+    {
+      "compound_id": "extension_Li2O_exp_mp-1960",
+      "vasp_wall_time_s": 49.073,
+      "lobster_wall_time_s": 231.328
+    },
+    {
+      "compound_id": "extension_Li2O_theo_mp-755894",
+      "vasp_wall_time_s": 118.3,
+      "lobster_wall_time_s": 1076.459
+    },
+    {
+      "compound_id": "extension_Li2S_exp_mp-1125",
+      "vasp_wall_time_s": 95.301,
+      "lobster_wall_time_s": 170.284
+    },
+    {
+      "compound_id": "extension_Li2S_theo_mp-557142",
+      "vasp_wall_time_s": 41.828,
+      "lobster_wall_time_s": 58.698
+    },
+    {
+      "compound_id": "extension_Li3Ca_mp-976075",
+      "vasp_wall_time_s": 50.311,
+      "lobster_wall_time_s": 40.465
+    },
+    {
+      "compound_id": "extension_Li3N_exp_mp-2341",
+      "vasp_wall_time_s": 83.256,
+      "lobster_wall_time_s": 462.381
+    },
+    {
+      "compound_id": "extension_LiCl_exp_mp-22905",
+      "vasp_wall_time_s": 45.86,
+      "lobster_wall_time_s": 73.082
+    },
+    {
+      "compound_id": "extension_LiCl_theo_mp-1185319",
+      "vasp_wall_time_s": 28.551,
+      "lobster_wall_time_s": 24.146
+    },
+    {
+      "compound_id": "extension_LiF_exp_mp-1138",
+      "vasp_wall_time_s": 26.745,
+      "lobster_wall_time_s": 98.376
+    },
+    {
+      "compound_id": "extension_LiF_theo_mp-1009009",
+      "vasp_wall_time_s": 29.239,
+      "lobster_wall_time_s": 113.634
+    },
+    {
+      "compound_id": "extension_LiN3_mp-2659",
+      "vasp_wall_time_s": 49.573,
+      "lobster_wall_time_s": 158.527
+    },
+    {
+      "compound_id": "extension_LiP5_exp_mp-2412",
+      "vasp_wall_time_s": 188.083,
+      "lobster_wall_time_s": 222.958
+    },
+    {
+      "compound_id": "extension_LiP5_mp-2412",
+      "vasp_wall_time_s": 218.582,
+      "lobster_wall_time_s": 348.463
+    },
+    {
+      "compound_id": "extension_LiP5_mp-32760",
+      "vasp_wall_time_s": 254.918,
+      "lobster_wall_time_s": 230.487
+    },
+    {
+      "compound_id": "extension_LiP5_theo_mp-32760",
+      "vasp_wall_time_s": 255.438,
+      "lobster_wall_time_s": 237.008
+    },
+    {
+      "compound_id": "extension_LiRh3_mp-1001787",
+      "vasp_wall_time_s": 53.994,
+      "lobster_wall_time_s": 342.521
+    },
+    {
+      "compound_id": "extension_LiS4_mp-1143546",
+      "vasp_wall_time_s": 266.677,
+      "lobster_wall_time_s": 24.259
+    },
+    {
+      "compound_id": "extension_Li_mp-1018134",
+      "vasp_wall_time_s": 38.98,
+      "lobster_wall_time_s": 71.112
+    },
+    {
+      "compound_id": "extension_Mg15Ni_mp-1023622",
+      "vasp_wall_time_s": 184.643,
+      "lobster_wall_time_s": 177.08
+    },
+    {
+      "compound_id": "extension_Mg2Ge_mp-250",
+      "vasp_wall_time_s": 58.462,
+      "lobster_wall_time_s": 81.688
+    },
+    {
+      "compound_id": "extension_Mg3Al_mp-978271",
+      "vasp_wall_time_s": 25.179,
+      "lobster_wall_time_s": 34.41
+    },
+    {
+      "compound_id": "extension_Mg3Ru2_mp-625",
+      "vasp_wall_time_s": 405.904,
+      "lobster_wall_time_s": 1507.85
+    },
+    {
+      "compound_id": "extension_Mg3Zr_mp-1094466",
+      "vasp_wall_time_s": 72.056,
+      "lobster_wall_time_s": 91.778
+    },
+    {
+      "compound_id": "extension_Mg5Sc_mp-1185837",
+      "vasp_wall_time_s": 93.241,
+      "lobster_wall_time_s": 75.401
+    },
+    {
+      "compound_id": "extension_Mg5Te_mp-1185828",
+      "vasp_wall_time_s": 48.987,
+      "lobster_wall_time_s": 26.422
+    },
+    {
+      "compound_id": "extension_MgAl2_mp-1102064",
+      "vasp_wall_time_s": 107.994,
+      "lobster_wall_time_s": 164.951
+    },
+    {
+      "compound_id": "extension_MgCd_mp-11307",
+      "vasp_wall_time_s": 46.406,
+      "lobster_wall_time_s": 154.172
+    },
+    {
+      "compound_id": "extension_MgCl2_exp_mp-23210",
+      "vasp_wall_time_s": 50.419,
+      "lobster_wall_time_s": 55.894
+    },
+    {
+      "compound_id": "extension_MgCl2_theo_mp-569626",
+      "vasp_wall_time_s": 40.401,
+      "lobster_wall_time_s": 25.046
+    },
+    {
+      "compound_id": "extension_MgF2_exp_mp-1072956",
+      "vasp_wall_time_s": 43.191,
+      "lobster_wall_time_s": 100.516
+    },
+    {
+      "compound_id": "extension_MgF2_theo_mp-1062842",
+      "vasp_wall_time_s": 23.307,
+      "lobster_wall_time_s": 59.1
+    },
+    {
+      "compound_id": "extension_MgIn2_mp-1077016",
+      "vasp_wall_time_s": 92.11500000000001,
+      "lobster_wall_time_s": 89.327
+    },
+    {
+      "compound_id": "extension_MgO_exp_mp-549706",
+      "vasp_wall_time_s": 31.524,
+      "lobster_wall_time_s": 78.093
+    },
+    {
+      "compound_id": "extension_MgO_theo_mp-1009127",
+      "vasp_wall_time_s": 14.963,
+      "lobster_wall_time_s": 63.274
+    },
+    {
+      "compound_id": "extension_MgPb2_mp-2016042",
+      "vasp_wall_time_s": 180.766,
+      "lobster_wall_time_s": 145.424
+    },
+    {
+      "compound_id": "extension_MgS_exp_mp-1315",
+      "vasp_wall_time_s": 15.244,
+      "lobster_wall_time_s": 18.199
+    },
+    {
+      "compound_id": "extension_MgS_theo_mp-13032",
+      "vasp_wall_time_s": 17.843,
+      "lobster_wall_time_s": 13.564
+    },
+    {
+      "compound_id": "extension_MgTi_mp-1094346",
+      "vasp_wall_time_s": 227.762,
+      "lobster_wall_time_s": 498.687
+    },
+    {
+      "compound_id": "extension_MgTl3_mp-978262",
+      "vasp_wall_time_s": 91.434,
+      "lobster_wall_time_s": 135.133
+    },
+    {
+      "compound_id": "extension_Mg_mp-153",
+      "vasp_wall_time_s": 13.349,
+      "lobster_wall_time_s": 11.367
+    },
+    {
+      "compound_id": "extension_Mn2O7_mp-28338",
+      "vasp_wall_time_s": 3240.944,
+      "lobster_wall_time_s": 12063.962
+    },
+    {
+      "compound_id": "extension_Mn4B_mp-1221769",
+      "vasp_wall_time_s": 377.679,
+      "lobster_wall_time_s": 2177.059
+    },
+    {
+      "compound_id": "extension_Mn4Ga_mp-1221812",
+      "vasp_wall_time_s": 79.293,
+      "lobster_wall_time_s": 567.137
+    },
+    {
+      "compound_id": "extension_MnO2_mp-510408",
+      "vasp_wall_time_s": 115.613,
+      "lobster_wall_time_s": 803.794
+    },
+    {
+      "compound_id": "extension_Mn_mp-35",
+      "vasp_wall_time_s": 5714.84,
+      "lobster_wall_time_s": null
+    },
+    {
+      "compound_id": "extension_Mo2C_mp-1221498",
+      "vasp_wall_time_s": 44.556,
+      "lobster_wall_time_s": 260.989
+    },
+    {
+      "compound_id": "extension_MoPd2_mp-1206704",
+      "vasp_wall_time_s": 45.861,
+      "lobster_wall_time_s": 270.287
+    },
+    {
+      "compound_id": "extension_MoRu_mp-1221386",
+      "vasp_wall_time_s": 39.37,
+      "lobster_wall_time_s": 235.161
+    },
+    {
+      "compound_id": "extension_Mo_mp-129",
+      "vasp_wall_time_s": 40.504,
+      "lobster_wall_time_s": 285.111
+    },
+    {
+      "compound_id": "extension_N2O_mp-1180473",
+      "vasp_wall_time_s": 88.361,
+      "lobster_wall_time_s": 130.48
+    },
+    {
+      "compound_id": "extension_N2_mp-1059834",
+      "vasp_wall_time_s": 20.103,
+      "lobster_wall_time_s": 59.329
+    },
+    {
+      "compound_id": "extension_NO_mp-1180334",
+      "vasp_wall_time_s": 43.67,
+      "lobster_wall_time_s": 147.002
+    },
+    {
+      "compound_id": "extension_Na2Cl_theo_mp-1077015",
+      "vasp_wall_time_s": 42.291,
+      "lobster_wall_time_s": 20.143
+    },
+    {
+      "compound_id": "extension_Na2O_exp_mp-2352",
+      "vasp_wall_time_s": 22.596,
+      "lobster_wall_time_s": 38.459
+    },
+    {
+      "compound_id": "extension_Na2O_theo_mp-1975297",
+      "vasp_wall_time_s": 42.276,
+      "lobster_wall_time_s": 52.939
+    },
+    {
+      "compound_id": "extension_Na3Hg_mp-1186050",
+      "vasp_wall_time_s": 64.985,
+      "lobster_wall_time_s": 80.541
+    },
+    {
+      "compound_id": "extension_Na3In_mp-864758",
+      "vasp_wall_time_s": 35.255,
+      "lobster_wall_time_s": 22.177
+    },
+    {
+      "compound_id": "extension_Na3Mg_mp-982637",
+      "vasp_wall_time_s": 33.781,
+      "lobster_wall_time_s": 13.432
+    },
+    {
+      "compound_id": "extension_Na3Si34_mp-1221235",
+      "vasp_wall_time_s": 816.629,
+      "lobster_wall_time_s": 833.754
+    },
+    {
+      "compound_id": "extension_NaN3_exp_mp-22003",
+      "vasp_wall_time_s": 69.364,
+      "lobster_wall_time_s": 37.478
+    },
+    {
+      "compound_id": "extension_NaN3_mp-1066400",
+      "vasp_wall_time_s": 79.04599999999999,
+      "lobster_wall_time_s": 64.174
+    },
+    {
+      "compound_id": "extension_NaN3_mp-22003",
+      "vasp_wall_time_s": 78.623,
+      "lobster_wall_time_s": 63.678
+    },
+    {
+      "compound_id": "extension_NaN3_mp-634410",
+      "vasp_wall_time_s": 38.471,
+      "lobster_wall_time_s": 83.109
+    },
+    {
+      "compound_id": "extension_NaN3_theo_mp-1065265",
+      "vasp_wall_time_s": 29.669,
+      "lobster_wall_time_s": 30.224
+    },
+    {
+      "compound_id": "extension_NaP15_mp-1194653",
+      "vasp_wall_time_s": 397.365,
+      "lobster_wall_time_s": 314.209
+    },
+    {
+      "compound_id": "extension_NaP5_mp-31086",
+      "vasp_wall_time_s": 223.28300000000002,
+      "lobster_wall_time_s": 281.154
+    },
+    {
+      "compound_id": "extension_NaS_exp_mp-409",
+      "vasp_wall_time_s": 107.577,
+      "lobster_wall_time_s": 62.818
+    },
+    {
+      "compound_id": "extension_NaS_theo_mp-1180106",
+      "vasp_wall_time_s": 20.342,
+      "lobster_wall_time_s": 1.833
+    },
+    {
+      "compound_id": "extension_Nb3Ni_mp-999394",
+      "vasp_wall_time_s": 128.467,
+      "lobster_wall_time_s": 352.003
+    },
+    {
+      "compound_id": "extension_Nb4Rh_mp-1220441",
+      "vasp_wall_time_s": 567.797,
+      "lobster_wall_time_s": 336.203
+    },
+    {
+      "compound_id": "extension_NbCd3_mp-11309",
+      "vasp_wall_time_s": 42.566,
+      "lobster_wall_time_s": 163.988
+    },
+    {
+      "compound_id": "extension_NbO_anchor_mp-2692",
+      "vasp_wall_time_s": 41.74,
+      "lobster_wall_time_s": 185.219
+    },
+    {
+      "compound_id": "extension_NbO_poly_mp-634965",
+      "vasp_wall_time_s": 37.859,
+      "lobster_wall_time_s": 135.041
+    },
+    {
+      "compound_id": "extension_NbP_anchor_mp-9830",
+      "vasp_wall_time_s": 138.57,
+      "lobster_wall_time_s": 284.121
+    },
+    {
+      "compound_id": "extension_NbP_poly_mp-1220317",
+      "vasp_wall_time_s": 29.215,
+      "lobster_wall_time_s": 90.001
+    },
+    {
+      "compound_id": "extension_NbZn16_mp-640041",
+      "vasp_wall_time_s": 1818.603,
+      "lobster_wall_time_s": 22555.322
+    },
+    {
+      "compound_id": "extension_Nb_mp-75",
+      "vasp_wall_time_s": 30.043,
+      "lobster_wall_time_s": 157.768
+    },
+    {
+      "compound_id": "extension_Ni3Mo_mp-11506",
+      "vasp_wall_time_s": 182.101,
+      "lobster_wall_time_s": 1745.571
+    },
+    {
+      "compound_id": "extension_NiSb3_mp-1106023",
+      "vasp_wall_time_s": 393.523,
+      "lobster_wall_time_s": 211.788
+    },
+    {
+      "compound_id": "extension_Ni_mp-23",
+      "vasp_wall_time_s": 90.928,
+      "lobster_wall_time_s": 786.071
+    },
+    {
+      "compound_id": "extension_O2_mp-1524462",
+      "vasp_wall_time_s": 115.126,
+      "lobster_wall_time_s": 179.867
+    },
+    {
+      "compound_id": "extension_OsC_anchor_mp-7142",
+      "vasp_wall_time_s": 35.258,
+      "lobster_wall_time_s": 205.881
+    },
+    {
+      "compound_id": "extension_OsC_poly_mp-1009537",
+      "vasp_wall_time_s": 33.16,
+      "lobster_wall_time_s": 170.027
+    },
+    {
+      "compound_id": "extension_OsC_poly_mp-1009539",
+      "vasp_wall_time_s": 44.872,
+      "lobster_wall_time_s": 184.232
+    },
+    {
+      "compound_id": "extension_OsC_poly_mp-999308",
+      "vasp_wall_time_s": 68.147,
+      "lobster_wall_time_s": 521.469
+    },
+    {
+      "compound_id": "extension_Os_mp-49",
+      "vasp_wall_time_s": 35.946,
+      "lobster_wall_time_s": 270.781
+    },
+    {
+      "compound_id": "extension_P4Se5_mp-2447",
+      "vasp_wall_time_s": 688.511,
+      "lobster_wall_time_s": 413.486
+    },
+    {
+      "compound_id": "extension_PNO_mp-675742",
+      "vasp_wall_time_s": 197.293,
+      "lobster_wall_time_s": 257.349
+    },
+    {
+      "compound_id": "extension_PW3_mp-1209828",
+      "vasp_wall_time_s": 347.658,
+      "lobster_wall_time_s": 1837.034
+    },
+    {
+      "compound_id": "extension_P_mp-568348",
+      "vasp_wall_time_s": 2905.673,
+      "lobster_wall_time_s": 4362.326
+    },
+    {
+      "compound_id": "extension_Pb2Au_mp-22795",
+      "vasp_wall_time_s": 112.789,
+      "lobster_wall_time_s": 441.186
+    },
+    {
+      "compound_id": "extension_PbAu3_mp-982246",
+      "vasp_wall_time_s": 59.51,
+      "lobster_wall_time_s": 206.226
+    },
+    {
+      "compound_id": "extension_PbN6_mp-620058",
+      "vasp_wall_time_s": 2340.025,
+      "lobster_wall_time_s": 14674.675
+    },
+    {
+      "compound_id": "extension_PbN6_mp-667338",
+      "vasp_wall_time_s": 1896.487,
+      "lobster_wall_time_s": 9261.998
+    },
+    {
+      "compound_id": "extension_Pb_mp-20483",
+      "vasp_wall_time_s": 22.431,
+      "lobster_wall_time_s": 31.193
+    },
+    {
+      "compound_id": "extension_Pd_mp-2",
+      "vasp_wall_time_s": 26.385,
+      "lobster_wall_time_s": 147.269
+    },
+    {
+      "compound_id": "extension_Pt_mp-126",
+      "vasp_wall_time_s": 27.57,
+      "lobster_wall_time_s": 145.324
+    },
+    {
+      "compound_id": "extension_Rb2O_exp_mp-1394",
+      "vasp_wall_time_s": 60.176,
+      "lobster_wall_time_s": 46.33
+    },
+    {
+      "compound_id": "extension_Rb2O_theo_mp-2023482",
+      "vasp_wall_time_s": 296.955,
+      "lobster_wall_time_s": 43.918
+    },
+    {
+      "compound_id": "extension_Rb3In_mp-974948",
+      "vasp_wall_time_s": 36.678,
+      "lobster_wall_time_s": 9.972
+    },
+    {
+      "compound_id": "extension_Rb3Li_mp-974938",
+      "vasp_wall_time_s": 42.072,
+      "lobster_wall_time_s": 11.743
+    },
+    {
+      "compound_id": "extension_Rb3P11_mp-1173444",
+      "vasp_wall_time_s": 1965.79,
+      "lobster_wall_time_s": 982.721
+    },
+    {
+      "compound_id": "extension_Rb3P_mp-974822",
+      "vasp_wall_time_s": 39.658,
+      "lobster_wall_time_s": 20.025
+    },
+    {
+      "compound_id": "extension_RbCl_exp_mp-23299",
+      "vasp_wall_time_s": 17.875,
+      "lobster_wall_time_s": 12.779
+    },
+    {
+      "compound_id": "extension_RbF_exp_mp-2064",
+      "vasp_wall_time_s": 21.361,
+      "lobster_wall_time_s": 28.384
+    },
+    {
+      "compound_id": "extension_RbF_theo_mp-11718",
+      "vasp_wall_time_s": 23.886,
+      "lobster_wall_time_s": 18.151
+    },
+    {
+      "compound_id": "extension_RbN3_exp_mp-581833",
+      "vasp_wall_time_s": 34.595,
+      "lobster_wall_time_s": 28.029
+    },
+    {
+      "compound_id": "extension_RbN3_theo_mp-1219567",
+      "vasp_wall_time_s": 31.103,
+      "lobster_wall_time_s": 31.237
+    },
+    {
+      "compound_id": "extension_RbP15_mp-1209298",
+      "vasp_wall_time_s": 651.527,
+      "lobster_wall_time_s": 427.043
+    },
+    {
+      "compound_id": "extension_RbP_exp_mp-1179688",
+      "vasp_wall_time_s": 20.491,
+      "lobster_wall_time_s": 7.49
+    },
+    {
+      "compound_id": "extension_RbP_theo_mp-1058499",
+      "vasp_wall_time_s": 21.741,
+      "lobster_wall_time_s": 7.5280000000000005
+    },
+    {
+      "compound_id": "extension_RbS_exp_mp-558071",
+      "vasp_wall_time_s": 51.097,
+      "lobster_wall_time_s": 11.656
+    },
+    {
+      "compound_id": "extension_RbS_theo_mp-1179684",
+      "vasp_wall_time_s": 41.014,
+      "lobster_wall_time_s": 2.1
+    },
+    {
+      "compound_id": "extension_Rb_mp-70",
+      "vasp_wall_time_s": 88.363,
+      "lobster_wall_time_s": 26.913
+    },
+    {
+      "compound_id": "extension_Re2Si_mp-669547",
+      "vasp_wall_time_s": 463.739,
+      "lobster_wall_time_s": 3114.338
+    },
+    {
+      "compound_id": "extension_Re3N5_mp-1080194",
+      "vasp_wall_time_s": 496.536,
+      "lobster_wall_time_s": 217.792
+    },
+    {
+      "compound_id": "extension_Re3Pd_mp-862586",
+      "vasp_wall_time_s": 204.075,
+      "lobster_wall_time_s": 1272.964
+    },
+    {
+      "compound_id": "extension_Re5Si3_mp-1105959",
+      "vasp_wall_time_s": 546.421,
+      "lobster_wall_time_s": 2604.621
+    },
+    {
+      "compound_id": "extension_ReC_anchor_mp-1079494",
+      "vasp_wall_time_s": 102.89500000000001,
+      "lobster_wall_time_s": 526.435
+    },
+    {
+      "compound_id": "extension_ReC_poly_mp-1009731",
+      "vasp_wall_time_s": 39.144,
+      "lobster_wall_time_s": 167.693
+    },
+    {
+      "compound_id": "extension_Re_mp-8",
+      "vasp_wall_time_s": 42.958,
+      "lobster_wall_time_s": 232.349
+    },
+    {
+      "compound_id": "extension_Rh_mp-74",
+      "vasp_wall_time_s": 33.142,
+      "lobster_wall_time_s": 189.05
+    },
+    {
+      "compound_id": "extension_RuC_anchor_mp-10030",
+      "vasp_wall_time_s": 52.648,
+      "lobster_wall_time_s": 378.184
+    },
+    {
+      "compound_id": "extension_RuC_poly_mp-1009787",
+      "vasp_wall_time_s": 30.913,
+      "lobster_wall_time_s": 182.542
+    },
+    {
+      "compound_id": "extension_RuRh3_mp-974335",
+      "vasp_wall_time_s": 50.444,
+      "lobster_wall_time_s": 373.515
+    },
+    {
+      "compound_id": "extension_Ru_mp-33",
+      "vasp_wall_time_s": 38.547,
+      "lobster_wall_time_s": 268.132
+    },
+    {
+      "compound_id": "extension_S4N2_cod4031496",
+      "vasp_wall_time_s": 179.446,
+      "lobster_wall_time_s": 169.226
+    },
+    {
+      "compound_id": "extension_S4N4_cod7017102",
+      "vasp_wall_time_s": 381.03,
+      "lobster_wall_time_s": 566.505
+    },
+    {
+      "compound_id": "extension_SN_anchor_mp-236",
+      "vasp_wall_time_s": 58.215,
+      "lobster_wall_time_s": 67.067
+    },
+    {
+      "compound_id": "extension_SN_poly_mp-1078816",
+      "vasp_wall_time_s": 57.322,
+      "lobster_wall_time_s": 61.25
+    },
+    {
+      "compound_id": "extension_SN_poly_mp-1173453",
+      "vasp_wall_time_s": 1161.031,
+      "lobster_wall_time_s": 762.88
+    },
+    {
+      "compound_id": "extension_SN_poly_mp-684642",
+      "vasp_wall_time_s": 796.212,
+      "lobster_wall_time_s": 1044.679
+    },
+    {
+      "compound_id": "extension_S_mp-77",
+      "vasp_wall_time_s": 462.839,
+      "lobster_wall_time_s": 200.239
+    },
+    {
+      "compound_id": "extension_Sb2S5_mp-1359089",
+      "vasp_wall_time_s": 461.987,
+      "lobster_wall_time_s": 214.734
+    },
+    {
+      "compound_id": "extension_Sb_mp-104",
+      "vasp_wall_time_s": 16.449,
+      "lobster_wall_time_s": 8.478
+    },
+    {
+      "compound_id": "extension_ScOs3_mp-981384",
+      "vasp_wall_time_s": 61.621,
+      "lobster_wall_time_s": 391.971
+    },
+    {
+      "compound_id": "extension_Sc_mp-67",
+      "vasp_wall_time_s": 50.075,
+      "lobster_wall_time_s": 202.058
+    },
+    {
+      "compound_id": "extension_Se_mp-14",
+      "vasp_wall_time_s": 16.145,
+      "lobster_wall_time_s": 11.468
+    },
+    {
+      "compound_id": "extension_Si3H_mp-995193",
+      "vasp_wall_time_s": 48.36,
+      "lobster_wall_time_s": 50.482
+    },
+    {
+      "compound_id": "extension_Si3Pt_mp-972763",
+      "vasp_wall_time_s": 81.483,
+      "lobster_wall_time_s": 151.255
+    },
+    {
+      "compound_id": "extension_Si3W5_mp-31219",
+      "vasp_wall_time_s": 396.344,
+      "lobster_wall_time_s": 2543.267
+    },
+    {
+      "compound_id": "extension_SiH2_mp-1192532",
+      "vasp_wall_time_s": 134.695,
+      "lobster_wall_time_s": 98.415
+    },
+    {
+      "compound_id": "extension_SiO2_anchor_mp-9258",
+      "vasp_wall_time_s": 86.996,
+      "lobster_wall_time_s": 565.256
+    },
+    {
+      "compound_id": "extension_SiO2_poly_mp-10064",
+      "vasp_wall_time_s": 48.622,
+      "lobster_wall_time_s": 225.611
+    },
+    {
+      "compound_id": "extension_SiO2_poly_mp-556044",
+      "vasp_wall_time_s": 522.132,
+      "lobster_wall_time_s": 695.266
+    },
+    {
+      "compound_id": "extension_SiO2_poly_mp-638049",
+      "vasp_wall_time_s": 701.777,
+      "lobster_wall_time_s": 2146.505
+    },
+    {
+      "compound_id": "extension_SiTc3_mp-972784",
+      "vasp_wall_time_s": 130.278,
+      "lobster_wall_time_s": 787.515
+    },
+    {
+      "compound_id": "extension_SiTe2_mp-2755",
+      "vasp_wall_time_s": 29.971,
+      "lobster_wall_time_s": 19.919
+    },
+    {
+      "compound_id": "extension_Sn3S_mp-1187038",
+      "vasp_wall_time_s": 65.089,
+      "lobster_wall_time_s": 93.677
+    },
+    {
+      "compound_id": "extension_Sn3Se_mp-1187055",
+      "vasp_wall_time_s": 65.734,
+      "lobster_wall_time_s": 94.23
+    },
+    {
+      "compound_id": "extension_SnP_mp-475",
+      "vasp_wall_time_s": 27.612,
+      "lobster_wall_time_s": 46.518
+    },
+    {
+      "compound_id": "extension_SnPb3_mp-1187118",
+      "vasp_wall_time_s": 154.586,
+      "lobster_wall_time_s": 346.317
+    },
+    {
+      "compound_id": "extension_Sn_mp-623511",
+      "vasp_wall_time_s": 20.381,
+      "lobster_wall_time_s": 57.735
+    },
+    {
+      "compound_id": "extension_Snalpha_mp-117",
+      "vasp_wall_time_s": 53.79,
+      "lobster_wall_time_s": 105.587
+    },
+    {
+      "compound_id": "extension_Sr3N2_mp-1013529",
+      "vasp_wall_time_s": 50.43,
+      "lobster_wall_time_s": 38.352
+    },
+    {
+      "compound_id": "extension_Sr3P4_exp_mp-14288",
+      "vasp_wall_time_s": 156.564,
+      "lobster_wall_time_s": 78.344
+    },
+    {
+      "compound_id": "extension_Sr3P4_theo_mp-682953",
+      "vasp_wall_time_s": 319.044,
+      "lobster_wall_time_s": 122.847
+    },
+    {
+      "compound_id": "extension_SrB2_mp-1008755",
+      "vasp_wall_time_s": 33.135,
+      "lobster_wall_time_s": 55.357
+    },
+    {
+      "compound_id": "extension_SrF2_exp_mp-1102240",
+      "vasp_wall_time_s": 105.213,
+      "lobster_wall_time_s": 96.343
+    },
+    {
+      "compound_id": "extension_SrF2_theo_mp-1102911",
+      "vasp_wall_time_s": 72.41,
+      "lobster_wall_time_s": 113.314
+    },
+    {
+      "compound_id": "extension_SrN6_mp-2131",
+      "vasp_wall_time_s": 156.018,
+      "lobster_wall_time_s": 189.755
+    },
+    {
+      "compound_id": "extension_SrN_exp_mp-1058586",
+      "vasp_wall_time_s": 37.659,
+      "lobster_wall_time_s": 29.874
+    },
+    {
+      "compound_id": "extension_SrO10_mp-1208655",
+      "vasp_wall_time_s": 116.825,
+      "lobster_wall_time_s": 210.886
+    },
+    {
+      "compound_id": "extension_SrO2_exp_mp-726705",
+      "vasp_wall_time_s": 101.352,
+      "lobster_wall_time_s": 109.869
+    },
+    {
+      "compound_id": "extension_SrO2_theo_mp-2763179",
+      "vasp_wall_time_s": 84.299,
+      "lobster_wall_time_s": 110.915
+    },
+    {
+      "compound_id": "extension_SrS_exp_mp-10627",
+      "vasp_wall_time_s": 27.124,
+      "lobster_wall_time_s": 20.233
+    },
+    {
+      "compound_id": "extension_Sr_mp-139",
+      "vasp_wall_time_s": 19.891,
+      "lobster_wall_time_s": 6.52
+    },
+    {
+      "compound_id": "extension_TaBe12_mp-567842",
+      "vasp_wall_time_s": 144.524,
+      "lobster_wall_time_s": 800.916
+    },
+    {
+      "compound_id": "extension_TaN_anchor_mp-1497",
+      "vasp_wall_time_s": 76.519,
+      "lobster_wall_time_s": 504.16
+    },
+    {
+      "compound_id": "extension_TaN_poly_mp-1009831",
+      "vasp_wall_time_s": 32.982,
+      "lobster_wall_time_s": 141.003
+    },
+    {
+      "compound_id": "extension_TaN_poly_mp-1009833",
+      "vasp_wall_time_s": 34.504,
+      "lobster_wall_time_s": 129.129
+    },
+    {
+      "compound_id": "extension_Ta_mp-50",
+      "vasp_wall_time_s": 39.592,
+      "lobster_wall_time_s": 289.227
+    },
+    {
+      "compound_id": "extension_Tc3Mo_mp-1187395",
+      "vasp_wall_time_s": 72.847,
+      "lobster_wall_time_s": 658.842
+    },
+    {
+      "compound_id": "extension_Tc3Os_mp-862779",
+      "vasp_wall_time_s": 145.663,
+      "lobster_wall_time_s": 867.332
+    },
+    {
+      "compound_id": "extension_Tc3W_mp-1187398",
+      "vasp_wall_time_s": 164.452,
+      "lobster_wall_time_s": 1282.392
+    },
+    {
+      "compound_id": "extension_Tc_mp-113",
+      "vasp_wall_time_s": 43.448,
+      "lobster_wall_time_s": 428.493
+    },
+    {
+      "compound_id": "extension_Te2Pd7_mp-1217443",
+      "vasp_wall_time_s": 864.29,
+      "lobster_wall_time_s": 5033.392
+    },
+    {
+      "compound_id": "extension_Te_mp-19",
+      "vasp_wall_time_s": 18.704,
+      "lobster_wall_time_s": 10.043
+    },
+    {
+      "compound_id": "extension_Ti2Cu_mp-742",
+      "vasp_wall_time_s": 77.725,
+      "lobster_wall_time_s": 605.503
+    },
+    {
+      "compound_id": "extension_Ti3Nb_mp-1217091",
+      "vasp_wall_time_s": 102.80799999999999,
+      "lobster_wall_time_s": 588.333
+    },
+    {
+      "compound_id": "extension_TiMo2_mp-1216675",
+      "vasp_wall_time_s": 94.283,
+      "lobster_wall_time_s": 179.391
+    },
+    {
+      "compound_id": "extension_TiO2II_mp-1439",
+      "vasp_wall_time_s": 138.595,
+      "lobster_wall_time_s": 1020.169
+    },
+    {
+      "compound_id": "extension_TiO2OII_mp-9173",
+      "vasp_wall_time_s": 151.323,
+      "lobster_wall_time_s": 947.053
+    },
+    {
+      "compound_id": "extension_TiO2baddeleyite_mp-430",
+      "vasp_wall_time_s": 172.748,
+      "lobster_wall_time_s": 1278.659
+    },
+    {
+      "compound_id": "extension_Ti_mp-46",
+      "vasp_wall_time_s": 45.82,
+      "lobster_wall_time_s": 355.277
+    },
+    {
+      "compound_id": "extension_Tl3Au_mp-1080569",
+      "vasp_wall_time_s": 88.551,
+      "lobster_wall_time_s": 185.192
+    },
+    {
+      "compound_id": "extension_TlAs_mp-1007770",
+      "vasp_wall_time_s": 29.976,
+      "lobster_wall_time_s": 26.985
+    },
+    {
+      "compound_id": "extension_TlAu3_mp-1187508",
+      "vasp_wall_time_s": 40.813,
+      "lobster_wall_time_s": 165.428
+    },
+    {
+      "compound_id": "extension_TlC_anchor_mp-567465",
+      "vasp_wall_time_s": 46.576,
+      "lobster_wall_time_s": 143.62
+    },
+    {
+      "compound_id": "extension_TlC_poly_mp-1058887",
+      "vasp_wall_time_s": 41.67,
+      "lobster_wall_time_s": 120.396
+    },
+    {
+      "compound_id": "extension_TlN_anchor_mp-1017982",
+      "vasp_wall_time_s": 72.963,
+      "lobster_wall_time_s": 177.575
+    },
+    {
+      "compound_id": "extension_TlN_poly_mp-1002222",
+      "vasp_wall_time_s": 36.756,
+      "lobster_wall_time_s": 80.311
+    },
+    {
+      "compound_id": "extension_TlN_poly_mp-1007778",
+      "vasp_wall_time_s": 29.779,
+      "lobster_wall_time_s": 53.333
+    },
+    {
+      "compound_id": "extension_Tl_mp-82",
+      "vasp_wall_time_s": 22.131,
+      "lobster_wall_time_s": 42.217
+    },
+    {
+      "compound_id": "extension_V_mp-146",
+      "vasp_wall_time_s": 32.451,
+      "lobster_wall_time_s": 213.983
+    },
+    {
+      "compound_id": "extension_W9C4_mp-684989",
+      "vasp_wall_time_s": 832.296,
+      "lobster_wall_time_s": 11922.264
+    },
+    {
+      "compound_id": "extension_WBr5_mp-1436789",
+      "vasp_wall_time_s": 220.312,
+      "lobster_wall_time_s": 53.15
+    },
+    {
+      "compound_id": "extension_WC_anchor_mp-13136",
+      "vasp_wall_time_s": 63.254,
+      "lobster_wall_time_s": 326.245
+    },
+    {
+      "compound_id": "extension_WC_poly_mp-1008630",
+      "vasp_wall_time_s": 34.961,
+      "lobster_wall_time_s": 169.294
+    },
+    {
+      "compound_id": "extension_WC_poly_mp-1008635",
+      "vasp_wall_time_s": 33.407,
+      "lobster_wall_time_s": 132.252
+    },
+    {
+      "compound_id": "extension_W_mp-91",
+      "vasp_wall_time_s": 30.114,
+      "lobster_wall_time_s": 155.574
+    },
+    {
+      "compound_id": "extension_Y3Co_mp-1105598",
+      "vasp_wall_time_s": 933.404,
+      "lobster_wall_time_s": 2051.395
+    },
+    {
+      "compound_id": "extension_Y_mp-112",
+      "vasp_wall_time_s": 36.601,
+      "lobster_wall_time_s": 55.854
+    },
+    {
+      "compound_id": "extension_Zn13Rh_mp-13447",
+      "vasp_wall_time_s": 242.515,
+      "lobster_wall_time_s": 2609.114
+    },
+    {
+      "compound_id": "extension_Zn2Ag_mp-1093999",
+      "vasp_wall_time_s": 261.956,
+      "lobster_wall_time_s": 3043.611
+    },
+    {
+      "compound_id": "extension_Zn3Au_mp-1188000",
+      "vasp_wall_time_s": 122.576,
+      "lobster_wall_time_s": 702.607
+    },
+    {
+      "compound_id": "extension_Zn3N2_mp-1524551",
+      "vasp_wall_time_s": 255.617,
+      "lobster_wall_time_s": 3148.121
+    },
+    {
+      "compound_id": "extension_Zn3N2_mp-9460",
+      "vasp_wall_time_s": 847.593,
+      "lobster_wall_time_s": 12689.588
+    },
+    {
+      "compound_id": "extension_Zn7Tc_mp-1206378",
+      "vasp_wall_time_s": 264.714,
+      "lobster_wall_time_s": 1825.064
+    },
+    {
+      "compound_id": "extension_Zn_mp-79",
+      "vasp_wall_time_s": 32.028,
+      "lobster_wall_time_s": 265.072
+    },
+    {
+      "compound_id": "extension_Zr3Fe_mp-31205",
+      "vasp_wall_time_s": 270.04,
+      "lobster_wall_time_s": 1330.594
+    },
+    {
+      "compound_id": "extension_ZrHg3_mp-1608",
+      "vasp_wall_time_s": 45.196,
+      "lobster_wall_time_s": 173.874
+    },
+    {
+      "compound_id": "extension_Zr_mp-131",
+      "vasp_wall_time_s": 30.39,
+      "lobster_wall_time_s": 115.733
+    },
+    {
+      "compound_id": "gasref_CaO_sphalerite",
+      "vasp_wall_time_s": 27.348,
+      "lobster_wall_time_s": 22.146
+    },
+    {
+      "compound_id": "gasref_Cl2_dimerbox",
+      "vasp_wall_time_s": 30.881,
+      "lobster_wall_time_s": 1.8479999999999999
+    },
+    {
+      "compound_id": "gasref_F2_dimerbox",
+      "vasp_wall_time_s": 30.641,
+      "lobster_wall_time_s": 1.741
+    },
+    {
+      "compound_id": "gasref_H2_dimerbox",
+      "vasp_wall_time_s": 23.211,
+      "lobster_wall_time_s": 1.3599999999999999
+    },
+    {
+      "compound_id": "gasref_N2_dimerbox",
+      "vasp_wall_time_s": 29.839,
+      "lobster_wall_time_s": 1.78
+    },
+    {
+      "compound_id": "gasref_O2_dimerbox",
+      "vasp_wall_time_s": 64.832,
+      "lobster_wall_time_s": 1.979
+    },
+    {
+      "compound_id": "gasref_ZnSn_NiAs",
+      "vasp_wall_time_s": 44.477,
+      "lobster_wall_time_s": 145.17
+    },
+    {
+      "compound_id": "hull_covalent_Si_mp-149",
+      "vasp_wall_time_s": 198.882,
+      "lobster_wall_time_s": 30.203
+    },
+    {
+      "compound_id": "hull_ionic_NaCl_mp-22862",
+      "vasp_wall_time_s": 206.734,
+      "lobster_wall_time_s": 25.216
+    },
+    {
+      "compound_id": "hull_metallic_AlNi_mp-1487",
+      "vasp_wall_time_s": 291.864,
+      "lobster_wall_time_s": 262.155
+    },
+    {
+      "compound_id": "metastable_covalent_C_rhombohedral_mp-169",
+      "vasp_wall_time_s": 241.022,
+      "lobster_wall_time_s": 58.946
+    },
+    {
+      "compound_id": "metastable_ionic_LiBr_mp-23259",
+      "vasp_wall_time_s": 132.785,
+      "lobster_wall_time_s": 20.138
+    },
+    {
+      "compound_id": "metastable_metallic_BeCu_mp-2323",
+      "vasp_wall_time_s": 197.107,
+      "lobster_wall_time_s": 245.599
+    },
+    {
+      "compound_id": "theo_metastable_Al4Si_mp-1228120",
+      "vasp_wall_time_s": 460.81,
+      "lobster_wall_time_s": 20.36
+    },
+    {
+      "compound_id": "theo_metastable_AlSb_mp-1023918",
+      "vasp_wall_time_s": 21.23,
+      "lobster_wall_time_s": 19.51
+    },
+    {
+      "compound_id": "theo_metastable_B3Ir2_mp-1228647",
+      "vasp_wall_time_s": 110.42,
+      "lobster_wall_time_s": 581.64
+    },
+    {
+      "compound_id": "theo_metastable_B6Pb_mp-1096825",
+      "vasp_wall_time_s": 46.61,
+      "lobster_wall_time_s": 173.29
+    },
+    {
+      "compound_id": "theo_metastable_BPd5_mp-1228665",
+      "vasp_wall_time_s": 795.88,
+      "lobster_wall_time_s": 273.61
+    },
+    {
+      "compound_id": "theo_metastable_BeAu3_mp-983539",
+      "vasp_wall_time_s": 44.68,
+      "lobster_wall_time_s": 259.34
+    },
+    {
+      "compound_id": "theo_metastable_BeCl2_mp-1190080",
+      "vasp_wall_time_s": 191.05,
+      "lobster_wall_time_s": 72.97
+    },
+    {
+      "compound_id": "theo_metastable_CaGe2_mp-643542",
+      "vasp_wall_time_s": 39.4,
+      "lobster_wall_time_s": 86.29
+    },
+    {
+      "compound_id": "theo_metastable_CoSe2_mp-1390196",
+      "vasp_wall_time_s": 179.49,
+      "lobster_wall_time_s": 175.53
+    },
+    {
+      "compound_id": "theo_metastable_Cr2C_mp-1226378",
+      "vasp_wall_time_s": 49.72,
+      "lobster_wall_time_s": 380.9
+    },
+    {
+      "compound_id": "theo_metastable_CrMo_mp-1226200",
+      "vasp_wall_time_s": 48.38,
+      "lobster_wall_time_s": 267.87
+    },
+    {
+      "compound_id": "theo_metastable_Ga2Se3_mp-1224809",
+      "vasp_wall_time_s": 88.41,
+      "lobster_wall_time_s": 44.07
+    },
+    {
+      "compound_id": "theo_metastable_GeS_mp-12910",
+      "vasp_wall_time_s": 39.86,
+      "lobster_wall_time_s": 93.19
+    },
+    {
+      "compound_id": "theo_metastable_HCl_mp-684609",
+      "vasp_wall_time_s": 13.0,
+      "lobster_wall_time_s": 3.94
+    },
+    {
+      "compound_id": "theo_metastable_HfMo_mp-1224314",
+      "vasp_wall_time_s": 33.26,
+      "lobster_wall_time_s": 200.19
+    },
+    {
+      "compound_id": "theo_metastable_IN2_mp-1097011",
+      "vasp_wall_time_s": 93.08,
+      "lobster_wall_time_s": 20.7
+    },
+    {
+      "compound_id": "theo_metastable_InSe2_mp-1232036",
+      "vasp_wall_time_s": 66.8,
+      "lobster_wall_time_s": 71.32
+    },
+    {
+      "compound_id": "theo_metastable_IrCl3_mp-729507",
+      "vasp_wall_time_s": 474.25,
+      "lobster_wall_time_s": 174.57
+    },
+    {
+      "compound_id": "theo_metastable_K5As4_mp-684799",
+      "vasp_wall_time_s": 80.13,
+      "lobster_wall_time_s": 28.93
+    },
+    {
+      "compound_id": "theo_metastable_KSn3_mp-1185151",
+      "vasp_wall_time_s": 149.6,
+      "lobster_wall_time_s": 116.75
+    },
+    {
+      "compound_id": "theo_metastable_Li3Ag_mp-976408",
+      "vasp_wall_time_s": 48.99,
+      "lobster_wall_time_s": 125.56
+    },
+    {
+      "compound_id": "theo_metastable_LiTl3_mp-1185253",
+      "vasp_wall_time_s": 72.25,
+      "lobster_wall_time_s": 137.81
+    },
+    {
+      "compound_id": "theo_metastable_Mg15B_mp-1023515",
+      "vasp_wall_time_s": 149.08,
+      "lobster_wall_time_s": 144.4
+    },
+    {
+      "compound_id": "theo_metastable_MgF2_mp-560236",
+      "vasp_wall_time_s": 88.2,
+      "lobster_wall_time_s": 73.02
+    },
+    {
+      "compound_id": "theo_metastable_MgSn_mp-1094669",
+      "vasp_wall_time_s": 30.3,
+      "lobster_wall_time_s": 42.9
+    },
+    {
+      "compound_id": "theo_metastable_MgSn_mp-1094801",
+      "vasp_wall_time_s": 20.1,
+      "lobster_wall_time_s": 42.69
+    },
+    {
+      "compound_id": "theo_metastable_MnN_mp-1009130",
+      "vasp_wall_time_s": 30.14,
+      "lobster_wall_time_s": 227.44
+    },
+    {
+      "compound_id": "theo_metastable_Na2Cl_mp-990084",
+      "vasp_wall_time_s": 67.91,
+      "lobster_wall_time_s": 8.52
+    },
+    {
+      "compound_id": "theo_metastable_Na3Cl_mp-1064484",
+      "vasp_wall_time_s": 27.83,
+      "lobster_wall_time_s": 19.02
+    },
+    {
+      "compound_id": "theo_metastable_NbRh2_mp-1220414",
+      "vasp_wall_time_s": 134.26,
+      "lobster_wall_time_s": 597.73
+    },
+    {
+      "compound_id": "theo_metastable_NbS2_mp-774873",
+      "vasp_wall_time_s": 135.13,
+      "lobster_wall_time_s": 66.26
+    },
+    {
+      "compound_id": "theo_metastable_PtCl2_mp-1219748",
+      "vasp_wall_time_s": 87.04,
+      "lobster_wall_time_s": 39.45
+    },
+    {
+      "compound_id": "theo_metastable_Sc2O3_mp-755313",
+      "vasp_wall_time_s": 211.83,
+      "lobster_wall_time_s": 644.07
+    },
+    {
+      "compound_id": "theo_metastable_ScTc3_mp-867262",
+      "vasp_wall_time_s": 75.16,
+      "lobster_wall_time_s": 383.12
+    },
+    {
+      "compound_id": "theo_metastable_SiAu3_mp-1186998",
+      "vasp_wall_time_s": 70.79,
+      "lobster_wall_time_s": 229.34
+    },
+    {
+      "compound_id": "theo_metastable_Sn7Pd5_mp-1219006",
+      "vasp_wall_time_s": 347.65,
+      "lobster_wall_time_s": 931.63
+    },
+    {
+      "compound_id": "theo_metastable_SnBr2_mp-978985",
+      "vasp_wall_time_s": 75.66,
+      "lobster_wall_time_s": 59.93
+    },
+    {
+      "compound_id": "theo_metastable_Sr3As4_mp-678007",
+      "vasp_wall_time_s": 280.56,
+      "lobster_wall_time_s": 54.37
+    },
+    {
+      "compound_id": "theo_metastable_Sr3Sn_mp-1187136",
+      "vasp_wall_time_s": 47.38,
+      "lobster_wall_time_s": 24.31
+    },
+    {
+      "compound_id": "theo_metastable_SrTl3_mp-1206636",
+      "vasp_wall_time_s": 36.47,
+      "lobster_wall_time_s": 45.12
+    },
+    {
+      "compound_id": "theo_metastable_Ta4C3_mp-1218000",
+      "vasp_wall_time_s": 1038.96,
+      "lobster_wall_time_s": 218.04
+    },
+    {
+      "compound_id": "theo_metastable_TaP_mp-1187244",
+      "vasp_wall_time_s": 35.34,
+      "lobster_wall_time_s": 95.59
+    },
+    {
+      "compound_id": "theo_metastable_TaRe_mp-1217894",
+      "vasp_wall_time_s": 58.31,
+      "lobster_wall_time_s": 353.48
+    },
+    {
+      "compound_id": "theo_metastable_TcW_mp-1217337",
+      "vasp_wall_time_s": 43.653,
+      "lobster_wall_time_s": 352.583
+    },
+    {
+      "compound_id": "theo_metastable_TiMo2_mp-1216675",
+      "vasp_wall_time_s": 95.12,
+      "lobster_wall_time_s": 182.59
+    },
+    {
+      "compound_id": "theo_metastable_TiNi_mp-1067248",
+      "vasp_wall_time_s": 77.16,
+      "lobster_wall_time_s": 467.87
+    },
+    {
+      "compound_id": "theo_metastable_TiSi2_mp-570991",
+      "vasp_wall_time_s": 56.67,
+      "lobster_wall_time_s": 95.34
+    },
+    {
+      "compound_id": "theo_metastable_TiW_mp-1216621",
+      "vasp_wall_time_s": 35.659,
+      "lobster_wall_time_s": 195.85
+    },
+    {
+      "compound_id": "theo_metastable_Tl3Ga_mp-1187539",
+      "vasp_wall_time_s": 48.51,
+      "lobster_wall_time_s": 90.81
+    },
+    {
+      "compound_id": "theo_metastable_Tl4Sn_mp-1216560",
+      "vasp_wall_time_s": 1440.11,
+      "lobster_wall_time_s": 158.54
+    },
+    {
+      "compound_id": "theo_metastable_VCo3_mp-1095057",
+      "vasp_wall_time_s": 195.19,
+      "lobster_wall_time_s": 1607.68
+    },
+    {
+      "compound_id": "theo_metastable_VN_mp-1017532",
+      "vasp_wall_time_s": 88.27,
+      "lobster_wall_time_s": 898.33
+    },
+    {
+      "compound_id": "theo_metastable_Y3Co_mp-1189329",
+      "vasp_wall_time_s": 845.71,
+      "lobster_wall_time_s": 2044.48
+    },
+    {
+      "compound_id": "theo_metastable_YAg3_mp-1187811",
+      "vasp_wall_time_s": 85.81,
+      "lobster_wall_time_s": 458.57
+    },
+    {
+      "compound_id": "theo_metastable_ZnPb3_mp-1187949",
+      "vasp_wall_time_s": 52.85,
+      "lobster_wall_time_s": 90.32
+    },
+    {
+      "compound_id": "theo_metastable_Zn_mp-2647117",
+      "vasp_wall_time_s": 36.475,
+      "lobster_wall_time_s": 279.477
+    },
+    {
+      "compound_id": "theo_metastable_Zr3Be_mp-1188016",
+      "vasp_wall_time_s": 93.84,
+      "lobster_wall_time_s": 201.64
+    },
+    {
+      "compound_id": "theo_metastable_Zr3Ge_mp-1188039",
+      "vasp_wall_time_s": 140.29,
+      "lobster_wall_time_s": 528.61
+    },
+    {
+      "compound_id": "theo_metastable_ZrO2_mp-775909",
+      "vasp_wall_time_s": 227.18,
+      "lobster_wall_time_s": 165.34
+    },
+    {
+      "compound_id": "theo_metastable_ZrTi_mp-1215236",
+      "vasp_wall_time_s": 53.21,
+      "lobster_wall_time_s": 238.14
+    }
+  ]
+}
