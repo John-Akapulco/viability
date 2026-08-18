@@ -132,6 +132,9 @@ def main():
                 continue
             compound_id = compound_dir.name
             meta = json.loads(meta_path.read_text())
+            if meta.get("quality_excluded"):
+                results[compound_id] = {"error": f"quality_excluded: {meta.get('quality_excluded_reason', 'see mp_metadata.json')}"}
+                continue
             formula = meta.get("formula")
             if not formula:
                 continue

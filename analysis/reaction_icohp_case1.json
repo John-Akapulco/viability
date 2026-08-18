@@ -5731,30 +5731,7 @@
     "delta_icohp_per_atom": 0.45493066666666737
   },
   "extension_Cu4Au_mp-1225761": {
-    "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cu4Au_mp-1225761",
-    "reactant_formula": "Cu4Au",
-    "reactant_n_sites": 5,
-    "reactant_icohp_total": 1861.8173400000003,
-    "reaction_string": "0.25 Cu4Au -> Cu + 0.25 Au",
-    "products": [
-      {
-        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cu_mp-30",
-        "reduced_formula": "Cu",
-        "coeff_formula_units": 3.999999999999999,
-        "icohp_per_atom": -3.84102,
-        "contribution_to_total": -15.364079999999996
-      },
-      {
-        "compound_dir": "/home/gilles/viability/mp_dataset/structures/extension_Au_mp-81",
-        "reduced_formula": "Au",
-        "coeff_formula_units": 0.9999999999999988,
-        "icohp_per_atom": -25.295960000000004,
-        "contribution_to_total": -25.295959999999972
-      }
-    ],
-    "predicted_icohp_total_from_products": -40.66003999999997,
-    "delta_icohp_total": 1902.4773800000003,
-    "delta_icohp_per_atom": 380.49547600000005
+    "error": "quality_excluded: LOBSTER basis projection failed for this compound: lobsterout reports 343/343 k-points could not be orthonormalized, and bandOverlaps.lobster shows maxDeviation up to 1.10 (vs. this project's established 0.1 red-flag threshold for elemental references) -- an order of magnitude worse, at every k-point, not a borderline case. Resulting ICOHPLIST.lobster values are physically implausible (e.g. 7.6-11.6 eV third-neighbor Cu-Cu contacts at 4.25-5.04 A, where real ICOHP decays rapidly with distance) and propagate into a delta_per_atom_eV of -380.5 eV -- ~27x the next-worst case in the whole case-1 population. Diagnosed 2026-08-18; excluded from all downstream analysis, not deleted (raw VASP/LOBSTER outputs kept for reference)."
   },
   "extension_Cu7Te4_mp-624307": {
     "reactant_dir": "/home/gilles/viability/mp_dataset/structures/extension_Cu7Te4_mp-624307",

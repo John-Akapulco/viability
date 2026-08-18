@@ -151,6 +151,8 @@ def _scan_all_compounds(is_metal_map: dict, bond_type_map: dict) -> pd.DataFrame
             meta = json.loads(meta_path.read_text())
             if meta.get("batch") in EXCLUDED_BATCHES:
                 continue
+            if meta.get("quality_excluded"):
+                continue
             if not (compound_dir / "ICOHPLIST.lobster").exists():
                 continue
             is_metal = is_metal_map.get(compound_dir.name)

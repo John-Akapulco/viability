@@ -107,6 +107,9 @@ def main():
         for i, d in enumerate(compound_dirs):
             compound_id = d.name
             meta = json.loads((d / "mp_metadata.json").read_text())
+            if meta.get("quality_excluded"):
+                results[compound_id] = {"error": f"quality_excluded: {meta.get('quality_excluded_reason', 'see mp_metadata.json')}"}
+                continue
             is_metal = is_metal_map.get(compound_id)
             if is_metal is None:
                 results[compound_id] = {"error": "no is_metal available"}
