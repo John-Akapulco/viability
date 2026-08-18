@@ -1,12 +1,12 @@
 {
-  "n_total": 320,
+  "n_total": 439,
   "vs_formation_energy_stratified": [
     {
       "group": "all",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 316,
-      "rho": 0.3712,
+      "n": 434,
+      "rho": 0.3566,
       "p_value": 0.0,
       "note": null
     },
@@ -15,34 +15,43 @@
       "metric": "delta_icohp_windowed_per_atom",
       "target": "formation_energy_per_atom",
       "n": 29,
-      "rho": 0.3635,
-      "p_value": 0.0526,
+      "rho": 0.6185,
+      "p_value": 0.0003,
       "note": null
     },
     {
       "group": "bond_type=ionic",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 51,
-      "rho": 0.5243,
-      "p_value": 0.0001,
+      "n": 87,
+      "rho": 0.6184,
+      "p_value": 0.0,
       "note": null
     },
     {
       "group": "bond_type=metallic",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 86,
-      "rho": 0.1721,
-      "p_value": 0.1131,
+      "n": 286,
+      "rho": 0.1801,
+      "p_value": 0.0022,
+      "note": null
+    },
+    {
+      "group": "bond_type=mixed",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "formation_energy_per_atom",
+      "n": 32,
+      "rho": 0.4578,
+      "p_value": 0.0084,
       "note": null
     },
     {
       "group": "is_metal=False",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 145,
-      "rho": 0.466,
+      "n": 148,
+      "rho": 0.5643,
       "p_value": 0.0,
       "note": null
     },
@@ -50,9 +59,9 @@
       "group": "is_metal=True",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 171,
-      "rho": 0.1848,
-      "p_value": 0.0155,
+      "n": 286,
+      "rho": 0.1801,
+      "p_value": 0.0022,
       "note": null
     }
   ],
@@ -61,9 +70,9 @@
       "group": "all",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 320,
-      "rho": 0.1003,
-      "p_value": 0.0733,
+      "n": 438,
+      "rho": 0.0729,
+      "p_value": 0.1276,
       "note": null
     },
     {
@@ -71,55 +80,64 @@
       "metric": "delta_icohp_windowed_per_atom",
       "target": "energy_above_hull_eV_per_atom",
       "n": 29,
-      "rho": 0.0185,
-      "p_value": 0.9241,
+      "rho": -0.1195,
+      "p_value": 0.5369,
       "note": null
     },
     {
       "group": "bond_type=ionic",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 53,
-      "rho": 0.1088,
-      "p_value": 0.4382,
+      "n": 89,
+      "rho": 0.0059,
+      "p_value": 0.9562,
       "note": null
     },
     {
       "group": "bond_type=metallic",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 88,
-      "rho": 0.0495,
-      "p_value": 0.6473,
+      "n": 288,
+      "rho": 0.0356,
+      "p_value": 0.547,
+      "note": null
+    },
+    {
+      "group": "bond_type=mixed",
+      "metric": "delta_icohp_windowed_per_atom",
+      "target": "energy_above_hull_eV_per_atom",
+      "n": 32,
+      "rho": 0.497,
+      "p_value": 0.0038,
       "note": null
     },
     {
       "group": "is_metal=False",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 147,
-      "rho": 0.0145,
-      "p_value": 0.8618,
+      "n": 150,
+      "rho": -0.0399,
+      "p_value": 0.6277,
       "note": null
     },
     {
       "group": "is_metal=True",
       "metric": "delta_icohp_windowed_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 173,
-      "rho": 0.0723,
-      "p_value": 0.3447,
+      "n": 288,
+      "rho": 0.0356,
+      "p_value": 0.547,
       "note": null
     }
   ],
   "vs_full_reaction_icohp": {
-    "n": 320,
-    "rho": 0.2314,
+    "n": 439,
+    "rho": 0.2413,
     "p_value": 0.0
   },
   "vs_delta_antibonding": {
-    "n": 320,
-    "rho": -0.5985,
+    "n": 439,
+    "rho": -0.5674,
     "p_value": 0.0
   }
 }

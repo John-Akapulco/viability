@@ -62,18 +62,19 @@ from compute_icobi_antibonding_all import build_bond_type_map, build_is_metal_ma
 
 ELEMENT_REFERENCE = ri_case1.ELEMENT_REFERENCE
 
-ICOHP_CSV = Path(__file__).parent / "percolation_vs_antibonding.csv"
-ICOHP_MAXHULL_CSV = Path(__file__).parent / "icohp_antibonding_maxhull.csv"
+ICOHP_CSV = Path(__file__).parent / "icohp_antibonding_full.csv"
 ICOBI_CSV = Path(__file__).parent / "icobi_antibonding_all.csv"
 OUT_CSV = Path(__file__).parent / "delta_antibonding_case1.csv"
 FORMATION_ENERGIES = REPO_ROOT / "mp_dataset" / "formation_energies.json"
 
 
 def _load_icohp_antibond() -> dict[str, float]:
-    frames = [pd.read_csv(ICOHP_CSV)[["compound_id", "antibond_w_raw"]]]
-    if ICOHP_MAXHULL_CSV.exists():
-        frames.append(pd.read_csv(ICOHP_MAXHULL_CSV)[["compound_id", "antibond_w_raw"]])
-    df = pd.concat(frames, ignore_index=True).dropna(subset=["antibond_w_raw"])
+    # icohp_antibonding_full.csv (compute_antibonding_all_full.py) is a
+    # single, full-scale, generic scan of every compound with a
+    # COHPCAR.lobster file -- supersedes the old two-file stitch of
+    # percolation_vs_antibonding.csv (349-compound cap) +
+    # icohp_antibonding_maxhull.csv (one-off 45-compound top-up).
+    df = pd.read_csv(ICOHP_CSV)[["compound_id", "antibond_w_raw"]].dropna(subset=["antibond_w_raw"])
     return dict(zip(df["compound_id"], df["antibond_w_raw"]))
 
 
@@ -101,6 +102,8 @@ def main() -> None:
             continue
         compound_id = compound_dir.name
         meta = json.loads(meta_path.read_text())
+        if meta.get("quality_excluded"):
+            continue
         formula = meta.get("formula")
         if not formula:
             continue

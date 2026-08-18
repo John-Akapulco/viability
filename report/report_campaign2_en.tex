@@ -1057,226 +1057,248 @@ convention and provenance as Appendix~\ref{sec:appendix-ext-endobondic}.
 
 \subsection{Implementation}
 
-The ICOHP antibonding-population-near-frontier descriptor
-(\S\ref{sec:antibonding}, \texttt{cohp\_extraction.py}) is extended here
-to ICOBI: same one-sided window
+The ICOHP near-Fermi-level antibonding-population descriptor
+(\S\ref{sec:antibonding}, \texttt{cohp\_extraction.py}) is extended
+here to ICOBI: same one-sided window
 $(E_\text{ref}-\Delta E,\ E_\text{ref}]$, same $E_\text{ref}$ (Fermi
 level for metals, VBM for gapped compounds --- logic entirely
-independent of which curve is integrated), read this time from
-\texttt{COBICAR.lobster}/\texttt{ICOBILIST.lobster} instead of
+independent of the integrated quantity), read this time from
+\texttt{COBICAR.lobster}/\texttt{ICOBILIST.lobster} rather than
 \texttt{COHPCAR.lobster}/\texttt{ICOHPLIST.lobster}
 (\texttt{pymatgen.io.lobster.outputs.Cohpcar(are\_cobis=True)}).
 
 \textbf{Critical point, empirically verified, not assumed}: ICOBI does
-\textbf{not} share ICOHP's sign convention. Whereas "negative ICOHP
-= bonding" (\S2.4), ICOBI follows the opposite convention,
-"positive ICOBI = bonding" (like COOP, not like COHP). Verified
-two ways on real data: (1) exact cross-check against
-\texttt{ICOBILIST.lobster} (max deviation 0.0 across 66 bond labels,
-\texttt{tests/test\_cohp\_extraction.py}) --- \texttt{pymatgen} does not
-silently renormalize the sign when switching from COHP to COBI parsing;
-(2) on \texttt{extension\_SiO2\_anchor}'s strongest Si--O bond
-(ICOHP$=-5.599$, ICOBI$=+0.513$), the deep bonding region ($-10$ to
-$-3$~eV, far from any frontier effects) gives a mean COHP($E$) of
-$-0.338$ but a mean COBI($E$) of $+0.041$ --- opposite signs in the same
-physically bonding-dominated region. ICOBI's antibonding part is
-therefore its \emph{negative} part, not its positive part -- the clip
-direction (\texttt{integrate\_icobi\_antibonding\_in\_window()}) is
-deliberately the mirror image of the ICOHP version, not a copy.
+\textbf{not} follow ICOHP's sign convention. Whereas \og{}negative
+ICOHP = bonding\fg{} (\S2.4), ICOBI follows the opposite convention,
+\og{}positive ICOBI = bonding\fg{} (like COOP, not COHP). Verified
+twice against real data: (1) exact match with
+\texttt{ICOBILIST.lobster} (maximum deviation 0.0 across 66 bond
+labels, \texttt{tests/test\_cohp\_extraction.py}) --- \texttt{pymatgen}
+does not silently renormalize the sign when moving from COHP to COBI;
+(2) on the strongest Si--O bond of \texttt{extension\_SiO2\_anchor}
+(ICOHP $=-5.599$, ICOBI $=+0.513$), the deep bonding region ($-10$ to
+$-3$~eV, far from any boundary artifact) gives a mean COHP($E$) of
+$-0.338$ but a mean COBI($E$) of $+0.041$ --- opposite signs in the
+same physically-bonding region. The antibonding part of ICOBI is
+therefore its \emph{negative} part, not its positive part --- the
+truncation direction
+(\texttt{integrate\_icobi\_antibonding\_in\_window()}) is deliberately
+the mirror image of the one used for ICOHP, not a copy of it.
 
-Computed across the 394 compounds with a \texttt{COBICAR.lobster} file
-(\texttt{analysis/compute\_icobi\_antibonding\_all.py}); 392 with
-\texttt{is\_metal} available.
+Computed for the 588 compounds with both a \texttt{COBICAR.lobster}
+and a \texttt{COHPCAR.lobster}, \texttt{is\_metal} available for all of
+them (\texttt{analysis/compute\_icobi\_antibonding\_all.py},
+\texttt{analysis/compute\_antibonding\_all\_full.py} --- one compound,
+\texttt{Cu4Au}, excluded for a catastrophic LOBSTER-projection failure,
+\S\ref{sec:limites-actuelles}).
 
-\subsection{Correlation with formation energy}
+\subsection{Correlation to formation energy}
 
 \begin{table}[htbp]
 \centering
-\caption{Spearman correlations (normalized, $\Delta E=1.0$~eV) against \texttt{formation\_energy\_per\_atom} --- ICOHP (n=394) and ICOBI (n=392) antibonding, same population.}
+\caption{Spearman correlations (normalized, $\Delta E=1.0$~eV) against \texttt{formation\_energy\_per\_atom} --- ICOHP and ICOBI antibonding, same population ($n=588$).}
 \label{tab:antibonding-icohp-icobi}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Group & $n$ (ICOHP) & $\rho$ (ICOHP) & $n$ (ICOBI) & $\rho$ (ICOBI) \\
 \midrule
-all               & 391 & $-0.2473^{***}$ & 385 & $+0.2518^{***}$ \\
-\texttt{covalent} & 40  & $-0.4781^{**}$  & 38  & $-0.1755$ \\
-\texttt{ionic}    & 53  & $-0.1842$       & 51  & $+0.1289$ \\
-\texttt{metallic} & 88  & $-0.1864$       & 86  & $+0.0011$ \\
-\texttt{is\_metal=False} & 166 & $-0.2621^{***}$ & 162 & $+0.0661$ \\
-\texttt{is\_metal=True}  & 225 & $-0.0154$       & 223 & $+0.1263$ \\
+all                 & 579 & $-0.1550^{***}$ & 579 & $+0.2308^{***}$ \\
+\texttt{covalent}   & 54  & $-0.0464$       & 54  & $+0.1129$ \\
+\texttt{ionic}      & 96  & $-0.1958$       & 96  & $+0.1615$ \\
+\texttt{metallic}   & 367 & $+0.0563$       & 367 & $+0.1197^{*}$ \\
+\texttt{mixed}      & 62  & $-0.5376^{***}$ & 62  & $+0.0251$ \\
+\texttt{is\_metal=False} & 212 & $-0.3334^{***}$ & 212 & $-0.0108$ \\
+\texttt{is\_metal=True}  & 367 & $+0.0563$       & 367 & $+0.1197^{*}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^{**}p<0.01$; $^{***}p<0.001$; no star = not
-significant. Full detail (raw + normalized, all three $\Delta E$):
-\texttt{analysis/stats\_summary\_antibonding\_joint.json}.}
+{\footnotesize $^{*}p<0.05$; $^{***}p<0.001$; no star = not
+significant. Full detail (raw + normalized, all three $\Delta E$
+choices): \texttt{analysis/stats\_summary\_antibonding\_joint.json}.}
 \end{table}
 
 \begin{center}
 \includegraphics[width=\textwidth]{icohp_vs_icobi_antibonding_comparison.png}
 \end{center}
 
-\textbf{The two descriptors behave differently.} ICOBI antibonding's
-global sign is the \emph{opposite} of ICOHP antibonding's ($+0.25$ vs.
-$-0.25$) --- for ICOHP, more occupied antibonding character near $E_F$
-is associated with \emph{more} stable formation (already noted as
-counterintuitive in \S\ref{sec:antibonding}); for ICOBI, the relationship
-runs the naively expected way (more antibonding $\Rightarrow$ less
-stable). But \textbf{no ICOBI subgroup survives stratification}
-(covalent, ionic, metallic, \texttt{is\_metal}: $p>0.05$ throughout) ---
-unlike ICOHP, whose covalent subgroup ($n=40$, $\rho=-0.478$) remains
-the project's most robust stratified result. ICOBI's global correlation
-is therefore, like reaction ICOHP's (\S\ref{sec:reaction-icohp}), likely
-a between-bond-type clustering effect rather than a robust relationship
-within a homogeneous group.
+\textbf{The two descriptors still behave differently, and
+\emph{neither} keeps its former flagship stratified result.} The
+overall sign of the ICOBI antibonding population remains
+\emph{opposite} to the ICOHP antibonding population ($+0.23$ vs.
+$-0.16$) --- for ICOHP, more occupied antibonding character near $E_F$
+is associated with a \emph{more} stable formation (already noted as
+counter-intuitive in \S\ref{sec:antibonding}); for ICOBI, the
+relationship runs the naively-expected way. \textbf{The covalent
+subgroup of the ICOHP antibonding population, long the project's most
+robust stratified result ($\rho=-0.551$ at $n=33$), no longer survives
+at $n=54$ ($\rho=-0.046$, $p=0.74$)} --- retracted,
+\S\ref{sec:antibonding}. \textbf{New at this scale}:
+\texttt{bond\_type=mixed} (Zintl) now dominates the ICOHP antibonding
+population ($\rho=-0.538$, $p\approx0$), a category that barely
+existed when the covalent result was established;
+\texttt{is\_metal=False} remains the most consistently significant
+stratum for the ICOHP descriptor across this project's successive
+scales. For ICOBI, only \texttt{metallic} reaches significance (weak,
+$p=0.022$); no other ICOBI subgroup survives, as before. The overall
+ICOBI correlation therefore remains, as with the full reaction-ICOHP
+descriptor (\S\ref{sec:reaction-icohp}), most likely a between-bond-type
+clustering effect rather than a robust within-group relationship.
 
 \subsection{$\Delta$(antibonding) of the decomposition-into-elements reaction}
 
 For a case-1 reaction (compound $\to$ elements), $\Delta$(antibonding)
 is \textbf{not} computed by \texttt{reaction\_analysis/delta.py} (which
-combines \emph{extensive} per-formula-unit ICOHP/ICOBI sums with integer
-coefficients): the antibonding population near the frontier is built
-from LOBSTER's own "average" trace, an \emph{intensive}
-quantity (averaged over all bonds, not summed) with no natural extensive
-decomposition. Convention chosen here, documented as an explicit
-methodological choice rather than a silent reuse: $\Delta$ =
-(atomic-fraction-weighted average of the elements' own antibonding
-descriptors) $-$ (the compound's own antibonding descriptor), still in
-products $-$ reactants convention. Computed for 320 case-1 reactions
-(\texttt{analysis/compute\_delta\_antibonding\_case1.py}).
+combines \emph{extensive} per-formula-unit ICOHP/ICOBI sums with
+integer coefficients): the near-frontier antibonding population is
+built from LOBSTER's \og{}average\fg{} trace, an \emph{intensive}
+quantity (averaged over all bonds, not summed) with no natural
+extensive decomposition. Convention adopted here, documented as an
+explicit methodological choice rather than a silent reuse: $\Delta$ =
+(atomic-fraction-weighted average of the elements' antibonding
+descriptors) $-$ (the compound's own antibonding descriptor), always
+in the products $-$ reactants convention. Computed for 439 case-1
+reactions (\texttt{analysis/compute\_delta\_antibonding\_case1.py}).
 
 \begin{table}[htbp]
 \centering
-\caption{Spearman correlations, $\Delta$(antibonding) of the decomposition reaction (case 1, $n=316$--320).}
+\caption{Spearman correlations, $\Delta$(antibonding) of the decomposition reaction (case 1, $n=434$--439).}
 \label{tab:delta-antibonding}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 Descriptor & Target & $n$ & $\rho$ \\
 \midrule
-$\Delta$(ICOHP antibonding) & \texttt{formation\_energy\_per\_atom} & 316 & $-0.6439^{***}$ \\
-$\Delta$(ICOBI antibonding) & \texttt{formation\_energy\_per\_atom} & 316 & $-0.4457^{***}$ \\
-$\Delta$(ICOHP antibonding) & \texttt{energy\_above\_hull} & 320 & $-0.1868^{***}$ \\
-$\Delta$(ICOBI antibonding) & \texttt{energy\_above\_hull} & 320 & $-0.1524^{**}$ \\
+$\Delta$(ICOHP antibonding) & \texttt{formation\_energy\_per\_atom} & 434 & $-0.6175^{***}$ \\
+$\Delta$(ICOBI antibonding) & \texttt{formation\_energy\_per\_atom} & 434 & $-0.4270^{***}$ \\
+$\Delta$(ICOHP antibonding) & \texttt{energy\_above\_hull} & 438 & $-0.1734^{***}$ \\
+$\Delta$(ICOBI antibonding) & \texttt{energy\_above\_hull} & 438 & $-0.1215^{*}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^{**}p<0.01$; $^{***}p<0.001$.}
+{\footnotesize $^{*}p<0.05$; $^{***}p<0.001$.}
 \end{table}
 
-\textbf{$\Delta$(ICOHP antibonding) is, at this stage, the strongest
-continuous correlation in the whole project} ($\rho=-0.644$, stronger
-than reaction ICOHP in \S\ref{sec:reaction-icohp}, $\rho=0.295$).
-Notable: unlike the raw values (opposite signs, above),
-\textbf{both $\Delta$s run the same direction} (both negative) --- the
-delta construction appears to align the two descriptors on a consistent
-reading, where their raw values do not. The two $\Delta$s are themselves
-correlated with each other ($\rho=0.532$, $p<0.001$, $n=320$): related
-but not redundant.
+\textbf{$\Delta$(ICOHP antibonding) remains, at this scale, the
+strongest continuous correlation in the entire project}
+($\rho=-0.618$, stronger than the full reaction-ICOHP descriptor of
+\S\ref{sec:reaction-icohp}, $\rho=0.295$) --- weaker than the
+$\rho=-0.644$ reported at the earlier, smaller scale, but still the
+strongest. Notable, unchanged: unlike the raw values (opposite signs,
+above), \textbf{both $\Delta$ quantities run the same direction} (both
+negative). The two $\Delta$ quantities are themselves correlated with
+each other ($\rho=0.588$, $p<0.001$, $n=439$): related but not
+redundant.
 
 \subsection{Stratification by bond type}
 
 \begin{table}[htbp]
 \centering
-\caption{Spearman correlations, $\Delta$(antibonding) against \texttt{formation\_energy\_per\_atom}, by subgroup (case 1, $n=316$).}
+\caption{Spearman correlations, $\Delta$(antibonding) against \texttt{formation\_energy\_per\_atom}, by subgroup (case 1, $n=286$--$434$).}
 \label{tab:delta-antibonding-stratified}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Subgroup & $n$ & $\rho$ ($\Delta$ICOHP) & $n$ & $\rho$ ($\Delta$ICOBI) \\
 \midrule
-all               & 316 & $-0.6439^{***}$ & 316 & $-0.4457^{***}$ \\
-\texttt{covalent} & 29  & $-0.5798^{***}$ & 29  & $-0.2044$ \\
-\texttt{ionic}    & 51  & $-0.4205^{**}$  & 51  & $+0.0608$ \\
-\texttt{metallic} & 86  & $-0.4858^{***}$ & 86  & $-0.4872^{***}$ \\
-\texttt{is\_metal=False} & 145 & $-0.6210^{***}$ & 145 & $-0.3248^{***}$ \\
-\texttt{is\_metal=True}  & 171 & $-0.5490^{***}$ & 171 & $-0.4653^{***}$ \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.15cm}
-{\footnotesize $^{**}p<0.01$; $^{***}p<0.001$; no star = not
-significant.}
-\end{table}
-
-\textbf{$\Delta$(ICOHP antibonding) is, to date, the first descriptor in
-the whole project whose global correlation survives \emph{every}
-stratification tested} --- covalent, ionic, metallic, \texttt{is\_metal}
-on both sides, all significant at $p<0.01$ or better. No other
-descriptor in this report manages that: the raw antibonding population
-(\S\ref{sec:antibonding}) keeps only its covalent subgroup, reaction
-ICOHP (\S\ref{sec:reaction-icohp}) loses every \texttt{bond\_type}
-stratum and survives only on \texttt{is\_metal}. $\Delta$(ICOBI
-antibonding) is more mixed: survives on metallic and both
-\texttt{is\_metal} sides but not on covalent ($p=0.29$) or ionic
-($p=0.67$). This remains a newly chosen construction (previous
-subsection) --- its magnitude will need to reproduce on an independent
-dataset before being treated as a fully established result, but
-surviving full stratification makes it, as it stands, the project's
-most robust result.
-
-\subsection{Reaction $\Delta$(ICOHP) restricted to a window near $E_F$}
-\label{sec:reaction-icohp-windowed}
-
-Extension proposed in the Conclusion (\S\ref{sec:reframing}): rather
-than ICOHP integrated over the whole occupied range
-(\S\ref{sec:reaction-icohp}) or only the antibonding part near $E_F$
-(previous subsections), a third construction --- the \emph{signed} ICOHP
-(bonding \emph{and} antibonding, not clipped) but integrated
-\emph{only} over the one-sided window $(E_F-\Delta E,\ E_F]$,
-$\Delta E=1.0$~eV, summed over \emph{every} bond label (extensive, like
-the full ICOHP sum) rather than just the "average" trace --- then
-combined with the same reaction stoichiometry as the full
-$\Delta$(ICOHP) (\texttt{reaction\_icohp.py}, reactant $-$ predicted
-products convention). Implementation:
-\texttt{cohp\_extraction.icohp\_windowed\_per\_atom()} reads the
-difference between two points on the \emph{cumulative} ICOHP curve
-LOBSTER already computes in \texttt{COHPCAR.lobster}
-(\texttt{ICOHP\_cumulative}$(E_F)$ $-$
-\texttt{ICOHP\_cumulative}$(E_F-\Delta E)$, per label), no new
-trapezoidal integration --- validated: at very large $\Delta E$
-(covering the whole calculation window), this quantity reproduces the
-full ICOHP sum to within $\sim$0.1\%.
-
-\begin{table}[htbp]
-\centering
-\caption{Spearman correlations, $\Delta$(windowed ICOHP near $E_F$) against \texttt{formation\_energy\_per\_atom} (case 1, $n=316$).}
-\label{tab:reaction-icohp-windowed}
-\begin{tabular}{@{}lrr@{}}
-\toprule
-Subgroup & $n$ & $\rho$ \\
-\midrule
-all               & 316 & $+0.3712^{***}$ \\
-\texttt{covalent} & 29  & $+0.3635$ (p=0.053) \\
-\texttt{ionic}    & 51  & $+0.5243^{***}$ \\
-\texttt{metallic} & 86  & $+0.1721$ \\
-\texttt{is\_metal=False} & 145 & $+0.4660^{***}$ \\
-\texttt{is\_metal=True}  & 171 & $+0.1848^{*}$ \\
+all                 & 434 & $-0.6175^{***}$ & 434 & $-0.4270^{***}$ \\
+\texttt{covalent}   & 29  & $-0.6956^{***}$ & 29  & $-0.7750^{***}$ \\
+\texttt{ionic}      & 87  & $-0.6337^{***}$ & 87  & $-0.2245^{*}$ \\
+\texttt{metallic}   & 286 & $-0.4316^{***}$ & 286 & $-0.3550^{***}$ \\
+\texttt{mixed}      & 32  & $-0.6394^{***}$ & 32  & $-0.8397^{***}$ \\
+\texttt{is\_metal=False} & 148 & $-0.6459^{***}$ & 148 & $-0.4131^{***}$ \\
+\texttt{is\_metal=True}  & 286 & $-0.4316^{***}$ & 286 & $-0.3550^{***}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
 {\footnotesize $^{*}p<0.05$; $^{***}p<0.001$; no star = not
-significant. Against \texttt{energy\_above\_hull}, no significant
-correlation anywhere ($n=320$, $p>0.07$ throughout) --- the same
-behavior as every other ICOHP/ICOBI descriptor in this report.}
+significant.}
 \end{table}
 
-An intermediate result between the other two constructions: unlike the
-full reaction ICOHP (\S\ref{sec:reaction-icohp}), which loses
-\emph{every} \texttt{bond\_type} stratum, this windowed version
-\textbf{survives on the ionic subgroup} ($\rho=0.524$, $p<0.001$) and on
-\texttt{is\_metal} on both sides --- but not on metallic, and only
-marginally on covalent ($p=0.053$). Less robust than $\Delta$(ICOHP
-antibonding) (previous subsection, survives everywhere), more robust
-than the full reaction ICOHP. Cross-correlation with $\Delta$(ICOHP
-antibonding): $\rho=-0.599$ ($p<0.001$, $n=320$) --- strongly
-\emph{anti}correlated despite their closely related construction (same
-window, same $E_F$), a sign that clipping to the antibonding-only part
-(previous subsection) captures qualitatively different information from
-the full signed ICOHP in the same window. Cross-correlation with the
-full reaction ICOHP: $\rho=0.231$ ($p<0.001$) --- related but clearly
-distinct, not simply a restriction of the same quantity.
+\textbf{At this expanded scale, $\Delta$(ICOHP antibonding) remains the
+first descriptor in the whole project whose overall correlation
+survives every stratification tested} --- covalent, ionic, metallic,
+mixed, \texttt{is\_metal} on both sides, all significant at
+$p<0.001$. \textbf{$\Delta$(ICOBI antibonding) has also improved}: it
+now survives on \emph{all} strata as well (versus only metallic and
+\texttt{is\_metal} before), with the strongest result on
+\texttt{mixed} ($\rho=-0.840$). \emph{No} other descriptor in this
+report matches that: the raw antibonding population
+(\S\ref{sec:antibonding}) lost its only surviving stratum (covalent,
+retracted) and keeps just two (mixed, \texttt{is\_metal=False}); the
+full reaction-ICOHP descriptor (\S\ref{sec:reaction-icohp}) survives
+only on \texttt{bond\_type}, not on metallic. This remains a
+relatively recent construction --- its magnitude will need to be
+reproduced on a genuinely independent dataset before it is taken as a
+settled result, but surviving full stratification, now at $n=434$ and
+across five subgroups instead of three, makes it the project's most
+robust result to date.
+
+\subsection{Reaction $\Delta$(ICOHP) restricted to a window near $E_F$}
+\label{sec:reaction-icohp-windowed}
+
+Extension proposed in the conclusion (\S\ref{sec:reframing}): rather
+than the fully-integrated ICOHP over the whole occupied range
+(\S\ref{sec:reaction-icohp}) or only the antibonding part near $E_F$
+(previous subsections), a third construction --- the \emph{signed}
+ICOHP (bonding \emph{and} antibonding, not clipped) but integrated
+\emph{only} over the one-sided window $(E_F-\Delta E,\ E_F]$,
+$\Delta E=1.0$~eV, summed over \emph{every} bond label (extensive, like
+the full ICOHP sum) rather than the \og{}average\fg{} trace --- then
+combined with the same reaction stoichiometry as the full
+$\Delta$(ICOHP) (\texttt{reaction\_icohp.py}, reactant $-$ predicted
+products convention). Implementation:
+\texttt{cohp\_extraction.icohp\_windowed\_per\_atom()} reads directly
+the difference between two points on the \emph{cumulative} ICOHP curve
+LOBSTER already computes in \texttt{COHPCAR.lobster}
+(\texttt{ICOHP\_cumulative}$(E_F)$ $-$
+\texttt{ICOHP\_cumulative}$(E_F-\Delta E)$, per bond label), with no
+new trapezoidal integration --- validated: at very large $\Delta E$
+(covering the whole computed range), this quantity recovers the full
+ICOHP sum to within $\sim$0.1\%. Computed for 439 case-1 reactions.
+
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, $\Delta$(windowed ICOHP near $E_F$) against \texttt{formation\_energy\_per\_atom} (case 1, $n=286$--$434$).}
+\label{tab:reaction-icohp-windowed}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Subgroup & $n$ & $\rho$ \\
+\midrule
+all                 & 434 & $+0.3566^{***}$ \\
+\texttt{covalent}   & 29  & $+0.6185^{***}$ \\
+\texttt{ionic}      & 87  & $+0.6184^{***}$ \\
+\texttt{metallic}   & 286 & $+0.1801^{**}$ \\
+\texttt{mixed}      & 32  & $+0.4578^{**}$ \\
+\texttt{is\_metal=False} & 148 & $+0.5643^{***}$ \\
+\texttt{is\_metal=True}  & 286 & $+0.1801^{**}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{**}p<0.01$; $^{***}p<0.001$; no star = not
+significant. Against \texttt{energy\_above\_hull}: $\rho=+0.073$,
+$p=0.13$ overall, only \texttt{mixed} reaches significance
+($\rho=+0.497$, $p=0.004$, $n=32$) --- the same pattern as every other
+ICOHP/ICOBI descriptor in this report against this target.}
+\end{table}
+
+\textbf{At this expanded scale, this construction also survives on
+every subgroup tested} ($p<0.01$ throughout) --- unlike the full
+reaction-ICOHP descriptor (\S\ref{sec:reaction-icohp}), which loses all
+\texttt{bond\_type} stratification, and unlike its own behavior at the
+earlier, smaller scale (where only ionic and \texttt{is\_metal}
+survived). Weaker in magnitude than $\Delta$(ICOHP antibonding)
+(previous subsection) on most strata, but now just as general in
+surviving stratification. Cross-correlation with $\Delta$(ICOHP
+antibonding): $\rho=-0.567$ ($p<0.001$, $n=439$) --- strongly
+\emph{anti}correlated despite their close construction (same window,
+same $E_F$), a sign that truncating to only the antibonding part
+(previous subsection) captures information qualitatively different
+from the full signed ICOHP in the same window. Cross-correlation with
+the full reaction-ICOHP descriptor: $\rho=+0.241$ ($p<0.001$) ---
+related but clearly distinct, not a simple restriction of the same
+quantity.
 
 \section{Reitz \& Dronskowski reaction structures}
 \label{sec:appendix-reitz-dronskowski-structures}

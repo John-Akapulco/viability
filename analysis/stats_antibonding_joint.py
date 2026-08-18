@@ -33,6 +33,7 @@ HERE = Path(__file__).parent
 ICOHP_CSV = HERE / "icohp_antibonding_full.csv"
 ICOBI_CSV = HERE / "icobi_antibonding_all.csv"
 DELTA_CSV = HERE / "delta_antibonding_case1.csv"
+BONDTYPE_CSV = HERE / "icohp_icobi_bondtype.csv"
 FIG_DIR = HERE / "figures_antibonding"
 FIG_DIR.mkdir(exist_ok=True)
 
@@ -97,10 +98,26 @@ def make_comparison_figure(icohp_df: pd.DataFrame, icobi_df: pd.DataFrame) -> Pa
     return out
 
 
+def _use_icobi_bond_classification(df: pd.DataFrame) -> pd.DataFrame:
+    """Override this df's own bond_type/is_metal (sourced from
+    build_bond_type_map()/build_is_metal_map(), themselves a
+    classify()-heuristic-first mapping with sparse coverage -- the same
+    flawed-precedence bug already found and fixed elsewhere in this
+    project's pipeline this session, see stats_analysis_reaction_icohp.py's
+    load_merged()) with the is_metal-first ICOBI classifier
+    (icohp_icobi_bondtype.csv's icobi_label), which covers every
+    compound with LOBSTER data, not just the main campaign."""
+    bt = pd.read_csv(BONDTYPE_CSV)[["compound_id", "icobi_label", "is_metal"]]
+    df = df.drop(columns=[c for c in ("bond_type", "is_metal") if c in df.columns])
+    df = df.merge(bt, on="compound_id", how="left")
+    df = df.rename(columns={"icobi_label": "bond_type"})
+    return df
+
+
 def main():
-    icohp_df = pd.read_csv(ICOHP_CSV)
-    icobi_df = pd.read_csv(ICOBI_CSV)
-    delta_df = pd.read_csv(DELTA_CSV)
+    icohp_df = _use_icobi_bond_classification(pd.read_csv(ICOHP_CSV))
+    icobi_df = _use_icobi_bond_classification(pd.read_csv(ICOBI_CSV))
+    delta_df = _use_icobi_bond_classification(pd.read_csv(DELTA_CSV))
 
     summary = {
         "icohp_antibonding": {

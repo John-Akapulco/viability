@@ -27,8 +27,8 @@ from scipy.stats import spearmanr
 HERE = Path(__file__).parent
 REPO_ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
-from compute_icobi_antibonding_all import build_bond_type_map  # noqa: E402
 WINDOWED_CSV = HERE / "reaction_icohp_windowed_case1.csv"
+BONDTYPE_CSV = HERE / "icohp_icobi_bondtype.csv"
 FULL_CSV = HERE / "reaction_icohp_case1.csv"
 DELTA_ANTIBOND_CSV = HERE / "delta_antibonding_case1.csv"
 FORMATION_ENERGIES = REPO_ROOT / "mp_dataset" / "formation_energies.json"
@@ -62,8 +62,12 @@ def main() -> None:
     df = pd.read_csv(WINDOWED_CSV)
     formation_energies = json.loads(FORMATION_ENERGIES.read_text())
     df["formation_energy_per_atom"] = df["mp_id"].map(formation_energies)
-    bond_type_map = build_bond_type_map()
-    df["bond_type"] = df["compound_id"].map(bond_type_map)
+    # is_metal-first ICOBI classifier (icohp_icobi_bondtype.csv), not
+    # build_bond_type_map()'s classify()-heuristic-first mapping -- same
+    # sourcing fix already applied elsewhere in the pipeline this session.
+    bt = pd.read_csv(BONDTYPE_CSV)[["compound_id", "icobi_label", "is_metal"]]
+    df = df.drop(columns=[c for c in ("bond_type", "is_metal") if c in df.columns])
+    df = df.merge(bt, on="compound_id", how="left").rename(columns={"icobi_label": "bond_type"})
 
     summary = {
         "n_total": len(df),

@@ -1129,31 +1129,35 @@ l'ICOBI est donc sa partie \emph{négative}, pas positive --- le sens de
 troncature (\texttt{integrate\_icobi\_antibonding\_in\_window()}) est
 délibérément le miroir de celui utilisé pour l'ICOHP, pas une copie.
 
-Calculé sur les 394 composés disposant d'un \texttt{COBICAR.lobster}
-(\texttt{analysis/compute\_icobi\_antibonding\_all.py}) ; 392 avec
-\texttt{is\_metal} disponible.
+Calculé sur les 588 composés disposant d'un \texttt{COBICAR.lobster} et
+d'un \texttt{COHPCAR.lobster}, \texttt{is\_metal} disponible pour la
+totalité (\texttt{analysis/compute\_icobi\_antibonding\_all.py},
+\texttt{analysis/compute\_antibonding\_all\_full.py} --- un composé,
+\texttt{Cu4Au}, exclu pour échec catastrophique de la projection LOBSTER,
+\S\ref{sec:limites-actuelles}).
 
 \subsection{Corrélation à l'énergie de formation}
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman (normalisées, $\Delta E=1{,}0$~eV) contre \texttt{formation\_energy\_per\_atom} --- ICOHP (n=394) et ICOBI (n=392) antiliants, même population.}
+\caption{Corrélations de Spearman (normalisées, $\Delta E=1{,}0$~eV) contre \texttt{formation\_energy\_per\_atom} --- ICOHP et ICOBI antiliants, même population ($n=588$).}
 \label{tab:antibonding-icohp-icobi}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Groupe & $n$ (ICOHP) & $\rho$ (ICOHP) & $n$ (ICOBI) & $\rho$ (ICOBI) \\
 \midrule
-tous              & 391 & $-0{,}2473^{***}$ & 385 & $+0{,}2518^{***}$ \\
-\texttt{covalent} & 40  & $-0{,}4781^{**}$  & 38  & $-0{,}1755$ \\
-\texttt{ionique}  & 53  & $-0{,}1842$       & 51  & $+0{,}1289$ \\
-\texttt{métallique} & 88 & $-0{,}1864$      & 86  & $+0{,}0011$ \\
-\texttt{is\_metal=False} & 166 & $-0{,}2621^{***}$ & 162 & $+0{,}0661$ \\
-\texttt{is\_metal=True}  & 225 & $-0{,}0154$       & 223 & $+0{,}1263$ \\
+tous                & 579 & $-0{,}1550^{***}$ & 579 & $+0{,}2308^{***}$ \\
+\texttt{covalent}   & 54  & $-0{,}0464$       & 54  & $+0{,}1129$ \\
+\texttt{ionique}    & 96  & $-0{,}1958$       & 96  & $+0{,}1615$ \\
+\texttt{métallique} & 367 & $+0{,}0563$       & 367 & $+0{,}1197^{*}$ \\
+\texttt{mixte}      & 62  & $-0{,}5376^{***}$ & 62  & $+0{,}0251$ \\
+\texttt{is\_metal=False} & 212 & $-0{,}3334^{***}$ & 212 & $-0{,}0108$ \\
+\texttt{is\_metal=True}  & 367 & $+0{,}0563$       & 367 & $+0{,}1197^{*}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$ ; aucune étoile =
+{\footnotesize $^{*}p<0{,}05$ ; $^{***}p<0{,}001$ ; aucune étoile =
 non significatif. Détail complet (brut + normalisé, les trois
 $\Delta E$) : \texttt{analysis/stats\_summary\_antibonding\_joint.json}.}
 \end{table}
@@ -1162,19 +1166,27 @@ $\Delta E$) : \texttt{analysis/stats\_summary\_antibonding\_joint.json}.}
 \includegraphics[width=\textwidth]{icohp_vs_icobi_antibonding_comparison.png}
 \end{center}
 
-\textbf{Les deux descripteurs se comportent différemment.} Le signe
-global de l'ICOBI antiliant est \emph{opposé} à celui de l'ICOHP
-antiliant (respectivement $+0{,}25$ et $-0{,}25$) --- pour l'ICOHP, plus
-d'antiliaison occupée près de $E_F$ est associé à une formation
-\emph{plus} stable (déjà noté comme contre-intuitif au
+\textbf{Les deux descripteurs se comportent toujours différemment, et
+\emph{aucun} des deux ne conserve son ancien résultat stratifié
+vedette.} Le signe global de l'ICOBI antiliant reste \emph{opposé} à
+celui de l'ICOHP antiliant ($+0{,}23$ contre $-0{,}16$) --- pour
+l'ICOHP, plus d'antiliaison occupée près de $E_F$ est associé à une
+formation \emph{plus} stable (déjà noté comme contre-intuitif au
 \S\ref{sec:antibonding}) ; pour l'ICOBI, la relation va dans le sens
-naïvement attendu (plus d'antiliaison $\Rightarrow$ moins stable). Mais
-\textbf{aucun sous-groupe ICOBI ne survit à la stratification}
-(covalent, ionique, métallique, \texttt{is\_metal} : $p>0{,}05$
-partout) --- contrairement à l'ICOHP, dont le sous-groupe covalent
-($n=40$, $\rho=-0{,}478$) reste le résultat stratifié le plus robuste du
-projet. La corrélation globale de l'ICOBI est donc, comme pour l'ICOHP
-de réaction (\S\ref{sec:reaction-icohp}), vraisemblablement un effet de
+naïvement attendu. \textbf{Le sous-groupe covalent de l'ICOHP
+antiliant, longtemps le résultat stratifié le plus robuste du projet
+($\rho=-0{,}551$ à $n=33$), ne survit plus à $n=54$
+($\rho=-0{,}046$, $p=0{,}74$)} --- rétracté, \S\ref{sec:antibonding}.
+\textbf{Nouveau à cette échelle} : \texttt{bond\_type=mixte} (Zintl)
+domine désormais nettement pour l'ICOHP antiliant ($\rho=-0{,}538$,
+$p\approx0$), une catégorie qui n'existait quasiment pas quand le
+résultat covalent avait été établi ; \texttt{is\_metal=False} reste la
+strate la plus constamment significative du descripteur ICOHP à travers
+les échelles successives de ce projet. Côté ICOBI, seul
+\texttt{métallique} atteint une significativité (faible, $p=0{,}022$) ;
+aucun autre sous-groupe ICOBI ne survit, comme précédemment. La
+corrélation globale de l'ICOBI reste donc, comme pour l'ICOHP de
+réaction (\S\ref{sec:reaction-icohp}), vraisemblablement un effet de
 regroupement entre types de liaison plutôt qu'une relation robuste au
 sein d'un groupe homogène.
 
@@ -1192,77 +1204,82 @@ comme un choix méthodologique explicite plutôt qu'une réutilisation
 silencieuse : $\Delta$ = (moyenne des descripteurs antiliants des
 éléments, pondérée par fraction atomique) $-$ (descripteur antiliant
 propre du composé), toujours en convention produits $-$ réactifs.
-Calculé pour 320 réactions de cas 1
+Calculé pour 439 réactions de cas 1
 (\texttt{analysis/compute\_delta\_antibonding\_case1.py}).
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman, $\Delta$(antiliant) de la réaction de décomposition (cas 1, $n=316$--320).}
+\caption{Corrélations de Spearman, $\Delta$(antiliant) de la réaction de décomposition (cas 1, $n=434$--439).}
 \label{tab:delta-antibonding}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 Descripteur & Cible & $n$ & $\rho$ \\
 \midrule
-$\Delta$(ICOHP antiliant) & \texttt{formation\_energy\_per\_atom} & 316 & $-0{,}6439^{***}$ \\
-$\Delta$(ICOBI antiliant) & \texttt{formation\_energy\_per\_atom} & 316 & $-0{,}4457^{***}$ \\
-$\Delta$(ICOHP antiliant) & \texttt{energy\_above\_hull} & 320 & $-0{,}1868^{***}$ \\
-$\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 320 & $-0{,}1524^{**}$ \\
+$\Delta$(ICOHP antiliant) & \texttt{formation\_energy\_per\_atom} & 434 & $-0{,}6175^{***}$ \\
+$\Delta$(ICOBI antiliant) & \texttt{formation\_energy\_per\_atom} & 434 & $-0{,}4270^{***}$ \\
+$\Delta$(ICOHP antiliant) & \texttt{energy\_above\_hull} & 438 & $-0{,}1734^{***}$ \\
+$\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 438 & $-0{,}1215^{*}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$.}
+{\footnotesize $^{*}p<0{,}05$ ; $^{***}p<0{,}001$.}
 \end{table}
 
-\textbf{$\Delta$(ICOHP antiliant) est, à ce stade, la corrélation continue
-la plus forte de tout le projet} ($\rho=-0{,}644$, plus forte que
-l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}297$).
-Fait notable : contrairement aux valeurs brutes
-(signes opposés, ci-dessus), \textbf{les deux $\Delta$ vont dans le même
-sens} (tous deux négatifs) --- la construction en delta semble aligner
-les deux descripteurs sur une lecture cohérente, là où leurs valeurs
-brutes ne le sont pas. Les deux $\Delta$ sont eux-mêmes corrélés entre
-eux ($\rho=0{,}532$, $p<0{,}001$, $n=320$) : liés mais pas redondants.
+\textbf{$\Delta$(ICOHP antiliant) reste, à cette échelle, la corrélation
+continue la plus forte de tout le projet} ($\rho=-0{,}618$, plus forte
+que l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}295$) ---
+affaiblie par rapport au $\rho=-0{,}644$ rapporté à échelle réduite,
+mais toujours la plus forte. Fait notable, inchangé : contrairement aux
+valeurs brutes (signes opposés, ci-dessus), \textbf{les deux $\Delta$
+vont dans le même sens} (tous deux négatifs). Les deux $\Delta$ sont
+eux-mêmes corrélés entre eux ($\rho=0{,}588$, $p<0{,}001$, $n=439$) :
+liés mais pas redondants.
 
 \subsection{Stratification par type de liaison}
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman, $\Delta$(antiliant) contre \texttt{formation\_energy\_per\_atom}, par sous-groupe (cas 1, $n=316$).}
+\caption{Corrélations de Spearman, $\Delta$(antiliant) contre \texttt{formation\_energy\_per\_atom}, par sous-groupe (cas 1, $n=286$--$434$).}
 \label{tab:delta-antibonding-stratified}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Sous-groupe & $n$ & $\rho$ ($\Delta$ICOHP) & $n$ & $\rho$ ($\Delta$ICOBI) \\
 \midrule
-tous                & 316 & $-0{,}6439^{***}$ & 316 & $-0{,}4457^{***}$ \\
-\texttt{covalent}   & 29  & $-0{,}5798^{***}$ & 29  & $-0{,}2044$ \\
-\texttt{ionique}    & 51  & $-0{,}4205^{**}$  & 51  & $+0{,}0608$ \\
-\texttt{métallique} & 86  & $-0{,}4858^{***}$ & 86  & $-0{,}4872^{***}$ \\
-\texttt{is\_metal=False} & 145 & $-0{,}6210^{***}$ & 145 & $-0{,}3248^{***}$ \\
-\texttt{is\_metal=True}  & 171 & $-0{,}5490^{***}$ & 171 & $-0{,}4653^{***}$ \\
+tous                & 434 & $-0{,}6175^{***}$ & 434 & $-0{,}4270^{***}$ \\
+\texttt{covalent}   & 29  & $-0{,}6956^{***}$ & 29  & $-0{,}7750^{***}$ \\
+\texttt{ionique}    & 87  & $-0{,}6337^{***}$ & 87  & $-0{,}2245^{*}$ \\
+\texttt{métallique} & 286 & $-0{,}4316^{***}$ & 286 & $-0{,}3550^{***}$ \\
+\texttt{mixte}      & 32  & $-0{,}6394^{***}$ & 32  & $-0{,}8397^{***}$ \\
+\texttt{is\_metal=False} & 148 & $-0{,}6459^{***}$ & 148 & $-0{,}4131^{***}$ \\
+\texttt{is\_metal=True}  & 286 & $-0{,}4316^{***}$ & 286 & $-0{,}3550^{***}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$ ; aucune étoile = non
+{\footnotesize $^{*}p<0{,}05$ ; $^{***}p<0{,}001$ ; aucune étoile = non
 significatif.}
 \end{table}
 
-\textbf{$\Delta$(ICOHP antiliant) est, à ce jour, le premier descripteur
-de tout le projet dont la corrélation globale survit à
-\emph{l'intégralité} des stratifications testées} --- covalent, ionique,
-métallique, \texttt{is\_metal} des deux côtés, tous significatifs à
-$p<0{,}01$ au minimum. Ce n'est le cas d'\emph{aucun} autre descripteur
-de ce rapport : la population antiliante brute (\S\ref{sec:antibonding})
-ne garde que son sous-groupe covalent, l'ICOHP de réaction
-(\S\ref{sec:reaction-icohp}) perd toute stratification \texttt{bond\_type}
-et ne survit que sur \texttt{is\_metal}. $\Delta$(ICOBI antiliant) est
-plus mitigé : survit sur métallique et \texttt{is\_metal} (les deux
-côtés) mais pas sur covalent ($p=0{,}29$) ni ionique ($p=0{,}67$). Reste
-une construction nouvelle (\S précédent) --- sa magnitude devra être
-reproduite sur un jeu de données indépendant avant d'être prise comme un
-résultat définitivement acquis, mais la survie à une stratification
-complète en fait, en l'état, le résultat le plus solide du projet.
+\textbf{$\Delta$(ICOHP antiliant) reste, à cette échelle élargie, le
+premier descripteur de tout le projet dont la corrélation globale
+survit à l'intégralité des stratifications testées} --- covalent,
+ionique, métallique, mixte, \texttt{is\_metal} des deux côtés, tous
+significatifs à $p<0{,}001$. \textbf{$\Delta$(ICOBI antiliant) a
+lui aussi progressé} : il survit désormais sur \emph{toutes} les
+strates également (contre seulement métallique et \texttt{is\_metal}
+avant), avec le résultat le plus fort sur \texttt{mixte}
+($\rho=-0{,}840$). Ce n'est le cas d'\emph{aucun} autre descripteur de
+ce rapport : la population antiliante brute (\S\ref{sec:antibonding})
+a perdu son unique strate survivante (covalent, rétracté) et n'en garde
+que deux (mixte, \texttt{is\_metal=False}) ; l'ICOHP de réaction
+(\S\ref{sec:reaction-icohp}) ne survit que sur \texttt{bond\_type},
+pas sur métallique. Reste une construction relativement récente --- sa
+magnitude devra être reproduite sur un jeu de données véritablement
+indépendant avant d'être prise comme un résultat définitivement acquis,
+mais la survie à une stratification complète, maintenant à $n=434$ et
+sur cinq sous-groupes au lieu de trois, en fait le résultat le plus
+solide du projet.
 
 \subsection{$\Delta$(ICOHP) de réaction restreint à une fenêtre proche de $E_F$}
 \label{sec:reaction-icohp-windowed}
@@ -1285,48 +1302,50 @@ calculée par LOBSTER dans \texttt{COHPCAR.lobster}
 \texttt{ICOHP\_cumulative}$(E_F-\Delta E)$, par étiquette), sans nouvelle
 intégration trapézoïdale --- validé : à $\Delta E$ très grand (couvrant
 toute la fenêtre de calcul), cette quantité retrouve la somme ICOHP
-complète à $\sim$0,1\,\% près.
+complète à $\sim$0,1\,\% près. Calculé pour 439 réactions de cas 1.
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman, $\Delta$(ICOHP fenêtré près de $E_F$) contre \texttt{formation\_energy\_per\_atom} (cas 1, $n=316$).}
+\caption{Corrélations de Spearman, $\Delta$(ICOHP fenêtré près de $E_F$) contre \texttt{formation\_energy\_per\_atom} (cas 1, $n=286$--$434$).}
 \label{tab:reaction-icohp-windowed}
 \begin{tabular}{@{}lrr@{}}
 \toprule
 Sous-groupe & $n$ & $\rho$ \\
 \midrule
-tous                & 316 & $+0{,}3712^{***}$ \\
-\texttt{covalent}   & 29  & $+0{,}3635$ (p=0,053) \\
-\texttt{ionique}    & 51  & $+0{,}5243^{***}$ \\
-\texttt{métallique} & 86  & $+0{,}1721$ \\
-\texttt{is\_metal=False} & 145 & $+0{,}4660^{***}$ \\
-\texttt{is\_metal=True}  & 171 & $+0{,}1848^{*}$ \\
+tous                & 434 & $+0{,}3566^{***}$ \\
+\texttt{covalent}   & 29  & $+0{,}6185^{***}$ \\
+\texttt{ionique}    & 87  & $+0{,}6184^{***}$ \\
+\texttt{métallique} & 286 & $+0{,}1801^{**}$ \\
+\texttt{mixte}      & 32  & $+0{,}4578^{**}$ \\
+\texttt{is\_metal=False} & 148 & $+0{,}5643^{***}$ \\
+\texttt{is\_metal=True}  & 286 & $+0{,}1801^{**}$ \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^{*}p<0{,}05$ ; $^{***}p<0{,}001$ ; aucune étoile = non
-significatif. Contre \texttt{energy\_above\_hull}, aucune corrélation
-significative nulle part ($n=320$, $p>0{,}07$ partout) --- même
-comportement que tous les autres descripteurs ICOHP/ICOBI de ce rapport.}
+{\footnotesize $^{**}p<0{,}01$ ; $^{***}p<0{,}001$ ; aucune étoile = non
+significatif. Contre \texttt{energy\_above\_hull} : $\rho=+0{,}073$,
+$p=0{,}13$ au global, seule \texttt{mixte} atteint la significativité
+($\rho=+0{,}497$, $p=0{,}004$, $n=32$) --- même comportement que les
+autres descripteurs ICOHP/ICOBI de ce rapport contre cette cible.}
 \end{table}
 
-Résultat intermédiaire entre les deux autres constructions : contrairement
-à l'ICOHP de réaction complet (\S\ref{sec:reaction-icohp}), qui perd
-\emph{toute} stratification \texttt{bond\_type}, cette version fenêtrée
-\textbf{survit sur le sous-groupe ionique} ($\rho=0{,}524$, $p<0{,}001$)
-et sur \texttt{is\_metal} des deux côtés --- mais pas sur métallique, et
-seulement à la limite sur covalent ($p=0{,}053$). Moins robuste que
-$\Delta$(ICOHP antiliant) (sous-section précédente, survit partout), plus
-robuste que l'ICOHP de réaction complet. Corrélation croisée avec
-$\Delta$(ICOHP antiliant) : $\rho=-0{,}599$ ($p<0{,}001$, $n=320$) ---
-fortement \emph{anti}corrélées malgré leur construction proche (même
-fenêtre, même $E_F$), signe que la troncature à la seule partie
-antiliante (sous-section précédente) capture une information
-qualitativement différente de l'ICOHP signé complet dans la même
-fenêtre. Corrélation croisée avec l'ICOHP de réaction complet :
-$\rho=0{,}231$ ($p<0{,}001$) --- liée mais nettement distincte, pas une
-simple restriction de la même quantité.
+\textbf{À cette échelle élargie, cette construction survit elle aussi
+sur l'intégralité des sous-groupes testés} ($p<0{,}01$ partout) ---
+contrairement à l'ICOHP de réaction complet (\S\ref{sec:reaction-icohp}),
+qui perd toute stratification \texttt{bond\_type}, et contrairement à
+son propre comportement à échelle réduite (où seuls ionique et
+\texttt{is\_metal} survivaient). Moins forte en magnitude que
+$\Delta$(ICOHP antiliant) (sous-section précédente) sur la plupart des
+strates, mais désormais tout aussi générale dans sa survie à la
+stratification. Corrélation croisée avec $\Delta$(ICOHP antiliant) :
+$\rho=-0{,}567$ ($p<0{,}001$, $n=439$) --- fortement \emph{anti}corrélées
+malgré leur construction proche (même fenêtre, même $E_F$), signe que
+la troncature à la seule partie antiliante (sous-section précédente)
+capture une information qualitativement différente de l'ICOHP signé
+complet dans la même fenêtre. Corrélation croisée avec l'ICOHP de
+réaction complet : $\rho=+0{,}241$ ($p<0{,}001$) --- liée mais nettement
+distincte, pas une simple restriction de la même quantité.
 
 \section{Structures des réactions de Reitz \& Dronskowski}
 \label{sec:appendix-reitz-dronskowski-structures}
