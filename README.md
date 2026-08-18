@@ -85,26 +85,36 @@ polymorphs (e.g. graphite) are expected to misbehave.
 
 Case 1 (decomposition into elements), using 62 elemental reference
 calculations (`mp_dataset/download_elements_reference.py` + hand-picked
-extension compounds), computed for **281 compounds** pooled across every
-historical campaign and extension batch — 0 missing elemental
-references. Tested in `analysis/stats_analysis_reaction_icohp.py`. See
+extension compounds), computed for **518 case-1 reactions** pooled
+across every batch — 0 missing elemental references. Tested in
+`analysis/stats_analysis_reaction_icohp.py`. See
 **[`analysis/REPORT_reaction_icohp.md`](analysis/REPORT_reaction_icohp.md)**.
-Headline: ρ=0.502, p=6.3×10⁻¹⁹ (n=275) against `formation_energy_per_atom`
-— the clear strongest global correlation in the project. The
-`bond_type`-level between-group effect (metal vs. gapped, and across the
-three `bond_type` strata) fully explains that layer of the pooled
-signal — no `bond_type` stratum reaches significance on its own — but
-**the coarser `is_metal` split tells a different story**: both
-`is_metal=False` (ρ=0.319, p=0.0001) and `is_metal=True` (ρ=0.256,
-p=0.0025) survive, the first descriptor in the project whose signal is
-not fully explained away by between-group clustering at every level
-tested. Against `energy_above_hull` the correlation is weak but no
-longer flatly null (ρ=0.14, p=0.018). Case 2 (polymorph comparison), at
-**49 polymorph groups** (up from an original 8): 53.1% agreement between
+Headline: ρ=0.297, p≈0 (n=511) against `formation_energy_per_atom` — a
+real, highly significant correlation, though weaker than it looked at
+smaller scale. The between-group picture has shifted shape rather than
+resolved: `bond_type=ionic` (ρ=0.360, p=0.0004) and the newer
+`bond_type=mixed`/Zintl category (ρ=−0.525, opposite sign, p≈0) both
+carry their own significant signal, `bond_type=covalent` too but flips
+sign (ρ=−0.354, p=0.023), and only `bond_type=metallic` (the majority
+class, 316/511 rows) stays non-significant. **The coarser `is_metal`
+split — the one that used to survive stratification when `bond_type`
+didn't — has since converged onto `bond_type=metallic`'s exact
+population** (identical n, ρ, p) and now inherits its non-significant
+result; `bond_type`, not `is_metal`, is the split that carries
+information at the current dataset composition. Against
+`energy_above_hull` the correlation is weak and no longer even
+borderline at the pooled level (ρ=0.058, p=0.19), though
+`bond_type=mixed` again survives on its own (ρ=−0.307, p=0.016). On a
+288-compound subset shared with every other descriptor in the project,
+antibonding population (mission #4) edges out reaction ICOHP on both
+targets — reaction ICOHP is a strong descriptor here, not unambiguously
+*the* strongest anymore. Case 2 (polymorph comparison), at **74
+polymorph groups** (up from an original 8): 47.3% agreement between
 most-bonding and most-stable member, statistically indistinguishable
-from the 45.9% chance baseline (P=0.19) — bonding does not track
-polymorph stability. Case 3 (decomposition into a compound + elements)
-remains not attempted; see the report for why.
+from the 42.4% chance baseline (P=0.22) — bonding does not track
+polymorph stability, the same conclusion as at every earlier scale.
+Case 3 (decomposition into a compound + elements) remains not
+attempted; see the report for why.
 
 **`reaction_analysis/` (schema-driven redesign of this axis)**: a
 from-scratch Pydantic schema (`CompoundEntry`, `Reaction`,
@@ -121,11 +131,12 @@ three ΔICOHP/ΔICOBI normalizations — per formula unit, per atom, and a
 non-conservative per-bond diagnostic — computed together, never one in
 isolation). Populated with a first real-data batch (6 compounds, 3
 `decomposition_to_elements` reactions), cross-checked 3/3 against
-`reaction_icohp.py`'s numbers, then extended to cover the full 281-
-reaction case-1 population (`analysis/populate_reaction_analysis_case1_full.py`,
-`reactions_dataset/`) — 281/281 match `reaction_icohp_case1.csv` after
-the known sign flip. Its sign convention (products − reactants) is the
-*opposite* of `reaction_icohp.py`'s — the two are not interchangeable.
+`reaction_icohp.py`'s numbers, then extended to cover the full case-1
+population (`analysis/populate_reaction_analysis_case1_full.py`,
+`reactions_dataset/` at the repo root) — matches `reaction_icohp_case1.csv`
+row-for-row (518/518) after the known sign flip. Its sign convention
+(products − reactants) is the *opposite* of `reaction_icohp.py`'s — the
+two are not interchangeable.
 
 **Endobondic/exobondic classification**: `nearest_neighbor.py`
 (first-coordination-shell bond filtering — a relative, self-calibrating

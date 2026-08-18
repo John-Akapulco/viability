@@ -101,8 +101,8 @@
       "group": "all",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 329,
-      "rho": 0.37,
+      "n": 511,
+      "rho": 0.2969,
       "p_value": 0.0,
       "note": null
     },
@@ -110,35 +110,35 @@
       "group": "bond_type=covalent",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 32,
-      "rho": -0.2409,
-      "p_value": 0.1841,
+      "n": 41,
+      "rho": -0.3539,
+      "p_value": 0.0232,
       "note": null
     },
     {
       "group": "bond_type=ionic",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 88,
-      "rho": 0.3178,
-      "p_value": 0.0025,
+      "n": 93,
+      "rho": 0.3604,
+      "p_value": 0.0004,
       "note": null
     },
     {
       "group": "bond_type=metallic",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 173,
-      "rho": 0.2269,
-      "p_value": 0.0027,
+      "n": 316,
+      "rho": 0.0959,
+      "p_value": 0.0887,
       "note": null
     },
     {
       "group": "bond_type=mixed",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 36,
-      "rho": -0.6575,
+      "n": 61,
+      "rho": -0.5249,
       "p_value": 0.0,
       "note": null
     },
@@ -146,18 +146,18 @@
       "group": "is_metal=False",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 156,
-      "rho": -0.0017,
-      "p_value": 0.9832,
+      "n": 195,
+      "rho": -0.1111,
+      "p_value": 0.1221,
       "note": null
     },
     {
       "group": "is_metal=True",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 173,
-      "rho": 0.2269,
-      "p_value": 0.0027,
+      "n": 316,
+      "rho": 0.0959,
+      "p_value": 0.0887,
       "note": null
     }
   ],
@@ -166,8 +166,8 @@
       "group": "all",
       "metric": "delta_icohp_total",
       "target": "formation_energy_per_atom",
-      "n": 329,
-      "rho": 0.2688,
+      "n": 511,
+      "rho": 0.2095,
       "p_value": 0.0,
       "note": null
     }
