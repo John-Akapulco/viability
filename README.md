@@ -1,14 +1,14 @@
 # viability
 
-**Central research question (reformulated 2026-08-16): does Δ(ICOHP) —
+**Central research question: does Δ(ICOHP) —
 the reaction-ICOHP descriptor for a compound's decomposition into
 elements, and specifically the sign-based endobondic/exobondic
 classification it supports —
 distinguish thermodynamically stable, metastable, and unstable
-compounds?** Tested over every element and compound computed across the
-whole project to date (`mp_dataset/structures/`, 349 compounds, 281
-case-1 decomposition reactions), pooled without regard to which
-historical campaign or extension batch a compound came from — see
+compounds?** Tested over every element and compound with a computed
+case-1 decomposition reaction (`mp_dataset/structures/`, 597 compounds,
+518 case-1 reactions), pooled without regard to which batch a compound
+came from — see
 **[`analysis/REPORT_delta_icohp_viability.md`](analysis/REPORT_delta_icohp_viability.md)**.
 
 **Headline**: concordance against 7 reference validation reactions with
@@ -16,19 +16,25 @@ independently known ΔICOHP values is essentially exact (Lin's Concordance Corre
 Coefficient = 0.999998, sign agreement 7/7, mean residual 0.76 kJ/mol —
 this is a genuine agreement test against the identity line, not just a
 correlation, and the implementation is validated by it). Extended to the
-project's full 281-reaction history, Δ(ICOHP)/atom correlates strongly
-with `formation_energy_per_atom` (ρ=−0.50, p=6.3×10⁻¹⁹) but the
-sign-based endobondic/exobondic split does **not** yet significantly
-discriminate experimentally-realized compounds from theoretical-only
-ones (Fisher exact p=0.10) — though the trend across
-exp_metastable/exp_stable/theo_metastable is monotonic and physically
-sensible (endobondic fraction 27.1% → 20.3% → 11.9%), just not
-significant yet at n=175. See the report for the honest read on why: the
-7 reference cases were chosen as borderline-stability edge cases,
-while most of this project's compounds are comfortably stable or
-comfortably not — extending the test to more borderline compounds
-(deliberately, not just accumulating whatever the next unrelated mission
-happens to add) is the identified next step.
+project's full 518-reaction history, the sign-based endobondic/exobondic
+split **now does significantly discriminate** experimentally-realized
+compounds from theoretical-only ones (Fisher exact p=0.0053, odds ratio
+1.82; Mann-Whitney on the continuous Δ(ICOHP)/atom itself, same split,
+p=0.0088) — a result the marginal-formation-energy and max-hull-distance
+batches were built specifically to test. The finer three-way split
+(exp_metastable/exp_stable/theo_metastable) is unchanged from before
+(Kruskal-Wallis p=0.278, n=177 — those newer batches carry a
+`theoretical` flag but not yet a `family` label, so this specific test
+has not grown). Against continuous stability targets, Δ(ICOHP)/atom
+still correlates with `formation_energy_per_atom` (ρ=−0.297,
+p=7.3×10⁻¹²) but more weakly than on the earlier, smaller population
+(ρ=−0.50) and no longer even borderline with `energy_above_hull`
+(ρ=−0.058, p=0.19) — the added batches' deliberately marginal/extreme
+thermodynamics dilute a rank correlation partly carried by the earlier
+population's narrower stability range. See the report for the full
+picture, and its §4 for the identified next step (extend `family`
+labels to the newer batches so the three-way split can be tested at the
+same scale as the binary one).
 
 This question is answered by two modules working together:
 `reaction_icohp.py` (the original ICOHP-analog-of-formation-energy
@@ -138,18 +144,23 @@ dataset** (**[`analysis/REPORT_delta_icohp_viability.md`](analysis/REPORT_delta_
 `analysis/test_delta_icohp_viability.py`): all 7 reference validation
 cases reproduce to a Lin's CCC of 0.999998 (sign agreement 7/7, mean
 residual 0.76 kJ/mol) — independent of this project's own CSP data.
-Extended to every case-1 reaction computed across the whole project (281,
-pooled across all campaigns — not split by which extension batch a
-compound happened to arrive in), the endobondic/exobondic sign shows a
-real but not-yet-significant trend toward distinguishing
-experimentally-viable from theoretical-only compounds (Fisher exact
-p=0.10; Kruskal-Wallis across exp_metastable/exp_stable/theo_metastable
-p=0.245, though the ordering is exactly the physically-expected one).
-**Not yet connected to real LOBSTER data for a full `ViabilityLabel`
+Extended to every case-1 reaction with a computed result (518, pooled
+across all batches — not split by which one a compound happened to
+arrive in), the endobondic/exobondic sign **now significantly**
+distinguishes experimentally-realized from theoretical-only compounds
+(Fisher exact p=0.0053, odds ratio 1.82; Mann-Whitney on the continuous
+Δ(ICOHP)/atom, p=0.0088) — the marginal-formation-energy and
+max-hull-distance batches supplied the borderline-stability contrast
+this test needed. The finer three-way split
+(exp_metastable/exp_stable/theo_metastable, still n=177) remains
+not-yet-significant (Kruskal-Wallis p=0.278) because those batches
+carry a `theoretical` flag but not yet a `family` label. **Not yet
+connected to real LOBSTER data for a full `ViabilityLabel`
 classification** (needs a population deliberately chosen to sit near a
 decomposition edge, closer to the 7 reference cases than to this
 project's general-purpose dataset) — the concrete next step for this
-central question.
+central question, alongside extending `family` labels to the newer
+batches.
 
 ## Antibonding population near the frontier (E_F/VBM) (mission #4)
 
