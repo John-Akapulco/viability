@@ -20,8 +20,13 @@ project's full 518-reaction history, the sign-based endobondic/exobondic
 split **now does significantly discriminate** experimentally-realized
 compounds from theoretical-only ones (Fisher exact p=0.0053, odds ratio
 1.82; Mann-Whitney on the continuous Δ(ICOHP)/atom itself, same split,
-p=0.0088) — a result the marginal-formation-energy and max-hull-distance
-batches were built specifically to test. The finer three-way split
+p=0.0088), and the full `ViabilityLabel` (sign combined with
+thermodynamics, `classify_viability()`) discriminates far more strongly
+still (Fisher exact **p=2.8×10⁻¹⁵**, odds ratio **6.0** — experimentally-
+realized compounds are ~6× less likely to be predicted
+`UNSTABLE_NONEXISTENT` than theoretical-only ones) — a result the
+marginal-formation-energy and max-hull-distance batches were built
+specifically to test. The finer three-way split
 (exp_metastable/exp_stable/theo_metastable) is unchanged from before
 (Kruskal-Wallis p=0.278, n=177 — those newer batches carry a
 `theoretical` flag but not yet a `family` label, so this specific test
@@ -32,9 +37,10 @@ p=7.3×10⁻¹²) but more weakly than on the earlier, smaller population
 (ρ=−0.058, p=0.19) — the added batches' deliberately marginal/extreme
 thermodynamics dilute a rank correlation partly carried by the earlier
 population's narrower stability range. See the report for the full
-picture, and its §4 for the identified next step (extend `family`
+picture, and its §4 for the identified next steps (extend `family`
 labels to the newer batches so the three-way split can be tested at the
-same scale as the binary one).
+same scale as the binary ones; check whether the `ViabilityLabel` result
+is itself confounded).
 
 This question is answered by two modules working together:
 `reaction_icohp.py` (the original ICOHP-analog-of-formation-energy
@@ -162,16 +168,19 @@ distinguishes experimentally-realized from theoretical-only compounds
 (Fisher exact p=0.0053, odds ratio 1.82; Mann-Whitney on the continuous
 Δ(ICOHP)/atom, p=0.0088) — the marginal-formation-energy and
 max-hull-distance batches supplied the borderline-stability contrast
-this test needed. The finer three-way split
+this test needed. **The full `ViabilityLabel`** (sign combined with
+`delta_energy`, `classify_viability()`, run on real LOBSTER-derived
+Δ(ICOHP) via `analysis/compute_case1_viability.py`) **discriminates far
+more strongly still**: Fisher exact **p=2.8×10⁻¹⁵**, odds ratio **6.0**
+(experimentally-realized compounds ~6× less likely to be predicted
+`UNSTABLE_NONEXISTENT`). The finer three-way split
 (exp_metastable/exp_stable/theo_metastable, still n=177) remains
 not-yet-significant (Kruskal-Wallis p=0.278) because those batches
-carry a `theoretical` flag but not yet a `family` label. **Not yet
-connected to real LOBSTER data for a full `ViabilityLabel`
-classification** (needs a population deliberately chosen to sit near a
-decomposition edge, closer to the 7 reference cases than to this
-project's general-purpose dataset) — the concrete next step for this
-central question, alongside extending `family` labels to the newer
-batches.
+carry a `theoretical` flag but not yet a `family` label — the concrete
+next step for this central question, alongside checking whether the
+`ViabilityLabel` result is itself confounded by `bond_type`/`is_metal`
+or by max-hull's deliberately-extreme selection (not yet checked, see
+the report's §4).
 
 ## Antibonding population near the frontier (E_F/VBM) (mission #4)
 

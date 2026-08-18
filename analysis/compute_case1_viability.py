@@ -51,14 +51,12 @@ FORMATION_ENERGIES = REPO_ROOT / "mp_dataset" / "formation_energies.json"
 STRUCTURES_ROOT = REPO_ROOT / "mp_dataset" / "structures"
 OUT_CSV = REPO_ROOT / "analysis" / "case1_viability.csv"
 
-# The report's Table 8 (Fisher exact test, Sec. "Etendu a tout compose...")
-# is scoped to the pooled 281-reaction population BEFORE the maxhull batch
-# was folded into that particular analysis (only Sec. 5's dataset tables
-# and the appendix compound list got the maxhull update so far -- see
-# project memory). Excluded here too, so this script's counts line up
-# EXACTLY with what Table 8 currently shows (281, not the full 322
-# reaction_analysis_case1_full.csv now contains with maxhull included).
-EXCLUDED_BATCHES = {"maxhull_binaries_stress_test"}
+# No batch exclusion: every batch (main campaign, extension1-4, maxhull,
+# marginal-formation-energy, widen) is pooled without regard to origin,
+# matching test_delta_icohp_viability.py's convention and this project's
+# explicit "no campaign-splitting" rule -- see
+# analysis/test_delta_icohp_viability.py's docstring.
+EXCLUDED_BATCHES: set[str] = set()
 
 
 def _excluded_compound_ids() -> set[str]:
@@ -146,6 +144,27 @@ def main() -> None:
     for bl in ("endobondic", "exobondic", "n/a"):
         row_labels = {lbl: bonding_cross.get((bl, lbl), 0) for lbl in n_by_label}
         print(f"  {bl:12s} {row_labels}")
+
+    # ViabilityLabel (not just BondingLabel's sign) vs experimental/theoretical:
+    # UNSTABLE_NONEXISTENT only requires BOTH exobondic AND delta_energy<0
+    # (see classify_viability()), so this is a strictly more informative test
+    # than Table tab:fisher's sign-only split above -- worth its own
+    # significance check now that the pooled population is large enough to
+    # support it (it was not run when this script was first written).
+    from scipy.stats import chi2_contingency, fisher_exact
+
+    classified = [r for r in out_rows if r["viability_label"] != "insufficient_data" and r["theoretical"] in ("True", "False")]
+    ct = {"False": {"viable": 0, "unstable": 0}, "True": {"viable": 0, "unstable": 0}}
+    for r in classified:
+        key = "unstable" if r["viability_label"] == "unstable_nonexistent" else "viable"
+        ct[r["theoretical"]][key] += 1
+    table = [[ct["False"]["viable"], ct["False"]["unstable"]], [ct["True"]["viable"], ct["True"]["unstable"]]]
+    odds, p_fisher = fisher_exact(table)
+    chi2, p_chi2, _, _ = chi2_contingency(table)
+    print(f"\nViabilityLabel (viable = STABLE_ON_HULL+METASTABLE_VIABLE vs UNSTABLE_NONEXISTENT) x experimental/theoretical:")
+    print(f"  experimental: viable={ct['False']['viable']} unstable_nonexistent={ct['False']['unstable']}")
+    print(f"  theoretical:  viable={ct['True']['viable']} unstable_nonexistent={ct['True']['unstable']}")
+    print(f"  Fisher exact p={p_fisher:.3e}, odds ratio={odds:.3f}; chi2={chi2:.3f}, p={p_chi2:.3e}")
 
 
 if __name__ == "__main__":
