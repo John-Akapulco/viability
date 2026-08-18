@@ -126,8 +126,7 @@ orbital-resolved); 0.05~eV Gaussian smearing
 own definition, the integral of COHP($E$) from the bottom of the window
 above up to the Fermi level (occupied states only), in eV; negative =
 bonding, positive = antibonding. ICOBI is the same integral over COBI
-(bond order index), dimensionless. Per-compound aggregation
-(\texttt{percolation\_path.py}): \texttt{icohp\_sum}/\texttt{icobi\_sum}
+(bond order index), dimensionless. Per-compound aggregation: \texttt{icohp\_sum}/\texttt{icobi\_sum}
 over every symmetrically inequivalent bond label in
 \texttt{ICOHPLIST.lobster}/\texttt{ICOBILIST.lobster} (each periodic bond
 counted once, not once per direction); \texttt{icohp\_mean}/
@@ -191,7 +190,7 @@ regression} at this stage (see \S\ref{sec:limits-current}).
 \node[box, below=of mp] (prep)   {\texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} scripts \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
 \node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks, HPC Yargla};
 \node[box, below=of slurm] (vasplob) {VASP (static, 16 cores) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
-\node[box, below=of vasplob] (desc)   {Per-mission descriptor extraction \\ \texttt{reaction\_icohp.py}, \texttt{cohp\_extraction.py}, \texttt{reaction\_analysis/}, \ldots};
+\node[box, below=of vasplob] (desc)   {Descriptor extraction \\ \texttt{reaction\_icohp.py}, \texttt{cohp\_extraction.py}, \texttt{reaction\_analysis/}, \ldots};
 \node[box, below=of desc] (join)   {\texttt{analysis/build\_dataset*.py} \\ join + normalized descriptors + bond\_type};
 \node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis*.py} \\ correlations, stratification, figures};
 
@@ -339,10 +338,10 @@ manuscript's ICOHP to within 0.7\%; ZnSn reproduces the same sign
 (bonding-favorable decomposition) but with $\sim$2.9$\times$ larger
 magnitude --- a gap judged not significant at this stage, since a bulk
 intermetallic's ICOHP sum is far more sensitive to
-basis/pseudopotential/cutoff choices than a simple gas dimer. An
-independent campaign reproducing the manuscript's full DFT methodology
-(PBEsol+D3, Table S1's own k-point sets) across all 16 species, rather
-than just these two, is under way (\S\ref{sec:limits-current}).
+basis/pseudopotential/cutoff choices than a simple gas dimer. Reproducing the manuscript's full DFT
+methodology (PBEsol+D3, Table S1's own k-point sets) across all 16
+species, rather than just these two, remains to be done
+(\S\ref{sec:limits-current}).
 
 Correlation alone (Pearson/Spearman) is not the right test for "do our
 numbers match the reference values" --- it is satisfied by any monotonic
@@ -580,7 +579,7 @@ compounds have the lowest.
 \textbf{Step reading.} The 7 reference reactions reproduce almost
 exactly (step 1) --- the implementation is correct. Extended to the
 current full dataset (517 reactions, up from 281), the coarse sign-based
-discrimination is now significant, and the full \texttt{ViabilityLabel}
+discrimination is significant, and the full \texttt{ViabilityLabel}
 machinery --- sign combined with thermodynamics --- is far more strongly
 so. The continuous correlations against \texttt{formation\_energy\_per\_atom}
 and \texttt{energy\_above\_hull} weakened over the same period --- the
@@ -666,7 +665,7 @@ survives once the sample grew to $n=54$ ($\rho=-0.046$, $p=0.74$) --- a
 failure mode already seen elsewhere in this project (a subgroup result
 that does not replicate once the sample grows), including this same
 descriptor's own earlier \texttt{bond\_type=ionic} subgroup.
-\textbf{New at this scale}: \texttt{bond\_type=mixed} (Zintl) is now the
+\textbf{New at this scale}: \texttt{bond\_type=mixed} (Zintl) is the
 best-surviving stratum ($\rho=-0.538$, $p=6.6\times10^{-6}$, $n=62$) ---
 \textbf{strengthened} relative to step 2's pooled correlation --- a
 category that barely existed when the covalent result was first
@@ -678,7 +677,7 @@ converged onto \texttt{bond\_type=metallic} (identical $n=367$,
 $\rho=0.056$, not significant), the same phenomenon documented below
 for reaction ICOHP.
 
-\textbf{Reaction ICOHP.} \texttt{bond\_type} stratification (now four
+\textbf{Reaction ICOHP.} \texttt{bond\_type} stratification (four
 categories, including \texttt{mixed}/Zintl) no longer uniformly dilutes
 step 2's pooled correlation ($\rho=0.295$): \texttt{ionic} ($\rho=0.360$,
 $p=0.0004$) and \texttt{mixed} ($\rho=-0.525$, opposite sign,
@@ -687,7 +686,7 @@ magnitude --- \texttt{covalent} too but flips sign ($\rho=-0.354$,
 $p=0.023$); only \texttt{metallic} (the majority class, 315/510 rows)
 stays non-significant --- \textbf{weakened} to the point of
 disappearing in that stratum. \textbf{\texttt{is\_metal} stratification
---- the one that used to survive --- has now converged onto the same
+--- the one that used to survive --- has converged onto the same
 population as \texttt{bond\_type=metallic}} (identical $n$, $\rho$, $p$
 in every row) and so inherits its non-significant result: it is
 \texttt{bond\_type}, not \texttt{is\_metal}, that carries information at
@@ -707,7 +706,7 @@ step's answer is \emph{yes, but not uniformly}: bond type does not
 merely weaken or strengthen a single global correlation, it changes the
 \emph{sign} of the relationship depending on the stratum (ionic
 positive, covalent/mixed negative for reaction ICOHP) --- the useful
-signal is now conditional on bond type. The antibonding population's
+signal is conditional on bond type. The antibonding population's
 covalent-result retraction is itself a direct illustration of why this
 step exists: a stratified number is only trustworthy once re-checked as
 the dataset grows, not accepted once and for all. A pooled feature
@@ -823,7 +822,7 @@ meaningful.
     fall outside the ionic/covalent/metallic categories, mostly
     alkali/alkaline-earth $\times$ \{N, P, S\} bonds that
     \texttt{IONIC\_ANIONS} does not recognize (\S\ref{sec:dataset}) ---
-    purely informative here, but a real limitation for any mission that
+    purely informative here, but a real limitation for any analysis that
     would want to stratify on it.
   \item \textbf{No true dynamical "unstable" class}: \texttt{theo\_metastable}
     is a proxy (never synthesized), not a phonon-calculation result.
@@ -833,7 +832,7 @@ meaningful.
     example where an $n<15$ subgroup did not replicate once the sample
     grew.
   \item \textbf{Why not SISSO yet}: reaction ICOHP's signal
-    (\S\ref{sec:reaction-icohp}) is now conditional on bond type and
+    (\S\ref{sec:reaction-icohp}) is conditional on bond type and
     opposite-signed across strata (ionic positive, covalent/mixed
     negative) --- a pooled feature search would be misleading here; any
     future search should be run separately per \texttt{bond\_type}.
@@ -858,7 +857,7 @@ Reitz \& Dronskowski's endobondic/exobondic methodology
 (\S\ref{sec:reframing}) reproduces faithfully across the 7 independently
 known reference reactions (Lin's CCC 0.999998) and applies to this
 report's full dataset (518 decomposition-into-elements reactions). On
-that population, sign-based $\Delta$ICOHP discrimination is now
+that population, sign-based $\Delta$ICOHP discrimination is
 significant (Fisher's test, $p=0.0054$), and the full
 \texttt{ViabilityLabel} machinery --- sign combined with thermodynamics
 --- is far more strongly so ($p=2.9\times10^{-15}$, odds ratio 6.0): an
@@ -866,7 +865,7 @@ experimentally realized compound is roughly 6$\times$ less likely to be
 predicted \texttt{UNSTABLE\_NONEXISTENT} than a theoretical-only one
 (\S\ref{sec:reframing}). Reaction ICOHP otherwise remains a strong
 continuous correlate against formation energy ($\rho=0.295$,
-\S\ref{sec:reaction-icohp}), though antibonding population now slightly
+\S\ref{sec:reaction-icohp}), though antibonding population slightly
 edges it out on the subset shared by both descriptors.
 
 Two concrete directions follow. First, checking whether the
@@ -885,7 +884,7 @@ this report reaches.
 
 \vspace{1cm}
 \noindent\textit{Source code:} \url{https://github.com/John-Akapulco/viability} \\
-\noindent\textit{Data:} \texttt{analysis/percolation\_vs\_formation\_energy.csv} \\
+\noindent\textit{Data:} \texttt{analysis/} (this report's datasets and scripts) \\
 \noindent\textit{Detailed reports:} \texttt{analysis/REPORT\_*.md}
 
 \appendix
@@ -906,7 +905,7 @@ Complete list of the 392 compounds and elements with usable ICOBI data
 ICOHP/ICOBI classification of \S\ref{sec:dataset} (\texttt{is\_metal}
 for metallic character; otherwise the ICOBI of the \textbf{dominant
 first-coordination-shell} species pair --- not a mean over every
-neighbor LOBSTER reports within the wider percolation-graph cutoff ---
+neighbor LOBSTER reports within the wider cutoff ---
 compared against a threshold of 0.5052 to separate ionic from covalent;
 a \textbf{mixed} (Zintl-type) category groups compounds where a
 strongly covalent homoatomic pair coexists with a markedly weaker
@@ -1068,9 +1067,9 @@ independent of the integrated quantity), read this time from
 (\texttt{pymatgen.io.lobster.outputs.Cohpcar(are\_cobis=True)}).
 
 \textbf{Critical point, empirically verified, not assumed}: ICOBI does
-\textbf{not} follow ICOHP's sign convention. Whereas \og{}negative
-ICOHP = bonding\fg{} (\S2.4), ICOBI follows the opposite convention,
-\og{}positive ICOBI = bonding\fg{} (like COOP, not COHP). Verified
+\textbf{not} follow ICOHP's sign convention. Whereas ``negative
+ICOHP = bonding'' (\S2.4), ICOBI follows the opposite convention,
+``positive ICOBI = bonding'' (like COOP, not COHP). Verified
 twice against real data: (1) exact match with
 \texttt{ICOBILIST.lobster} (maximum deviation 0.0 across 66 bond
 labels, \texttt{tests/test\_cohp\_extraction.py}) --- \texttt{pymatgen}
@@ -1090,7 +1089,7 @@ and a \texttt{COHPCAR.lobster}, \texttt{is\_metal} available for all of
 them (\texttt{analysis/compute\_icobi\_antibonding\_all.py},
 \texttt{analysis/compute\_antibonding\_all\_full.py} --- one compound,
 \texttt{Cu4Au}, excluded for a catastrophic LOBSTER-projection failure,
-\S\ref{sec:limites-actuelles}).
+\S\ref{sec:limits-current}).
 
 \subsection{Correlation to formation energy}
 
@@ -1134,7 +1133,7 @@ subgroup of the ICOHP antibonding population, long the project's most
 robust stratified result ($\rho=-0.551$ at $n=33$), no longer survives
 at $n=54$ ($\rho=-0.046$, $p=0.74$)} --- retracted,
 \S\ref{sec:antibonding}. \textbf{New at this scale}:
-\texttt{bond\_type=mixed} (Zintl) now dominates the ICOHP antibonding
+\texttt{bond\_type=mixed} (Zintl) dominates the ICOHP antibonding
 population ($\rho=-0.538$, $p\approx0$), a category that barely
 existed when the covalent result was established;
 \texttt{is\_metal=False} remains the most consistently significant
@@ -1151,7 +1150,7 @@ For a case-1 reaction (compound $\to$ elements), $\Delta$(antibonding)
 is \textbf{not} computed by \texttt{reaction\_analysis/delta.py} (which
 combines \emph{extensive} per-formula-unit ICOHP/ICOBI sums with
 integer coefficients): the near-frontier antibonding population is
-built from LOBSTER's \og{}average\fg{} trace, an \emph{intensive}
+built from LOBSTER's ``average'' trace, an \emph{intensive}
 quantity (averaged over all bonds, not summed) with no natural
 extensive decomposition. Convention adopted here, documented as an
 explicit methodological choice rather than a silent reuse: $\Delta$ =
@@ -1220,7 +1219,7 @@ first descriptor in the whole project whose overall correlation
 survives every stratification tested} --- covalent, ionic, metallic,
 mixed, \texttt{is\_metal} on both sides, all significant at
 $p<0.001$. \textbf{$\Delta$(ICOBI antibonding) has also improved}: it
-now survives on \emph{all} strata as well (versus only metallic and
+survives on \emph{all} strata as well (versus only metallic and
 \texttt{is\_metal} before), with the strongest result on
 \texttt{mixed} ($\rho=-0.840$). \emph{No} other descriptor in this
 report matches that: the raw antibonding population
@@ -1230,7 +1229,7 @@ full reaction-ICOHP descriptor (\S\ref{sec:reaction-icohp}) survives
 only on \texttt{bond\_type}, not on metallic. This remains a
 relatively recent construction --- its magnitude will need to be
 reproduced on a genuinely independent dataset before it is taken as a
-settled result, but surviving full stratification, now at $n=434$ and
+settled result, but surviving full stratification, at $n=434$ and
 across five subgroups instead of three, makes it the project's most
 robust result to date.
 
@@ -1244,7 +1243,7 @@ than the fully-integrated ICOHP over the whole occupied range
 ICOHP (bonding \emph{and} antibonding, not clipped) but integrated
 \emph{only} over the one-sided window $(E_F-\Delta E,\ E_F]$,
 $\Delta E=1.0$~eV, summed over \emph{every} bond label (extensive, like
-the full ICOHP sum) rather than the \og{}average\fg{} trace --- then
+the full ICOHP sum) rather than the ``average'' trace --- then
 combined with the same reaction stoichiometry as the full
 $\Delta$(ICOHP) (\texttt{reaction\_icohp.py}, reactant $-$ predicted
 products convention). Implementation:
@@ -1289,7 +1288,7 @@ reaction-ICOHP descriptor (\S\ref{sec:reaction-icohp}), which loses all
 \texttt{bond\_type} stratification, and unlike its own behavior at the
 earlier, smaller scale (where only ionic and \texttt{is\_metal}
 survived). Weaker in magnitude than $\Delta$(ICOHP antibonding)
-(previous subsection) on most strata, but now just as general in
+(previous subsection) on most strata, but just as general in
 surviving stratification. Cross-correlation with $\Delta$(ICOHP
 antibonding): $\rho=-0.567$ ($p<0.001$, $n=439$) --- strongly
 \emph{anti}correlated despite their close construction (same window,

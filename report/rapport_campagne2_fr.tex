@@ -132,7 +132,7 @@ définition LOBSTER, l'intégrale du COHP($E$) depuis le bas de la fenêtre
 ci-dessus jusqu'au niveau de Fermi (états occupés uniquement), en eV ;
 négatif = liant, positif = antiliant. L'ICOBI est la même intégrale sur
 le COBI (indice d'ordre de liaison), sans dimension. Agrégation par
-composé (\texttt{percolation\_path.py}) : \texttt{icohp\_sum}/
+composé : \texttt{icohp\_sum}/
 \texttt{icobi\_sum} sur toutes les étiquettes de liaison symétriquement
 inéquivalentes de \texttt{ICOHPLIST.lobster}/\texttt{ICOBILIST.lobster}
 (chaque liaison périodique comptée une fois, pas une fois par
@@ -200,7 +200,7 @@ ce stade (voir \S\ref{sec:limites-actuelles}).
 \node[box, below=of mp] (prep)   {Scripts \texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
 \node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ tableau plafonné à 8 t\^aches concurrentes, HPC Yargla};
 \node[box, below=of slurm] (vasplob) {VASP (statique, 16 c\oe urs) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
-\node[box, below=of vasplob] (desc)   {Extraction de descripteurs par mission \\ \texttt{reaction\_icohp.py}, \texttt{cohp\_extraction.py}, \texttt{reaction\_analysis/}, \ldots};
+\node[box, below=of vasplob] (desc)   {Extraction de descripteurs \\ \texttt{reaction\_icohp.py}, \texttt{cohp\_extraction.py}, \texttt{reaction\_analysis/}, \ldots};
 \node[box, below=of desc] (join)   {\texttt{analysis/build\_dataset*.py} \\ jointure + descripteurs normalisés + bond\_type};
 \node[io, below=of join] (stats)  {\texttt{analysis/stats\_analysis*.py} \\ corrélations, stratification, figures};
 
@@ -352,10 +352,10 @@ signe (décomposition favorable en énergie de liaison) mais avec une
 amplitude $\sim$2,9$\times$ plus grande --- écart jugé non
 significatif à ce stade, la somme d'ICOHP d'un intermétallique massif
 étant beaucoup plus sensible aux choix de base/pseudopotentiel/coupure
-qu'un simple dimère gazeux. Une campagne de calcul indépendante,
-reproduisant la méthodologie DFT complète du manuscrit (PBEsol+D3,
-jeux de points k du Tableau S1) sur les 16 espèces plutôt que sur ces
-deux seules, est en cours (\S\ref{sec:limites-actuelles}).
+qu'un simple dimère gazeux. Reproduire la méthodologie DFT complète du
+manuscrit (PBEsol+D3, jeux de points k du Tableau S1) sur les 16 espèces
+plutôt que sur ces deux seules reste à mener
+(\S\ref{sec:limites-actuelles}).
 
 La corrélation seule (Pearson/Spearman) n'est pas le bon test pour
 \og{}nos chiffres correspondent-ils aux valeurs de référence\fg{} ---
@@ -601,7 +601,7 @@ faible.
 presque exactement (étape 1) --- l'implémentation est correcte. Étendue
 à l'ensemble du jeu de données actuel (517 réactions, contre 281
 précédemment), la discrimination grossière fondée sur le seul signe est
-désormais significative, et la machinerie complète
+significative, et la machinerie complète
 \texttt{ViabilityLabel} --- signe combiné à la thermodynamique --- l'est
 beaucoup plus fortement encore. Les corrélations continues contre
 \texttt{formation\_energy\_per\_atom} et \texttt{energy\_above\_hull}
@@ -694,7 +694,7 @@ rencontré ailleurs dans ce projet (un résultat de sous-groupe qui ne
 se reproduit pas une fois l'échantillon agrandi), y compris pour ce
 même descripteur sur son ancien sous-groupe \texttt{bond\_type=ionic}.
 \textbf{Nouveau à cette échelle} :
-\texttt{bond\_type=mixte} (Zintl) est désormais la strate qui survit le
+\texttt{bond\_type=mixte} (Zintl) est la strate qui survit le
 mieux ($\rho=-0,538$, $p=6,6\times10^{-6}$, $n=62$) ---
 \textbf{renforcée} par rapport à la corrélation poolée de l'étape 2 ---
 une catégorie qui n'existait quasiment pas au moment où le résultat
@@ -707,7 +707,7 @@ ce projet ($\rho=-0,333$, $p=6,7\times10^{-7}$, $n=212$) ---
 significatif), même phénomène que pour l'ICOHP de réaction ci-dessous.
 
 \textbf{ICOHP de réaction.} La stratification \texttt{bond\_type}
-(quatre catégories désormais, \texttt{mixte}/Zintl incluse) ne dilue
+(quatre catégories, \texttt{mixte}/Zintl incluse) ne dilue
 plus uniformément la corrélation de l'étape 2 ($\rho=0,295$ poolée) :
 \texttt{ionique} ($\rho=0,360$, $p=0,0004$) et \texttt{mixte}
 ($\rho=-0,525$, signe opposé, $p\approx0$) survivent nettement ---
@@ -716,7 +716,7 @@ change de signe ($\rho=-0,354$, $p=0,023$) ; seul \texttt{métallique}
 (la classe majoritaire, 315/510 lignes) reste non significatif ---
 \textbf{atténuée} jusqu'à disparaître dans cette strate. \textbf{La
 stratification \texttt{is\_metal} --- celle qui survivait auparavant ---
-a désormais convergé vers la même population que
+converge vers la même population que
 \texttt{bond\_type=métallique}} (même $n$, même $\rho$, même $p$ sur
 chaque ligne) et hérite donc de son résultat non significatif : c'est
 \texttt{bond\_type}, et non plus \texttt{is\_metal}, qui porte
@@ -736,7 +736,7 @@ la réponse à la question de cette étape est \emph{oui, mais pas
 uniformément} : le type de liaison ne se contente pas d'affaiblir ou de
 renforcer une seule corrélation globale, il change le \emph{signe même}
 de la relation selon la strate (ionique positif, covalent/mixte négatif
-pour l'ICOHP de réaction) --- le signal utile est désormais conditionnel
+pour l'ICOHP de réaction) --- le signal utile est conditionnel
 au type de liaison. La rétractation du résultat covalent de la
 population antiliante est elle-même une illustration directe de la
 raison d'être de cette étape 4 : un chiffre stratifié n'est digne de
@@ -859,7 +859,7 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     principalement les liaisons alcalin/alcalino-terreux $\times$
     \{N, P, S\} qu'\texttt{IONIC\_ANIONS} ne reconnaît pas
     (\S\ref{sec:dataset}) --- purement informatif ici, mais une vraie
-    limite pour toute mission qui voudrait s'appuyer dessus pour
+    limite pour toute analyse qui voudrait s'appuyer dessus pour
     stratifier.
   \item \textbf{Pas de classe \og{}instable\fg{} au sens dynamique} :
     \texttt{theo\_metastable} est un proxy (composés jamais synthétisés),
@@ -870,7 +870,7 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     \S\ref{sec:antibonding} pour un exemple concret où un sous-groupe
     $n<15$ ne s'est pas reproduit une fois l'échantillon agrandi.
   \item \textbf{Pourquoi pas SISSO maintenant} : le signal de l'ICOHP de
-    réaction (\S\ref{sec:reaction-icohp}) est désormais conditionnel au
+    réaction (\S\ref{sec:reaction-icohp}) est conditionnel au
     type de liaison et de signe opposé selon les strates (ionique
     positif, covalent/mixte négatif) --- une recherche poolée serait
     trompeuse ; toute recherche future devrait être menée séparément par
@@ -898,7 +898,7 @@ La méthodologie endobondic/exobondic de Reitz \& Dronskowski
 référence indépendamment connues (CCC de Lin 0,999998) et s'applique à
 l'ensemble du jeu de données de ce rapport (517 réactions de
 décomposition en éléments). Sur cette population, la discrimination
-fondée sur le seul signe du $\Delta$ICOHP est désormais significative
+fondée sur le seul signe du $\Delta$ICOHP est significative
 (test de Fisher, $p=0,0054$) et la machinerie complète
 \texttt{ViabilityLabel} --- signe combiné à la thermodynamique --- l'est
 beaucoup plus fortement encore ($p=2,9\times10^{-15}$, rapport de cotes
@@ -907,7 +907,7 @@ chances d'être prédit \texttt{UNSTABLE\_NONEXISTENT} qu'un composé
 théorique seul (\S\ref{sec:reframing}). L'ICOHP de réaction reste, par
 ailleurs, un corrélat continu fort du jeu de données contre l'énergie de
 formation ($\rho=0,295$, \S\ref{sec:reaction-icohp}), bien que la
-population antiliante le dépasse désormais légèrement sur le
+population antiliante le dépasse légèrement sur le
 sous-ensemble partagé par les deux descripteurs.
 
 Deux directions concrètes se dégagent. D'une part, vérifier si le
@@ -926,7 +926,7 @@ testées, un résultat qu'aucun autre descripteur de ce rapport n'atteint.
 
 \vspace{1cm}
 \noindent\textit{Code source :} \url{https://github.com/John-Akapulco/viability} \\
-\noindent\textit{Données :} \texttt{analysis/percolation\_vs\_formation\_energy.csv} \\
+\noindent\textit{Données :} \texttt{analysis/} (jeux de données et scripts de ce rapport) \\
 \noindent\textit{Rapports détaillés :} \texttt{analysis/REPORT\_*.md}
 
 \appendix
@@ -1178,7 +1178,7 @@ antiliant, longtemps le résultat stratifié le plus robuste du projet
 ($\rho=-0{,}551$ à $n=33$), ne survit plus à $n=54$
 ($\rho=-0{,}046$, $p=0{,}74$)} --- rétracté, \S\ref{sec:antibonding}.
 \textbf{Nouveau à cette échelle} : \texttt{bond\_type=mixte} (Zintl)
-domine désormais nettement pour l'ICOHP antiliant ($\rho=-0{,}538$,
+domine nettement pour l'ICOHP antiliant ($\rho=-0{,}538$,
 $p\approx0$), une catégorie qui n'existait quasiment pas quand le
 résultat covalent avait été établi ; \texttt{is\_metal=False} reste la
 strate la plus constamment significative du descripteur ICOHP à travers
@@ -1266,7 +1266,7 @@ premier descripteur de tout le projet dont la corrélation globale
 survit à l'intégralité des stratifications testées} --- covalent,
 ionique, métallique, mixte, \texttt{is\_metal} des deux côtés, tous
 significatifs à $p<0{,}001$. \textbf{$\Delta$(ICOBI antiliant) a
-lui aussi progressé} : il survit désormais sur \emph{toutes} les
+lui aussi progressé} : il survit sur \emph{toutes} les
 strates également (contre seulement métallique et \texttt{is\_metal}
 avant), avec le résultat le plus fort sur \texttt{mixte}
 ($\rho=-0{,}840$). Ce n'est le cas d'\emph{aucun} autre descripteur de
@@ -1337,7 +1337,7 @@ qui perd toute stratification \texttt{bond\_type}, et contrairement à
 son propre comportement à échelle réduite (où seuls ionique et
 \texttt{is\_metal} survivaient). Moins forte en magnitude que
 $\Delta$(ICOHP antiliant) (sous-section précédente) sur la plupart des
-strates, mais désormais tout aussi générale dans sa survie à la
+strates, mais tout aussi générale dans sa survie à la
 stratification. Corrélation croisée avec $\Delta$(ICOHP antiliant) :
 $\rho=-0{,}567$ ($p<0{,}001$, $n=439$) --- fortement \emph{anti}corrélées
 malgré leur construction proche (même fenêtre, même $E_F$), signe que
