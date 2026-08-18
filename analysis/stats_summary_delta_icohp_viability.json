@@ -47,15 +47,15 @@
     "rmse_kJ_per_mol": 0.981
   },
   "viability_prediction": {
-    "n_total": 517,
+    "n_total": 518,
     "spearman_vs_energy_above_hull_eV_per_atom": {
       "n": 515,
       "rho": -0.0579,
       "p": 0.189823
     },
     "spearman_vs_formation_energy_per_atom": {
-      "n": 329,
-      "rho": -0.37,
+      "n": 511,
+      "rho": -0.2969,
       "p": 0.0
     },
     "bonding_label_vs_theoretical": {
@@ -66,20 +66,20 @@
         },
         "exobondic": {
           "false": 188,
-          "true": 198
+          "true": 199
         }
       },
-      "fisher_exact_p": 0.0054,
-      "odds_ratio": 1.8087,
-      "chi2": 7.3816,
-      "chi2_p": 0.0066
+      "fisher_exact_p": 0.0053,
+      "odds_ratio": 1.8179,
+      "chi2": 7.519,
+      "chi2_p": 0.0061
     },
     "delta_per_atom_eV_experimental_vs_theoretical": {
       "n_experimental": 267,
       "median_experimental": -0.868,
-      "n_theoretical": 244,
-      "median_theoretical": -1.4539,
-      "mann_whitney_p": 0.0103
+      "n_theoretical": 245,
+      "median_theoretical": -1.4571,
+      "mann_whitney_p": 0.0088
     },
     "kruskal_wallis_by_family": {
       "groups": [
