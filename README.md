@@ -67,7 +67,7 @@ descriptor.
 ## Descriptors (ordered by relevance to the central question, not by mission number)
 
 1. **[Reaction-ICOHP (Δ(ICOHP)) and endobondic/exobondic classification](#reaction-icohp-δicohp-and-endobondicexobondic-classification-mission-5--central-question)** — mission #5, `reaction_icohp.py` + `reaction_analysis/`. The project's central question as of 2026-08-16. Numerically the strongest correlation in the project (ρ=0.502 vs. `formation_energy_per_atom`) and the first descriptor whose signal survives an `is_metal` stratification; near-exact concordance with 7 reference validation reactions (CCC=0.999998); sign-based viability discrimination shows a real but not-yet-significant trend.
-2. **[Antibonding population near the frontier (E_F/VBM)](#antibonding-population-near-the-frontier-ef-vbm-mission-4)** — mission #4, `cohp_extraction.py`. A related but distinct energy-resolved-COHP question. Its `bond_type=covalent` subgroup is the most robust bond-type-stratified result in the project.
+2. **[Antibonding population near the frontier (E_F/VBM)](#antibonding-population-near-the-frontier-ef-vbm-mission-4)** — mission #4, `cohp_extraction.py`. A related but distinct energy-resolved-COHP question. Its `bond_type=covalent` subgroup was long the most robust bond-type-stratified result in the project — retracted at the current 588-compound scale (see below); `bond_type=mixed` and `is_metal=False` now carry the surviving signal.
 3. **[Appendix: original graph-based methodology](#appendix-original-graph-based-methodology-percolation-dimensionality-min-cut--missions-1-and-3)** — `Percolation_viability/percolation_path.py` (mission #1) and `Percolation_viability/network_dimensionality.py`/`Percolation_viability/periodic_mincut.py` (mission #3). Historical foundation (periodic graph construction, statistical conventions); no longer the project's central question, and min-cut's own headline correlation did not survive the dataset's growth to 349 compounds (diagnosed, not just noted — see the appendix).
 
 ---
@@ -204,28 +204,34 @@ integrated antibonding-only COHP, raw + normalized). Validated on the 6
 pilots only (synthetic numerical tests + real-data sanity checks,
 `tests/test_cohp_extraction.py`) before any extension.
 
-Extended to the full 186-compound dataset in `analysis/compute_antibonding_all.py`
-and tested against `formation_energy_per_atom` in
-`analysis/stats_analysis_antibonding.py`; both rerun unmodified over the
-349-compound dataset once the `extension4` batch (89 alkali/alkaline-earth
-binaries) was added (347/349 succeeded, 2 pre-existing COD-sourced gaps).
-See **[`analysis/REPORT_antibonding.md`](analysis/REPORT_antibonding.md)**.
-Headline: the normalized metric reaches ρ=−0.282, p=9.2×10⁻⁸ (n=346) —
-weaker than the ρ=−0.328 (n=186) originally reported, but still
-comfortably ahead of every descriptor except reaction ICOHP. The sign
-(more antibonding population near the frontier associates with *more
-negative*, i.e. more stable, formation energy) is the opposite of the
-naive Peierls/Jahn-Teller reading, and diagnostics show the global number
-is substantially a between-group effect — but `is_metal=False` now also
-survives on its own (n=157, p=0.001), which it did not at n=186.
-**`bond_type=covalent` (n=33) not only still holds up under
-stratification but got *stronger* with more data** (ρ=−0.551, p=0.0009,
-vs. the original ρ=−0.490 at n=23) — still the single most robust
-bond-type-stratified result in the project. The old `bond_type=ionic`
-result (n=9, ρ=−0.683) did not replicate once the sample grew to n=53
-(ρ=−0.184, not significant) — a clean demonstration of why n<15 rows are
-flagged rather than trusted. See the report for the full within-group
-diagnostics, the ΔE-sensitivity check (still robust across 0.5–2.0 eV),
+Extended to every compound with a `COHPCAR.lobster` file in
+`analysis/compute_antibonding_all_full.py` (a generic, full-scale
+successor to the original 186/349-compound-scoped
+`compute_antibonding_all.py`), currently 588 compounds (one, Cu4Au, excluded for a catastrophic
+LOBSTER basis-projection failure — 100% k-point orthonormalization
+failure, `mp_metadata.json`'s `quality_excluded_reason` has detail).
+See
+**[`analysis/REPORT_antibonding.md`](analysis/REPORT_antibonding.md)**.
+Headline: the normalized metric reaches ρ=−0.155, p=1.8×10⁻⁴ (n=579) —
+markedly weaker than the ρ=−0.282 (n=346) reported at the previous
+scale, but still real and significant. The sign (more antibonding
+population near the frontier associates with *more negative*, i.e. more
+stable, formation energy) is the opposite of the naive Peierls/Jahn-Teller
+reading, and diagnostics show the global number is substantially a
+between-group effect. **The project's previously most robust
+bond-type-stratified result is retracted**: `bond_type=covalent`, which
+survived clearly at n=33 (ρ=−0.551, p=0.0009), does *not* survive at the
+current n=54 (ρ=−0.046, p=0.74) — the same small-subgroup fragility this
+project's own methodology has now caught repeatedly, including this
+same descriptor's own earlier `bond_type=ionic` result (n=9→53, also
+didn't replicate). **New at this scale**: `bond_type=mixed` (Zintl) is
+now the best-surviving stratum (ρ=−0.538, p=6.6×10⁻⁶, n=62), and
+`is_metal=False` remains the most consistently-surviving stratum across
+this project's successive scales (ρ=−0.333, p=6.7×10⁻⁷, n=212,
+strengthened rather than weakened by the dataset's growth). See the
+report for the full within-group diagnostics, the ΔE-sensitivity check
+(still robust across 0.5–2.0 eV), the `energy_above_hull` comparison
+(a different, sign-inconsistent picture within `bond_type=metallic`),
 and why the sign is not yet interpretable as confirming or refuting the
 instability hypothesis.
 

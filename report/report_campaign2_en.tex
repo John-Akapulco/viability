@@ -413,10 +413,13 @@ question from the fully-integrated ICOHP (\S2.4): not \emph{how much}
 bonding a compound has, but \emph{how} COHP is distributed in energy ---
 the occupied antibonding fraction just below the Fermi level/VBM, by
 analogy with Peierls/Jahn-Teller-type electronic instabilities. Result,
-against \texttt{formation\_energy\_per\_atom}: $\rho=-0.282$,
-$p=9.2\times10^{-8}$ ($n=346$) --- the sign is the \emph{opposite} of
-the naive Peierls/Jahn-Teller reading (\S\ref{sec:stratification} for
-the bond-type-stratified reading).
+against \texttt{formation\_energy\_per\_atom}: $\rho=-0.155$,
+$p=1.8\times10^{-4}$ ($n=579$) --- weaker than at smaller scale
+($\rho=-0.282$, $n=346$) but still real and significant; the sign
+remains the \emph{opposite} of the naive Peierls/Jahn-Teller reading
+(\S\ref{sec:stratification} for the bond-type-stratified reading, where
+this descriptor's headline stratified result no longer survives at the
+current scale).
 
 \begin{center}
 \includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
@@ -656,16 +659,24 @@ is used below, not \texttt{classify()}.
 \subsection{Step 4 --- Does the viability-descriptor correlation depend on bond type?}
 \label{sec:stratification}
 
-\textbf{Antibonding population (ICOHP).} The \texttt{bond\_type=covalent}
-subgroup ($n=33$) survives stratification clearly ($\rho=-0.551$,
-$p=0.0009$) --- the most robust stratified result in the project: step
-2's pooled correlation ($\rho=-0.282$) is therefore \textbf{clearly
-strengthened} among covalent compounds. \texttt{is\_metal=False} also
-survives ($n=157$, $p=0.001$). An earlier result on the
-\texttt{bond\_type=ionic} subgroup ($n=9$, $\rho=-0.683$) does not
-replicate once the sample grew to $n=53$ ($\rho=-0.184$, not
-significant) --- a clear demonstration of the danger of $n<15$
-subgroups: that was never a real strengthening.
+\textbf{Antibonding population (ICOHP).} \textbf{The project's previously
+most robust result is retracted}: \texttt{bond\_type=covalent}, which
+survived clearly at $n=33$ ($\rho=-0.551$, $p=0.0009$), no longer
+survives once the sample grew to $n=54$ ($\rho=-0.046$, $p=0.74$) --- a
+failure mode already seen elsewhere in this project (a subgroup result
+that does not replicate once the sample grows), including this same
+descriptor's own earlier \texttt{bond\_type=ionic} subgroup.
+\textbf{New at this scale}: \texttt{bond\_type=mixed} (Zintl) is now the
+best-surviving stratum ($\rho=-0.538$, $p=6.6\times10^{-6}$, $n=62$) ---
+\textbf{strengthened} relative to step 2's pooled correlation --- a
+category that barely existed when the covalent result was first
+reported. \texttt{is\_metal=False} remains the most consistently
+surviving stratum across this project's successive scales
+($\rho=-0.333$, $p=6.7\times10^{-7}$, $n=212$) --- \textbf{strengthened},
+not weakened, by the dataset's growth. \texttt{is\_metal=True} has also
+converged onto \texttt{bond\_type=metallic} (identical $n=367$,
+$\rho=0.056$, not significant), the same phenomenon documented below
+for reaction ICOHP.
 
 \textbf{Reaction ICOHP.} \texttt{bond\_type} stratification (now four
 categories, including \texttt{mixed}/Zintl) no longer uniformly dilutes
@@ -696,9 +707,13 @@ step's answer is \emph{yes, but not uniformly}: bond type does not
 merely weaken or strengthen a single global correlation, it changes the
 \emph{sign} of the relationship depending on the stratum (ionic
 positive, covalent/mixed negative for reaction ICOHP) --- the useful
-signal is now conditional on bond type. A pooled feature search (SISSO)
-would therefore be actively misleading here; any future search should
-be run separately per \texttt{bond\_type}, not on the pooled population.
+signal is now conditional on bond type. The antibonding population's
+covalent-result retraction is itself a direct illustration of why this
+step exists: a stratified number is only trustworthy once re-checked as
+the dataset grows, not accepted once and for all. A pooled feature
+search (SISSO) would therefore be actively misleading here; any future
+search should be run separately per \texttt{bond\_type}, not on the
+pooled population.
 
 \section{Failures Found and Fixed}
 \label{sec:incidents}
