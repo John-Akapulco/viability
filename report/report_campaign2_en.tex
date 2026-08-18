@@ -51,7 +51,7 @@ and Statistical Analysis}
 \begin{center}
 \small\itshape The project's central question is viability
 discrimination based on $\Delta$(ICOHP) (\S\ref{sec:reframing}), across
-a 394-structure dataset.
+a 597-structure dataset.
 \end{center}
 
 \tableofcontents
@@ -187,7 +187,7 @@ regression} at this stage (see \S\ref{sec:limits-current}).
              fill=orange!10, font=\small},
   arr/.style={-{Latex[length=2.2mm]}, thick}
 ]
-\node[io]  (mp)     {Materials Project (API) \\ 394 structures};
+\node[io]  (mp)     {Materials Project (API) \\ 597 structures};
 \node[box, below=of mp] (prep)   {\texttt{download\_*.py} + \texttt{prepare\_*vasp\_lobster.py} scripts \\ POSCAR, INCAR, KPOINTS, POTCAR, lobsterin};
 \node[box, below=of prep] (slurm)  {SLURM (\texttt{submit\_array.sh}) \\ array capped at 8 concurrent tasks, HPC Yargla};
 \node[box, below=of slurm] (vasplob) {VASP (static, 16 cores) $\rightarrow$ LOBSTER 5.1.1 (16 threads) \\ ICOHPLIST.lobster, ICOBILIST.lobster};
@@ -206,7 +206,7 @@ regression} at this stage (see \S\ref{sec:limits-current}).
 
 \section{Environment}
 
-Identical across all 394 structures (Yargla, VASP 6.5.0, LOBSTER 5.1.1,
+Identical across all 597 structures (Yargla, VASP 6.5.0, LOBSTER 5.1.1,
 Python 3.11 \texttt{.venv}), extended with: \texttt{mp-api},
 \texttt{pandas}, \texttt{scipy}, \texttt{scikit-learn},
 \texttt{matplotlib}, \texttt{pydantic}, \texttt{pyyaml} (see
@@ -267,19 +267,352 @@ compounds inherited from the original campaign, labeled "metastable"
 before the \texttt{theoretical} flag existed.}
 \end{table}
 
-\textbf{Bond type.} Two independent classifications (\S2.2): the
-\texttt{classify()} function (elemental composition + \texttt{is\_metal})
-and a classification built directly from each compound's ICOHP/ICOBI
-data (\texttt{is\_metal} for metallic character; otherwise the ICOBI of
-the \textbf{dominant first-coordination-shell} species pair --- not a
-mean over every neighbor LOBSTER reports within the wider cutoff used
-for the percolation graph, which strongly dilutes the signal for dense
-covalent solids such as diamond --- compared against a threshold
-calibrated at the midpoint of the median ICOBI of compounds
-\texttt{classify()} already labels ionic/covalent, i.e. 0.5315, to
-separate ionic from covalent among non-metallic compounds). A fourth
-label, \textbf{mixed} (Zintl-type), identifies compounds where a
-\emph{homoatomic} pair above the covalent threshold (e.g. N--N in an
+\textbf{Bond type.} Two independent classifications exist (\S2.2) --- \texttt{classify()} and a classification built directly from ICOHP/ICOBI data --- presented and compared in step~3 of the Results section (\S\ref{sec:bondtype-classification}), not here: classification is not an end in itself, it exists solely to condition the viability-descriptor correlation tested in that same section.
+
+\section{Results}
+\label{sec:results}
+
+\subsection*{Logic of this section}
+
+Four steps, in this order: (1) validate this project's methodology by
+reproducing the 7 reference reactions chosen by Reitz \& Dronskowski;
+(2) test this project's central correlation --- viability (a compound's
+thermodynamic/kinetic stability) against descriptors derived from LOBSTER
+data (ICOHP, antibonding ICOHP, ICOBI, antibonding ICOBI); (3) classify
+compounds and elements into metallic/ionic/covalent/mixed directly from
+that same ICOHP/ICOBI data, and compare that classification against
+\texttt{classify()} --- a tool in service of the next step, not an end in
+itself; (4) determine whether step 2's correlation is strengthened or
+weakened once conditioned on step 3's bond type.
+
+\subsection{Step 1 --- Methodological validation: the 7 Reitz \& Dronskowski reactions}
+\label{sec:validation}
+
+Full detail: \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
+\texttt{analysis/test\_delta\_icohp\_viability.py}.
+
+Per-bond-type ICOHP values for 7 reactions with independently known
+$\Delta$ICOHP (transcribed independently of any calculation in this
+project) are run end to end through
+\texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}:
+
+\begin{table}[htbp]
+\centering
+\caption{Validating the endobondic/exobondic classification on 7 reactions with independently known $\Delta$ICOHP.}
+\label{tab:reference-validation}
+\begin{tabular}{@{}lrrll@{}}
+\toprule
+Reaction & Reference & Computed & \multicolumn{2}{c}{Label} \\
+ & (kJ/mol) & (kJ/mol) & Ref. & Computed \\
+\midrule
+Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
+S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
+S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397.3$ & endo & endo \\
+ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336.6$ & exo & exo \\
+CaO[sphalerite] $\to$ CaO[rocksalt] & $-79$ & $-78.9$ & exo & exo \\
+CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204.8$ & exo & exo \\
+Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The 7 cases reproduce the reference $\Delta$ICOHP to within a few kJ/mol
+(source per-bond value rounding) and every \texttt{BondingLabel}
+matches. The Mn$_2$O$_7$ case is a useful guardrail on its own: exobondic
+under this static sign criterion, yet Mn$_2$O$_7$ is a real, observed
+compound that simply decomposes slowly (gradual O$_2$ loss) rather than
+through abrupt bond breaking --- \texttt{classify.py} structurally
+attaches a warning to \emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict
+for exactly this reason, rather than special-casing Mn$_2$O$_7$.
+
+This validation only compares the arithmetic of the manuscript's own
+published ICOHP values, independent of any local crystal structure ---
+Appendix~\ref{sec:appendix-reitz-dronskowski-structures} documents, for
+the 16 species involved, which MP/COD structure was used in this dataset
+and whether it could be verified to match the manuscript's description
+(3 real corrections identified: N$_2$, the Pb(N$_3$)$_2$ polymorph,
+ZnSn's competing tin phase). For N$_2$ and ZnSn, a DFT+LOBSTER
+calculation of this project's own (not just the manuscript's arithmetic)
+was additionally compared directly against the manuscript's numbers
+(Table~\ref{tab:reitz-dronskowski-dft}): N$_2$ reproduces the
+manuscript's ICOHP to within 0.7\%; ZnSn reproduces the same sign
+(bonding-favorable decomposition) but with $\sim$2.9$\times$ larger
+magnitude --- a gap judged not significant at this stage, since a bulk
+intermetallic's ICOHP sum is far more sensitive to
+basis/pseudopotential/cutoff choices than a simple gas dimer. An
+independent campaign reproducing the manuscript's full DFT methodology
+(PBEsol+D3, Table S1's own k-point sets) across all 16 species, rather
+than just these two, is under way (\S\ref{sec:limits-current}).
+
+Correlation alone (Pearson/Spearman) is not the right test for "do our
+numbers match the reference values" --- it is satisfied by any monotonic
+relationship, even with a large systematic offset or scale factor.
+\textbf{Lin's concordance correlation coefficient} (CCC) specifically
+tests agreement with the identity line (computed = reference), the claim
+actually being tested here:
+
+\begin{table}[htbp]
+\centering
+\caption{Computed-vs-reference concordance on the 7 validation reactions.}
+\label{tab:ccc}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Statistic & Value \\
+\midrule
+$n$ & 7 \\
+Lin's CCC & \textbf{0.999998} \\
+Pearson $r$ & 0.999999 ($p=3.5\times10^{-15}$) \\
+Sign agreement & 7/7 \\
+Mean $|$residual$|$ & 0.76 kJ/mol \\
+Max $|$residual$|$ & 1.70 kJ/mol \\
+RMSE & 0.98 kJ/mol \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A CCC this close to 1 means the two methods agree essentially to the
+reporting precision of the reference values themselves (rounded to 2--3
+decimals), not merely that they move together --- the implementation is
+validated, not just spot-checked. It is this implementation, validated
+here independently of any of this project's own calculations, that is
+applied to the full dataset in the next step.
+
+\subsection{Step 2 --- Viability versus LOBSTER descriptors}
+\label{sec:reframing}
+
+\textbf{Classic ICOHP aggregates (baseline).} Before any constructed
+descriptor, the raw ICOHP aggregates (sum, minimum per compound) are
+tested against $E_\text{hull}$ as-is, on the original 186-compound
+campaign's subset:
+
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, classic ICOHP aggregates (sum, minimum) against $E_\text{hull}$, 186-compound subset.}
+\label{tab:classic-icohp}
+\small
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Group & Metric & $n$ & $\rho$ & $p$ \\
+\midrule
+all & ICOHP sum    & 186 & 0.032 & 0.670 \\
+all & ICOHP min    & 186 & 0.093 & 0.209 \\
+metallic & ICOHP sum  & 88 & 0.223 & 0.037 \\
+metallic & ICOHP min  & 88 & 0.198 & 0.065 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These four rows correlate little or not at all with $E_\text{hull}$,
+except in the metallic subgroup --- a weak baseline the descriptors
+below need to beat.
+
+\textbf{Antibonding population near the Fermi level (ICOHP).}
+\label{sec:antibonding}
+A distinct
+question from the fully-integrated ICOHP (\S2.4): not \emph{how much}
+bonding a compound has, but \emph{how} COHP is distributed in energy ---
+the occupied antibonding fraction just below the Fermi level/VBM, by
+analogy with Peierls/Jahn-Teller-type electronic instabilities. Result,
+against \texttt{formation\_energy\_per\_atom}: $\rho=-0.282$,
+$p=9.2\times10^{-8}$ ($n=346$) --- the sign is the \emph{opposite} of
+the naive Peierls/Jahn-Teller reading (\S\ref{sec:stratification} for
+the bond-type-stratified reading).
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
+
+\textbf{Reaction ICOHP.}
+\label{sec:reaction-icohp}
+An ICOHP analog of
+\texttt{formation\_energy\_per\_atom}: is a compound's total ICOHP
+"cheaper" than that of the same atoms as reference elements? Result:
+$\rho=0.297$, $p\approx0$ ($n=511$) --- a real, highly significant
+correlation given the sample size, with an intuitive sign (less bonding
+than in elemental form $\Rightarrow$ less stable formation). On a
+288-compound subset shared with every other descriptor in the project,
+the antibonding population above slightly edges out reaction ICOHP on
+both targets --- the latter remains a strong descriptor, but no longer
+unambiguously \emph{the} strongest. Case 2 (direct same-formula
+polymorph comparison, 74 groups): 47.3\% agreement between the
+most-bonded and the most-stable member, against a 42.4\% chance
+baseline (exact Poisson-binomial test, $P=0.22$) --- no signal.
+
+\begin{center}
+\includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
+\end{center}
+
+\textbf{$\Delta$(ICOHP), applied to the full dataset, pooled.}
+\textbf{518 case-1 reactions}, every element and compound with a
+computed decomposition-into-elements reaction, pooled into a single
+population (grouping by selection provenance would be exactly the kind
+of between-group confound this project's methodology is meant to
+catch):
+
+\begin{table}[htbp]
+\centering
+\caption{Spearman correlations, $\Delta$ICOHP/atom (case 1, 518 reactions) against two continuous stability targets.}
+\label{tab:pooled-targets}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Target & $n$ & $\rho$ & $p$ \\
+\midrule
+\texttt{formation\_energy\_per\_atom} & 511 & $-0.2969$ & $7.3\times10^{-12}$ \\
+\texttt{energy\_above\_hull\_eV\_per\_atom} & 515 & $-0.0579$ & $0.190$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+(Sign: \texttt{reaction\_analysis}'s products$-$reactants convention,
+opposite to \texttt{reaction\_icohp.py}'s own column above --- same
+magnitude, flipped sign.) Both correlations are weaker than at smaller
+scale: the formation-energy result was $\rho=-0.50$ before the
+marginal-formation-energy and max-hull-distance batches were folded in,
+and the hull-distance result moved from borderline ($p=0.068$) to
+clearly non-significant ($p=0.19$) --- consistent with deliberately
+adding compounds with marginal or extreme thermodynamics, which dilute
+a rank correlation partly carried by the original population's narrower
+stability range.
+
+\textbf{Sign-based discrimination (endobondic/exobondic).} Experimental
+viability indicator (\texttt{theoretical=False} means experimentally
+realized):
+
+\begin{table}[htbp]
+\centering
+\caption{Endobondic/exobondic label against experimental/theoretical status.}
+\label{tab:fisher}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & endobondic & exobondic \\
+\midrule
+experimental ($n=267$) & 79 & 188 \\
+theoretical only ($n=245$) & 46 & 199 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Fisher's exact test: $p=0.0053$, odds ratio $=1.82$ ---
+\textbf{significant} (endobondic is $\sim 1.8\times$ more frequent among
+experimentally realized compounds, the expected direction).
+Mann--Whitney on the continuous $\Delta$ICOHP/atom, same split:
+experimental median $-0.868$ eV, theoretical-only median $-1.457$ eV
+(more exobondic), $p=0.0088$ --- same direction, also significant. This
+is exactly the result the marginal-formation-energy and max-hull-distance
+batches were built to test: the pooled 281-reaction population did not
+have enough near-stability-boundary compounds to reveal this signal
+($p=0.10$ at that scale).
+
+\textbf{Reading trap, explicitly flagged by \texttt{classify.py} itself}:
+Table~\ref{tab:fisher} shows 188 \emph{experimental} (i.e. genuinely
+existing) compounds labeled \emph{exobondic}. This is \textbf{not} a
+contradiction --- exobondic only implies "not viable" once combined with
+\texttt{delta\_energy} (\texttt{classify\_viability()}): a compound is
+only \texttt{UNSTABLE\_NONEXISTENT} if decomposition into elements is
+\emph{both} exobondic \emph{and} thermodynamically favorable
+($\Delta E<0$), which is rare (decomposing a real compound into pure
+elements is almost never favorable). Verified directly on the same
+population as Table~\ref{tab:fisher}:
+
+\begin{table}[htbp]
+\centering
+\caption{Computed \texttt{ViabilityLabel} (\texttt{classify\_viability()}) on the same population as Table~\ref{tab:fisher} ($n=518$).}
+\label{tab:viability-check}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+ & experimental ($n=267$) & theoretical ($n=245$) \\
+\midrule
+\texttt{STABLE\_ON\_HULL}        & 233 & 131 \\
+\texttt{UNSTABLE\_NONEXISTENT}   & 26  & 96 \\
+\texttt{METASTABLE\_VIABLE}      & 8   & 17 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize 7 additional reactions (COD-sourced or otherwise
+mp\_id-less, so no \texttt{formation\_energy\_per\_atom}) excluded,
+insufficient data.}
+\end{table}
+
+Collapsing \texttt{STABLE\_ON\_HULL}+\texttt{METASTABLE\_VIABLE}
+("viable") against \texttt{UNSTABLE\_NONEXISTENT}: Fisher's exact test
+$p=2.8\times10^{-15}$, odds ratio $\mathbf{6.0}$ ($\chi^2=59.9$,
+$p=1.0\times10^{-14}$) --- \textbf{a much larger effect than the
+sign-only test} (Table~\ref{tab:fisher}, $p=0.0053$, odds ratio 1.82).
+An experimentally realized compound is roughly 6$\times$ less likely to
+be predicted \texttt{UNSTABLE\_NONEXISTENT} than a theoretical-only one.
+\textbf{Of the 188 experimental exobondic compounds, only 26 are
+predicted \texttt{UNSTABLE\_NONEXISTENT}} --- the other 162 are
+\texttt{STABLE\_ON\_HULL}: their decomposition into elements, though
+exobondic, is not thermodynamically favorable. Reading Table~\ref{tab:fisher}
+in isolation as "exobondic = not viable" is therefore misleading --- it
+is Table~\ref{tab:viability-check}, combining sign with thermodynamics,
+that actually answers the viability question the \texttt{theoretical}
+flag is a proxy for, and it is by far the strongest result of this step.
+
+\begin{table}[htbp]
+\centering
+\caption{Median $\Delta$ICOHP/atom and \% endobondic by stability class ($n=177$).}
+\label{tab:family-breakdown}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Class & $n$ & median $\Delta$ICOHP/atom (eV) & \% endobondic \\
+\midrule
+experimental metastable & 59 & $-1.038$ & \textbf{28.8\%} \\
+stable & 59 & $-1.391$ & 22.0\% \\
+theoretical metastable & 59 & $-1.601$ & \textbf{13.6\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Kruskal--Wallis across the three groups: $H=2.56$, $p=0.278$ --- \textbf{not
+significant} (population unchanged at $n=177$: the extension/marginal-
+formation-energy/max-hull batches carry a \texttt{theoretical} flag but
+not yet a \texttt{family} label, so this particular test has not
+benefited from the dataset's growth), but the ordering remains exactly
+what physics predicts: experimentally metastable compounds have the
+highest endobondic fraction; never-synthesized theoretical metastable
+compounds have the lowest.
+
+\textbf{Step reading.} The 7 reference reactions reproduce almost
+exactly (step 1) --- the implementation is correct. Extended to the
+current full dataset (518 reactions, up from 281), the coarse sign-based
+discrimination is now significant, and the full \texttt{ViabilityLabel}
+machinery --- sign combined with thermodynamics --- is far more strongly
+so. The continuous correlations against \texttt{formation\_energy\_per\_atom}
+and \texttt{energy\_above\_hull} weakened over the same period --- the
+expected price of adding chemically diverse, thermodynamically extreme
+compounds to what was a narrower population; a different kind of test
+from the categorical results above, so the two are not in tension.
+Whether the \texttt{ViabilityLabel} result is itself confounded by bond
+type (step 4), or by the fact that max-hull's theoretical polymorphs
+were deliberately selected far above the hull --- a
+\texttt{formation\_energy\_per\_atom}-adjacent selection effect, not
+necessarily an independent confirmation of the bonding-kinetics
+mechanism --- remains to be checked.
+
+\textbf{Still no SISSO at this stage}: detailed reports,
+\texttt{analysis/REPORT\_antibonding.md},
+\texttt{analysis/REPORT\_reaction\_icohp.md}.
+
+\subsection{Step 3 --- Bond-type classification from ICOHP/ICOBI data}
+\label{sec:bondtype-classification}
+
+A tool in service of the next step, not an end in itself: this
+classification exists solely to test, in step 4, whether step 2's
+viability-descriptor correlation depends on a compound's bond type. Two
+independent classifications (\S2.2): the \texttt{classify()} function
+(elemental composition + \texttt{is\_metal}) and a classification built
+directly from each compound's ICOHP/ICOBI data (\texttt{is\_metal} for
+metallic character; otherwise the ICOBI of the \textbf{dominant
+first-coordination-shell} species pair --- not a mean over every
+neighbor LOBSTER reports within a wider cutoff, which strongly dilutes
+the signal for dense covalent solids such as diamond --- compared
+against a threshold calibrated at the midpoint of the median ICOBI of
+compounds \texttt{classify()} already labels ionic/covalent, i.e.
+0.5315, to separate ionic from covalent among non-metallic compounds).
+A fourth label, \textbf{mixed} (Zintl-type), identifies compounds where
+a \emph{homoatomic} pair above the covalent threshold (e.g. N--N in an
 azide, P--P in a polyphosphide, S--S in a polysulfide) coexists with a
 markedly weaker \emph{heteroatomic} pair linking a distinct cation ---
 the structural signature of Zintl--Klemm chemistry, where a single
@@ -316,351 +649,56 @@ is strong (88.8\%) but not total: 16 ionic/covalent disagreements, and
 ICOBI classification identifies as mixed (their dominant homoatomic
 bond coexists with a markedly weaker heteroatomic link) --- worth
 checking case by case before using either classification as a
-stratification variable.
+stratification variable in step 4. It is the ICOHP/ICOBI classification
+(broader coverage, built on the same data as step 2's descriptors) that
+is used below, not \texttt{classify()}.
 
-\section{Results}
-\label{sec:results}
+\subsection{Step 4 --- Does the viability-descriptor correlation depend on bond type?}
+\label{sec:stratification}
 
-\subsection{Correlations (Spearman) --- classic ICOHP aggregates}
-
-\begin{table}[htbp]
-\centering
-\caption{Spearman correlations, classic ICOHP aggregates (sum, minimum) against $E_\text{hull}$, 186-compound subset.}
-\label{tab:classic-icohp}
-\small
-\begin{tabular}{@{}llrrr@{}}
-\toprule
-Group & Metric & $n$ & $\rho$ & $p$ \\
-\midrule
-all & ICOHP sum    & 186 & 0.032 & 0.670 \\
-all & ICOHP min    & 186 & 0.093 & 0.209 \\
-metallic & ICOHP sum  & 88 & 0.223 & 0.037 \\
-metallic & ICOHP min  & 88 & 0.198 & 0.065 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-These four rows serve as a reference baseline: raw ICOHP aggregates
-(per-compound sum, minimum) show little to no correlation with
-$E_\text{hull}$, except within the metallic subgroup. The descriptors
-built further on (antibonding population, reaction ICOHP,
-\S\ref{sec:antibonding}--\S\ref{sec:reframing}) do markedly better,
-against \texttt{formation\_energy\_per\_atom} rather than
-\texttt{energy\_above\_hull}.
-
-\subsection{Antibonding Population Near the Fermi Level}
-\label{sec:antibonding}
-
-A question distinct from the fully-integrated ICOHP (\S2.4): not
-\emph{how much} bonding a compound has, but \emph{how} its COHP is
-distributed in energy --- the occupied antibonding fraction just below
-the Fermi level/VBM, by analogy with Peierls/Jahn--Teller-type
-electronic instabilities. Result, against
-\texttt{formation\_energy\_per\_atom}: $\rho=-0.282$,
-$p=9.2\times10^{-8}$ ($n=346$). The sign is the \emph{opposite} of the
-naive Peierls/Jahn--Teller reading. The \texttt{bond\_type=covalent}
+\textbf{Antibonding population (ICOHP).} The \texttt{bond\_type=covalent}
 subgroup ($n=33$) survives stratification clearly ($\rho=-0.551$,
-$p=0.0009$) --- the project's most robust stratified result;
-\texttt{is\_metal=False} also survives ($n=157$, $p=0.001$). An earlier
-result on the \texttt{bond\_type=ionic} subgroup ($n=9$, $\rho=-0.683$)
-does not replicate once the sample grows to $n=53$ ($\rho=-0.184$, not
+$p=0.0009$) --- the most robust stratified result in the project: step
+2's pooled correlation ($\rho=-0.282$) is therefore \textbf{clearly
+strengthened} among covalent compounds. \texttt{is\_metal=False} also
+survives ($n=157$, $p=0.001$). An earlier result on the
+\texttt{bond\_type=ionic} subgroup ($n=9$, $\rho=-0.683$) does not
+replicate once the sample grew to $n=53$ ($\rho=-0.184$, not
 significant) --- a clear demonstration of the danger of $n<15$
-subgroups.
+subgroups: that was never a real strengthening.
 
-\begin{center}
-\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
-\end{center}
-
-\subsection{Reaction ICOHP}
-\label{sec:reaction-icohp}
-
-An ICOHP analog of \texttt{formation\_energy\_per\_atom}: is a
-compound's total ICOHP "cheaper" than that of the same atoms as
-reference elements? Result: $\rho=0.297$, $p\approx0$ ($n=511$) --- a
-real, highly significant correlation given the sample size, but weaker
-than at smaller scale, with an intuitive sign (less bonding than in
-elemental form $\Rightarrow$ less stable formation). \texttt{bond\_type}
-stratification (now four categories, including \texttt{mixed}/Zintl) no
-longer explains it uniformly: \texttt{ionic} ($\rho=0.360$, $p=0.0004$)
-and \texttt{mixed} ($\rho=-0.525$, opposite sign, $p\approx0$) both
-survive clearly, \texttt{covalent} too but flips sign ($\rho=-0.354$,
+\textbf{Reaction ICOHP.} \texttt{bond\_type} stratification (now four
+categories, including \texttt{mixed}/Zintl) no longer uniformly dilutes
+step 2's pooled correlation ($\rho=0.297$): \texttt{ionic} ($\rho=0.360$,
+$p=0.0004$) and \texttt{mixed} ($\rho=-0.525$, opposite sign,
+$p\approx0$) both survive clearly --- \textbf{strengthened} in
+magnitude --- \texttt{covalent} too but flips sign ($\rho=-0.354$,
 $p=0.023$); only \texttt{metallic} (the majority class, 316/511 rows)
-stays non-significant. \textbf{\texttt{is\_metal} stratification ---
-the one that used to survive --- has now converged onto the same
+stays non-significant --- \textbf{weakened} to the point of
+disappearing in that stratum. \textbf{\texttt{is\_metal} stratification
+--- the one that used to survive --- has now converged onto the same
 population as \texttt{bond\_type=metallic}} (identical $n$, $\rho$, $p$
 in every row) and so inherits its non-significant result: it is
 \texttt{bond\_type}, not \texttt{is\_metal}, that carries information at
-the current dataset composition. Against \texttt{energy\_above\_hull}
-the correlation stays weak and is no longer even borderline at the
-pooled level ($\rho=0.058$, $p=0.190$), though \texttt{bond\_type=mixed}
-again survives on its own ($\rho=-0.307$, $p=0.016$). On a
-288-compound subset shared with every other descriptor in the project,
-antibonding population (\S\ref{sec:antibonding}) slightly edges out
-reaction ICOHP on both targets --- the latter remains a strong
-descriptor, but no longer unambiguously \emph{the} strongest. Case 2
-(direct same-formula polymorph comparison, now 74 groups): 47.3\%
-agreement between the most-bonded and the most-stable member, against a
-42.4\% chance baseline (exact Poisson-binomial test, $P=0.22$) --- still
-no signal, same conclusion as at 8 and 49 groups.
+the current dataset composition. Against \texttt{energy\_above\_hull},
+\texttt{bond\_type=mixed} again survives on its own ($\rho=-0.307$,
+$p=0.016$).
 
 \begin{center}
 \includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
 \end{center}
+\begin{center}
+\includegraphics[width=0.75\textwidth]{antibonding_vs_formation_energy_by_bondtype.png}
+\end{center}
 
-\textbf{Still no SISSO.} The useful signal is now conditional on bond
-type and opposite-signed across strata (ionic positive, covalent/mixed
-negative) --- a pooled feature search would be actively misleading
-here; any future search should be run separately per \texttt{bond\_type}.
-Detailed reports: \texttt{analysis/REPORT\_antibonding.md},
-\texttt{analysis/REPORT\_reaction\_icohp.md}.
-
-\subsection{$\Delta$(ICOHP)-Based Viability Discrimination}
-\label{sec:reframing}
-
-Full detail: \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
-\texttt{analysis/test\_delta\_icohp\_viability.py}.
-
-\textbf{Reference validation.} Per-bond-type ICOHP values for 7
-reactions with independently known $\Delta$ICOHP (transcribed
-independently of any calculation in this project) are run end to end
-through \texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}:
-
-\begin{table}[htbp]
-\centering
-\caption{Validating the endobondic/exobondic classification on 7 reactions with independently known $\Delta$ICOHP.}
-\label{tab:reference-validation}
-\begin{tabular}{@{}lrrll@{}}
-\toprule
-Reaction & Reference & Computed & \multicolumn{2}{c}{Label} \\
- & (kJ/mol) & (kJ/mol) & Ref. & Computed \\
-\midrule
-Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
-S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
-S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397.3$ & endo & endo \\
-ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336.6$ & exo & exo \\
-CaO[sphalerite] $\to$ CaO[rocksalt] & $-79$ & $-78.9$ & exo & exo \\
-CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204.8$ & exo & exo \\
-Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The 7 cases reproduce the reference $\Delta$ICOHP to within a few
-kJ/mol (source per-bond value rounding) and every \texttt{BondingLabel}
-matches. The Mn$_2$O$_7$ case is a useful guardrail on its own:
-exobondic under this static sign criterion, yet Mn$_2$O$_7$ is a real,
-observed compound that simply decomposes slowly (gradual O$_2$ loss)
-rather than through abrupt bond breaking --- \texttt{classify.py}
-structurally attaches a warning to \emph{every}
-\texttt{UNSTABLE\_NONEXISTENT} verdict for exactly this reason, rather
-than special-casing Mn$_2$O$_7$.
-
-This validation only compares the arithmetic of the manuscript's own
-published ICOHP values, independent of any local crystal structure ---
-Appendix~\ref{sec:appendix-reitz-dronskowski-structures} documents,
-for the 16 species involved, which MP/COD structure was used in this
-dataset and whether it could be verified to match the manuscript's
-description (3 real corrections identified: N$_2$, the Pb(N$_3$)$_2$
-polymorph, ZnSn's competing tin phase). For N$_2$ and ZnSn, a
-DFT+LOBSTER calculation of this project's own (not just the
-manuscript's arithmetic) was additionally compared directly against
-the manuscript's numbers (Table~\ref{tab:reitz-dronskowski-dft}): N$_2$
-reproduces the manuscript's ICOHP to within 0.7\%; ZnSn reproduces the
-same sign (bonding-favorable decomposition) but with $\sim$2.9$\times$
-larger magnitude --- a gap judged not significant at this stage, since
-a bulk intermetallic's ICOHP sum is far more sensitive to
-basis/pseudopotential/cutoff choices than a simple gas dimer.
-
-Correlation alone (Pearson/Spearman) is not the right test for "do our
-numbers match the reference values" --- it is satisfied by any monotonic
-relationship, even with a large systematic offset or scale factor.
-\textbf{Lin's concordance correlation coefficient} (CCC) specifically
-tests agreement with the identity line (computed = reference), the
-claim actually being tested here:
-
-\begin{table}[htbp]
-\centering
-\caption{Computed-vs-reference concordance on the 7 validation reactions.}
-\label{tab:ccc}
-\begin{tabular}{@{}lr@{}}
-\toprule
-Statistic & Value \\
-\midrule
-$n$ & 7 \\
-Lin's CCC & \textbf{0.999998} \\
-Pearson $r$ & 0.999999 ($p=3.5\times10^{-15}$) \\
-Sign agreement & 7/7 \\
-Mean $|$residual$|$ & 0.76 kJ/mol \\
-Max $|$residual$|$ & 1.70 kJ/mol \\
-RMSE & 0.98 kJ/mol \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-A CCC this close to 1 means the two methods agree essentially to the
-reporting precision of the reference values themselves (rounded to 2--3
-decimals), not merely that they move together --- the implementation is
-validated, not just spot-checked.
-
-\textbf{Applied to the full dataset, pooled.} \textbf{518 case-1
-reactions}, every element and compound with a computed
-decomposition-into-elements reaction, pooled into a single population
-(grouping by selection provenance would be exactly the kind of
-between-group confound this project's methodology is meant to catch).
-
-\begin{table}[htbp]
-\centering
-\caption{Spearman correlations, $\Delta$ICOHP/atom (case 1, 518 reactions) against two continuous stability targets.}
-\label{tab:pooled-targets}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-Target & $n$ & $\rho$ & $p$ \\
-\midrule
-\texttt{formation\_energy\_per\_atom} & 511 & $-0.2969$ & $7.3\times10^{-12}$ \\
-\texttt{energy\_above\_hull\_eV\_per\_atom} & 515 & $-0.0579$ & $0.190$ \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-(Sign: \texttt{reaction\_analysis}'s products$-$reactants convention,
-opposite to \texttt{reaction\_icohp.py}'s own column
-\S\ref{sec:reaction-icohp} --- same magnitude, flipped sign.) Both
-correlations are weaker than at smaller scale: the formation-energy
-result was $\rho=-0.50$ before the marginal-formation-energy and
-max-hull-distance batches were folded in, and the hull-distance result
-moved from borderline ($p=0.068$) to clearly non-significant
-($p=0.19$) --- consistent with deliberately adding compounds with
-marginal or extreme thermodynamics, which dilute a rank correlation
-partly carried by the original population's narrower stability range.
-
-\textbf{Sign-based discrimination (endobondic/exobondic).} Experimental
-viability indicator (\texttt{theoretical=False} means experimentally
-realized):
-
-\begin{table}[htbp]
-\centering
-\caption{Endobondic/exobondic label against experimental/theoretical status.}
-\label{tab:fisher}
-\begin{tabular}{@{}lrr@{}}
-\toprule
- & endobondic & exobondic \\
-\midrule
-experimental ($n=267$) & 79 & 188 \\
-theoretical only ($n=245$) & 46 & 199 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Fisher's exact test: $p=0.0053$, odds ratio $=1.82$ ---
-\textbf{now significant} (endobondic is $\sim 1.8\times$ more frequent
-among experimentally realized compounds, the expected direction).
-Mann--Whitney on the continuous $\Delta$ICOHP/atom, same split:
-experimental median $-0.868$ eV, theoretical-only median $-1.457$ eV
-(more exobondic), $p=0.0088$ --- same direction, also significant. This
-is exactly the result the marginal-formation-energy and max-hull-distance
-batches were built to test: the pooled 281-reaction population did not
-have enough near-stability-boundary compounds to reveal this signal
-($p=0.10$ at that scale).
-
-\textbf{Reading trap, explicitly flagged by \texttt{classify.py} itself}:
-Table~\ref{tab:fisher} shows 188 \emph{experimental} (i.e. genuinely
-existing) compounds labeled \emph{exobondic}. This is \textbf{not} a
-contradiction --- exobondic only implies "not viable" once combined with
-\texttt{delta\_energy} (\texttt{classify\_viability()},
-\S\ref{sec:reframing}): a compound is only \texttt{UNSTABLE\_NONEXISTENT}
-if decomposition into elements is \emph{both} exobondic \emph{and}
-thermodynamically favorable ($\Delta E<0$), which is rare (decomposing a
-real compound into pure elements is almost never favorable). Verified
-directly on the same population as Table~\ref{tab:fisher}:
-
-\begin{table}[htbp]
-\centering
-\caption{Computed \texttt{ViabilityLabel} (\texttt{classify\_viability()}) on the same population as Table~\ref{tab:fisher} ($n=518$).}
-\label{tab:viability-check}
-\begin{tabular}{@{}lrr@{}}
-\toprule
- & experimental ($n=267$) & theoretical ($n=245$) \\
-\midrule
-\texttt{STABLE\_ON\_HULL}        & 233 & 131 \\
-\texttt{UNSTABLE\_NONEXISTENT}   & 26  & 96 \\
-\texttt{METASTABLE\_VIABLE}      & 8   & 17 \\
-\bottomrule
-\end{tabular}
-
-\vspace{0.15cm}
-{\footnotesize 7 additional reactions (COD-sourced or otherwise
-mp\_id-less, so no \texttt{formation\_energy\_per\_atom}) excluded,
-insufficient data.}
-\end{table}
-
-Collapsing \texttt{STABLE\_ON\_HULL}+\texttt{METASTABLE\_VIABLE}
-("viable") against \texttt{UNSTABLE\_NONEXISTENT}: Fisher's exact test
-$p=2.8\times10^{-15}$, odds ratio $\mathbf{6.0}$ ($\chi^2=59.9$,
-$p=1.0\times10^{-14}$) --- \textbf{a much larger effect than the
-sign-only test} (Table~\ref{tab:fisher}, $p=0.0053$, odds ratio 1.82).
-An experimentally realized compound is roughly 6$\times$ less likely to
-be predicted \texttt{UNSTABLE\_NONEXISTENT} than a theoretical-only one.
-\textbf{Of the 188 experimental exobondic compounds, only 26 are
-predicted \texttt{UNSTABLE\_NONEXISTENT}} --- the other 162 are
-\texttt{STABLE\_ON\_HULL}: their decomposition into elements, though
-exobondic, is not thermodynamically favorable. Reading
-Table~\ref{tab:fisher} in isolation as "exobondic = not viable" is
-therefore misleading --- it is Table~\ref{tab:viability-check},
-combining sign with thermodynamics, that actually answers the viability
-question the \texttt{theoretical} flag is a proxy for, and it is by far
-the strongest result in this section.
-
-\begin{table}[htbp]
-\centering
-\caption{Median $\Delta$ICOHP/atom and \% endobondic by stability class ($n=177$).}
-\label{tab:family-breakdown}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-Class & $n$ & median $\Delta$ICOHP/atom (eV) & \% endobondic \\
-\midrule
-experimental metastable & 59 & $-1.038$ & \textbf{28.8\%} \\
-stable & 59 & $-1.391$ & 22.0\% \\
-theoretical metastable & 59 & $-1.601$ & \textbf{13.6\%} \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Kruskal--Wallis across the three groups: $H=2.56$, $p=0.278$ ---
-\textbf{still not significant} (population unchanged at $n=177$: the
-extension/marginal-formation-energy/max-hull batches carry a
-\texttt{theoretical} flag but not yet a \texttt{family} label, so this
-particular test has not benefited from the dataset's growth), but the
-ordering remains exactly what physics predicts: experimentally
-metastable compounds have the highest endobondic fraction;
-never-synthesized theoretical metastable compounds have the lowest.
-
-\textbf{Reading.} The 7 reference reactions reproduce almost exactly ---
-the implementation is correct. Extending the same logic to the current
-full dataset (518 reactions, up from 281) paints a substantially more
-favorable picture than the earlier "not yet significant" conclusion: the
-coarse sign-based discrimination is now significant
-(Table~\ref{tab:fisher}), and the full \texttt{ViabilityLabel}
-machinery --- sign combined with thermodynamics --- is far more strongly
-so (Table~\ref{tab:viability-check}, $p=2.8\times10^{-15}$). The dataset
-growth this test was extended for (marginal-formation-energy and
-max-hull-distance batches, both deliberately chosen for marginal or
-extreme thermodynamics) supplied exactly the contrast both tests needed.
-The continuous correlations against \texttt{formation\_energy\_per\_atom}
-and \texttt{energy\_above\_hull} weakened over the same period
-(Table~\ref{tab:pooled-targets}) --- the expected price of adding
-chemically diverse, thermodynamically extreme compounds to what was a
-narrower population; Spearman rank correlation is sensitive to exactly
-this kind of range and composition shift, a different kind of test from
-the categorical results above, so the two are not in tension. Only the
-three-way \texttt{family} split has not moved, since it has not yet
-been extended to the newer batches (\S\ref{sec:limits-current}) --- it
-remains untested at the larger scale, not disconfirmed. Whether the
-\texttt{ViabilityLabel} result is itself confounded by
-\texttt{bond\_type}/\texttt{is\_metal}, or by the fact that max-hull's
-theoretical polymorphs were deliberately selected far above the hull
---- a \texttt{formation\_energy\_per\_atom}-adjacent selection effect,
-not necessarily an independent confirmation of the bonding-kinetics
-mechanism --- remains to be checked.
+\textbf{Synthesis.} In both cases (antibonding and reaction ICOHP), this
+step's answer is \emph{yes, but not uniformly}: bond type does not
+merely weaken or strengthen a single global correlation, it changes the
+\emph{sign} of the relationship depending on the stratum (ionic
+positive, covalent/mixed negative for reaction ICOHP) --- the useful
+signal is now conditional on bond type. A pooled feature search (SISSO)
+would therefore be actively misleading here; any future search should
+be run separately per \texttt{bond\_type}, not on the pooled population.
 
 \section{Failures Found and Fixed}
 \label{sec:incidents}
@@ -686,8 +724,9 @@ the shared SLURM/INCAR templates, carry over to the whole dataset):
     Fixed; recovered on retry.
 \end{itemize}
 
-Final success rate across all 394 structures computed to date:
-\textbf{394/394}.
+Final success rate across all 597 structures computed to date:
+\textbf{597/597} for VASP; \textbf{596/597} for LOBSTER (1 trivial-cell
+reference element with no usable LOBSTER step, \S\ref{sec:cost}).
 
 \section{Compute Cost}
 \label{sec:cost}
@@ -744,7 +783,7 @@ meaningful.
 \label{sec:limits-current}
 
 \begin{itemize}
-  \item \textbf{\texttt{classify()} coverage}: 211/394 structures (54\%)
+  \item \textbf{\texttt{classify()} coverage}: 277/589 compounds (47\%)
     fall outside the ionic/covalent/metallic categories, mostly
     alkali/alkaline-earth $\times$ \{N, P, S\} bonds that
     \texttt{IONIC\_ANIONS} does not recognize (\S\ref{sec:dataset}) ---
