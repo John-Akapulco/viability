@@ -22,11 +22,11 @@ S$_8$ (élément) & non précisé & mp-77, Fddd ($\alpha$-S$_8$), $E_{hull}=0{,}
 \midrule
 S$_4$N$_4$ (cible) & non précisé & COD 7017102, P2\_1/c ($Z=4$) & non \\
 \midrule
-ZnSn (cible) & implicite : 6 liaisons Zn-Sn $+$ 1 Zn-Zn/formule (cohérent avec un prototype NiAs) & \texttt{gasref\_ZnSn\_NiAs}, construite à la main, P6\_3/mmc (\#194), aucune entrée MP/COD (pas de composé intermétallique Zn-Sn stable réel) & partiel --- coordination (6+1) cohérente avec NiAs, mais aucune référence cristallographique indépendante trouvée pour les paramètres de maille exacts \\
+ZnSn (cible) & Table~S1 (2026-08-18) : $P6_3/mmc$, $a=b=4{,}33111$~\AA, $c=5{,}05386$~\AA\ --- non identifiée avant cette date, seule la coordination (6 Zn-Sn $+$ 1 Zn-Zn/formule) était connue & \texttt{gasref\_ZnSn\_NiAs}, construite à la main, relaxée sous méthodologie manuscrit dans \texttt{manuscript\_ZnSn} (PBEsol+D3(BJ), 2026-08-18) & \textbf{Oui} --- notre relaxation indépendante converge à $a=4{,}3418$/$4{,}3411$~\AA, $c=5{,}0379$~\AA, soit $\leq 0{,}25\%$ d'écart sur chaque paramètre \\
 \midrule
-Zn (élément) & non précisé & mp-79, P6\_3/mmc, $E_{hull}=0{,}000$, on-hull & non requis \\
+Zn (élément) & Table~S1 (2026-08-18) : $P6_3/mmc$, $a=2{,}60598$~\AA, $c=4{,}56331$~\AA & mp-79, P6\_3/mmc, $E_{hull}=0{,}000$, on-hull ; relaxée sous méthodologie manuscrit dans \texttt{manuscript\_Zn} (2026-08-18) & \textbf{Oui} --- notre relaxation converge à $a=2{,}60786$~\AA, $c=4{,}55836$~\AA\ ($\leq 0{,}11\%$ d'écart), corrigeant une anomalie de $c/a$ de $-6{,}5\%$ par rapport à la structure MP brute non relaxée \\
 \midrule
-Sn (élément, compétiteur de ZnSn) & implique une phase distincte de la $\beta$-étain ``par défaut'' du jeu de données & mp-117, Fd-3m ($\alpha$-étain, diamant cubique), substituée à mp-623511 ($\beta$-étain, I4/mmm) & partiel --- l'$\alpha$-étain (forme cfc basse-température) est la phase concurrente cohérente pour ZnSn ; pas de confirmation indépendante que le manuscrit utilise précisément mp-117 \\
+Sn (élément, compétiteur de ZnSn) & Table~S1 (2026-08-18) confirme explicitement $Fd\bar{3}m$, $a=6{,}46874$~\AA\ --- règle l'ambiguïté $\alpha$/$\beta$ ci-dessous & mp-117, Fd-3m ($\alpha$-étain, diamant cubique), substituée à mp-623511 ($\beta$-étain, I4/mmm) ; relaxée sous méthodologie manuscrit dans \texttt{manuscript\_Sn} (2026-08-18) & \textbf{Oui} --- notre relaxation converge à $a=6{,}46694$~\AA\ (cellule cubique conventionnelle), soit $0{,}03\%$ d'écart, confirmant que mp-117 ($\alpha$-étain) est bien la phase du manuscrit, pas mp-623511 ($\beta$) \\
 \midrule
 CaO[sphalérite] (cible) & F-43m (\#216), citée explicitement & \texttt{gasref\_CaO\_sphalerite}, construite à la main (aucune entrée MP pour ce polymorphe métastable), F-43m confirmé par symétrie & \textbf{Oui} (groupe d'espace) \\
 \midrule
@@ -45,35 +45,50 @@ O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet & mp-1524462, C2/m, 
 
 \begin{table}[htbp]
 \centering
-\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit, pour les deux espèces où un calcul local a été mené (N$_2$ : \texttt{gasref\_N2\_dimerbox} ; ZnSn : \texttt{gasref\_ZnSn\_NiAs} décomposé contre la référence $\beta$-Sn par défaut du jeu de données, \texttt{extension\_Sn\_mp-623511}) --- contrairement au Tableau~\ref{tab:reference-validation}, il s'agit ici de calculs VASP+LOBSTER indépendants, non d'une reconstruction des valeurs du manuscrit.}
+\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit (convention de sommation ``première sphère'', identique à celle du manuscrit --- \texttt{reaction\_analysis.parse\_lobster}, \texttt{bond\_filter="nearest\_neighbor"}). Colonne ``Ancien calcul'' : méthodologie DFT par défaut de ce projet (PBE, ENCUT=600~eV, EDIFF=1e-6, sans D3) sur les structures alors disponibles (Sn : \texttt{extension\_Sn\_mp-623511}, $\beta$-étain I4/mmm --- un polymorphe différent de celui du manuscrit). Colonne ``Nouveau calcul'' (mise à jour 2026-08-18, ZnSn/Zn/Sn uniquement --- N$_2$ hors périmètre de cette mise à jour) : campagne \texttt{manuscript\_*} reproduisant la méthodologie exacte du manuscrit (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tétraèdres) sur \texttt{manuscript\_ZnSn}/\texttt{manuscript\_Zn}/\texttt{manuscript\_Sn} ($\alpha$-étain, Fd-3m, \texttt{extension\_Snalpha\_mp-117}) --- paramètres de maille validés à mieux que 0,25\% de la Table~S1 du manuscrit pour les trois espèces (Tableau~\ref{tab:reitz-dronskowski-structures}).}
 \label{tab:reitz-dronskowski-dft}
-\begin{tabular}{@{}p{4.6cm}rrr@{}}
+{\small
+\begin{tabular}{@{}p{3.2cm}rrrr@{}}
 \toprule
-Espèce / réaction & Manuscrit (eV) & DFT propre à ce projet (eV) & Écart \\
+Espèce / réaction & Manuscrit (eV) & Ancien calcul (eV) & Nouveau calcul (eV) & Écart (nouv.) \\
 \midrule
-N$_2$ (élément) & $-23{,}161$ & $-22{,}998$ & $0,7\%$ \\
-ZnSn (réactif) & $-16{,}869$ & $-17{,}991$ & $6,6\%$ \\
-Zn (produit) & $-12{,}686$ & $-17{,}402$ & $37,2\%$ \\
-Sn (produit, $\beta$) & $-7{,}672$ & $-10{,}617$ & $38,4\%$ \\
+N$_2$ (élément) & $-23{,}161$ & $-22{,}998$ & --- & $0,7\%$ \\
+ZnSn (réactif) & $-16{,}869$ & $-17{,}991$ & $-18{,}244$\textsuperscript{a} & $8,1\%$ \\
+Zn (produit) & $-12{,}686$ & $-17{,}402$ & $-17{,}257$ & $36,0\%$ \\
+Sn (produit) & $-7{,}672$ & $-10{,}617$ ($\beta$, mauvais polymorphe) & $-7{,}706$ ($\alpha$, Fd-3m) & $0,4\%$ \\
 \midrule
-$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-10{,}027$~eV ($-968$~kJ/mol) & $2,9\times$ \\
+$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-10{,}027$~eV ($-968$~kJ/mol) & $-6{,}719$~eV ($-648$~kJ/mol) & $1,9\times$ \\
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
-N$_2$ reproduit étroitement la valeur du manuscrit (0,7\%). Ce n'est pas
-le cas de ZnSn : les deux références élémentaires (Zn, Sn) divergent
-chacune de $\sim$37--38\%, alors que le composé ZnSn lui-même est
-beaucoup plus proche (6,6\%) --- comme le $\Delta$ICOHP de la réaction
-est la petite différence de deux grands nombres, cet écart se
-compose en un $\Delta$ICOHP $\sim$2,9$\times$ plus grand en magnitude
-que celui du manuscrit, même si le signe et la conclusion qualitative
-(décomposition favorable en liaison) concordent. Ceci est cohérent
-avec une sensibilité aux choix de base/pseudopotentiel/cutoff bien
-plus grande pour la somme ICOHP d'un intermétallique massif que pour
-un simple dimère gazeux, et non avec un bug d'implémentation (la
-validation à 7 cas de \S\ref{sec:reframing}, qui utilise les valeurs du
-manuscrit de bout en bout, les reproduit quasi exactement).
+\vspace{0.3em}
+\noindent\textsuperscript{a}~inclut une contribution Sn-Sn de troisième sphère ($d=3{,}54$--$3{,}57$~\AA, $-1{,}336$~eV/formule) que la comptabilité du manuscrit (6 liaisons Zn-Sn $+$ 1 Zn-Zn/formule, sans terme Sn-Sn) n'inclut pas. En excluant ce terme, ZnSn seul tombe à $-16{,}908$~eV, à $0{,}2\%$ du manuscrit.
+
+Le remplacement de la référence Sn par défaut ($\beta$-étain, un
+polymorphe différent) par l'$\alpha$-étain que prescrit implicitement
+le manuscrit, calculé sous sa méthodologie exacte, fait chuter l'écart
+Sn de 38,4\% à 0,4\% --- la quasi-totalité de l'écart Sn provenait donc
+d'une erreur de polymorphe, pas d'un désaccord DFT réel. ZnSn seul
+tombe également à 0,2\% une fois isolé le terme Sn-Sn absent de la
+comptabilité du manuscrit (note a). Zn, en revanche, reste un résidu
+ouvert : l'écart de 36,0\% persiste alors même que notre géométrie
+relaxée sous méthodologie manuscrit reproduit la Table~S1 à mieux que
+0,15\% (Tableau~\ref{tab:reitz-dronskowski-structures}) --- la
+correspondance géométrique quasi parfaite ne résout donc pas l'écart
+d'ICOHP pour cet élément. L'hypothèse la plus probable, non encore
+vérifiée, est une différence de convention de comptage de sphère de
+coordination entre notre détection automatique (première sphère Zn-Zn
+regroupant les contacts basal $2{,}608$~\AA\ et interplan
+$2{,}729$--$2{,}734$~\AA, très proches en distance) et la convention
+propre du manuscrit --- à investiguer si cette validation est reprise.
+Le $\Delta$ICOHP de la réaction ZnSn$\to$Zn+Sn recalculé (1,9$\times$
+le manuscrit) s'améliore nettement par rapport à l'ancien calcul
+(2,9$\times$) mais reste dominé par ce résidu Zn non résolu, pas par un
+problème de méthodologie DFT global (la validation à 7 cas de
+\S\ref{sec:reframing}, qui n'utilise que les valeurs publiées du
+manuscrit, continue de les reproduire quasi exactement).
 
 \vspace{0.5em}
 \noindent\textbf{Lecture.} ``Vérification: Oui'' signifie que la structure a été confirmée correspondre à la description explicite du manuscrit (groupe d'espace cité, ou distance de liaison recalculée et comparée). ``Partiel'' signifie que la géométrie/chimie est cohérente avec ce que le manuscrit décrit mais qu'aucune citation cristallographique indépendante n'a permis une confirmation stricte. ``Non'' signifie que seule la composition a été vérifiée : le manuscrit ne précise pas de groupe d'espace pour cette espèce, donc l'entrée MP/COD la plus raisonnable a été utilisée sans garantie qu'elle soit \emph{la} structure exacte utilisée par les auteurs. Ceci n'invalide pas la validation de \S\ref{sec:reframing} (qui ne compare que la reconstruction arithmétique des valeurs ICOHP publiées, indépendante de toute structure locale) mais borne la portée de toute comparaison future entre nos propres calculs DFT+LOBSTER et les valeurs du manuscrit pour ces espèces.
