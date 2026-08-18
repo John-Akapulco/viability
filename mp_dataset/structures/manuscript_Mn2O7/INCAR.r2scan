@@ -6,6 +6,7 @@ ISYM = -1
 KPAR = 2
 LASPH = True
 LCHARG = False
+LREAL = Auto
 LWAVE = False
 METAGGA = R2scan
 NPAR = 4

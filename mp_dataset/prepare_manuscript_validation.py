@@ -95,7 +95,7 @@ PHASES = {
     "CaO_rocksalt": dict(source="extension_CaO_mp-2605", kpoints=(13, 13, 13), workflow="standard", relax="full"),
     "CaN": dict(source="extension_CaN_mp-1058549", kpoints=(11, 11, 11), workflow="standard", relax="full"),
     "Ca3N2": dict(source="extension_Ca3N2_mp-844", kpoints=(5, 5, 5), workflow="standard", relax="full"),
-    "Mn2O7": dict(source="extension_Mn2O7_mp-28338", kpoints=(9, 3, 7), workflow="mn", relax="full"),
+    "Mn2O7": dict(source="extension_Mn2O7_mp-28338", kpoints=(9, 3, 7), workflow="mn", relax="full", lreal_auto=True),
     "MnO2": dict(source="extension_MnO2_mp-510408", kpoints=(13, 13, 21), workflow="mn", relax="full", afm=True),
     "O2": dict(source="gasref_O2_dimerbox", kpoints=(7, 7, 7), workflow="standard", relax="molecule", box=8.0, spin=True),
 }
@@ -222,6 +222,16 @@ def prepare_one(name: str, spec: dict) -> None:
     incar_static = dict(BASE_TAGS)
     incar_static.update(STATIC_TAGS)
 
+    if spec.get("lreal_auto"):
+        # Large supercell (72 atoms for Mn2O7): VASP's own runtime advice
+        # ("try LREAL=Auto") plus an observed MPI-rank OOM kill under the
+        # default reciprocal-space projectors (LREAL=False) -- real-space
+        # projection cuts memory substantially at a small, standard cost in
+        # accuracy for a cell this size. Not applied to any other phase;
+        # none of the other (smaller) supercells showed this failure.
+        incar_relax["LREAL"] = "Auto"
+        incar_static["LREAL"] = "Auto"
+
     if spec["relax"] == "molecule":
         incar_relax["ISIF"] = 2  # ions only, box fixed at the manuscript's 8x8x8
     else:
@@ -274,6 +284,8 @@ def prepare_one(name: str, spec: dict) -> None:
         incar_r2scan = dict(BASE_TAGS)
         incar_r2scan.update(R2SCAN_TAGS)
         incar_r2scan["GGA"] = None  # METAGGA supersedes GGA; leave unset
+        if spec.get("lreal_auto"):
+            incar_r2scan["LREAL"] = "Auto"
         write_incar(out_dir / "INCAR.r2scan", incar_r2scan)
 
     # LOBSTER basis: derived from the STATIC incar (the wavefunction it
