@@ -12,9 +12,9 @@ Espèce (rôle) & Structure manuscrit & Notre source & Vérification \\
 \endfoot
 Pb(N$_3$)$_2$ (cible) & azoture de plomb, ICSD 28336/16887 (Glen 1963) & mp-620058, Pna2\_1, $E_{hull}=0{,}110$ & \textbf{Oui} --- polymorphe exact identifié 2026-08-17, substitué à mp-667338 (Pnma) déjà présent dans le jeu de données \\
 \midrule
-Pb (élément) & non précisé (référence élémentaire standard) & mp-20483, Fm-3m, $E_{hull}=0{,}000$, on-hull & non requis --- pas d'ambiguïté de polymorphe pour le Pb métallique cfc \\
+Pb (élément) & Table~S1 (2026-08-18) : $Fm\bar{3}m$, $a=4{,}85044$~\AA & mp-20483, Fm-3m, $E_{hull}=0{,}000$, on-hull ; relaxé sous méthodologie manuscrit dans \texttt{manuscript\_Pb} (2026-08-18) & \textbf{Oui} --- notre relaxation converge à $a=4{,}85424$~\AA\ (cellule cubique conventionnelle), soit $0{,}08\%$ d'écart \\
 \midrule
-N$_2$ (élément, 4 réactions) & N$\equiv$N gazeux, $d\approx1{,}10$~\AA & \texttt{gasref\_N2\_dimerbox}, dimère isolé construit (boîte 10$\times$10$\times$10~\AA), $d$(N-N)$=1{,}113$~\AA, ICOHP$=-22{,}998$~eV & \textbf{Oui} --- à 0,7\% de la valeur manuscrit ($-23{,}161$~eV). Avant 2026-08-17 : mp-1059834 (théorique, phase polymérique N-N$=1{,}296$~\AA) --- erreur réelle, corrigée \\
+N$_2$ (élément, 4 réactions) & N$\equiv$N gazeux, $d\approx1{,}10$~\AA ; la Table~S1 (2026-08-18) fixe la boîte du dimère isolé à $8\times8\times8$~\AA & \texttt{gasref\_N2\_dimerbox}, dimère isolé construit (boîte 10$\times$10$\times$10~\AA), $d$(N-N)$=1{,}113$~\AA, ICOHP$=-22{,}998$~eV ; également relaxé dans la boîte $8\times8\times8$~\AA\ du manuscrit sous sa propre méthodologie dans \texttt{manuscript\_N2} (2026-08-18), $d$(N-N)$=1{,}111$~\AA & \textbf{Oui} --- à 0,7\% de la valeur manuscrit ($-23{,}161$~eV ; ICOHP non recalculé pour la nouvelle boîte, hors périmètre de cette mise à jour). La taille de boîte correspond à la Table~S1 par construction (une entrée spécifiée, pas une vérification indépendante). Avant 2026-08-17 : mp-1059834 (théorique, phase polymérique N-N$=1{,}296$~\AA) --- erreur réelle, corrigée \\
 \midrule
 S$_4$N$_2$ (cible) & non précisé au-delà de composition/ICOHP & COD 4031496, P4\_2nm ($Z=4$), aucune entrée MP pour cette composition & non --- structure expérimentale COD utilisée telle quelle, pas de confirmation indépendante du polymorphe exact du manuscrit \\
 \midrule
@@ -28,19 +28,19 @@ Zn (élément) & Table~S1 (2026-08-18) : $P6_3/mmc$, $a=2{,}60598$~\AA, $c=4{,}5
 \midrule
 Sn (élément, compétiteur de ZnSn) & Table~S1 (2026-08-18) confirme explicitement $Fd\bar{3}m$, $a=6{,}46874$~\AA\ --- règle l'ambiguïté $\alpha$/$\beta$ ci-dessous & mp-117, Fd-3m ($\alpha$-étain, diamant cubique), substituée à mp-623511 ($\beta$-étain, I4/mmm) ; relaxée sous méthodologie manuscrit dans \texttt{manuscript\_Sn} (2026-08-18) & \textbf{Oui} --- notre relaxation converge à $a=6{,}46694$~\AA\ (cellule cubique conventionnelle), soit $0{,}03\%$ d'écart, confirmant que mp-117 ($\alpha$-étain) est bien la phase du manuscrit, pas mp-623511 ($\beta$) \\
 \midrule
-CaO[sphalérite] (cible) & F-43m (\#216), citée explicitement & \texttt{gasref\_CaO\_sphalerite}, construite à la main (aucune entrée MP pour ce polymorphe métastable), F-43m confirmé par symétrie & \textbf{Oui} (groupe d'espace) \\
+CaO[sphalérite] (cible) & Table~S1 (2026-08-18) : $F\bar{4}3m$, $a=5{,}14699$~\AA\ --- confirme le groupe d'espace déjà utilisé & \texttt{gasref\_CaO\_sphalerite}, construite à la main (aucune entrée MP pour ce polymorphe métastable), F-43m confirmé par symétrie ; relaxée sous méthodologie manuscrit dans \texttt{manuscript\_CaO\_sphalerite} (2026-08-18) & \textbf{Oui} --- groupe d'espace confirmé comme avant, et notre relaxation converge également à $a=5{,}14751$~\AA, soit $0{,}01\%$ d'écart \\
 \midrule
-CaO[rocksalt] (produit) & Fm-3m (\#225), citée explicitement & mp-2605, Fm-3m, $E_{hull}=0{,}000$, on-hull & \textbf{Oui} \\
+CaO[rocksalt] (produit) & Table~S1 (2026-08-18) : $Fm\bar{3}m$, $a=4{,}77501$~\AA & mp-2605, Fm-3m, $E_{hull}=0{,}000$, on-hull ; relaxée sous méthodologie manuscrit dans \texttt{manuscript\_CaO\_rocksalt} (2026-08-18) & \textbf{Oui} --- groupe d'espace confirmé comme avant ; notre relaxation converge à $a=4{,}73046$~\AA, soit $0{,}93\%$ d'écart, le plus grand écart de paramètre de maille du lot 2026-08-18 (reste sous 1\%) \\
 \midrule
-CaN (cible) & non précisé & mp-1058549, Fm-3m (type rocksalt), $E_{hull}=0{,}398$ & non \\
+CaN (cible) & Table~S1 (2026-08-18) : $Fm\bar{3}m$, $a=4{,}87139$~\AA\ --- non identifiée avant cette date & mp-1058549, Fm-3m (type rocksalt), $E_{hull}=0{,}398$ ; relaxée sous méthodologie manuscrit dans \texttt{manuscript\_CaN} (2026-08-18) & \textbf{Oui} --- notre relaxation converge à $a=4{,}87285$~\AA, soit $0{,}03\%$ d'écart, confirmant à la fois le groupe d'espace et le paramètre de maille \\
 \midrule
 Ca$_3$N$_2$ (produit) & non précisé & mp-844, Ia-3 (anti-bixbyite), $E_{hull}=0{,}000$, on-hull & non --- seule entrée on-hull, choix par défaut le plus défendable \\
 \midrule
 Mn$_2$O$_7$ (cible) & non précisé & mp-28338, P2\_1/c, $E_{hull}=0{,}335$ & non \\
 \midrule
-MnO$_2$ (produit) & non précisé & mp-510408, P4\_2/mnm (rutile/pyrolusite) & non \\
+MnO$_2$ (produit) & Table~S1 (2026-08-18) : $P4_2/mnm$, $a=b=4{,}41216$~\AA, $c=2{,}94150$~\AA\ (ordre AFM selon Noda et al., propre à la méthodologie du manuscrit) & mp-510408, P4\_2/mnm (rutile/pyrolusite) ; relaxée sous la propre méthodologie du manuscrit (PBEsol+U(7,09~eV sur Mn 3d)$\to$r2SCAN single-point, AFM) dans \texttt{manuscript\_MnO2} (2026-08-18) & \textbf{Oui} --- notre relaxation converge à $a=b=4{,}41427$~\AA\ ($0{,}05\%$ d'écart), $c=2{,}94460$~\AA\ ($0{,}11\%$ d'écart), confirmant groupe d'espace et paramètres de maille ; une comparaison ICOHP de la réaction contre Mn$_2$O$_7$ n'est pas encore possible, cette espèce est toujours en calcul \\
 \midrule
-O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet & mp-1524462, C2/m, $E_{hull}=0{,}000$, on-hull, traitement spin-polarisé dédié & structurel --- dimère isolé $d$(O-O)$=1{,}222$~\AA\ vs 1,208~\AA\ littérature (à 1\% près) \\
+O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet ; la Table~S1 (2026-08-18) fixe la boîte du dimère isolé à $8\times8\times8$~\AA & mp-1524462, C2/m, $E_{hull}=0{,}000$, on-hull, traitement spin-polarisé dédié ; également relaxée dans la boîte $8\times8\times8$~\AA\ du manuscrit sous sa propre méthodologie dans \texttt{manuscript\_O2} (2026-08-18) & structurel --- dimère isolé $d$(O-O)$=1{,}222$~\AA\ (défaut du jeu de données, boîte 10~\AA) / $1{,}227$~\AA\ (boîte 8~\AA\ du manuscrit), tous deux à $\sim$1,6\% de 1,208~\AA\ littérature. La taille de boîte correspond à la Table~S1 par construction (une entrée spécifiée, pas une vérification indépendante) \\
 \end{longtable}
 
 \begin{table}[htbp]

@@ -12,9 +12,9 @@ Species (role) & Manuscript structure & Our source & Verification \\
 \endfoot
 Pb(N$_3$)$_2$ (target) & lead azide, ICSD 28336/16887 (Glen 1963) & mp-620058, Pna2\_1, $E_{hull}=0.110$ & \textbf{Yes} --- exact polymorph identified 2026-08-17, substituted for mp-667338 (Pnma) already present in the dataset \\
 \midrule
-Pb (element) & not specified (standard elemental reference) & mp-20483, Fm-3m, $E_{hull}=0.000$, on-hull & not required --- no polymorph ambiguity for fcc metallic Pb \\
+Pb (element) & Table~S1 (2026-08-18): $Fm\bar{3}m$, $a=4.85044$~\AA & mp-20483, Fm-3m, $E_{hull}=0.000$, on-hull; relaxed under the manuscript's methodology in \texttt{manuscript\_Pb} (2026-08-18) & \textbf{Yes} --- our relaxation converges to $a=4.85424$~\AA\ (conventional cubic cell), $0.08\%$ off \\
 \midrule
-N$_2$ (element, 4 reactions) & gaseous N$\equiv$N, $d\approx1.10$~\AA & \texttt{gasref\_N2\_dimerbox}, hand-built isolated dimer (10$\times$10$\times$10~\AA\ box), $d$(N-N)$=1.113$~\AA, ICOHP$=-22.998$~eV & \textbf{Yes} --- within 0.7\% of the manuscript's value ($-23.161$~eV). Before 2026-08-17: mp-1059834 (theoretical, polymeric phase, N-N$=1.296$~\AA) --- a real bug, fixed \\
+N$_2$ (element, 4 reactions) & gaseous N$\equiv$N, $d\approx1.10$~\AA; Table~S1 (2026-08-18) fixes the isolated-dimer box at $8\times8\times8$~\AA & \texttt{gasref\_N2\_dimerbox}, hand-built isolated dimer (10$\times$10$\times$10~\AA\ box), $d$(N-N)$=1.113$~\AA, ICOHP$=-22.998$~eV; also relaxed in the manuscript's $8\times8\times8$~\AA\ box under its own methodology in \texttt{manuscript\_N2} (2026-08-18), $d$(N-N)$=1.111$~\AA & \textbf{Yes} --- within 0.7\% of the manuscript's value ($-23.161$~eV; ICOHP not recomputed for the new box, out of scope for this update). Box size matches Table~S1 by construction (a specified input, not an independent check). Before 2026-08-17: mp-1059834 (theoretical, polymeric phase, N-N$=1.296$~\AA) --- a real bug, fixed \\
 \midrule
 S$_4$N$_2$ (target) & not specified beyond composition/ICOHP & COD 4031496, P4\_2nm ($Z=4$), no MP entry exists for this composition & no --- COD experimental structure used as-is, no independent confirmation it is the manuscript's exact polymorph \\
 \midrule
@@ -28,19 +28,19 @@ Zn (element) & Table~S1 (2026-08-18): $P6_3/mmc$, $a=2.60598$~\AA, $c=4.56331$~\
 \midrule
 Sn (element, ZnSn's competing phase) & Table~S1 (2026-08-18) explicitly confirms $Fd\bar{3}m$, $a=6.46874$~\AA\ --- settles the $\alpha$/$\beta$ ambiguity below & mp-117, Fd-3m ($\alpha$-tin, diamond-cubic), substituted for mp-623511 ($\beta$-tin, I4/mmm); relaxed under the manuscript's methodology in \texttt{manuscript\_Sn} (2026-08-18) & \textbf{Yes} --- our relaxation converges to $a=6.46694$~\AA\ (conventional cubic cell), i.e. $0.03\%$ off, confirming mp-117 ($\alpha$-tin) is indeed the manuscript's phase, not mp-623511 ($\beta$) \\
 \midrule
-CaO[sphalerite] (target) & F-43m (\#216), explicitly cited & \texttt{gasref\_CaO\_sphalerite}, hand-built (no MP entry for this metastable CaO polymorph), F-43m confirmed by symmetry & \textbf{Yes} (space group) \\
+CaO[sphalerite] (target) & Table~S1 (2026-08-18): $F\bar{4}3m$, $a=5.14699$~\AA\ --- confirms the space group already used & \texttt{gasref\_CaO\_sphalerite}, hand-built (no MP entry for this metastable CaO polymorph), F-43m confirmed by symmetry; relaxed under the manuscript's methodology in \texttt{manuscript\_CaO\_sphalerite} (2026-08-18) & \textbf{Yes} --- space group confirmed as before, and our relaxation now also converges to $a=5.14751$~\AA, $0.01\%$ off \\
 \midrule
-CaO[rocksalt] (product) & Fm-3m (\#225), explicitly cited & mp-2605, Fm-3m, $E_{hull}=0.000$, on-hull & \textbf{Yes} \\
+CaO[rocksalt] (product) & Table~S1 (2026-08-18): $Fm\bar{3}m$, $a=4.77501$~\AA & mp-2605, Fm-3m, $E_{hull}=0.000$, on-hull; relaxed under the manuscript's methodology in \texttt{manuscript\_CaO\_rocksalt} (2026-08-18) & \textbf{Yes} --- space group confirmed as before; our relaxation converges to $a=4.73046$~\AA, $0.93\%$ off, the largest lattice-parameter deviation of the 2026-08-18 batch (still sub-1\%) \\
 \midrule
-CaN (target) & not specified & mp-1058549, Fm-3m (rocksalt-type), $E_{hull}=0.398$ & no \\
+CaN (target) & Table~S1 (2026-08-18): $Fm\bar{3}m$, $a=4.87139$~\AA\ --- not identified before this date & mp-1058549, Fm-3m (rocksalt-type), $E_{hull}=0.398$; relaxed under the manuscript's methodology in \texttt{manuscript\_CaN} (2026-08-18) & \textbf{Yes} --- our relaxation converges to $a=4.87285$~\AA, $0.03\%$ off, confirming both space group and lattice parameter \\
 \midrule
 Ca$_3$N$_2$ (product) & not specified & mp-844, Ia-3 (anti-bixbyite), $E_{hull}=0.000$, on-hull & no --- the only on-hull entry, the most defensible default choice \\
 \midrule
 Mn$_2$O$_7$ (target) & not specified & mp-28338, P2\_1/c, $E_{hull}=0.335$ & no \\
 \midrule
-MnO$_2$ (product) & not specified & mp-510408, P4\_2/mnm (rutile/pyrolusite) & no \\
+MnO$_2$ (product) & Table~S1 (2026-08-18): $P4_2/mnm$, $a=b=4.41216$~\AA, $c=2.94150$~\AA\ (AFM ordering per Noda et al., per the manuscript's own methodology) & mp-510408, P4\_2/mnm (rutile/pyrolusite); relaxed under the manuscript's own methodology (PBEsol+U(7.09~eV on Mn 3d)$\to$r2SCAN single-point, AFM) in \texttt{manuscript\_MnO2} (2026-08-18) & \textbf{Yes} --- our relaxation converges to $a=b=4.41427$~\AA\ ($0.05\%$ off), $c=2.94460$~\AA\ ($0.11\%$ off), confirming both space group and lattice parameters; a reaction-ICOHP comparison against Mn$_2$O$_7$ is not yet possible, that species is still computing \\
 \midrule
-O$_2$ (element) & gaseous O$_2$, triplet ground state & mp-1524462, C2/m, $E_{hull}=0.000$, on-hull, dedicated spin-polarized treatment & structural --- isolated dimer $d$(O-O)$=1.222$~\AA\ vs. 1.208~\AA\ literature (within 1\%) \\
+O$_2$ (element) & gaseous O$_2$, triplet ground state; Table~S1 (2026-08-18) fixes the isolated-dimer box at $8\times8\times8$~\AA & mp-1524462, C2/m, $E_{hull}=0.000$, on-hull, dedicated spin-polarized treatment; also relaxed in the manuscript's $8\times8\times8$~\AA\ box under its own methodology in \texttt{manuscript\_O2} (2026-08-18) & structural --- isolated dimer $d$(O-O)$=1.222$~\AA\ (dataset default, 10~\AA\ box) / $1.227$~\AA\ (manuscript's 8~\AA\ box), both within $\sim$1.6\% of 1.208~\AA\ literature. Box size matches Table~S1 by construction (a specified input, not an independent check) \\
 \end{longtable}
 
 \begin{table}[htbp]
