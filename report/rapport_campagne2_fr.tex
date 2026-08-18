@@ -372,33 +372,47 @@ démonstration nette du danger des sous-groupes $n<15$.
 
 Un analogue ICOHP de \texttt{formation\_energy\_per\_atom} : l'ICOHP
 total d'un composé est-il \og{}meilleur marché\fg{} que celui des mêmes
-atomes sous forme d'éléments de référence ? Résultat : $\rho=0,502$,
-$p=6,3\times10^{-19}$ ($n=275$) --- la corrélation continue la plus
-forte et la plus robuste du projet, avec un signe intuitif (moins de
-liaison qu'à l'état élémentaire $\Rightarrow$ formation moins stable).
-La stratification \texttt{bond\_type} explique entièrement cette couche
-du signal poolé (Kruskal--Wallis $p=1,1\times10^{-15}$, aucune strate ne
-survit) --- \textbf{mais la stratification \texttt{is\_metal} survit des
-deux côtés} (\texttt{is\_metal=False} : $\rho=0,319$, $p=0,0001$ ;
-\texttt{is\_metal=True} : $\rho=0,256$, $p=0,0025$) : le regroupement
-entre groupes explique entièrement le regroupement au niveau
-\texttt{bond\_type}, mais pas une relation réelle au sein d'un
-\texttt{is\_metal} fixé. Le cas 2 (comparaison directe de polymorphes de
-même formule, 49 groupes) : 53,1\,\% d'accord entre le membre le plus
-liant et le plus stable, contre une ligne de base au hasard de 45,9\,\%
-(test de Poisson-binomiale exact, $P=0,19$) --- aucun signal.
+atomes sous forme d'éléments de référence ? Résultat : $\rho=0,297$,
+$p\approx0$ ($n=511$) --- une corrélation réelle et hautement
+significative compte tenu de la taille d'échantillon, mais plus faible
+qu'à échelle réduite, avec un signe intuitif (moins de liaison qu'à
+l'état élémentaire $\Rightarrow$ formation moins stable). La
+stratification \texttt{bond\_type} (quatre catégories désormais,
+\texttt{mixte}/Zintl incluse) ne l'explique plus uniformément :
+\texttt{ionique} ($\rho=0,360$, $p=0,0004$) et \texttt{mixte}
+($\rho=-0,525$, signe opposé, $p\approx0$) survivent nettement,
+\texttt{covalent} aussi mais change de signe ($\rho=-0,354$, $p=0,023$) ;
+seul \texttt{métallique} (la classe majoritaire, 316/511 lignes) reste
+non significatif. \textbf{La stratification \texttt{is\_metal} ---
+celle qui survivait auparavant --- a désormais convergé vers la même
+population que \texttt{bond\_type=métallique}} (même $n$, même $\rho$,
+même $p$ sur chaque ligne) et hérite donc de son résultat non
+significatif : c'est \texttt{bond\_type}, et non plus
+\texttt{is\_metal}, qui porte l'information à la composition actuelle
+du jeu de données. Contre \texttt{energy\_above\_hull} la corrélation
+reste faible et n'est plus même à la limite de la significativité au
+niveau poolé ($\rho=0,058$, $p=0,190$), bien que \texttt{bond\_type=mixte}
+survive à nouveau seul ($\rho=-0,307$, $p=0,016$). Sur un sous-ensemble
+de 288 composés partagé avec chaque autre descripteur du projet, la
+population antiliante (\S\ref{sec:antibonding}) dépasse légèrement
+l'ICOHP de réaction sur les deux cibles --- ce dernier reste un
+descripteur fort, mais plus \emph{sans ambiguïté} le plus fort. Le cas 2
+(comparaison directe de polymorphes de même formule, désormais 74
+groupes) : 47,3\,\% d'accord entre le membre le plus liant et le plus
+stable, contre une ligne de base au hasard de 42,4\,\% (test de
+Poisson-binomiale exact, $P=0,22$) --- toujours aucun signal, même
+conclusion qu'à 8 et 49 groupes.
 
 \begin{center}
 \includegraphics[width=0.75\textwidth]{reaction_icohp_vs_formation_energy_per_atom_by_bondtype.png}
 \end{center}
 
-\textbf{Toujours pas de SISSO.} L'ICOHP de réaction est le corrélat brut
-le plus fort de \texttt{formation\_energy\_per\_atom} du jeu de
-données, et le seul descripteur dont le signal n'est pas entièrement
-expliqué par un regroupement entre groupes à tous les niveaux testés ---
-le meilleur argument à ce jour pour une recherche de caractéristiques
-stratifiée (conditionnée par \texttt{is\_metal}) plutôt que poolée,
-toujours pas tentée. Rapports détaillés :
+\textbf{Toujours pas de SISSO.} Le signal utile est désormais
+conditionnel au type de liaison et de signe opposé selon les strates
+(ionique positif, covalent/mixte négatif) --- une recherche de
+caractéristiques poolée serait activement trompeuse ici ; toute
+recherche future devrait être menée séparément par \texttt{bond\_type},
+pas sur la population poolée. Rapports détaillés :
 \texttt{analysis/REPORT\_antibonding.md},
 \texttt{analysis/REPORT\_reaction\_icohp.md}.
 
@@ -493,7 +507,7 @@ elles-mêmes (arrondies à 2--3 décimales), pas seulement qu'elles
 évoluent ensemble --- l'implémentation en est validée, pas seulement
 vérifiée cas par cas.
 
-\textbf{Appliqué à l'ensemble du jeu de données, poolé.} \textbf{281
+\textbf{Appliqué à l'ensemble du jeu de données, poolé.} \textbf{518
 réactions de cas 1}, tout élément et composé ayant une réaction de
 décomposition en éléments calculée, poolés en une seule population
 (regrouper par origine de sélection serait exactement le type de facteur
@@ -502,23 +516,29 @@ détecter).
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman, $\Delta$ICOHP/atome (cas 1, 281 réactions) contre deux cibles de stabilité continues.}
+\caption{Corrélations de Spearman, $\Delta$ICOHP/atome (cas 1, 518 réactions) contre deux cibles de stabilité continues.}
 \label{tab:pooled-targets}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 Cible & $n$ & $\rho$ & $p$ \\
 \midrule
-\texttt{formation\_energy\_per\_atom} & 275 & $-0,5016$ & $6,3\times10^{-19}$ \\
-\texttt{energy\_above\_hull\_eV\_per\_atom} & 279 & $-0,1096$ & $0,068$ \\
+\texttt{formation\_energy\_per\_atom} & 511 & $-0,2969$ & $7,3\times10^{-12}$ \\
+\texttt{energy\_above\_hull\_eV\_per\_atom} & 515 & $-0,0579$ & $0,190$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 (Signe : convention produits$-$réactifs de \texttt{reaction\_analysis},
 opposée à la colonne propre de \texttt{reaction\_icohp.py}
-\S\ref{sec:reaction-icohp} --- même amplitude, signe inversé.) Le
-résultat sur l'énergie de formation est la même relation que celle du
-\S\ref{sec:reaction-icohp}, confirmée ici sur la population poolée.
+\S\ref{sec:reaction-icohp} --- même amplitude, signe inversé.) Les deux
+corrélations sont plus faibles qu'à échelle réduite : le résultat sur
+l'énergie de formation était $\rho=-0,50$ avant l'intégration des lots
+marginal-formation-energy et max-hull-distance, et le résultat sur la
+distance au hull est passé de limite ($p=0,068$) à clairement non
+significatif ($p=0,19$) --- cohérent avec l'ajout délibéré de composés à
+thermodynamique marginale ou extrême, qui diluent une corrélation de
+rang en partie portée par la gamme de stabilité plus étroite de la
+population d'origine.
 
 \textbf{Discrimination fondée sur le signe (endobondic/exobondic).}
 Indicateur de viabilité expérimentale (\texttt{theoretical=False}
@@ -532,20 +552,26 @@ signifie réalisé expérimentalement) :
 \toprule
  & endobondic & exobondic \\
 \midrule
-expérimental ($n=177$) & 47 & 130 \\
-théorique seul ($n=98$) & 17 & 81 \\
+expérimental ($n=267$) & 79 & 188 \\
+théorique seul ($n=245$) & 46 & 199 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Test exact de Fisher : $p=0,10$, rapport de cotes $=1,72$ (endobondic
-est $\sim 1,7\times$ plus fréquent parmi les composés réalisés
-expérimentalement --- le sens attendu, endobondic étant conçu comme une
-signature de barrière cinétique --- mais non significatif à cette
-taille d'échantillon).
+Test exact de Fisher : $p=0,0053$, rapport de cotes $=1,82$ ---
+\textbf{désormais significatif} (endobondic $\sim1,8\times$ plus
+fréquent parmi les composés réalisés expérimentalement, le sens
+attendu). Mann--Whitney sur le $\Delta$ICOHP/atome continu, même
+partition : médiane expérimentale $-0,868$ eV, médiane théorique seule
+$-1,457$ eV (plus exobondic), $p=0,0088$ --- même sens, également
+significatif. C'est exactement le résultat que les lots
+marginal-formation-energy et max-hull-distance ont été construits pour
+tester : la population poolée à 281 réactions n'avait pas assez de
+composés à stabilité limite pour révéler ce signal ($p=0,10$ à cette
+échelle).
 
 \textbf{Attention, piège de lecture explicitement documenté par
-\texttt{classify.py}} : la Table~\ref{tab:fisher} montre 130 composés
+\texttt{classify.py}} : la Table~\ref{tab:fisher} montre 188 composés
 \emph{expérimentaux} (donc réellement existants) étiquetés
 \emph{exobondic}. Ce n'est \textbf{pas} une incohérence --- exobondic
 n'implique \og{}non viable\fg{} qu'après combinaison avec
@@ -559,78 +585,97 @@ Table~\ref{tab:fisher} :
 
 \begin{table}[htbp]
 \centering
-\caption{\texttt{ViabilityLabel} calculé (\texttt{classify\_viability()}) sur la même population que la Table~\ref{tab:fisher} ($n=281$).}
+\caption{\texttt{ViabilityLabel} calculé (\texttt{classify\_viability()}) sur la même population que la Table~\ref{tab:fisher} ($n=518$).}
 \label{tab:viability-check}
 \begin{tabular}{@{}lrr@{}}
 \toprule
- & expérimental ($n=177$) & théorique ($n=98$) \\
+ & expérimental ($n=267$) & théorique ($n=245$) \\
 \midrule
-\texttt{STABLE\_ON\_HULL}        & 170 & 76 \\
-\texttt{UNSTABLE\_NONEXISTENT}   & 7   & 20 \\
-\texttt{METASTABLE\_VIABLE}      & 0   & 2  \\
+\texttt{STABLE\_ON\_HULL}        & 233 & 131 \\
+\texttt{UNSTABLE\_NONEXISTENT}   & 26  & 96 \\
+\texttt{METASTABLE\_VIABLE}      & 8   & 17 \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize 6 réactions supplémentaires (COD, sans
-\texttt{formation\_energy\_per\_atom}) exclues, données insuffisantes.}
+{\footnotesize 7 réactions supplémentaires (COD ou sans mp\_id, donc
+sans \texttt{formation\_energy\_per\_atom}) exclues, données
+insuffisantes.}
 \end{table}
 
-\textbf{Des 130 composés expérimentaux exobondic, 7 seulement sont
-prédits \texttt{UNSTABLE\_NONEXISTENT}} --- les 123 autres sont
-\texttt{STABLE\_ON\_HULL}, parfaitement cohérents avec leur existence
-réelle malgré l'étiquette exobondic. Le signe seul
-(endobondic/exobondic, Table~\ref{tab:fisher}) ne devient une prédiction
-de viabilité qu'une fois combiné à la thermodynamique --- lire la Table
-\ref{tab:fisher} isolément comme \og{}exobondic = non viable\fg{} donne
-une image trompeuse.
+En regroupant \texttt{STABLE\_ON\_HULL}+\texttt{METASTABLE\_VIABLE}
+(\og{}viable\fg{}) contre \texttt{UNSTABLE\_NONEXISTENT} : test exact de
+Fisher $p=2,8\times10^{-15}$, rapport de cotes $\mathbf{6,0}$
+($\chi^2=59,9$, $p=1,0\times10^{-14}$) --- \textbf{un effet bien plus
+large que le test fondé sur le seul signe} (Table~\ref{tab:fisher},
+$p=0,0053$, rapport de cotes 1,82). Un composé expérimentalement réalisé
+a environ 6 fois moins de chances d'être prédit
+\texttt{UNSTABLE\_NONEXISTENT} qu'un composé théorique seul. \textbf{Des
+188 composés expérimentaux exobondic, 26 seulement sont prédits
+\texttt{UNSTABLE\_NONEXISTENT}} --- les 162 autres sont
+\texttt{STABLE\_ON\_HULL} : leur décomposition en éléments, bien
+qu'exobondic, n'est pas thermodynamiquement favorable. Lire la
+Table~\ref{tab:fisher} isolément comme \og{}exobondic = non viable\fg{}
+donne donc une image trompeuse --- c'est la Table~\ref{tab:viability-check},
+qui combine signe et thermodynamique, qui répond réellement à la
+question de viabilité que l'indicateur \texttt{theoretical} sert de
+proxy, et c'est de loin le résultat le plus fort de cette section.
 
 \begin{table}[htbp]
 \centering
-\caption{$\Delta$ICOHP/atome médian et \% endobondic par classe de stabilité ($n=175$).}
+\caption{$\Delta$ICOHP/atome médian et \% endobondic par classe de stabilité ($n=177$).}
 \label{tab:family-breakdown}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 Classe & $n$ & médiane $\Delta$ICOHP/atome (eV) & \% endobondic \\
 \midrule
-expérimentale métastable & 59 & $-1,077$ & \textbf{27,1\%} \\
-stable & 59 & $-1,589$ & 20,3\% \\
-théorique métastable & 59 & $-1,659$ & \textbf{11,9\%} \\
+expérimentale métastable & 59 & $-1,038$ & \textbf{28,8\%} \\
+stable & 59 & $-1,391$ & 22,0\% \\
+théorique métastable & 59 & $-1,601$ & \textbf{13,6\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Kruskal--Wallis sur les trois groupes : $H=2,81$, $p=0,245$ ---
-\textbf{non significatif}, mais l'ordre est exactement celui
-physiquement attendu : les composés expérimentaux métastables (connus
-pour exister bien que hors du hull convexe --- la catégorie dont traite
-spécifiquement le cadre endobondic/exobondic) ont la fraction endobondic
-la plus élevée ; les composés théoriques métastables (jamais
+Kruskal--Wallis sur les trois groupes : $H=2,56$, $p=0,278$ ---
+\textbf{toujours non significatif} (population inchangée à $n=177$ :
+les lots extension/marginal-formation-energy/max-hull portent un
+indicateur \texttt{theoretical} mais pas encore d'étiquette
+\texttt{family}, donc ce test précis n'a pas bénéficié de la croissance
+du jeu de données), mais l'ordre reste exactement celui physiquement
+attendu : les composés expérimentaux métastables ont la fraction
+endobondic la plus élevée ; les composés théoriques métastables (jamais
 synthétisés) ont la plus faible.
 
 \textbf{Lecture.} Les 7 réactions de référence se reproduisent presque
-exactement --- l'implémentation est correcte. Étendre la même logique
-fondée sur le signe à une population beaucoup plus large, plus
-hétérogène, et généralement beaucoup plus confortablement stable ne
-produit pas encore un discriminant stable/métastable/instable
-statistiquement significatif, même si chaque tendance va dans le bon
-sens. Ce n'est pas une contradiction : les 7 réactions de référence ont
-été choisies spécifiquement comme des cas limites de stabilité
-(Pb(N$_3$)$_2$, S$_4$N$_2$/S$_4$N$_4$, ZnSn, Mn$_2$O$_7$) où une
-explication par barrière cinétique est spécifiquement nécessaire ; la
-plupart des 281 composés de ce projet ne le sont pas --- ils sont
-confortablement stables ou confortablement pas, où la force motrice
-thermodynamique (la corrélation avec l'énergie de formation ci-dessus)
-peut simplement dominer le signal cinétique fondé sur le signe. La
-machinerie complète \texttt{ViabilityLabel} de \texttt{classify.py}
-(au-delà du seul \texttt{BondingLabel} fondé sur le signe utilisé ici) a
-besoin exactement d'une population de composés à la limite de la
-stabilité --- pour le jeu de données actuel, la décomposition en
-éléments est fortement exothermique pour presque tous les composés
-(normal pour une chimie inorganique stable), ce qui classerait
-trivialement presque tout en \texttt{STABLE\_ON\_HULL} et n'ajouterait
-aucune information au-delà de ce que \texttt{energy\_above\_hull} dit
-déjà directement.
+exactement --- l'implémentation est correcte. Étendre la même logique à
+l'ensemble du jeu de données actuel (518 réactions, contre 281
+précédemment) donne un tableau bien plus favorable que la conclusion
+précédente \og{}pas encore significatif\fg{} : la discrimination
+grossière fondée sur le seul signe est désormais significative
+(Table~\ref{tab:fisher}), et la machinerie complète
+\texttt{ViabilityLabel} --- signe combiné à la thermodynamique --- l'est
+beaucoup plus fortement encore (Table~\ref{tab:viability-check},
+$p=2,8\times10^{-15}$). La croissance du jeu de données pour laquelle ce
+test a été étendu (lots marginal-formation-energy et max-hull-distance,
+tous deux délibérément choisis pour une thermodynamique limite ou
+extrême) a apporté exactement le contraste nécessaire aux deux tests.
+Les corrélations continues contre \texttt{formation\_energy\_per\_atom}
+et \texttt{energy\_above\_hull} se sont affaiblies dans le même temps
+(Table~\ref{tab:pooled-targets}) --- le prix attendu de l'ajout de
+composés chimiquement divers et thermodynamiquement extrêmes à une
+population auparavant plus étroite ; la corrélation de rang de Spearman
+est sensible précisément à ce type de changement de gamme et de
+composition, un test d'une nature différente des résultats catégoriels
+ci-dessus, donc les deux ne sont pas en tension. Seule la partition à
+trois classes (\texttt{family}) n'a pas bougé, faute d'avoir été étendue
+aux nouveaux lots (\S\ref{sec:limites-actuelles}) --- elle reste non
+testée à plus grande échelle, pas infirmée. Reste à vérifier si le
+résultat \texttt{ViabilityLabel} lui-même n'est pas confondu par
+\texttt{bond\_type}/\texttt{is\_metal}, ou par le fait que les
+polymorphes théoriques du lot max-hull ont été délibérément
+sélectionnés loin au-dessus du hull --- un effet de sélection proche de
+\texttt{formation\_energy\_per\_atom}, pas nécessairement une
+confirmation indépendante du mécanisme de barrière cinétique.
 
 \section{Incidents résolus}
 \label{sec:incidents}
@@ -723,12 +768,26 @@ indicatif.
     (\texttt{bond\_type}, \texttt{is\_metal}) --- voir
     \S\ref{sec:antibonding} pour un exemple concret où un sous-groupe
     $n<15$ ne s'est pas reproduit une fois l'échantillon agrandi.
-  \item \textbf{Pourquoi pas SISSO maintenant} : l'ICOHP de réaction
-    (\S\ref{sec:reaction-icohp}) est désormais le corrélat le plus
-    fort et le premier dont le signal n'est pas entièrement expliqué par
-    un regroupement entre groupes à tous les niveaux testés --- le
-    meilleur argument à ce jour pour une recherche de caractéristiques
-    stratifiée, mais toujours pas tentée à ce stade.
+  \item \textbf{Pourquoi pas SISSO maintenant} : le signal de l'ICOHP de
+    réaction (\S\ref{sec:reaction-icohp}) est désormais conditionnel au
+    type de liaison et de signe opposé selon les strates (ionique
+    positif, covalent/mixte négatif) --- une recherche poolée serait
+    trompeuse ; toute recherche future devrait être menée séparément par
+    \texttt{bond\_type}.
+  \item \textbf{\texttt{family} non étendu aux nouveaux lots} : la
+    discrimination \texttt{ViabilityLabel}/Fisher fondée sur
+    \texttt{theoretical} (\S\ref{sec:reframing}) bénéficie pleinement de
+    la croissance du jeu de données, mais la partition plus fine à trois
+    classes (\texttt{exp\_metastable}/\texttt{exp\_stable}/
+    \texttt{theo\_metastable}) reste à $n=177$ faute d'étiquette
+    \texttt{family} sur les lots extension/marginal-formation-energy/
+    max-hull --- prochaine étape directe pour tester si cette partition
+    plus fine devient elle aussi significative.
+  \item \textbf{Le résultat \texttt{ViabilityLabel} (§\ref{sec:reframing},
+    $p=2,8\times10^{-15}$) n'a pas encore été vérifié pour un facteur de
+    confusion} : ni stratifié par \texttt{bond\_type}/\texttt{is\_metal},
+    ni distingué d'un effet de sélection (les polymorphes théoriques du
+    lot max-hull ont été délibérément choisis loin au-dessus du hull).
 \end{itemize}
 
 \section{Conclusion}
@@ -736,24 +795,26 @@ indicatif.
 La méthodologie endobondic/exobondic de Reitz \& Dronskowski
 (\S\ref{sec:reframing}) se reproduit fidèlement sur les 7 réactions de
 référence indépendamment connues (CCC de Lin 0,999998) et s'applique à
-l'ensemble du jeu de données de ce rapport (281 réactions de
+l'ensemble du jeu de données de ce rapport (518 réactions de
 décomposition en éléments). Sur cette population, la discrimination
-fondée sur le seul signe du $\Delta$ICOHP va dans le sens attendu
-(endobondic plus fréquent parmi les composés expérimentaux, et parmi
-les composés métastables plutôt que stables ou jamais synthétisés) mais
-n'atteint pas la significativité statistique à cette échelle
-(\S\ref{sec:reframing}). L'ICOHP de réaction reste, par ailleurs, le
-corrélat continu le plus fort et le plus robuste du jeu de données
-contre l'énergie de formation ($\rho=0,502$, \S\ref{sec:reaction-icohp}).
+fondée sur le seul signe du $\Delta$ICOHP est désormais significative
+(test de Fisher, $p=0,0053$) et la machinerie complète
+\texttt{ViabilityLabel} --- signe combiné à la thermodynamique --- l'est
+beaucoup plus fortement encore ($p=2,8\times10^{-15}$, rapport de cotes
+6,0) : un composé expérimentalement réalisé a environ 6 fois moins de
+chances d'être prédit \texttt{UNSTABLE\_NONEXISTENT} qu'un composé
+théorique seul (\S\ref{sec:reframing}). L'ICOHP de réaction reste, par
+ailleurs, un corrélat continu fort du jeu de données contre l'énergie de
+formation ($\rho=0,297$, \S\ref{sec:reaction-icohp}), bien que la
+population antiliante le dépasse désormais légèrement sur le
+sous-ensemble partagé par les deux descripteurs.
 
-Deux directions concrètes se dégagent. D'une part, étendre
-délibérément à des composés proches de la limite de stabilité, où une
-explication par barrière cinétique est spécifiquement nécessaire,
-plutôt que de laisser le jeu de données s'agrandir au hasard des
-besoins d'autres analyses --- la plupart des composés actuels sont
-confortablement stables ou confortablement instables, un régime où la
-force motrice thermodynamique domine simplement le signal cinétique
-fondé sur le signe. D'autre part, restreindre le $\Delta$(ICOHP) de
+Deux directions concrètes se dégagent. D'une part, vérifier si le
+résultat \texttt{ViabilityLabel} ci-dessus résiste à une stratification
+par \texttt{bond\_type}/\texttt{is\_metal} et n'est pas simplement porté
+par l'effet de sélection délibéré du lot max-hull --- la même
+discipline de vérification que ce projet applique systématiquement à
+chaque nouveau descripteur. D'autre part, restreindre le $\Delta$(ICOHP) de
 réaction à une fenêtre proche du niveau de Fermi plutôt que sur l'ICOHP
 intégré en totalité, sur le modèle de la population antiliante du
 \S\ref{sec:antibonding} : deux variantes de cette construction sont
@@ -1057,7 +1118,7 @@ $\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 320 & $-0{,}1524^{**}
 
 \textbf{$\Delta$(ICOHP antiliant) est, à ce stade, la corrélation continue
 la plus forte de tout le projet} ($\rho=-0{,}644$, plus forte que
-l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}502$).
+l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}297$).
 Fait notable : contrairement aux valeurs brutes
 (signes opposés, ci-dessus), \textbf{les deux $\Delta$ vont dans le même
 sens} (tous deux négatifs) --- la construction en delta semble aligner
