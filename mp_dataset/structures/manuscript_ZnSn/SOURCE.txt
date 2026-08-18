@@ -1,0 +1,3 @@
+Starting structure: gasref_ZnSn_NiAs (mp_dataset/structures/gasref_ZnSn_NiAs/POSCAR)
+Workflow: standard
+k-points (Table S1): (17, 17, 11)

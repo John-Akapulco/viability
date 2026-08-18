@@ -1,0 +1,3 @@
+Starting structure: extension_Snalpha_mp-117 (mp_dataset/structures/extension_Snalpha_mp-117/POSCAR)
+Workflow: standard
+k-points (Table S1): (9, 9, 9)

@@ -1,0 +1,13 @@
+EDIFF = 1e-08
+ENCUT = 700.0
+IBRION = -1
+ISMEAR = -5
+ISYM = -1
+KPAR = 2
+LASPH = True
+LCHARG = False
+LWAVE = False
+METAGGA = R2scan
+NPAR = 4
+NSW = 0
+PREC = Accurate
