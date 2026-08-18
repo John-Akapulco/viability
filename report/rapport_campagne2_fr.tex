@@ -39,7 +39,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 
 \title{\bfseries Descripteurs ICOHP et stabilité thermodynamique \\
-sur un jeu de 394 structures \\
+sur un jeu de 597 structures \\
 \large Campagne 2 : construction du jeu de données, calcul VASP+LOBSTER,
 et analyse statistique}
 \author{Gilles Frapper \\ Professeur des Universités, Chimie Théorique \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Rapport généré dans le cadre du projet \texttt{viability}}
@@ -224,7 +224,7 @@ des c\oe urs alloués par étape de calcul : \S\ref{sec:cout}.
 \section{Jeu de données}
 \label{sec:dataset}
 
-L'ensemble des composés et éléments calculés compte \textbf{394
+L'ensemble des composés et éléments calculés compte \textbf{597
 structures}.
 
 \begin{table}[htbp]
@@ -235,12 +235,19 @@ structures}.
 \toprule
 Composition & $n$ \\
 \midrule
-Références à un seul élément & 68 \\
-Composés multi-éléments      & 326 \\
+Références à un seul élément & 69 \\
+Composés multi-éléments      & 522 \\
+Structures de validation sans métadonnées de composé$^*$ & 6 \\
 \midrule
-\textbf{Total}                & \textbf{394} \\
+\textbf{Total}                & \textbf{597} \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^*$ dimères gazeux isolés (H$_2$, N$_2$, O$_2$, F$_2$,
+Cl$_2$) et CaO[sphalérite], utilisés uniquement pour la validation Reitz
+\& Dronskowski (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}),
+hors du jeu de données principal.}
 \end{table}
 
 \begin{table}[htbp]
@@ -251,14 +258,22 @@ Composés multi-éléments      & 326 \\
 \toprule
 Classe & $n$ & Plage $E_\text{hull}$ (eV/atome) \\
 \midrule
-stable ($E_\text{hull}=0$)  & 124 & 0.0000 \\
-expérimentale métastable    & 137 & 0.0000347 -- 2.1080 \\
-théorique métastable        & 131 & 0.0000843 -- 3.1688 \\
-inconnue (référence COD, sans $E_\text{hull}$) & 2 & --- \\
+stable ($E_\text{hull}=0$)  & 160 & 0.0000 \\
+expérimentale métastable    & 183 & 0.0000347 -- 2.1080 \\
+théorique métastable        & 242 & 0.0000843 -- 3.1688 \\
+inconnue$^*$ & 12 & --- \\
 \midrule
-\textbf{Total}               & \textbf{394} & \\
+\textbf{Total}               & \textbf{597} & \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^*$ 2 références COD sans $E_\text{hull}$ (S$_4$N$_2$,
+S$_4$N$_4$), 6 structures de validation sans métadonnées (voir
+Table~\ref{tab:composition}), 1 référence COD supplémentaire
+(ZnSn/NiAs), et 3 composés hérités de la campagne d'origine, catégorisés
+\og{}metastable\fg{} avant l'introduction de l'indicateur
+\texttt{theoretical}.}
 \end{table}
 
 \textbf{Type de liaison.} Deux classements indépendants (\S2.2) : la
@@ -271,7 +286,7 @@ coupure élargi utilisé pour le graphe de percolation, qui dilue
 fortement le signal des solides covalents denses comme le diamant ---
 comparée à un seuil calibré au point médian des médianes ICOBI des
 composés que \texttt{classify()} labellise déjà ionique/covalent, soit
-0,5052, pour distinguer ionique de covalent parmi les composés non
+0,5315, pour distinguer ionique de covalent parmi les composés non
 métalliques). Une quatrième catégorie, \textbf{mixte} (type Zintl),
 identifie les composés où une paire \emph{homoatomique} au-dessus du
 seuil covalent (p.~ex. N--N dans un azoture, P--P dans un
@@ -282,33 +297,33 @@ ionique/covalent serait trompeur.
 
 \begin{table}[htbp]
 \centering
-\caption{Type de liaison : \texttt{classify()} contre le classement ICOHP/ICOBI (concordance sur le sous-ensemble labellisé par \texttt{classify()} : 161/181 = 89,0\%).}
+\caption{Type de liaison : \texttt{classify()} contre le classement ICOHP/ICOBI (concordance sur le sous-ensemble labellisé par \texttt{classify()} : 277/312 = 88,8\%).}
 \label{tab:bondtype}
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 \texttt{classify()} $\backslash$ ICOHP/ICOBI & métallique & ionique & covalent & mixte & non classifié \\
 \midrule
-métallique     & 88  & 0  & 0  & 0 & 0 \\
-ionique        & 0   & 45 & 5  & 3 & 0 \\
-covalent       & 0   & 10 & 28 & 2 & 0 \\
-non classifié  & 138 & 31 & 19 & 23 & 0 \\
+métallique     & 194 & 0  & 0  & 0 & 0 \\
+ionique        & 0   & 48 & 2  & 3 & 0 \\
+covalent       & 0   & 14 & 35 & 16 & 0 \\
+non classifié  & 179 & 36 & 19 & 43 & 0 \\
 \midrule
-\textbf{Total} & \textbf{226} & \textbf{86} & \textbf{52} & \textbf{28} & \textbf{0} \\
+\textbf{Total} & \textbf{373} & \textbf{98} & \textbf{56} & \textbf{62} & \textbf{0} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Sur les 211 composés que \texttt{classify()} laisse \og{}non
+Sur les 277 composés que \texttt{classify()} laisse \og{}non
 classifiés\fg{} (essentiellement les paires alcalin/alcalino-terreux
 $\times$ \{N, P, S\}, hors de \texttt{IONIC\_ANIONS}, et les métaux
 liés à un élément anion-like que \texttt{classify()} exclut
 délibérément de sa catégorie \og{}métallique\fg{}), le classement
-ICOHP/ICOBI en résout \textbf{50} en ionique (31) ou covalent (19), et
-identifie \textbf{23} comme mixtes (type Zintl) ; les 138 restants sont
+ICOHP/ICOBI en résout \textbf{55} en ionique (36) ou covalent (19), et
+identifie \textbf{43} comme mixtes (type Zintl) ; les 179 restants sont
 métalliques, déjà couverts par \texttt{is\_metal}. Sur le sous-ensemble
 où les deux méthodes se prononcent (métallique/ionique/covalent),
-l'accord est fort (89,0\%) mais pas total : 15 désaccords ionique/covalent
-et 5 composés que \texttt{classify()} range en ionique ou covalent mais
+l'accord est fort (88,8\%) mais pas total : 16 désaccords ionique/covalent
+et 19 composés que \texttt{classify()} range en ionique ou covalent mais
 que le classement ICOBI identifie comme mixtes (leur liaison
 homoatomique dominante coexiste avec un lien hétéroatomique
 nettement plus faible) --- à examiner cas par cas avant d'utiliser l'un
@@ -709,8 +724,10 @@ jour : \textbf{394/394}.
 \section{Coût de calcul}
 \label{sec:cout}
 
-\textbf{394 structures calculées au total} : 68 références à un seul
-élément et 326 composés multi-éléments (\S\ref{sec:dataset}).
+\textbf{597 structures calculées au total} : 69 références à un seul
+élément, 522 composés multi-éléments, et 6 structures de validation
+supplémentaires sans métadonnées de composé mais avec leur propre calcul
+VASP+LOBSTER (\S\ref{sec:dataset}).
 
 Chaque job VASP puis LOBSTER s'exécute sur le HPC \textbf{Yargla}, au sein
 d'une même allocation SLURM d'un n\oe ud (\texttt{--nodes=1}) et
@@ -718,36 +735,42 @@ d'une même allocation SLURM d'un n\oe ud (\texttt{--nodes=1}) et
 (\texttt{--ntasks=16 --cpus-per-task=1}, \texttt{srun}), puis LOBSTER en
 parallélisme OpenMP sur les mêmes 16 c\oe urs
 (\texttt{OMP\_NUM\_THREADS=16}, processus unique, exécuté séquentiellement
-après VASP dans le même job). Le tableau SLURM (\texttt{submit\_array.sh})
-est plafonné à 8 tâches concurrentes.
+après VASP dans le même job). Le tableau SLURM d'origine
+(\texttt{submit\_array.sh}, campagne principale) est plafonné à 8 tâches
+concurrentes ; les lots ajoutés depuis (extension/marginal-formation-energy/
+max-hull/widen) ont été soumis individuellement (\texttt{sbatch} par
+répertoire), sans ce plafond propre mais en partageant le cluster avec
+d'autres charges de travail non liées au projet.
 
 \begin{table}[htbp]
 \centering
-\caption{Temps de calcul VASP et LOBSTER (n=349 ; timing non disponible pour tous les composés).}
+\caption{Temps de calcul VASP et LOBSTER (597 structures).}
 \label{tab:compute-cost}
 \begin{tabular}{@{}lrr@{}}
 \toprule
  & VASP & LOBSTER \\
 \midrule
-$n$ & 349 & 348$^*$ \\
-Moyenne (s) & 168 & 404 \\
-Médiane (s) & 58 & 110 \\
-Maximum (s) & 5715 (1.6 h) & 12063 (3.4 h) \\
-Total séquentiel & 16.3 h & 39.0 h \\
+$n$ & 597 & 596$^*$ \\
+Moyenne (s) & 188 & 578 \\
+Médiane (s) & 72 & 157 \\
+Maximum (s) & 5715 (1.6 h) & 22555 (6.3 h) \\
+Total séquentiel & 31.2 h & 95.8 h \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^*$ 1 structure sur 349 sans étape LOBSTER exploitable
+{\footnotesize $^*$ 1 structure sur 597 sans étape LOBSTER exploitable
 (élément de référence à maille triviale).}
 \end{table}
 
-Total séquentiel combiné (VASP + LOBSTER, 349 structures) :
-\textbf{55.3 h}. Compte tenu du plafond de 8 tâches concurrentes,
-l'ordre de grandeur du temps réel écoulé pour traiter un tel volume en
-un seul lot serait de $\sim$6.9~h --- une estimation grossière (division
-par 8, sans tenir compte du temps de file d'attente), donnée à titre
-indicatif.
+Total séquentiel combiné (VASP + LOBSTER, 597 structures) :
+\textbf{127.0 h}. La campagne principale (plafonnée à 8 tâches
+concurrentes) donnait un ordre de grandeur de temps réel écoulé
+d'environ un huitième du total séquentiel ; ce facteur ne s'applique
+plus uniformément à l'ensemble --- les lots soumis individuellement
+depuis n'ont pas ce plafond propre mais ont partagé la file d'attente du
+cluster avec d'autres projets, ce qui rend une estimation de temps réel
+écoulé peu significative à l'échelle du jeu de données complet.
 
 \section{Limites et perspectives actuelles}
 \label{sec:limites-actuelles}

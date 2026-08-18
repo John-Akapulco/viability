@@ -39,7 +39,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 
 \title{\bfseries ICOHP Descriptors and Thermodynamic Stability \\
-Across a 394-Structure Dataset \\
+Across a 597-Structure Dataset \\
 \large Campaign 2: Dataset Construction, VASP+LOBSTER Computation,
 and Statistical Analysis}
 \author{Gilles Frapper \\ Professor, Theoretical Chemistry \\ IC2MP UMR 7285 CNRS, Université de Poitiers \\ \href{mailto:gilles.frapper@univ-poitiers.fr}{gilles.frapper@univ-poitiers.fr}\\[4pt] \small Report generated as part of the \texttt{viability} project}
@@ -215,7 +215,7 @@ Python 3.11 \texttt{.venv}), extended with: \texttt{mp-api},
 \section{Dataset}
 \label{sec:dataset}
 
-The full set of computed compounds and elements totals \textbf{394
+The full set of computed compounds and elements totals \textbf{597
 structures}.
 
 \begin{table}[htbp]
@@ -226,12 +226,20 @@ structures}.
 \toprule
 Composition & $n$ \\
 \midrule
-Single-element references & 68 \\
-Multi-element compounds   & 326 \\
+Single-element references & 69 \\
+Multi-element compounds   & 522 \\
+Validation structures without compound metadata$^*$ & 6 \\
 \midrule
-\textbf{Total}             & \textbf{394} \\
+\textbf{Total}             & \textbf{597} \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^*$ isolated gas dimers (H$_2$, N$_2$, O$_2$, F$_2$,
+Cl$_2$) and CaO[sphalerite], used only for the Reitz \& Dronskowski
+validation
+(Appendix~\ref{sec:appendix-reitz-dronskowski-structures}), outside the
+main dataset.}
 \end{table}
 
 \begin{table}[htbp]
@@ -242,14 +250,21 @@ Multi-element compounds   & 326 \\
 \toprule
 Class & $n$ & $E_\text{hull}$ range (eV/atom) \\
 \midrule
-stable ($E_\text{hull}=0$)  & 124 & 0.0000 \\
-experimental metastable     & 137 & 0.0000347 -- 2.1080 \\
-theoretical metastable      & 131 & 0.0000843 -- 3.1688 \\
-unknown (COD reference, no $E_\text{hull}$) & 2 & --- \\
+stable ($E_\text{hull}=0$)  & 160 & 0.0000 \\
+experimental metastable     & 183 & 0.0000347 -- 2.1080 \\
+theoretical metastable      & 242 & 0.0000843 -- 3.1688 \\
+unknown$^*$ & 12 & --- \\
 \midrule
-\textbf{Total}               & \textbf{394} & \\
+\textbf{Total}               & \textbf{597} & \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^*$ 2 COD references with no $E_\text{hull}$ (S$_4$N$_2$,
+S$_4$N$_4$), 6 validation structures without metadata (see
+Table~\ref{tab:composition}), 1 further COD reference (ZnSn/NiAs), and 3
+compounds inherited from the original campaign, labeled "metastable"
+before the \texttt{theoretical} flag existed.}
 \end{table}
 
 \textbf{Bond type.} Two independent classifications (\S2.2): the
@@ -261,7 +276,7 @@ mean over every neighbor LOBSTER reports within the wider cutoff used
 for the percolation graph, which strongly dilutes the signal for dense
 covalent solids such as diamond --- compared against a threshold
 calibrated at the midpoint of the median ICOBI of compounds
-\texttt{classify()} already labels ionic/covalent, i.e. 0.5052, to
+\texttt{classify()} already labels ionic/covalent, i.e. 0.5315, to
 separate ionic from covalent among non-metallic compounds). A fourth
 label, \textbf{mixed} (Zintl-type), identifies compounds where a
 \emph{homoatomic} pair above the covalent threshold (e.g. N--N in an
@@ -272,32 +287,32 @@ ionic/covalent label would be misleading.
 
 \begin{table}[htbp]
 \centering
-\caption{Bond type: \texttt{classify()} vs. the ICOHP/ICOBI classification (concordance on the subset \texttt{classify()} labels: 161/181 = 89.0\%).}
+\caption{Bond type: \texttt{classify()} vs. the ICOHP/ICOBI classification (concordance on the subset \texttt{classify()} labels: 277/312 = 88.8\%).}
 \label{tab:bondtype}
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 \texttt{classify()} $\backslash$ ICOHP/ICOBI & metallic & ionic & covalent & mixed & unclassified \\
 \midrule
-metallic       & 88  & 0  & 0  & 0 & 0 \\
-ionic          & 0   & 45 & 5  & 3 & 0 \\
-covalent       & 0   & 10 & 28 & 2 & 0 \\
-unclassified   & 138 & 31 & 19 & 23 & 0 \\
+metallic       & 194 & 0  & 0  & 0 & 0 \\
+ionic          & 0   & 48 & 2  & 3 & 0 \\
+covalent       & 0   & 14 & 35 & 16 & 0 \\
+unclassified   & 179 & 36 & 19 & 43 & 0 \\
 \midrule
-\textbf{Total} & \textbf{226} & \textbf{86} & \textbf{52} & \textbf{28} & \textbf{0} \\
+\textbf{Total} & \textbf{373} & \textbf{98} & \textbf{56} & \textbf{62} & \textbf{0} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Of the 211 compounds \texttt{classify()} leaves "unclassified"
+Of the 277 compounds \texttt{classify()} leaves "unclassified"
 (essentially alkali/alkaline-earth $\times$ \{N, P, S\} pairs outside
 \texttt{IONIC\_ANIONS}, and metals bonded to an anion-like element that
 \texttt{classify()} deliberately excludes from its "metallic" bucket),
-the ICOHP/ICOBI classification resolves \textbf{50} into ionic (31) or
-covalent (19), and identifies \textbf{23} as mixed (Zintl-type); the
-remaining 138 are metallic, already covered by \texttt{is\_metal}.
+the ICOHP/ICOBI classification resolves \textbf{55} into ionic (36) or
+covalent (19), and identifies \textbf{43} as mixed (Zintl-type); the
+remaining 179 are metallic, already covered by \texttt{is\_metal}.
 Where both methods render a verdict (metallic/ionic/covalent), agreement
-is strong (89.0\%) but not total: 15 ionic/covalent disagreements, and
-5 compounds \texttt{classify()} labels ionic or covalent but that the
+is strong (88.8\%) but not total: 16 ionic/covalent disagreements, and
+19 compounds \texttt{classify()} labels ionic or covalent but that the
 ICOBI classification identifies as mixed (their dominant homoatomic
 bond coexists with a markedly weaker heteroatomic link) --- worth
 checking case by case before using either classification as a
@@ -677,8 +692,10 @@ Final success rate across all 394 structures computed to date:
 \section{Compute Cost}
 \label{sec:cost}
 
-\textbf{394 structures computed in total}: 68 single-element references
-and 326 multi-element compounds (\S\ref{sec:dataset}).
+\textbf{597 structures computed in total}: 69 single-element references,
+522 multi-element compounds, and 6 further validation structures without
+compound metadata but with their own VASP+LOBSTER run
+(\S\ref{sec:dataset}).
 
 Every VASP job, then LOBSTER job, runs on the \textbf{Yargla} HPC cluster,
 within a single SLURM allocation of one node (\texttt{--nodes=1}) and
@@ -686,35 +703,42 @@ within a single SLURM allocation of one node (\texttt{--nodes=1}) and
 (\texttt{--ntasks=16 --cpus-per-task=1}, \texttt{srun}), then LOBSTER
 under OpenMP parallelism on the same 16 cores
 (\texttt{OMP\_NUM\_THREADS=16}, single process, run sequentially after
-VASP within the same job). The SLURM array (\texttt{submit\_array.sh}) is
-capped at 8 concurrent tasks.
+VASP within the same job). The original SLURM array
+(\texttt{submit\_array.sh}, main campaign) is capped at 8 concurrent
+tasks; the batches added since (extension/marginal-formation-energy/
+max-hull/widen) were submitted individually (\texttt{sbatch} per
+directory), without that cap of their own but sharing the cluster with
+other, unrelated workloads.
 
 \begin{table}[htbp]
 \centering
-\caption{VASP and LOBSTER compute time (n=349; timing not available for every compound).}
+\caption{VASP and LOBSTER compute time (597 structures).}
 \label{tab:compute-cost}
 \begin{tabular}{@{}lrr@{}}
 \toprule
  & VASP & LOBSTER \\
 \midrule
-$n$ & 349 & 348$^*$ \\
-Mean (s) & 168 & 404 \\
-Median (s) & 58 & 110 \\
-Max (s) & 5715 (1.6 h) & 12063 (3.4 h) \\
-Sequential total & 16.3 h & 39.0 h \\
+$n$ & 597 & 596$^*$ \\
+Mean (s) & 188 & 578 \\
+Median (s) & 72 & 157 \\
+Max (s) & 5715 (1.6 h) & 22555 (6.3 h) \\
+Sequential total & 31.2 h & 95.8 h \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize $^*$ 1 of 349 structures had no usable LOBSTER step
+{\footnotesize $^*$ 1 of 597 structures had no usable LOBSTER step
 (trivial-cell reference element).}
 \end{table}
 
-Combined sequential total (VASP + LOBSTER, 349 structures):
-\textbf{55.3 h}. Given the 8-concurrent-task cap, the order of magnitude
-for actual elapsed time to process this volume as a single batch would
-be $\sim$6.9~h --- a rough estimate (dividing by 8, ignoring queue time)
-given for context.
+Combined sequential total (VASP + LOBSTER, 597 structures):
+\textbf{127.0 h}. The main campaign (capped at 8 concurrent tasks) gave
+an order-of-magnitude elapsed time of roughly one-eighth of the
+sequential total; that factor no longer applies uniformly across the
+whole dataset --- the individually-submitted batches added since have no
+cap of their own but shared the cluster queue with other projects,
+making a single elapsed-time estimate for the full dataset not
+meaningful.
 
 \section{Current Limits and Next Steps}
 \label{sec:limits-current}
