@@ -16,5 +16,7 @@
   "theoretical": true,
   "nsites": 5,
   "spacegroup": "R-3m",
-  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0648 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule."
+  "note": "marginal_widen_campaign (pool=periodic_wide): selected for formation_energy_per_atom=0.0648 eV/atom near the marginal boundary; see marginal_widen_candidates.json / select_marginal_widen.py for the exact selection rule.",
+  "quality_excluded": true,
+  "quality_excluded_reason": "LOBSTER basis projection failed for this compound: lobsterout reports 343/343 k-points could not be orthonormalized, and bandOverlaps.lobster shows maxDeviation up to 1.10 (vs. this project's established 0.1 red-flag threshold for elemental references) -- an order of magnitude worse, at every k-point, not a borderline case. Resulting ICOHPLIST.lobster values are physically implausible (e.g. 7.6-11.6 eV third-neighbor Cu-Cu contacts at 4.25-5.04 A, where real ICOHP decays rapidly with distance) and propagate into a delta_per_atom_eV of -380.5 eV -- ~27x the next-worst case in the whole case-1 population. Diagnosed 2026-08-18; excluded from all downstream analysis, not deleted (raw VASP/LOBSTER outputs kept for reference)."
 }

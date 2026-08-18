@@ -1,8 +1,8 @@
 {
-  "n_total_case1_rows": 518,
+  "n_total_case1_rows": 517,
   "n_in_main_campaign": 288,
   "n_by_family": {
-    "extension": 337,
+    "extension": 336,
     "exp_metastable": 59,
     "exp_stable": 59,
     "theo_metastable": 59,
@@ -10,13 +10,13 @@
     "metastable": 2
   },
   "n_by_bond_type": {
-    "metallic": 319,
+    "metallic": 318,
     "ionic": 95,
     "mixed": 61,
     "covalent": 43
   },
   "n_by_is_metal": {
-    "True": 319,
+    "True": 318,
     "False": 197,
     "nan": 2
   },
@@ -25,9 +25,9 @@
       "group": "all",
       "metric": "delta_icohp_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 515,
-      "rho": 0.0579,
-      "p_value": 0.1898,
+      "n": 514,
+      "rho": 0.0564,
+      "p_value": 0.2018,
       "note": null
     },
     {
@@ -52,9 +52,9 @@
       "group": "bond_type=metallic",
       "metric": "delta_icohp_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 318,
-      "rho": -0.0698,
-      "p_value": 0.2143,
+      "n": 317,
+      "rho": -0.0719,
+      "p_value": 0.2015,
       "note": null
     },
     {
@@ -79,9 +79,9 @@
       "group": "is_metal=True",
       "metric": "delta_icohp_per_atom",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 318,
-      "rho": -0.0698,
-      "p_value": 0.2143,
+      "n": 317,
+      "rho": -0.0719,
+      "p_value": 0.2015,
       "note": null
     }
   ],
@@ -90,9 +90,9 @@
       "group": "all",
       "metric": "delta_icohp_total",
       "target": "energy_above_hull_eV_per_atom",
-      "n": 515,
-      "rho": -0.0562,
-      "p_value": 0.2032,
+      "n": 514,
+      "rho": -0.0579,
+      "p_value": 0.1897,
       "note": null
     }
   ],
@@ -101,8 +101,8 @@
       "group": "all",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 511,
-      "rho": 0.2969,
+      "n": 510,
+      "rho": 0.2948,
       "p_value": 0.0,
       "note": null
     },
@@ -128,9 +128,9 @@
       "group": "bond_type=metallic",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 316,
-      "rho": 0.0959,
-      "p_value": 0.0887,
+      "n": 315,
+      "rho": 0.0923,
+      "p_value": 0.1021,
       "note": null
     },
     {
@@ -155,9 +155,9 @@
       "group": "is_metal=True",
       "metric": "delta_icohp_per_atom",
       "target": "formation_energy_per_atom",
-      "n": 316,
-      "rho": 0.0959,
-      "p_value": 0.0887,
+      "n": 315,
+      "rho": 0.0923,
+      "p_value": 0.1021,
       "note": null
     }
   ],
@@ -166,8 +166,8 @@
       "group": "all",
       "metric": "delta_icohp_total",
       "target": "formation_energy_per_atom",
-      "n": 511,
-      "rho": 0.2095,
+      "n": 510,
+      "rho": 0.2072,
       "p_value": 0.0,
       "note": null
     }

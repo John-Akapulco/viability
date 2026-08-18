@@ -2832,19 +2832,6 @@
     "warnings": [],
     "error": null
   },
-  "extension_Cu4Au_mp-1225761": {
-    "reaction_id": "extension_Cu4Au_mp-1225761__decomposition",
-    "type": "decomposition_to_elements",
-    "metric": "icohp",
-    "bond_pair": null,
-    "delta_per_formula_unit_eV": -1902.4773800000003,
-    "delta_per_atom_eV": -380.49547600000005,
-    "delta_per_bond_eV": -22.81618251765961,
-    "delta_per_bond_conservative": false,
-    "bonding_label": "exobondic",
-    "warnings": [],
-    "error": null
-  },
   "extension_Cu7Te4_mp-624307": {
     "reaction_id": "extension_Cu7Te4_mp-624307__decomposition",
     "type": "decomposition_to_elements",
