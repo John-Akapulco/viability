@@ -1,52 +1,65 @@
-"""Recompute the ZnSn/Zn/Sn rows of report Table S18 (the DFT+LOBSTER ICOHP
-comparison against Reitz & Dronskowski, ic-2026-04181q) under a strict
-single-shell convention, diagnosing and resolving the Zn 36% residual left
-open by the 2026-08-18 manuscript-methodology campaign.
+"""Recompute this project's own DFT+LOBSTER ICOHP values against Reitz &
+Dronskowski's (ic-2026-04181q) per-species reference numbers, for all 16
+species across their 7 validation reactions -- both under the manuscript's
+own methodology (PBEsol+D3(BJ), the `manuscript_*` campaign directories)
+and, where a pre-existing entry exists, under this project's default
+methodology (PBE, no D3, the original dataset's `extension_*`/`gasref_*`
+directories).
 
-Root cause (confirmed on mp_dataset/structures/manuscript_Zn/ICOHPLIST.lobster):
-reaction_analysis.nearest_neighbor.detect_first_shell() cuts at the single
-LARGEST gap anywhere in a pair-type's whole distance spectrum -- correct and
-already regression-tested for the general 588-compound bond_type
-classification pipeline (analysis/compute_icohp_icobi_bondtype.py), where
-species pairs typically have one well-separated first shell. Zn's hcp
-lattice is the counter-example this general rule mishandles: its
-anomalously low c/a ratio puts a second, chemically distinct Zn-Zn shell
-(interlayer, 2.729-2.734 A) only ~0.12 A past the true first shell (basal,
-2.608 A) -- much closer than the ~1.04 A gap to the real third shell. The
-"largest gap" heuristic locks onto that later gap and lumps both Zn-Zn
-shells into one, roughly doubling the summed ICOHP. This is a real limit of
-applying one general-purpose algorithm dataset-wide, not a genuine
-DFT/LOBSTER methodology difference -- see report/appendix_reitz_dronskowski
-_structures_{en,fr}.tex for the write-up. Deliberately NOT changed in
-nearest_neighbor.py itself: that module's "largest gap" rule is
-tests/test_nearest_neighbor.py-pinned behavior serving the whole dataset,
-and Zn's near-degenerate double shell is not representative of the general
-case -- changing it there would need its own dataset-wide validation pass,
-out of scope here (see project memory: real goal is descriptor validation,
-not classification refinement).
+Extends the 2026-08-18 fix (originally ZnSn/Zn/Sn only) to the remaining
+13 species now that the 2026-08-19 manuscript-validation SLURM campaign is
+finishing. As of this run: 10/16 manuscript_* (PBEsol) directories are
+computed; the other 6 (Ca3N2, Mn2O7, PbN3_2, S4N2, S4N4, S8) are still on
+SLURM and simply omitted from that column until they land. All 14 species
+with a pre-existing PBE-functional dataset entry are included in the "Old
+calculation" column now (2 species, S8 and Pb(N3)2, have no such entry --
+both are novel to the manuscript-validation campaign).
 
-Fix applied HERE ONLY (a one-off, manuscript-comparison-specific
-recomputation): cluster each pair-type's distances within `tol` (0.02 A) of
-the minimum observed distance -- large enough to swallow the ~1e-4 A
-numerical splitting LOBSTER reports for symmetry-equivalent bonds, small
-enough to stay well inside every real single-shell cluster seen in these
-three compounds (largest observed intra-shell spread: 0.034 A, ZnSn's
-Sn-Sn) and well short of every observed inter-shell gap (smallest: 0.121 A,
-Zn-Zn). Not a claim that a flat 0.02 A cutoff is right for other pair types
-or other compounds -- see nearest_neighbor.py's own docstring for why no
-project-wide module uses an absolute cutoff.
+Root cause background (unchanged from the 2026-08-18 fix, see
+reaction_analysis/nearest_neighbor.py's own docstring and this project's
+memory): reaction_analysis.nearest_neighbor.detect_first_shell() cuts at
+the single LARGEST gap anywhere in a pair type's whole distance spectrum,
+which mishandles compounds with a near-degenerate double first shell (Zn's
+hcp c/a anomaly being the discovered case). Deliberately NOT changed in
+nearest_neighbor.py itself -- still tests/test_nearest_neighbor.py-pinned,
+dataset-wide behavior; whether it affects other compounds' bond_type
+classification is a separate, not-yet-closed question (see
+analysis/audit_shell_ambiguity.py and the 2026-08-19 activity report
+addendum).
 
-ZnSn also needed a second correction, already footnoted in the table before
-this script existed but not previously applied to the headline number: the
-manuscript's own accounting for ZnSn is 6 Zn-Sn + 1 Zn-Zn bonds per formula
-unit, with NO Sn-Sn term, even though a real, well-separated first-shell
-Sn-Sn contact exists in the DFT+LOBSTER data (3.54-3.57 A). This is a
-scope-of-accounting difference, not a shell-detection error, so it is
-handled here simply by excluding the Sn-Sn pair type from ZnSn's sum.
+Reference per-species ICOHP values and their exact bond-type scope (which
+pair types, how many bonds, and -- for Mn2O7 -- which of two Mn-O shells)
+are transcribed directly from tests/fixtures/reitz_dronskowski_cases.yaml's
+own inline comments (hand-transcribed from the manuscript by an earlier
+session; not re-derived here). Per-species scope:
+
+  PbN3_2:  Pb-N (x1) + N-N (x6, azide chain)
+  Pb:      Pb-Pb, first shell (count not specified by the manuscript)
+  N2:      N-N, single dimer bond
+  S4N2:    three distinct S-N/S-S first-shell pair types (x2 each)
+  S8:      S-S, first shell (x8, ring)
+  S4N4:    S-N only (x8) -- no S-S term
+  ZnSn:    Zn-Sn (x6) + Zn-Zn (x1) -- Sn-Sn explicitly excluded (manuscript
+           scope, not a shell-detection issue, see 2026-08-18 fix)
+  Zn:      Zn-Zn, true first shell only (x6) -- the original bug fix
+  Sn:      Sn-Sn, first shell
+  CaO_sphalerite: Ca-O, first shell (x4, tetrahedral)
+  CaO_rocksalt:   Ca-O, first shell (x6, octahedral)
+  CaN:     Ca-N, first shell (x6, rocksalt-type)
+  Ca3N2:   Ca-N, first shell (x12)
+  Mn2O7:   Mn-O, FIRST AND SECOND shell together (x2 Mn/FU, "short+long")
+           + O-O, first shell (x7)
+  MnO2:    Mn-O, scope not specified by the manuscript -- both single- and
+           double-shell sums reported, see note in the printed table
+  O2:      O-O, single dimer bond
+
+Writes analysis/manuscript_validation_icohp_full.csv and prints the
+comparison table (manuscript / new PBEsol / old PBE / diffs).
 """
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 from collections import defaultdict
@@ -60,15 +73,10 @@ from reaction_analysis.parse_lobster import raw_bond_records, _element_from_atom
 from reaction_analysis.units import ev_to_kj_per_mol  # noqa: E402
 
 STRUCTURES = REPO_ROOT / "mp_dataset" / "structures"
+OUT_CSV = REPO_ROOT / "analysis" / "manuscript_validation_icohp_full.csv"
 
 STRICT_SHELL_TOL_ANGSTROM = 0.02
-
-# (compound_dir_name, manuscript_eV_per_FU, pair_types_to_include)
-CASES = [
-    ("manuscript_Zn", -12.686, ["Zn-Zn"]),
-    ("manuscript_Sn", -7.672, ["Sn-Sn"]),
-    ("manuscript_ZnSn", -16.869, ["Sn-Zn", "Zn-Zn"]),  # Sn-Sn excluded, see module docstring
-]
+SHELL_GAP_THRESHOLD_ANGSTROM = 0.08  # for the Mn-O two-shell cases only
 
 
 def _load_by_pair(compound_dir: Path) -> tuple[dict[str, list[dict]], int]:
@@ -82,34 +90,170 @@ def _load_by_pair(compound_dir: Path) -> tuple[dict[str, list[dict]], int]:
     return by_pair, round(z)
 
 
-def _strict_first_shell_sum(records: list[dict], tol: float = STRICT_SHELL_TOL_ANGSTROM) -> tuple[int, float]:
+def _cluster_shells(records: list[dict], gap_threshold: float = SHELL_GAP_THRESHOLD_ANGSTROM) -> list[list[dict]]:
+    """Greedy sequential clustering on sorted distance: start a new shell
+    whenever the gap to the next distance exceeds `gap_threshold`."""
+    recs = sorted(records, key=lambda r: r["length"])
+    shells: list[list[dict]] = [[recs[0]]] if recs else []
+    for prev, cur in zip(recs, recs[1:]):
+        if cur["length"] - prev["length"] > gap_threshold:
+            shells.append([])
+        shells[-1].append(cur)
+    return shells
+
+
+def _strict_first_shell(records: list[dict], tol: float = STRICT_SHELL_TOL_ANGSTROM) -> list[dict]:
     d_min = min(r["length"] for r in records)
-    kept = [r for r in records if r["length"] <= d_min + tol]
-    return len(kept), sum(r["value"] for r in kept)
+    return [r for r in records if r["length"] <= d_min + tol]
+
+
+def _sum(records: list[dict]) -> tuple[int, float]:
+    return len(records), sum(r["value"] for r in records)
+
+
+# (compound_id, manuscript_eV, pbesol_dir, pbe_dir, scope_fn)
+# scope_fn(by_pair) -> (n_bonds, sum_eV)
+def _scope_single_pair_first_shell(pair: str):
+    def fn(by_pair):
+        if pair not in by_pair:
+            return None
+        return _sum(_strict_first_shell(by_pair[pair]))
+    return fn
+
+
+def _scope_multi_pair_first_shell(pairs: list[str]):
+    def fn(by_pair):
+        n_total, s_total = 0, 0.0
+        for p in pairs:
+            if p not in by_pair:
+                return None
+            n, s = _sum(_strict_first_shell(by_pair[p]))
+            n_total += n
+            s_total += s
+        return (n_total, s_total)
+    return fn
+
+
+def _scope_mn2o7(by_pair):
+    if "Mn-O" not in by_pair or "O-O" not in by_pair:
+        return None
+    shells = _cluster_shells(by_pair["Mn-O"])
+    if len(shells) < 2:
+        return None
+    mn_o_records = shells[0] + shells[1]
+    n_mno, s_mno = _sum(mn_o_records)
+    n_oo, s_oo = _sum(_strict_first_shell(by_pair["O-O"]))
+    return (n_mno + n_oo, s_mno + s_oo)
+
+
+def _scope_mno2_single_shell(by_pair):
+    if "Mn-O" not in by_pair:
+        return None
+    return _sum(_strict_first_shell(by_pair["Mn-O"]))
+
+
+def _scope_mno2_double_shell(by_pair):
+    if "Mn-O" not in by_pair:
+        return None
+    shells = _cluster_shells(by_pair["Mn-O"])
+    if len(shells) < 2:
+        return None
+    return _sum(shells[0] + shells[1])
+
+
+CASES = [
+    dict(id="PbN3_2", manuscript_eV=-89.104, pbesol_dir="manuscript_PbN3_2", pbe_dir=None,
+         scope=_scope_multi_pair_first_shell(["N-Pb", "N-N"])),
+    dict(id="Pb", manuscript_eV=-5.688, pbesol_dir="manuscript_Pb", pbe_dir="extension_Pb_mp-20483",
+         scope=_scope_single_pair_first_shell("Pb-Pb")),
+    dict(id="N2", manuscript_eV=-23.161, pbesol_dir="manuscript_N2", pbe_dir="gasref_N2_dimerbox",
+         scope=_scope_single_pair_first_shell("N-N")),
+    dict(id="S4N2", manuscript_eV=-49.24, pbesol_dir="manuscript_S4N2", pbe_dir="extension_S4N2_cod4031496",
+         scope=None),  # 3 distinct S-N/S-S pair types, not separable from ICOHPLIST alone -- reported raw below
+    dict(id="S8", manuscript_eV=-46.8, pbesol_dir="manuscript_S8", pbe_dir=None,
+         scope=_scope_single_pair_first_shell("S-S")),
+    dict(id="S4N4", manuscript_eV=-73.84, pbesol_dir="manuscript_S4N4", pbe_dir="extension_S4N4_cod7017102",
+         scope=_scope_single_pair_first_shell("N-S")),
+    dict(id="ZnSn", manuscript_eV=-16.869, pbesol_dir="manuscript_ZnSn", pbe_dir="gasref_ZnSn_NiAs",
+         scope=_scope_multi_pair_first_shell(["Sn-Zn", "Zn-Zn"])),
+    dict(id="Zn", manuscript_eV=-12.686, pbesol_dir="manuscript_Zn", pbe_dir="extension_Zn_mp-79",
+         scope=_scope_single_pair_first_shell("Zn-Zn")),
+    dict(id="Sn", manuscript_eV=-7.672, pbesol_dir="manuscript_Sn", pbe_dir="extension_Sn_mp-623511",
+         scope=_scope_single_pair_first_shell("Sn-Sn")),
+    dict(id="CaO_sphalerite", manuscript_eV=-3.46, pbesol_dir="manuscript_CaO_sphalerite", pbe_dir="gasref_CaO_sphalerite",
+         scope=_scope_single_pair_first_shell("Ca-O")),
+    dict(id="CaO_rocksalt", manuscript_eV=-4.278, pbesol_dir="manuscript_CaO_rocksalt", pbe_dir="extension_CaO_mp-2605",
+         scope=_scope_single_pair_first_shell("Ca-O")),
+    dict(id="CaN", manuscript_eV=-4.302, pbesol_dir="manuscript_CaN", pbe_dir="extension_CaN_mp-1058549",
+         scope=_scope_single_pair_first_shell("Ca-N")),
+    dict(id="Ca3N2", manuscript_eV=-7.692, pbesol_dir="manuscript_Ca3N2", pbe_dir="extension_Ca3N2_mp-844",
+         scope=_scope_single_pair_first_shell("Ca-N")),
+    dict(id="Mn2O7", manuscript_eV=-62.21, pbesol_dir="manuscript_Mn2O7", pbe_dir="extension_Mn2O7_mp-28338",
+         scope=_scope_mn2o7),
+    dict(id="MnO2", manuscript_eV=-18.54, pbesol_dir="manuscript_MnO2", pbe_dir="extension_MnO2_mp-510408",
+         scope=_scope_mno2_single_shell),
+    dict(id="O2", manuscript_eV=-18.05, pbesol_dir="manuscript_O2", pbe_dir="gasref_O2_dimerbox",
+         scope=_scope_single_pair_first_shell("O-O")),
+]
+
+
+def _eval_case(case: dict, dir_name: str | None) -> dict | None:
+    if dir_name is None:
+        return None
+    compound_dir = STRUCTURES / dir_name
+    if not (compound_dir / "ICOHPLIST.lobster").exists():
+        return None
+    by_pair, z = _load_by_pair(compound_dir)
+    if case["scope"] is None:
+        return {"n_bonds": None, "sum_eV": None, "raw_by_pair": {
+            k: _sum(_strict_first_shell(v)) for k, v in by_pair.items()
+        }}
+    result = case["scope"](by_pair)
+    if result is None:
+        return None
+    n_bonds, sum_eV = result
+    return {"n_bonds": n_bonds, "sum_eV": sum_eV / z, "raw_by_pair": None}
 
 
 def main() -> None:
-    results: dict[str, float] = {}
-    print(f"{'compound':<18}{'pair types':<16}{'n_bonds':>8}{'sum/FU (eV)':>14}{'manuscript':>13}{'diff %':>9}")
-    for name, manuscript_eV, pair_types in CASES:
-        by_pair, z = _load_by_pair(STRUCTURES / name)
-        n_total = 0
-        sum_total = 0.0
-        for pt in pair_types:
-            n, s = _strict_first_shell_sum(by_pair[pt])
-            n_total += n
-            sum_total += s
-        per_fu = sum_total / z
-        results[name] = per_fu
-        diff_pct = abs(per_fu - manuscript_eV) / abs(manuscript_eV) * 100
-        print(f"{name:<18}{','.join(pair_types):<16}{n_total:>8}{per_fu:>14.5f}{manuscript_eV:>13.3f}{diff_pct:>8.2f}%")
+    rows = []
+    print(f"{'species':<16}{'manuscript':>12}{'new(PBEsol)':>13}{'diff%':>8}{'old(PBE)':>12}{'diff%':>8}")
+    for case in CASES:
+        new = _eval_case(case, case["pbesol_dir"])
+        old = _eval_case(case, case["pbe_dir"])
 
-    delta_eV = (results["manuscript_Zn"] + results["manuscript_Sn"]) - results["manuscript_ZnSn"]
-    delta_kJ = ev_to_kj_per_mol(delta_eV)
-    manuscript_delta_eV, manuscript_delta_kJ = -3.489, -337
-    diff_pct = abs(delta_eV - manuscript_delta_eV) / abs(manuscript_delta_eV) * 100
-    print(f"\nDelta ICOHP, ZnSn -> Zn + Sn: {delta_eV:.3f} eV ({delta_kJ:.1f} kJ/mol) "
-          f"vs manuscript {manuscript_delta_eV} eV ({manuscript_delta_kJ} kJ/mol), diff {diff_pct:.2f}%")
+        def fmt(res):
+            if res is None:
+                return "---", "---"
+            if res["sum_eV"] is None:
+                return "n/a(raw)", "n/a"
+            diff = abs(res["sum_eV"] - case["manuscript_eV"]) / abs(case["manuscript_eV"]) * 100
+            return f"{res['sum_eV']:.3f}", f"{diff:.1f}%"
+
+        new_val, new_diff = fmt(new)
+        old_val, old_diff = fmt(old)
+        print(f"{case['id']:<16}{case['manuscript_eV']:>12.3f}{new_val:>13}{new_diff:>8}{old_val:>12}{old_diff:>8}")
+
+        rows.append({
+            "species": case["id"], "manuscript_eV": case["manuscript_eV"],
+            "new_pbesol_eV": new["sum_eV"] if new and new["sum_eV"] is not None else "",
+            "new_pbesol_n_bonds": new["n_bonds"] if new else "",
+            "old_pbe_eV": old["sum_eV"] if old and old["sum_eV"] is not None else "",
+            "old_pbe_n_bonds": old["n_bonds"] if old else "",
+        })
+
+        if new and new["raw_by_pair"] is not None:
+            print(f"    {case['id']} raw first-shell pairs (scope not separable): "
+                  f"{ {k: round(v[1], 3) for k, v in new['raw_by_pair'].items()} }")
+        if old and old["raw_by_pair"] is not None:
+            print(f"    {case['id']} (PBE) raw first-shell pairs: "
+                  f"{ {k: round(v[1], 3) for k, v in old['raw_by_pair'].items()} }")
+
+    with OUT_CSV.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(rows)
+    print(f"\nWrote {OUT_CSV}")
 
 
 if __name__ == "__main__":
