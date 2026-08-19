@@ -43,9 +43,10 @@ MnO$_2$ (produit) & Table~S1 (2026-08-18) : $P4_2/mnm$, $a=b=4{,}41216$~\AA, $c=
 O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet ; la Table~S1 (2026-08-18) fixe la boîte du dimère isolé à $8\times8\times8$~\AA & mp-1524462, C2/m, $E_{hull}=0{,}000$, on-hull, traitement spin-polarisé dédié ; également relaxée dans la boîte $8\times8\times8$~\AA\ du manuscrit sous sa propre méthodologie dans \texttt{manuscript\_O2} (2026-08-18) & structurel --- dimère isolé $d$(O-O)$=1{,}222$~\AA\ (défaut du jeu de données, boîte 10~\AA) / $1{,}227$~\AA\ (boîte 8~\AA\ du manuscrit), tous deux à $\sim$1,6\% de 1,208~\AA\ littérature. La taille de boîte correspond à la Table~S1 par construction (une entrée spécifiée, pas une vérification indépendante) \\
 \end{longtable}
 
-\begin{longtable}{@{}p{2.6cm}rrrr@{}}
+{\small
+\begin{longtable}{@{}p{2.4cm}*{5}{>{\raggedleft\arraybackslash}p{1.9cm}}@{}}
 \caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit par espèce (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), pour les 16 espèces. Colonne ``Ancien (PBE)'' : méthodologie DFT par défaut de ce projet (PBE, ENCUT=600~eV, EDIFF=1e-6, sans D3) sur les structures déjà présentes dans le jeu de données avant la campagne méthodologie-manuscrit (2 espèces, S$_8$ et Pb(N$_3$)$_2$, n'ont pas une telle entrée préalable). Colonne ``Nouveau (PBEsol)'' : campagne \texttt{manuscript\_*} reproduisant la méthodologie exacte du manuscrit (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tétraèdres) --- paramètres de maille validés à mieux que 1\% de la Table~S1 du manuscrit pour chaque espèce disposant d'une structure citable (Tableau~\ref{tab:reitz-dronskowski-structures}). Les deux colonnes sont sommées selon la convention stricte de première sphère de coordination unique introduite le 2026-08-18 (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, tolérance de 0,02~\AA\ autour de la distance minimale de chaque type de paire, avec une somme explicite à deux sphères pour les liaisons Mn-O courtes+longues de Mn$_2$O$_7$, conformément au périmètre déclaré du manuscrit), et non le \texttt{bond\_filter="nearest\_neighbor"} générique de \texttt{reaction\_analysis.parse\_lobster} ; voir la discussion sous le tableau. À cette mise à jour (2026-08-19), 6 espèces (Ca$_3$N$_2$, Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) sont encore en calcul sur SLURM et n'ont pas encore d'entrée ``Nouveau (PBEsol)''.}
-\label{tab:reitz-dronskowski-dft}
+\label{tab:reitz-dronskowski-dft}\\
 \toprule
 Espèce / réaction & Manuscrit (eV) & Nouveau (PBEsol) & Écart & Ancien (PBE) & Écart \\
 \midrule
@@ -75,6 +76,7 @@ O$_2$ (produit) & $-18{,}050$ & $-16{,}513$\textsuperscript{e} & $8{,}5\%$ & $-1
 \midrule
 $\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-3{,}448$~eV ($-333$~kJ/mol) & $1{,}2\%$ & $-10{,}027$~eV ($-968$~kJ/mol) & --- \\
 \end{longtable}
+}
 
 \vspace{0.3em}
 \noindent\textsuperscript{a}~exclut une contribution Sn-Sn de troisième sphère, réelle mais absente de la comptabilité du manuscrit ($d=3{,}54$--$3{,}57$~\AA, $-1{,}336$~eV/formule) : la comptabilité propre du manuscrit pour ZnSn est 6 liaisons Zn-Sn $+$ 1 Zn-Zn par formule, sans aucun terme Sn-Sn, alors même que le calcul DFT+LOBSTER rapporte un contact Sn-Sn de première sphère authentique et bien séparé à cette distance. Une différence de périmètre de comptabilité, pas une erreur de détection de sphère.

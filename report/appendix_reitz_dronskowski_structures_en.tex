@@ -43,9 +43,10 @@ MnO$_2$ (product) & Table~S1 (2026-08-18): $P4_2/mnm$, $a=b=4.41216$~\AA, $c=2.9
 O$_2$ (element) & gaseous O$_2$, triplet ground state; Table~S1 (2026-08-18) fixes the isolated-dimer box at $8\times8\times8$~\AA & mp-1524462, C2/m, $E_{hull}=0.000$, on-hull, dedicated spin-polarized treatment; also relaxed in the manuscript's $8\times8\times8$~\AA\ box under its own methodology in \texttt{manuscript\_O2} (2026-08-18) & structural --- isolated dimer $d$(O-O)$=1.222$~\AA\ (dataset default, 10~\AA\ box) / $1.227$~\AA\ (manuscript's 8~\AA\ box), both within $\sim$1.6\% of 1.208~\AA\ literature. Box size matches Table~S1 by construction (a specified input, not an independent check) \\
 \end{longtable}
 
-\begin{longtable}{@{}p{2.6cm}rrrr@{}}
+{\small
+\begin{longtable}{@{}p{2.4cm}*{5}{>{\raggedleft\arraybackslash}p{1.9cm}}@{}}
 \caption{This project's own DFT+LOBSTER ICOHP values against the manuscript's transcribed per-species values (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), for all 16 species. ``Old (PBE)'' column: this project's default DFT methodology (PBE, ENCUT=600~eV, EDIFF=1e-6, no D3) on the structures already present in the dataset before the manuscript-methodology campaign (2 species, S$_8$ and Pb(N$_3$)$_2$, have no such prior entry). ``New (PBEsol)'' column: the \texttt{manuscript\_*} campaign reproducing the manuscript's exact methodology (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tetrahedron method) --- lattice parameters validated to better than 1\% of the manuscript's Table~S1 for every species with a citable structure (Table~\ref{tab:reitz-dronskowski-structures}). Both columns are summed under the strict single-coordination-shell convention introduced 2026-08-18 (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, 0.02~\AA\ tolerance around each pair type's minimum bond distance, with an explicit two-shell sum for Mn$_2$O$_7$'s short+long Mn-O bonds per the manuscript's own stated scope) rather than \texttt{reaction\_analysis.parse\_lobster}'s general-purpose \texttt{bond\_filter="nearest\_neighbor"}; see the discussion below the table. As of this update (2026-08-19), 6 species (Ca$_3$N$_2$, Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) are still computing on SLURM and have no ``New (PBEsol)'' entry yet.}
-\label{tab:reitz-dronskowski-dft}
+\label{tab:reitz-dronskowski-dft}\\
 \toprule
 Species / reaction & Manuscript (eV) & New (PBEsol) & Diff. & Old (PBE) & Diff. \\
 \midrule
@@ -75,6 +76,7 @@ O$_2$ (product) & $-18.050$ & $-16.513$\textsuperscript{e} & $8.5\%$ & $-16.236$
 \midrule
 $\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3.489$~eV ($-337$~kJ/mol) & $-3.448$~eV ($-333$~kJ/mol) & $1.2\%$ & $-10.027$~eV ($-968$~kJ/mol) & --- \\
 \end{longtable}
+}
 
 \vspace{0.3em}
 \noindent\textsuperscript{a}~excludes a real but manuscript-unaccounted third-shell Sn-Sn contact ($d=3.54$--$3.57$~\AA, $-1.336$~eV/formula unit): the manuscript's own accounting for ZnSn is 6 Zn-Sn bonds $+$ 1 Zn-Zn bond per formula unit, with no Sn-Sn term at all, even though DFT+LOBSTER reports a genuine, well-separated first-shell Sn-Sn contact at that distance. A scope-of-accounting difference, not a shell-detection error.
