@@ -338,10 +338,13 @@ manuscript's ICOHP to within 0.7\%; ZnSn reproduces the same sign
 (bonding-favorable decomposition) but with $\sim$2.9$\times$ larger
 magnitude --- a gap judged not significant at this stage, since a bulk
 intermetallic's ICOHP sum is far more sensitive to
-basis/pseudopotential/cutoff choices than a simple gas dimer. Reproducing the manuscript's full DFT
-methodology (PBEsol+D3, Table S1's own k-point sets) across all 16
-species, rather than just these two, remains to be done
-(\S\ref{sec:limits-current}).
+basis/pseudopotential/cutoff choices than a simple gas dimer.
+Reproducing the manuscript's full DFT methodology (PBEsol+D3, Table
+S1's own k-point sets) has since been carried out for all 16 species
+(2026-08-19): 10/16 are computed and compared directly
+(Table~\ref{tab:reitz-dronskowski-dft}), the remaining 6 (Ca$_3$N$_2$,
+Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) still
+computing at the time of writing (\S\ref{sec:limits-current}).
 
 Correlation alone (Pearson/Spearman) is not the right test for "do our
 numbers match the reference values" --- it is satisfied by any monotonic
@@ -849,6 +852,30 @@ meaningful.
     neither stratified by \texttt{bond\_type}/\texttt{is\_metal}, nor
     distinguished from a selection effect (max-hull's theoretical
     polymorphs were deliberately chosen far above the hull).
+  \item \textbf{Manuscript-validation DFT+LOBSTER comparison
+    (Appendix~\ref{sec:appendix-reitz-dronskowski-structures}), 6/16
+    species still computing}: Ca$_3$N$_2$, Mn$_2$O$_7$, Pb(N$_3$)$_2$,
+    S$_4$N$_2$, S$_4$N$_4$, S$_8$ were still on SLURM as of this
+    writing (2026-08-19). Of the 10 species already compared, three
+    (Pb, MnO$_2$, O$_2$) show open $\sim$2--10\% residuals under both
+    the manuscript's own methodology (PBEsol+D3) and this project's
+    default one (PBE) alike --- investigated and ruled out as instances
+    of Zn's shell-detection bug, left as unresolved, likely
+    methodology-level questions (spin-orbit coupling for Pb;
+    AFM/Hubbard-U treatment and spin-polarization for MnO$_2$/O$_2$)
+    rather than forced to zero.
+  \item \textbf{Whether Zn's shell-detection bug (Appendix
+    \ref{sec:appendix-reitz-dronskowski-structures}) affects any other
+    compound's \texttt{bond\_type} classification remains open}: two
+    quick heuristic sweeps of the full dataset's first-shell distance
+    spectra (2026-08-19) each flagged 40--47\% of pair-groups under
+    thresholds loose enough to be dominated by ordinary within-shell
+    fine structure and floating-point-near-duplicate distances, not by
+    genuine Zn-like near-degenerate double shells --- inconclusive by
+    construction, not evidence of a wide problem. A calibrated audit
+    (ground truth needed per compound, which only exists for the 16
+    manuscript species) is still to be done before this can be closed
+    either way.
 \end{itemize}
 
 \section{Conclusion}

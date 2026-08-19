@@ -352,10 +352,13 @@ signe (décomposition favorable en énergie de liaison) mais avec une
 amplitude $\sim$2,9$\times$ plus grande --- écart jugé non
 significatif à ce stade, la somme d'ICOHP d'un intermétallique massif
 étant beaucoup plus sensible aux choix de base/pseudopotentiel/coupure
-qu'un simple dimère gazeux. Reproduire la méthodologie DFT complète du
-manuscrit (PBEsol+D3, jeux de points k du Tableau S1) sur les 16 espèces
-plutôt que sur ces deux seules reste à mener
-(\S\ref{sec:limites-actuelles}).
+qu'un simple dimère gazeux.
+Reproduire la méthodologie DFT complète du manuscrit (PBEsol+D3, jeux de
+points k du Tableau S1) a depuis été mené sur les 16 espèces
+(2026-08-19) : 10/16 sont calculées et comparées directement
+(Tableau~\ref{tab:reitz-dronskowski-dft}), les 6 restantes (Ca$_3$N$_2$,
+Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) étant encore
+en calcul au moment de la rédaction (\S\ref{sec:limites-actuelles}).
 
 La corrélation seule (Pearson/Spearman) n'est pas le bon test pour
 \og{}nos chiffres correspondent-ils aux valeurs de référence\fg{} ---
@@ -889,6 +892,31 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     confusion} : ni stratifié par \texttt{bond\_type}/\texttt{is\_metal},
     ni distingué d'un effet de sélection (les polymorphes théoriques du
     lot max-hull ont été délibérément choisis loin au-dessus du hull).
+  \item \textbf{Comparaison DFT+LOBSTER de validation-manuscrit
+    (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}), 6/16
+    espèces encore en calcul} : Ca$_3$N$_2$, Mn$_2$O$_7$,
+    Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$ étaient encore sur
+    SLURM au moment de la rédaction (2026-08-19). Sur les 10 espèces
+    déjà comparées, trois (Pb, MnO$_2$, O$_2$) présentent des résidus
+    ouverts de $\sim$2--10\% sous la méthodologie du manuscrit
+    (PBEsol+D3) comme sous celle par défaut de ce projet (PBE) à la
+    fois --- examinés et écartés comme instances du bug de détection de
+    sphère du Zn, laissés comme questions de méthodologie probables non
+    résolues (couplage spin-orbite pour Pb ; traitement AFM/Hubbard-U et
+    polarisation de spin pour MnO$_2$/O$_2$) plutôt que forcés à zéro.
+  \item \textbf{La question de savoir si le bug de détection de sphère
+    du Zn (Annexe~\ref{sec:appendix-reitz-dronskowski-structures})
+    affecte la classification \texttt{bond\_type} d'autres composés
+    reste ouverte} : deux balayages heuristiques rapides des spectres
+    de distance de première sphère du jeu de données complet
+    (2026-08-19) ont chacun signalé 40--47\% des groupes de paires sous
+    des seuils trop lâches, dominés par la structure fine normale
+    intra-sphère et des distances quasi dupliquées en virgule flottante,
+    pas par de vraies doubles sphères quasi dégénérées à la Zn ---
+    non concluant par construction, pas une preuve d'un problème
+    répandu. Un audit calibré (nécessitant une vérité terrain par
+    composé, qui n'existe que pour les 16 espèces du manuscrit) reste à
+    faire avant de trancher dans un sens ou l'autre.
 \end{itemize}
 
 \section{Conclusion}

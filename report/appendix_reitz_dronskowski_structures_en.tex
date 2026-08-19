@@ -38,45 +38,64 @@ Ca$_3$N$_2$ (product) & not specified & mp-844, Ia-3 (anti-bixbyite), $E_{hull}=
 \midrule
 Mn$_2$O$_7$ (target) & not specified & mp-28338, P2\_1/c, $E_{hull}=0.335$ & no \\
 \midrule
-MnO$_2$ (product) & Table~S1 (2026-08-18): $P4_2/mnm$, $a=b=4.41216$~\AA, $c=2.94150$~\AA\ (AFM ordering per Noda et al., per the manuscript's own methodology) & mp-510408, P4\_2/mnm (rutile/pyrolusite); relaxed under the manuscript's own methodology (PBEsol+U(7.09~eV on Mn 3d)$\to$r2SCAN single-point, AFM) in \texttt{manuscript\_MnO2} (2026-08-18) & \textbf{Yes} --- our relaxation converges to $a=b=4.41427$~\AA\ ($0.05\%$ off), $c=2.94460$~\AA\ ($0.11\%$ off), confirming both space group and lattice parameters; a reaction-ICOHP comparison against Mn$_2$O$_7$ is not yet possible, that species is still computing \\
+MnO$_2$ (product) & Table~S1 (2026-08-18): $P4_2/mnm$, $a=b=4.41216$~\AA, $c=2.94150$~\AA\ (AFM ordering per Noda et al., per the manuscript's own methodology) & mp-510408, P4\_2/mnm (rutile/pyrolusite); relaxed under the manuscript's own methodology (PBEsol+U(7.09~eV on Mn 3d)$\to$r2SCAN single-point, AFM) in \texttt{manuscript\_MnO2} (2026-08-18) & \textbf{Yes} --- our relaxation converges to $a=b=4.41427$~\AA\ ($0.05\%$ off), $c=2.94460$~\AA\ ($0.11\%$ off), confirming both space group and lattice parameters \\
 \midrule
 O$_2$ (element) & gaseous O$_2$, triplet ground state; Table~S1 (2026-08-18) fixes the isolated-dimer box at $8\times8\times8$~\AA & mp-1524462, C2/m, $E_{hull}=0.000$, on-hull, dedicated spin-polarized treatment; also relaxed in the manuscript's $8\times8\times8$~\AA\ box under its own methodology in \texttt{manuscript\_O2} (2026-08-18) & structural --- isolated dimer $d$(O-O)$=1.222$~\AA\ (dataset default, 10~\AA\ box) / $1.227$~\AA\ (manuscript's 8~\AA\ box), both within $\sim$1.6\% of 1.208~\AA\ literature. Box size matches Table~S1 by construction (a specified input, not an independent check) \\
 \end{longtable}
 
-\begin{table}[htbp]
-\centering
-\caption{This project's own DFT+LOBSTER ICOHP values against the manuscript's transcribed values. ``Old calculation'' column: this project's default DFT methodology (PBE, ENCUT=600~eV, EDIFF=1e-6, no D3) on the structures available at the time (Sn: \texttt{extension\_Sn\_mp-623511}, $\beta$-tin I4/mmm --- a different polymorph from the manuscript's). ``New calculation'' column (updated 2026-08-18, ZnSn/Zn/Sn only --- N$_2$ out of scope for this update): the \texttt{manuscript\_*} campaign reproducing the manuscript's exact methodology (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tetrahedron method) on \texttt{manuscript\_ZnSn}/\texttt{manuscript\_Zn}/\texttt{manuscript\_Sn} ($\alpha$-tin, Fd-3m, \texttt{extension\_Snalpha\_mp-117}) --- lattice parameters validated to better than 0.25\% of the manuscript's Table~S1 for all three species (Table~\ref{tab:reitz-dronskowski-structures}) --- summed under a strict single-coordination-shell convention (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, 0.02~\AA\ tolerance around each pair type's minimum bond distance) rather than \texttt{reaction\_analysis.parse\_lobster}'s general-purpose \texttt{bond\_filter="nearest\_neighbor"}; see the discussion below the table for why the latter, correct for the rest of this project's 588-compound bond-type classification, mishandles Zn specifically.}
+\begin{longtable}{@{}p{2.6cm}rrrr@{}}
+\caption{This project's own DFT+LOBSTER ICOHP values against the manuscript's transcribed per-species values (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), for all 16 species. ``Old (PBE)'' column: this project's default DFT methodology (PBE, ENCUT=600~eV, EDIFF=1e-6, no D3) on the structures already present in the dataset before the manuscript-methodology campaign (2 species, S$_8$ and Pb(N$_3$)$_2$, have no such prior entry). ``New (PBEsol)'' column: the \texttt{manuscript\_*} campaign reproducing the manuscript's exact methodology (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tetrahedron method) --- lattice parameters validated to better than 1\% of the manuscript's Table~S1 for every species with a citable structure (Table~\ref{tab:reitz-dronskowski-structures}). Both columns are summed under the strict single-coordination-shell convention introduced 2026-08-18 (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, 0.02~\AA\ tolerance around each pair type's minimum bond distance, with an explicit two-shell sum for Mn$_2$O$_7$'s short+long Mn-O bonds per the manuscript's own stated scope) rather than \texttt{reaction\_analysis.parse\_lobster}'s general-purpose \texttt{bond\_filter="nearest\_neighbor"}; see the discussion below the table. As of this update (2026-08-19), 6 species (Ca$_3$N$_2$, Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) are still computing on SLURM and have no ``New (PBEsol)'' entry yet.}
 \label{tab:reitz-dronskowski-dft}
-{\small
-\begin{tabular}{@{}p{3.2cm}rrrr@{}}
 \toprule
-Species / reaction & Manuscript (eV) & Old calculation (eV) & New calculation (eV) & Diff. (new) \\
+Species / reaction & Manuscript (eV) & New (PBEsol) & Diff. & Old (PBE) & Diff. \\
 \midrule
-N$_2$ (element) & $-23.161$ & $-22.998$ & --- & $0.7\%$ \\
-ZnSn (reactant) & $-16.869$ & $-17.991$ & $-16.908$\textsuperscript{a} & $0.2\%$ \\
-Zn (product) & $-12.686$ & $-17.402$ & $-12.649$\textsuperscript{b} & $0.3\%$ \\
-Sn (product) & $-7.672$ & $-10.617$ ($\beta$, wrong polymorph) & $-7.706$ ($\alpha$, Fd-3m) & $0.4\%$ \\
+\endfirsthead
+\toprule
+Species / reaction & Manuscript (eV) & New (PBEsol) & Diff. & Old (PBE) & Diff. \\
 \midrule
-$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3.489$~eV ($-337$~kJ/mol) & $-10.027$~eV ($-968$~kJ/mol) & $-3.448$~eV ($-333$~kJ/mol) & $1.2\%$ \\
+\endhead
 \bottomrule
-\end{tabular}
-}
-\end{table}
+\endfoot
+Pb(N$_3$)$_2$ (reactant) & $-89.104$ & pending & --- & --- & --- \\
+Pb (product) & $-5.688$ & $-11.406$\textsuperscript{c} & $100.5\%$ & $-10.223$\textsuperscript{c} & $79.7\%$ \\
+N$_2$ (element) & $-23.161$ & $-23.126$ & $0.2\%$ & $-22.998$ & $0.7\%$ \\
+S$_4$N$_2$ (reactant) & $-49.240$ & pending & --- & ---\textsuperscript{d} & --- \\
+S$_8$ (product) & $-46.800$ & pending & --- & --- & --- \\
+S$_4$N$_4$ (reactant) & $-73.840$ & pending & --- & $-16.207$\textsuperscript{e} & $78.1\%$ \\
+ZnSn (reactant) & $-16.869$ & $-16.908$\textsuperscript{a} & $0.2\%$ & $-15.598$ & $7.5\%$ \\
+Zn (product) & $-12.686$ & $-12.649$\textsuperscript{b} & $0.3\%$ & $-13.393$ & $5.6\%$ \\
+Sn (product) & $-7.672$ & $-7.706$ & $0.4\%$ & $-7.633$ ($\beta$, wrong polymorph) & $0.5\%$ \\
+CaO[sphalerite] (reactant) & $-3.460$ & $-3.459$ & $0.0\%$ & $-3.332$ & $3.7\%$ \\
+CaO[rocksalt] (product) & $-4.278$ & $-4.316$ & $0.9\%$ & $-4.217$ & $1.4\%$ \\
+CaN (reactant) & $-4.302$ & $-4.368$ & $1.5\%$ & $-4.161$ & $3.3\%$ \\
+Ca$_3$N$_2$ (product) & $-7.692$ & pending & --- & $-7.454$ & $3.1\%$ \\
+Mn$_2$O$_7$ (reactant) & $-62.210$ & pending & --- & $-56.272$ & $9.5\%$ \\
+MnO$_2$ (product) & $-18.540$ & $-16.975$\textsuperscript{e} & $8.4\%$ & $-18.316$ & $1.2\%$ \\
+O$_2$ (product) & $-18.050$ & $-16.513$\textsuperscript{e} & $8.5\%$ & $-16.236$ & $10.0\%$ \\
+\midrule
+$\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3.489$~eV ($-337$~kJ/mol) & $-3.448$~eV ($-333$~kJ/mol) & $1.2\%$ & $-10.027$~eV ($-968$~kJ/mol) & --- \\
+\end{longtable}
 
 \vspace{0.3em}
 \noindent\textsuperscript{a}~excludes a real but manuscript-unaccounted third-shell Sn-Sn contact ($d=3.54$--$3.57$~\AA, $-1.336$~eV/formula unit): the manuscript's own accounting for ZnSn is 6 Zn-Sn bonds $+$ 1 Zn-Zn bond per formula unit, with no Sn-Sn term at all, even though DFT+LOBSTER reports a genuine, well-separated first-shell Sn-Sn contact at that distance. A scope-of-accounting difference, not a shell-detection error.
 
 \noindent\textsuperscript{b}~true first shell only (the 6 basal Zn-Zn bonds at $d=2.608$~\AA); see below for why the dataset's general first-shell detector instead sums 12 bonds here.
 
-Both Sn and ZnSn were already resolved in the first pass of this
-2026-08-18 update: replacing the default $\beta$-tin reference with the
+\noindent\textsuperscript{c}~Pb's $\sim$2$\times$ residual is present in \emph{both} columns alike (new PBEsol and old PBE), under a bond-summation convention validated to 0.3--0.7\% for every other single-pair-type element in this table (N$_2$, Zn, Sn) --- so it is not a shell-detection or bond-counting artifact of the kind fixed for Zn. A specific alternative hypothesis (LOBSTER double-listing self-image Pb-Pb bonds in this 1-atom primitive cell, flagged by \texttt{reaction\_analysis.parse\_lobster.check\_no\_reverse\_duplicates}) was investigated and \textbf{ruled out} 2026-08-19: that check also flags Zn's already-validated first shell (12/12 records, same pattern), and for a monoatomic cell each flagged pair (e.g. translations $(0,0,-1)$ and $(0,0,1)$) is in fact two \emph{distinct} neighbor images in opposite directions, not the same bond listed twice --- the check's reverse-translation test is a false positive for self-pairs (atom1 = atom2), not a real duplicate. The most plausible remaining explanation is a genuine methodology sensitivity specific to this heavy element (e.g. missing spin-orbit coupling in both this project's calculations, present or implicit in the manuscript's), not yet resolved.
+
+\noindent\textsuperscript{d}~the manuscript's own accounting for S$_4$N$_2$ sums three distinct S-N/S-S bond types explicitly (2 bonds each, $-10.30$/$-8.46$/$-5.86$~eV --- \texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}); the old-PBE dataset entry's ICOHPLIST resolves only two element-pair labels (S-S, N-S) plus a spurious near-zero N-N artifact, so the three-way split cannot be reconstructed without further structural analysis and is omitted here rather than guessed at.
+
+\noindent\textsuperscript{e}~S$_4$N$_4$'s old-PBE entry uses an unverified COD polymorph (Table~\ref{tab:reitz-dronskowski-structures}: verification ``no''), consistent with a large gap. MnO$_2$ and O$_2$'s $\sim$8--10\% residuals persist under \emph{both} the new PBEsol and old PBE calculations, so are unlikely to be shell-detection artifacts either --- most plausibly a genuine DFT-methodology sensitivity (AFM/Hubbard-U treatment for MnO$_2$, spin-polarization of O$_2$'s triplet ground state) not yet resolved. A two-shell Mn-O sum for MnO$_2$ (mirroring Mn$_2$O$_7$'s explicit short+long convention) was tried and only marginally improves the gap ($8.4\%\to7.2\%$), too small to explain the residual on its own.
+
+Sn and ZnSn were already resolved in the first pass of the 2026-08-18
+update: replacing the default $\beta$-tin reference with the
 manuscript's $\alpha$-tin phase, computed under its exact methodology,
 drops Sn's gap from 38.4\% to 0.4\% --- almost the entire Sn gap was a
 polymorph error, not a genuine DFT disagreement --- and excluding the
 manuscript-unaccounted Sn-Sn term (note a) drops ZnSn from 8.1\% to
 0.2\%.
 
-Zn's 36.0\% residual, left open at the time, is now resolved as well.
+Zn's 36.0\% residual, left open at the time, was resolved the same day.
 Root cause (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}):
 \texttt{reaction\_analysis.nearest\_neighbor.detect\_first\_shell()} ---
 the general first-shell detector this project uses dataset-wide via
@@ -102,26 +121,42 @@ counter-example that motivated it, see \texttt{nearest\_neighbor.py}'s
 docstring). \texttt{nearest\_neighbor.py} itself is left unchanged: Zn's
 near-degenerate double shell is not necessarily representative of the
 588-compound population, and whether any other compound's bond-type
-classification is similarly affected has not been checked here --- that
-would need its own dataset-wide audit before touching results elsewhere
-in this project (bond\_type classification, the antibonding descriptor,
-\ldots), and is flagged as a follow-up rather than attempted as part of
-this table's fix.
+classification is similarly affected has not been fully closed (see
+\S\ref{sec:limits-current}).
 
-With all three species corrected, the recomputed $\Delta$ICOHP for
-ZnSn$\to$Zn+Sn ($-3.448$~eV, $-333$~kJ/mol) is now within $1.2\%$ of the
+\textbf{2026-08-19 extension.} The comparison above was extended from
+the original 3 species (ZnSn, Zn, Sn) to all species with a completed
+\texttt{manuscript\_*} directory (10/16 at the time of writing, 6 new
+since the 2026-08-18 fix: Pb, CaO[sphalerite], CaO[rocksalt], CaN,
+MnO$_2$, O$_2$) and, separately, to every species with a pre-existing
+PBE-functional dataset entry (14/16 --- all but S$_8$ and
+Pb(N$_3$)$_2$, novel to this campaign). Of the 6 newly-added
+new-PBEsol comparisons, 3 reproduce the manuscript to within
+0.0--1.5\% under the same strict single-shell convention used for Zn
+(CaO[sphalerite], CaO[rocksalt], CaN), with no shell-detection
+ambiguity found in any of their first-shell distance spectra. Three
+residuals remain open rather than force-fit to zero: Pb (note c) and
+MnO$_2$/O$_2$ (note e) --- all three investigated, all three ruled out
+as instances of the Zn-type shell-detection bug, and left as genuine,
+unresolved methodology questions. Mn$_2$O$_7$, S$_4$N$_2$, S$_4$N$_4$,
+S$_8$, and Pb(N$_3$)$_2$ remain to be compared once their
+\texttt{manuscript\_*} SLURM jobs land.
+
+With ZnSn/Zn/Sn corrected, the recomputed $\Delta$ICOHP for
+ZnSn$\to$Zn+Sn ($-3.448$~eV, $-333$~kJ/mol) is within $1.2\%$ of the
 manuscript's $-3.489$~eV ($-337$~kJ/mol) --- down from $1.9\times$ before
 this correction, and from $2.9\times$ in the original (pre-manuscript-
 methodology) calculation. This project's own DFT+LOBSTER ICOHP
 methodology reproduces the manuscript's reported values to within
-$1.2\%$ once (i) the correct polymorphs are used, (ii) the manuscript's
-own bond-accounting scope is matched, and (iii) first-coordination-shell
-summation is not confounded by near-degenerate shells --- closing the
-validation question raised in \S\ref{sec:reframing} and confirming this
-project's ICOHP methodology, not just its arithmetic, matches the
-manuscript's (\S\ref{sec:reframing}'s own 7-case validation, using only
-the manuscript's published values, was never in question and continues
-to reproduce them almost exactly).
+$1.2\%$ for this reaction once (i) the correct polymorphs are used, (ii)
+the manuscript's own bond-accounting scope is matched, and (iii)
+first-coordination-shell summation is not confounded by near-degenerate
+shells --- closing the validation question raised in
+\S\ref{sec:reframing} and confirming this project's ICOHP methodology,
+not just its arithmetic, matches the manuscript's for the one reaction
+where every species is now resolved (\S\ref{sec:reframing}'s own 7-case
+validation, using only the manuscript's published values, was never in
+question and continues to reproduce them almost exactly).
 
 \vspace{0.5em}
 \noindent\textbf{Reading key.} ``Verification: Yes'' means the structure was confirmed to match the manuscript's explicit description (a cited space group, or a recomputed bond distance compared directly). ``Partial'' means the geometry/chemistry is consistent with what the manuscript describes but no independent crystallographic citation allowed a strict confirmation. ``No'' means only the composition was verified: the manuscript does not specify a space group for that species, so the most reasonable MP/COD entry was used with no guarantee it is \emph{the} exact structure the authors used. This does not invalidate the \S\ref{sec:reframing} validation (which only compares the arithmetic reconstruction of the manuscript's own published ICOHP values, independent of any local structure) but it does bound the scope of any future comparison between our own DFT+LOBSTER calculations and the manuscript's numbers for these species.
