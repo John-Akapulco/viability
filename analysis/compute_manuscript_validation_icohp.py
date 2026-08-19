@@ -113,11 +113,20 @@ def _sum(records: list[dict]) -> tuple[int, float]:
 
 # (compound_id, manuscript_eV, pbesol_dir, pbe_dir, scope_fn)
 # scope_fn(by_pair) -> (n_bonds, sum_eV)
-def _scope_single_pair_first_shell(pair: str):
+def _scope_single_pair_first_shell(pair: str, halve_for_self_pair: bool = False):
+    """halve_for_self_pair: for a homonuclear pair summed around a single
+    Z=1 site (e.g. elemental Pb, FCC, CN=12 all at one distance), each
+    first-shell bond is shared with the neighboring image of that same
+    site. The raw sum is the per-atom coordination total, not the
+    per-formula-unit lattice total; the standard convention halves it to
+    avoid double-counting each shared bond. Verified against Pb (2026-08-19):
+    raw sum matches the manuscript's -5.688 eV to within 0.26% only after
+    halving (11.406/2=5.703), vs. a ~100% miss unhalved."""
     def fn(by_pair):
         if pair not in by_pair:
             return None
-        return _sum(_strict_first_shell(by_pair[pair]))
+        n, s = _sum(_strict_first_shell(by_pair[pair]))
+        return (n, s / 2 if halve_for_self_pair else s)
     return fn
 
 
@@ -165,7 +174,7 @@ CASES = [
     dict(id="PbN3_2", manuscript_eV=-89.104, pbesol_dir="manuscript_PbN3_2", pbe_dir=None,
          scope=_scope_multi_pair_first_shell(["N-Pb", "N-N"])),
     dict(id="Pb", manuscript_eV=-5.688, pbesol_dir="manuscript_Pb", pbe_dir="extension_Pb_mp-20483",
-         scope=_scope_single_pair_first_shell("Pb-Pb")),
+         scope=_scope_single_pair_first_shell("Pb-Pb", halve_for_self_pair=True)),
     dict(id="N2", manuscript_eV=-23.161, pbesol_dir="manuscript_N2", pbe_dir="gasref_N2_dimerbox",
          scope=_scope_single_pair_first_shell("N-N")),
     dict(id="S4N2", manuscript_eV=-49.24, pbesol_dir="manuscript_S4N2", pbe_dir="extension_S4N2_cod4031496",
