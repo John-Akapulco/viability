@@ -1,7 +1,8 @@
 #!/bin/sh
 #SBATCH --job-name=mval_Mn2O7
-#SBATCH --nodes=1
+#SBATCH --nodes=2
 #SBATCH --ntasks=16
+#SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=1
 #SBATCH --threads-per-core=1
 #SBATCH --output=vasp.log
