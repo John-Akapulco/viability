@@ -45,7 +45,7 @@ O$_2$ (élément) & O$_2$ gazeux, état fondamental triplet ; la Table~S1 (2026-
 
 {\small
 \begin{longtable}{@{}p{2.4cm}*{5}{>{\raggedleft\arraybackslash}p{1.9cm}}@{}}
-\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit par espèce (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), pour les 16 espèces. Colonne ``Ancien (PBE)'' : méthodologie DFT par défaut de ce projet (PBE, ENCUT=600~eV, EDIFF=1e-6, sans D3) sur les structures déjà présentes dans le jeu de données avant la campagne méthodologie-manuscrit (2 espèces, S$_8$ et Pb(N$_3$)$_2$, n'ont pas une telle entrée préalable). Colonne ``Nouveau (PBEsol)'' : campagne \texttt{manuscript\_*} reproduisant la méthodologie exacte du manuscrit (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tétraèdres) --- paramètres de maille validés à mieux que 1\% de la Table~S1 du manuscrit pour chaque espèce disposant d'une structure citable (Tableau~\ref{tab:reitz-dronskowski-structures}). Les deux colonnes sont sommées selon la convention stricte de première sphère de coordination unique introduite le 2026-08-18 (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, tolérance de 0,02~\AA\ autour de la distance minimale de chaque type de paire, avec une somme explicite à deux sphères pour les liaisons Mn-O courtes+longues de Mn$_2$O$_7$, conformément au périmètre déclaré du manuscrit), et non le \texttt{bond\_filter="nearest\_neighbor"} générique de \texttt{reaction\_analysis.parse\_lobster} ; voir la discussion sous le tableau. À cette mise à jour (2026-08-19), 6 espèces (Ca$_3$N$_2$, Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) sont encore en calcul sur SLURM et n'ont pas encore d'entrée ``Nouveau (PBEsol)''.}
+\caption{Nos propres valeurs ICOHP DFT+LOBSTER comparées aux valeurs transcrites du manuscrit par espèce (\texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}), pour les 16 espèces. Colonne ``Ancien (PBE)'' : méthodologie DFT par défaut de ce projet (PBE, ENCUT=600~eV, EDIFF=1e-6, sans D3) sur les structures déjà présentes dans le jeu de données avant la campagne méthodologie-manuscrit (2 espèces, S$_8$ et Pb(N$_3$)$_2$, n'ont pas une telle entrée préalable). Colonne ``Nouveau (PBEsol)'' : campagne \texttt{manuscript\_*} reproduisant la méthodologie exacte du manuscrit (PBEsol+D3(BJ), ENCUT=700~eV, EDIFF=1e-8, tétraèdres) --- paramètres de maille validés à mieux que 1\% de la Table~S1 du manuscrit pour chaque espèce disposant d'une structure citable (Tableau~\ref{tab:reitz-dronskowski-structures}). Les deux colonnes sont sommées selon la convention stricte de première sphère de coordination unique introduite le 2026-08-18 et révisée le 2026-08-20 (\texttt{analysis/compute\_manuscript\_validation\_icohp.py}, regroupement par écart --- la sphère s'arrête au premier écart entre distances triées dépassant un seuil de 0,03~\AA, plutôt qu'une tolérance fixe autour de la distance minimale de chaque type de paire --- avec une somme explicite à deux sphères pour les liaisons Mn-O courtes+longues de Mn$_2$O$_7$, conformément au périmètre déclaré du manuscrit), et non le \texttt{bond\_filter="nearest\_neighbor"} générique de \texttt{reaction\_analysis.parse\_lobster} ; voir la discussion sous le tableau. À cette mise à jour (2026-08-20), 5 espèces (Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) sont encore en calcul sur SLURM et n'ont pas encore d'entrée ``Nouveau (PBEsol)''.}
 \label{tab:reitz-dronskowski-dft}\\
 \toprule
 Espèce / réaction & Manuscrit (eV) & Nouveau (PBEsol) & Écart & Ancien (PBE) & Écart \\
@@ -69,7 +69,7 @@ Sn (produit) & $-7{,}672$ & $-7{,}706$ & $0{,}4\%$ & $-7{,}633$ ($\beta$, mauvai
 CaO[sphalérite] (réactif) & $-3{,}460$ & $-3{,}459$ & $0{,}0\%$ & $-3{,}332$ & $3{,}7\%$ \\
 CaO[rocksalt] (produit) & $-4{,}278$ & $-4{,}316$ & $0{,}9\%$ & $-4{,}217$ & $1{,}4\%$ \\
 CaN (réactif) & $-4{,}302$ & $-4{,}368$ & $1{,}5\%$ & $-4{,}161$ & $3{,}3\%$ \\
-Ca$_3$N$_2$ (produit) & $-7{,}692$ & en calcul & --- & $-7{,}454$ & $3{,}1\%$ \\
+Ca$_3$N$_2$ (produit) & $-7{,}692$ & $-7{,}699$\textsuperscript{f} & $0{,}1\%$ & $-7{,}454$ & $3{,}1\%$ \\
 Mn$_2$O$_7$ (réactif) & $-62{,}210$ & en calcul & --- & $-56{,}272$ & $9{,}5\%$ \\
 MnO$_2$ (produit) & $-18{,}540$ & $-16{,}975$\textsuperscript{e} & $8{,}4\%$ & $-18{,}316$ & $1{,}2\%$ \\
 O$_2$ (produit) & $-18{,}050$ & $-16{,}513$\textsuperscript{e} & $8{,}5\%$ & $-16{,}236$ & $10{,}0\%$ \\
@@ -88,6 +88,8 @@ $\Delta$ICOHP, ZnSn$\to$Zn$+$Sn & $-3{,}489$~eV ($-337$~kJ/mol) & $-3{,}448$~eV 
 \noindent\textsuperscript{d}~la comptabilité propre du manuscrit pour S$_4$N$_2$ somme explicitement trois types de liaison S-N/S-S distincts (2 liaisons chacun, $-10{,}30$/$-8{,}46$/$-5{,}86$~eV --- \texttt{tests/fixtures/reitz\_dronskowski\_cases.yaml}) ; l'ICOHPLIST de l'entrée ancien-PBE ne résout que deux étiquettes de paire d'éléments (S-S, N-S) plus un artefact N-N quasi nul parasite, si bien que la répartition à trois voies ne peut être reconstruite sans analyse structurale supplémentaire et est omise ici plutôt que devinée.
 
 \noindent\textsuperscript{e}~l'entrée ancien-PBE de S$_4$N$_4$ utilise un polymorphe COD non vérifié (Tableau~\ref{tab:reitz-dronskowski-structures} : vérification ``non''), cohérent avec un grand écart. Les résidus de $\sim$8--10\% de MnO$_2$ et O$_2$ persistent sous les deux calculs (nouveau PBEsol et ancien PBE) à la fois, donc sont peu susceptibles d'être des artefacts de détection de sphère non plus --- plus vraisemblablement une sensibilité de méthodologie DFT réelle (traitement AFM/Hubbard-U pour MnO$_2$, polarisation de spin de l'état fondamental triplet de O$_2$) non résolue à ce stade. Une somme Mn-O à deux sphères pour MnO$_2$ (à l'image de la convention courte+longue explicite de Mn$_2$O$_7$) a été essayée et n'améliore que marginalement l'écart ($8{,}4\%\to7{,}2\%$), trop peu pour expliquer le résidu à elle seule.
+
+\noindent\textsuperscript{f}~une seconde occurrence, distincte, de la sensibilité aux sphères quasi dégénérées qui avait motivé la note b (Zn), trouvée le 2026-08-20. La véritable première sphère Ca-N de Ca$_3$N$_2$ n'est pas une distance unique mais quatre sous-sphères quasi dégénérées s'étalant de $2{,}4021$ à $2{,}4239$~\AA\ (96 liaisons au total sur la maille $Z=8$, correspondant aux 12 liaisons Ca-N attendues par formule unitaire), séparées de la sphère suivante par un véritable écart de $1{,}74$~\AA. La tolérance fixe de $0{,}02$~\AA\ autour de $d_{\min}$ utilisée depuis le 2026-08-18 ne capturait que les trois premières sous-sphères (72/96 liaisons), soit un écart de 24\% avec le $-7{,}692$~eV du manuscrit. Contrairement au Zn (où le détecteur générique du jeu de données \emph{sur}-inclut une seconde sphère authentiquement distincte), ici c'est la tolérance fixe propre au script de validation qui \emph{sous}-incluait une partie d'une unique vraie sphère --- le mode d'échec opposé, mais la même cause racine : supposer qu'une seule fenêtre de distance fixe convient à la géométrie de coordination de tous les composés. Corrigé (2026-08-20) en remplaçant \texttt{\_strict\_first\_shell} par un regroupement par écart (arrêt au premier écart dépassant un seuil, plutôt qu'à une distance fixe depuis le minimum) ; le seuil de $0{,}03$~\AA\ a été ajusté manuellement pour se situer strictement entre l'étalement intra-sphère confirmé le plus large (Ca$_3$N$_2$ et les propres sous-groupes Mn-O/O-O de Mn$_2$O$_7$, $0{,}011$--$0{,}026$~\AA) et l'écart de seconde sphère authentique le plus étroit trouvé ailleurs dans ce tableau (référence ancien-PBE de Sn : une seconde sphère réelle, distincte, à ICOHP plus faible, à seulement $0{,}047$~\AA\ de la première) --- vérifié pour ne changer le compte de liaisons d'aucune autre espèce de ce tableau avant d'être déployé. Ca$_3$N$_2$ correspond désormais à $0{,}1\%$ près.
 
 Sn et ZnSn étaient déjà résolus lors de la première passe de cette
 mise à jour du 2026-08-18 : remplacer la référence Sn par défaut
@@ -150,6 +152,19 @@ bug de détection de sphère du type Zn, et laissés comme questions de
 méthodologie réelles, non résolues. Mn$_2$O$_7$, S$_4$N$_2$,
 S$_4$N$_4$, S$_8$ et Pb(N$_3$)$_2$ restent à comparer une fois leurs
 tâches SLURM \texttt{manuscript\_*} arrivées à terme.
+
+\textbf{Extension du 2026-08-20.} La tâche SLURM \texttt{manuscript\_*}
+de Ca$_3$N$_2$ est arrivée à terme, étendant la comparaison à 11/16
+espèces. Son résidu initial de 24\% (note f) n'était pas une nouvelle
+question ouverte mais une seconde occurrence, distincte, de la
+sensibilité aux sphères quasi dégénérées déjà rencontrée pour Zn : une
+tolérance fixe autour de la distance minimale n'est pas une hypothèse
+générale sûre pour la sommation de première sphère de ce script de
+validation, désormais remplacée par un regroupement par écart (note f),
+vérifié pour ne changer le résultat d'aucune autre espèce de ce
+tableau. Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$ et S$_8$
+restent à comparer une fois leurs tâches SLURM \texttt{manuscript\_*}
+arrivées à terme.
 
 Une fois ZnSn/Zn/Sn corrigées, le $\Delta$ICOHP recalculé pour
 ZnSn$\to$Zn+Sn ($-3{,}448$~eV, $-333$~kJ/mol) est à $1,2\%$
