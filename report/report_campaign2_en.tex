@@ -853,17 +853,20 @@ meaningful.
     distinguished from a selection effect (max-hull's theoretical
     polymorphs were deliberately chosen far above the hull).
   \item \textbf{Manuscript-validation DFT+LOBSTER comparison
-    (Appendix~\ref{sec:appendix-reitz-dronskowski-structures}), 6/16
-    species still computing}: Ca$_3$N$_2$, Mn$_2$O$_7$, Pb(N$_3$)$_2$,
+    (Appendix~\ref{sec:appendix-reitz-dronskowski-structures}), 5/16
+    species still computing}: Mn$_2$O$_7$, Pb(N$_3$)$_2$,
     S$_4$N$_2$, S$_4$N$_4$, S$_8$ were still on SLURM as of this
-    writing (2026-08-19). Of the 10 species already compared, three
+    writing (2026-08-20). Of the 11 species already compared, three
     (Pb, MnO$_2$, O$_2$) show open $\sim$2--10\% residuals under both
     the manuscript's own methodology (PBEsol+D3) and this project's
     default one (PBE) alike --- investigated and ruled out as instances
     of Zn's shell-detection bug, left as unresolved, likely
     methodology-level questions (spin-orbit coupling for Pb;
     AFM/Hubbard-U treatment and spin-polarization for MnO$_2$/O$_2$)
-    rather than forced to zero.
+    rather than forced to zero. Ca$_3$N$_2$ (landed 2026-08-20) showed
+    an initial 24\% residual traced to a second, distinct occurrence of
+    Zn's near-degenerate-shell issue and is now resolved (0.1\%,
+    Appendix~\ref{sec:appendix-reitz-dronskowski-structures}, note f).
   \item \textbf{Whether Zn's shell-detection bug (Appendix
     \ref{sec:appendix-reitz-dronskowski-structures}) affects any other
     compound's \texttt{bond\_type} classification remains open}: two
@@ -872,10 +875,14 @@ meaningful.
     thresholds loose enough to be dominated by ordinary within-shell
     fine structure and floating-point-near-duplicate distances, not by
     genuine Zn-like near-degenerate double shells --- inconclusive by
-    construction, not evidence of a wide problem. A calibrated audit
-    (ground truth needed per compound, which only exists for the 16
-    manuscript species) is still to be done before this can be closed
-    either way.
+    construction, not evidence of a wide problem. Ca$_3$N$_2$'s
+    independent occurrence of the same pattern (2026-08-20, four
+    sub-shells rather than two) adds one more confirmed data point to
+    that ground-truth set but does not itself touch
+    \texttt{nearest\_neighbor.py} or the dataset-wide classification,
+    which remain unchanged. A calibrated audit (ground truth needed per
+    compound, which only exists for the 16 manuscript species) is still
+    to be done before this can be closed either way.
 \end{itemize}
 
 \section{Conclusion}

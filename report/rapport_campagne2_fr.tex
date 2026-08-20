@@ -893,10 +893,10 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     ni distingué d'un effet de sélection (les polymorphes théoriques du
     lot max-hull ont été délibérément choisis loin au-dessus du hull).
   \item \textbf{Comparaison DFT+LOBSTER de validation-manuscrit
-    (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}), 6/16
-    espèces encore en calcul} : Ca$_3$N$_2$, Mn$_2$O$_7$,
+    (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}), 5/16
+    espèces encore en calcul} : Mn$_2$O$_7$,
     Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$ étaient encore sur
-    SLURM au moment de la rédaction (2026-08-19). Sur les 10 espèces
+    SLURM au moment de la rédaction (2026-08-20). Sur les 11 espèces
     déjà comparées, trois (Pb, MnO$_2$, O$_2$) présentent des résidus
     ouverts de $\sim$2--10\% sous la méthodologie du manuscrit
     (PBEsol+D3) comme sous celle par défaut de ce projet (PBE) à la
@@ -904,6 +904,10 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     sphère du Zn, laissés comme questions de méthodologie probables non
     résolues (couplage spin-orbite pour Pb ; traitement AFM/Hubbard-U et
     polarisation de spin pour MnO$_2$/O$_2$) plutôt que forcés à zéro.
+    Ca$_3$N$_2$ (arrivée le 2026-08-20) montrait un résidu initial de
+    24\%, retracé à une seconde occurrence distincte du problème de
+    sphère quasi dégénérée du Zn, désormais résolu (0,1\%, Annexe
+    \ref{sec:appendix-reitz-dronskowski-structures}, note f).
   \item \textbf{La question de savoir si le bug de détection de sphère
     du Zn (Annexe~\ref{sec:appendix-reitz-dronskowski-structures})
     affecte la classification \texttt{bond\_type} d'autres composés
@@ -914,9 +918,14 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     intra-sphère et des distances quasi dupliquées en virgule flottante,
     pas par de vraies doubles sphères quasi dégénérées à la Zn ---
     non concluant par construction, pas une preuve d'un problème
-    répandu. Un audit calibré (nécessitant une vérité terrain par
-    composé, qui n'existe que pour les 16 espèces du manuscrit) reste à
-    faire avant de trancher dans un sens ou l'autre.
+    répandu. L'occurrence indépendante du même motif chez Ca$_3$N$_2$
+    (2026-08-20, quatre sous-sphères plutôt que deux) ajoute un point de
+    donnée confirmé de plus à cette vérité terrain, sans toucher pour
+    autant à \texttt{nearest\_neighbor.py} ni à la classification à
+    l'échelle du jeu de données, qui restent inchangées. Un audit
+    calibré (nécessitant une vérité terrain par composé, qui n'existe
+    que pour les 16 espèces du manuscrit) reste à faire avant de
+    trancher dans un sens ou l'autre.
 \end{itemize}
 
 \section{Conclusion}
