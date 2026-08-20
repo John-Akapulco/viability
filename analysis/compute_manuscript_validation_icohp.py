@@ -75,8 +75,14 @@ from reaction_analysis.units import ev_to_kj_per_mol  # noqa: E402
 STRUCTURES = REPO_ROOT / "mp_dataset" / "structures"
 OUT_CSV = REPO_ROOT / "analysis" / "manuscript_validation_icohp_full.csv"
 
-STRICT_SHELL_TOL_ANGSTROM = 0.02
-SHELL_GAP_THRESHOLD_ANGSTROM = 0.08  # for the Mn-O two-shell cases only
+SHELL_GAP_THRESHOLD_ANGSTROM = 0.08  # separates the Mn-O short/long shells (Mn2O7, MnO2)
+
+# Separates a first coordination shell from the next one -- must be wider
+# than the widest within-shell spread seen (Ca3N2 0.011 A, Mn2O7 Mn-O/O-O
+# sub-clusters 0.012-0.026 A) but narrower than the tightest real
+# shell-to-shell gap seen (Sn's extension_Sn_mp-623511 PBE dir: 0.047 A
+# between its true first shell and a distinct, weaker-ICOHP second shell).
+FIRST_SHELL_GAP_THRESHOLD_ANGSTROM = 0.03
 
 
 def _load_by_pair(compound_dir: Path) -> tuple[dict[str, list[dict]], int]:
@@ -102,9 +108,25 @@ def _cluster_shells(records: list[dict], gap_threshold: float = SHELL_GAP_THRESH
     return shells
 
 
-def _strict_first_shell(records: list[dict], tol: float = STRICT_SHELL_TOL_ANGSTROM) -> list[dict]:
-    d_min = min(r["length"] for r in records)
-    return [r for r in records if r["length"] <= d_min + tol]
+def _strict_first_shell(records: list[dict]) -> list[dict]:
+    """First coordination shell via gap clustering, not a fixed distance
+    tolerance from d_min: a fixed tolerance silently truncates shells whose
+    own internal spread exceeds it (found in Ca3N2, 2026-08-20 -- distances
+    span 2.4021 to 2.4239 A, so the old 0.02 A tol dropped the outermost
+    24/96 bonds, a 24% error vs. the manuscript's -7.692 eV; gap clustering
+    gets 0.09%). Verified against every other already-matching species
+    (Pb, N2, Sn, Zn, CaO x2, CaN, O2, ZnSn, Mn2O7/MnO2 sub-shells) using
+    FIRST_SHELL_GAP_THRESHOLD_ANGSTROM -- notably NOT the wider
+    SHELL_GAP_THRESHOLD_ANGSTROM used for Mn-O shell separation, which is
+    too loose here and wrongly merges Sn's real, distinct second shell
+    (only 0.047 A beyond its first) into the sum."""
+    recs = sorted(records, key=lambda r: r["length"])
+    shell = [recs[0]]
+    for prev, cur in zip(recs, recs[1:]):
+        if cur["length"] - prev["length"] > FIRST_SHELL_GAP_THRESHOLD_ANGSTROM:
+            break
+        shell.append(cur)
+    return shell
 
 
 def _sum(records: list[dict]) -> tuple[int, float]:
