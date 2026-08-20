@@ -77,6 +77,14 @@ OUT_CSV = REPO_ROOT / "analysis" / "manuscript_validation_icohp_full.csv"
 
 SHELL_GAP_THRESHOLD_ANGSTROM = 0.08  # separates the Mn-O short/long shells (Mn2O7, MnO2)
 
+# S4N2's 3 manuscript bond types (N-S 1.57/1.65 A, S-S 2.07 A) are each a
+# single, zero-spread distance (8 symmetry-equivalent bonds per type in the
+# Z=4 cell) followed by a real gap of >1 A to the next (non-bonding) contact
+# at ~2.7-2.9 A, in both the PBEsol and PBE structures alike (verified
+# 2026-08-20). A plain distance cutoff is safe here -- no near-degenerate-
+# shell risk like Mn2O7/Ca3N2/Zn, so no gap-clustering needed.
+S4N2_BOND_CUTOFF_ANGSTROM = 2.2
+
 # Separates a first coordination shell from the next one -- must be wider
 # than the widest within-shell spread seen (Ca3N2 0.011 A, Mn2O7 Mn-O/O-O
 # sub-clusters 0.012-0.026 A) but narrower than the tightest real
@@ -85,10 +93,25 @@ SHELL_GAP_THRESHOLD_ANGSTROM = 0.08  # separates the Mn-O short/long shells (Mn2
 FIRST_SHELL_GAP_THRESHOLD_ANGSTROM = 0.03
 
 
-def _load_by_pair(compound_dir: Path) -> tuple[dict[str, list[dict]], int]:
+def _load_by_pair(compound_dir: Path, formula_atoms: int | None = None) -> tuple[dict[str, list[dict]], int]:
+    """formula_atoms: atom count of the manuscript's own chemical formula unit
+    (e.g. 6 for S4N2, 8 for S4N4/S8), when that unit has an internal GCD>1
+    across its element counts. pymatgen's get_reduced_composition_and_factor()
+    reduces to the simplest empirical ratio (S4N2->S2N z=8, S4N4->SN z=16,
+    S8->S z=32), not the manuscript's molecular convention -- silently
+    over-dividing ICOHP-per-formula-unit by a factor of 2/4/8. Confirmed
+    2026-08-20: S4N2's z=8 (should be 4) exactly halved its ICOHP; S4N4's old
+    dataset entry's supposed "75% gap, wrong polymorph" (note e) was actually
+    this same bug at a factor of 4 (-18.455*4=-73.82, matching the manuscript's
+    -73.840 to 0.03% once corrected). Only pass this for compounds whose
+    formula has such a GCD -- everything else (Mn2O7, Ca3N2, ZnSn, N2/O2 via
+    pymatgen's own special-cased diatomics, ...) already gets the right z."""
     records = raw_bond_records(compound_dir, "ICOHPLIST.lobster", are_cobis=False)
     structure = Structure.from_file(compound_dir / "CONTCAR")
-    _, z = structure.composition.get_reduced_composition_and_factor()
+    if formula_atoms is not None:
+        z = structure.composition.num_atoms / formula_atoms
+    else:
+        _, z = structure.composition.get_reduced_composition_and_factor()
     by_pair: dict[str, list[dict]] = defaultdict(list)
     for r in records:
         key = "-".join(sorted((_element_from_atom_label(r["atom1"]), _element_from_atom_label(r["atom2"]))))
@@ -183,6 +206,20 @@ def _scope_mno2_single_shell(by_pair):
     return _sum(_strict_first_shell(by_pair["Mn-O"]))
 
 
+def _scope_s4n2(by_pair):
+    if "N-S" not in by_pair or "S-S" not in by_pair:
+        return None
+    n_total, s_total = 0, 0.0
+    for pair in ("N-S", "S-S"):
+        bonded = [r for r in by_pair[pair] if r["length"] < S4N2_BOND_CUTOFF_ANGSTROM]
+        if not bonded:
+            return None
+        n, s = _sum(bonded)
+        n_total += n
+        s_total += s
+    return (n_total, s_total)
+
+
 def _scope_mno2_double_shell(by_pair):
     if "Mn-O" not in by_pair:
         return None
@@ -200,11 +237,11 @@ CASES = [
     dict(id="N2", manuscript_eV=-23.161, pbesol_dir="manuscript_N2", pbe_dir="gasref_N2_dimerbox",
          scope=_scope_single_pair_first_shell("N-N")),
     dict(id="S4N2", manuscript_eV=-49.24, pbesol_dir="manuscript_S4N2", pbe_dir="extension_S4N2_cod4031496",
-         scope=None),  # 3 distinct S-N/S-S pair types, not separable from ICOHPLIST alone -- reported raw below
+         scope=_scope_s4n2, formula_atoms=6),
     dict(id="S8", manuscript_eV=-46.8, pbesol_dir="manuscript_S8", pbe_dir=None,
-         scope=_scope_single_pair_first_shell("S-S")),
+         scope=_scope_single_pair_first_shell("S-S"), formula_atoms=8),
     dict(id="S4N4", manuscript_eV=-73.84, pbesol_dir="manuscript_S4N4", pbe_dir="extension_S4N4_cod7017102",
-         scope=_scope_single_pair_first_shell("N-S")),
+         scope=_scope_single_pair_first_shell("N-S"), formula_atoms=8),
     dict(id="ZnSn", manuscript_eV=-16.869, pbesol_dir="manuscript_ZnSn", pbe_dir="gasref_ZnSn_NiAs",
          scope=_scope_multi_pair_first_shell(["Sn-Zn", "Zn-Zn"])),
     dict(id="Zn", manuscript_eV=-12.686, pbesol_dir="manuscript_Zn", pbe_dir="extension_Zn_mp-79",
@@ -234,7 +271,7 @@ def _eval_case(case: dict, dir_name: str | None) -> dict | None:
     compound_dir = STRUCTURES / dir_name
     if not (compound_dir / "ICOHPLIST.lobster").exists():
         return None
-    by_pair, z = _load_by_pair(compound_dir)
+    by_pair, z = _load_by_pair(compound_dir, formula_atoms=case.get("formula_atoms"))
     if case["scope"] is None:
         return {"n_bonds": None, "sum_eV": None, "raw_by_pair": {
             k: _sum(_strict_first_shell(v)) for k, v in by_pair.items()
