@@ -12,9 +12,9 @@
 module purge
 module load intel
 module load impi/2021.13
-module load vasp/6.5.0
 module load lobster/5.1.1
 export OMP_NUM_THREADS=1
+export PATH=/opt/ohpc/pub/software/vasp.6.4.2:$PATH
 ulimit -s unlimited
 
 COMPOUND_DIR=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" mp_dataset/job_list.txt)
