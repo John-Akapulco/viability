@@ -144,6 +144,46 @@ rapportée dans le Tableau~\ref{tab:bondtype} et dans les colonnes
 Ces grandeurs alimentent \S\ref{sec:dataset} et les corrélations
 classiques du \S\ref{sec:results}.
 
+\textbf{Quelles liaisons sont sommées --- trois conventions distinctes,
+pas une seule.} Ce projet utilise trois règles différentes pour décider
+quelles paires d'atomes entrent dans une somme ICOHP/ICOBI ; les
+confondre est un vrai risque de lecture d'une section à l'autre :
+\begin{enumerate}
+\item \textbf{Non filtré (par défaut)} : \texttt{icohp\_sum}/\texttt{icohp\_mean}
+  et \texttt{icobi\_sum}/\texttt{icobi\_mean} --- utilisé dans tout le
+  \S\ref{sec:reaction-icohp}--\ref{sec:reframing}, le
+  Tableau~\ref{tab:bondtype}, les colonnes \og{}ICOHP\fg{}/\og{}ICOBI\fg{}
+  de l'Annexe~\ref{sec:appendix-master-list}, le tableau des références
+  élémentaires, et chaque total $\Delta$(ICOHP) de réaction de la liste
+  complète des réactions case-1 --- somme \textbf{toutes} les étiquettes
+  de liaison symétriquement inéquivalentes rapportées par LOBSTER dans sa
+  fenêtre de détection 0,1--6,0~\AA{} (\texttt{cohpGenerator} ci-dessus) ;
+  aucun filtrage de voisinage supplémentaire. C'est la convention par
+  défaut du projet car elle ne demande aucun réglage spécifique à la
+  chimie et traite chaque composé de façon identique.
+\item \textbf{Premier voisinage uniquement} : une règle adaptative et
+  relative (\texttt{reaction\_analysis/nearest\_neighbor.py}, rapport de
+  saut 2,5) trie toutes les distances de liaison observées pour une paire
+  d'espèces et coupe la sphère de coordination au premier saut dépassant
+  2,5$\times$ le plus grand saut observé jusque-là dans la sphère
+  pressentie --- \textbf{aucun cutoff en \AA{} n'est codé en dur nulle
+  part} ; la frontière s'autocalibre par composé. Utilisée en exactement
+  deux endroits : les 7 réactions de validation Reitz \& Dronskowski
+  (\S\ref{sec:validation}, reprenant la convention du manuscrit lui-même
+  \og{}premier saut du spectre des distances de liaison\fg{}) et la paire
+  d'espèces \textbf{dominante} de la classification par type de liaison
+  (\S\ref{sec:dataset} ; les colonnes \og{}ICOBI\fg{}/\og{}ICOHP\fg{} de
+  l'Annexe~\ref{sec:appendix-master-list} sont cette valeur de paire
+  dominante, \emph{pas} la moyenne sur tout le voisinage LOBSTER).
+\item \textbf{Aucun filtrage par paire du tout} : le descripteur de
+  population antiliante ci-dessous ne somme pas des paires de liaisons
+  discrètes par distance ou sphère ; il intègre la trace COHP \og{}moyenne\fg{}
+  déjà agrégée par LOBSTER lui-même (toutes les liaisons, pondération
+  interne de LOBSTER déjà appliquée) et se restreint uniquement par une
+  fenêtre en \emph{énergie} près de $E_F$/VBM --- la coordination
+  n'intervient jamais dans la définition de ce descripteur.
+\end{enumerate}
+
 \textbf{$\Delta$(ICOHP) de réaction (\texttt{reaction\_analysis/}).} Pour
 une réaction équilibrée (typiquement composé $\to$ éléments), $\Delta$ =
 somme des ICOHP des produits $-$ somme des ICOHP des réactifs, en
@@ -620,6 +660,14 @@ sélection proche de \texttt{formation\_energy\_per\_atom}, pas
 nécessairement une confirmation indépendante du mécanisme de barrière
 cinétique.
 
+\textbf{Un second signal de viabilité, indépendant} : le descripteur
+antiliant de niveau réaction de la mission~4b, $\Delta$(ICOHP antiliant)
+--- jamais testé auparavant contre \texttt{ViabilityLabel}, seulement
+contre des cibles thermodynamiques continues --- discrimine lui aussi
+significativement les composés viables des non viables, globalement et
+dans chaque sous-groupe assez grand (Mann-Whitney $p=6,7\times10^{-12}$,
+Fisher $p=2,4\times10^{-7}$, Annexe~\ref{sec:antibonding-viability}).
+
 \textbf{Toujours pas de SISSO à ce stade} : rapports détaillés,
 \texttt{analysis/REPORT\_antibonding.md},
 \texttt{analysis/REPORT\_reaction\_icohp.md}.
@@ -778,6 +826,21 @@ s'appliquent à l'ensemble du jeu de données) :
 Taux de succès final sur l'ensemble des 597 structures calculées à ce
 jour : \textbf{597/597} pour VASP ; \textbf{596/597} pour LOBSTER (1
 référence à maille triviale sans étape LOBSTER exploitable, \S\ref{sec:cout}).
+
+\textbf{Bug de métadonnées, pas un échec de calcul} : les 4 composés de
+la campagne pilote originelle à 6 composés qui ne sont pas des éléments
+seuls (NaCl, AlNi, LiBr, BeCu) stockaient leur identifiant Materials
+Project sous la clé historique \texttt{material\_id} au lieu de
+\texttt{mp\_id}, que tous les scripts ultérieurs lisent --- leur
+recherche de \texttt{formation\_energy\_per\_atom} ne renvoyait
+silencieusement rien alors que la bonne valeur était déjà présente dans
+\texttt{formation\_energies.json} sous exactement le même identifiant
+matériau encodé dans le nom de leur propre dossier. Corrigé en ajoutant
+\texttt{mp\_id} en plus de \texttt{material\_id} existant ; augmente le
+$n$ de chaque tableau joint à l'énergie de formation qui inclut ces 4
+composés (p.~ex. Tableau~\ref{tab:delta-antibonding-stratified},
+$n=434\to438$) sans changer le signe ni la significativité d'aucune
+corrélation.
 
 \section{Coût de calcul}
 \label{sec:cout}
@@ -975,12 +1038,52 @@ testées, un résultat qu'aucun autre descripteur de ce rapport n'atteint.
 \end{center}
 \vspace{0.3cm}
 
+\section{Structures de référence élémentaires}
+\label{sec:appendix-elements}
+
+Les 62 structures de référence élémentaires
+(\texttt{analysis/compute\_reaction\_icohp\_case1.py}, dictionnaire
+\texttt{ELEMENT\_REFERENCE}) utilisées comme produits de chaque réaction
+case-1 (décomposition en éléments) de ce rapport --- groupe d'espace,
+énergie totale VASP par atome propre à ce projet (OSZICAR, $E_0$
+extrapolé $T\to0$), énergie totale par atome tabulée par Materials
+Project (\texttt{energy\_per\_atom}, récupérée en direct via l'API MP),
+et descripteurs ICOHP/ICOHP antiliant de la structure propre de
+l'élément. La colonne $\Delta$ (campagne $-$ MP, meV/atome) n'est
+\textbf{pas} un test de précision DFT : pour les éléments dont le
+pseudopotentiel PAW diffère par sa convention d'électrons de valence
+(électrons de semi-c\oe{}ur inclus explicitement en valence, p.~ex.
+variante \texttt{\_d}/\texttt{\_pv}/\texttt{\_sv} --- fréquent pour les
+métaux lourds), les deux énergies totales absolues diffèrent de
+plusieurs dizaines d'eV/atome uniquement parce qu'elles comptent un
+nombre différent d'électrons explicites --- les énergies totales VASP
+absolues ne sont comparables qu'au sein d'un même jeu de
+pseudopotentiels, jamais entre deux jeux choisis indépendamment. Le
+véritable test de précision énergétique inter-code/inter-pipeline de ce
+projet est le \S\ref{sec:validation} (les 7 réactions Reitz \&
+Dronskowski, CCC de Lin$=0,999998$) et
+l'Annexe~\ref{sec:appendix-reitz-dronskowski-structures} (reproduction
+indépendante des paramètres de maille/ICOHP). N n'a pas d'entrée
+Materials Project (boîte-dimère isolée construite à la main ; voir le
+\S\ref{sec:appendix-master-list} ci-dessous pour les deux autres
+références construites à la main, ZnSn et le polymorphe sphalérite de
+CaO).
+
+{\small
+\input{appendix_elements_fr.tex}
+}
+
 \section{Liste des composés et éléments}
 \label{sec:appendix-master-list}
 
-Liste complète des 392 composés et éléments disposant d'une donnée ICOBI
-exploitable (sur 394 au total ; 2 composés d'origine COD sans
-\texttt{is\_metal}/ICOBI, \S\ref{sec:dataset}), organisée par section
+Liste complète des 588 composés et éléments disposant d'une donnée ICOBI
+exploitable (sur 597 au total ; 9 exclus : \texttt{Cu4Au} pour un échec
+d'orthonormalisation aux points k LOBSTER touchant tout le composé, 2
+composés d'origine COD (S4N2, S4N4) sans \texttt{is\_metal}/ICOBI, et 6
+structures diatomiques/de référence construites pour les références en
+phase gazeuse de la validation-manuscrit (boîtes-dimères Cl$_2$, F$_2$,
+H$_2$, N$_2$, O$_2$, et un polymorphe sphalérite de CaO) jamais passées
+par cette classification, \S\ref{sec:dataset}), organisée par section
 selon le classement ICOHP/ICOBI indépendant du \S\ref{sec:dataset}
 (\texttt{is\_metal} pour le caractère métallique ; sinon l'ICOBI de la
 paire d'espèces \textbf{dominante au premier voisinage} (pas une
@@ -1024,6 +1127,29 @@ sont les valeurs normalisées à $\Delta E=1{,}0$~eV
 
 {\small
 \input{appendix_master_list_unclassified_fr.tex}
+}
+
+\section{Liste complète des réactions case-1}
+\label{sec:appendix-full-reactions}
+
+Chacune des 517 réactions case-1 (décomposition en éléments) du projet
+(\S\ref{sec:reaction-icohp}) --- un sur-ensemble des
+Annexes~\ref{sec:appendix-ext-endobondic}--\ref{sec:appendix-ext-exobondic},
+qui ne couvrent que les 208 composés de la campagne \og{}extension\fg{}.
+Pour chacune : le composé (formule étoilée, mp-id, groupe d'espace), la
+réaction équilibrée avec le groupe d'espace de \textbf{chaque} référence
+élémentaire entre parenthèses, l'étiquette \texttt{ViabilityLabel}
+(\texttt{reaction\_analysis.classify.classify\_viability()},
+\S\ref{sec:reframing}), $\Delta$(ICOHP)/atome (mission~5, le descripteur
+principal de réaction-ICOHP de ce projet) et $\Delta$(ICOHP
+antiliant)/atome (mission~4b, \S\ref{sec:appendix-icobi-antibonding} ---
+\og{}--\fg{} si le composé ou l'une de ses références élémentaires
+manque de la trace \texttt{COHPCAR.lobster} complète que ce descripteur
+nécessite, contrairement à la somme non filtrée d'\texttt{ICOHPLIST.lobster}
+qu'utilise la colonne $\Delta$(ICOHP)).
+
+{\scriptsize
+\input{appendix_full_reactions_fr.tex}
 }
 
 \section{Paramètres de calcul VASP}
@@ -1246,14 +1372,14 @@ Calculé pour 439 réactions de cas 1
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman, $\Delta$(antiliant) de la réaction de décomposition (cas 1, $n=434$--439).}
+\caption{Corrélations de Spearman, $\Delta$(antiliant) de la réaction de décomposition (cas 1, $n=438$--439 ; voir \S\ref{sec:incidents} pour la mise à jour $434\to438$).}
 \label{tab:delta-antibonding}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 Descripteur & Cible & $n$ & $\rho$ \\
 \midrule
-$\Delta$(ICOHP antiliant) & \texttt{formation\_energy\_per\_atom} & 434 & $-0{,}6175^{***}$ \\
-$\Delta$(ICOBI antiliant) & \texttt{formation\_energy\_per\_atom} & 434 & $-0{,}4270^{***}$ \\
+$\Delta$(ICOHP antiliant) & \texttt{formation\_energy\_per\_atom} & 438 & $-0{,}6225^{***}$ \\
+$\Delta$(ICOBI antiliant) & \texttt{formation\_energy\_per\_atom} & 438 & $-0{,}4292^{***}$ \\
 $\Delta$(ICOHP antiliant) & \texttt{energy\_above\_hull} & 438 & $-0{,}1734^{***}$ \\
 $\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 438 & $-0{,}1215^{*}$ \\
 \bottomrule
@@ -1264,7 +1390,7 @@ $\Delta$(ICOBI antiliant) & \texttt{energy\_above\_hull} & 438 & $-0{,}1215^{*}$
 \end{table}
 
 \textbf{$\Delta$(ICOHP antiliant) reste, à cette échelle, la corrélation
-continue la plus forte de tout le projet} ($\rho=-0{,}618$, plus forte
+continue la plus forte de tout le projet} ($\rho=-0{,}623$, plus forte
 que l'ICOHP de réaction du \S\ref{sec:reaction-icohp}, $\rho=0{,}295$) ---
 affaiblie par rapport au $\rho=-0{,}644$ rapporté à échelle réduite,
 mais toujours la plus forte. Fait notable, inchangé : contrairement aux
@@ -1277,19 +1403,19 @@ liés mais pas redondants.
 
 \begin{table}[htbp]
 \centering
-\caption{Corrélations de Spearman, $\Delta$(antiliant) contre \texttt{formation\_energy\_per\_atom}, par sous-groupe (cas 1, $n=286$--$434$).}
+\caption{Corrélations de Spearman, $\Delta$(antiliant) contre \texttt{formation\_energy\_per\_atom}, par sous-groupe (cas 1, $n=288$--$438$).}
 \label{tab:delta-antibonding-stratified}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Sous-groupe & $n$ & $\rho$ ($\Delta$ICOHP) & $n$ & $\rho$ ($\Delta$ICOBI) \\
 \midrule
-tous                & 434 & $-0{,}6175^{***}$ & 434 & $-0{,}4270^{***}$ \\
+tous                & 438 & $-0{,}6225^{***}$ & 438 & $-0{,}4292^{***}$ \\
 \texttt{covalent}   & 29  & $-0{,}6956^{***}$ & 29  & $-0{,}7750^{***}$ \\
-\texttt{ionique}    & 87  & $-0{,}6337^{***}$ & 87  & $-0{,}2245^{*}$ \\
-\texttt{métallique} & 286 & $-0{,}4316^{***}$ & 286 & $-0{,}3550^{***}$ \\
+\texttt{ionique}    & 89  & $-0{,}6301^{***}$ & 89  & $-0{,}2258^{*}$ \\
+\texttt{métallique} & 288 & $-0{,}4359^{***}$ & 288 & $-0{,}3602^{***}$ \\
 \texttt{mixte}      & 32  & $-0{,}6394^{***}$ & 32  & $-0{,}8397^{***}$ \\
-\texttt{is\_metal=False} & 148 & $-0{,}6459^{***}$ & 148 & $-0{,}4131^{***}$ \\
-\texttt{is\_metal=True}  & 286 & $-0{,}4316^{***}$ & 286 & $-0{,}3550^{***}$ \\
+\texttt{is\_metal=False} & 150 & $-0{,}6466^{***}$ & 150 & $-0{,}4128^{***}$ \\
+\texttt{is\_metal=True}  & 288 & $-0{,}4359^{***}$ & 288 & $-0{,}3602^{***}$ \\
 \bottomrule
 \end{tabular}
 
@@ -1314,9 +1440,68 @@ que deux (mixte, \texttt{is\_metal=False}) ; l'ICOHP de réaction
 pas sur métallique. Reste une construction relativement récente --- sa
 magnitude devra être reproduite sur un jeu de données véritablement
 indépendant avant d'être prise comme un résultat définitivement acquis,
-mais la survie à une stratification complète, maintenant à $n=434$ et
+mais la survie à une stratification complète, maintenant à $n=438$ et
 sur cinq sous-groupes au lieu de trois, en fait le résultat le plus
 solide du projet.
+
+\subsection{Corrélation avec la viabilité case-1}
+\label{sec:antibonding-viability}
+
+Toutes les corrélations précédentes de $\Delta$(ICOHP antiliant) dans
+cette annexe portent sur une cible thermodynamique \emph{continue}
+(\texttt{formation\_energy\_per\_atom}/\texttt{energy\_above\_hull}),
+jamais sur l'étiquette binaire \texttt{ViabilityLabel}
+(\S\ref{sec:reframing}) contre laquelle le \S\ref{sec:results} teste
+$\Delta$(ICOHP) (mission~5) --- cela n'avait jamais été testé nulle part
+dans le projet avant maintenant
+(\texttt{analysis/compute\_viability\_antibonding\_correlation.py}).
+Même convention que le \S\ref{sec:reframing} : viable =
+\texttt{STABLE\_ON\_HULL} $\cup$ \texttt{METASTABLE\_VIABLE}, non viable
+= \texttt{UNSTABLE\_NONEXISTENT} (\texttt{insufficient\_data} exclu) ;
+test de Mann-Whitney U sur le $\Delta$(ICOHP antiliant) continu, et test
+exact de Fisher sur $\Delta$(ICOHP antiliant)$>0$ (binaire) contre viable
+(binaire), la même paire de tests déjà utilisée pour le partage
+signe/continu de la mission~5.
+
+\begin{table}[htbp]
+\centering
+\caption{$\Delta$(ICOHP antiliant) contre la viabilité case-1, par sous-groupe ($n_\text{total}=434$).}
+\label{tab:viability-antibonding}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Sous-groupe & $n$ viable & $n$ non viable & $p$ Mann-Whitney & OR Fisher & $p$ Fisher \\
+\midrule
+tous                     & 329 & 105 & $6,7\times10^{-12\,***}$ & 3,49 & $2,4\times10^{-7\,***}$ \\
+\texttt{bond\_type=métallique} & 125 & 65  & $0{,}0028^{**}$          & 2,20 & $0{,}021^{*}$ \\
+\texttt{is\_metal=True}      & 187 & 99  & $6,7\times10^{-5\,***}$  & 2,38 & $0{,}00099^{***}$ \\
+\texttt{is\_metal=False}     & 142 & 6\rlap{$^\dagger$}   & $0{,}012^{*}$            & 7,88 & $0{,}028^{*}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{*}p<0{,}05$ ; $^{**}p<0{,}01$ ; $^{***}p<0{,}001$.
+$^\dagger$seulement 6 composés non viables dans ce sous-groupe --- signalé,
+pas supprimé, selon la convention $n<15$ de ce projet.
+\texttt{bond\_type=covalent} (3 non viables) et \texttt{bond\_type=ionique}
+(1 non viable) sont trop petits pour être testés et sont omis. Médiane
+$\Delta$(ICOHP antiliant) : $0{,}0067$~eV (viable) contre
+$3{,}2\times10^{-6}$~eV (non viable), tous sous-groupes confondus.}
+\end{table}
+
+\textbf{Un composé dont la formation \emph{réduit} le caractère
+antiliant par rapport à ses éléments constitutifs ($\Delta>0$) est
+significativement plus susceptible d'être viable au sens de
+\texttt{classify\_viability()} que celui dont la formation
+l'augmente} --- vrai globalement et dans chaque sous-groupe assez grand
+pour être testé, y compris \texttt{is\_metal=False} malgré sa classe non
+viable ténue. C'est la première fois que le descripteur de la
+mission~4b est testé contre la viabilité plutôt que contre une cible de
+stabilité continue, et il passe le test proprement : une seconde ligne
+de preuve indépendante (aux côtés du partage endobondic/exobondic basé
+sur le signe de la mission~5, \S\ref{sec:reframing}) que la réduction du
+caractère antiliant près de $E_F$ lors de la formation est associée aux
+composés qui existent réellement ou persistent, pas seulement à quel
+point leur formation est thermodynamiquement favorable.
 
 \subsection{$\Delta$(ICOHP) de réaction restreint à une fenêtre proche de $E_F$}
 \label{sec:reaction-icohp-windowed}

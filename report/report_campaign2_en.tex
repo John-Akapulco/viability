@@ -137,6 +137,43 @@ is what is reported in Table~\ref{tab:bondtype} and the
 Appendix~\ref{sec:appendix-master-list}. These quantities feed
 \S\ref{sec:dataset} and the classic correlations of \S\ref{sec:results}.
 
+\textbf{Which bonds get summed --- three distinct conventions, not one.}
+This project uses three different rules for which atom pairs enter an
+ICOHP/ICOBI sum, and conflating them is a real risk when reading numbers
+across sections:
+\begin{enumerate}
+\item \textbf{Unfiltered (default)}: \texttt{icohp\_sum}/\texttt{icohp\_mean}
+  and \texttt{icobi\_sum}/\texttt{icobi\_mean} --- used throughout
+  \S\ref{sec:reaction-icohp}--\ref{sec:reframing}, Table~\ref{tab:bondtype},
+  Appendix~\ref{sec:appendix-master-list}'s ``ICOHP''/``ICOBI'' columns,
+  the elemental-reference table, and every $\Delta$(ICOHP) reaction total
+  in the full case-1 reaction list --- sum \textbf{every} symmetrically
+  inequivalent bond label LOBSTER reports within its 0.1--6.0~\AA{}
+  detection window (\texttt{cohpGenerator} above); no further
+  coordination-shell filtering. This is the project's working default
+  because it requires no chemistry-specific tuning and treats every
+  compound identically.
+\item \textbf{First-coordination-shell only}: an adaptive, relative rule
+  (\texttt{reaction\_analysis/nearest\_neighbor.py}, gap ratio 2.5) sorts
+  every observed bond distance for a species pair and cuts the shell at
+  the first gap exceeding 2.5$\times$ the largest gap seen so far within
+  the putative shell --- \textbf{no fixed \AA{} cutoff is hardcoded
+  anywhere}; the boundary is self-calibrating per compound. Used in
+  exactly two places: the 7 Reitz \& Dronskowski validation reactions
+  (\S\ref{sec:validation}, matching the manuscript's own ``first gap in
+  the bond-distance spectrum'' convention) and the bond-type
+  classification's \textbf{dominant species-pair} ICOBI/ICOHP
+  (\S\ref{sec:dataset}, the ``ICOBI''/``ICOHP'' columns of
+  Appendix~\ref{sec:appendix-master-list} are this dominant-pair value,
+  \emph{not} the compound-wide mean over every LOBSTER-reported neighbor).
+\item \textbf{No per-pair filtering at all}: the antibonding-population
+  descriptor below does not sum discrete bond pairs by distance or shell;
+  it integrates LOBSTER's own pre-aggregated ``average'' COHP trace (every
+  bond, LOBSTER's internal per-bond weighting already applied) and
+  restricts only by an \emph{energy} window near $E_F$/VBM --- coordination
+  never enters this descriptor's definition.
+\end{enumerate}
+
 \textbf{Reaction $\Delta$(ICOHP) (\texttt{reaction\_analysis/}).} For a
 balanced reaction (typically compound $\to$ elements), $\Delta$ = sum of
 products' ICOHP $-$ sum of reactants' ICOHP, "products $-$ reactants"
@@ -596,6 +633,14 @@ were deliberately selected far above the hull --- a
 necessarily an independent confirmation of the bonding-kinetics
 mechanism --- remains to be checked.
 
+\textbf{A second, independent viability signal}: mission~4b's reaction-level
+antibonding descriptor, $\Delta$(ICOHP antibonding) --- never previously
+tested against \texttt{ViabilityLabel}, only against continuous
+thermodynamic targets --- also discriminates viable from non-viable
+compounds significantly, overall and within every large-enough subgroup
+(Mann--Whitney $p=6.7\times10^{-12}$, Fisher $p=2.4\times10^{-7}$,
+Appendix~\ref{sec:antibonding-viability}).
+
 \textbf{Still no SISSO at this stage}: detailed reports,
 \texttt{analysis/REPORT\_antibonding.md},
 \texttt{analysis/REPORT\_reaction\_icohp.md}.
@@ -744,6 +789,19 @@ the shared SLURM/INCAR templates, carry over to the whole dataset):
 Final success rate across all 597 structures computed to date:
 \textbf{597/597} for VASP; \textbf{596/597} for LOBSTER (1 trivial-cell
 reference element with no usable LOBSTER step, \S\ref{sec:cost}).
+
+\textbf{Metadata bug, not a compute failure}: the 4 compounds of the
+original 6-compound pilot campaign that are not single elements
+(NaCl, AlNi, LiBr, BeCu) stored their Materials Project identifier
+under the legacy key \texttt{material\_id} instead of \texttt{mp\_id},
+which every later script reads --- their \texttt{formation\_energy\_per\_atom}
+lookups silently returned nothing even though the correct value was
+already present in \texttt{formation\_energies.json} under the exact
+same material id encoded in their own directory name. Fixed by adding
+\texttt{mp\_id} alongside the existing \texttt{material\_id}; raises the
+$n$ on every table joined against formation energy that includes these
+4 compounds (e.g.\ Table~\ref{tab:delta-antibonding-stratified},
+$n=434\to438$) with no change to any correlation's sign or significance.
 
 \section{Compute Cost}
 \label{sec:cost}
@@ -930,12 +988,49 @@ this report reaches.
 \end{center}
 \vspace{0.3cm}
 
+\section{Elemental Reference Structures}
+\label{sec:appendix-elements}
+
+The 62 elemental reference structures
+(\texttt{analysis/compute\_reaction\_icohp\_case1.py}'s
+\texttt{ELEMENT\_REFERENCE}) used as the products side of every case-1
+(decomposition-to-elements) reaction in this report --- space group, this
+project's own VASP total energy per atom (OSZICAR, extrapolated $T\to0$
+$E_0$), Materials Project's own tabulated \texttt{energy\_per\_atom}
+(fetched live via the MP API), and the ICOHP/ICOHP-antibonding
+descriptors of the element's own structure. The $\Delta$ column
+(campaign $-$ MP, meV/atom) is \textbf{not} a DFT-accuracy check: for
+elements whose PAW potential differs in valence-electron convention from
+a default choice (semi-core electrons folded into valence, e.g.\ a
+\texttt{\_d}/\texttt{\_pv}/\texttt{\_sv} variant --- common for heavier
+metals), the two absolute total energies differ by up to several tens of
+eV/atom purely because they count a different number of explicit
+electrons --- absolute VASP total energies are only meaningful within one
+consistent pseudopotential set, never across two independently chosen
+ones. This project's real cross-code/cross-pipeline energetic accuracy
+check is \S\ref{sec:validation} (the 7 Reitz \& Dronskowski reactions,
+Lin's CCC$=0.999998$) and
+Appendix~\ref{sec:appendix-reitz-dronskowski-structures} (independent
+lattice-parameter/ICOHP reproduction). N has no Materials
+Project entry (hand-built isolated-dimer box, see
+\S\ref{sec:appendix-master-list} below for the other two hand-built
+references, ZnSn and the CaO sphalerite polymorph).
+
+{\small
+\input{appendix_elements_en.tex}
+}
+
 \section{Compound and Element List}
 \label{sec:appendix-master-list}
 
-Complete list of the 392 compounds and elements with usable ICOBI data
-(of 394 total; 2 COD-sourced compounds lack \texttt{is\_metal}/ICOBI,
-\S\ref{sec:dataset}), organized by section according to the independent
+Complete list of the 588 compounds and elements with usable ICOBI data
+(of 597 total; 9 excluded: \texttt{Cu4Au} for a dataset-wide LOBSTER
+k-point orthonormalization failure, 2 COD-sourced compounds (S4N2, S4N4)
+lacking \texttt{is\_metal}/ICOBI, and 6 diatomic/reference structures
+built for the manuscript-validation gas-phase references (Cl$_2$,
+F$_2$, H$_2$, N$_2$, O$_2$ dimer boxes, and a CaO sphalerite polymorph)
+that were never run through this classification, \S\ref{sec:dataset}),
+organized by section according to the independent
 ICOHP/ICOBI classification of \S\ref{sec:dataset} (\texttt{is\_metal}
 for metallic character; otherwise the ICOBI of the \textbf{dominant
 first-coordination-shell} species pair --- not a mean over every
@@ -978,6 +1073,29 @@ the normalized values at $\Delta E=1.0$~eV (\S\ref{sec:antibonding},
 
 {\small
 \input{appendix_master_list_unclassified_en.tex}
+}
+
+\section{Complete Case-1 Reaction List}
+\label{sec:appendix-full-reactions}
+
+Every one of the project's 517 case-1 (decomposition-to-elements)
+reactions (\S\ref{sec:reaction-icohp}) --- a superset of
+Appendices~\ref{sec:appendix-ext-endobondic}--\ref{sec:appendix-ext-exobondic},
+which cover only the 208 compounds of the ``extension'' campaign.
+For each: the compound (starred formula, mp-id, space group), the
+balanced reaction with the space group of \textbf{every} elemental
+reference in parentheses, the \texttt{ViabilityLabel}
+(\texttt{reaction\_analysis.classify.classify\_viability()},
+\S\ref{sec:reframing}), $\Delta$(ICOHP)/atom (mission~5, this project's
+main reaction-ICOHP descriptor) and $\Delta$(ICOHP antibonding)/atom
+(mission~4b, \S\ref{sec:appendix-icobi-antibonding} --- ``--'' where the
+compound or one of its element references lacks the full
+\texttt{COHPCAR.lobster} trace this descriptor needs, unlike the
+unfiltered \texttt{ICOHPLIST.lobster} sum the $\Delta$(ICOHP) column
+uses).
+
+{\scriptsize
+\input{appendix_full_reactions_en.tex}
 }
 
 \section{VASP Calculation Parameters}
@@ -1195,14 +1313,14 @@ reactions (\texttt{analysis/compute\_delta\_antibonding\_case1.py}).
 
 \begin{table}[htbp]
 \centering
-\caption{Spearman correlations, $\Delta$(antibonding) of the decomposition reaction (case 1, $n=434$--439).}
+\caption{Spearman correlations, $\Delta$(antibonding) of the decomposition reaction (case 1, $n=438$--439; see \S\ref{sec:incidents} for the 434$\to$438 update).}
 \label{tab:delta-antibonding}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
 Descriptor & Target & $n$ & $\rho$ \\
 \midrule
-$\Delta$(ICOHP antibonding) & \texttt{formation\_energy\_per\_atom} & 434 & $-0.6175^{***}$ \\
-$\Delta$(ICOBI antibonding) & \texttt{formation\_energy\_per\_atom} & 434 & $-0.4270^{***}$ \\
+$\Delta$(ICOHP antibonding) & \texttt{formation\_energy\_per\_atom} & 438 & $-0.6225^{***}$ \\
+$\Delta$(ICOBI antibonding) & \texttt{formation\_energy\_per\_atom} & 438 & $-0.4292^{***}$ \\
 $\Delta$(ICOHP antibonding) & \texttt{energy\_above\_hull} & 438 & $-0.1734^{***}$ \\
 $\Delta$(ICOBI antibonding) & \texttt{energy\_above\_hull} & 438 & $-0.1215^{*}$ \\
 \bottomrule
@@ -1214,7 +1332,7 @@ $\Delta$(ICOBI antibonding) & \texttt{energy\_above\_hull} & 438 & $-0.1215^{*}$
 
 \textbf{$\Delta$(ICOHP antibonding) remains, at this scale, the
 strongest continuous correlation in the entire project}
-($\rho=-0.618$, stronger than the full reaction-ICOHP descriptor of
+($\rho=-0.623$, stronger than the full reaction-ICOHP descriptor of
 \S\ref{sec:reaction-icohp}, $\rho=0.295$) --- weaker than the
 $\rho=-0.644$ reported at the earlier, smaller scale, but still the
 strongest. Notable, unchanged: unlike the raw values (opposite signs,
@@ -1227,19 +1345,19 @@ redundant.
 
 \begin{table}[htbp]
 \centering
-\caption{Spearman correlations, $\Delta$(antibonding) against \texttt{formation\_energy\_per\_atom}, by subgroup (case 1, $n=286$--$434$).}
+\caption{Spearman correlations, $\Delta$(antibonding) against \texttt{formation\_energy\_per\_atom}, by subgroup (case 1, $n=288$--$438$; 4 more compounds than earlier printings, see \S\ref{sec:incidents}'s note on the \texttt{material\_id}/\texttt{mp\_id} fix).}
 \label{tab:delta-antibonding-stratified}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Subgroup & $n$ & $\rho$ ($\Delta$ICOHP) & $n$ & $\rho$ ($\Delta$ICOBI) \\
 \midrule
-all                 & 434 & $-0.6175^{***}$ & 434 & $-0.4270^{***}$ \\
+all                 & 438 & $-0.6225^{***}$ & 438 & $-0.4292^{***}$ \\
 \texttt{covalent}   & 29  & $-0.6956^{***}$ & 29  & $-0.7750^{***}$ \\
-\texttt{ionic}      & 87  & $-0.6337^{***}$ & 87  & $-0.2245^{*}$ \\
-\texttt{metallic}   & 286 & $-0.4316^{***}$ & 286 & $-0.3550^{***}$ \\
+\texttt{ionic}      & 89  & $-0.6301^{***}$ & 89  & $-0.2258^{*}$ \\
+\texttt{metallic}   & 288 & $-0.4359^{***}$ & 288 & $-0.3602^{***}$ \\
 \texttt{mixed}      & 32  & $-0.6394^{***}$ & 32  & $-0.8397^{***}$ \\
-\texttt{is\_metal=False} & 148 & $-0.6459^{***}$ & 148 & $-0.4131^{***}$ \\
-\texttt{is\_metal=True}  & 286 & $-0.4316^{***}$ & 286 & $-0.3550^{***}$ \\
+\texttt{is\_metal=False} & 150 & $-0.6466^{***}$ & 150 & $-0.4128^{***}$ \\
+\texttt{is\_metal=True}  & 288 & $-0.4359^{***}$ & 288 & $-0.3602^{***}$ \\
 \bottomrule
 \end{tabular}
 
@@ -1263,9 +1381,66 @@ full reaction-ICOHP descriptor (\S\ref{sec:reaction-icohp}) survives
 only on \texttt{bond\_type}, not on metallic. This remains a
 relatively recent construction --- its magnitude will need to be
 reproduced on a genuinely independent dataset before it is taken as a
-settled result, but surviving full stratification, at $n=434$ and
+settled result, but surviving full stratification, at $n=438$ and
 across five subgroups instead of three, makes it the project's most
 robust result to date.
+
+\subsection{Correlation with case-1 viability}
+\label{sec:antibonding-viability}
+
+Every prior correlation of $\Delta$(ICOHP antibonding) in this appendix
+is against a \emph{continuous} thermodynamic target
+(\texttt{formation\_energy\_per\_atom}/\texttt{energy\_above\_hull}),
+never against the binary \texttt{ViabilityLabel}
+(\S\ref{sec:reframing}) that \S\ref{sec:results} tests
+$\Delta$(ICOHP) (mission~5) against --- this had not been tested
+anywhere in the project before now
+(\texttt{analysis/compute\_viability\_antibonding\_correlation.py}).
+Same convention as \S\ref{sec:reframing}: viable
+= \texttt{STABLE\_ON\_HULL} $\cup$ \texttt{METASTABLE\_VIABLE}, not
+viable = \texttt{UNSTABLE\_NONEXISTENT} (\texttt{insufficient\_data}
+excluded); Mann--Whitney U on the continuous $\Delta$(ICOHP
+antibonding), and Fisher's exact test on
+$\Delta$(ICOHP antibonding)$>0$ (binary) against viable (binary), the
+same pair of tests already run for mission~5's sign/continuous split.
+
+\begin{table}[htbp]
+\centering
+\caption{$\Delta$(ICOHP antibonding) vs. case-1 viability, by subgroup ($n_\text{total}=434$).}
+\label{tab:viability-antibonding}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Subgroup & $n$ viable & $n$ not viable & Mann--Whitney $p$ & Fisher OR & Fisher $p$ \\
+\midrule
+all                      & 329 & 105 & $6.7\times10^{-12\,***}$ & 3.49 & $2.4\times10^{-7\,***}$ \\
+\texttt{bond\_type=metallic} & 125 & 65  & $0.0028^{**}$            & 2.20 & $0.021^{*}$ \\
+\texttt{is\_metal=True}      & 187 & 99  & $6.7\times10^{-5\,***}$  & 2.38 & $0.00099^{***}$ \\
+\texttt{is\_metal=False}     & 142 & 6\rlap{$^\dagger$}   & $0.012^{*}$              & 7.88 & $0.028^{*}$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.15cm}
+{\footnotesize $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$.
+$^\dagger$only 6 non-viable compounds in this subgroup --- flagged, not
+suppressed, per this project's $n<15$ convention.
+\texttt{bond\_type=covalent} (3 non-viable) and \texttt{bond\_type=ionic}
+(1 non-viable) are too small to test and are omitted. Median
+$\Delta$(ICOHP antibonding): $0.0067$~eV (viable) vs.\ $3.2\times10^{-6}$~eV
+(not viable), all-subgroup.}
+\end{table}
+
+\textbf{A compound whose formation \emph{reduces} antibonding character
+relative to its constituent elements ($\Delta>0$) is significantly more
+likely to be \texttt{classify\_viability()}-viable than one whose
+formation increases it} --- true overall and within every subgroup large
+enough to test, including \texttt{is\_metal=False} despite its thin
+non-viable class. This is the first time mission~4b's descriptor has
+been tested against viability rather than a continuous stability target,
+and it survives the test cleanly: a second, independent line of evidence
+(alongside mission~5's sign-based endobondic/exobondic split,
+\S\ref{sec:reframing}) that reduced near-$E_F$ antibonding character upon
+formation is associated with which compounds actually exist or persist,
+not just with how thermodynamically favorable their formation is.
 
 \subsection{Reaction $\Delta$(ICOHP) restricted to a window near $E_F$}
 \label{sec:reaction-icohp-windowed}
