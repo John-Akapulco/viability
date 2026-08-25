@@ -1,8 +1,8 @@
 #!/bin/sh
 #SBATCH --job-name=mval_Mn2O7
 #SBATCH --nodes=2
-#SBATCH --ntasks=16
-#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=48
+#SBATCH --ntasks-per-node=24
 #SBATCH --cpus-per-task=1
 #SBATCH --threads-per-core=1
 #SBATCH --output=vasp.log
@@ -15,6 +15,11 @@ module load vasp/6.5.0
 module load lobster/5.1.1
 export OMP_NUM_THREADS=1
 ulimit -s unlimited
+
+# Resume from a previous timed-out relaxation if a partial CONTCAR exists
+if [ -s CONTCAR ]; then
+    cp CONTCAR POSCAR
+fi
 
 cp INCAR.relax INCAR
 { time -p srun --mpi=pmi2 --ntasks=$SLURM_NTASKS --cpus-per-task=1 --threads-per-core=1 vasp_std ; } 2>> vasp.log

@@ -3,6 +3,11 @@ __pycache__/
 .venv/
 venv/
 
+# Throwaway one-off diagnostic VASP/LOBSTER runs (not part of the tracked
+# dataset) -- kept off shared /tmp (not visible to SLURM compute nodes)
+# but never committed.
+scratch_tests/
+
 # VASP pseudopotentials are license-restricted (cannot be redistributed) and
 # raw wavefunction/charge-density binaries are large + regenerable -- keep
 # the run *inputs*/*settings* and LOBSTER text output, drop the rest.

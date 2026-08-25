@@ -10,6 +10,6 @@ LASPH = True
 LCHARG = True
 LWAVE = True
 NBANDS = 128
-NPAR = 4
+NPAR = 8
 NSW = 0
 PREC = Accurate

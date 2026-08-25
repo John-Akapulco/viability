@@ -9,6 +9,6 @@ LCHARG = False
 LREAL = Auto
 LWAVE = False
 METAGGA = R2scan
-NPAR = 4
+NPAR = 8
 NSW = 0
 PREC = Accurate

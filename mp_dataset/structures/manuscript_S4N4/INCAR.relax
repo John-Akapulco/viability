@@ -11,6 +11,6 @@ KPAR = 2
 LASPH = True
 LCHARG = False
 LWAVE = False
-NPAR = 4
+NPAR = 8
 NSW = 200
 PREC = Accurate
