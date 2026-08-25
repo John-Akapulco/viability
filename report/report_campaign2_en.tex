@@ -528,18 +528,18 @@ realized):
 \toprule
  & endobondic & exobondic \\
 \midrule
-experimental ($n=267$) & 79 & 188 \\
+experimental ($n=271$) & 83 & 188 \\
 theoretical only ($n=244$) & 46 & 198 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Fisher's exact test: $p=0.0054$, odds ratio $=1.81$ ---
-\textbf{significant} (endobondic is $\sim 1.8\times$ more frequent among
+Fisher's exact test: $p=0.0022$, odds ratio $=1.90$ ---
+\textbf{significant} (endobondic is $\sim 1.9\times$ more frequent among
 experimentally realized compounds, the expected direction).
 Mann--Whitney on the continuous $\Delta$ICOHP/atom, same split:
-experimental median $-0.868$ eV, theoretical-only median $-1.454$ eV
-(more exobondic), $p=0.0109$ --- same direction, also significant. This
+experimental median $-0.833$ eV, theoretical-only median $-1.454$ eV
+(more exobondic), $p=0.0055$ --- same direction, also significant. This
 is exactly the result the marginal-formation-energy and max-hull-distance
 batches were built to test: the pooled 281-reaction population did not
 have enough near-stability-boundary compounds to reveal this signal
@@ -558,29 +558,29 @@ population as Table~\ref{tab:fisher}:
 
 \begin{table}[htbp]
 \centering
-\caption{Computed \texttt{ViabilityLabel} (\texttt{classify\_viability()}) on the same population as Table~\ref{tab:fisher} ($n=518$).}
+\caption{Computed \texttt{ViabilityLabel} (\texttt{classify\_viability()}) on the same population as Table~\ref{tab:fisher} ($n=517$).}
 \label{tab:viability-check}
 \begin{tabular}{@{}lrr@{}}
 \toprule
- & experimental ($n=267$) & theoretical ($n=244$) \\
+ & experimental ($n=271$) & theoretical ($n=244$) \\
 \midrule
-\texttt{STABLE\_ON\_HULL}        & 233 & 131 \\
+\texttt{STABLE\_ON\_HULL}        & 237 & 131 \\
 \texttt{UNSTABLE\_NONEXISTENT}   & 26  & 95 \\
 \texttt{METASTABLE\_VIABLE}      & 8   & 17 \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize 7 additional reactions (COD-sourced or otherwise
+{\footnotesize 3 additional reactions (COD-sourced or otherwise
 mp\_id-less, so no \texttt{formation\_energy\_per\_atom}) excluded,
 insufficient data.}
 \end{table}
 
 Collapsing \texttt{STABLE\_ON\_HULL}+\texttt{METASTABLE\_VIABLE}
 ("viable") against \texttt{UNSTABLE\_NONEXISTENT}: Fisher's exact test
-$p=2.9\times10^{-15}$, odds ratio $\mathbf{6.0}$ ($\chi^2=59.0$,
-$p=1.6\times10^{-14}$) --- \textbf{a much larger effect than the
-sign-only test} (Table~\ref{tab:fisher}, $p=0.0054$, odds ratio 1.81).
+$p=2.3\times10^{-15}$, odds ratio $\mathbf{6.0}$ ($\chi^2=60.3$,
+$p=8.1\times10^{-15}$) --- \textbf{a much larger effect than the
+sign-only test} (Table~\ref{tab:fisher}, $p=0.0022$, odds ratio 1.90).
 An experimentally realized compound is roughly 6$\times$ less likely to
 be predicted \texttt{UNSTABLE\_NONEXISTENT} than a theoretical-only one.
 \textbf{Of the 188 experimental exobondic compounds, only 26 are
@@ -638,7 +638,7 @@ antibonding descriptor, $\Delta$(ICOHP antibonding) --- never previously
 tested against \texttt{ViabilityLabel}, only against continuous
 thermodynamic targets --- also discriminates viable from non-viable
 compounds significantly, overall and within every large-enough subgroup
-(Mann--Whitney $p=6.7\times10^{-12}$, Fisher $p=2.4\times10^{-7}$,
+(Mann--Whitney $p=3.7\times10^{-12}$, Fisher $p=2.0\times10^{-7}$,
 Appendix~\ref{sec:antibonding-viability}).
 
 \textbf{Still no SISSO at this stage}: detailed reports,
@@ -906,7 +906,7 @@ meaningful.
     extension/marginal-formation-energy/max-hull batches --- the direct
     next step to test whether that finer split also turns significant.
   \item \textbf{The \texttt{ViabilityLabel} result (\S\ref{sec:reframing},
-    $p=2.9\times10^{-15}$) has not yet been checked for confounds}:
+    $p=2.3\times10^{-15}$) has not yet been checked for confounds}:
     neither stratified by \texttt{bond\_type}/\texttt{is\_metal}, nor
     distinguished from a selection effect (max-hull's theoretical
     polymorphs were deliberately chosen far above the hull).
@@ -948,11 +948,11 @@ meaningful.
 Reitz \& Dronskowski's endobondic/exobondic methodology
 (\S\ref{sec:reframing}) reproduces faithfully across the 7 independently
 known reference reactions (Lin's CCC 0.999998) and applies to this
-report's full dataset (518 decomposition-into-elements reactions). On
+report's full dataset (517 decomposition-into-elements reactions). On
 that population, sign-based $\Delta$ICOHP discrimination is
-significant (Fisher's test, $p=0.0054$), and the full
+significant (Fisher's test, $p=0.0022$), and the full
 \texttt{ViabilityLabel} machinery --- sign combined with thermodynamics
---- is far more strongly so ($p=2.9\times10^{-15}$, odds ratio 6.0): an
+--- is far more strongly so ($p=2.3\times10^{-15}$, odds ratio 6.0): an
 experimentally realized compound is roughly 6$\times$ less likely to be
 predicted \texttt{UNSTABLE\_NONEXISTENT} than a theoretical-only one
 (\S\ref{sec:reframing}). Reaction ICOHP otherwise remains a strong
@@ -1016,7 +1016,7 @@ Project entry (hand-built isolated-dimer box, see
 \S\ref{sec:appendix-master-list} below for the other two hand-built
 references, ZnSn and the CaO sphalerite polymorph).
 
-{\small
+{\scriptsize
 \input{appendix_elements_en.tex}
 }
 
@@ -1406,16 +1406,16 @@ same pair of tests already run for mission~5's sign/continuous split.
 
 \begin{table}[htbp]
 \centering
-\caption{$\Delta$(ICOHP antibonding) vs. case-1 viability, by subgroup ($n_\text{total}=434$).}
+\caption{$\Delta$(ICOHP antibonding) vs. case-1 viability, by subgroup ($n_\text{total}=438$).}
 \label{tab:viability-antibonding}
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 Subgroup & $n$ viable & $n$ not viable & Mann--Whitney $p$ & Fisher OR & Fisher $p$ \\
 \midrule
-all                      & 329 & 105 & $6.7\times10^{-12\,***}$ & 3.49 & $2.4\times10^{-7\,***}$ \\
-\texttt{bond\_type=metallic} & 125 & 65  & $0.0028^{**}$            & 2.20 & $0.021^{*}$ \\
-\texttt{is\_metal=True}      & 187 & 99  & $6.7\times10^{-5\,***}$  & 2.38 & $0.00099^{***}$ \\
-\texttt{is\_metal=False}     & 142 & 6\rlap{$^\dagger$}   & $0.012^{*}$              & 7.88 & $0.028^{*}$ \\
+all                      & 333 & 105 & $3.7\times10^{-12\,***}$ & 3.54 & $2.0\times10^{-7\,***}$ \\
+\texttt{bond\_type=metallic} & 127 & 65  & $0.0021^{**}$            & 2.25 & $0.014^{*}$ \\
+\texttt{is\_metal=True}      & 189 & 99  & $5.1\times10^{-5\,***}$  & 2.41 & $0.00094^{***}$ \\
+\texttt{is\_metal=False}     & 144 & 6\rlap{$^\dagger$}   & $0.011^{*}$              & 8.00 & $0.027^{*}$ \\
 \bottomrule
 \end{tabular}
 
@@ -1425,7 +1425,7 @@ $^\dagger$only 6 non-viable compounds in this subgroup --- flagged, not
 suppressed, per this project's $n<15$ convention.
 \texttt{bond\_type=covalent} (3 non-viable) and \texttt{bond\_type=ionic}
 (1 non-viable) are too small to test and are omitted. Median
-$\Delta$(ICOHP antibonding): $0.0067$~eV (viable) vs.\ $3.2\times10^{-6}$~eV
+$\Delta$(ICOHP antibonding): $0.0069$~eV (viable) vs.\ $3.2\times10^{-6}$~eV
 (not viable), all-subgroup.}
 \end{table}
 

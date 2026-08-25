@@ -102,38 +102,42 @@ def _balanced_reaction(formula: str, el_formula: dict[str, str]):
 
 VIABILITY_LABEL_TEXT = {
     "fr": {
-        "stable_on_hull": "stable", "metastable_viable": "métastable viable",
-        "unstable_nonexistent": "instable/inexistant", "insufficient_data": "donnée insuffisante",
+        "stable_on_hull": "stable", "metastable_viable": "m\\'eta-viable",
+        "unstable_nonexistent": "non viable", "insufficient_data": "n.d.",
     },
     "en": {
-        "stable_on_hull": "stable", "metastable_viable": "metastable viable",
-        "unstable_nonexistent": "unstable/nonexistent", "insufficient_data": "insufficient data",
+        "stable_on_hull": "stable", "metastable_viable": "meta-viable",
+        "unstable_nonexistent": "not viable", "insufficient_data": "n/a",
     },
 }
 
 TEXT = {
     "fr": {
-        "header": ["Composé", "mp-id", "Groupe d'espace", "Réaction (produits et leur groupe d'espace)",
-                   "Viabilité", "$\\Delta$(ICOHP)/at.", "$\\Delta$(ICOHP antil.)/at."],
+        "header": ["Composé", "mp-id", "GE", "Réaction (produits, GE entre parenthèses)",
+                   "Viab.", "$\\Delta$ICOHP", "$\\Delta$ICOHP\\-ab."],
         "caption": (
             "Les 517 réactions case-1 (décomposition en éléments) de la population complète du projet "
             "(compléments aux Tableaux~H/I, restreints à la campagne \\og{}extension\\fg{}, 208 composés) --- "
-            "composé (formule\\'e\\'etoil\\'ee, mp-id, groupe d'espace), réaction équilibrée avec le groupe "
+            "composé (formule étoilée, mp-id, GE = groupe d'espace), réaction équilibrée avec le groupe "
             "d'espace de chaque référence élémentaire entre parenthèses, étiquette de viabilité "
-            "(\\texttt{classify\\_viability()}), $\\Delta$(ICOHP)/atome (mission~5) et "
-            "$\\Delta$(ICOHP antiliant)/atome (mission~4b, \\og{}--\\fg{} si la trace COHP complète manque "
+            "(\\texttt{classify\\_viability()} : m\\'eta-viable = \\texttt{METASTABLE\\_VIABLE}, "
+            "non viable = \\texttt{UNSTABLE\\_NONEXISTENT}, n.d. = \\texttt{insufficient\\_data}), "
+            "$\\Delta$(ICOHP)/atome en eV (mission~5) et "
+            "$\\Delta$(ICOHP antiliant)/atome en eV (mission~4b, \\og{}--\\fg{} si la trace COHP complète manque "
             "pour le composé ou l'une de ses références)."
         ),
     },
     "en": {
-        "header": ["Compound", "mp-id", "Space group", "Reaction (products and their space group)",
-                   "Viability", "$\\Delta$(ICOHP)/at.", "$\\Delta$(ICOHP antib.)/at."],
+        "header": ["Compound", "mp-id", "SG", "Reaction (products, SG in parentheses)",
+                   "Viab.", "$\\Delta$ICOHP", "$\\Delta$ICOHP\\-ab."],
         "caption": (
             "The project's complete 517-reaction case-1 (decomposition-to-elements) population (a "
             "superset of Tables~H/I, which are restricted to the ``extension'' campaign, 208 compounds) --- "
-            "compound (starred formula, mp-id, space group), balanced reaction with each elemental "
-            "reference's space group in parentheses, viability label (\\texttt{classify\\_viability()}), "
-            "$\\Delta$(ICOHP)/atom (mission~5) and $\\Delta$(ICOHP antibonding)/atom (mission~4b, "
+            "compound (starred formula, mp-id, SG = space group), balanced reaction with each elemental "
+            "reference's space group in parentheses, viability label (\\texttt{classify\\_viability()}: "
+            "meta-viable = \\texttt{METASTABLE\\_VIABLE}, not viable = \\texttt{UNSTABLE\\_NONEXISTENT}, "
+            "n/a = \\texttt{insufficient\\_data}), $\\Delta$(ICOHP)/atom in eV (mission~5) and "
+            "$\\Delta$(ICOHP antibonding)/atom in eV (mission~4b, "
             "``--'' where the full COHP trace is missing for the compound or one of its references)."
         ),
     },
@@ -194,11 +198,11 @@ def main() -> None:
             vlabel = vlabel_map.get(r["viability_label"], "--") if pd.notna(r["viability_label"]) else "--"
             body.append(
                 f"{formula_disp} & {_esc(r['mp_id']) if pd.notna(r['mp_id']) else '--'} & {_esc(sg)} & "
-                f"{rxn_str} & {vlabel} & {fmt(r['delta_per_atom_eV'])} & {fmt(r['delta_icohp_antibond'])} \\\\"
+                f"{rxn_str} & {vlabel} & {fmt(r['delta_per_atom_eV'], 3)} & {fmt(r['delta_icohp_antibond'], 3)} \\\\"
             )
         ncol = len(L["header"])
         lines = [
-            "\\begin{longtable}{@{}lllp{5.5cm}lrr@{}}",
+            "\\begin{longtable}{@{}ll l@{\\hspace{4pt}} p{4.6cm} l@{\\hspace{4pt}} rr@{}}",
             f"\\caption{{{L['caption']}}}\\\\",
             "\\toprule",
             " & ".join(L["header"]) + " \\\\",

@@ -453,10 +453,10 @@ extension_Zn7Tc_mp-1206378,mp-1206378,Zn7Tc,True,0.0825775456249982,-0.052043905
 extension_Zr3Fe_mp-31205,mp-31205,Zr3Fe,False,0.0,-0.1094675950000017,0.1094675950000017,-1.5835700000000017,exobondic,stable_on_hull,
 extension_ZrHg3_mp-1608,mp-1608,ZrHg3,False,0.02171306624999403,-0.06165371937500774,0.06165371937500774,1.107718749999993,endobondic,stable_on_hull,
 gasref_ZnSn_NiAs,,ZnSn,True,,,,-5.013747499999997,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
-hull_ionic_NaCl_mp-22862,,NaCl,,0.0,,,0.37354750000000037,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
-hull_metallic_AlNi_mp-1487,,AlNi,,0.0,,,3.0197300000000045,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
-metastable_ionic_LiBr_mp-23259,,LiBr,,0.009895712500000542,,,4.0582291666666706,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
-metastable_metallic_BeCu_mp-2323,,BeCu,,0.005036342500000401,,,5.037086249999994,,insufficient_data,no MP formation_energy_per_atom (COD-sourced compound)
+hull_ionic_NaCl_mp-22862,mp-22862,NaCl,False,0.0,-2.100018835689655,2.100018835689655,0.37354750000000037,endobondic,stable_on_hull,
+hull_metallic_AlNi_mp-1487,mp-1487,AlNi,False,0.0,-0.68490115,0.68490115,3.0197300000000045,endobondic,stable_on_hull,
+metastable_ionic_LiBr_mp-23259,mp-23259,LiBr,False,0.009895712500000542,-1.825998821666666,1.825998821666666,4.0582291666666706,endobondic,stable_on_hull,
+metastable_metallic_BeCu_mp-2323,mp-2323,BeCu,False,0.005036342500000401,-0.10024430750000057,0.10024430750000057,5.037086249999994,endobondic,stable_on_hull,
 theo_metastable_Al4Si_mp-1228120,mp-1228120,Al4Si,True,0.11491430399999913,0.11491430399999984,-0.11491430399999984,0.6603129999999993,endobondic,metastable_viable,
 theo_metastable_AlSb_mp-1023918,mp-1023918,AlSb,True,0.18779470750000016,-0.06518077750000018,0.06518077750000018,-4.166435000000003,exobondic,stable_on_hull,
 theo_metastable_B3Ir2_mp-1228647,mp-1228647,B3Ir2,True,0.06085322616666744,-0.1111847268333321,0.1111847268333321,-6.439124000000004,exobondic,stable_on_hull,

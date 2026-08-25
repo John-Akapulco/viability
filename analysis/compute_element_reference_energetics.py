@@ -94,20 +94,24 @@ def main() -> None:
 
     print(f"Fetching MP energy_per_atom for {len(mp_ids_needed)} material ids...")
     mp_energy = {}
+    mp_spacegroup = {}
     if mp_ids_needed and API_KEY_PATH.exists():
         api_key = API_KEY_PATH.read_text().strip()
         with MPRester(api_key) as mpr:
             docs = mpr.materials.summary.search(
                 material_ids=mp_ids_needed,
-                fields=["material_id", "energy_per_atom"],
+                fields=["material_id", "energy_per_atom", "symmetry"],
             )
         mp_energy = {str(dd.material_id): dd.energy_per_atom for dd in docs}
+        mp_spacegroup = {str(dd.material_id): dd.symmetry.symbol for dd in docs}
     else:
         print("WARNING: no API key found or no mp_ids to fetch; MP energies left blank.")
 
     for row in rows:
         if row["mp_id"]:
             row["mp_energy_per_atom_eV"] = mp_energy.get(row["mp_id"])
+            if not row["spacegroup"]:
+                row["spacegroup"] = mp_spacegroup.get(row["mp_id"])
 
     df = pd.DataFrame(rows)
 

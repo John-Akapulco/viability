@@ -45,12 +45,13 @@ def _fmt_fr(x, digits=4) -> str:
 
 TEXT = {
     "fr": {
-        "header": ["Élément", "mp-id", "Groupe d'espace", "$E$/atome MP (eV)",
-                   "$E$/atome campagne (eV)", "$\\Delta$ (meV/at.)", "ICOHP (eV)", "ICOHP antiliant"],
+        "header": ["Élém.", "mp-id", "GE", "$E_\\text{MP}$ (eV)",
+                   "$E_\\text{camp}$ (eV)", "$\\Delta$ (meV)", "ICOHP", "ICOHP antil."],
         "caption": (
             "Les 62 structures de référence élémentaires utilisées comme "
             "produits de chaque réaction case-1 (décomposition en "
-            "éléments). $\\Delta = E_\\text{campagne} - E_\\text{MP}$ par "
+            "éléments ; GE = groupe d'espace). "
+            "$\\Delta = E_\\text{campagne} - E_\\text{MP}$ par "
             "atome : les grands écarts (jusqu'à plusieurs dizaines "
             "d'eV/atome pour les métaux lourds) reflètent une différence "
             "de convention de pseudopotentiel PAW (nombre d'électrons de "
@@ -67,11 +68,12 @@ TEXT = {
         "na": "--",
     },
     "en": {
-        "header": ["Element", "mp-id", "Space group", "MP $E$/atom (eV)",
-                   "Campaign $E$/atom (eV)", "$\\Delta$ (meV/at.)", "ICOHP (eV)", "ICOHP antibonding"],
+        "header": ["Elem.", "mp-id", "SG", "$E_\\text{MP}$ (eV)",
+                   "$E_\\text{camp}$ (eV)", "$\\Delta$ (meV)", "ICOHP", "ICOHP antib."],
         "caption": (
             "The 62 elemental reference structures used as the products "
-            "side of every case-1 (decomposition-to-elements) reaction. "
+            "side of every case-1 (decomposition-to-elements) reaction "
+            "(SG = space group). "
             "$\\Delta = E_\\text{campaign} - E_\\text{MP}$ per atom: the "
             "large offsets (up to several tens of eV/atom for heavy "
             "metals) reflect a PAW pseudopotential valence-electron "
@@ -92,7 +94,7 @@ TEXT = {
 def _longtable(caption: str, header: list[str], body: list[str]) -> str:
     ncol = len(header)
     lines = [
-        "\\begin{longtable}{@{}llrrrrrr@{}}",
+        "\\begin{longtable}{@{}ll l@{\\hspace{4pt}} rrrrr@{}}",
         f"\\caption{{{caption}}}\\\\",
         "\\toprule",
         " & ".join(header) + " \\\\",
@@ -121,8 +123,8 @@ def write(lang: str, df: pd.DataFrame) -> None:
         body.append(
             f"{r['element']} & {r['mp_id'] if pd.notna(r['mp_id']) else L['na']} & "
             f"{r['spacegroup'] if pd.notna(r['spacegroup']) else L['na']} & "
-            f"{fmt(r['mp_energy_per_atom_eV'])} & {fmt(r['campaign_energy_per_atom_eV'])} & "
-            f"{fmt(delta_meV, 1)} & {fmt(r['icohp_mean'])} & {fmt(r['antibond_w_normalized'])} \\\\"
+            f"{fmt(r['mp_energy_per_atom_eV'], 2)} & {fmt(r['campaign_energy_per_atom_eV'], 2)} & "
+            f"{fmt(delta_meV, 0)} & {fmt(r['icohp_mean'], 3)} & {fmt(r['antibond_w_normalized'], 3)} \\\\"
         )
     out = _longtable(L["caption"], L["header"], body)
     (HERE / f"appendix_elements_{lang}.tex").write_text(out)

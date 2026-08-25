@@ -548,18 +548,18 @@ signifie réalisé expérimentalement) :
 \toprule
  & endobondic & exobondic \\
 \midrule
-expérimental ($n=267$) & 79 & 188 \\
+expérimental ($n=271$) & 83 & 188 \\
 théorique seul ($n=244$) & 46 & 198 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Test exact de Fisher : $p=0,0054$, rapport de cotes $=1,81$ ---
-\textbf{significatif} (endobondic $\sim1,8\times$ plus fréquent parmi
+Test exact de Fisher : $p=0,0022$, rapport de cotes $=1,90$ ---
+\textbf{significatif} (endobondic $\sim1,9\times$ plus fréquent parmi
 les composés réalisés expérimentalement, le sens attendu). Mann--Whitney
 sur le $\Delta$ICOHP/atome continu, même partition : médiane
-expérimentale $-0,868$ eV, médiane théorique seule $-1,454$ eV (plus
-exobondic), $p=0,0109$ --- même sens, également significatif. C'est
+expérimentale $-0,833$ eV, médiane théorique seule $-1,454$ eV (plus
+exobondic), $p=0,0055$ --- même sens, également significatif. C'est
 exactement le résultat que les lots marginal-formation-energy et
 max-hull-distance ont été construits pour tester : la population poolée
 à 281 réactions n'avait pas assez de composés à stabilité limite pour
@@ -579,30 +579,30 @@ directement sur la même population que la Table~\ref{tab:fisher} :
 
 \begin{table}[htbp]
 \centering
-\caption{\texttt{ViabilityLabel} calculé (\texttt{classify\_viability()}) sur la même population que la Table~\ref{tab:fisher} ($n=518$).}
+\caption{\texttt{ViabilityLabel} calculé (\texttt{classify\_viability()}) sur la même population que la Table~\ref{tab:fisher} ($n=517$).}
 \label{tab:viability-check}
 \begin{tabular}{@{}lrr@{}}
 \toprule
- & expérimental ($n=267$) & théorique ($n=244$) \\
+ & expérimental ($n=271$) & théorique ($n=244$) \\
 \midrule
-\texttt{STABLE\_ON\_HULL}        & 233 & 131 \\
+\texttt{STABLE\_ON\_HULL}        & 237 & 131 \\
 \texttt{UNSTABLE\_NONEXISTENT}   & 26  & 95 \\
 \texttt{METASTABLE\_VIABLE}      & 8   & 17 \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.15cm}
-{\footnotesize 7 réactions supplémentaires (COD ou sans mp\_id, donc
+{\footnotesize 3 réactions supplémentaires (COD ou sans mp\_id, donc
 sans \texttt{formation\_energy\_per\_atom}) exclues, données
 insuffisantes.}
 \end{table}
 
 En regroupant \texttt{STABLE\_ON\_HULL}+\texttt{METASTABLE\_VIABLE}
 (\og{}viable\fg{}) contre \texttt{UNSTABLE\_NONEXISTENT} : test exact de
-Fisher $p=2,9\times10^{-15}$, rapport de cotes $\mathbf{6,0}$
-($\chi^2=59,0$, $p=1,6\times10^{-14}$) --- \textbf{un effet bien plus
+Fisher $p=2,3\times10^{-15}$, rapport de cotes $\mathbf{6,0}$
+($\chi^2=60,3$, $p=8,1\times10^{-15}$) --- \textbf{un effet bien plus
 large que le test fondé sur le seul signe} (Table~\ref{tab:fisher},
-$p=0,0054$, rapport de cotes 1,81). Un composé expérimentalement réalisé
+$p=0,0022$, rapport de cotes 1,90). Un composé expérimentalement réalisé
 a environ 6 fois moins de chances d'être prédit
 \texttt{UNSTABLE\_NONEXISTENT} qu'un composé théorique seul. \textbf{Des
 188 composés expérimentaux exobondic, 26 seulement sont prédits
@@ -665,8 +665,8 @@ antiliant de niveau réaction de la mission~4b, $\Delta$(ICOHP antiliant)
 --- jamais testé auparavant contre \texttt{ViabilityLabel}, seulement
 contre des cibles thermodynamiques continues --- discrimine lui aussi
 significativement les composés viables des non viables, globalement et
-dans chaque sous-groupe assez grand (Mann-Whitney $p=6,7\times10^{-12}$,
-Fisher $p=2,4\times10^{-7}$, Annexe~\ref{sec:antibonding-viability}).
+dans chaque sous-groupe assez grand (Mann-Whitney $p=3,7\times10^{-12}$,
+Fisher $p=2,0\times10^{-7}$, Annexe~\ref{sec:antibonding-viability}).
 
 \textbf{Toujours pas de SISSO à ce stade} : rapports détaillés,
 \texttt{analysis/REPORT\_antibonding.md},
@@ -951,7 +951,7 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     max-hull --- prochaine étape directe pour tester si cette partition
     plus fine devient elle aussi significative.
   \item \textbf{Le résultat \texttt{ViabilityLabel} (§\ref{sec:reframing},
-    $p=2,9\times10^{-15}$) n'a pas encore été vérifié pour un facteur de
+    $p=2,3\times10^{-15}$) n'a pas encore été vérifié pour un facteur de
     confusion} : ni stratifié par \texttt{bond\_type}/\texttt{is\_metal},
     ni distingué d'un effet de sélection (les polymorphes théoriques du
     lot max-hull ont été délibérément choisis loin au-dessus du hull).
@@ -999,9 +999,9 @@ référence indépendamment connues (CCC de Lin 0,999998) et s'applique à
 l'ensemble du jeu de données de ce rapport (517 réactions de
 décomposition en éléments). Sur cette population, la discrimination
 fondée sur le seul signe du $\Delta$ICOHP est significative
-(test de Fisher, $p=0,0054$) et la machinerie complète
+(test de Fisher, $p=0,0022$) et la machinerie complète
 \texttt{ViabilityLabel} --- signe combiné à la thermodynamique --- l'est
-beaucoup plus fortement encore ($p=2,9\times10^{-15}$, rapport de cotes
+beaucoup plus fortement encore ($p=2,3\times10^{-15}$, rapport de cotes
 6,0) : un composé expérimentalement réalisé a environ 6 fois moins de
 chances d'être prédit \texttt{UNSTABLE\_NONEXISTENT} qu'un composé
 théorique seul (\S\ref{sec:reframing}). L'ICOHP de réaction reste, par
@@ -1069,7 +1069,7 @@ Materials Project (boîte-dimère isolée construite à la main ; voir le
 références construites à la main, ZnSn et le polymorphe sphalérite de
 CaO).
 
-{\small
+{\scriptsize
 \input{appendix_elements_fr.tex}
 }
 
@@ -1465,16 +1465,16 @@ signe/continu de la mission~5.
 
 \begin{table}[htbp]
 \centering
-\caption{$\Delta$(ICOHP antiliant) contre la viabilité case-1, par sous-groupe ($n_\text{total}=434$).}
+\caption{$\Delta$(ICOHP antiliant) contre la viabilité case-1, par sous-groupe ($n_\text{total}=438$).}
 \label{tab:viability-antibonding}
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 Sous-groupe & $n$ viable & $n$ non viable & $p$ Mann-Whitney & OR Fisher & $p$ Fisher \\
 \midrule
-tous                     & 329 & 105 & $6,7\times10^{-12\,***}$ & 3,49 & $2,4\times10^{-7\,***}$ \\
-\texttt{bond\_type=métallique} & 125 & 65  & $0{,}0028^{**}$          & 2,20 & $0{,}021^{*}$ \\
-\texttt{is\_metal=True}      & 187 & 99  & $6,7\times10^{-5\,***}$  & 2,38 & $0{,}00099^{***}$ \\
-\texttt{is\_metal=False}     & 142 & 6\rlap{$^\dagger$}   & $0{,}012^{*}$            & 7,88 & $0{,}028^{*}$ \\
+tous                     & 333 & 105 & $3,7\times10^{-12\,***}$ & 3,54 & $2,0\times10^{-7\,***}$ \\
+\texttt{bond\_type=métallique} & 127 & 65  & $0{,}0021^{**}$          & 2,25 & $0{,}014^{*}$ \\
+\texttt{is\_metal=True}      & 189 & 99  & $5,1\times10^{-5\,***}$  & 2,41 & $0{,}00094^{***}$ \\
+\texttt{is\_metal=False}     & 144 & 6\rlap{$^\dagger$}   & $0{,}011^{*}$            & 8,00 & $0{,}027^{*}$ \\
 \bottomrule
 \end{tabular}
 
@@ -1484,7 +1484,7 @@ $^\dagger$seulement 6 composés non viables dans ce sous-groupe --- signalé,
 pas supprimé, selon la convention $n<15$ de ce projet.
 \texttt{bond\_type=covalent} (3 non viables) et \texttt{bond\_type=ionique}
 (1 non viable) sont trop petits pour être testés et sont omis. Médiane
-$\Delta$(ICOHP antiliant) : $0{,}0067$~eV (viable) contre
+$\Delta$(ICOHP antiliant) : $0{,}0069$~eV (viable) contre
 $3{,}2\times10^{-6}$~eV (non viable), tous sous-groupes confondus.}
 \end{table}
 

@@ -5,5 +5,7 @@
   "family": "hull",
   "bond_type": "metallic",
   "energy_above_hull_eV_per_atom": 0.0,
-  "num_sites": 2
+  "num_sites": 2,
+  "theoretical": false,
+  "spacegroup": "Pm-3m"
 }
