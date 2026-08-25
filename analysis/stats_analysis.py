@@ -5,8 +5,8 @@ ICOHP aggregates for comparison, and a small reference logistic regression
 (stable vs metastable) with cross-validated AUC. No SISSO, no symbolic
 regression -- see the mission brief for why.
 
-Writes analysis/stats_summary.json (all numbers, for REPORT.md to quote)
-and PNG figures under analysis/figures/.
+Writes analysis/stats_summary.json (all numbers) and PNG figures under
+analysis/figures/.
 """
 
 import json

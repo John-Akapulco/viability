@@ -1,5 +1,5 @@
-"""Diagnostic figure for REPORT_dimensionality_mincut.md §5 (2026-08-16):
-scatter of mincut_icohp_min_normalized vs. formation_energy_per_atom,
+"""Diagnostic figure (2026-08-16): scatter of
+mincut_icohp_min_normalized vs. formation_energy_per_atom,
 colored by which population a compound belongs to (original 186 /
 elemental references added for reaction_icohp.py / extension4's
 experimental half / extension4's deliberately far-above-hull half) --
@@ -69,7 +69,7 @@ def main():
         )
     ax.set_xlabel("Formation energy (eV/atom)")
     ax.set_ylabel("Min-cut, normalized")
-    ax.set_title("Periodic min-cut vs. formation energy, by population\n(REPORT_dimensionality_mincut.md §5)")
+    ax.set_title("Periodic min-cut vs. formation energy, by population")
     ax.legend(fontsize=8, loc="upper left")
     fig.tight_layout()
     OUT.parent.mkdir(exist_ok=True)

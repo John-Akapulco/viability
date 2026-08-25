@@ -1,5 +1,5 @@
-"""Follow-up to REPORT_dimensionality_mincut.md's §5.3/§6 open question: is
-the extension4 theo_far_hull subset's opposite-sign mincut-vs-formation-
+"""Follow-up open question: is the extension4 theo_far_hull subset's
+opposite-sign mincut-vs-formation-
 energy correlation (rho=-0.40, p=0.011, n=39) a real far-from-hull physical
 effect, a cell-size/symmetry selection artifact of "highest energy_above_hull
 per formula, nsites<=40" (download_extension4.py), or a between-chemistry
