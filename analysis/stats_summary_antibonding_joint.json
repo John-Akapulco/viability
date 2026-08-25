@@ -272,8 +272,8 @@
         "group": "all",
         "metric": "delta_icohp_antibond",
         "target": "formation_energy_per_atom",
-        "n": 434,
-        "rho": -0.6175,
+        "n": 438,
+        "rho": -0.6225,
         "p_value": 0.0,
         "note": null
       },
@@ -290,8 +290,8 @@
         "group": "bond_type=ionic",
         "metric": "delta_icohp_antibond",
         "target": "formation_energy_per_atom",
-        "n": 87,
-        "rho": -0.6337,
+        "n": 89,
+        "rho": -0.6301,
         "p_value": 0.0,
         "note": null
       },
@@ -299,8 +299,8 @@
         "group": "bond_type=metallic",
         "metric": "delta_icohp_antibond",
         "target": "formation_energy_per_atom",
-        "n": 286,
-        "rho": -0.4316,
+        "n": 288,
+        "rho": -0.4359,
         "p_value": 0.0,
         "note": null
       },
@@ -317,8 +317,8 @@
         "group": "is_metal=False",
         "metric": "delta_icohp_antibond",
         "target": "formation_energy_per_atom",
-        "n": 148,
-        "rho": -0.6459,
+        "n": 150,
+        "rho": -0.6466,
         "p_value": 0.0,
         "note": null
       },
@@ -326,8 +326,8 @@
         "group": "is_metal=True",
         "metric": "delta_icohp_antibond",
         "target": "formation_energy_per_atom",
-        "n": 286,
-        "rho": -0.4316,
+        "n": 288,
+        "rho": -0.4359,
         "p_value": 0.0,
         "note": null
       }
@@ -337,8 +337,8 @@
         "group": "all",
         "metric": "delta_icobi_antibond",
         "target": "formation_energy_per_atom",
-        "n": 434,
-        "rho": -0.427,
+        "n": 438,
+        "rho": -0.4292,
         "p_value": 0.0,
         "note": null
       },
@@ -355,17 +355,17 @@
         "group": "bond_type=ionic",
         "metric": "delta_icobi_antibond",
         "target": "formation_energy_per_atom",
-        "n": 87,
-        "rho": -0.2245,
-        "p_value": 0.0366,
+        "n": 89,
+        "rho": -0.2258,
+        "p_value": 0.0333,
         "note": null
       },
       {
         "group": "bond_type=metallic",
         "metric": "delta_icobi_antibond",
         "target": "formation_energy_per_atom",
-        "n": 286,
-        "rho": -0.355,
+        "n": 288,
+        "rho": -0.3602,
         "p_value": 0.0,
         "note": null
       },
@@ -382,8 +382,8 @@
         "group": "is_metal=False",
         "metric": "delta_icobi_antibond",
         "target": "formation_energy_per_atom",
-        "n": 148,
-        "rho": -0.4131,
+        "n": 150,
+        "rho": -0.4128,
         "p_value": 0.0,
         "note": null
       },
@@ -391,8 +391,8 @@
         "group": "is_metal=True",
         "metric": "delta_icobi_antibond",
         "target": "formation_energy_per_atom",
-        "n": 286,
-        "rho": -0.355,
+        "n": 288,
+        "rho": -0.3602,
         "p_value": 0.0,
         "note": null
       }
@@ -401,8 +401,8 @@
       "group": "all",
       "metric": "delta_icohp_antibond",
       "target": "formation_energy_per_atom",
-      "n": 434,
-      "rho": -0.6175,
+      "n": 438,
+      "rho": -0.6225,
       "p_value": 0.0,
       "note": null
     },
@@ -410,8 +410,8 @@
       "group": "all",
       "metric": "delta_icobi_antibond",
       "target": "formation_energy_per_atom",
-      "n": 434,
-      "rho": -0.427,
+      "n": 438,
+      "rho": -0.4292,
       "p_value": 0.0,
       "note": null
     },
