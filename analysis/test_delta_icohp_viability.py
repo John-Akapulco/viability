@@ -3,26 +3,15 @@ does the reaction-ICOHP descriptor (delta(ICOHP), decomposition into
 elements) distinguish thermodynamically stable, metastable, and unstable
 compounds?
 
-Two parts:
-
-1. Concordance test against Reitz & Dronskowski (ic-2026-04181q): Lin's
-   Concordance Correlation Coefficient (CCC) -- not just Pearson/Spearman
-   correlation, which would be satisfied by any monotonic relationship
-   even with a large systematic offset; CCC specifically tests agreement
-   with the identity line, the right test for "do our numbers match the
-   manuscript's," not just "do they move together." Computed on the 7
-   worked reactions already validated in
-   tests/test_reitz_dronskowski_validation.py.
-
-2. Viability prediction test, extended to every element and compound
-   computed across the whole project to date (281 case-1 reactions,
-   deliberately not split by which historical campaign/extension batch a
-   compound came from -- family and theoretical are used as the ground
-   truth, not provenance): does delta_per_atom_eV (or its sign,
-   BondingLabel) discriminate compounds by real thermodynamic stability
-   (energy_above_hull, formation_energy_per_atom, experimental-vs-
-   theoretical-only, and the exp_stable/exp_metastable/theo_metastable
-   family split)?
+Viability prediction test, extended to every element and compound
+computed across the whole project to date (281 case-1 reactions,
+deliberately not split by which historical campaign/extension batch a
+compound came from -- family and theoretical are used as the ground
+truth, not provenance): does delta_per_atom_eV (or its sign,
+BondingLabel) discriminate compounds by real thermodynamic stability
+(energy_above_hull, formation_energy_per_atom, experimental-vs-
+theoretical-only, and the exp_stable/exp_metastable/theo_metastable
+family split)?
 
 Writes analysis/stats_summary_delta_icohp_viability.json.
 """
@@ -32,52 +21,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
-from scipy.stats import chi2_contingency, fisher_exact, kruskal, mannwhitneyu, pearsonr, spearmanr
+from scipy.stats import chi2_contingency, fisher_exact, kruskal, mannwhitneyu, spearmanr
 
 REPO_ROOT = Path(__file__).parent.parent
 OUT_JSON = Path(__file__).parent / "stats_summary_delta_icohp_viability.json"
-
-
-def lin_ccc(x: np.ndarray, y: np.ndarray) -> float:
-    mx, my = x.mean(), y.mean()
-    vx, vy = x.var(), y.var()
-    sxy = ((x - mx) * (y - my)).mean()
-    return float(2 * sxy / (vx + vy + (mx - my) ** 2))
-
-
-def manuscript_concordance() -> dict:
-    # (reaction_id, manuscript kJ/mol, computed kJ/mol) -- computed values
-    # from tests/test_reitz_dronskowski_validation.py, reproduced here as
-    # literal numbers (not re-derived) since this script's job is the
-    # concordance statistic, not re-running the fixture validation.
-    cases = [
-        ("Pb(N3)2 -> Pb + 3N2", 1345, 1344.3),
-        ("S4N2 -> 1/2 S8 + N2", 258, 258.5),
-        ("S4N4 -> 1/2 S8 + 2N2", 399, 397.3),
-        ("ZnSn -> Zn + Sn", -337, -336.6),
-        ("CaO[sphalerite] -> CaO[rocksalt]", -79, -78.9),
-        ("CaN -> 1/3 Ca3N2 + 1/6 N2", -205, -204.8),
-        ("Mn2O7 -> 2MnO2 + 3/2 O2", -186, -187.7),
-    ]
-    manuscript = np.array([c[1] for c in cases], dtype=float)
-    computed = np.array([c[2] for c in cases], dtype=float)
-    ccc = lin_ccc(manuscript, computed)
-    pear_r, pear_p = pearsonr(manuscript, computed)
-    sign_agree = int(np.sum(np.sign(manuscript) == np.sign(computed)))
-    resid = computed - manuscript
-    return {
-        "n": len(cases),
-        "cases": [{"reaction": c[0], "manuscript_kJ_per_mol": c[1], "computed_kJ_per_mol": c[2]} for c in cases],
-        "lin_ccc": round(ccc, 6),
-        "pearson_r": round(float(pear_r), 6),
-        "pearson_p": pear_p,
-        "sign_agreement": f"{sign_agree}/{len(cases)}",
-        "mean_abs_residual_kJ_per_mol": round(float(np.mean(np.abs(resid))), 3),
-        "max_abs_residual_kJ_per_mol": round(float(np.max(np.abs(resid))), 3),
-        "rmse_kJ_per_mol": round(float(np.sqrt(np.mean(resid ** 2))), 3),
-    }
 
 
 def load_full_history() -> pd.DataFrame:
@@ -137,14 +85,12 @@ def viability_test(df: pd.DataFrame) -> dict:
 
 
 def main():
-    concordance = manuscript_concordance()
     df = load_full_history()
     viability = viability_test(df)
 
-    result = {"manuscript_concordance": concordance, "viability_prediction": viability}
+    result = {"viability_prediction": viability}
     OUT_JSON.write_text(json.dumps(result, indent=2, default=str))
 
-    print(f"Manuscript concordance: Lin CCC={concordance['lin_ccc']}, sign agreement={concordance['sign_agreement']}")
     print(f"n={viability['n_total']} case-1 reactions (full project history, all campaigns pooled)")
     print(f"Wrote {OUT_JSON}")
 

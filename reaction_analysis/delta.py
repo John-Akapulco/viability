@@ -35,11 +35,10 @@ A malformed/unbalanced reaction likewise never raises out of
 compute_delta(): the ReactionResult.error field carries the reason.
 
 ReactionResult.bonding_label is classify.classify_bonding() applied to
-delta_per_formula_unit_eV (Reitz & Dronskowski, ic-2026-04181q -- see
-classify.py) -- endobondic/exobondic uses this module's own sign
-convention directly (products - reactants), with no flip, since it
-matches the manuscript's own ΔICOHP definition. None when
-delta_per_formula_unit_eV is NaN (unbalanced/missing-data reaction).
+delta_per_formula_unit_eV (see classify.py) -- endobondic/exobondic uses
+this module's own sign convention directly (products - reactants), with
+no flip. None when delta_per_formula_unit_eV is NaN (unbalanced/missing-
+data reaction).
 """
 
 from __future__ import annotations

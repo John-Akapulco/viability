@@ -1,15 +1,14 @@
 """Endobondic/exobondic bonding classification and the (deliberately more
-cautious) viability read built on top of it, per Reitz & Dronskowski
-(ic-2026-04181q) -- see reaction_analysis package docs / mission notes for
-the manuscript's own definitions. This module never imports pymatgen or
-touches real LOBSTER/DFT data; it operates purely on a delta_icohp (and,
-for the viability label, a delta_energy) already computed elsewhere
-(delta.py).
+cautious) viability read built on top of it -- see reaction_analysis
+package docs / mission notes for the definitions. This module never
+imports pymatgen or touches real LOBSTER/DFT data; it operates purely on
+a delta_icohp (and, for the viability label, a delta_energy) already
+computed elsewhere (delta.py).
 
 Sign convention: delta_icohp = ICOHP_sum(products) - ICOHP_sum(reactants)
-(the manuscript's own convention, and exactly this package's delta.py
-convention already -- no sign flip needed at this boundary, unlike the
-reaction_icohp.py module elsewhere in this project).
+(exactly this package's delta.py convention already -- no sign flip
+needed at this boundary, unlike the reaction_icohp.py module elsewhere
+in this project).
 
   delta_icohp > 0 -> ENDOBONDIC: breaking the reactant's bonds costs more
     than the products' bonds recover -- a bonding-derived kinetic barrier
@@ -48,7 +47,7 @@ class ViabilityLabel(str, Enum):
 
 _KINETICS_CAVEAT = (
     "exobondic sign means no bonding-derived kinetic barrier was found, "
-    "but per Reitz & Dronskowski (ic-2026-04181q) this never proves the "
+    "but this never proves the "
     "compound cannot exist -- slow, non-bond-breaking decomposition "
     "pathways (e.g. Mn2O7's gradual O2 loss) are not captured by this "
     "static sign criterion; check the literature before concluding "

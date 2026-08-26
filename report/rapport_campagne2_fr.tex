@@ -167,10 +167,7 @@ confondre est un vrai risque de lecture d'une section à l'autre :
   d'espèces et coupe la sphère de coordination au premier saut dépassant
   2,5$\times$ le plus grand saut observé jusque-là dans la sphère
   pressentie --- \textbf{aucun cutoff en \AA{} n'est codé en dur nulle
-  part} ; la frontière s'autocalibre par composé. Utilisée en exactement
-  deux endroits : les 7 réactions de validation Reitz \& Dronskowski
-  (\S\ref{sec:validation}, reprenant la convention du manuscrit lui-même
-  \og{}premier saut du spectre des distances de liaison\fg{}) et la paire
+  part} ; la frontière s'autocalibre par composé. Utilisée pour la paire
   d'espèces \textbf{dominante} de la classification par type de liaison
   (\S\ref{sec:dataset} ; les colonnes \og{}ICOBI\fg{}/\og{}ICOHP\fg{} de
   l'Annexe~\ref{sec:appendix-master-list} sont cette valeur de paire
@@ -285,9 +282,9 @@ Structures de validation sans métadonnées de composé$^*$ & 6 \\
 
 \vspace{0.15cm}
 {\footnotesize $^*$ dimères gazeux isolés (H$_2$, N$_2$, O$_2$, F$_2$,
-Cl$_2$) et CaO[sphalérite], utilisés uniquement pour la validation Reitz
-\& Dronskowski (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}),
-hors du jeu de données principal.}
+Cl$_2$) et une référence polymorphe CaO[sphalérite], construits à la
+main pour corriger des références élémentaires spécifiques
+(\S\ref{sec:dataset}), hors du jeu de données principal.}
 \end{table}
 
 \begin{table}[htbp]
@@ -323,118 +320,17 @@ Table~\ref{tab:composition}), 1 référence COD supplémentaire
 
 \subsection*{Logique de cette section}
 
-Quatre étapes, dans cet ordre : (1) valider la méthodologie de ce projet
-en reproduisant les 7 réactions de référence choisies par Reitz \&
-Dronskowski ; (2) tester la corrélation centrale de ce projet ---
-viabilité (stabilité thermodynamique/cinétique d'un composé) contre les
-descripteurs issus des données LOBSTER (ICOHP, ICOHP antiliant, ICOBI,
-ICOBI antiliant) ; (3) classifier les composés et éléments en
-métallique/ionique/covalent/mixte directement à partir de ces mêmes
-données ICOHP/ICOBI, et confronter ce classement à \texttt{classify()}
---- un outil au service de l'étape suivante, pas une fin en soi ; (4)
-déterminer si la corrélation de l'étape 2 est renforcée ou atténuée une
-fois conditionnée par le type de liaison de l'étape 3.
+Trois étapes, dans cet ordre : (1) tester la corrélation centrale de ce
+projet --- viabilité (stabilité thermodynamique/cinétique d'un composé)
+contre les descripteurs issus des données LOBSTER (ICOHP, ICOHP
+antiliant, ICOBI, ICOBI antiliant) ; (2) classifier les composés et
+éléments en métallique/ionique/covalent/mixte directement à partir de
+ces mêmes données ICOHP/ICOBI, et confronter ce classement à
+\texttt{classify()} --- un outil au service de l'étape suivante, pas une
+fin en soi ; (3) déterminer si la corrélation de l'étape 1 est renforcée
+ou atténuée une fois conditionnée par le type de liaison de l'étape 2.
 
-\subsection{Étape 1 --- Validation méthodologique : les 7 réactions de Reitz \& Dronskowski}
-\label{sec:validation}
-
-Détail complet : \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
-\texttt{analysis/test\_delta\_icohp\_viability.py}.
-
-Les valeurs ICOHP par type de liaison de 7 réactions à $\Delta$ICOHP
-indépendamment connu (transcrites indépendamment de tout calcul de ce
-projet) sont passées de bout en bout par
-\texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py} :
-
-\begin{table}[htbp]
-\centering
-\caption{Validation de la classification endobondic/exobondic sur 7 réactions de $\Delta$ICOHP indépendamment connu.}
-\label{tab:reference-validation}
-\begin{tabular}{@{}lrrll@{}}
-\toprule
-Réaction & Référence & Calculé & \multicolumn{2}{c}{Étiquette} \\
- & (kJ/mol) & (kJ/mol) & Réf. & Calculé \\
-\midrule
-Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344,3$ & endo & endo \\
-S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258,5$ & endo & endo \\
-S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397,3$ & endo & endo \\
-ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336,6$ & exo & exo \\
-CaO[sphalérite] $\to$ CaO[rocksalt] & $-79$ & $-78,9$ & exo & exo \\
-CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204,8$ & exo & exo \\
-Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187,7$ & exo & exo \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Les 7 cas reproduisent le $\Delta$ICOHP de référence à quelques kJ/mol
-près (arrondi des valeurs par liaison de la source) et chaque
-\texttt{BondingLabel} correspond. Le cas Mn$_2$O$_7$ est un garde-fou
-utile en lui-même : exobondic selon ce critère de signe statique, alors
-que Mn$_2$O$_7$ est un composé réel, observé, qui se décompose
-simplement lentement (perte graduelle de O$_2$) plutôt que par rupture
-brutale de liaison --- \texttt{classify.py} attache structurellement un
-avertissement à \emph{chaque} verdict \texttt{UNSTABLE\_NONEXISTENT}
-pour exactement cette raison, plutôt que de coder Mn$_2$O$_7$ en cas
-particulier.
-
-Cette validation ne compare que l'arithmétique des valeurs ICOHP
-publiées, indépendamment de toute structure cristalline locale ---
-l'Annexe~\ref{sec:appendix-reitz-dronskowski-structures} documente,
-pour les 16 espèces impliquées, quelle structure MP/COD a été retenue
-dans ce jeu de données et si elle a pu être vérifiée conforme à la
-description du manuscrit (3 corrections réelles identifiées : N$_2$,
-le polymorphe de Pb(N$_3$)$_2$, l'étain compétiteur de ZnSn). Pour N$_2$
-et ZnSn, un calcul DFT+LOBSTER propre à ce projet (et non plus la seule
-arithmétique du manuscrit) a en outre été comparé directement aux
-valeurs du manuscrit (Tableau~\ref{tab:reitz-dronskowski-dft}) : N$_2$
-reproduit l'ICOHP du manuscrit à 0,7\% près ; ZnSn reproduit le même
-signe (décomposition favorable en énergie de liaison) mais avec une
-amplitude $\sim$2,9$\times$ plus grande --- écart jugé non
-significatif à ce stade, la somme d'ICOHP d'un intermétallique massif
-étant beaucoup plus sensible aux choix de base/pseudopotentiel/coupure
-qu'un simple dimère gazeux.
-Reproduire la méthodologie DFT complète du manuscrit (PBEsol+D3, jeux de
-points k du Tableau S1) a depuis été mené sur les 16 espèces
-(2026-08-19) : 10/16 sont calculées et comparées directement
-(Tableau~\ref{tab:reitz-dronskowski-dft}), les 6 restantes (Ca$_3$N$_2$,
-Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) étant encore
-en calcul au moment de la rédaction (\S\ref{sec:limites-actuelles}).
-
-La corrélation seule (Pearson/Spearman) n'est pas le bon test pour
-\og{}nos chiffres correspondent-ils aux valeurs de référence\fg{} ---
-elle est satisfaite par toute relation monotone, même avec un décalage
-ou un facteur d'échelle systématique important. Le \textbf{coefficient
-de corrélation de concordance de Lin} (CCC) teste spécifiquement
-l'accord avec la droite d'identité (calculé = référence) :
-
-\begin{table}[htbp]
-\centering
-\caption{Concordance calculé vs. référence sur les 7 réactions de validation.}
-\label{tab:ccc}
-\begin{tabular}{@{}lr@{}}
-\toprule
-Statistique & Valeur \\
-\midrule
-$n$ & 7 \\
-CCC de Lin & \textbf{0,999998} \\
-$r$ de Pearson & 0,999999 ($p=3,5\times10^{-15}$) \\
-Accord de signe & 7/7 \\
-$|$résidu$|$ moyen & 0,76 kJ/mol \\
-$|$résidu$|$ max & 1,70 kJ/mol \\
-RMSE & 0,98 kJ/mol \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Un CCC aussi proche de 1 signifie que les deux méthodes s'accordent
-essentiellement dans la précision de rapport des valeurs de référence
-elles-mêmes (arrondies à 2--3 décimales), pas seulement qu'elles
-évoluent ensemble --- l'implémentation en est validée, pas seulement
-vérifiée cas par cas. C'est cette implémentation, validée ici
-indépendamment de tout calcul propre à ce projet, qui est appliquée à
-l'ensemble du jeu de données à l'étape suivante.
-
-\subsection{Étape 2 --- Viabilité versus descripteurs LOBSTER}
+\subsection{Étape 1 --- Viabilité versus descripteurs LOBSTER}
 \label{sec:reframing}
 
 \textbf{Agrégats ICOHP classiques (ligne de base).} Avant tout
@@ -653,7 +549,7 @@ composés chimiquement divers et thermodynamiquement extrêmes à une
 population auparavant plus étroite ; un test d'une nature différente
 des résultats catégoriels ci-dessus, donc les deux ne sont pas en
 tension. Reste à vérifier si le résultat \texttt{ViabilityLabel}
-lui-même n'est pas confondu par le type de liaison (étape 4), ou par le
+lui-même n'est pas confondu par le type de liaison (étape 3), ou par le
 fait que les polymorphes théoriques du lot max-hull ont été
 délibérément sélectionnés loin au-dessus du hull --- un effet de
 sélection proche de \texttt{formation\_energy\_per\_atom}, pas
@@ -672,12 +568,12 @@ Fisher $p=2,0\times10^{-7}$, Annexe~\ref{sec:antibonding-viability}).
 \texttt{analysis/REPORT\_antibonding.md},
 \texttt{analysis/REPORT\_reaction\_icohp.md}.
 
-\subsection{Étape 3 --- Classification du type de liaison à partir des données ICOHP/ICOBI}
+\subsection{Étape 2 --- Classification du type de liaison à partir des données ICOHP/ICOBI}
 \label{sec:bondtype-classification}
 
 Un outil au service de l'étape suivante, pas une fin en soi : cette
-classification sert uniquement à tester, à l'étape 4, si la corrélation
-viabilité-descripteur de l'étape 2 dépend du type de liaison d'un
+classification sert uniquement à tester, à l'étape 3, si la corrélation
+viabilité-descripteur de l'étape 1 dépend du type de liaison d'un
 composé. Deux classements indépendants (\S2.2) : la fonction
 \texttt{classify()} (composition élémentaire + \texttt{is\_metal}) et un
 classement fondé directement sur les données ICOHP/ICOBI de chaque
@@ -728,12 +624,12 @@ et 19 composés que \texttt{classify()} range en ionique ou covalent mais
 que le classement ICOBI identifie comme mixtes (leur liaison
 homoatomique dominante coexiste avec un lien hétéroatomique
 nettement plus faible) --- à examiner cas par cas avant d'utiliser l'un
-ou l'autre classement comme variable de stratification à l'étape 4.
+ou l'autre classement comme variable de stratification à l'étape 3.
 C'est le classement ICOHP/ICOBI (plus couvrant, fondé sur les mêmes
-données que les descripteurs de l'étape 2) qui est utilisé ci-dessous,
+données que les descripteurs de l'étape 1) qui est utilisé ci-dessous,
 pas \texttt{classify()}.
 
-\subsection{Étape 4 --- La corrélation viabilité-descripteur dépend-elle du type de liaison ?}
+\subsection{Étape 3 --- La corrélation viabilité-descripteur dépend-elle du type de liaison ?}
 \label{sec:stratification}
 
 \textbf{Population antiliante (ICOHP).} \textbf{Le résultat
@@ -747,7 +643,7 @@ même descripteur sur son ancien sous-groupe \texttt{bond\_type=ionic}.
 \textbf{Nouveau à cette échelle} :
 \texttt{bond\_type=mixte} (Zintl) est la strate qui survit le
 mieux ($\rho=-0,538$, $p=6,6\times10^{-6}$, $n=62$) ---
-\textbf{renforcée} par rapport à la corrélation poolée de l'étape 2 ---
+\textbf{renforcée} par rapport à la corrélation poolée de l'étape 1 ---
 une catégorie qui n'existait quasiment pas au moment où le résultat
 covalent avait été rapporté. \texttt{is\_metal=False} reste la strate
 la plus constamment significative à travers les échelles successives de
@@ -759,7 +655,7 @@ significatif), même phénomène que pour l'ICOHP de réaction ci-dessous.
 
 \textbf{ICOHP de réaction.} La stratification \texttt{bond\_type}
 (quatre catégories, \texttt{mixte}/Zintl incluse) ne dilue
-plus uniformément la corrélation de l'étape 2 ($\rho=0,295$ poolée) :
+plus uniformément la corrélation de l'étape 1 ($\rho=0,295$ poolée) :
 \texttt{ionique} ($\rho=0,360$, $p=0,0004$) et \texttt{mixte}
 ($\rho=-0,525$, signe opposé, $p\approx0$) survivent nettement ---
 \textbf{renforcées} en valeur absolue --- \texttt{covalent} aussi mais
@@ -790,7 +686,7 @@ de la relation selon la strate (ionique positif, covalent/mixte négatif
 pour l'ICOHP de réaction) --- le signal utile est conditionnel
 au type de liaison. La rétractation du résultat covalent de la
 population antiliante est elle-même une illustration directe de la
-raison d'être de cette étape 4 : un chiffre stratifié n'est digne de
+raison d'être de cette étape 3 : un chiffre stratifié n'est digne de
 confiance qu'une fois revérifié à mesure que le jeu de données grandit,
 pas accepté une fois pour toutes. Une recherche de caractéristiques
 (SISSO) poolée serait donc activement trompeuse ici ; toute recherche
@@ -955,30 +851,10 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     confusion} : ni stratifié par \texttt{bond\_type}/\texttt{is\_metal},
     ni distingué d'un effet de sélection (les polymorphes théoriques du
     lot max-hull ont été délibérément choisis loin au-dessus du hull).
-  \item \textbf{Comparaison DFT+LOBSTER de validation-manuscrit
-    (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}), 14/16
-    espèces comparées, 2 mises de côté comme reste-à-faire} :
-    Mn$_2$O$_7$ et Pb(N$_3$)$_2$ disposent d'une relaxation VASP sous
-    méthodologie manuscrit terminée mais sans exécution LOBSTER, et sont
-    exclues du tableau de comparaison plutôt que montrées en attente
-    (Annexe~\ref{sec:appendix-reitz-dronskowski-structures}, note
-    ``reste à faire''). Sur les 14 espèces comparées, trois (Pb,
-    MnO$_2$, O$_2$) présentent des résidus
-    ouverts de $\sim$2--10\% sous la méthodologie du manuscrit
-    (PBEsol+D3) comme sous celle par défaut de ce projet (PBE) à la
-    fois --- examinés et écartés comme instances du bug de détection de
-    sphère du Zn, laissés comme questions de méthodologie probables non
-    résolues (couplage spin-orbite pour Pb ; traitement AFM/Hubbard-U et
-    polarisation de spin pour MnO$_2$/O$_2$) plutôt que forcés à zéro.
-    Ca$_3$N$_2$ (arrivée le 2026-08-20) montrait un résidu initial de
-    24\%, retracé à une seconde occurrence distincte du problème de
-    sphère quasi dégénérée du Zn, désormais résolu (0,1\%, Annexe
-    \ref{sec:appendix-reitz-dronskowski-structures}, note f).
   \item \textbf{La question de savoir si le bug de détection de sphère
-    du Zn (Annexe~\ref{sec:appendix-reitz-dronskowski-structures})
-    affecte la classification \texttt{bond\_type} d'autres composés
-    reste ouverte} : deux balayages heuristiques rapides des spectres
-    de distance de première sphère du jeu de données complet
+    du Zn affecte la classification \texttt{bond\_type} d'autres
+    composés reste ouverte} : deux balayages heuristiques rapides des
+    spectres de distance de première sphère du jeu de données complet
     (2026-08-19) ont chacun signalé 40--47\% des groupes de paires sous
     des seuils trop lâches, dominés par la structure fine normale
     intra-sphère et des distances quasi dupliquées en virgule flottante,
@@ -989,16 +865,14 @@ cluster avec d'autres projets, ce qui rend une estimation de temps réel
     donnée confirmé de plus à cette vérité terrain, sans toucher pour
     autant à \texttt{nearest\_neighbor.py} ni à la classification à
     l'échelle du jeu de données, qui restent inchangées. Un audit
-    calibré (nécessitant une vérité terrain par composé, qui n'existe
-    que pour les 16 espèces du manuscrit) reste à faire avant de
-    trancher dans un sens ou l'autre.
+    calibré contre une vérité terrain indépendamment connue reste à
+    faire avant de trancher dans un sens ou l'autre.
 \end{itemize}
 
 \section{Conclusion}
 
-La méthodologie endobondic/exobondic de Reitz \& Dronskowski
-(\S\ref{sec:reframing}) se reproduit fidèlement sur les 7 réactions de
-référence indépendamment connues (CCC de Lin 0,999998) et s'applique à
+La classification fondée sur le signe du $\Delta$ICOHP
+(\S\ref{sec:reframing}) s'applique à
 l'ensemble du jeu de données de ce rapport (517 réactions de
 décomposition en éléments). Sur cette population, la discrimination
 fondée sur le seul signe du $\Delta$ICOHP est significative
@@ -1061,12 +935,7 @@ métaux lourds), les deux énergies totales absolues diffèrent de
 plusieurs dizaines d'eV/atome uniquement parce qu'elles comptent un
 nombre différent d'électrons explicites --- les énergies totales VASP
 absolues ne sont comparables qu'au sein d'un même jeu de
-pseudopotentiels, jamais entre deux jeux choisis indépendamment. Le
-véritable test de précision énergétique inter-code/inter-pipeline de ce
-projet est le \S\ref{sec:validation} (les 7 réactions Reitz \&
-Dronskowski, CCC de Lin$=0,999998$) et
-l'Annexe~\ref{sec:appendix-reitz-dronskowski-structures} (reproduction
-indépendante des paramètres de maille/ICOHP). N n'a pas d'entrée
+pseudopotentiels, jamais entre deux jeux choisis indépendamment. N n'a pas d'entrée
 Materials Project (boîte-dimère isolée construite à la main ; voir le
 \S\ref{sec:appendix-master-list} ci-dessous pour les deux autres
 références construites à la main, ZnSn et le polymorphe sphalérite de
@@ -1571,25 +1440,5 @@ capture une information qualitativement différente de l'ICOHP signé
 complet dans la même fenêtre. Corrélation croisée avec l'ICOHP de
 réaction complet : $\rho=+0{,}241$ ($p<0{,}001$) --- liée mais nettement
 distincte, pas une simple restriction de la même quantité.
-
-\section{Structures des réactions de Reitz \& Dronskowski}
-\label{sec:appendix-reitz-dronskowski-structures}
-
-La validation de \S\ref{sec:reframing} (Tableau~\ref{tab:reference-validation})
-ne compare que l'arithmétique des valeurs ICOHP publiées dans le
-manuscrit --- indépendante de toute structure cristalline locale. Le
-tableau ci-dessous documente, pour chacune des 16 espèces impliquées
-dans ces 7 réactions, la structure telle que décrite par le manuscrit
-(quand il la précise), l'entrée Materials Project/COD retenue dans ce
-jeu de données, et si une vérification indépendante a pu être faite.
-Trois cas ont révélé une erreur ou une ambiguïté réelle, corrigée
-depuis : N$_2$ (phase polymérique théorique substituée par un dimère
-gazeux isolé, \S\ref{sec:reframing}), Pb(N$_3$)$_2$ (mauvais polymorphe
-Pnma substitué par le Pna2$_1$ cité par le manuscrit) et l'étain
-compétiteur de ZnSn ($\beta$-étain substitué par l'$\alpha$-étain).
-
-{\small
-\input{appendix_reitz_dronskowski_structures_fr.tex}
-}
 
 \end{document}

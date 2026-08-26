@@ -1,3 +1,0 @@
-Starting structure: gasref_CaO_sphalerite (mp_dataset/structures/gasref_CaO_sphalerite/POSCAR)
-Workflow: standard
-k-points (Table S1): (11, 11, 11)

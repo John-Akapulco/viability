@@ -12,5 +12,5 @@
   "nsites": 2,
   "spacegroup": "Fd-3m",
   "requested_spacegroup": "Fd-3m",
-  "note": "diamond-cubic alpha-Sn (gray tin) -- the allotrope Reitz & Dronskowski use for ZnSn's competing phase (Fd-3m); distinct from extension_Sn_mp-623511 (I4/mmm, beta-Sn/white tin), already in this dataset for unrelated reactions"
+  "note": "diamond-cubic alpha-Sn (gray tin), ZnSn's competing phase (Fd-3m); distinct from extension_Sn_mp-623511 (I4/mmm, beta-Sn/white tin), already in this dataset for unrelated reactions"
 }

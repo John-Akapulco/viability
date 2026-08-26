@@ -14,9 +14,7 @@ PAW potential with more valence electrons treated explicitly (e.g. a
 consequence of comparing raw absolute VASP total energies across
 different pseudopotential valence-electron conventions, not a DFT-
 pipeline error: absolute total energies are only meaningful within one
-consistent potential set. The caption says so explicitly and points to
-the real cross-code accuracy check elsewhere in the report (the 7
-Reitz & Dronskowski reactions, Sec. 6.1, CCC=0.999998).
+consistent potential set. The caption says so explicitly.
 
 Writes appendix_elements_{fr,en}.tex.
 """
@@ -59,9 +57,7 @@ TEXT = {
             "valence, variantes \\texttt{\\_d}/\\texttt{\\_pv}/\\texttt{\\_sv}) "
             "et NON une erreur du pipeline DFT : les \\'energies totales "
             "absolues ne sont comparables qu'au sein d'un m\\^eme jeu de "
-            "pseudopotentiels. Le v\\'eritable test de coh\\'erence "
-            "\\'energ\\'etique inter-codes de ce projet est le \\S6.1 (7 "
-            "r\\'eactions Reitz \\& Dronskowski, CCC=0,999998). N n'a pas "
+            "pseudopotentiels. N n'a pas "
             "d'entr\\'ee MP (bo\\^ite-dim\\`ere construite \\`a la main, "
             "\\S\\ref{sec:appendix-master-list})."
         ),
@@ -81,9 +77,7 @@ TEXT = {
             "included, \\texttt{\\_d}/\\texttt{\\_pv}/\\texttt{\\_sv} "
             "variants), NOT a DFT-pipeline error: absolute total "
             "energies are only meaningful within one consistent "
-            "pseudopotential set. This project's real cross-code energy "
-            "consistency check is \\S6.1 (the 7 Reitz \\& Dronskowski "
-            "reactions, CCC=0.999998). N has no MP entry (hand-built "
+            "pseudopotential set. N has no MP entry (hand-built "
             "dimer box, \\S\\ref{sec:appendix-master-list})."
         ),
         "na": "--",

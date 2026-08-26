@@ -1,8 +1,8 @@
 """Unit conversion between eV and kJ/mol. Every other module in this
 package works exclusively in eV (matching the rest of `viability`); this
 conversion is only needed at the boundary with literature values reported
-in kJ/mol (e.g. Reitz & Dronskowski, ic-2026-04181q) -- the constant lives
-here so it is never hardcoded a second time elsewhere.
+in kJ/mol -- the constant lives here so it is never hardcoded a second
+time elsewhere.
 """
 
 from __future__ import annotations

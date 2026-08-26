@@ -79,8 +79,8 @@ def _load_bondtype_and_ismetal_maps() -> tuple[dict, dict]:
 # N was extension_N2_mp-1059834 until 2026-08-17: that MP entry is a
 # polymeric N-N solid (1.296 A, two contacts/atom), not molecular N2 (gas
 # N-N is 1.10 A). Replaced by gasref_N2_dimerbox, an isolated-dimer
-# relaxation (1.113 A, ICOHP -22.998 eV, matching Reitz & Dronskowski's
-# -23.161 eV to 0.7%) built specifically to fix this reference.
+# relaxation (1.113 A, ICOHP -22.998 eV) built specifically to fix this
+# reference.
 ELEMENT_REFERENCE = {
     "Ca": "extension_Ca_mp-21",
     "C": "extension_Cgraphite_mp-48",

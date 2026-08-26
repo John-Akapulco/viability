@@ -1,19 +1,18 @@
 """Automatic nearest-neighbor (first coordination shell) detection, used to
 restrict ICOHPLIST.lobster bond summation to first-shell bonds only before
-summing per species-pair -- the convention Reitz & Dronskowski
-(ic-2026-04181q, "Calculus of Bonding Energetics" section) use for their
-endobondic/exobondic ICOHP totals, and a deliberate DEPARTURE from every
-other summation in this project (connectivity_path.py, reaction_icohp.py,
-and this package's own existing sum_total_eV), which are unfiltered by
-design (see parse_lobster.py's module docstring for why unfiltered is
-correct there). See parse_lobster.py's `bond_filter` parameter for where
-these two conventions coexist.
+summing per species-pair -- an alternative convention for Δ(ICOHP) totals,
+and a deliberate DEPARTURE from every other summation in this project
+(connectivity_path.py, reaction_icohp.py, and this package's own existing
+sum_total_eV), which are unfiltered by design (see parse_lobster.py's
+module docstring for why unfiltered is correct there). See
+parse_lobster.py's `bond_filter` parameter for where these two conventions
+coexist.
 
 No absolute distance cutoff is hardcoded anywhere in this module -- the
 shell boundary is always the first point where the sorted distance list
 jumps by more than `gap_ratio` times the largest gap seen so far within
-the putative shell: a relative, self-calibrating rule matching the
-manuscript's "first gap in the bond-distance spectrum" description without
+the putative shell: a relative, self-calibrating rule based on the
+"first gap in the bond-distance spectrum" idea, without
 assuming any particular bond length range or chemistry.
 """
 

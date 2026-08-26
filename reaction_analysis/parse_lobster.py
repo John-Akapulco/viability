@@ -28,16 +28,16 @@ poking at private attributes directly.
 `bond_filter` (default "unfiltered"): this module's ORIGINAL and still
 default summation is unfiltered -- every symmetry-inequivalent periodic
 bond LOBSTER reports, matching connectivity_path.py / reaction_icohp.py /
-the rest of this project (see above). Reitz & Dronskowski (ic-2026-04181q)
-instead sum only first-coordination-shell bonds per species pair before
-computing their endobondic/exobondic ICOHP totals (see nearest_neighbor.py)
--- passing bond_filter="nearest_neighbor" switches to that convention.
-The default is left unfiltered, not switched wholesale, specifically to
-avoid silently changing the already-validated case-1 reaction_analysis
+the rest of this project (see above). An alternative convention sums
+only first-coordination-shell bonds per species pair before computing
+Δ(ICOHP) totals (see nearest_neighbor.py) -- passing
+bond_filter="nearest_neighbor" switches to that convention. The default
+is left unfiltered, not switched wholesale, specifically to avoid
+silently changing the already-validated case-1 reaction_analysis
 population (analysis/populate_reaction_analysis_case1_full.py, cross-
 checked 192/192 against reaction_icohp.py) and the existing unit test
-suite -- callers that want the Reitz/Dronskowski convention opt in
-explicitly per compound.
+suite -- callers that want the first-shell convention opt in explicitly
+per compound.
 """
 
 from __future__ import annotations

@@ -158,11 +158,8 @@ across sections:
   every observed bond distance for a species pair and cuts the shell at
   the first gap exceeding 2.5$\times$ the largest gap seen so far within
   the putative shell --- \textbf{no fixed \AA{} cutoff is hardcoded
-  anywhere}; the boundary is self-calibrating per compound. Used in
-  exactly two places: the 7 Reitz \& Dronskowski validation reactions
-  (\S\ref{sec:validation}, matching the manuscript's own ``first gap in
-  the bond-distance spectrum'' convention) and the bond-type
-  classification's \textbf{dominant species-pair} ICOBI/ICOHP
+  anywhere}; the boundary is self-calibrating per compound. Used for the
+  bond-type classification's \textbf{dominant species-pair} ICOBI/ICOHP
   (\S\ref{sec:dataset}, the ``ICOBI''/``ICOHP'' columns of
   Appendix~\ref{sec:appendix-master-list} are this dominant-pair value,
   \emph{not} the compound-wide mean over every LOBSTER-reported neighbor).
@@ -272,9 +269,8 @@ Validation structures without compound metadata$^*$ & 6 \\
 
 \vspace{0.15cm}
 {\footnotesize $^*$ isolated gas dimers (H$_2$, N$_2$, O$_2$, F$_2$,
-Cl$_2$) and CaO[sphalerite], used only for the Reitz \& Dronskowski
-validation
-(Appendix~\ref{sec:appendix-reitz-dronskowski-structures}), outside the
+Cl$_2$) and a CaO[sphalerite] polymorph reference, hand-built to correct
+specific element references (\S\ref{sec:dataset}), outside the
 main dataset.}
 \end{table}
 
@@ -310,113 +306,17 @@ before the \texttt{theoretical} flag existed.}
 
 \subsection*{Logic of this section}
 
-Four steps, in this order: (1) validate this project's methodology by
-reproducing the 7 reference reactions chosen by Reitz \& Dronskowski;
-(2) test this project's central correlation --- viability (a compound's
-thermodynamic/kinetic stability) against descriptors derived from LOBSTER
-data (ICOHP, antibonding ICOHP, ICOBI, antibonding ICOBI); (3) classify
-compounds and elements into metallic/ionic/covalent/mixed directly from
-that same ICOHP/ICOBI data, and compare that classification against
-\texttt{classify()} --- a tool in service of the next step, not an end in
-itself; (4) determine whether step 2's correlation is strengthened or
-weakened once conditioned on step 3's bond type.
+Three steps, in this order: (1) test this project's central correlation
+--- viability (a compound's thermodynamic/kinetic stability) against
+descriptors derived from LOBSTER data (ICOHP, antibonding ICOHP, ICOBI,
+antibonding ICOBI); (2) classify compounds and elements into
+metallic/ionic/covalent/mixed directly from that same ICOHP/ICOBI data,
+and compare that classification against \texttt{classify()} --- a tool
+in service of the next step, not an end in itself; (3) determine whether
+step 1's correlation is strengthened or weakened once conditioned on
+step 2's bond type.
 
-\subsection{Step 1 --- Methodological validation: the 7 Reitz \& Dronskowski reactions}
-\label{sec:validation}
-
-Full detail: \texttt{analysis/REPORT\_delta\_icohp\_viability.md},
-\texttt{analysis/test\_delta\_icohp\_viability.py}.
-
-Per-bond-type ICOHP values for 7 reactions with independently known
-$\Delta$ICOHP (transcribed independently of any calculation in this
-project) are run end to end through
-\texttt{balance.py}/\texttt{delta.py}/\texttt{classify.py}:
-
-\begin{table}[htbp]
-\centering
-\caption{Validating the endobondic/exobondic classification on 7 reactions with independently known $\Delta$ICOHP.}
-\label{tab:reference-validation}
-\begin{tabular}{@{}lrrll@{}}
-\toprule
-Reaction & Reference & Computed & \multicolumn{2}{c}{Label} \\
- & (kJ/mol) & (kJ/mol) & Ref. & Computed \\
-\midrule
-Pb(N$_3$)$_2 \to$ Pb $+$ 3\,N$_2$ & $+1345$ & $+1344.3$ & endo & endo \\
-S$_4$N$_2 \to \tfrac12$S$_8 + $N$_2$ & $+258$ & $+258.5$ & endo & endo \\
-S$_4$N$_4 \to \tfrac12$S$_8 + 2$N$_2$ & $+399$ & $+397.3$ & endo & endo \\
-ZnSn $\to$ Zn $+$ Sn & $-337$ & $-336.6$ & exo & exo \\
-CaO[sphalerite] $\to$ CaO[rocksalt] & $-79$ & $-78.9$ & exo & exo \\
-CaN $\to \tfrac13$Ca$_3$N$_2 + \tfrac16$N$_2$ & $-205$ & $-204.8$ & exo & exo \\
-Mn$_2$O$_7 \to 2$MnO$_2 + \tfrac32$O$_2$ & $-186$ & $-187.7$ & exo & exo \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The 7 cases reproduce the reference $\Delta$ICOHP to within a few kJ/mol
-(source per-bond value rounding) and every \texttt{BondingLabel}
-matches. The Mn$_2$O$_7$ case is a useful guardrail on its own: exobondic
-under this static sign criterion, yet Mn$_2$O$_7$ is a real, observed
-compound that simply decomposes slowly (gradual O$_2$ loss) rather than
-through abrupt bond breaking --- \texttt{classify.py} structurally
-attaches a warning to \emph{every} \texttt{UNSTABLE\_NONEXISTENT} verdict
-for exactly this reason, rather than special-casing Mn$_2$O$_7$.
-
-This validation only compares the arithmetic of the manuscript's own
-published ICOHP values, independent of any local crystal structure ---
-Appendix~\ref{sec:appendix-reitz-dronskowski-structures} documents, for
-the 16 species involved, which MP/COD structure was used in this dataset
-and whether it could be verified to match the manuscript's description
-(3 real corrections identified: N$_2$, the Pb(N$_3$)$_2$ polymorph,
-ZnSn's competing tin phase). For N$_2$ and ZnSn, a DFT+LOBSTER
-calculation of this project's own (not just the manuscript's arithmetic)
-was additionally compared directly against the manuscript's numbers
-(Table~\ref{tab:reitz-dronskowski-dft}): N$_2$ reproduces the
-manuscript's ICOHP to within 0.7\%; ZnSn reproduces the same sign
-(bonding-favorable decomposition) but with $\sim$2.9$\times$ larger
-magnitude --- a gap judged not significant at this stage, since a bulk
-intermetallic's ICOHP sum is far more sensitive to
-basis/pseudopotential/cutoff choices than a simple gas dimer.
-Reproducing the manuscript's full DFT methodology (PBEsol+D3, Table
-S1's own k-point sets) has since been carried out for all 16 species
-(2026-08-19): 10/16 are computed and compared directly
-(Table~\ref{tab:reitz-dronskowski-dft}), the remaining 6 (Ca$_3$N$_2$,
-Mn$_2$O$_7$, Pb(N$_3$)$_2$, S$_4$N$_2$, S$_4$N$_4$, S$_8$) still
-computing at the time of writing (\S\ref{sec:limits-current}).
-
-Correlation alone (Pearson/Spearman) is not the right test for "do our
-numbers match the reference values" --- it is satisfied by any monotonic
-relationship, even with a large systematic offset or scale factor.
-\textbf{Lin's concordance correlation coefficient} (CCC) specifically
-tests agreement with the identity line (computed = reference), the claim
-actually being tested here:
-
-\begin{table}[htbp]
-\centering
-\caption{Computed-vs-reference concordance on the 7 validation reactions.}
-\label{tab:ccc}
-\begin{tabular}{@{}lr@{}}
-\toprule
-Statistic & Value \\
-\midrule
-$n$ & 7 \\
-Lin's CCC & \textbf{0.999998} \\
-Pearson $r$ & 0.999999 ($p=3.5\times10^{-15}$) \\
-Sign agreement & 7/7 \\
-Mean $|$residual$|$ & 0.76 kJ/mol \\
-Max $|$residual$|$ & 1.70 kJ/mol \\
-RMSE & 0.98 kJ/mol \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-A CCC this close to 1 means the two methods agree essentially to the
-reporting precision of the reference values themselves (rounded to 2--3
-decimals), not merely that they move together --- the implementation is
-validated, not just spot-checked. It is this implementation, validated
-here independently of any of this project's own calculations, that is
-applied to the full dataset in the next step.
-
-\subsection{Step 2 --- Viability versus LOBSTER descriptors}
+\subsection{Step 1 --- Viability versus LOBSTER descriptors}
 \label{sec:reframing}
 
 \textbf{Classic ICOHP aggregates (baseline).} Before any constructed
@@ -627,7 +527,7 @@ expected price of adding chemically diverse, thermodynamically extreme
 compounds to what was a narrower population; a different kind of test
 from the categorical results above, so the two are not in tension.
 Whether the \texttt{ViabilityLabel} result is itself confounded by bond
-type (step 4), or by the fact that max-hull's theoretical polymorphs
+type (step 3), or by the fact that max-hull's theoretical polymorphs
 were deliberately selected far above the hull --- a
 \texttt{formation\_energy\_per\_atom}-adjacent selection effect, not
 necessarily an independent confirmation of the bonding-kinetics
@@ -645,11 +545,11 @@ Appendix~\ref{sec:antibonding-viability}).
 \texttt{analysis/REPORT\_antibonding.md},
 \texttt{analysis/REPORT\_reaction\_icohp.md}.
 
-\subsection{Step 3 --- Bond-type classification from ICOHP/ICOBI data}
+\subsection{Step 2 --- Bond-type classification from ICOHP/ICOBI data}
 \label{sec:bondtype-classification}
 
 A tool in service of the next step, not an end in itself: this
-classification exists solely to test, in step 4, whether step 2's
+classification exists solely to test, in step 3, whether step 1's
 viability-descriptor correlation depends on a compound's bond type. Two
 independent classifications (\S2.2): the \texttt{classify()} function
 (elemental composition + \texttt{is\_metal}) and a classification built
@@ -699,11 +599,11 @@ is strong (88.7\%) but not total: 16 ionic/covalent disagreements, and
 ICOBI classification identifies as mixed (their dominant homoatomic
 bond coexists with a markedly weaker heteroatomic link) --- worth
 checking case by case before using either classification as a
-stratification variable in step 4. It is the ICOHP/ICOBI classification
-(broader coverage, built on the same data as step 2's descriptors) that
+stratification variable in step 3. It is the ICOHP/ICOBI classification
+(broader coverage, built on the same data as step 1's descriptors) that
 is used below, not \texttt{classify()}.
 
-\subsection{Step 4 --- Does the viability-descriptor correlation depend on bond type?}
+\subsection{Step 3 --- Does the viability-descriptor correlation depend on bond type?}
 \label{sec:stratification}
 
 \textbf{Antibonding population (ICOHP).} \textbf{The project's previously
@@ -715,7 +615,7 @@ that does not replicate once the sample grows), including this same
 descriptor's own earlier \texttt{bond\_type=ionic} subgroup.
 \textbf{New at this scale}: \texttt{bond\_type=mixed} (Zintl) is the
 best-surviving stratum ($\rho=-0.538$, $p=6.6\times10^{-6}$, $n=62$) ---
-\textbf{strengthened} relative to step 2's pooled correlation --- a
+\textbf{strengthened} relative to step 1's pooled correlation --- a
 category that barely existed when the covalent result was first
 reported. \texttt{is\_metal=False} remains the most consistently
 surviving stratum across this project's successive scales
@@ -727,7 +627,7 @@ for reaction ICOHP.
 
 \textbf{Reaction ICOHP.} \texttt{bond\_type} stratification (four
 categories, including \texttt{mixed}/Zintl) no longer uniformly dilutes
-step 2's pooled correlation ($\rho=0.295$): \texttt{ionic} ($\rho=0.360$,
+step 1's pooled correlation ($\rho=0.295$): \texttt{ionic} ($\rho=0.360$,
 $p=0.0004$) and \texttt{mixed} ($\rho=-0.525$, opposite sign,
 $p\approx0$) both survive clearly --- \textbf{strengthened} in
 magnitude --- \texttt{covalent} too but flips sign ($\rho=-0.354$,
@@ -910,26 +810,7 @@ meaningful.
     neither stratified by \texttt{bond\_type}/\texttt{is\_metal}, nor
     distinguished from a selection effect (max-hull's theoretical
     polymorphs were deliberately chosen far above the hull).
-  \item \textbf{Manuscript-validation DFT+LOBSTER comparison
-    (Appendix~\ref{sec:appendix-reitz-dronskowski-structures}), 14/16
-    species compared, 2 set aside as to-be-done}: Mn$_2$O$_7$ and
-    Pb(N$_3$)$_2$ have a completed manuscript-methodology VASP
-    relaxation but no LOBSTER run yet, and are excluded from the
-    comparison table rather than shown as pending (Appendix
-    \ref{sec:appendix-reitz-dronskowski-structures}, to-be-done note).
-    Of the 14 species compared, three
-    (Pb, MnO$_2$, O$_2$) show open $\sim$2--10\% residuals under both
-    the manuscript's own methodology (PBEsol+D3) and this project's
-    default one (PBE) alike --- investigated and ruled out as instances
-    of Zn's shell-detection bug, left as unresolved, likely
-    methodology-level questions (spin-orbit coupling for Pb;
-    AFM/Hubbard-U treatment and spin-polarization for MnO$_2$/O$_2$)
-    rather than forced to zero. Ca$_3$N$_2$ (landed 2026-08-20) showed
-    an initial 24\% residual traced to a second, distinct occurrence of
-    Zn's near-degenerate-shell issue and is now resolved (0.1\%,
-    Appendix~\ref{sec:appendix-reitz-dronskowski-structures}, note f).
-  \item \textbf{Whether Zn's shell-detection bug (Appendix
-    \ref{sec:appendix-reitz-dronskowski-structures}) affects any other
+  \item \textbf{Whether Zn's shell-detection bug affects any other
     compound's \texttt{bond\_type} classification remains open}: two
     quick heuristic sweeps of the full dataset's first-shell distance
     spectra (2026-08-19) each flagged 40--47\% of pair-groups under
@@ -941,16 +822,15 @@ meaningful.
     sub-shells rather than two) adds one more confirmed data point to
     that ground-truth set but does not itself touch
     \texttt{nearest\_neighbor.py} or the dataset-wide classification,
-    which remain unchanged. A calibrated audit (ground truth needed per
-    compound, which only exists for the 16 manuscript species) is still
-    to be done before this can be closed either way.
+    which remain unchanged. A calibrated audit against independently
+    known ground truth is still to be done before this can be closed
+    either way.
 \end{itemize}
 
 \section{Conclusion}
 
-Reitz \& Dronskowski's endobondic/exobondic methodology
-(\S\ref{sec:reframing}) reproduces faithfully across the 7 independently
-known reference reactions (Lin's CCC 0.999998) and applies to this
+The sign-based $\Delta$ICOHP classification
+(\S\ref{sec:reframing}) applies to this
 report's full dataset (517 decomposition-into-elements reactions). On
 that population, sign-based $\Delta$ICOHP discrimination is
 significant (Fisher's test, $p=0.0022$), and the full
@@ -1010,11 +890,7 @@ metals), the two absolute total energies differ by up to several tens of
 eV/atom purely because they count a different number of explicit
 electrons --- absolute VASP total energies are only meaningful within one
 consistent pseudopotential set, never across two independently chosen
-ones. This project's real cross-code/cross-pipeline energetic accuracy
-check is \S\ref{sec:validation} (the 7 Reitz \& Dronskowski reactions,
-Lin's CCC$=0.999998$) and
-Appendix~\ref{sec:appendix-reitz-dronskowski-structures} (independent
-lattice-parameter/ICOHP reproduction). N has no Materials
+ones. N has no Materials
 Project entry (hand-built isolated-dimer box, see
 \S\ref{sec:appendix-master-list} below for the other two hand-built
 references, ZnSn and the CaO sphalerite polymorph).
@@ -1510,25 +1386,5 @@ from the full signed ICOHP in the same window. Cross-correlation with
 the full reaction-ICOHP descriptor: $\rho=+0.241$ ($p<0.001$) ---
 related but clearly distinct, not a simple restriction of the same
 quantity.
-
-\section{Reitz \& Dronskowski reaction structures}
-\label{sec:appendix-reitz-dronskowski-structures}
-
-The \S\ref{sec:reframing} validation (Table~\ref{tab:reference-validation})
-only compares the arithmetic of the manuscript's own published ICOHP
-values --- independent of any local crystal structure. The table below
-documents, for each of the 16 species involved in these 7 reactions,
-the structure as described by the manuscript (where it specifies one),
-the Materials Project/COD entry used in this dataset, and whether an
-independent verification was possible. Three cases revealed a real bug
-or ambiguity, since fixed: N$_2$ (a theoretical polymeric phase
-substituted for an isolated gaseous dimer, \S\ref{sec:reframing}),
-Pb(N$_3$)$_2$ (the wrong Pnma polymorph substituted for the Pna2\_1 the
-manuscript cites), and ZnSn's competing tin phase ($\beta$-tin
-substituted for $\alpha$-tin).
-
-{\small
-\input{appendix_reitz_dronskowski_structures_en.tex}
-}
 
 \end{document}

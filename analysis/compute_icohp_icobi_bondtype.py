@@ -19,8 +19,8 @@ ICOBILIST.lobster before writing this fix (see project memory).
 Fix: classify from the STRONGEST first-coordination-shell bond-type
 population instead of a flat mean over every LOBSTER-reported pair.
 Uses reaction_analysis.parse_lobster.parse_compound_entry(bond_filter=
-"nearest_neighbor") (Reitz & Dronskowski's first-shell convention,
-already implemented + tested elsewhere in this project) to get
+"nearest_neighbor") (the first-shell convention, already implemented +
+tested elsewhere in this project) to get
 by_bond_type (mean ICOBI per species pair, first shell only), then:
 
   icobi_primary_mean = max(by_bond_type means)  -- the strongest

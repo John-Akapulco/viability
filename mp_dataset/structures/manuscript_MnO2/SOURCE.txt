@@ -1,3 +1,0 @@
-Starting structure: extension_MnO2_mp-510408 (mp_dataset/structures/extension_MnO2_mp-510408/POSCAR)
-Workflow: mn
-k-points (Table S1): (13, 13, 21)
