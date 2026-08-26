@@ -20,8 +20,8 @@ CSV = HERE / "polymorph_antibonding_correlation.csv"
 FIG_DIR = HERE / "figures_antibonding"
 FIG_DIR.mkdir(exist_ok=True)
 
-COLORS = {"ionic": "#3b6fa0", "covalent": "#5a9b5a", "metallic": "#c0764a", "mixed": "#a05a9b"}
-BOND_PANELS = [("ionic", "Ionic"), ("covalent", "Covalent"), ("mixed", "Mixed"), ("metallic", "Metallic")]
+COLORS = {"ionic": "#3b6fa0", "covalent": "#5a9b5a", "metallic": "#c0764a", "mixed": "#a05a9b", "elemental": "#888888"}
+BOND_PANELS = [("ionic", "Ionic"), ("covalent", "Covalent"), ("mixed", "Mixed"), ("metallic", "Metallic"), ("elemental", "Elemental")]
 DESCRIPTOR_ROWS = [
     ("antibond_w_raw", r"ICOHP$_\mathrm{antibonding}$ (eV)"),
     ("icobi_antibond_w_raw", r"ICOBI$_\mathrm{antibonding}$"),
@@ -31,7 +31,7 @@ DESCRIPTOR_ROWS = [
 def main() -> None:
     df = pd.read_csv(CSV)
 
-    fig, axes = plt.subplots(2, 4, figsize=(18, 9))
+    fig, axes = plt.subplots(2, 5, figsize=(22, 9))
     for row, (col, xlabel) in enumerate(DESCRIPTOR_ROWS):
         for ax, (bond, title) in zip(axes[row], BOND_PANELS):
             sub = df[df["bond_type_group"] == bond].dropna(subset=[col, "dH_eV_at"])

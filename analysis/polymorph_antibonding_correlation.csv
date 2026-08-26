@@ -158,3 +158,13 @@ metallic,Zn,extension_Zn_mp-79,mp-79,P6_3/mmc,False,0.0,,,0.0,,,0.0
 metallic,Zn,theo_metastable_Zn_mp-2647117,mp-2647117,Im-3m,True,0.0,,,0.0,,,0.0716624299999999
 metallic,Zn3N2,extension_Zn3N2_mp-9460,mp-9460,Ia-3,False,0.0009747233499999,0.0,,1.0011999999999998e-06,0.0,,0.0
 metallic,Zn3N2,extension_Zn3N2_mp-1524551,mp-1524551,P6_3/mmc,True,0.0008002438499999,-17.90041246062464,,0.0,-100.0,,0.0141351249999992
+elemental,C,metastable_covalent_C_rhombohedral_mp-169,mp-169,R-3m,False,0.0,,,0.0,,,0.0
+elemental,C,extension_Cgraphite_mp-48,mp-48,P6_3/mmc,False,0.0,,,0.0,,,0.0023312299999994
+elemental,C,extension_Cdiamond_mp-66,mp-66,Fd-3m,False,0.0,,,0.0,,,0.1114742750000009
+elemental,C,extension_Clonsdaleite_mp-47,mp-47,P6_3/mmc,False,8.2602e-06,,,0.0,,,0.13868659250000098
+elemental,C,extension_CWcarbon_mp-1190171,mp-1190171,Pnma,True,0.0,,,0.0,,,0.2918794818749984
+elemental,C,extension_CMcarbon_mp-1080826,mp-1080826,C2/m,True,0.0,,,0.0,,,0.3001248749999981
+elemental,Sn,extension_Snalpha_mp-117,mp-117,Fd-3m,False,5.4315800000000006e-05,0.0,,3.40408e-05,0.0,,0.0
+elemental,Sn,extension_Sn_mp-623511,mp-623511,I4/mmm,False,0.0073309014,13396.811977362016,,4.33019e-05,27.205882352941167,,0.0614070049999995
+elemental,Zn,extension_Zn_mp-79,mp-79,P6_3/mmc,False,0.0,,,0.0,,,0.0
+elemental,Zn,theo_metastable_Zn_mp-2647117,mp-2647117,Im-3m,True,0.0,,,0.0,,,0.0716624299999999

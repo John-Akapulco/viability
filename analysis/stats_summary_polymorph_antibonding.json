@@ -94,5 +94,27 @@
       "rho": 0.1038,
       "p": 0.5296
     }
+  },
+  "elemental": {
+    "n_rows": 10,
+    "n_formulas": 3,
+    "raw_icohp_antibonding_vs_dH": {
+      "n": 10,
+      "rho": -0.1585,
+      "p": 0.6618
+    },
+    "delta_icohp_antibonding_reaction_vs_dH": {
+      "n": 0,
+      "note": "too few rows to test"
+    },
+    "raw_icobi_antibonding_vs_dH": {
+      "n": 10,
+      "rho": -0.324,
+      "p": 0.3611
+    },
+    "delta_icobi_antibonding_reaction_vs_dH": {
+      "n": 0,
+      "note": "too few rows to test"
+    }
   }
 }

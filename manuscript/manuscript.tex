@@ -752,13 +752,22 @@ throughout this work (never in isolation); their raw populations run in
 formally opposite sign conventions (Section~\ref{sec:antibonding-def})
 but that does not by itself predict whether the two behave alike on this
 polymorph-ranking question, which is why both are reported rather than
-assuming one mirrors the other.
+assuming one mirrors the other. A fifth group, \emph{elemental}
+(single-element allotropes), is pooled across every
+\texttt{icobi\_label} value rather than restricted to one, since pure
+elements are not always classified consistently across their own
+allotropes by that scheme (e.g.\ graphite alone is \texttt{metallic} via
+\texttt{is\_metal}, while every other carbon allotrope is
+\texttt{covalent}); only 3 elements (C, Sn, Zn) have $\geq2$ allotropes
+in the current dataset, and none has a case-1 reaction of its own (an
+element cannot decompose into ``other elements''), so only the raw
+construction is tested for this group.
 
 \begin{table}[htbp]
 \centering
 \caption{Spearman correlation between each antibonding descriptor and
 same-formula polymorph enthalpy ($\Delta H$ above the group's own most
-stable member), by \texttt{icobi\_label} bond-type group.}
+stable member), by bond-type group.}
 \label{tab:polymorph-antibonding}
 \begin{tabular}{@{}lrrrrrrrrrrrr@{}}
 \toprule
@@ -770,19 +779,23 @@ Ionic (25) & 53 & $-0.089$ & $0.53$ & 48 & $-0.008$ & $0.96$ & 53 & $-0.115$ & $
 Covalent (6) & 20 & $-0.206$ & $0.38$ & 8 & $-0.172$ & $0.68$ & 20 & $+0.141$ & $0.55$ & 8 & $-0.158$ & $0.71$ \\
 Mixed (10) & 24 & $+0.079$ & $0.72$ & 9 & $-0.322$ & $0.40$ & 24 & $+0.360$ & $0.084$ & 9 & $+0.094$ & $0.81$ \\
 Metallic (27) & 62 & $+0.114$ & $0.38$ & 39 & $-0.207$ & $0.21$ & 62 & $-0.073$ & $0.57$ & 39 & $+0.104$ & $0.53$ \\
+Elemental (3)$^\dagger$ & 10 & $-0.159$ & $0.66$ & --- & --- & --- & 10 & $-0.324$ & $0.36$ & --- & --- & --- \\
 \bottomrule
 \end{tabular}
 \vspace{0.1cm}
 \\{\footnotesize Number of same-formula groups per bond type in
-parentheses.}
+parentheses. $^\dagger$3 formulas/10 rows only --- far below this
+project's own $n<15$ underpowered-result convention; reported for
+completeness, not as evidence either way.}
 \end{table}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{polymorph_antibonding_correlation.png}
 \caption{Polymorph enthalpy above the same-formula ground state versus
-raw antibonding population, one column per \texttt{icobi\_label}
-bond-type group, ICOHP-based (top row) and ICOBI-based (bottom row).}
+raw antibonding population, one column per bond-type group (elemental
+pooled across \texttt{icobi\_label}), ICOHP-based (top row) and
+ICOBI-based (bottom row).}
 \label{fig:polymorph-antibonding}
 \end{figure}
 
@@ -790,7 +803,9 @@ No group reaches significance, for either descriptor or either the raw
 or the reaction construction ($p>0.2$ throughout except two borderline
 cases still short of the conventional threshold: ionic's raw ICOHP
 result restricted to non-ground-state members only, $p=0.068$, and
-mixed's raw ICOBI result, $p=0.084$, $n=24$ formulas/rows only). This
+mixed's raw ICOBI result, $p=0.084$, $n=24$ formulas/rows only) ---
+including the elemental group, though at $n=10$ it is too small to
+weigh either way. This
 mirrors the fully integrated reaction $\Delta$(ICOHP)'s own Case 2
 result exactly: whatever makes the antibonding descriptors effective
 viability pre-screens against a compound's own elements

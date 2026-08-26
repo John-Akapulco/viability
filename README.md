@@ -185,12 +185,17 @@ elements)? Tested in `analysis/compute_polymorph_antibonding_correlation.py`
 `analysis/stats_summary_polymorph_antibonding.json`,
 `analysis/figures_antibonding/polymorph_antibonding_correlation.png`):
 every same-formula polymorph group (25 ionic, 6 covalent, 10 mixed, 27
-metallic formulas, duplicate `mp_id` entries removed first) tested
+metallic formulas, plus a 5th **elemental** group — single-element
+allotropes, pooled across `icobi_label` since that scheme doesn't
+consistently classify all of one element's own allotropes alike, e.g.
+graphite alone comes out `metallic`; only C/Sn/Zn have ≥2 allotropes in
+the current dataset, 10 rows total, no case-1 reaction defined for pure
+elements — duplicate `mp_id` entries removed first) tested
 against its own enthalpy above the group's most stable member, for both
 the ICOHP- and ICOBI-based raw antibonding population and their reaction
 Δs (four constructions total — ICOBI tested alongside ICOHP throughout,
-never assumed to just mirror it). **No bond-type group reaches
-significance, for any of the four** (p>0.2 throughout except two
+never assumed to just mirror it). **No group reaches
+significance, for any construction** (p>0.2 throughout except two
 borderline cases short of the threshold: ionic's raw-ICOHP result
 restricted to non-ground-state members, p=0.068, and mixed's raw-ICOBI
 result, p=0.084, n=24) — this mirrors reaction

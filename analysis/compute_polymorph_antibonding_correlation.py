@@ -20,6 +20,17 @@ population near the frontier") but that does not by itself predict how
 each behaves on this polymorph-ranking question, which is why both are
 tested rather than assuming ICOBI would simply mirror ICOHP.
 
+A fifth group, "elemental", pools every single-element formula (allotropes)
+regardless of icobi_label -- pure elements get assigned a bond_type by the
+same is_metal-first logic as compounds (Section~bondtype), which is not
+always consistent across allotropes of the same element (e.g. carbon:
+graphite alone classifies "metallic" via is_metal=True, every other
+allotrope "covalent"), so pooling by element rather than by bond_type is
+the physically meaningful grouping here. Only 3 elements in the current
+dataset have >=2 allotropes (C: 6, Sn: 2, Zn: 2); none has a case-1
+reaction (an element cannot decompose into "other elements"), so only the
+raw-descriptor correlation is defined for this group.
+
 Method, per icobi_label bond-type group (metallic/ionic/covalent/mixed):
 1. Restrict to formulas with >=2 entries under that group.
 2. Deduplicate by (formula, mp_id) keeping one row per physical
@@ -47,6 +58,7 @@ results).
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -60,7 +72,15 @@ DELTA_CSV = HERE / "delta_antibonding_case1.csv"
 OUT_CSV = HERE / "polymorph_antibonding_correlation.csv"
 OUT_JSON = HERE / "stats_summary_polymorph_antibonding.json"
 
-BOND_GROUPS = ["ionic", "covalent", "mixed", "metallic"]
+BOND_GROUPS = ["ionic", "covalent", "mixed", "metallic", "elemental"]
+
+
+def is_elemental_formula(formula: str) -> bool:
+    """True if `formula` (e.g. "C", "Sn", "Fe2O3") names a single element --
+    exactly one distinct element symbol, any subscript."""
+    tokens = re.findall(r"([A-Z][a-z]?)(\d*)", str(formula))
+    elements = {sym for sym, _count in tokens if sym}
+    return len(elements) == 1
 
 # (raw column, delta column, pct output column, label used in stats keys)
 DESCRIPTORS = [
@@ -70,7 +90,10 @@ DESCRIPTORS = [
 
 
 def build_group(merged: pd.DataFrame, bond: str) -> pd.DataFrame:
-    sub_all = merged[merged["icobi_label"] == bond].copy()
+    if bond == "elemental":
+        sub_all = merged[merged["formula"].apply(is_elemental_formula)].copy()
+    else:
+        sub_all = merged[merged["icobi_label"] == bond].copy()
     # Prefer keeping the row that has both delta values when a duplicate
     # (formula, mp_id) pair exists, so downstream reaction-delta
     # correlations lose as few rows as possible to the dedup step.
