@@ -743,48 +743,57 @@ most-bonding and most-stable member, statistically indistinguishable
 from the 42.4\% chance baseline). Every \texttt{icobi\_label} bond-type
 group with at least one same-formula group of size $\geq2$ (duplicate
 \texttt{mp\_id} entries under inconsistent naming removed first) is
-tested independently: Spearman $\rho$ between the raw antibonding
-population and each polymorph's enthalpy above its own group's most
-stable member ($\Delta H$), and, where a case-1 reaction is available for
-enough of the group, the same test against the reaction
-$\Delta$(ICOHP\textsubscript{antibonding}).
+tested independently: Spearman $\rho$ between each of the raw ICOHP- and
+ICOBI-based antibonding populations and each polymorph's enthalpy above
+its own group's most stable member ($\Delta H$), and, where a case-1
+reaction is available for enough of the group, the same test against
+each reaction $\Delta$(antibonding). ICOBI is tested alongside ICOHP
+throughout this work (never in isolation); their raw populations run in
+formally opposite sign conventions (Section~\ref{sec:antibonding-def})
+but that does not by itself predict whether the two behave alike on this
+polymorph-ranking question, which is why both are reported rather than
+assuming one mirrors the other.
 
 \begin{table}[htbp]
 \centering
-\caption{Spearman correlation between the antibonding descriptor and
+\caption{Spearman correlation between each antibonding descriptor and
 same-formula polymorph enthalpy ($\Delta H$ above the group's own most
 stable member), by \texttt{icobi\_label} bond-type group.}
 \label{tab:polymorph-antibonding}
-\begin{tabular}{@{}lrrrrrr@{}}
+\begin{tabular}{@{}lrrrrrrrrrrrr@{}}
 \toprule
-& \multicolumn{3}{c}{Raw antibonding} & \multicolumn{3}{c}{$\Delta$(ICOHP\textsubscript{antibonding}), reaction} \\
-Group & $n$ & $\rho$ & $p$ & $n$ & $\rho$ & $p$ \\
+& \multicolumn{6}{c}{ICOHP-based} & \multicolumn{6}{c}{ICOBI-based} \\
+& \multicolumn{3}{c}{Raw} & \multicolumn{3}{c}{Reaction $\Delta$} & \multicolumn{3}{c}{Raw} & \multicolumn{3}{c}{Reaction $\Delta$} \\
+Group & $n$ & $\rho$ & $p$ & $n$ & $\rho$ & $p$ & $n$ & $\rho$ & $p$ & $n$ & $\rho$ & $p$ \\
 \midrule
-Ionic (25 formulas) & 53 & $-0.089$ & $0.53$ & 48 & $-0.008$ & $0.96$ \\
-Covalent (6 formulas) & 20 & $-0.206$ & $0.38$ & 8 & $-0.172$ & $0.68$ \\
-Mixed (10 formulas) & 24 & $+0.079$ & $0.72$ & 9 & $-0.322$ & $0.40$ \\
-Metallic (27 formulas) & 62 & $+0.114$ & $0.38$ & 39 & $-0.207$ & $0.21$ \\
+Ionic (25) & 53 & $-0.089$ & $0.53$ & 48 & $-0.008$ & $0.96$ & 53 & $-0.115$ & $0.41$ & 48 & $+0.040$ & $0.79$ \\
+Covalent (6) & 20 & $-0.206$ & $0.38$ & 8 & $-0.172$ & $0.68$ & 20 & $+0.141$ & $0.55$ & 8 & $-0.158$ & $0.71$ \\
+Mixed (10) & 24 & $+0.079$ & $0.72$ & 9 & $-0.322$ & $0.40$ & 24 & $+0.360$ & $0.084$ & 9 & $+0.094$ & $0.81$ \\
+Metallic (27) & 62 & $+0.114$ & $0.38$ & 39 & $-0.207$ & $0.21$ & 62 & $-0.073$ & $0.57$ & 39 & $+0.104$ & $0.53$ \\
 \bottomrule
 \end{tabular}
+\vspace{0.1cm}
+\\{\footnotesize Number of same-formula groups per bond type in
+parentheses.}
 \end{table}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{polymorph_antibonding_correlation.png}
+\includegraphics[width=\textwidth]{polymorph_antibonding_correlation.png}
 \caption{Polymorph enthalpy above the same-formula ground state versus
-raw ICOHP antibonding population, one panel per \texttt{icobi\_label}
-bond-type group.}
+raw antibonding population, one column per \texttt{icobi\_label}
+bond-type group, ICOHP-based (top row) and ICOBI-based (bottom row).}
 \label{fig:polymorph-antibonding}
 \end{figure}
 
-No group reaches significance, for either the raw or the reaction
-antibonding construction ($p>0.2$ throughout; ionic's raw-descriptor
-result, the closest, is $p=0.53$ pooled and $p=0.068$ restricted to
-non-ground-state members only, still short of the conventional
-threshold). This mirrors the fully integrated reaction $\Delta$(ICOHP)'s
-own Case 2 result exactly: whatever makes
-$\Delta$(ICOHP\textsubscript{antibonding}) an effective viability
-pre-screen against a compound's own elements
+No group reaches significance, for either descriptor or either the raw
+or the reaction construction ($p>0.2$ throughout except two borderline
+cases still short of the conventional threshold: ionic's raw ICOHP
+result restricted to non-ground-state members only, $p=0.068$, and
+mixed's raw ICOBI result, $p=0.084$, $n=24$ formulas/rows only). This
+mirrors the fully integrated reaction $\Delta$(ICOHP)'s own Case 2
+result exactly: whatever makes the antibonding descriptors effective
+viability pre-screens against a compound's own elements
 (Sections~\ref{sec:res-baseline}--\ref{sec:res-viability}) does not carry
 over to ranking polymorphs of a fixed composition against each other ---
 a genuinely different comparison (same reactants, different local

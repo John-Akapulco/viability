@@ -187,10 +187,13 @@ elements)? Tested in `analysis/compute_polymorph_antibonding_correlation.py`
 every same-formula polymorph group (25 ionic, 6 covalent, 10 mixed, 27
 metallic formulas, duplicate `mp_id` entries removed first) tested
 against its own enthalpy above the group's most stable member, for both
-the raw antibonding population and the reaction Δ. **No bond-type group
-reaches significance, for either construction** (p>0.2 throughout,
-closest is ionic's raw-descriptor result at p=0.53 pooled / p=0.068
-restricted to non-ground-state members) — this mirrors reaction
+the ICOHP- and ICOBI-based raw antibonding population and their reaction
+Δs (four constructions total — ICOBI tested alongside ICOHP throughout,
+never assumed to just mirror it). **No bond-type group reaches
+significance, for any of the four** (p>0.2 throughout except two
+borderline cases short of the threshold: ionic's raw-ICOHP result
+restricted to non-ground-state members, p=0.068, and mixed's raw-ICOBI
+result, p=0.084, n=24) — this mirrors reaction
 Δ(ICOHP)'s own polymorph result below exactly (Case 2, 47.3% agreement,
 indistinguishable from the 42.4% chance baseline): whatever makes this
 descriptor an effective viability pre-screen against a compound's own

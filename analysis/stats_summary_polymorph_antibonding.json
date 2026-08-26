@@ -11,6 +11,16 @@
       "n": 48,
       "rho": -0.0081,
       "p": 0.9564
+    },
+    "raw_icobi_antibonding_vs_dH": {
+      "n": 53,
+      "rho": -0.1147,
+      "p": 0.4136
+    },
+    "delta_icobi_antibonding_reaction_vs_dH": {
+      "n": 48,
+      "rho": 0.0397,
+      "p": 0.789
     }
   },
   "covalent": {
@@ -25,6 +35,16 @@
       "n": 8,
       "rho": -0.1723,
       "p": 0.6833
+    },
+    "raw_icobi_antibonding_vs_dH": {
+      "n": 20,
+      "rho": 0.1411,
+      "p": 0.5529
+    },
+    "delta_icobi_antibonding_reaction_vs_dH": {
+      "n": 8,
+      "rho": -0.1579,
+      "p": 0.7087
     }
   },
   "mixed": {
@@ -39,6 +59,16 @@
       "n": 9,
       "rho": -0.322,
       "p": 0.398
+    },
+    "raw_icobi_antibonding_vs_dH": {
+      "n": 24,
+      "rho": 0.3595,
+      "p": 0.0844
+    },
+    "delta_icobi_antibonding_reaction_vs_dH": {
+      "n": 9,
+      "rho": 0.0942,
+      "p": 0.8096
     }
   },
   "metallic": {
@@ -53,6 +83,16 @@
       "n": 39,
       "rho": -0.2073,
       "p": 0.2054
+    },
+    "raw_icobi_antibonding_vs_dH": {
+      "n": 62,
+      "rho": -0.0727,
+      "p": 0.5744
+    },
+    "delta_icobi_antibonding_reaction_vs_dH": {
+      "n": 39,
+      "rho": 0.1038,
+      "p": 0.5296
     }
   }
 }
