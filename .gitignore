@@ -42,3 +42,13 @@ report/*.toc
 report/*.fdb_latexmk
 report/*.fls
 
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.log
+manuscript/*.out
+manuscript/*.toc
+manuscript/*.fdb_latexmk
+manuscript/*.fls
+manuscript/acs-*.bib
+

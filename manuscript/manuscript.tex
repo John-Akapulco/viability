@@ -4,6 +4,7 @@
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage[T1]{fontenc}
+\graphicspath{{figures/}}
 
 \title{$\Delta$(ICOBI\textsubscript{antibonding}): A Fast Bond-Order-Based
 Descriptor for the Kinetic Viability of Metastable Crystalline Compounds}
@@ -534,6 +535,21 @@ $\Delta$(ICOBI\textsubscript{antibonding}) & energy above hull     & 438 & $-0.1
 \vspace{0.1cm}
 \\{\footnotesize $^{*}p<0.05$; $^{***}p<0.001$.}
 \end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{delta_antibonding_vs_formation_energy.png}
+\caption{Formation energy per atom versus $\Delta$(ICOHP\textsubscript{antibonding})
+(left) and $\Delta$(ICOBI\textsubscript{antibonding}) (right) of the
+decomposition-into-elements reaction, colored by bond type ($n=438$).
+Spearman $\rho$ and $p$ (title of each panel) are computed on the full
+population; the $x$-axis is clipped to the 1st--99th percentile of each
+descriptor so that a small number of extreme-magnitude compounds do not
+compress the rest of the population, with the count of clipped points
+noted in-panel. The ionic subgroup (blue) drives most of the visible
+trend, consistent with Table~\ref{tab:delta-antibonding-stratified}.}
+\label{fig:delta-antibonding-vs-formation-energy}
+\end{figure}
 
 Two features distinguish this reaction-level construction from the raw
 population of Section~\ref{sec:res-baseline}. First,
