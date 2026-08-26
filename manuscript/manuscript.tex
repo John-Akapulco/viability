@@ -691,6 +691,30 @@ $3.2\times10^{-6}$~eV (not viable), all-subgroup. \texttt{bond\_type}=covalent
 test.}
 \end{table}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{antibonding_viability_by_bondtype.png}
+\caption{Formation energy versus $\Delta$(ICOHP\textsubscript{antibonding})
+by \texttt{bond\_type} subgroup, colored by \texttt{ViabilityLabel}
+(viable~$=$~\texttt{STABLE\_ON\_HULL}~$\cup$~\texttt{METASTABLE\_VIABLE},
+non-viable~$=$~\texttt{UNSTABLE\_NONEXISTENT}). The solid horizontal line
+(formation energy~$=0$) is the exact, descriptor-independent half of the
+\texttt{classify\_viability()} boundary: every compound at or below it is
+\texttt{STABLE\_ON\_HULL} regardless of bonding. The dashed vertical line
+marks $\Delta$(ICOHP\textsubscript{antibonding})~$=0$, the sign tested in
+Table~\ref{tab:viability-antibonding} --- not itself the literal
+\texttt{classify\_viability()} boundary, which is defined on the total
+reaction $\Delta$(ICOHP) of Section~\ref{sec:delta-icohp} rather than its
+antibonding-only counterpart. Non-viable compounds separate cleanly from
+viable ones in the ionic and mixed/unclassified subgroups but overlap the
+sign boundary in the metallic subgroup, consistent with
+\texttt{bond\_type}=metallic being the one subgroup that does not reach
+significance in Table~\ref{tab:viability-antibonding}. A handful of
+extreme-magnitude compounds per panel are clipped from the visible range
+(count noted in-panel); axis limits therefore differ between panels.}
+\label{fig:antibonding-viability-by-bondtype}
+\end{figure}
+
 A compound whose formation reduces near-frontier antibonding character
 relative to its constituent elements is significantly more likely to be
 classified viable than one whose formation increases it --- overall and

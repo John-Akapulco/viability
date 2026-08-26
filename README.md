@@ -167,7 +167,16 @@ It is also, independently, a significant discriminator of
 above) — the first time this line of evidence has been tested against
 viability rather than only a continuous stability target, and it
 survives the test cleanly, in agreement with mission #5's own
-sign-based viability result below.
+sign-based viability result below. Plotted per `bond_type` (formation
+energy vs. Δ(ICOHP antibonding), colored by viability, with the exact
+`classify_viability()` thermodynamic boundary and the descriptor's own
+sign reference overlaid) in
+`analysis/plot_antibonding_viability_by_bondtype.py` →
+`analysis/figures_antibonding/antibonding_viability_by_bondtype.png`:
+the viable/non-viable split is visually clean in the ionic and
+mixed/unclassified subgroups but overlaps the sign boundary in the
+metallic subgroup — consistent with `bond_type=metallic` being the one
+subgroup that does not reach significance above.
 
 `ICOBI`-based near-frontier windowing (as opposed to `ICOHP`/COHP) is
 implemented for both the per-compound metric and its reaction-level Δ;
