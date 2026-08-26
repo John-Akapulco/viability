@@ -178,6 +178,25 @@ mixed/unclassified subgroups but overlaps the sign boundary in the
 metallic subgroup — consistent with `bond_type=metallic` being the one
 subgroup that does not reach significance above.
 
+**Does the descriptor also rank polymorphs of the same composition
+against each other** (as opposed to a compound against its own
+elements)? Tested in `analysis/compute_polymorph_antibonding_correlation.py`
+(→ `analysis/polymorph_antibonding_correlation.csv`,
+`analysis/stats_summary_polymorph_antibonding.json`,
+`analysis/figures_antibonding/polymorph_antibonding_correlation.png`):
+every same-formula polymorph group (25 ionic, 6 covalent, 10 mixed, 27
+metallic formulas, duplicate `mp_id` entries removed first) tested
+against its own enthalpy above the group's most stable member, for both
+the raw antibonding population and the reaction Δ. **No bond-type group
+reaches significance, for either construction** (p>0.2 throughout,
+closest is ionic's raw-descriptor result at p=0.53 pooled / p=0.068
+restricted to non-ground-state members) — this mirrors reaction
+Δ(ICOHP)'s own polymorph result below exactly (Case 2, 47.3% agreement,
+indistinguishable from the 42.4% chance baseline): whatever makes this
+descriptor an effective viability pre-screen against a compound's own
+elements does not carry over to ranking polymorphs of a fixed
+composition against each other.
+
 `ICOBI`-based near-frontier windowing (as opposed to `ICOHP`/COHP) is
 implemented for both the per-compound metric and its reaction-level Δ;
 `cohp_extraction.py`'s per-compound extraction itself remains

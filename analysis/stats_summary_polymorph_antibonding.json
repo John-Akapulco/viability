@@ -1,0 +1,58 @@
+{
+  "ionic": {
+    "n_rows": 53,
+    "n_formulas": 25,
+    "raw_icohp_antibonding_vs_dH": {
+      "n": 53,
+      "rho": -0.0885,
+      "p": 0.5285
+    },
+    "delta_icohp_antibonding_reaction_vs_dH": {
+      "n": 48,
+      "rho": -0.0081,
+      "p": 0.9564
+    }
+  },
+  "covalent": {
+    "n_rows": 20,
+    "n_formulas": 6,
+    "raw_icohp_antibonding_vs_dH": {
+      "n": 20,
+      "rho": -0.2055,
+      "p": 0.3847
+    },
+    "delta_icohp_antibonding_reaction_vs_dH": {
+      "n": 8,
+      "rho": -0.1723,
+      "p": 0.6833
+    }
+  },
+  "mixed": {
+    "n_rows": 24,
+    "n_formulas": 10,
+    "raw_icohp_antibonding_vs_dH": {
+      "n": 24,
+      "rho": 0.0786,
+      "p": 0.7151
+    },
+    "delta_icohp_antibonding_reaction_vs_dH": {
+      "n": 9,
+      "rho": -0.322,
+      "p": 0.398
+    }
+  },
+  "metallic": {
+    "n_rows": 62,
+    "n_formulas": 27,
+    "raw_icohp_antibonding_vs_dH": {
+      "n": 62,
+      "rho": 0.1144,
+      "p": 0.376
+    },
+    "delta_icohp_antibonding_reaction_vs_dH": {
+      "n": 39,
+      "rho": -0.2073,
+      "p": 0.2054
+    }
+  }
+}
