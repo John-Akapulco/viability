@@ -360,21 +360,34 @@ depend on bonding character, every compound and element was additionally
 assigned to one of five categories --- metallic, ionic, covalent, mixed
 (Zintl-type), or unclassified --- used throughout as a stratification
 variable rather than as an end in itself. Two independent classification
-routes were compared: a composition-based heuristic combining elemental
-identity with the \texttt{is\_metal} flag, and a bonding-based
-classification built directly from the LOBSTER output of
-Section~\ref{sec:icohp-icobi-def} (\texttt{is\_metal} for metallic
-character; otherwise the mean ICOBI of the dominant, first-coordination-shell
-species pair, thresholded at the midpoint between the ionic and covalent
-medians of the observed distribution, separates ionic from covalent
-character, with compounds combining both a strongly ionic and a strongly
-covalent/homoatomic dominant pair --- the Zintl-type signature --- assigned
-to the mixed category). First-coordination shells, where used (this
-classification and the validation reactions of
-Section~\ref{sec:validation-methods} only), are delimited by an adaptive,
-self-calibrating rule on the sorted bond-distance spectrum of each species
-pair (cutting at the first gap exceeding 2.5$\times$ the largest gap seen
-so far within the putative shell), rather than by a fixed distance cutoff.
+routes were compared. The first is a composition-based heuristic using
+only elemental identity and the \texttt{is\_metal} flag: \texttt{is\_metal}
+compounds with $\geq2$ elements and no anion-forming element present
+(halogens, O, N, S, Se, Te, H, C, P, As, B) are labeled metallic; among
+the remainder, an alkali/alkaline-earth element co-occurring with a
+halogen or O gives ionic, and a covalent-forming element (B, C, Si, Ge,
+N, P, As, Al, Ga, In, Sn, Pb, S, Se, Te) with no alkali/alkaline-earth
+present gives covalent; all other compositions are left unclassified.
+The second, used for every stratified result reported below, is built
+directly from the LOBSTER output of Section~\ref{sec:icohp-icobi-def}:
+\texttt{is\_metal} again gives metallic; otherwise the compound's
+\emph{dominant} species pair (highest mean ICOBI over its first
+coordination shell, among all pairs LOBSTER reports) is compared against
+a threshold calibrated as the midpoint between the median dominant-pair
+ICOBI of compounds the first (composition-based) route already labels
+ionic and those it labels covalent (0.5315 in the current dataset),
+giving ionic below and covalent at or above that value; a compound whose
+\emph{homoatomic} pair (e.g. N--N, P--P, S--S) reaches the threshold
+while a distinct, weaker \emph{heteroatomic} pair is also present ---
+the Zintl--Klemm signature of a covalent polyanion loosely bound to a
+separate cation --- is assigned to the mixed category instead, since
+forcing a single ionic/covalent label would misrepresent it. First
+coordination shells, where used (this classification and the validation
+reactions of Section~\ref{sec:validation-methods} only), are delimited
+by an adaptive, self-calibrating rule on the sorted bond-distance
+spectrum of each species pair (cutting at the first gap exceeding
+2.5$\times$ the largest gap seen so far within the putative shell),
+rather than by a fixed distance cutoff.
 
 \subsection{Statistical Analysis}
 \label{sec:stats}

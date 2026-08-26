@@ -45,6 +45,55 @@ order.
 
 ---
 
+## Bond-type classification (`bond_type`, used throughout as a stratification variable)
+
+Both descriptors above are reported not just pooled but split by
+`bond_type` (metallic/ionic/covalent/mixed), since the strength and even
+the sign of a correlation repeatedly turns out to depend on bonding
+character. Two independent classifications exist; neither is treated as
+ground truth on its own.
+
+**1. Composition-based heuristic** (`classify()`,
+`mp_dataset/fetch_candidates.py`): no bonding data at all, just elemental
+identity plus Materials Project's own `is_metal` flag.
+- `is_metal=True`, ≥2 elements, and no anion-like element present (halogens, O, N, S, Se, Te, H, C, P, As, B) → `metallic`
+- not metal, and contains an alkali/alkaline-earth element together with a halogen or O → `ionic`
+- not metal, and contains a covalent-former (B, C, Si, Ge, N, P, As, Al, Ga, In, Sn, Pb, S, Se, Te) with no alkali/alkaline-earth present → `covalent`
+- otherwise → unclassified
+
+**2. ICOHP/ICOBI-derived classification** (`analysis/compute_icohp_icobi_bondtype.py`):
+built directly from each compound's own LOBSTER output, and the one
+actually used for the stratified correlations reported throughout this
+README (broader coverage — it renders a verdict for every compound, not
+just the ~53% the heuristic above can classify).
+1. `is_metal=True` → `metallic` (same DFT flag, checked first).
+2. **Mixed/Zintl detection**: a *homoatomic* pair (e.g. N–N, P–P, S–S) whose mean ICOBI over its first coordination shell is ≥ the covalent threshold, coexisting with a weaker *heteroatomic* pair (e.g. Na–N) → `mixed` — the Zintl–Klemm signature (a covalent polyanion loosely bound to a distinct cation), which a forced single ionic/covalent label would misrepresent.
+3. Otherwise, the *dominant* species pair (highest mean ICOBI over its first coordination shell, among all pairs LOBSTER reports) is compared to the same threshold: ≥ threshold → `covalent`, < threshold → `ionic`.
+4. No ICOBI data → unclassified.
+
+The threshold is not a fixed physical cutoff — it is **calibrated from
+the data itself**: the midpoint between the median dominant-pair ICOBI of
+compounds `classify()` already labels `ionic` and those it labels
+`covalent`, currently **0.5315** (`analysis/icohp_icobi_bondtype_threshold.json`).
+"First coordination shell" is delimited by an adaptive, self-calibrating
+rule (`reaction_analysis/nearest_neighbor.py`, gap ratio 2.5: cut the
+sorted bond-distance spectrum at the first jump exceeding 2.5× the
+largest gap seen so far within the putative shell) — never a fixed
+Å cutoff. This first-shell restriction matters: an earlier version
+averaged ICOBI over *every* pair LOBSTER reports within its wide
+0.1–6.0 Å detection window, which for diamond means only 4 of 4012
+reported C–C entries are the real nearest-neighbor bond (ICOBI≈0.95);
+the other 4008 long-range near-zero pairs dragged the naive mean down to
+0.017, misclassifying diamond, SiO₂, and HCl as "ionic."
+
+Where both classifications render a verdict, they agree in 276/311
+(88.7%) cases; most disagreements are compounds the heuristic calls
+ionic/covalent that the ICOBI-based route identifies as `mixed` instead
+(see `report/report_campaign2_en.tex` §"Bond-type classification" for
+the full disagreement breakdown).
+
+---
+
 ## Antibonding population near the frontier (E_F/VBM), and its reaction-level Δ (mission #4 / #4b)
 
 A distinct question from integrated ICOHP/ICOBI (a single number per
