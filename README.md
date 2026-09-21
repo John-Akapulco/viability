@@ -322,3 +322,29 @@ next step for this line of evidence, alongside checking whether the
 or by max-hull's deliberately-extreme selection (not yet checked, see
 the report's §3), and cross-tabulating it case-by-case against mission
 #4b's own viability call above.
+
+---
+
+## Independent verification of the Reitz & Dronskowski manuscript (side investigation, outside the main dataset)
+
+A separate, narrowly-scoped exercise from the central question above: in
+support of the reviewer-response dossier for Reitz & Dronskowski's own
+"A Heuristic Approach to Rationalize Metastability of Materials Above the
+Convex Hull by a Chemical-Bonding Criterion" (ic-2026-04181q), a handful
+of compounds from that manuscript were independently recomputed here —
+matching its PBEsol+D3(BJ) functional, ENCUT, k-mesh convention, POTCAR,
+and LOBSTER basis choices where possible — to test the robustness of its
+reported ΔE/ΔICOHP values and endobondic/exobondic sign classification.
+See **[`analysis/REPORT_cao_polymorph_verification.md`](analysis/REPORT_cao_polymorph_verification.md)**
+for the CaO rocksalt/sphalerite/CsCl comparison (total energies reproduce
+the manuscript almost exactly; the exobondic sign is independently
+confirmed for all three polymorphs; a likely error was found in the SI's
+Table S1 rocksalt-CaO lattice parameter; and a stale, unpropagated
+ΔICOHP value was found in the manuscript's own eq. (5)/Table S2).
+`extension_CaOCsCl_lit`, `extension_TiO2rutile_mp-2657`, and
+`extension_TiO2Pnma_mp-754769` under `mp_dataset/structures/` are the
+three manuscript/reviewer-added polymorphs kept in the tracked dataset
+from this exercise; these three compounds are **not** part of the
+588-compound statistical population used throughout the rest of this
+README (no case-1 elemental-decomposition reaction applies to a
+polymorph-vs-polymorph comparison) and should not be pooled into it.
