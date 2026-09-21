@@ -1,0 +1,16 @@
+{
+  "label": "TiO2rutile",
+  "mp_id": "mp-2657",
+  "formula": "TiO2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 1.7719,
+  "energy_above_hull_eV_per_atom": 0.04363870416666593,
+  "theoretical": false,
+  "nsites": 12,
+  "spacegroup": "P4_2/mnm",
+  "expected_spacegroup": "P4_2/mnm",
+  "note": "Ground-state rutile-type TiO2 (Reitz & Dronskowski, Inorg. Chem. 2026, Figure 8b/eq. 9 reference structure for the Pnma-TiO2 decomposition) -- added to compute the decomposition ICOHP under this project own uniform PBEsol/D3 settings, cross-checking extension_TiO2Pnma_mp-754769 (their reported DeltaICOHP(Pnma->rutile)=-9 kJ/mol, exobondic, computed by them with r2SCAN)."
+}

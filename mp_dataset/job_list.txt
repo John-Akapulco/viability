@@ -176,3 +176,6 @@ mp_dataset/structures/theo_metastable_Zr3Be_mp-1188016
 mp_dataset/structures/theo_metastable_Zr3Ge_mp-1188039
 mp_dataset/structures/theo_metastable_ZrO2_mp-775909
 mp_dataset/structures/theo_metastable_ZrTi_mp-1215236
+mp_dataset/structures/extension_TiO2Pnma_mp-754769
+mp_dataset/structures/extension_CaOCsCl_lit
+mp_dataset/structures/extension_TiO2rutile_mp-2657

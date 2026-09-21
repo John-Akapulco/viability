@@ -1,0 +1,16 @@
+{
+  "label": "TiO2Pnma",
+  "mp_id": "mp-754769",
+  "formula": "TiO2",
+  "family": "extension",
+  "source": "materials_project",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": 2.2943,
+  "energy_above_hull_eV_per_atom": 0.03629339750000149,
+  "theoretical": true,
+  "nsites": 24,
+  "spacegroup": "Pnma",
+  "expected_spacegroup": "Pnma",
+  "note": "Hypothetical Pnma-type TiO2 polymorph, never synthesized -- added from Reitz & Dronskowski (Inorg. Chem. 2026, revised/reviewer-added case, Figure 8/eq. 9): r2SCAN E_above_hull=10.42 kJ/mol, DeltaE(r2SCAN, vs rutile)=-8 kJ/mol, DeltaICOHP=-9 kJ/mol, exobondic. CORRECTION: this note previously claimed the compound was 'computed here with this project's own PBEsol/D3 settings' -- that was WRONG. This project's extension_ pipeline (prepare_vasp_lobster.py INCAR_SETTINGS) runs plain PBE with no dispersion correction (confirmed via OUTCAR: GGA=--, no IVDW line), not PBEsol+D3, so this entry is neither a literal reproduction of the manuscript's r2SCAN number nor computed at their PBEsol+D3 level. See extension_TiO2rutile_mp-2657 (added alongside, same plain-PBE pipeline settings) for the matching decomposition-product reference under this project's actual level of theory; DeltaICOHP(Pnma->rutile) recomputed this way = -10.05 kJ/mol, in good agreement with the manuscript's -9 kJ/mol despite the different functional (r2SCAN vs plain PBE here)."
+}

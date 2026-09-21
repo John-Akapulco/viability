@@ -1,0 +1,16 @@
+{
+  "label": "CaOCsCl",
+  "mp_id": null,
+  "formula": "CaO",
+  "family": "extension",
+  "source": "literature_prototype",
+  "bond_type": null,
+  "is_metal": false,
+  "band_gap_eV": null,
+  "energy_above_hull_eV_per_atom": null,
+  "theoretical": false,
+  "nsites": 2,
+  "spacegroup": "Pm-3m",
+  "expected_spacegroup": "Pm-3m",
+  "note": "CaO high-pressure CsCl(B2)-type polymorph, unquenchable to ambient (Yamanaka, Kittaka & Nagai, J. Mineral. Petrol. Sci. 2002, 97(4), 144-152, ref. 39 in Reitz & Dronskowski). No Materials Project entry exists for this space group (Pm-3m) in the Ca-O chemsys, verified by direct query -- structure built as the ideal CsCl prototype (Ca at 1a, O at 1b), then ISIF=7/IBRION=2 volume-relaxed (positions fixed by symmetry). IMPORTANT: this project's normal extension_ pipeline (prepare_vasp_lobster.py INCAR_SETTINGS) runs plain PBE with no dispersion correction (confirmed via OUTCAR: GGA=-- , no IVDW line) despite this and other extension_ metadata notes previously claiming 'PBEsol/D3' -- that claim was wrong for the whole extension_ batch. For THIS compound specifically, the INCAR was hand-overridden with GGA=PS + IVDW=12 (D3-BJ) to match the manuscript's actual PBEsol+D3 methodology; relaxed a=2.86017 A vs manuscript SI Table S1's 2.86011 A (0.02% agreement, confirming the earlier plain-PBE run's +2.6% lattice mismatch was a functional artifact, not a k-mesh/relaxation issue). k-mesh raised to 15x15x15 to match SI Table S1. Their reported DeltaICOHP(CsCl->NaCl)=-116 kJ/mol (manuscript's own fixed value) / -75 kJ/mol (stale eq.(5)/Table S2 value, not yet corrected in the manuscript), exobondic, consistent with the phase's experimental non-quenchability."
+}
