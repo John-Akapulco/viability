@@ -3,4 +3,4 @@ The first parameter is a default value that was determined by LOBSTER.
 
          Ewald-          Energy          Energy
       Parameter      (Mulliken)       (Loewdin)
-           3.14         -204.48         -151.10 
+           3.14         -228.25         -170.51 

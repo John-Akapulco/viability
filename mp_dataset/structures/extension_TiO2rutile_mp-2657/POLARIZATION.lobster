@@ -2,8 +2,8 @@ Polarization file from LOBSTER.
 Units are  μC/cm2
 
          Rel. Mulliken pol. vector       Rel. Loewdin pol. vector
-  x                         -97.74                         -84.06
-  y                          35.81                          30.79
-  z                          35.81                          30.80
-abs                         110.08                          94.67
+  x                        -103.29                         -89.32
+  y                          37.82                          32.71
+  z                          37.86                          32.73
+abs                         116.33                         100.60
                     unit:  μC/cm2                 unit:  μC/cm2

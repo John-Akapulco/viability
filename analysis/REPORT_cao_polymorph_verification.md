@@ -1,16 +1,20 @@
-# Vérification indépendante des polymorphes CaO (rocksalt / sphalérite / CsCl)
+# Vérification indépendante des polymorphes CaO et TiO2 du manuscrit
 
-Note technique — campagne du 2026-09-21, en appui au dossier de réponse aux
+Note technique — campagne du 2026-09-21/22, en appui au dossier de réponse aux
 reviewers de "A Heuristic Approach to Rationalize Metastability of Materials
 Above the Convex Hull by a Chemical-Bonding Criterion" (Reitz & Dronskowski,
 ic-2026-04181q).
 
-Objectif : recalculer indépendamment ΔE et ΔICOHP pour les deux
-transformations CaO du manuscrit (eq. 5 : sphalérite→rocksalt, eq. 6 :
-CsCl→rocksalt) avec une méthode volontairement alignée sur celle du
+Objectif : recalculer indépendamment ΔE et ΔICOHP pour les trois
+transformations du manuscrit concernant les composés ajoutés en révision
+(eq. 5 : CaO sphalérite→rocksalt, eq. 6 : CaO CsCl→rocksalt, eq. 9 : TiO2
+Pnma→rutile) avec une méthode volontairement alignée sur celle du
 manuscrit, pour tester la robustesse du signe exobondic exigée par reviewer 2
 ("determine whether the sign remains robust to the choice of reference
-state").
+state"). Les polymorphes CaO sont traités en PBEsol+D3(BJ), la fonctionnelle
+du manuscrit pour les composés principaux du groupe ; TiO2 est traité
+séparément en r2SCAN (dernière section ci-dessous), la fonctionnelle que le
+manuscrit utilise spécifiquement pour ce composé.
 
 ## Méthode
 
@@ -145,3 +149,36 @@ ICOHP par liaison Ca–O et totaux (plus proches voisins uniquement) :
   reproductibilité de l'ordre de ±15-25 kJ/mol sur ces petites mailles
   ioniques très symétriques, même à géométrie/fonctionnelle/ENCUT/maillage
   identiques. Le signe, lui, est robuste dans tous les tests effectués.
+
+## TiO2 Pnma → rutile (eq. 9) : vérification en r2SCAN
+
+Contrairement à CaO, le manuscrit calcule spécifiquement TiO2 avec la
+fonctionnelle méta-GGA r2SCAN (et non PBEsol+D3), parce que la structure
+Pnma provient de Materials Project où elle a été relaxée en r2SCAN
+(Computational Details du manuscrit). Une première passe de cette
+vérification (2026-09-21) avait utilisé par erreur le PBE nu du pipeline
+`extension_` du projet (voir Découverte n°1 ci-dessus), donnant un accord
+correct sur le signe mais pas sur la fonctionnelle. Reprise en r2SCAN
+propre (`METAGGA = R2scan`, `ENCUT = 700`, relaxation `IBRION = 2`/`ISIF =
+3` avec `SYMPREC = 1e-4` pour lever une erreur de symétrie VASP sur le
+rutile) :
+
+| | SI Table S1 | Notre relaxation r2SCAN | Écart |
+|---|---|---|---|
+| Pnma (a, b, c) | 18.76727 / 2.96575 / 4.68009 Å | 18.76552 / 4.68258 / 2.96534 Å (axes b/c permutés) | ~0.01-0.05% |
+| Rutile (a, c) | 4.60013 / 2.96018 Å | 4.60106 / 2.96016 Å | ~0.02% / ~0% |
+
+| Réaction Pnma→rutile | Notre calcul (r2SCAN) | Manuscrit |
+|---|---|---|
+| ΔE | **-7.70 kJ/mol** | -8 kJ/mol (r2SCAN, quasi exact) / -10 kJ/mol (Materials Project) |
+| ΔICOHP | **-9.48 kJ/mol** | -9 kJ/mol (quasi exact) |
+
+**Accord essentiellement parfait**, à la fois sur ΔE et sur ΔICOHP, une fois
+la bonne fonctionnelle (r2SCAN) utilisée — contrairement à CaO, ici aucun
+résidu de magnitude significatif ne subsiste. Ceci confirme que le résidu
+ICOHP observé sur les polymorphes CaO (section précédente) n'est pas un
+artefact générique de notre pipeline LOBSTER, mais bien quelque chose de
+spécifique à ce système (probablement lié au rocksalt-CaO, cf.
+Interprétation ci-dessus) : quand fonctionnelle, géométrie, ENCUT et
+maillage sont correctement alignés sur le manuscrit, l'accord peut être
+quasi parfait, comme le montre TiO2.

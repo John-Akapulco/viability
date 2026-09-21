@@ -1,5 +1,6 @@
+ADDGRID = True
 EDIFF = 1e-06
-ENCUT = 600.0
+ENCUT = 700.0
 IBRION = -1
 ISMEAR = 0
 ISYM = -1
@@ -7,6 +8,7 @@ KPAR = 2
 LASPH = True
 LCHARG = True
 LWAVE = True
+METAGGA = R2scan
 NBANDS = 68
 NPAR = 4
 NSW = 0
